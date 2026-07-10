@@ -14,10 +14,15 @@ sourced right now is written `conjecture — to verify`, never stated as settled
 `theory/` docs and sim docstrings point here instead of restating physics from memory —
 one place to be wrong, one place to fix.
 
+## Notes
+
+- [milky-way-rotation-curve](milky-way-rotation-curve.md) — measured MW circular-velocity curve
+  (Eilers et al. 2019), the MOND acceleration scale, and the ORB-10075 Gaia DR3 dataset lineage.
+- [chsh-bounds](chsh-bounds.md) — the classical, quantum, and measured CHSH bounds.
+
 ## Wanted (backlog)
 
 - Lense–Thirring frame-dragging magnitude/falloff (needed by
   [theory/gravity-as-scarcity](../theory/gravity-as-scarcity.md))
-- Measured galaxy rotation curves and the MOND acceleration scale (same)
 - Grangier–Roger–Aspect 1986 antibunching (needed by
   [theory/swirl-photon](../theory/swirl-photon.md))
