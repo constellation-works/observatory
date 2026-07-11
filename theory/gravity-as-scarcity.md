@@ -40,7 +40,7 @@ promising; physically unvalidated.**
 | An extended (distributed) mass under the model bends rotation curves toward flat (dark-matter/MOND-adjacent) — the *shape* | supported | Qualitative: [rotation-curve-distributed-mass](../../orrery/lab/sims/rotation-curve-distributed-mass/). Quantitative: fit to real Gaia DR3 data ([scarcity-rotation-curve-fit](../../orrery/lab/sims/scarcity-rotation-curve-fit/), ORB-10077) — with one free β the scarcity shape beats the nested no-halo baryons control decisively (RMSE 2.70 vs 18.40 km/s; ΔAIC ≈ −10⁵, stable across 27 profile variants). Measured curve & data lineage: [studies/milky-way-rotation-curve](../studies/milky-way-rotation-curve.md) |
 | Fit to real MW data, the scarcity model **matches or beats a standard dark-matter halo once AIC penalizes parameter count** | mixed | **ORB-10082 ran** ([scarcity-rotation-curve-fit](../../orrery/lab/sims/scarcity-rotation-curve-fit/), orrery `a9f93bd`) — reframed by Daniel before execution: NFW+baryons keeps a free baryonic scale plus M200 and concentration (3 physical params vs scarcity's 2; no longer equal-dof, AIC penalizes the extra). Point estimate favors scarcity — RMSE 2.70 vs 3.66 km/s, ΔAIC(scarcity−NFW) = −1663, same sign on all 27 profile variants (−2293 to −847) — **but the 200-resample bootstrap 95% CI spans −4129 to +1102 → statistically inconclusive, not a scarcity win**. Cutting the other way: NFW slightly wins the held-out band (4.99 vs 5.26 km/s RMSE) and flips the coherent residual sign; NFW is itself weakly identified here (drift pinned at its 10 km/s *upper* bound, c ≈ 37 — far above a typical MW-mass halo), so the 5–15 kpc band limits what the comparison establishes *in either direction*. Gate: **ORB-10083** (radially varying drift, applied identically to all three models) |
 | The fitted scarcity model is an *absolute* description of the MW rotation curve | mixed | Reduced χ² ≈ 145 against the quoted statistical errors — a formal failure — but those errors omit dominant distance/selection/asymmetric-drift systematics, so even the true law would fail them (not a refutation). Held-out 15–18.75 kpc band: coherent one-signed ~4.9 km/s underprediction — the data flattens near 13–16 kpc where the model keeps declining; the shape term is *sufficient relative to the control, not complete*. Drift nuisance pinned at its 3 km/s lower bound and weakly identified → a radially-varying asymmetric-drift model (Faraday **ORB-10083**) is prerequisite to any stronger claim. See [scarcity-rotation-curve-fit](../../orrery/lab/sims/scarcity-rotation-curve-fit/) |
-| The fitted scarcity form leaves solar-system ephemerides (AU scale) inside observational precision | mixed | Constraint from the measured Newtonian-omission floor ([studies/solar-system-ephemeris-precision-floor](../studies/solar-system-ephemeris-precision-floor.md); Uranus rms 4.1e-9 AU is the tightest). First-pass analytic (2026-07-10, § below): the fitted factor's local gradient is d ln q/dr = βF(R₀)/R₀² ≈ 3.2e-10 /AU. Inner planets orbit-average it — safe by 4–6 orders. Outer planets do *not* average within the 10-y window: under the **simplest multiplicative superposition reading** the ½aT² bound gives **Uranus ≈ 8× its floor**, Saturn ≈ 1.6×, Neptune ≈ 1.2×, Jupiter ≈ 0.7× — in tension. Under a screened/local-dominance reading the prediction is ~0 — safe. The superposition rule is unfixed in the model (`conjecture — to verify`); numerical adjudication filed as Faraday task **ORB-10097** |
+| The fitted scarcity form leaves solar-system ephemerides (AU scale) inside observational precision | mixed | Constraint from the measured Newtonian-omission floor ([studies/solar-system-ephemeris-precision-floor](../studies/solar-system-ephemeris-precision-floor.md); Uranus rms 4.1e-9 AU is the tightest). **ORB-10097 ran** (Faraday; [solar-system-nbody](../../orrery/lab/sims/solar-system-nbody/) `scarcity/`, orrery `23fe253`, § below): the **multiplicative reading**, integrated on the exact ORB-10093 protocol with β and F(u) imported unchanged, puts **Uranus above its floor in the primary galactocentric orientation — 1.89× rms, 2.84× max** (7.7e-9 vs 4.1e-9 AU rms); the other seven planets stay below (Saturn next at 0.74×). Qualification: the six-axis orientation envelope **crosses** the Uranus floor (rms 0.66×–3.0×), so this is tension under the physically-motivated orientation, *not* an orientation-independent refutation. The **screened reading is identically Newtonian** — the explicit zero control — and is **unconstrained by this test**. The superposition rule itself is still unfixed in the model; the multiplicative branch is now the one carrying measured tension. Result: [summary.json](../../orrery/lab/sims/solar-system-nbody/scarcity/summary.json) |
 | Adding swirl to the scarcity field reproduces frame dragging | mixed | [frame-drag-swirl](../../orrery/lab/sims/frame-drag-swirl/) — right shape; real frame dragging (Lense–Thirring) has specific magnitude/falloff this toy hasn't been checked against (`conjecture — to verify`: study note needed) |
 | The scarcity picture is equivalent to weak-field GR's "gradient of time-flow rate" heuristic | untested | asserted by analogy in the thread; needs a worked comparison |
 
@@ -172,6 +172,36 @@ the measured floors. If the multiplicative reading survives unmodified it is rem
 it fails, the *screened* variant becomes the only viable branch and the theory owes a
 mechanism for the screening.
 
+**Numerical adjudication (ORB-10097, run 2026-07-11).** Faraday integrated the multiplicative
+reading on the exact ORB-10093 protocol — same first-epoch Horizons initial conditions,
+366-epoch TDB grid, heliocentric ICRF frame — scaling every heliocentric acceleration by the
+fitted local gradient exp[(βF(R₀)/R₀²)(r_gal − R₀)], with β = 5.25 kpc and the ORB-10077/10082
+mass-profile surrogate imported unchanged (apparatus F(R₀) = 0.830; no retuning). Differenced
+against a concurrently integrated pure-Newtonian twin (which matches the frozen ORB-10093
+baseline to 4.5e-10 AU per coordinate; step-halving moves the signature ≤ 1.6e-12 AU). Result
+([solar-system-nbody](../../orrery/lab/sims/solar-system-nbody/) `scarcity/`
+[summary.json](../../orrery/lab/sims/solar-system-nbody/scarcity/summary.json), orrery `23fe253`):
+
+- **Primary orientation** (galactocentric outward axis from the ICRF Galactic-center
+  direction): **Uranus exceeds its floor — rms 7.7e-9 vs 4.1e-9 AU (1.89×), max 1.8e-8 vs
+  6.5e-9 AU (2.84×)**. Every other planet is below its rms floor: Saturn 0.74×, Jupiter 0.17×,
+  Neptune 0.11×, Mars 0.032×, and the inner three at ~2–4×10⁻³ — confirming the
+  orbit-averaging regime split from the first pass.
+- **Orientation qualification:** across the six cardinal-axis sweep the Uranus rms signature
+  spans 2.7e-9 – 1.2e-8 AU (0.66×–3.0× floor) — the envelope **crosses** the floor, so the
+  verdict is orientation-sensitive at O(1). Tension under the physically-motivated
+  orientation, **not an orientation-independent refutation**. R₀ (8.25 → 8.122 kpc) shifts
+  signatures only ~2.5%.
+- **Screened control:** identically zero by construction — screened local dominance leaves
+  the equations exactly Newtonian, so this test **cannot constrain the screened branch**.
+
+Two honest postscripts. The first-pass ½aT² bound above overestimated the apparatus result by
+~4× (Uranus 8× → 1.89× rms) — it picked the binding planet and the qualitative verdict
+correctly, but the measured ratios in the ledger row are the numbers of record. And the
+multiplicative rule the apparatus tested is a deliberately chosen *interpretation* of the
+fitted form, not a field equation derived from the lattice model — deriving the actual local
+superposition behavior (or a screening mechanism) is what would move this row out of `mixed`.
+
 ## Open questions
 
 - **Does scarcity match a standard dark halo?** ORB-10082 ran: point estimate favors scarcity on
@@ -179,9 +209,13 @@ mechanism for the screening.
   undecided**. The live gate is **ORB-10083** (radially varying drift): until the nuisance stops
   absorbing model-dependent error, the comparison cannot settle.
 - **What is the model's superposition rule?** Does a mass's scarcity factor multiply gravity
-  sourced by *other* masses, or is the local field dominated by the local well? The AU-scale
-  floor makes this decisive: multiplicative → in tension at Uranus (~8×); screened → safe but
-  owing a mechanism. Adjudication: **ORB-10097**.
+  sourced by *other* masses, or is the local field dominated by the local well? **ORB-10097
+  adjudicated the multiplicative branch numerically**: in tension at Uranus under the primary
+  galactocentric orientation (1.89× rms, 2.84× max floor), orientation envelope crossing the
+  floor — so the branch is wounded but not orientation-independently dead. The screened branch
+  is identically Newtonian and untestable by this instrument. What settles the question now is
+  *theory*, not another integration: derive the local field behavior from the lattice model
+  itself — which reading (or what screening mechanism) the model actually implies.
 - Can the lattice model be normalized once (one constant) and then match *two* independent
   observables? That would upgrade "right shape" materially. (The rotation-curve fit uses one free
   β — a second, independent observable matched at the *same* β would be the real upgrade.)

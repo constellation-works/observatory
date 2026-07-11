@@ -56,8 +56,13 @@ Newtonian baseline is therefore *contained in* these residuals. A proposed modif
 under the same protocol (fixed first-epoch ICs, same grid, same frame), predicts a deviation
 from the Newtonian baseline **larger than a planet's floor** would have shown up here — it is
 excluded at that amplitude. The gravity-as-scarcity constraint row in
-[theory/gravity-as-scarcity](../theory/gravity-as-scarcity.md) applies this bound;
-the first-pass verdict and its adjudication experiment are recorded there (ORB-10097).
+[theory/gravity-as-scarcity](../theory/gravity-as-scarcity.md) applies this bound. Its
+numerical adjudication (ORB-10097, orrery `23fe253`) split the model's two local-field
+readings against exactly this floor: the **multiplicative** reading exceeds Uranus's floor in
+the primary galactocentric orientation (1.89× rms, 2.84× max; the six-axis orientation
+envelope crosses the floor, so the tension is orientation-dependent), while the **screened**
+reading is identically Newtonian — the explicit zero control — and is not constrained by this
+bound at all. Verdict and qualifications live in the theory doc's ledger.
 
 ## Lineage
 
@@ -68,5 +73,8 @@ the first-pass verdict and its adjudication experiment are recorded there (ORB-1
 - **Ephemeris side:** JPL Horizons state vectors, planetary-system barycenters (ids 1–8),
   Sun body center `500@10`, ICRF — astrolabe `ephemeris/<planet>_2016_2026` (ORB-10076).
 - **Exchange contract:** astrolabe `docs/baseline-interface.md`.
+- **First consumer:** the ORB-10097 scarcity falsifier — faraday, orrery commit `23fe253`,
+  `lab/sims/solar-system-nbody/scarcity/summary.json` (multiplicative signature vs these
+  floors; screened zero control). Reconciled into the theory ledger by kepler, ORB-10098.
 - Run records: faraday `runs/26-07/run-20260711T011635.md` (baseline export), tycho
   `runs/26-07/run-20260710-orb-10094-baseline-ingest.md` (ingest).
