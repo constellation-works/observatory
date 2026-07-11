@@ -69,10 +69,37 @@ from a theory doc, `../theory/…` from a study.
 Provenance runs both ways: a `theory/` claim cites the sim that tests it; the sim's almanac
 note (via orrery `sim.json` `provenance.almanac`) records the discussion it was born in.
 
+## Validating a change
+
+principia is a **prose corpus — there is no build, test suite, or CI to run**. That is by
+design, not an omission: nothing here compiles, so land nothing that would need it. The checks
+below are the whole validation surface, and each is portable — plain `git`/shell, no provider-
+or host-specific tooling:
+
+- **`git diff --check`** — catches trailing whitespace and any leftover merge-conflict markers
+  before they land. Run it on every commit.
+- **Relative links resolve.** Edits routinely touch intra-corpus links (`../studies/…`,
+  `../theory/…`) and cross-repo sim links (`../../orrery/lab/sims/<slug>/`). Confirm each
+  changed link's target exists *from the editing file's directory*. No script enforces this —
+  it is a manual read, or a throwaway shell one-liner over the changed files.
+- **Frontmatter stays intact.** A touched `theory/` doc keeps its `title, status, families,
+  almanac, created, updated` keys with a valid doc-level `status`; a touched `studies/` note
+  keeps `title, status, created, updated`. Contracts: `theory/README.md`, `studies/README.md`.
+- **Ledger tracks the claim.** If a claim's backing changed, its evidence-ledger row status
+  changed in the *same* commit (see *Rules of the house*).
+
+That is the full pre-commit gate — there is no compile step to pass and no automated runner to
+wait on; reviewer eyes plus the checks above are the bar.
+
 ## Conventions
 
-- **Independent repo**; default branch **agent-main**, commit directly (**no PR gate**).
-  Registered in `operations/scripts/repos.tsv`.
+- **Independent repo**; default branch **agent-main**, commit directly (**no PR gate**) — land
+  work straight onto `agent-main`. Registered in `operations/scripts/repos.tsv`.
+- **One guide, both providers — no provider-specific config.** This `CLAUDE.md` is the single
+  maintained contract for the repo; `AGENTS.md` is a symlink to it, so Codex (Sol) and Claude
+  (Fable) load the exact same file. Edit here — never fork a second guide. The symlink is the
+  only provider affordance, and it resolves in any clean checkout, so the repo needs no
+  `.codex/` directory or other non-portable Codex config.
 - **Orbit workspace: `ws_principia`** (dk-server-1) — provisioned 2026-07-10 when dispatchable
   theory-only work arrived (the SPEC gate passed; ORB-10095/ORB-10096 are its first tasks).
   Earlier theory tasks lived in `ws_orrery`, which is now faraday's experimental workspace.
