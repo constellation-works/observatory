@@ -19,6 +19,9 @@ one place to be wrong, one place to fix.
 - [milky-way-rotation-curve](milky-way-rotation-curve.md) — measured MW circular-velocity curve
   (Eilers et al. 2019), the MOND acceleration scale, and the ORB-10075 Gaia DR3 dataset lineage.
 - [chsh-bounds](chsh-bounds.md) — the classical, quantum, and measured CHSH bounds.
+- [solar-system-ephemeris-precision-floor](solar-system-ephemeris-precision-floor.md) — per-planet
+  Newtonian-omission residuals vs JPL Horizons 2016–2026 (the AU-scale bound), Mercury's GR
+  excess, and the ORB-10093/ORB-10094 lineage.
 
 ## Wanted (backlog)
 
