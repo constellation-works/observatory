@@ -23,10 +23,12 @@ confrontation with real data (Faraday's ORB-10077 fit, see below) sharpens this:
 shape parameter β, the scarcity curve fits Tycho's Gaia DR3 rotation curve decisively better than
 the nested no-halo baryons control. But beating baryons-alone is *table stakes* — every
 dark-matter and modified-gravity idea does; that is the dark-matter problem, not evidence for
-scarcity. The claim that would matter — matching a standard dark halo at equal parameter count —
-is **untested** (falsifier: ORB-10082). Held verdict, consistent with the almanac postscript
-(2026-07-10): **decisively better than the no-halo control; shape promising; physically
-unvalidated.**
+scarcity. The comparison that matters — a standard NFW halo, penalized for its extra parameter —
+has now run (ORB-10082, see below): the point estimate favors scarcity on every profile variant,
+but the bootstrap says the sample cannot decide (95% CI spans zero), and NFW slightly wins the
+held-out band. Held verdict, consistent with the almanac postscript (2026-07-10): **decisively
+better than the no-halo control; statistically undecided against a standard halo; shape
+promising; physically unvalidated.**
 
 ## Evidence ledger
 
@@ -36,7 +38,7 @@ unvalidated.**
 | Dividing a fixed budget across shells yields inverse-square from pure geometry (Gauss's law analog) | supported | [scarcity-shell-depletion-field](../../orrery/lab/sims/scarcity-shell-depletion-field/) |
 | Subtractive budget gives a hard cutoff radius r ≈ (3T/4π)^⅓ beyond which gravity dies (Yukawa-cartoon) | supported | [scarcity-capped-cumulative-field](../../orrery/lab/sims/scarcity-capped-cumulative-field/), [scarcity-star-well-headroom](../../orrery/lab/sims/scarcity-star-well-headroom/) — as a property of the *model*; no claim it matches nature |
 | An extended (distributed) mass under the model bends rotation curves toward flat (dark-matter/MOND-adjacent) — the *shape* | supported | Qualitative: [rotation-curve-distributed-mass](../../orrery/lab/sims/rotation-curve-distributed-mass/). Quantitative: fit to real Gaia DR3 data ([scarcity-rotation-curve-fit](../../orrery/lab/sims/scarcity-rotation-curve-fit/), ORB-10077) — with one free β the scarcity shape beats the nested no-halo baryons control decisively (RMSE 2.70 vs 18.40 km/s; ΔAIC ≈ −10⁵, stable across 27 profile variants). Measured curve & data lineage: [studies/milky-way-rotation-curve](../studies/milky-way-rotation-curve.md) |
-| Fit to real MW data, the scarcity model **matches or beats a standard dark-matter halo at equal parameter count** | **untested** | Only the *nested no-halo* control has been beaten — table stakes, since everything beats baryons-alone (that *is* the dark-matter problem). The decisive test is an equal-dof NFW(+baryons, 2 free params, same drift nuisance, same predeclared bands) comparison — **unrun**, filed as Faraday task **ORB-10082**. Until it runs, ΔAIC vs the control is not evidence for the theory |
+| Fit to real MW data, the scarcity model **matches or beats a standard dark-matter halo once AIC penalizes parameter count** | mixed | **ORB-10082 ran** ([scarcity-rotation-curve-fit](../../orrery/lab/sims/scarcity-rotation-curve-fit/), orrery `a9f93bd`) — reframed by Daniel before execution: NFW+baryons keeps a free baryonic scale plus M200 and concentration (3 physical params vs scarcity's 2; no longer equal-dof, AIC penalizes the extra). Point estimate favors scarcity — RMSE 2.70 vs 3.66 km/s, ΔAIC(scarcity−NFW) = −1663, same sign on all 27 profile variants (−2293 to −847) — **but the 200-resample bootstrap 95% CI spans −4129 to +1102 → statistically inconclusive, not a scarcity win**. Cutting the other way: NFW slightly wins the held-out band (4.99 vs 5.26 km/s RMSE) and flips the coherent residual sign; NFW is itself weakly identified here (drift pinned at its 10 km/s *upper* bound, c ≈ 37 — far above a typical MW-mass halo), so the 5–15 kpc band limits what the comparison establishes *in either direction*. Gate: **ORB-10083** (radially varying drift, applied identically to all three models) |
 | The fitted scarcity model is an *absolute* description of the MW rotation curve | mixed | Reduced χ² ≈ 145 against the quoted statistical errors — a formal failure — but those errors omit dominant distance/selection/asymmetric-drift systematics, so even the true law would fail them (not a refutation). Held-out 15–18.75 kpc band: coherent one-signed ~4.9 km/s underprediction — the data flattens near 13–16 kpc where the model keeps declining; the shape term is *sufficient relative to the control, not complete*. Drift nuisance pinned at its 3 km/s lower bound and weakly identified → a radially-varying asymmetric-drift model (Faraday **ORB-10083**) is prerequisite to any stronger claim. See [scarcity-rotation-curve-fit](../../orrery/lab/sims/scarcity-rotation-curve-fit/) |
 | Adding swirl to the scarcity field reproduces frame dragging | mixed | [frame-drag-swirl](../../orrery/lab/sims/frame-drag-swirl/) — right shape; real frame dragging (Lense–Thirring) has specific magnitude/falloff this toy hasn't been checked against (`conjecture — to verify`: study note needed) |
 | The scarcity picture is equivalent to weak-field GR's "gradient of time-flow rate" heuristic | untested | asserted by analogy in the thread; needs a worked comparison |
@@ -69,9 +71,9 @@ predictions by ≤ 0.00014 km/s.
 
 1. **Gate on an equal-dof competitor, not the nested control.** The ΔAIC ≈ −10⁵ is against
    baryons-alone — table stakes; the whole point of the dark-matter problem is that *everything*
-   beats baryons-alone. The claim "scarcity matches/beats a standard dark halo at equal parameter
-   count" is the one that would matter, and it is **untested**. Falsifier filed: **ORB-10082**
-   (NFW + baryons, 2 free params, same nuisance and protocol).
+   beats baryons-alone. The claim "scarcity matches/beats a standard dark halo" is the one that
+   would matter. Falsifier filed as **ORB-10082** — since run, reframed to a 3-parameter NFW;
+   verdict **inconclusive** (next section).
 2. **The held-out misfit is coherent, not noise.** A one-signed ~4.9 km/s underprediction where
    the real curve flattens (13–16 kpc) and the model keeps declining. The shape term is
    *sufficient relative to the control, not complete*. (The measured MW curve is itself gently
@@ -90,14 +92,55 @@ predictions by ≤ 0.00014 km/s.
 **The 20–25 kpc follow-up decision.** Faraday's declared rule was to request Tycho's proposed
 20–25 kpc/APOGEE extension only if the existing band failed to discriminate the apparatus from its
 control. It did discriminate (comfortably), so **no APOGEE request was sent** — the more immediate
-falsifiers are the equal-dof halo (ORB-10082) and the drift model (ORB-10083), not a longer
-baseline. Reconciled: the follow-up baseline is deferred, not pending.
+falsifiers were the standard-halo comparison (ORB-10082, since run — next section) and the drift
+model (ORB-10083), not a longer baseline. Reconciled: the follow-up baseline is deferred, not
+pending.
+
+## Confronting a standard halo — the ORB-10082 NFW comparison
+
+The falsifier ran (Faraday, orrery `a9f93bd`; run record
+`agentbase/faraday/memory/runs/26-07/run-20260711T010553.md`), with one reframe by Daniel before
+execution: NFW+baryons keeps its own free baryonic scale alongside M200 and concentration —
+**3 physical parameters to scarcity's 2** — so the test is no longer equal-dof and AIC penalizes
+the extra parameter. The protocol is otherwise inherited unchanged from ORB-10077 (same
+predeclared bands, same bounded drift nuisance, seed 42, 27 profile variants, 200 bootstrap
+resamples).
+
+| Metric | Scarcity | NFW + baryons |
+|---|---:|---:|
+| RMSE (5–15 kpc fit) | 2.70 km/s | 3.66 km/s |
+| AIC | 2464.8 | 4128.2 |
+| Held-out 15–18.75 kpc RMSE | 5.26 km/s | 4.99 km/s |
+| Held-out mean residual | +4.86 km/s (under) | −4.26 km/s (over) |
+| Drift nuisance | 3.0 km/s (pinned, *lower* bound) | 10.0 km/s (pinned, *upper* bound) |
+
+ΔAIC(scarcity − NFW) = **−1663** at the point estimate, same sign across all 27 profile variants
+(−2293 to −847) — but the 200-resample bootstrap 95% interval spans **−4129 to +1102**. Per the
+predeclared decision rule the verdict is **inconclusive**: the sample cannot decide between
+scarcity and a standard halo. Three facts keep this honest in both directions:
+
+1. **The point estimate is not evidence.** The bootstrap interval spans zero; recording this as
+   a scarcity win would be exactly the laundering the standing rules forbid.
+2. **NFW wins the held-out band, barely, and flips the residual sign** — scarcity coherently
+   underpredicts where NFW overpredicts. Whichever model is right about 15–18.75 kpc, neither is
+   complete there.
+3. **NFW is itself weakly identified on this band** — its drift term pins the 10 km/s *upper*
+   bound throughout the bootstrap (scarcity's pins the lower) and concentration fits at ~37
+   (bootstrap median 37.2), far above the c ≈ 10–15 typical of an MW-mass halo. The 5–15 kpc
+   band does not cleanly identify a conventional halo, which limits what this comparison can
+   establish *in either direction*.
+
+What decides next is **ORB-10083**. The two drift terms pinning *opposite* bounds says the
+constant-drift nuisance is doing model-dependent work — the held-out misfit may belong to the
+drift model, not to either gravity model. Radially varying asymmetric drift, applied identically
+to scarcity, NFW, and the control, re-gates this row.
 
 ## Open questions
 
-- **Does scarcity match a standard dark halo at equal dof?** The live falsifier (ORB-10082). If
-  NFW+baryons fits as well or better at the same parameter count, the ΔAIC-vs-control result
-  carries no weight for the theory.
+- **Does scarcity match a standard dark halo?** ORB-10082 ran: point estimate favors scarcity on
+  every variant, the bootstrap cannot decide, and NFW wins the held-out band — **statistically
+  undecided**. The live gate is **ORB-10083** (radially varying drift): until the nuisance stops
+  absorbing model-dependent error, the comparison cannot settle.
 - Can the lattice model be normalized once (one constant) and then match *two* independent
   observables? That would upgrade "right shape" materially. (The rotation-curve fit uses one free
   β — a second, independent observable matched at the *same* β would be the real upgrade.)
