@@ -73,8 +73,9 @@ note (via orrery `sim.json` `provenance.almanac`) records the discussion it was 
 
 - **Independent repo**; default branch **agent-main**, commit directly (**no PR gate**).
   Registered in `operations/scripts/repos.tsv`.
-- **No orbit workspace of its own yet** — principia's tasks live in `ws_orrery`, shared with
-  orrery, until dispatchable theory-only work justifies its own workspace (SPEC gate).
+- **Orbit workspace: `ws_principia`** (dk-server-1) — provisioned 2026-07-10 when dispatchable
+  theory-only work arrived (the SPEC gate passed; ORB-10095/ORB-10096 are its first tasks).
+  Earlier theory tasks lived in `ws_orrery`, which is now faraday's experimental workspace.
 - **Stewardship:** kepler / Fable (Claude) (`agentbase/kepler/memory`) is primary. faraday /
   Sol (Codex) owns orrery's `lab/`. Cross-lane questions use explicit handoffs — faraday
   reports apparatus/result/limitations; kepler judges theory and literature.
