@@ -345,7 +345,10 @@ as negligibly as its Newtonian term (the parent's 8 × 10⁻¹³ AU, with an O(1
 gradient). **Branch A leaves ephemerides exactly Newtonian — the ORB-10097 Uranus tension
 dissolves entirely on this branch** — and the observable separating Branch A from the
 parent's multiplicative rule is exactly ORB-10097's channel: a galactocentric-oriented
-Uranus residual at 0.66–3.0× the floor (multiplicative) vs ~10⁻⁷ of it (Yukawa).
+Uranus residual at 0.66–3.0× the floor (multiplicative) vs ~10⁻⁷ of it (Yukawa). (The
+parent's side of that contrast is now conditioned: ORB-10157 measured the parent mechanic's
+superposition as headroom screening, so the multiplicative Uranus signature stands only
+under the fitted-boost identification — parent § superposition adjudication.)
 
 But the rescaled-G degeneracy holds only for *massive bodies*, and that is the kill. With
 ξ₂ ≫ AU the Yukawa is fully active across the solar system, so planetary ephemerides
@@ -359,10 +362,11 @@ couples to: 4.8 orders below the required 0.68**
 γ logic recurring: anything that boosts massive-sector gravity without bending light
 identically dies in the light sector. The massive spin-2 escape (a mediator that *does*
 bend light) hits the vDVZ discontinuity, γ = 1/2 — equally dead — and a negative-coupling
-spin-2 is a ghost besides. The parent's multiplicative mechanic is exempt from this blade:
-its boost lives in σ itself, which light must also read on the surviving river completion
-(ORB-10159(e)) — the blade cuts precisely those readings in which dynamics and light part
-company.
+spin-2 is a ghost besides. The parent's boost mechanic is exempt from this blade — whether
+carried as the (since-refuted-as-derived) multiplicative q-ratio or as the measured
+ORB-10157 headroom screening: its boost lives in σ itself, which light must also read on
+the surviving river completion (ORB-10159(e)) — the blade cuts precisely those readings in
+which dynamics and light part company.
 
 **(A4) The exclusion landscape.** The required point (α ≈ −0.68, ξ₂ = 5.25 kpc) against the
 measured α–λ ladder ([studies/fifth-force-searches](../studies/fifth-force-searches.md)):
@@ -516,9 +520,9 @@ for the boost mechanism itself, whichever sector carries it.
 | The model derives gravity-as-scarcity as its effective far field (defect ensembles produce accumulated depletion ∝ 1/r; moving defects produce the scarcity wake) | untested | The claim that founds the family's relation to the parent; nothing yet computed at the mechanic level. Gated on proposed faraday task **ORB-10164** (far-field profile, wake, gravitating quantity) |
 | The proton as a confined composite of sub-integer vortices (fractional constituents, three to a proton — the confinement correspondence) | conjecture | Precedent exists (Babaev 2002 fractional-vortex confinement; BEC splitting of multiply-wound vortices — studies note), but why one polarity confines in triples while the other stays single is underived, and no quantitative correspondence to QCD is claimed |
 | **S2 disjunction, Branch A (charge-sourced):** a kpc-range S2 Yukawa sourced on S2 displacement or void volume, at galactic strength | refuted | **Computed (§A1):** any countable sourcing carries Δ(q/m) ≈ 8.6 × 10⁻⁴ between MICROSCOPE's materials, so \|α\| ≈ 0.68 predicts η ~ 6 × 10⁻⁴ vs the measured 3 × 10⁻¹⁵ — dead by ~11 orders, the same blade as kill condition A ([studies/equivalence-principle-tests](../studies/equivalence-principle-tests.md), [studies/fifth-force-searches](../studies/fifth-force-searches.md)) |
-| **Branch A (any sourcing):** a kpc-range Yukawa at galactic strength survives the solar-system light sector | refuted | **Computed (§A3):** at ξ₂ ≫ AU ephemerides calibrate G(1+α)M while light propagates on GM (scalar mediator: conformal invariance; vector: uncharged photon) → γ_eff − 1 = −2α/(1+α); Cassini forces \|α\| ≤ 1.2 × 10⁻⁵ vs the required 0.68 — 4.8 orders. Massive-tensor escape: vDVZ γ = ½, equally dead ([studies/fifth-force-searches](../studies/fifth-force-searches.md)). The parent's multiplicative boost is exempt — it lives in σ, which light also reads on the river completion |
+| **Branch A (any sourcing):** a kpc-range Yukawa at galactic strength survives the solar-system light sector | refuted | **Computed (§A3):** at ξ₂ ≫ AU ephemerides calibrate G(1+α)M while light propagates on GM (scalar mediator: conformal invariance; vector: uncharged photon) → γ_eff − 1 = −2α/(1+α); Cassini forces \|α\| ≤ 1.2 × 10⁻⁵ vs the required 0.68 — 4.8 orders. Massive-tensor escape: vDVZ γ = ½, equally dead ([studies/fifth-force-searches](../studies/fifth-force-searches.md)). The parent's boost is exempt whatever carries it (the measured ORB-10157 headroom screening included) — it lives in σ, which light also reads on the river completion |
 | Branch A β identification: a kpc Yukawa reproduces the fitted q(r) boost shape | mixed | **Analytic (§A2):** rise-and-saturate matches only for α < 0 (Sanders form — a vector, in tension with the Eötvös-forced scalar/energy sourcing); matched in value and slope at R₀ (α ≈ −0.68, point-mass kernel), the shapes diverge 2–9% in v² across the band with asymptotes 1.57 vs 1.73 — decidable in principle. Apparatus adjudication: faraday **ORB-10167**. Moot for Branch A (dead), live as a shape control on the parent's fit |
-| Branch A solar system: a kpc Yukawa is locally an exact G rescaling — the ORB-10097 Uranus tension dissolves on this branch | supported | **Computed (§A3):** fractional deviation from rescaled-G ≈ 3.3 × 10⁻¹⁶ at Uranus, ~10⁻⁷ of the multiplicative reading's near-floor signature; the discriminating observable is ORB-10097's own channel — a galactocentric-oriented Uranus residual present (multiplicative) vs absent (Yukawa) |
+| Branch A solar system: a kpc Yukawa is locally an exact G rescaling — the ORB-10097 Uranus tension dissolves on this branch | supported | **Computed (§A3):** fractional deviation from rescaled-G ≈ 3.3 × 10⁻¹⁶ at Uranus, ~10⁻⁷ of the multiplicative reading's near-floor signature; the discriminating observable is ORB-10097's own channel — a galactocentric-oriented Uranus residual present (multiplicative — since ORB-10157, conditioned on the fitted-boost identification; parent § superposition adjudication) vs absent (Yukawa) |
 | A charge-coupled fifth force cannot source time dilation — clean clocks would have been Branch A's signature | supported | **Derived on measured anchors (§A6):** the EM precedent is exact; Galileo's eccentric-orbit test ties clock rate to the orbit-determined potential at 2.5 × 10⁻⁵ and null-redshift comparisons force species universality — a species-charged S2 potential breaks both ([studies/gravitational-time-dilation](../studies/gravitational-time-dilation.md)). Recorded although the branch is dead |
 | **The forced merger:** the only Eötvös-, Cassini-, and clock-consistent S2 coupling is universal — i.e. metric | supported | **Derived (§A6, §B4):** composition-blind ⇒ sources on energy ⇒ rescales all rest energies alike ⇒ is a universal clock potential; Cassini ⇒ light must track the dynamical G ⇒ couples as the metric does. The disjunction resolves: S2 is the metric medium or nothing at kpc scale |
 | Branch B: time dilation from density-set propagation speed (the discussion's stated mechanism) | refuted | **Computed (§B1, §B2):** a static index is one function for two potentials (the ORB-10156 disease, sign flipped), and density-dependence of the excitation speed is bounded at κ ≤ 4 × 10⁻¹⁴ by the GP-A profile (compressible fork). The delivering mechanism is flow drag (σ = ½v²/c², ORB-10159); density-set-c survives only as a bounded contaminant |

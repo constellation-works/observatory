@@ -34,9 +34,10 @@ The ORB-10156 derivation (2026-07-12, § below) sharpened both ends of that verd
 rather than assumed: the model's photon sector comes out at PPN γ ≤ 0 in every reading the
 lattice supports, against Cassini's γ − 1 = (2.1 ± 2.3)×10⁻⁵ — **as a complete theory of
 gravitation, the model as stated is refuted by the light sector**; and the multiplicative
-superposition rule is the *derived* local behavior (depletion on a shared budget is
-anonymous), so the ORB-10097 Uranus tension attaches to the model proper, with no derived
-screened fallback. What survives is exactly the distinctive part: the massive-sector galactic
+superposition rule was announced as the *derived* local behavior (depletion on a shared
+budget is anonymous), attaching the ORB-10097 Uranus tension to the model proper with no
+derived screened fallback — a derivation since refuted by measurement (ORB-10157, below).
+What survives is exactly the distinctive part: the massive-sector galactic
 phenomenology (the β-headroom boost), plus a named completion path — a screened scalar-tensor
 structure the counting mechanic does not yet supply — recorded in
 [studies/scalar-gravity-ppn-constraints](../studies/scalar-gravity-ppn-constraints.md).
@@ -71,6 +72,20 @@ obligation**), or concede the clock sector. The measurement also returns the ver
 1/r field *without* a comoving flow history (central-only's comoving dilution is zero before
 the sink), so the static sims no longer lend the river reading ambient support.
 
+The second gate closed the same day, against the other derived rule (ORB-10157, 2026-07-12,
+§ superposition adjudication below): on a shared-budget counting lattice, an embedded compact
+source's field follows **A(D) = (1−D)^1.071** — headroom screening, the turn-7 rule at unit
+gain — not the β-amplified q-ratio ORB-10156 derived and ORB-10097 integrated, not
+inverse-headroom enhancement (log-RMSE 2.077), and not independence (1.074). Anonymity forces
+only survivor-fraction screening; the multiplicative rule is refuted *as a derivation* and
+survives only as an identification hypothesis — the fitted galactic boost read as the
+measured modulation, at the price of O(1) ambient occupancy depletion across the disk. The
+ORB-10097 Uranus tension is accordingly **conditioned, not detached**: on the identification
+it stands with the same integrated numbers (the boost's fitted local log-gradient transfers
+to the Sun's field unchanged); without it, ORB-10097 tested a rule the mechanic doesn't
+supply. The exactly-Newtonian escape stays closed either way — independence is measured
+dead.
+
 ## Evidence ledger
 
 | Claim | Status | Evidence |
@@ -81,17 +96,18 @@ the sink), so the static sims no longer lend the river reading ambient support.
 | An extended (distributed) mass under the model bends rotation curves toward flat (dark-matter/MOND-adjacent) — the *shape* | supported | Qualitative: [rotation-curve-distributed-mass](../../orrery/lab/sims/rotation-curve-distributed-mass/). Quantitative: fit to real Gaia DR3 data ([scarcity-rotation-curve-fit](../../orrery/lab/sims/scarcity-rotation-curve-fit/), ORB-10077) — with one free β the scarcity shape beats the nested no-halo baryons control decisively (RMSE 2.70 vs 18.40 km/s; ΔAIC ≈ −10⁵, stable across 27 profile variants). Measured curve & data lineage: [studies/milky-way-rotation-curve](../studies/milky-way-rotation-curve.md) |
 | Fit to real MW data, the scarcity model **matches or beats a standard dark-matter halo once AIC penalizes parameter count** | mixed | **ORB-10082 ran** ([scarcity-rotation-curve-fit](../../orrery/lab/sims/scarcity-rotation-curve-fit/), orrery `a9f93bd`) — reframed by Daniel before execution: NFW+baryons keeps a free baryonic scale plus M200 and concentration (3 physical params vs scarcity's 2; no longer equal-dof, AIC penalizes the extra). Point estimate favors scarcity — RMSE 2.70 vs 3.66 km/s, ΔAIC(scarcity−NFW) = −1663, same sign on all 27 profile variants (−2293 to −847) — **but the 200-resample bootstrap 95% CI spans −4129 to +1102 → statistically inconclusive, not a scarcity win**. Cutting the other way: NFW slightly wins the held-out band (4.99 vs 5.26 km/s RMSE) and flips the coherent residual sign; NFW is itself weakly identified here (drift pinned at its 10 km/s *upper* bound, c ≈ 37 — far above a typical MW-mass halo), so the 5–15 kpc band limits what the comparison establishes *in either direction*. Gate: **ORB-10083** (radially varying drift, applied identically to all three models) |
 | The fitted scarcity model is an *absolute* description of the MW rotation curve | mixed | Reduced χ² ≈ 145 against the quoted statistical errors — a formal failure — but those errors omit dominant distance/selection/asymmetric-drift systematics, so even the true law would fail them (not a refutation). Held-out 15–18.75 kpc band: coherent one-signed ~4.9 km/s underprediction — the data flattens near 13–16 kpc where the model keeps declining; the shape term is *sufficient relative to the control, not complete*. Drift nuisance pinned at its 3 km/s lower bound and weakly identified → a radially-varying asymmetric-drift model (Faraday **ORB-10083**) is prerequisite to any stronger claim. See [scarcity-rotation-curve-fit](../../orrery/lab/sims/scarcity-rotation-curve-fit/) |
-| The fitted scarcity form leaves solar-system ephemerides (AU scale) inside observational precision | mixed | Constraint from the measured Newtonian-omission floor ([studies/solar-system-ephemeris-precision-floor](../studies/solar-system-ephemeris-precision-floor.md); Uranus rms 4.1e-9 AU is the tightest). **ORB-10097 ran** (Faraday; [solar-system-nbody](../../orrery/lab/sims/solar-system-nbody/) `scarcity/`, orrery `23fe253`, § below): the **multiplicative reading**, integrated on the exact ORB-10093 protocol with β and F(u) imported unchanged, puts **Uranus above its floor in the primary galactocentric orientation — 1.89× rms, 2.84× max** (7.7e-9 vs 4.1e-9 AU rms); the other seven planets stay below (Saturn next at 0.74×). Qualification: the six-axis orientation envelope **crosses** the Uranus floor (rms 0.66×–3.0×), so this is tension under the physically-motivated orientation, *not* an orientation-independent refutation. The **screened reading is identically Newtonian** — the explicit zero control — and is **unconstrained by this test**. **ORB-10156 update:** the superposition rule is no longer unfixed — the multiplicative reading is the *derived* local behavior (superposition row below), so this tension attaches to the model proper; the screened reading is not derivable from the mechanic and is no longer a fallback. Remaining honest out: the integrated factor imports the *fitted* exponent βF(R₀)/R₀² wholesale — a first-principles lattice computation could move the local log-gradient at O(1) (proposed faraday task **ORB-10157**), but not the sign or the existence of the modulation. Result: [summary.json](../../orrery/lab/sims/solar-system-nbody/scarcity/summary.json) |
+| The fitted scarcity form leaves solar-system ephemerides (AU scale) inside observational precision | mixed | Constraint from the measured Newtonian-omission floor ([studies/solar-system-ephemeris-precision-floor](../studies/solar-system-ephemeris-precision-floor.md); Uranus rms 4.1e-9 AU is the tightest). **ORB-10097 ran** (Faraday; [solar-system-nbody](../../orrery/lab/sims/solar-system-nbody/) `scarcity/`, orrery `23fe253`, § below): the **multiplicative reading**, integrated on the exact ORB-10093 protocol with β and F(u) imported unchanged, puts **Uranus above its floor in the primary galactocentric orientation — 1.89× rms, 2.84× max** (7.7e-9 vs 4.1e-9 AU rms); the other seven planets stay below (Saturn next at 0.74×). Qualification: the six-axis orientation envelope **crosses** the Uranus floor (rms 0.66×–3.0×), so this is tension under the physically-motivated orientation, *not* an orientation-independent refutation. The **screened reading is identically Newtonian** — the explicit zero control — and is **unconstrained by this test**. **ORB-10156 update, reversed by measurement (ORB-10157):** the multiplicative reading was briefly the *derived* local behavior; the lattice measurement (superposition rows below, § superposition adjudication) has since refuted the derivation — the mechanic's own modulation is survivor-fraction headroom screening A(D) = (1−D)^1.07079, unit gain, keyed to *local occupancy*, not the β-amplified q-ratio this run integrated. The tension is now **conditioned, not derived**: it stands iff the fitted galactic boost is identified with the measured screening law (which demands O(1) ambient occupancy depletion across the disk — a normalization nothing has fixed); on that identification the boost's fitted local log-gradient (3.2×10⁻¹⁰/AU) transfers to the Sun's field unchanged and every integrated number here stands; without it, this run tested a transplanted rule the mechanic doesn't supply. The anticipated "honest out" (a lattice computation moving the log-gradient at O(1)) was used, and overshot: the lattice moved not the gradient but the rule's derivational status — though, as anticipated, neither the sign nor the *existence* of the modulation moved (the exemption reading — the Sun generating as if alone, ephemerides exactly Newtonian — is measured dead at log-RMSE 1.074, so the tension cannot be dissolved by exemption, only relocated by normalization). Result: [summary.json](../../orrery/lab/sims/solar-system-nbody/scarcity/summary.json) |
 | Adding swirl to the scarcity field reproduces frame dragging | mixed | [frame-drag-swirl](../../orrery/lab/sims/frame-drag-swirl/) — right shape; real frame dragging (Lense–Thirring) has specific magnitude/falloff this toy hasn't been checked against (`conjecture — to verify`: study note needed) |
 | The scarcity picture is equivalent to weak-field GR's "gradient of time-flow rate" heuristic | mixed | **Worked computation (ORB-10156, § derivation below):** exact where the heuristic applies — both dynamics are a = c²∇σ with σ = GM/c²r, so scarcity coincides with the clock-rate deficit 1 − √(−g₀₀) point-by-point, and no static weak-field slow-motion massive-particle experiment can distinguish them. *Not* equivalent as a full weak-field account: the model has no mechanism making depleted regions tick slow (σ = clock deficit is a postulate, not counting — though if added, gravitational redshift comes out right for free), and the heuristic is only the g₀₀ half of a metric whose other half (Ψ) the model lacks — a measured difference (photon row). [studies/scalar-gravity-ppn-constraints](../studies/scalar-gravity-ppn-constraints.md). **ORB-10159 update:** on the river completion the missing clock mechanism is supplied — σ = ½v²/c² is *SR* dilation of a clock at rest in the free-fall inflow, and the identity σ = 1 − √(−g₀₀) becomes the exact GP lapse (§ clock sector (b)). **ORB-10162 update:** that mechanism now rests on an *imposed* flow — the mechanic's natural rules measurably do not produce it (river row below) |
 | Light couples to scarcity so as to reproduce measured deflection and Shapiro delay (the photon sector; PPN γ) | refuted | **Derived, not assumed (ORB-10156, § below):** every photon coupling the lattice supports fails — photons blind to the field give zero deflection/delay (Nordström's fate); photons coupled to the stored time-potential give γ = 0 (half-GR: 0.875″ limb deflection, half Shapiro); the literal hop-on-depleted-lattice reading gives the wrong *sign* (light speeds up where points are sparse → bends away, Shapiro advance) with a non-PPN 1/r² profile. Best case \|γ − 1\| = 1 vs Cassini's (2.1 ± 2.3)×10⁻⁵ and VLBI's ~10⁻⁴ ([studies/scalar-gravity-ppn-constraints](../studies/scalar-gravity-ppn-constraints.md)). The hoped-for outcome — the lattice yielding time- and space-facing effects at the γ = 1 ratio — is **negative**: it would need a tick-rate deficit *and* a proper-space *excess* of GM/c²r each, and the mechanic supplies neither (depletion has the wrong sign for Ψ). Kills the model **as a complete theory of gravity as stated**; the galactic massive-sector result is untouched. Lattice-level check of the sign claim: proposed faraday task **ORB-10158**. **ORB-10159 update:** stands as stated (static lattice); the dynamical excitation completion conditionally reopens the sector with the *right* sign — flow drag supplies the γΦ half exactly (γ = 1) — see the excitation-completion row below and § clock sector (e); ORB-10158's scope extended with a flowing-lattice arm |
-| The local superposition rule is multiplicative — accumulated background depletion modulates an embedded source's field generation; screening does not arise | supported | **Derived (ORB-10156, § below):** the fitted boost is literally a position-dependent coupling G_eff(r) = G·q(r)/q(R₀), and on a shared finite budget depletion is anonymous — no lattice rule lets a source respond only to *its own* depletion — so an embedded source (the Sun) generates with the background's G_eff(r_gal): exactly the reading ORB-10097 integrated. The screened branch's premise fails quantitatively in the model's own units: σ_sun < σ_gal ≈ 6×10⁻⁷ everywhere beyond ~0.017 AU (≈ 3.7 R☉), so the Sun's well never pins the local scarcity *level* (it dominates gradients, but the mechanic couples to levels). Neither of the model's two nonlinearities (headroom modulation; budget-exhaustion cutoff) is a chameleon or Vainshtein mechanism — a screened variant would be a *new model* owing exactly the chameleon design problem ([studies note](../studies/scalar-gravity-ppn-constraints.md)). Analytic over the continuum form; lattice-level confirmation filed as proposed faraday task **ORB-10157** |
+| The local superposition rule is multiplicative — accumulated background depletion modulates an embedded source's field generation with the fitted q-ratio coupling; screening does not arise | refuted | **Derived (ORB-10156, §(d) below), then measured against (ORB-10157, [lattice-two-source-superposition](../../orrery/lab/sims/lattice-two-source-superposition/), § superposition adjudication below):** the derivation ran — the fitted boost is literally a position-dependent coupling G_eff(r) = G·q(r)/q(R₀); depletion on a shared budget is anonymous; *therefore* an embedded source generates with the background's coupling. Set `supported` 2026-07-12; superseded the same day. The lattice measured the mechanic's actual modulation as **A(D) = (1−D)^1.07079** (log-RMSE 0.0031 vs 2.077 for the inverse-headroom enhancement operationalization and 1.074 for independence) — survivor-fraction screening at unit gain in *local occupancy*, carrying no imprint of a β-amplified response to *accumulated* dilution. The failing step is the transplant: anonymity licenses only "embedded sources are not exempt" — it does not make the fitted macroscopic factor the mechanic's transfer function; a coupling that responds to ambient occupancy with the fitted gain is a rule the counting mechanic does not contain (faraday's declared caveat: an occupancy-dependent attempt rate is a *different microscopic model*). What survives of the derivation: the anonymity argument itself (independence refuted — the exemption ORB-10097 called "screened" does not arise, so the old σ_sun < σ_gal level-vs-gradient point stands with its variable transposed), and the sign (the integrated factor was suppression-signed, like the measured law; the gap is gain and variable, not direction). Superposition question reopened with sharper alternatives (open questions below) |
+| The mechanic's measured superposition rule is headroom screening: an embedded source's field scales as the local survivor fraction, A(D) = (1−D)^1.071, with no exhaustion upturn | supported | **Measured (ORB-10157, [lattice-two-source-superposition](../../orrery/lab/sims/lattice-two-source-superposition/), § superposition adjudication below):** 129² shared-budget lattice, 50,000 anonymous slots/cell, compact source (peak exposure 0.1) embedded in an extended disk well; sweeping ambient depletion D = 0.01–0.90 (12 levels, 32 replicates, seed 42, byte-identical reruns; all finite-count means within 2.31 SE of the exact binomial expectation), A(D) = (1−D)^1.07079, log-RMSE 0.0031; resolution checks 1.0725 (97²) / 1.0700 (161²), amplitude shifts ≤ 4.4×10⁻⁴; exponent excess over 1 attributed to spatially varying headroom across the 4–18-cell measurement annulus. Continuous suppression through exhaustion — amplitude 0.1790 at D = 0.80, 0.0029 at 0.995, no upturn. This is the turn-7 headroom rule (wells dug from remaining capacity) returned by the mechanic at unit gain — same family as the fitted q(r) boost (suppression; boost rising where depletion falls); it reproduces the *fitted* galactic form only under the O(1)-occupancy identification (§ below). Caveats (2D static pinned geometry, anonymous fixed-coupling attempts, declared-not-emergent profiles) scope extrapolation, not this verdict |
 | The model as stated (static or accumulating depletion, no clock mechanism) is consistent with measured gravitational time dilation | refuted | **Derived (ORB-10159, § clock sector below):** a static scarcity field with universal tick rate predicts exactly zero dilation against the measured ladder — Pound–Rebka/Snider at 1%, Gravity Probe A tracking the GM/r *profile* to 7×10⁻⁵, GPS +38.6 μs/day as engineering fact, optical clocks resolving 1 mm ([studies/gravitational-time-dilation](../studies/gravitational-time-dilation.md)). The accumulating variant (consumption, no replenishment) is separately dead: σ̇/σ ~ 1/t_age ≈ 2×10⁻¹⁰ yr⁻¹ is an effective Ġ/G more than three orders above the LLR bound (7.1 ± 7.6)×10⁻¹⁴ yr⁻¹. Only the steady-state flow (river) branch survives as a dynamical completion — next row (where ORB-10162 has since measured the mechanic's natural rules failing to produce it) |
 | The dynamical-consumption flow law is the free-fall (Gullstrand–Painlevé) river ½v² = c²σ = GM/r — i.e. the mechanic's own dynamics produce it; flux-conserving and budget-per-shell flows are refuted | refuted | **Derived (ORB-10159, §(b)), then measured (ORB-10162, [dynamical-consumption-lattice](../../orrery/lab/sims/dynamical-consumption-lattice/), orrery `98396a8`, § lattice adjudication below):** faraday's dynamical-consumption lattice, at steady state (1e-9 stationarity; byte-identical reruns), locks in exactly the two refuted flows over 1.7 decades of radius — central-only v ∝ r^(−2.00062 ± 0.00002) (flux-conserving, the predeclared kill condition), equal-per-shell v ∝ r^(−0.99454 ± 0.00036) (budget flow) — with per-shell sink scaling r^(0.00029 ± 0.00026), cleanly discriminating the implemented r⁰ draw from the r^(1/2) the free-fall branch demands. Neither natural rule self-organizes toward GP; σ = v²/2c² fails on both branches (7–8 dex, apparatus hop-speed c — expected, since neither branch *is* GP). **Per the predeclared gate the river completion is refuted at the mechanic level: the existing counting rules do not produce the free-fall flow.** What survives, exactly: the analytic branch-3 result — space obeying the rolling rule yields GP, Schwarzschild clocks exact, σ = ½v²/c² = 1 − √(−g₀₀) — as a *postulate* whose sustaining r^(−3/2) volumetric destruction law is now a measured debt, not just an analytic one. Cutting both ways: central-only's standing deficit reproduces the finite-reservoir 1/r field (R² 0.99999992) while its comoving dilution is zero pre-sink — the verified static shape returns as a diffusion profile, *not* a flow record (snapshot reconciliation in § below). Remaining routes: impose the rule by hand, derive it from S2 substrate dynamics (**ORB-10161 Branch B's obligation**, [two-substance-vortex-vacuum](two-substance-vortex-vacuum.md) §B2), or concede the clock sector. Apparatus caveats (radial shell reduction; apparatus-specific c normalization) recorded in § below — neither gates this verdict ([studies/river-model-and-analog-gravity](../studies/river-model-and-analog-gravity.md)) |
 | Matter coupling: only the excitation (analog-gravity) reading lets the river buy time dilation while the lattice ontology does work | supported | **Derived by elimination (ORB-10159, §(c)):** the rules as stated make matter an external tracer reading ∇σ — a tracer inherits no SR-in-the-flowing-frame, so the river buys it no dilation (the drag objection is fatal: no coupling constant exists to carry it). The deflationary reading is exactly GR in GP coordinates — consistent, ontology idle (Hamilton & Lisle's own caution: nothing measurable flows). The excitation reading — matter as waves *of* the lattice, **Unruh 1981 acoustic-metric family, riding the GP river** — makes carriage constitutive with no coupling constant, and is the only reading delivering the clock sector with the ontology live. Price: excitation dynamics with one universal local speed is new structure the rules don't yet contain ([studies/river-model-and-analog-gravity](../studies/river-model-and-analog-gravity.md)) |
 | On the excitation branch the lattice rest frame is undetectable at current bounds (emergent Lorentz invariance); the substance/aether branch is excluded | supported | **Computed (ORB-10159, §(d)):** substance coupling at O(1) predicts resonator anisotropy ~β²: 1.5×10⁻⁶ (370 km/s CMB-frame motion) down to 2×10⁻⁸ (fully entrained, 42 km/s local solar inflow) vs measured 10⁻¹⁷–10⁻¹⁸ — **excluded by 9–12 orders**. Excitation branch: one medium, one limiting speed → MM null by construction; residual lattice-scale dispersion is bounded, not excluded — parity-symmetric hop rules give a quadratic subluminal term, and GRB 090510 (E_QG,2 > 1.3×10¹¹ GeV) bounds the spacing to a ≲ 1.5×10⁻²⁷ m ≈ 10⁸ ℓ_Pl; parity-asymmetric rules (linear term) are already excluded past the Planck scale (E_QG,1 > 7.6 E_Pl). **Placement: emergent-metric, analog-gravity family** — not an aether, not relabeled GR ([studies/lorentz-violation-bounds](../studies/lorentz-violation-bounds.md)) |
 | Under the excitation completion (free-fall flow, depletion as flow not standing deficit, universal local hop speed) the photon sector is exactly Schwarzschild's: γ = 1, deflection toward, Shapiro delay | mixed | **Computed (ORB-10159, §(e)):** a wave with constant local speed on GP inflow sees the acoustic metric with uniform c — exactly the Schwarzschild geometry (Unruh), so the γΦ half that the static mechanic provably cannot supply (photon row above) is delivered entirely by flow drag. The mathematics is exact and established; the row is `mixed` because all three premises are currently *owed postulates*, and any residual standing density deficit re-introduces the wrong-signed 1/r² index term as a contaminant whose absence Cassini/VLBI bound. The ORB-10156 refutation stands for the model as stated. **ORB-10162 update:** the free-fall-flow premise took its measured hit — neither natural counting rule produces it (river row above) — so all three premises now stand as imposed postulates (the flow's destruction law owed to S2 dynamics, ORB-10161 §B2); the acoustic-metric mathematics is untouched. Gate: **ORB-10158**, scope extended 2026-07-12 with a flowing-lattice arm (sign of deflection under inflow) alongside the static arm (contaminant magnitude) |
-| The multiplicative β factor leaves all current clock comparisons unaffected — clocks are not a second instrument on the ORB-10097 branch | supported | **Computed (ORB-10159, §(f)):** the derived multiplicative rule rescales locally generated σ by X(r_gal), \|X − 1\| ≤ 3.2×10⁻¹⁰ per AU of galactocentric offset. Fractional correction to any measured redshift ≤ 3×10⁻¹⁰ vs 2.5×10⁻⁵ best accuracy (five orders below); annual species-universal rate modulation ~3×10⁻¹⁸ vs 10⁻¹⁶-class comparisons (and blind to LPI/null-redshift tests *because* universal; ~16 ps/yr vs ~100 ns pulsar timing); terrestrial differentials ≲ 10⁻²¹ vs 10⁻¹⁸ optical-clock systematics. Orbits integrate accelerations twice over decades, clocks read rates instantaneously — the binding instrument on the multiplicative branch remains ORB-10097's Uranus channel ([studies/gravitational-time-dilation](../studies/gravitational-time-dilation.md)) |
+| The multiplicative β factor leaves all current clock comparisons unaffected — clocks are not a second instrument on the ORB-10097 branch | supported | **Computed (ORB-10159, §(f)):** the multiplicative rule (derived by ORB-10156; since measured to be the mechanic's behavior only under the fitted-boost identification — ORB-10157, superposition rows above) rescales locally generated σ by X(r_gal), \|X − 1\| ≤ 3.2×10⁻¹⁰ per AU of galactocentric offset — a branch property, holding for *any* multiplicative carrier of the fitted boost shape, the measured screening law included. Fractional correction to any measured redshift ≤ 3×10⁻¹⁰ vs 2.5×10⁻⁵ best accuracy (five orders below); annual species-universal rate modulation ~3×10⁻¹⁸ vs 10⁻¹⁶-class comparisons (and blind to LPI/null-redshift tests *because* universal; ~16 ps/yr vs ~100 ns pulsar timing); terrestrial differentials ≲ 10⁻²¹ vs 10⁻¹⁸ optical-clock systematics. Orbits integrate accelerations twice over decades, clocks read rates instantaneously — the binding instrument on the multiplicative branch remains ORB-10097's Uranus channel ([studies/gravitational-time-dilation](../studies/gravitational-time-dilation.md)) |
 
 ## Confronting real data — the ORB-10077 rotation-curve fit
 
@@ -249,10 +265,15 @@ Two honest postscripts. The first-pass ½aT² bound above overestimated the appa
 correctly, but the measured ratios in the ledger row are the numbers of record. And at the
 time of the run, the multiplicative rule the apparatus tested was a deliberately chosen
 *interpretation* of the fitted form, not a field equation derived from the lattice model.
-**That gap has since closed (ORB-10156, § next):** the multiplicative reading is now derived
-from the mechanic itself, ORB-10097's instrument turns out to have tested the model's own
-prediction, and the screened reading is not derivable from the current model at all. The row
-stays `mixed` solely on the orientation qualification.
+**That gap briefly closed (ORB-10156, § next) and has reopened under measurement (ORB-10157,
+§ superposition adjudication):** the multiplicative reading was derived from the mechanic on
+the anonymity argument; the lattice then measured the mechanic's actual modulation as
+survivor-fraction headroom screening — unit gain, keyed to local occupancy — so ORB-10097's
+instrument tested the fitted-form transplant after all, not a rule the mechanic supplies.
+The tension it found is conditioned on identifying the fitted boost with the measured
+modulation (ledger row above); the exactly-Newtonian escape stays closed regardless
+(independence refuted on the lattice at log-RMSE 1.074). The row stays `mixed` on the
+orientation qualification *and* on that conditioning.
 
 ## The metric character of scarcity and the photon sector — the ORB-10156 derivation
 
@@ -340,6 +361,10 @@ equivalence.
 
 ### (d) The superposition rule, derived
 
+*(Kept as the record of the derivation. Its conclusion has since been measured against and
+superseded — ORB-10157, § superposition adjudication below; the postscript closing this
+subsection states which step failed.)*
+
 The load-bearing question ORB-10097 left open. On the lattice it splits by regime:
 
 1. **Dilute (linear) regime: depletions add.** To first order, budget bookkeeping superposes
@@ -378,7 +403,16 @@ The load-bearing question ORB-10097 left open. On the lattice it splits by regim
 
 Sim adjudication of point 2 at the mechanic level (does an embedded source's field really
 scale with background depletion on an actual shared-budget lattice, and by what functional
-form?): proposed faraday task **ORB-10157**.
+form?): **since run (ORB-10157), and the derivation did not survive it** (§ superposition
+adjudication below). The lattice confirms point 2's anonymity premise and its qualitative
+core — embedded sources are not exempt (independence refuted, log-RMSE 1.074) — but refutes
+the transplant step: the modulation the shared budget actually supplies is survivor-fraction
+screening, A(D) = (1−D)^1.071 at unit gain in local occupancy, not the fitted q-ratio with
+its β gain. Point 3's headline ("no screening arises") is measured false in the
+survivor-fraction sense; what does *not* arise is the exemption ORB-10097 called "screened"
+— the level-vs-gradient argument stands for exactly that. Points 1–3 stay as the record of
+the derivation; the measured verdict supersedes their conclusions (superposition rows in the
+ledger).
 
 ### (e) Where the model sits, and where "scarcity = curvature" holds
 
@@ -598,7 +632,11 @@ static arm, which now measures the contaminant.
 ### (f) Clock-rate screening: is the multiplicative β factor a second instrument?
 
 ORB-10156 derived the multiplicative rule: local field generation scales as
-X(r_gal) = q(r_gal)/q(R₀), with local log-gradient βF(R₀)/R₀² ≈ 3.2×10⁻¹⁰ /AU. If the same
+X(r_gal) = q(r_gal)/q(R₀), with local log-gradient βF(R₀)/R₀² ≈ 3.2×10⁻¹⁰ /AU. (The
+derivation has since been refuted at the mechanic level — ORB-10157, § superposition
+adjudication — but the computation below is a *branch* property: it holds for any
+multiplicative carrier of the fitted boost shape, the measured screening law under the
+fitted identification included.) If the same
 factor rescales local σ — and on the river reading it must, since σ and acceleration are one
 object — every locally generated clock deficit is multiplied by X. Computed against the
 clock instruments:
@@ -619,8 +657,9 @@ clock instruments:
 by — every current clock instrument.** Clocks do *not* become a second instrument on the
 ORB-10097 branch at 10⁻¹⁶, or even 10⁻¹⁸: orbits integrate accelerations twice over decades
 while clocks read rates instantaneously, so the Uranus channel keeps a lead of many orders.
-The binding constraint on the multiplicative rule remains ORB-10097's orientation-dependent
-Uranus tension.
+The binding constraint on the multiplicative branch remains ORB-10097's orientation-dependent
+Uranus tension (itself now conditioned on the fitted-boost identification — ORB-10157,
+§ superposition adjudication).
 
 ### (g) What the model now is
 
@@ -631,8 +670,9 @@ absent* from the natural rules, ORB-10162 — imposed, derived from S2 dynamics 
 §B2), or conceded), carrying
 **matter and light as excitations with one universal local speed** (Unruh family — owed
 entirely; reopens the photon sector with the right sign, ORB-10158), with **emergent Lorentz
-invariance** breaking only below ~10⁸ Planck lengths (allowed), the multiplicative β-boost
-intact at galactic scale (clock-safe, (f)), and the solar-system sector reducing *exactly*
+invariance** breaking only below ~10⁸ Planck lengths (allowed), the β-boost intact at
+galactic scale (clock-safe, (f); its superposition carrier now measured as headroom
+screening rather than a derived q-ratio coupling — ORB-10157), and the solar-system sector reducing *exactly*
 to GR wherever the completion's postulates hold. Every step is computed above; every owed
 ingredient is named and gated on a sim — and the first gate (ORB-10162) has closed against
 the mechanic (§ next). What is *not* available: the static model (dead
@@ -715,20 +755,134 @@ rule as a named postulate (and say so), derive it from S2 dynamics (ORB-10161's 
 or concede the clock sector.** The excitation gate (**ORB-10158**) is independent and
 remains open.
 
+## The superposition adjudication — the ORB-10157 measurement
+
+The second derivation gate has run (faraday,
+[lattice-two-source-superposition](../../orrery/lab/sims/lattice-two-source-superposition/),
+seed 42): a 129² shared-budget counting lattice — 50,000 anonymous slots per cell, full
+outer reservoir — embeds a compact one-cell source (peak exposure 0.1) at the center of an
+extended uniform-disk depletion well (radius 0.31 lattice widths) and measures the source's
+paired field (the radial gradient of its increment to stored scarcity, projected onto its
+isolated-source gradient over radii 4–18 cells) as ambient depletion D sweeps 0.01–0.90 in
+12 levels, with the full profile recorded to D = 0.995. Depletion is literally anonymous:
+every attempt picks a slot blind to source and state (survivors sampled exactly as
+Binomial(C, e^(−H))), and compact hits can clear only slots the background left alive. All
+12 seeded finite-count means (32 replicates each) lie within 2.31 standard errors of the
+exact expectation; reruns are byte-identical.
+
+| Candidate superposition law | Reading it operationalizes | log-RMSE (D ≤ 0.90) | Verdict |
+|---|---|---|---|
+| A = 1 (independence) | the exemption ORB-10097 called "screened": the Sun generates as if alone, ephemerides exactly Newtonian | 1.074 | refuted |
+| A = 1/(1−D) (inverse-headroom enhancement) | the shared budget amplifies an embedded source's field | 2.077 | refuted — and no exhaustion upturn appears even at D = 0.995 (amplitude 0.0029 of isolated) |
+| A = 1−D (plain local headroom) | turn 7: wells dug from remaining capacity | 0.0711 | right family |
+| **A = (1−D)^1.07079 (measured)** | survivor-fraction screening; the exponent's excess over 1 is annulus geometry (headroom varies across the 4–18-cell band) | **0.0031** | **the mechanic's answer** — resolution checks 1.0725 (97²) / 1.0700 (161²), amplitude shifts ≤ 4.4×10⁻⁴ |
+
+**The adjudication: which premise of the ORB-10156 derivation fails.** The derivation ran:
+the fitted boost is a position-dependent coupling G_eff(r) = G·q(r)/q(R₀) keyed to
+accumulated background depletion; depletion on a shared budget is anonymous; *therefore* an
+embedded source generates with the background's coupling — the fitted factor, with its
+fitted gain. The apparatus is faithful to the mechanic as stated — anonymity is implemented
+literally, and the stored field is the model's additive draw bookkeeping (removals per
+cell), not some second convention — so the inapplicability defense is not available. What
+the measurement shows is that the anonymity premise proves less than the derivation drew
+from it. Anonymity establishes only that an embedded source is *not exempt* from the shared
+budget (independence: refuted). The modulation the budget itself supplies is the trivial
+counting factor — a source's attempts can clear only surviving slots, so its field carries
+exactly one factor of local survivor fraction, (1−D)^1.07, unit gain, keyed to *local
+occupancy*. The derived rule needed something anonymity does not provide: a coupling that
+responds to the *accumulated* dilution level with the fitted gain β. No counting rule in
+the mechanic does that, and faraday's declared scope caveat names the gap exactly — a rule
+whose depletion-attempt rate varies with occupancy is a *different microscopic model*.
+**The failing step is the transplant:** "generates with the background's coupling" silently
+substituted the fitted macroscopic factor for the mechanic's actual transfer function,
+which had never been computed. The `supported` verdict is superseded and stays on the
+ledger as the record of that mistake.
+
+Two sign facts keep the bookkeeping honest, because the branch names have become
+treacherous. First, the measured "screening" is *not* ORB-10097's "screened branch": that
+branch meant exemption — the Sun's own depletion pins the local level, the galactic factor
+never reaches its generation, ephemerides come out exactly Newtonian — which on the lattice
+is the *independence* candidate, and it is refuted; what ORB-10156's point 3 argued against
+the exemption survives with its variable transposed. Second, the refuted "multiplicative
+enhancement" is not the sign ORB-10097 integrated: the integrated factor
+exp[(βF(R₀)/R₀²)(r_gal − R₀)] makes the Sun's field *weaker* where galactic depletion is
+higher — suppression-signed, like the measured law. What ORB-10097 imported that the
+mechanic does not supply is the gain and the variable, not the direction.
+
+**Relation to the fitted form — which reading the rotation-curve fit actually tested.** The
+measured law is the original turn-7 headroom idea, returned by the mechanic itself at unit
+gain: turn 9's ODE was ds/dr = G₀(1−s)·M(r)/r² — effective G proportional to remaining
+headroom — and "wells dug from remaining capacity" is literally what the apparatus measured.
+The fitted q(r) form is that rule in continuum dress with the gain promoted to the fitted β
+on *accumulated* dilution. So the measured law sits squarely in the fitted form's own family
+— headroom suppression, boost rising where depletion falls — where the enhancement
+operationalization was its sign-mirror. What the ORB-10077/ORB-10082 fit tested was
+therefore the *shape as phenomenology*: q(r) with one free gain, decisively better than the
+no-halo control regardless of microscopic carrier. What it never tested is the carrier —
+and the measured carrier reproduces the fitted boost only under a demanding identification:
+for (1−D_gal(r))^1.071 to equal the fitted 0.70 → 1.36 boost across 5–18.75 kpc, ambient
+*occupancy* depletion must vary O(1) across the disk (headroom ratio ≈ 1.94^(1/1.07) ≈ 1.86,
+i.e. D ≳ 0.46 at 5 kpc even with the outer band fully undepleted) — a normalization
+statement about how much lattice occupancy the Galaxy's mass consumes that the
+accumulated-dilution picture never made and nothing has fixed. The alternatives now on the
+table are sharper than multiplicative-vs-screened ever was: (i) the fitted boost *is* the
+measured screening law, at O(1) galactic occupancy depletion; (ii) the boost requires a new
+occupancy-coupled generation rule carrying the fitted gain — faraday's "different
+microscopic model", owing its own lattice test; (iii) the boost is phenomenology the
+counting mechanic does not carry.
+
+**The ORB-10097 consequence, stated precisely.** The Uranus tension attached to the model
+through the claim that the mechanic itself hands the Sun the fitted factor. Measured, it
+does not — so the tension is **conditioned: neither detached nor retained outright**. On
+reading (i), everything ORB-10097 integrated stands unchanged, because the boost's local
+log-gradient at R₀ is a property of the fitted shape, not of its carrier: any multiplicative
+modulation reproducing the fitted boost hands the Sun's field the same 3.2×10⁻¹⁰/AU
+differential, and the 1.89×-rms primary-orientation excess (six-axis envelope 0.66–3.0×) is
+again the model's own. On readings (ii)/(iii), ORB-10097's integration tested a rule the
+mechanic doesn't have, and no solar-system prediction exists until the occupancy
+normalization or the new coupling is fixed. What no reading recovers is the free escape:
+the exemption branch that would have left ephemerides exactly Newtonian is the lattice's
+independence candidate, measured dead at log-RMSE 1.074. The ORB-10097 ledger row carries
+the condition; its integrated numbers are unretired.
+
+**Apparatus caveats, and what they gate.** Three, all declared by faraday. (i) *2D static
+pinned geometry:* both sources are fixed exposure maps on a 129² lattice (97² and 161²
+checks move the exponent by ≤ 0.002), not emergent, moving, or self-consistently digging
+depleters. (ii) *Anonymous fixed-coupling attempts:* the depletion-attempt rate never
+responds to occupancy — one microscopic reading of "shared budget", and exactly the
+mechanic as stated in every prior sim. (iii) *Declared, not emergent, profiles:* the
+Poisson-solved exposure maps say where attempts land; superposition enters only through the
+shared slots. None gates the verdict on the mechanic *as stated* — fidelity on (ii) is the
+point of the experiment, and (i)/(iii) are the same declared-geometry idealization every
+static-sector sim in this ledger uses. All three gate *extrapolation*: an occupancy-coupled
+rule (reading (ii) of the fitted-form question above) is untested by construction, and a
+moving or emergent source could in principle superpose differently — no current rule
+supplies a mechanism for either, and conjuring one is new model-building, not this
+measurement's problem. Cross-reference: the parent's boost citations in
+[two-substance-vortex-vacuum](two-substance-vortex-vacuum.md) (§A3 and its Branch A ledger
+rows) are updated to carry the same conditioning.
+
 ## Open questions
 
 - **Does scarcity match a standard dark halo?** ORB-10082 ran: point estimate favors scarcity on
   every variant, the bootstrap cannot decide, and NFW wins the held-out band — **statistically
   undecided**. The live gate is **ORB-10083** (radially varying drift): until the nuisance stops
   absorbing model-dependent error, the comparison cannot settle.
-- ~~**What is the model's superposition rule?**~~ **Resolved by derivation (ORB-10156, §
-  above):** multiplicative — on a shared budget depletion is anonymous, so background
-  depletion modulates every embedded source's field generation; screening does not arise from
-  the mechanic (the screened premise fails quantitatively: σ_sun < σ_gal beyond ~0.017 AU).
-  Consequence: the ORB-10097 Uranus tension is the model's own. What remains open here is
-  only the *magnitude*: the tested factor imports the fitted exponent; a lattice-level
-  measurement of the modulation (proposed faraday task **ORB-10157**) could move the local
-  log-gradient at O(1), not the sign.
+- **What carries the galactic boost?** *The superposition question, reopened by measurement
+  with sharper alternatives (ORB-10157, § superposition adjudication above).* It was briefly
+  ~~resolved by derivation (ORB-10156)~~: multiplicative — anonymity was read as forcing the
+  fitted q-ratio coupling onto embedded sources, making the ORB-10097 Uranus tension the
+  model's own. The lattice then measured the mechanic's actual modulation: **headroom
+  screening**, A(D) = (1−D)^1.071 — survivor-fraction suppression at unit gain in local
+  occupancy; independence refuted (log-RMSE 1.074), inverse-headroom enhancement refuted
+  (2.077). The open question is no longer multiplicative-vs-screened but which of three
+  readings carries the fitted boost: (i) the measured screening law itself, requiring O(1)
+  ambient occupancy depletion across the disk (D ≳ 0.46 at 5 kpc — a mass→occupancy
+  normalization nothing has fixed); on this reading the ORB-10097 tension survives with the
+  same integrated numbers; (ii) a new occupancy-dependent coupling with the fitted gain
+  (faraday's "different microscopic model"), owing its own lattice adjudication; (iii)
+  phenomenology the mechanic does not carry. The exemption reading (embedded sources
+  unmodulated → exactly Newtonian) is measured dead either way.
 - **Can the counting mechanic earn a Ψ sector?** *Reshaped by ORB-10159 (§ clock sector):*
   the answer has a derived form — on the excitation completion, the γΦ half is supplied
   entirely by **flow drag** (a wave on the GP inflow sees exact Schwarzschild; γ = 1 with
@@ -765,8 +919,10 @@ remains open.
   ([studies/fifth-force-searches](../studies/fifth-force-searches.md)).
 - Where does the model *diverge* from Newton/GR at accessible scales? Partially answered by
   ORB-10156/ORB-10097: it diverges in the photon sector (fatally, as stated) and at Uranus
-  under the derived multiplicative rule (orientation-dependent tension). A falsifying sim is
-  still worth more than another confirming one — ORB-10157/ORB-10158 are both of that kind.
+  under the multiplicative rule (orientation-dependent tension, now conditioned on the
+  fitted-boost identification — ORB-10157). A falsifying sim is still worth more than
+  another confirming one — ORB-10157 was exactly that kind (it killed the derived
+  superposition rule); ORB-10158 remains open.
 
 ## Related
 
