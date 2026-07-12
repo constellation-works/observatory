@@ -16,19 +16,32 @@ discussion thread (see `almanac` link) that repeatedly found the toy model redis
 physics: Gauss's law from budget-division bookkeeping, Yukawa-like cutoffs from budget
 exhaustion, MOND-flavored behavior, and frame dragging from adding swirl.
 
-**Current verdict:** *right shape; magnitude no longer clearly wrong once **fit** rather than
-predicted — but physically unvalidated.* The discussion's verdict was "right shape, wrong
-magnitude": the *predicted* headroom boost ran ~10–25% where galaxies need ~2×. The first
-confrontation with real data (Faraday's ORB-10077 fit, see below) sharpens this: with one free
-shape parameter β, the scarcity curve fits Tycho's Gaia DR3 rotation curve decisively better than
-the nested no-halo baryons control. But beating baryons-alone is *table stakes* — every
-dark-matter and modified-gravity idea does; that is the dark-matter problem, not evidence for
-scarcity. The comparison that matters — a standard NFW halo, penalized for its extra parameter —
-has now run (ORB-10082, see below): the point estimate favors scarcity on every profile variant,
-but the bootstrap says the sample cannot decide (95% CI spans zero), and NFW slightly wins the
-held-out band. Held verdict, consistent with the almanac postscript (2026-07-10): **decisively
-better than the no-halo control; statistically undecided against a standard halo; shape
-promising; physically unvalidated.**
+**Current verdict (rewritten 2026-07-12, after ORB-10167/ORB-10169):** *fixed-β universality
+is refuted at the SPARC apparatus — the galactic massive-sector phenomenology, the family's
+last live empirical sector, failed its own predeclared kill condition. No universal-gravity
+branch of the family is currently live.* The verdict's history, kept as the record of how it
+narrowed: the discussion said "right shape, wrong magnitude"; ORB-10077 sharpened that to
+decisively-better-than-baryons with one fitted β (table stakes — everything beats
+baryons-alone); ORB-10082 left the standard-halo comparison statistically undecided. Two
+measurements now close the fit era (§ form and universality adjudication below).
+**ORB-10167:** the MW band never tested the functional form — a canonical Sanders-form
+Yukawa is shape-degenerate with scarcity on 5–18.75 kpc (bootstrap ΔAIC 95% interval spans
+zero), so the fit's evidential content was always "a ~5 kpc rise-and-saturate boost beats
+baryons," with carrier (ORB-10157/ORB-10170) and functional form (ORB-10167) both
+unidentified. **ORB-10169:** across 149 SPARC galaxies the fixed-β form fails as a universal
+law — per-galaxy β_i improves AIC by 51,723, β_i tracks disk scale length (Spearman
+ρ = 0.343, p = 1.86×10⁻⁵), and a same-policy global-a₀ MOND control beats global scarcity by
+77,421 AIC: the discrepancy organizes by *acceleration*, not by any fixed length — the
+verdict Sanders' fixed r₀ received, now landed by the model's own predeclared condition.
+What survives, stated precisely: the MW-band fit as **single-galaxy phenomenology** (better
+than baryons; undecided vs NFW; form-degenerate vs Yukawa); the **measured mechanic laws** —
+headroom screening A(D) = (1−D)^1.071 (ORB-10157) and the natural rules' flow laws
+(ORB-10162) — which are properties of the counting lattice, not confirmations from nature;
+and the **derived structures** — the Φ-identity (ORB-10156), the GP-conditional clock and
+photon sectors (ORB-10159) — as mathematics conditioned on debts nothing has discharged (the
+source law; excitation dynamics, ORB-10158). Any successor must organize by acceleration or
+co-vary with galaxy structure rather than carry a fixed length — the data point at MOND's a₀
+— and the counting mechanic contains no derivation of an acceleration scale.
 
 The ORB-10156 derivation (2026-07-12, § below) sharpened both ends of that verdict. Derived
 rather than assumed: the model's photon sector comes out at PPN γ ≤ 0 in every reading the
@@ -93,9 +106,10 @@ dead.
 | Accumulated per-shell dilution Σ 1/count(k) ∝ 1/r, so "gravity = gradient of scarcity" reproduces Newton's 1/r² | supported | by construction in [scarcity-grid-weight-black-hole](../../orrery/lab/sims/scarcity-grid-weight-black-hole/), [scarcity-capped-cumulative-field](../../orrery/lab/sims/scarcity-capped-cumulative-field/); note: storing 1/r² and differentiating gives 1/r³ — the stored field must be potential-like (correction #1 in the thread) |
 | Dividing a fixed budget across shells yields inverse-square from pure geometry (Gauss's law analog) | supported | [scarcity-shell-depletion-field](../../orrery/lab/sims/scarcity-shell-depletion-field/) |
 | Subtractive budget gives a hard cutoff radius r ≈ (3T/4π)^⅓ beyond which gravity dies (Yukawa-cartoon) | supported | [scarcity-capped-cumulative-field](../../orrery/lab/sims/scarcity-capped-cumulative-field/), [scarcity-star-well-headroom](../../orrery/lab/sims/scarcity-star-well-headroom/) — as a property of the *model*; no claim it matches nature |
-| An extended (distributed) mass under the model bends rotation curves toward flat (dark-matter/MOND-adjacent) — the *shape* | supported | Qualitative: [rotation-curve-distributed-mass](../../orrery/lab/sims/rotation-curve-distributed-mass/). Quantitative: fit to real Gaia DR3 data ([scarcity-rotation-curve-fit](../../orrery/lab/sims/scarcity-rotation-curve-fit/), ORB-10077) — with one free β the scarcity shape beats the nested no-halo baryons control decisively (RMSE 2.70 vs 18.40 km/s; ΔAIC ≈ −10⁵, stable across 27 profile variants). Measured curve & data lineage: [studies/milky-way-rotation-curve](../studies/milky-way-rotation-curve.md) |
+| An extended (distributed) mass under the model bends rotation curves toward flat (dark-matter/MOND-adjacent) — the *shape* | supported | Qualitative: [rotation-curve-distributed-mass](../../orrery/lab/sims/rotation-curve-distributed-mass/). Quantitative: fit to real Gaia DR3 data ([scarcity-rotation-curve-fit](../../orrery/lab/sims/scarcity-rotation-curve-fit/), ORB-10077) — with one free β the scarcity shape beats the nested no-halo baryons control decisively (RMSE 2.70 vs 18.40 km/s; ΔAIC ≈ −10⁵, stable across 27 profile variants). Measured curve & data lineage: [studies/milky-way-rotation-curve](../studies/milky-way-rotation-curve.md). **ORB-10167 qualification (§ form and universality adjudication below):** the band never tested the *functional form* — a canonical Sanders-form Yukawa under the identical protocol is **shape-degenerate** with scarcity (best fit α = −0.679, ξ = 4.642 kpc, landing on the ORB-10161 analytic matching point; RMSE 2.91 vs 2.70 km/s; ΔAIC(scarcity − Yukawa) = −369.6 point estimate with all 27 profile variants preferring scarcity, but the 200-resample bootstrap 95% interval **[−503.9, +1051.9]** spans zero → degenerate per the predeclared rule; held-out both underpredict, 5.26 vs 5.52 km/s). This row's evidential content is "a ~5 kpc rise-and-saturate boost beats baryons" — carrier (ORB-10157/ORB-10170) and form (ORB-10167) unidentified |
 | Fit to real MW data, the scarcity model **matches or beats a standard dark-matter halo once AIC penalizes parameter count** | mixed | **ORB-10082 ran** ([scarcity-rotation-curve-fit](../../orrery/lab/sims/scarcity-rotation-curve-fit/), orrery `a9f93bd`) — reframed by Daniel before execution: NFW+baryons keeps a free baryonic scale plus M200 and concentration (3 physical params vs scarcity's 2; no longer equal-dof, AIC penalizes the extra). Point estimate favors scarcity — RMSE 2.70 vs 3.66 km/s, ΔAIC(scarcity−NFW) = −1663, same sign on all 27 profile variants (−2293 to −847) — **but the 200-resample bootstrap 95% CI spans −4129 to +1102 → statistically inconclusive, not a scarcity win**. Cutting the other way: NFW slightly wins the held-out band (4.99 vs 5.26 km/s RMSE) and flips the coherent residual sign; NFW is itself weakly identified here (drift pinned at its 10 km/s *upper* bound, c ≈ 37 — far above a typical MW-mass halo), so the 5–15 kpc band limits what the comparison establishes *in either direction*. Gate: **ORB-10083** (radially varying drift, applied identically to all three models) |
 | The fitted scarcity model is an *absolute* description of the MW rotation curve | mixed | Reduced χ² ≈ 145 against the quoted statistical errors — a formal failure — but those errors omit dominant distance/selection/asymmetric-drift systematics, so even the true law would fail them (not a refutation). Held-out 15–18.75 kpc band: coherent one-signed ~4.9 km/s underprediction — the data flattens near 13–16 kpc where the model keeps declining; the shape term is *sufficient relative to the control, not complete*. Drift nuisance pinned at its 3 km/s lower bound and weakly identified → a radially-varying asymmetric-drift model (Faraday **ORB-10083**) is prerequisite to any stronger claim. See [scarcity-rotation-curve-fit](../../orrery/lab/sims/scarcity-rotation-curve-fit/) |
+| One global β (the MW's fitted ~5.25 kpc) fits external galaxies — the fixed-β scarcity form is a universal law | refuted | **Measured (ORB-10169, [sparc-scarcity-universality](../../orrery/lab/sims/sparc-scarcity-universality/), orrery `1ab8085`, § form and universality adjudication below):** 149 SPARC galaxies / 3,150 points (standard Q ≤ 2, inclination ≥ 30° cuts; uniform no-drift nuisance policy; honest AIC — global k = 150, per-galaxy k = 298, MOND control k = 150). Global β = 5.526 kpc (5% from the MW's 5.25 — recorded, not exculpatory); per-galaxy β_i improves AIC by **51,723** (106,619 → 54,896); β_i tracks disk scale length at Spearman ρ = 0.343, p = 1.86×10⁻⁵ (and characteristic acceleration at ρ = 0.401, p = 4.1×10⁻⁷); constant-β heterogeneity p underflows to zero; the same-policy global-a₀ MOND control reaches AIC 29,198 vs global scarcity's 106,619 — the discrepancy organizes by acceleration, not fixed length (the radial-acceleration-relation verdict; McGaugh, Lelli & Schombert 2016, [studies/fifth-force-searches](../studies/fifth-force-searches.md)). **The predeclared kill condition fired on both prongs — the same verdict Sanders' fixed r₀ received.** Caveats (spherical enclosed-mass surrogate over thin-disk component curves; statistical-only errors — absolute χ² unacceptable for all fits, MOND control included; no-drift policy differs from the MW apparatus; validation parquets reconstructed from the published tables) gate decisiveness, not the verdict: none manufactures a p ~ 10⁻⁵ size correlation or a five-figure acceleration-organization gap under an identical likelihood |
 | The fitted scarcity form leaves solar-system ephemerides (AU scale) inside observational precision | mixed | Constraint from the measured Newtonian-omission floor ([studies/solar-system-ephemeris-precision-floor](../studies/solar-system-ephemeris-precision-floor.md); Uranus rms 4.1e-9 AU is the tightest). **ORB-10097 ran** (Faraday; [solar-system-nbody](../../orrery/lab/sims/solar-system-nbody/) `scarcity/`, orrery `23fe253`, § below): the **multiplicative reading**, integrated on the exact ORB-10093 protocol with β and F(u) imported unchanged, puts **Uranus above its floor in the primary galactocentric orientation — 1.89× rms, 2.84× max** (7.7e-9 vs 4.1e-9 AU rms); the other seven planets stay below (Saturn next at 0.74×). Qualification: the six-axis orientation envelope **crosses** the Uranus floor (rms 0.66×–3.0×), so this is tension under the physically-motivated orientation, *not* an orientation-independent refutation. The **screened reading is identically Newtonian** — the explicit zero control — and is **unconstrained by this test**. **ORB-10156 update, reversed by measurement (ORB-10157):** the multiplicative reading was briefly the *derived* local behavior; the lattice measurement (superposition rows below, § superposition adjudication) has since refuted the derivation — the mechanic's own modulation is survivor-fraction headroom screening A(D) = (1−D)^1.07079, unit gain, keyed to *local occupancy*, not the β-amplified q-ratio this run integrated. The tension is now **conditioned, not derived**: it stands iff the fitted galactic boost is identified with the measured screening law (which demands O(1) ambient occupancy depletion across the disk — a normalization nothing has fixed); on that identification the boost's fitted local log-gradient (3.2×10⁻¹⁰/AU) transfers to the Sun's field unchanged and every integrated number here stands; without it, this run tested a transplanted rule the mechanic doesn't supply. The anticipated "honest out" (a lattice computation moving the log-gradient at O(1)) was used, and overshot: the lattice moved not the gradient but the rule's derivational status — though, as anticipated, neither the sign nor the *existence* of the modulation moved (the exemption reading — the Sun generating as if alone, ephemerides exactly Newtonian — is measured dead at log-RMSE 1.074, so the tension cannot be dissolved by exemption, only relocated by normalization). Result: [summary.json](../../orrery/lab/sims/solar-system-nbody/scarcity/summary.json) |
 | Adding swirl to the scarcity field reproduces frame dragging | mixed | [frame-drag-swirl](../../orrery/lab/sims/frame-drag-swirl/) — right shape; real frame dragging (Lense–Thirring) has specific magnitude/falloff this toy hasn't been checked against (`conjecture — to verify`: study note needed) |
 | The scarcity picture is equivalent to weak-field GR's "gradient of time-flow rate" heuristic | mixed | **Worked computation (ORB-10156, § derivation below):** exact where the heuristic applies — both dynamics are a = c²∇σ with σ = GM/c²r, so scarcity coincides with the clock-rate deficit 1 − √(−g₀₀) point-by-point, and no static weak-field slow-motion massive-particle experiment can distinguish them. *Not* equivalent as a full weak-field account: the model has no mechanism making depleted regions tick slow (σ = clock deficit is a postulate, not counting — though if added, gravitational redshift comes out right for free), and the heuristic is only the g₀₀ half of a metric whose other half (Ψ) the model lacks — a measured difference (photon row). [studies/scalar-gravity-ppn-constraints](../studies/scalar-gravity-ppn-constraints.md). **ORB-10159 update:** on the river completion the missing clock mechanism is supplied — σ = ½v²/c² is *SR* dilation of a clock at rest in the free-fall inflow, and the identity σ = 1 − √(−g₀₀) becomes the exact GP lapse (§ clock sector (b)). **ORB-10162 update:** that mechanism now rests on an *imposed* flow — the mechanic's natural rules measurably do not produce it (river row below) |
@@ -161,6 +175,12 @@ control. It did discriminate (comfortably), so **no APOGEE request was sent** �
 falsifiers were the standard-halo comparison (ORB-10082, since run — next section) and the drift
 model (ORB-10083), not a longer baseline. Reconciled: the follow-up baseline is deferred, not
 pending.
+
+**Form postscript (ORB-10167, 2026-07-12).** The same band has since been measured
+**shape-degenerate**: a canonical Sanders-form Yukawa under the identical protocol fits within
+0.22 km/s of scarcity's RMSE and the bootstrap cannot separate the two forms (§ form and
+universality adjudication below). The ΔAIC ≈ −10⁵ against baryons stands; what it certifies is
+the boost's existence and scale, not its functional form.
 
 ## Confronting a standard halo — the ORB-10082 NFW comparison
 
@@ -862,67 +882,156 @@ measurement's problem. Cross-reference: the parent's boost citations in
 [two-substance-vortex-vacuum](two-substance-vortex-vacuum.md) (§A3 and its Branch A ledger
 rows) are updated to carry the same conditioning.
 
+## The form and universality adjudication — the ORB-10167 and ORB-10169 measurements
+
+The two final shape measurements on the boost have run (faraday; the apparatus records are
+the numbers of record:
+[scarcity-rotation-curve-fit](../../orrery/lab/sims/scarcity-rotation-curve-fit/)
+`assets/results.json`, orrery `8990fd3`;
+[sparc-scarcity-universality](../../orrery/lab/sims/sparc-scarcity-universality/)
+`assets/results.json`, orrery `1ab8085`). The first asks whether the MW band ever identified
+the boost's functional form; the second asks whether the fitted β is one number across
+galaxies. The answers: no, and no — and the second *no* is the family's predeclared kill
+condition firing.
+
+### ORB-10167 — form degeneracy on the MW band
+
+The Sanders-form Yukawa (ORB-10161 §A2's shape control,
+[two-substance-vortex-vacuum](two-substance-vortex-vacuum.md)) joined the exact
+ORB-10077/10082 protocol as a fourth model: same predeclared 5–15 kpc fit and 15–18.75 kpc
+held-out bands, same bounded drift nuisance, 27 profile variants, 200 bootstrap resamples,
+seed 42 — with the parameter count kept honest at k = 4 (mass normalization, α, ξ, drift;
+faraday's own correction, its L-0006). Measured:
+
+- **The best fit lands on the analytic matching point.** α = −0.679, ξ = 4.642 kpc — the
+  free fit found ORB-10161 §A2's matched parameters (α ≈ −0.68) on its own. RMSE 2.91 km/s
+  vs scarcity's 2.70.
+- **The point estimate prefers scarcity; the bootstrap cannot.** ΔAIC(scarcity − Yukawa) =
+  −369.6, same sign across all 27 profile variants (−479.7 to −138.9) — but the
+  200-resample bootstrap 95% interval spans **[−503.9, +1051.9]**. Per the predeclared
+  decision rule (decisive only if the interval excludes zero) the verdict is
+  **shape-degenerate**: the band does not distinguish exponential saturation from the
+  scarcity form's 1/r tail.
+- **Held-out: both models underpredict coherently.** Scarcity 5.26 km/s (+4.86 under),
+  Yukawa 5.52 km/s (+5.11 under) — the 13–16 kpc flattening eludes both forms alike.
+
+Caveats, both faraday's: the Yukawa multiplier is the point-source kernel over the spherical
+enclosed-mass surrogate (the disk convolution flagged in ORB-10161 §A2 remains undone), and
+the shared drift nuisance pins its lower bound as in every run on this band. Neither rescues
+form identification: they grade how far the degeneracy verdict extrapolates, not the measured
+inability to separate the shapes here.
+
+**What this does to ORB-10077.** The fit's ΔAIC ≈ −10⁵ over baryons stands untouched, and
+the point-estimate preference for scarcity over the Yukawa (all 27 variants) enters the
+ledger as a recorded fact. But the band never tested the *functional form*: a canonical
+Yukawa — the shape belonging to an independently refuted fifth-force family (ORB-10161
+Branch A) — sits inside the sample's resolving power. The evidential content of the family's
+one decisive empirical result is hereby restated at its measured size: **a ~5 kpc
+rise-and-saturate boost beats baryons on the MW band — carrier unidentified
+(ORB-10157/ORB-10170), functional form unidentified (ORB-10167).**
+
+### ORB-10169 — the universality measurement: the kill condition fired
+
+The "one constant, two observables" question — open since founding, sharpened by ORB-10161
+§A5 into a predeclared kill condition — has its answer. Faraday fit three models to 149
+galaxies / 3,150 points from the SPARC-derived catalog (tycho ORB-10168 lineage; standard
+Q ≤ 2 and inclination ≥ 30° cuts), under one uniform nuisance policy (one positive baryonic
+normalization per galaxy, no drift term) and honest parameter counting (global-β scarcity
+k = 150; per-galaxy-β scarcity k = 298; global-a₀ MOND control k = 150). Measured:
+
+- **Global β = 5.526 kpc** — 5% from the MW's fitted 5.25. The proximity is real and is
+  recorded; it does not save what follows.
+- **Per-galaxy β wins by 51,723 AIC** (106,619 global → 54,896 per-galaxy) — the sample
+  overwhelmingly rejects one shared length.
+- **β_i tracks galaxy size:** Spearman ρ = 0.343, p = 1.86×10⁻⁵ against disk scale length
+  (and ρ = 0.401, p = 4.1×10⁻⁷ against characteristic acceleration; per-galaxy β_i spans
+  ~0–21.3 kpc, median 3.07). Constant-β heterogeneity: χ² = 48,362 on 121 dof, p
+  underflowing to zero.
+- **The same-policy MOND control organizes the data better by five figures:** global-a₀
+  AIC 29,198 vs global scarcity's 106,619 (gap 77,421; fitted a₀ = 1.41×10⁻¹⁰ m/s²). The
+  discrepancy organizes by *acceleration*, not by any fixed length — the measured
+  radial-acceleration-relation verdict (McGaugh, Lelli & Schombert 2016;
+  [studies/fifth-force-searches](../studies/fifth-force-searches.md)).
+
+The predeclared kill condition — a positive β_i–size correlation at p < 0.01 plus rejection
+of constant β_i at p < 0.01; in the task's words, *"if β_i systematically tracks galaxy
+size … the fixed-β scarcity form is refuted as a universal law — the same verdict Sanders'
+r₀ received"* — **is met on both prongs, by orders of magnitude. The fixed-β scarcity form
+is refuted as a universal law at this apparatus.** The proposer's knife cuts deepest when it
+is their own predeclared condition that fired; it fired.
+
+**Caveat grading — what limits decisiveness vs what cannot be explained away.** All declared
+by faraday, who limits the verdict explicitly to this apparatus and likelihood:
+
+- *Spherical enclosed-mass surrogate over thin-disk component curves* — a shape systematic
+  applied uniformly to every galaxy and every model. It inflates absolute misfit and can
+  bias any individual β_i; it grades the exact AIC magnitudes.
+- *Statistical-only errors* — absolute χ² is unacceptable for **all** fits, the MOND control
+  included, so no model earns an absolute-goodness claim here; the designed instrument is
+  relative comparison under a shared likelihood.
+- *Uniform no-drift nuisance policy* — differs from the MW apparatus (which carries a
+  bounded drift term), so the 5.53-vs-5.25 β comparison is same-family, not same-protocol.
+- *Input provenance* — ORB-10168's delivery landed producer code but not the processed
+  parquets; the validation parquets were reconstructed from the published HTTPS tables for
+  this run (SHA-256 hashes recorded in the apparatus results; repair task per faraday
+  L-0001/F2026-07-008).
+
+Graded: these gate **decisiveness** — the exact AIC numbers, any absolute-fit statement, the
+cross-apparatus identity of β. None of them gates the verdict, because none can manufacture
+what was measured: a p ~ 10⁻⁵ correlation between β_i and galaxy size across 149 galaxies,
+and a five-figure AIC gap between acceleration organization and fixed-length organization
+computed under an *identical* likelihood and nuisance policy. A uniform systematic does not
+know each galaxy's disk scale length.
+
+**What refuses laundering.** Three facts stand in the ledger beside the refutation, per the
+standing rules: scarcity's point-estimate preference over the Yukawa on the MW band (all 27
+variants); the global-β proximity to the MW fit (5.53 vs 5.25 kpc); and the per-galaxy
+scarcity form remaining a serviceable per-galaxy fitter (AIC 54,896). They are recorded
+facts about a form now refuted as a universal law — they do not soften the verdict, and the
+verdict does not erase them.
+
 ## Open questions
 
-- **Does scarcity match a standard dark halo?** ORB-10082 ran: point estimate favors scarcity on
-  every variant, the bootstrap cannot decide, and NFW wins the held-out band — **statistically
-  undecided**. The live gate is **ORB-10083** (radially varying drift): until the nuisance stops
-  absorbing model-dependent error, the comparison cannot settle.
-- **What carries the galactic boost?** *The superposition question, reopened by measurement
-  with sharper alternatives (ORB-10157, § superposition adjudication above).* It was briefly
-  ~~resolved by derivation (ORB-10156)~~: multiplicative — anonymity was read as forcing the
-  fitted q-ratio coupling onto embedded sources, making the ORB-10097 Uranus tension the
-  model's own. The lattice then measured the mechanic's actual modulation: **headroom
-  screening**, A(D) = (1−D)^1.071 — survivor-fraction suppression at unit gain in local
-  occupancy; independence refuted (log-RMSE 1.074), inverse-headroom enhancement refuted
-  (2.077). The open question is no longer multiplicative-vs-screened but which of three
-  readings carries the fitted boost: (i) the measured screening law itself, requiring O(1)
-  ambient occupancy depletion across the disk (D ≳ 0.46 at 5 kpc — a mass→occupancy
-  normalization nothing has fixed); on this reading the ORB-10097 tension survives with the
-  same integrated numbers; (ii) a new occupancy-dependent coupling with the fitted gain
-  (faraday's "different microscopic model"), owing its own lattice adjudication; (iii)
-  phenomenology the mechanic does not carry. The exemption reading (embedded sources
-  unmodulated → exactly Newtonian) is measured dead either way.
-- **Can the counting mechanic earn a Ψ sector?** *Reshaped by ORB-10159 (§ clock sector):*
-  the answer has a derived form — on the excitation completion, the γΦ half is supplied
-  entirely by **flow drag** (a wave on the GP inflow sees exact Schwarzschild; γ = 1 with
-  the right sign, no proper-space excess needed), and the matching clock mechanism comes
-  free (σ = ½v²/c² is SR dilation against the flow). The question therefore sharpens into
-  the two owed ingredients: (i) can any counting rule produce the free-fall flow's
-  volumetric sink law ∝ r^(−3/2) — **measured by ORB-10162: the natural rules cannot**
-  (flat r^(0.0003 ± 0.0003) per-shell draw, CI excluding r^(1/2); § lattice adjudication);
-  (ii) do excitations of a flowing lattice really propagate with the flow-drag sign —
-  measured by **ORB-10158** (extended scope). (i) has now failed at the mechanic level —
-  so, per this question's own terms, the model *as stated* stays what ORB-10156 proved it
-  is: a massive-sector phenomenology, not a theory of gravity. The completion lives only if
-  the sink rule is derived from deeper dynamics (**ORB-10161 Branch B's obligation**,
-  [two-substance-vortex-vacuum](two-substance-vortex-vacuum.md) §B2) or honestly carried as
-  an imposed postulate; (ii) still gates the photon arm. (The chameleon route of the
-  studies note remains the fallback completion if the analog-gravity route dies.)
-- ~~**Does a dynamical-consumption lattice actually flow at free-fall?**~~ **Answered by
-  measurement (ORB-10162, § lattice adjudication above): no.** Both natural rules lock in
-  exactly the refuted flows — central-only v ∝ r^(−2.0006 ± 0.0000) (the flux-conserving
-  kill condition, which did emerge, from the naive rule), equal-per-shell
-  v ∝ r^(−0.9945 ± 0.0004) — and the sink stays flat (r^(0.0003 ± 0.0003)) where free-fall
-  needs r^(1/2). The river completion is refuted at the mechanic level. The surviving
-  question is no longer whether the mechanic flows at free-fall but whether the r^(−3/2)
-  destruction rule can be *derived* — ORB-10161 Branch B's standing obligation
-  ([two-substance-vortex-vacuum](two-substance-vortex-vacuum.md) §B2) — or must be carried
-  as an imposed postulate; failing both, the clock sector is conceded.
-- Can the lattice model be normalized once (one constant) and then match *two* independent
-  observables? That would upgrade "right shape" materially. (The rotation-curve fit uses one free
-  β — a second, independent observable matched at the *same* β would be the real upgrade.)
-  The sharpest version is now filed (ORB-10161's universality analysis): one *global*
-  β = 5.25 kpc across an external-galaxy sample vs per-galaxy β — tycho ORB-10168 (SPARC
-  catalog) + faraday ORB-10169, kill condition predeclared; the measured
-  radial-acceleration relation is the standing risk
-  ([studies/fifth-force-searches](../studies/fifth-force-searches.md)).
-- Where does the model *diverge* from Newton/GR at accessible scales? Partially answered by
-  ORB-10156/ORB-10097: it diverges in the photon sector (fatally, as stated) and at Uranus
-  under the multiplicative rule (orientation-dependent tension, now conditioned on the
-  fitted-boost identification — ORB-10157). A falsifying sim is still worth more than
-  another confirming one — ORB-10157 was exactly that kind (it killed the derived
-  superposition rule); ORB-10158 remains open.
+*Consolidated 2026-07-12, after the universality verdict. The items this section used to
+carry are answered in the ledger and sections above: the standard-halo comparison and its
+drift gate (ORB-10082/ORB-10083) now grade a single-galaxy fit rather than a candidate
+universal law; the superposition and river questions closed against the mechanic (ORB-10157,
+ORB-10162); the second-observable question — one β, two observables — closed against the
+form (ORB-10169). Stated plainly, per the standing rules: **the family currently has no live
+universal-gravity branch.** The fixed-β form is refuted across galaxies; the completion that
+would make the model a theory of gravitation (GP flow carrying excitations) rests wholly on
+the unpaid source-law debt; and no derived variant exists that matches how the data actually
+organize (by acceleration). What remains live:*
+
+- **The source-law debt — can the r^(−3/2) non-conservation law be derived?** The one
+  consolidated gravitational debt (per ORB-10171's consolidation; three strikes — ORB-10162
+  here, ORB-10164 and §B2 in [two-substance-vortex-vacuum](two-substance-vortex-vacuum.md)).
+  Routes unchanged: impose it as a named postulate, derive it from S2 substrate dynamics
+  (ORB-10161 Branch B's obligation), or concede the clock sector. **ORB-10158** (excitation
+  dynamics; the flowing-lattice photon arm) stays open behind it. Paying this debt would
+  make the GP-conditional clock and photon sectors physical rather than conditional — it
+  would not, by itself, answer the galactic question below.
+- **What carries the MW boost — ORB-10170's three readings, demoted to a single-galaxy
+  question.** The carrier alternatives stand as measured (ORB-10157, § superposition
+  adjudication): (i) the measured headroom-screening law at O(1) galactic occupancy
+  depletion (D ≳ 0.46 at 5 kpc — a mass→occupancy normalization nothing has fixed; on this
+  reading the ORB-10097 Uranus tension keeps its integrated numbers); (ii) a new
+  occupancy-coupled generation rule with the fitted gain — faraday's "different microscopic
+  model", owing its own lattice adjudication; (iii) phenomenology the mechanic does not
+  carry. What ORB-10169 changes is the prize: whatever carries the boost now explains one
+  galaxy's fit, with a length other galaxies measurably refuse to share — and a functional
+  form the band cannot identify besides (ORB-10167). The exemption reading (embedded
+  sources unmodulated → exactly Newtonian) stays measured dead (independence, log-RMSE
+  1.074).
+- **Does a derivable acceleration-organized variant of the headroom mechanic exist?** The
+  data organize by acceleration — the MOND control's five-figure AIC advantage at this
+  apparatus, the radial-acceleration relation at large
+  ([studies/fifth-force-searches](../studies/fifth-force-searches.md)) — and MOND's a₀
+  marks where they point. The counting mechanic has no acceleration scale: β is a fitted
+  length, and the fitted length tracks galaxy size (ρ = 0.343, p ≈ 2×10⁻⁵). A headroom
+  rule whose effective scale co-varies with the baryon distribution — *derived* from
+  counting rather than refit per galaxy — is the only shape a successor could take. Nothing
+  currently supplies one; until something does, this is a question, not a branch.
 
 ## Related
 

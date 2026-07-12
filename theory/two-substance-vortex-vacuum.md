@@ -29,8 +29,10 @@ floor to beat, the ORB-10159 clock-sector and rest-frame constraints — doubled
 substances offer two candidate rest frames).
 
 **Current verdict:** *founded; the EM sign bet measured and won in 2-D; the gravity bridge
-measured and refuted at the mechanic level — the gravitational sector now hangs on one
-named debt, the source law.* The keep-worthy structural feature is the
+measured and refuted at the mechanic level; the fixed-length universality signature measured
+on the refuting side (ORB-10169) — the gravitational sector hangs on the source-law debt,
+and what any paid debt must deliver at kiloparsec scale is no longer a universal fixed-β/ξ₂
+boost.* The keep-worthy structural feature is the
 topological/dynamical split — charge as winding (exact by topology), mass as core energy
 (dynamical, unconstrained) — which is real, measured physics in superfluids and
 superconductors
@@ -58,7 +60,17 @@ since been derived and **resolved** (ORB-10161, § below): the fifth-force readi
 analytically on measured anchors (composition, sign/shape, and the solar-system light
 sector), the merger its consistency conditions force is derived, and the metric-medium
 reading survives as S2's only job — at the price of a computed equation-of-state requirement
-no standard condensate meets.
+no standard condensate meets. The disjunction's two filed apparatus checks have since run
+(2026-07-12; adjudicated in the parent's § form and universality adjudication): **ORB-10167**
+measured the Gaia band **shape-degenerate** — the free Yukawa fit landed on §A2's matched
+parameters (α = −0.679, ξ = 4.642 kpc) and the bootstrap cannot separate the forms — and
+**ORB-10169** fired §A5's predeclared kill condition: across 149 SPARC galaxies β_i tracks
+disk scale length (ρ = 0.343, p = 1.86×10⁻⁵), per-galaxy β beats one global β by 51,723 AIC,
+and a same-policy MOND control organizes the discrepancy by acceleration at a five-figure
+AIC advantage. **The fixed-β/ξ₂ universality signature came back on the refuting side** — so
+the boost any surviving S2 metric medium would carry at kiloparsec scale is not a universal
+fixed-length law, and the family's gravitational sector owes two things: the source law, and
+a boost form the data will accept.
 
 ## The mechanics, formalized
 
@@ -355,8 +367,15 @@ fitted boost q(r)/q(R₀)?
   18.75 kpc, and the far-field asymptotes differ (1.57 vs 1.73 relative to R₀) — several
   km/s in v against a fit whose RMSE is 2.7 km/s. **Verdict: same qualitative family
   (rise-and-saturate), measurably divergent in principle.** Whether the actual Gaia band
-  decides is an apparatus question — filed as faraday task **ORB-10167** (the point-mass
-  kernel is the honest caveat; the disk convolution belongs to the apparatus).
+  decides was an apparatus question — filed and **since run as faraday task ORB-10167**
+  ([scarcity-rotation-curve-fit](../../orrery/lab/sims/scarcity-rotation-curve-fit/), orrery
+  `8990fd3`; parent § form and universality adjudication): **the band does not decide.** The
+  free Yukawa fit landed on this section's matched parameters (α = −0.679, ξ = 4.642 kpc vs
+  the analytic α ≈ −0.68), RMSE 2.91 vs scarcity's 2.70 km/s; the point estimate prefers
+  scarcity (ΔAIC −369.6, all 27 profile variants agreeing) but the 200-resample bootstrap
+  95% interval [−503.9, +1051.9] spans zero — **shape-degenerate** per the predeclared rule.
+  The 2–9% analytic divergence computed above is real but below the band's resolving power;
+  the point-mass-kernel caveat stands (the disk convolution remains undone).
 
 **(A3) The solar system: the degeneracy that dissolves Uranus — and the blade that kills
 the branch.** For r ≪ ξ₂ the Yukawa force factor is [1 + α(1 − r²/2ξ₂² + …)]: a pure
@@ -408,9 +427,15 @@ halos fit per galaxy. The measured radial-acceleration relation organizes the di
 acceleration alone, at small scatter, across 153 galaxies — the modern sharpening of what
 killed Sanders' fixed r₀
 ([studies/fifth-force-searches](../studies/fifth-force-searches.md)). The Milky-Way-only fit
-has dodged this exposure so far; it is the family's largest unpaid check, and it now has a
-filed adjudication — tycho **ORB-10168** (SPARC catalog, ws_astrolabe) and faraday
-**ORB-10169** (one global β across the sample vs per-galaxy β, kill condition predeclared).
+had dodged this exposure; its adjudication — tycho **ORB-10168** (SPARC catalog,
+ws_astrolabe) feeding faraday **ORB-10169** (one global β across the sample vs per-galaxy β,
+kill condition predeclared) — has **since run, and the check bounced**
+([sparc-scarcity-universality](../../orrery/lab/sims/sparc-scarcity-universality/), orrery
+`1ab8085`): β_i tracks disk scale length (Spearman ρ = 0.343, p = 1.86×10⁻⁵), per-galaxy β
+beats the global fit by 51,723 AIC, and the same-policy global-a₀ MOND control wins by five
+figures (AIC 29,198 vs 106,619) — the residuals organize by acceleration, exactly the
+exposure this paragraph named. **The signature fired on the refuting side** (parent § form
+and universality adjudication; ledger row below).
 
 **(A6) Clocks: the clean-clock signature, and the forced merger.** A fifth force with its
 own conserved charge cannot source time dilation. The EM precedent is exact — a Coulomb
@@ -525,9 +550,10 @@ is a step into the metric sector. **The disjunction resolves: S2 is the metric m
 is nothing at kiloparsec scale.** The family's S2 sector now rides entirely on Branch B's
 owed items — the equation-of-state requirement (B2), the single-cone theorem (kill
 condition B), the source-law debt (two measured strikes, ORB-10162 and ORB-10164;
-§ lattice adjudications) — with
-the fixed-β universality test (ORB-10168/ORB-10169) standing as the live external falsifier
-for the boost mechanism itself, whichever sector carries it.
+§ lattice adjudications) — and the fixed-β universality falsifier (ORB-10168/ORB-10169) has
+**since fired against the boost's fixed-length form** (parent § form and universality
+adjudication): whatever boost a surviving S2 metric medium carries at kiloparsec scale must
+be per-galaxy or acceleration-organized, not one universal β/ξ₂.
 
 ## The lattice adjudications — ORB-10163 and ORB-10164
 
@@ -661,14 +687,14 @@ dynamics, or concede the gravitational sector.
 | The proton as a confined composite of sub-integer vortices (fractional constituents, three to a proton — the confinement correspondence) | conjecture | Precedent exists (Babaev 2002 fractional-vortex confinement; BEC splitting of multiply-wound vortices — studies note), but why one polarity confines in triples while the other stays single is underived, and no quantitative correspondence to QCD is claimed |
 | **S2 disjunction, Branch A (charge-sourced):** a kpc-range S2 Yukawa sourced on S2 displacement or void volume, at galactic strength | refuted | **Computed (§A1):** any countable sourcing carries Δ(q/m) ≈ 8.6 × 10⁻⁴ between MICROSCOPE's materials, so \|α\| ≈ 0.68 predicts η ~ 6 × 10⁻⁴ vs the measured 3 × 10⁻¹⁵ — dead by ~11 orders, the same blade as kill condition A ([studies/equivalence-principle-tests](../studies/equivalence-principle-tests.md), [studies/fifth-force-searches](../studies/fifth-force-searches.md)) |
 | **Branch A (any sourcing):** a kpc-range Yukawa at galactic strength survives the solar-system light sector | refuted | **Computed (§A3):** at ξ₂ ≫ AU ephemerides calibrate G(1+α)M while light propagates on GM (scalar mediator: conformal invariance; vector: uncharged photon) → γ_eff − 1 = −2α/(1+α); Cassini forces \|α\| ≤ 1.2 × 10⁻⁵ vs the required 0.68 — 4.8 orders. Massive-tensor escape: vDVZ γ = ½, equally dead ([studies/fifth-force-searches](../studies/fifth-force-searches.md)). The parent's boost is exempt whatever carries it (the measured ORB-10157 headroom screening included) — it lives in σ, which light also reads on the river completion |
-| Branch A β identification: a kpc Yukawa reproduces the fitted q(r) boost shape | mixed | **Analytic (§A2):** rise-and-saturate matches only for α < 0 (Sanders form — a vector, in tension with the Eötvös-forced scalar/energy sourcing); matched in value and slope at R₀ (α ≈ −0.68, point-mass kernel), the shapes diverge 2–9% in v² across the band with asymptotes 1.57 vs 1.73 — decidable in principle. Apparatus adjudication: faraday **ORB-10167**. Moot for Branch A (dead), live as a shape control on the parent's fit |
+| Branch A β identification: a kpc Yukawa reproduces the fitted q(r) boost shape | mixed | **Analytic (§A2):** rise-and-saturate matches only for α < 0 (Sanders form — a vector, in tension with the Eötvös-forced scalar/energy sourcing); matched in value and slope at R₀ (α ≈ −0.68, point-mass kernel), the shapes diverge 2–9% in v² across the band with asymptotes 1.57 vs 1.73 — decidable in principle. **Apparatus adjudication run (ORB-10167, [scarcity-rotation-curve-fit](../../orrery/lab/sims/scarcity-rotation-curve-fit/), orrery `8990fd3`; parent § form and universality adjudication): not decidable on this band** — the free fit landed on the matched parameters (α = −0.679, ξ = 4.642 kpc), ΔAIC(scarcity − Yukawa) = −369.6 with all 27 profile variants preferring scarcity, but the bootstrap 95% [−503.9, +1051.9] spans zero: **shape-degenerate** per the predeclared rule. Moot for Branch A (dead); as a shape control on the parent it reports that the MW band never identified the boost's functional form |
 | Branch A solar system: a kpc Yukawa is locally an exact G rescaling — the ORB-10097 Uranus tension dissolves on this branch | supported | **Computed (§A3):** fractional deviation from rescaled-G ≈ 3.3 × 10⁻¹⁶ at Uranus, ~10⁻⁷ of the multiplicative reading's near-floor signature; the discriminating observable is ORB-10097's own channel — a galactocentric-oriented Uranus residual present (multiplicative — since ORB-10157, conditioned on the fitted-boost identification; parent § superposition adjudication) vs absent (Yukawa) |
 | A charge-coupled fifth force cannot source time dilation — clean clocks would have been Branch A's signature | supported | **Derived on measured anchors (§A6):** the EM precedent is exact; Galileo's eccentric-orbit test ties clock rate to the orbit-determined potential at 2.5 × 10⁻⁵ and null-redshift comparisons force species universality — a species-charged S2 potential breaks both ([studies/gravitational-time-dilation](../studies/gravitational-time-dilation.md)). Recorded although the branch is dead |
 | **The forced merger:** the only Eötvös-, Cassini-, and clock-consistent S2 coupling is universal — i.e. metric | supported | **Derived (§A6, §B4):** composition-blind ⇒ sources on energy ⇒ rescales all rest energies alike ⇒ is a universal clock potential; Cassini ⇒ light must track the dynamical G ⇒ couples as the metric does. The disjunction resolves: S2 is the metric medium or nothing at kpc scale |
 | Branch B: time dilation from density-set propagation speed (the discussion's stated mechanism) | refuted | **Computed (§B1, §B2):** a static index is one function for two potentials (the ORB-10156 disease, sign flipped), and density-dependence of the excitation speed is bounded at κ ≤ 4 × 10⁻¹⁴ by the GP-A profile (compressible fork). The delivering mechanism is flow drag (σ = ½v²/c², ORB-10159); density-set-c survives only as a bounded contaminant |
 | Branch B: an S2 equation of state delivering exact Schwarzschild clock rates exists | untested | **Requirement computed (§B2):** incompressible fork owes the volumetric sink ∝ r^(−3/2) (ORB-10162 measured both natural counting rules failing; reconciliation is ORB-10165's scope); compressible fork forces n₂ ∝ r^(−3/2) with κ ≤ 4 × 10⁻¹⁴ (a GP condensate, κ = 1, is dead by 13 orders) and bulk response c_b ≲ 15 m/s against excitations at c — a ≥ 10⁷ two-speed hierarchy vs measured precedents of 10¹–10² ([studies/superfluid-vacuum-and-emergent-gauge-fields](../studies/superfluid-vacuum-and-emergent-gauge-fields.md)) |
 | Branch B kill-or-live: galactic/astronomical clock data | supported | **Computed and confronted (§B3):** redshift ≡ dynamics-inferred potential (one field; residual leak ≤ 10⁻¹⁴), consistent with solar 638 ± 6 vs 633.1 m/s, S2/Sgr A* f = 1.04 ± 0.05, and cluster ~10 km/s; degenerate with GR+DM in every clock channel; the cluster rung disfavors the clean-clock alternative at ~2σ ([studies/gravitational-redshift-astronomical](../studies/gravitational-redshift-astronomical.md)) |
-| Fixed-length-scale universality across external galaxies (β for the parent's boost, ξ₂ for any Yukawa reading) | untested | **Named risk (§A5):** the radial-acceleration relation organizes the discrepancy by acceleration — the exposure that killed Sanders' fixed r₀ ([studies/fifth-force-searches](../studies/fifth-force-searches.md)); the MW-only fit dodges it so far. Adjudication filed: tycho **ORB-10168** (SPARC catalog) + faraday **ORB-10169** (global β vs per-galaxy β, kill condition predeclared) |
+| Fixed-length-scale universality across external galaxies (β for the parent's boost, ξ₂ for any Yukawa reading) | refuted | **Measured (ORB-10169, [sparc-scarcity-universality](../../orrery/lab/sims/sparc-scarcity-universality/), orrery `1ab8085`; adjudicated in the parent's § form and universality adjudication):** 149 SPARC galaxies / 3,150 points (Q ≤ 2, inclination ≥ 30°, uniform no-drift policy; tycho ORB-10168 lineage). Per-galaxy β_i beats global β = 5.526 kpc by **ΔAIC 51,723**; β_i tracks disk scale length (Spearman ρ = 0.343, p = 1.86×10⁻⁵); constant-β heterogeneity p underflows to zero; the same-policy global-a₀ MOND control reaches AIC 29,198 vs global scarcity's 106,619 — the discrepancy organizes by acceleration, the RAR exposure §A5 named ([studies/fifth-force-searches](../studies/fifth-force-searches.md)). **The predeclared kill condition fired — the same verdict Sanders' fixed r₀ received.** Recorded beside it, unlaundered: global β sits 5% from the MW's 5.25 kpc. Caveats (spherical enclosed-mass surrogate over thin-disk curves; statistical-only errors — absolute χ² unacceptable for all models, MOND control included; no-drift policy differs from the MW apparatus; validation parquets reconstructed from the published tables) gate decisiveness, not the verdict |
 
 ## Falsifiers → faraday/tycho
 
@@ -691,15 +717,23 @@ catalog; data-acquisition tasks in ws_astrolabe (tycho), marked as such. Status 
 - **ORB-10167 — Yukawa-vs-scarcity shape discrimination on the Gaia rotation-curve fit.**
   Adds the Sanders-form Yukawa as a third model under the exact ORB-10077/ORB-10082
   protocol; measures whether the fitted band distinguishes exponential saturation from the
-  scarcity form's 1/r-tail saturation. Adjudicates the β-identification row — now serving
-  as a shape control on the parent's one empirical success.
+  scarcity form's 1/r-tail saturation. Adjudicates the β-identification row — serving as a
+  shape control on the parent's one empirical success. **Run** — shape-degenerate: the free
+  fit lands on §A2's matched parameters (α = −0.679, ξ = 4.642 kpc) and the bootstrap ΔAIC
+  interval spans zero; the band never identified the boost's form (β-identification row
+  updated; parent § form and universality adjudication).
 - **ORB-10168 (tycho, ws_astrolabe) — SPARC external-galaxy catalog.** Rotation curves +
   baryonic component profiles, dwarfs through giants, with the standard radial-acceleration
-  arrays; the dataset for the universality test.
+  arrays; the dataset for the universality test. **Delivered with a gap** — producer code
+  landed without the processed parquets; ORB-10169's validation inputs were reconstructed
+  from the published HTTPS tables (repair task per faraday L-0001/F2026-07-008).
 - **ORB-10169 — External-galaxy universality fit.** One global β across the SPARC sample
   vs per-galaxy β, residual organization by size vs acceleration; kill condition
   predeclared (β_i tracking disk scale kills the fixed-β form). Adjudicates the
-  universality row.
+  universality row. **Run — the kill condition fired:** β_i tracks disk scale (ρ = 0.343,
+  p = 1.86×10⁻⁵), per-galaxy β wins by 51,723 AIC, and the same-policy MOND control
+  organizes by acceleration at a five-figure AIC advantage (universality row moved to
+  refuted; parent § form and universality adjudication).
 
 ## Open questions
 
@@ -734,8 +768,13 @@ catalog; data-acquisition tasks in ws_astrolabe (tycho), marked as such. Status 
   paid*: ORB-10164 measured the conserving substrate producing no far field at all, so
   there is currently no far-field limit to constrain (§ lattice adjudications). The
   ORB-10161 resolution adds the constraint's shape: whatever carries the boost must live in
-  the metric sector (Branch A is dead), and its fixed-β universality across external
-  galaxies is now the family's live external falsifier (ORB-10168/ORB-10169).
+  the metric sector (Branch A is dead). **ORB-10169 has since reshaped the target itself**
+  (parent § form and universality adjudication): the fixed-β form is refuted as a universal
+  law — β_i tracks galaxy size, and the data organize by acceleration — so the far-field
+  limit a paid source-law debt must reproduce is *not* one β; it is a per-galaxy or
+  acceleration-organized boost the family does not yet have. The universality falsifier has
+  fired; what stands in its place is the parent's harder open question — whether any
+  derivable substrate mechanic produces acceleration organization.
 - **Can any medium be pressureless to its own flow and exactly stiff to its excitations?**
   The B2 requirement — bulk response ≲ 15 m/s under the flow while excitations propagate at
   c, density-independence of the excitation speed to parts in 10¹³ — is the S2 sector's
