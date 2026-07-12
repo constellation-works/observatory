@@ -77,6 +77,26 @@ forbidden by parity. Consequences:
    is why emergent-metric models need all species to share one medium (universality) rather
    than approximate frame-independence.
 
+## Vacuum birefringence bounds (GRB polarimetry)
+
+A photon sector in which the two polarization states propagate at (even slightly)
+different speeds is *birefringent*: linear polarization rotates with propagation distance,
+and for the energy-dependent (dimension-5, CPT-odd) case the rotation grows as E², so any
+high linear polarization observed from a cosmological source washes out unless the
+helicity-speed split is essentially zero. Measured wall:
+
+- **GRB 140206A** (INTEGRAL/IBIS Compton polarimetry; redshift z = 2.739 from the optical
+  afterglow): linear polarization > 28% at 90% confidence in the prompt emission, giving
+  **ξ < 1 × 10⁻¹⁶** on the dimension-5 birefringence parameter — the deepest such limit
+  from a cosmological source (Götz et al. 2014, *Mon. Not. R. Astron. Soc.* 444, 2776).
+
+Interpretation for medium models (ours, flagged as derived): ξ ~ 10⁻¹⁶ means the two
+transverse polarizations must see *one* medium to that fractional precision at gamma-ray
+energies. A vacuum built from two components that couple differently to the two
+polarization states — or whose two components carry the EM mode at two speeds — is bound
+directly by this, independent of the isotropy (resonator) and dispersion (GRB timing)
+walls above.
+
 ## What this binds in our corpus
 
 For gravity-as-scarcity's rest-frame question: the lattice-as-substance (aether) branch is
@@ -84,4 +104,8 @@ excluded by the resonator bounds at 9–12 orders; the lattice-as-medium-of-exci
 branch survives with two computed conditions — a parity-symmetric hop rule (no linear
 dispersion) and lattice spacing ≲ 10⁸ Planck lengths. The placement lives in
 [theory/gravity-as-scarcity](../theory/gravity-as-scarcity.md) (ORB-10159 section and
-ledger).
+ledger). For the two-substance vortex vacuum
+([theory/two-substance-vortex-vacuum](../theory/two-substance-vortex-vacuum.md),
+ORB-10160) every wall in this note binds *doubled*: two substrates supply two candidate
+rest frames (each facing the resonator exclusion) and a two-component photon sector facing
+the birefringence bound — kill condition B in that doc's ledger.

@@ -662,3 +662,13 @@ budget-per-shell rivers (dead against the profile), and any substance reading of
 
 Reference n-body baseline: [solar-system-nbody](../../orrery/lab/sims/solar-system-nbody/) (conventional
 Newtonian leapfrog — the control the field models are compared against).
+
+**Candidate microphysics:** [two-substance-vortex-vacuum](two-substance-vortex-vacuum.md)
+(ORB-10160) — a substrate ontology (particles as vortex defects, charge as winding, void
+cores) that would *derive* this model's scarcity field as its effective far-field
+description. Its equivalence-principle fork has a computed verdict that lands on exactly
+this doc's surviving branch: void-volume-sourced gravity is refuted (MICROSCOPE), leaving
+substrate *energy* as the source — the same energy-flow river completion ORB-10159 derived
+here. It inherits this doc's ORB-10156 photon-sector refutation as a floor and the
+ORB-10159 rest-frame constraints doubled. Nothing in that doc moves this ledger; its own
+gates are proposed faraday tasks ORB-10163/ORB-10164.

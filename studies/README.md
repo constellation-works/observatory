@@ -32,8 +32,22 @@ one place to be wrong, one place to fix.
   coordinates, the Hamilton–Lisle river model (free-fall flow, exact Schwarzschild clocks),
   and Unruh acoustic metrics / analogue gravity (excitations of a flowing medium).
 - [lorentz-violation-bounds](lorentz-violation-bounds.md) — Michelson–Morley to rotating
-  resonators (10⁻¹⁷–10⁻¹⁸ anisotropy), the SME frame, the CMB dipole velocity, and GRB
-  dispersion bounds on lattice-scale (emergent-Lorentz) violations.
+  resonators (10⁻¹⁷–10⁻¹⁸ anisotropy), the SME frame, the CMB dipole velocity, GRB
+  dispersion bounds on lattice-scale (emergent-Lorentz) violations, and GRB-polarimetry
+  vacuum-birefringence bounds.
+- [vortex-atoms-and-quantized-circulation](vortex-atoms-and-quantized-circulation.md) —
+  the vortex-matter lineage: Kelvin's vortex atoms and the knot-theory origin, Maxwell's
+  vortex cells and the 1865 removability lesson, the Bjerknes sign reversal, measured
+  quantized circulation/flux (Onsager/Feynman/Vinen), fractional-vortex confinement, and
+  the nuclear-electron (N-14 statistics) lesson.
+- [superfluid-vacuum-and-emergent-gauge-fields](superfluid-vacuum-and-emergent-gauge-fields.md)
+  — Volovik's ³He program (emergent Weyl fermions, gauge fields, metric; Fermi-point
+  topological protection), what it does and doesn't deliver, and the two-fluid two-sound
+  fact (Landau/Peshkov).
+- [equivalence-principle-tests](equivalence-principle-tests.md) — the measured η ladder
+  (Eötvös → Eöt-Wash → MICROSCOPE at 10⁻¹⁵, plus ALPHA-g antimatter free fall) and the
+  composition of mass (QCD mass budget, nuclear binding energies) that makes
+  inventory-coupled gravity fail it.
 
 ## Wanted (backlog)
 
@@ -41,3 +55,6 @@ one place to be wrong, one place to fix.
   [theory/gravity-as-scarcity](../theory/gravity-as-scarcity.md))
 - Grangier–Roger–Aspect 1986 antibunching (needed by
   [theory/swirl-photon](../theory/swirl-photon.md))
+- Neutrality of matter (electron–proton charge cancellation bound, ~10⁻²¹) and the Skyrme
+  baryon-number-as-winding citation (needed by
+  [theory/two-substance-vortex-vacuum](../theory/two-substance-vortex-vacuum.md))
