@@ -48,6 +48,14 @@ one place to be wrong, one place to fix.
   (Eötvös → Eöt-Wash → MICROSCOPE at 10⁻¹⁵, plus ALPHA-g antimatter free fall) and the
   composition of mass (QCD mass budget, nuclear binding energies) that makes
   inventory-coupled gravity fail it.
+- [fifth-force-searches](fifth-force-searches.md) — the α–λ Yukawa exclusion ladder
+  (Eöt-Wash sub-mm → LLR → planetary), the exchange-force sign systematics, the light/mass
+  discriminator at λ ≫ AU, and the Fischbach 1986 / Sanders 1984 canon with the
+  universality problem (radial-acceleration relation).
+- [gravitational-redshift-astronomical](gravitational-redshift-astronomical.md) — the
+  redshift rungs beyond the solar neighborhood: solar Fe lines (HARPS-LFC), S2/S0-2 at
+  Sgr A* (GRAVITY, Do), and stacked galaxy clusters (Wojtak) with the Kaiser kinematic
+  caveat — redshift tracking the dynamics-inferred potential at every measured scale.
 
 ## Wanted (backlog)
 

@@ -653,6 +653,11 @@ budget-per-shell rivers (dead against the profile), and any substance reading of
 - Can the lattice model be normalized once (one constant) and then match *two* independent
   observables? That would upgrade "right shape" materially. (The rotation-curve fit uses one free
   β — a second, independent observable matched at the *same* β would be the real upgrade.)
+  The sharpest version is now filed (ORB-10161's universality analysis): one *global*
+  β = 5.25 kpc across an external-galaxy sample vs per-galaxy β — tycho ORB-10168 (SPARC
+  catalog) + faraday ORB-10169, kill condition predeclared; the measured
+  radial-acceleration relation is the standing risk
+  ([studies/fifth-force-searches](../studies/fifth-force-searches.md)).
 - Where does the model *diverge* from Newton/GR at accessible scales? Partially answered by
   ORB-10156/ORB-10097: it diverges in the photon sector (fatally, as stated) and at Uranus
   under the derived multiplicative rule (orientation-dependent tension). A falsifying sim is

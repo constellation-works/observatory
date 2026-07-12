@@ -66,4 +66,6 @@ theory that buys dilation from motion through a flowing medium (the river readin
 dilation factor √(1 − v²/c²) with v² = 2GM/r *exactly*, because rows 3–5 test the profile,
 not only the local gradient. The confrontation lives in
 [theory/gravity-as-scarcity](../theory/gravity-as-scarcity.md) (ORB-10159 section and
-ledger).
+ledger). The redshift rungs beyond the solar neighborhood (solar disk, S2 at Sgr A*, galaxy
+clusters) are in
+[gravitational-redshift-astronomical](gravitational-redshift-astronomical.md).
