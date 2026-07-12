@@ -22,6 +22,9 @@ one place to be wrong, one place to fix.
 - [solar-system-ephemeris-precision-floor](solar-system-ephemeris-precision-floor.md) — per-planet
   Newtonian-omission residuals vs JPL Horizons 2016–2026 (the AU-scale bound), Mercury's GR
   excess, and the ORB-10093/ORB-10094 lineage.
+- [scalar-gravity-ppn-constraints](scalar-gravity-ppn-constraints.md) — the PPN photon sector
+  (γ, deflection, Shapiro), the Cassini bound, and the scalar-gravity lineage Nordström →
+  Brans–Dicke → screened scalar-tensor (chameleon/Vainshtein).
 
 ## Wanted (backlog)
 
