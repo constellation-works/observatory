@@ -28,10 +28,12 @@ measured wall the parent has already hit (the ORB-10156 photon-sector refutation
 floor to beat, the ORB-10159 clock-sector and rest-frame constraints — doubled, since two
 substances offer two candidate rest frames).
 
-**Current verdict:** *founded, one kill condition already computed against it.* The
-keep-worthy structural feature is the topological/dynamical split — charge as winding
-(exact by topology), mass as core energy (dynamical, unconstrained) — which is real,
-measured physics in superfluids and superconductors
+**Current verdict:** *founded; the EM sign bet measured and won in 2-D; the gravity bridge
+measured and refuted at the mechanic level — the gravitational sector now hangs on one
+named debt, the source law.* The keep-worthy structural feature is the
+topological/dynamical split — charge as winding (exact by topology), mass as core energy
+(dynamical, unconstrained) — which is real, measured physics in superfluids and
+superconductors
 ([studies/vortex-atoms-and-quantized-circulation](../studies/vortex-atoms-and-quantized-circulation.md)).
 Kill condition A (the equivalence principle) has a computed verdict: **gravity sourced on
 void volume — the literal reading of "moving clump of void" — is refuted at ~eleven orders
@@ -40,6 +42,15 @@ of magnitude** by MICROSCOPE against the composition of mass
 surviving fork (gravity couples to substrate *energy*) satisfies the equivalence principle
 by construction but surrenders the literal-void ontology, collapsing the gravitational
 sector onto exactly the energy-flow river branch the parent already derived (ORB-10159).
+Both founding lattice gates have since run (§ lattice adjudications below): **ORB-10163**
+measured the EM sign structure the ontology bet on — like polarity repels (+0.137474 mean
+far force), opposite attracts (−0.137443); the Bjerknes reversal did not bite in 2-D under
+the declared winding coupling, with the 3-D law deliberately unclaimed and the contact
+mechanism qualified by a core-overlap reversal — and **ORB-10164** measured the gravity
+bridge **negative at the mechanic level**: a substance-conserving lattice produces no
+far-field scarcity from voids, so the derivation this family owes the parent cannot even
+start until it pays what is now one consolidated debt, the **source-law debt** (ORB-10162,
+ORB-10164, and §B2's obligation — three strikes, one owed law of non-conservation).
 Kill condition B (one light from two substances) is stated below as the theorem the model
 owes; it is untested, and generic two-component media fail it. The S2 disjunction from the
 same discussion thread — S2 as a finite-range fifth force vs S2 as the metric medium — has
@@ -82,14 +93,17 @@ no standard condensate meets.
    assumed here: the canonical hydrodynamic precedent (Bjerknes) famously *reverses* the
    electrostatic sign rule (like attracts), and the model's bet — that circulation is
    vector-shaped where pressure is scalar-shaped, flipping the sign back — is exactly what
-   the proposed lattice sim must measure (**ORB-10163**).
+   the lattice sim measured (**ORB-10163**, § lattice adjudications): the bet paid in
+   2-D — like repels, opposite attracts — under the declared relative-phase coupling.
 5. **Gravity.** The void core is the one strictly one-signed object in the ontology
    (∅ ≥ 0 always, both polarities produce it), so the gravitational monopole is
    structurally polarity-blind — as the thread's own corrections force: gravity tracks
    nucleons not electron orbits (H vs D gravitate 2:1 on one shared electron cloud),
    antihydrogen falls *down* (ALPHA-g), and nothing shields it (Le Sage/Majorana bounds).
    A moving defect carries its void with it — the "moving clump of void" that would source
-   the parent's scarcity flow. *Which* scalar of the core actually gravitates — void
+   the parent's scarcity flow. (Measured against, **ORB-10164**: in a conserving substrate
+   the carried void carries its compensating halo, and the pair has no far field —
+   § lattice adjudications.) *Which* scalar of the core actually gravitates — void
    volume or substrate energy — is kill condition A, computed below.
 
 ## The topological/dynamical split — the keep-worthy feature
@@ -123,7 +137,8 @@ does not; the sign structure survives, the literal coupling dies).
 **(c) Two-signed EM.** Polarity gives exactly two signs, and opposite windings superpose
 to zero net circulation at distance — aggregate neutrality and shieldability come out
 structurally. What is *not* structural is the force law's sign and profile (the Bjerknes
-reversal risk, §4 above) — gated on **ORB-10163**.
+reversal risk, §4 above) — measured by **ORB-10163**: sign delivered in 2-D under the
+declared coupling, law 2-D-correct, the 3-D 1/r² half still open (§ lattice adjudications).
 
 **(d) A consistent neutron.** The (1, 1) balanced defect passes every bookkeeping test the
 mechanics can currently pose. Beta decay: (1,1) → (1,0) + (0,1) conserves both windings —
@@ -188,7 +203,12 @@ adjudications — the parent's clock ladder and this model's equivalence-princip
 land on the *same* completion from independent directions, which is the discussion
 thread's "universality blade": anything in gravity that knows particle type, substance, or
 composition dies; only total energy survives as a source. Lattice-level check of which
-quantity actually controls a defect's far field: **ORB-10164**.
+quantity actually controls a defect's far field: **ORB-10164 — returned underdetermined
+by nullity**: on a conserving lattice *no* configuration has a far field, so nothing
+selects the gravitating quantity; the fork is **mooted pending the source law**
+(§ lattice adjudications). The analytic verdict above is untouched — MICROSCOPE kills the
+void-volume fork and energy survives by construction regardless of what the lattice
+cannot yet express.
 
 ## Kill condition B — two substances, one light
 
@@ -255,8 +275,10 @@ acoustic metrics) is inherited through
 - **Derivation target:** this model must produce the parent's verified far field —
   accumulated depletion ∝ 1/r around a defect ensemble — as its effective description, and
   the parent's fitted galactic β-boost would then be a property of substrate headroom this
-  model has to either derive or discard. Gated on **ORB-10164** (far-field profile, moving-
-  defect wake).
+  model has to either derive or discard. **ORB-10164 has run: negative** — the conserving
+  substrate produces no far field of any profile (the wake survives as kinematics only),
+  so the derivation target is unreachable until the source-law debt is paid (§ lattice
+  adjudications).
 - **Inherited refutations as constraints:** the ORB-10156 photon-sector refutation of the
   static parent is a floor (kill condition B must clear it via flow drag, not repeat it);
   the ORB-10159 rest-frame constraints apply doubled; the ORB-10159 river branch is the
@@ -445,7 +467,9 @@ out, and each is a sharp statement about the S2 equation of state:
    outside a star there are no cores to do the consuming. The lattice adjudication has
    already run against the parent's two natural counting rules (ORB-10162: neither
    self-organizes toward GP; its ledger reconciliation is **ORB-10165**'s scope, not this
-   doc's) — the debt stands, with a measured first strike against the easy candidates.
+   doc's) — and this family's own lattice has since added the second strike (**ORB-10164**:
+   a conserving substrate has no far monopole at all). The debt stands, consolidated as
+   the **source-law debt** (§ lattice adjudications, three-strike convergence).
 2. **Compressible fork** (consumption at cores only): continuity with the GP velocity forces
    the density profile n₂ ∝ r^(−3/2) — the river *densifies* inward, contrary to the
    depletion intuition. Two computed constraints follow:
@@ -500,9 +524,125 @@ merger derived in (A6) closes the middle ground: every consistency repair of Bra
 is a step into the metric sector. **The disjunction resolves: S2 is the metric medium, or it
 is nothing at kiloparsec scale.** The family's S2 sector now rides entirely on Branch B's
 owed items — the equation-of-state requirement (B2), the single-cone theorem (kill
-condition B), the consumption law (ORB-10162's measured strike; ORB-10165 reconciles) — with
+condition B), the source-law debt (two measured strikes, ORB-10162 and ORB-10164;
+§ lattice adjudications) — with
 the fixed-β universality test (ORB-10168/ORB-10169) standing as the live external falsifier
 for the boost mechanism itself, whichever sector carries it.
+
+## The lattice adjudications — ORB-10163 and ORB-10164
+
+The two gates filed at founding have run (faraday; orrery `7eb10ec`, `712a814`). The first
+delivers the EM sign structure the ontology bet on; the second refutes the gravity bridge
+at the mechanic level in a conserving substrate. The apparatus records are the numbers of
+record: [two-substance-vortex-lattice](../../orrery/lab/sims/two-substance-vortex-lattice/),
+[two-substance-defect-gravity](../../orrery/lab/sims/two-substance-defect-gravity/).
+
+### ORB-10163 — interaction sign, force law, contact mechanism, neutron analog
+
+2-D static pinned-defect energy apparatus (257², seed 42): separately conserved A/B
+densities under a soft shared-capacity pressure (peak local occupancy 1.0267 in the
+conservation probe), with windings entering only through the relative phase θ_A − θ_B —
+the declared coupling hypothesis, making q = w_A − w_B. Measured:
+
+- **Sign — the Bjerknes reversal did not bite.** Like polarity repels (mean far force
+  +0.137474), opposite attracts (−0.137443): the winding-based coupling delivers the
+  electrostatic sign structure where the canonical pressure/scalar precedent reverses it.
+  §4's bet — circulation is vector-shaped where pressure is scalar-shaped — is measured
+  correct *given the declared coupling*.
+- **Law — 2-D correct; the 3-D half deliberately unclaimed.** Fitted far-force exponent
+  −1.051; a logarithmic-potential fit has RMSE 0.0070 against 0.1383 for a 1/r potential —
+  exactly the 2-D point-vortex log/1-r structure. This apparatus cannot pose the 3-D 1/r²
+  question; that needs a vortex-line/ring apparatus (not yet filed).
+- **Short range — the contact mechanism is not monotonic.** The density/capacity term
+  strengthens like-repulsion by +2.51% over the 8–16-cell band (mean +0.0136 on a phase
+  force of +0.5424) but reverses below 12 cells, softening the closest 8-cell probe by
+  −0.0746. "Pushing out into a denser region of the same type costs energy" survives as an
+  intermediate-range correction from overlapping same-substance halos; at core overlap it
+  inverts in this parameterization — the ontology's contact-repulsion story is qualified,
+  not confirmed.
+- **Neutron analog — neutral at the measured residual.** The balanced (1,1) defect has
+  exactly zero relative-phase charge, retains a 0.584 central void fraction, and its far
+  force against either polarity is 2.58×10⁻⁵ — 1.88×10⁻⁴ of the charged-pair scale,
+  consistent with a finite density-tail residual. Charge-blind void with charge-neutral
+  far field: the anatomy §3 assigns the neutron, measured.
+
+**Caveats, with gating assessment.** (i) *The relative-phase coupling is a declared model
+choice* — the sweep measures its consequences, not that a microscopic two-fluid vacuum
+must select it; this gates the sign rows' *reach* (supported given the coupling), not
+their content. (ii) *Defects are pinned analytic winding fields* with relaxed-form core
+and halo profiles — no dynamical stability or motion is established; this gates nothing
+measured here (all rows are statics) but leaves §1's vortex-permanence mechanics untested
+on the lattice. (iii) *2-D only* — the 1/r² far-field half of the EM-correspondence row is
+untouched: scoped open, not supported.
+
+### ORB-10164 — the gravity bridge, measured against a conserving substrate
+
+3-D stationary apparatus (97³): a balanced defect removes both substances from a Gaussian
+core and places exactly the same amount in a broader Gaussian halo — substance conserved
+to floating point (net signed deficit −2.0×10⁻¹⁴, 1.6×10⁻¹⁶ of the 122.88 positive void
+volume) — plus a 161²-slice forced-wake experiment and a 16-case core-size × winding
+factorial. Measured:
+
+- **Far field — negative.** The expelled halo cancels the signed monopole exactly; across
+  radii 36–44 the compensated signal is 3.95×10⁻⁷ of an uncompensated 1/r control that the
+  same estimator resolves at relative RMSE 2.1×10⁻¹⁶ — the null is the lattice's, not the
+  instrument's. **A substance-conserving lattice produces no far-field scarcity from
+  voids.** The parent's 1/r accumulated-depletion profile requires a net source — a
+  nonconserving sink or another long-range equation — absent here.
+- **Wake — qualified positive, kinematic only.** A forced moving core drags a lagging
+  depletion/replenishment wake whose fitted pattern velocity tracks the imposed motion
+  (ratio 0.999997 at speed 0.30, with 0.999990/0.999997 at 0.15/0.45; mean lag 0.586
+  cells; behind/ahead positive-depletion ratio 2.21; time-step halving moves the fitted
+  speed by a 5×10⁻⁷ fraction). Motion is imposed, not emergent — no soliton stability, no
+  self-consistent drag.
+- **Which quantity gravitates — underdetermined *by nullity*.** Void volume explains
+  R² = 0.9925 of the *compact* response; the winding/flow-energy diagnostic explains
+  R² = 0.00032, and changing winding at fixed core changes compact scarcity by exactly
+  zero. But every conserved configuration has a zero far monopole, so the far-field
+  predictor fit is undefined: the lattice contains no equation coupling either candidate
+  to a far field. Faraday's learning L-0005 is the handoff of record: compensated
+  two-substance voids have no gravity monopole without an added source law.
+
+**What is refuted, and what survives.** Refuted at the mechanic level: **far-field
+sourcing from conservation-respecting voids** — §5's "a moving defect carries its void
+with it, sourcing the parent's scarcity flow" fails as stated, because carrying a
+conserved void means carrying its compensating halo, and the pair has no monopole. The
+parent's scarcity field cannot be derived from conserved voids; the bridge this family was
+founded to build does not exist without a law of non-conservation. Surviving, exactly: the
+compact void structure (real and void-volume-controlled — the EM/structural anatomy kill
+condition A already left as the void's only job), and the kinematic possibility of the
+following wake (the shape the parent's flow story needs, demonstrated under forcing only).
+
+**Caveats, with gating assessment.** (i) *The wake trajectory and relaxation target are
+imposed* — gates the wake row to kinematics (no dynamical-motion claim), exactly as
+recorded. (ii) *The flow-energy measure is a regularized diagnostic* — gates the
+factorial's energy-candidate reading (a different energy functional could correlate
+differently with a future far field), not the nullity verdict, which is conservation
+arithmetic. (iii) *No gravity coupling was inserted* — deliberately: a void-sourced or
+energy-sourced Poisson field can each be added as a postulate, and the lattice chooses
+neither. None of the three gates the far-field verdict.
+
+### The three-strike convergence — one debt, named
+
+Three independent adjudications have now returned the same missing object:
+
+1. **ORB-10162** (parent): neither natural counting rule yields the r^(−3/2) volumetric
+   sink the free-fall flow demands — the river completion refuted at the parent's own
+   mechanic level.
+2. **ORB-10164** (here): a conserving two-substance lattice has no far monopole at all —
+   no gravitational far field of *any* profile without destruction or sourcing.
+3. **Branch B's standing obligation** (§B2, incompressible fork): the S2 reading owes
+   precisely the same r^(−3/2) consumption law analytically — and harder, since outside a
+   star there are no cores to do the consuming.
+
+These are not three problems; they are one. **The family owes a single derived law of
+non-conservation — where substance goes.** Named: the **source-law debt**. Until it is
+paid, this family has an EM sector with measured 2-D support and *no gravitational
+sector*: kill condition A's fork is mooted (nothing on the lattice gravitates, so nothing
+selects what gravitates), the bridge to the parent is refuted as founded, and Branch B's
+clock sector stands or falls with the same law. The routes are unchanged from the parent's
+statement of record: impose the sink law as a named postulate, derive it from deeper S2
+dynamics, or concede the gravitational sector.
 
 ## Evidence ledger
 
@@ -513,11 +653,11 @@ for the boost mechanism itself, whichever sector carries it.
 | Mass = core energy is unconstrained by charge — the 1836× ratio puts no strain on exact charge cancellation | supported | Structural consequence of the split; the superfluid precedent shows winding exact while core energy varies freely (studies note). What sets *1836 specifically* is entirely open (untested, below) |
 | The gravitational monopole is one-signed and polarity-blind (void fraction ≥ 0; H/D 2:1, antihydrogen falls down, no shielding) | mixed | Sign structure is by construction (∅ ≥ 0, both polarities produce void); polarity-blindness is forced by measurement — ALPHA-g (0.75 ± 0.13 ± 0.16)g downward, and composition/shielding walls ([studies/equivalence-principle-tests](../studies/equivalence-principle-tests.md)). The *coupling* is adjudicated by kill condition A (next row) |
 | **Kill condition A:** gravity sourced on void volume (particle inventory) is consistent with tested free-fall universality | refuted | **Computed (§ above):** inventory-coupled gravity predicts η(Ti, Pt) ~ 9 × 10⁻⁴ from the binding-energy budget alone vs MICROSCOPE's [−1.5 ± 2.3 ± 1.5] × 10⁻¹⁵ — dead by ~11 orders; QCD mass budget (>90% field dynamics) closes the per-species-void escape ([studies/equivalence-principle-tests](../studies/equivalence-principle-tests.md)). Consequence recorded: the literal-void ontology is surrendered as a gravitational source; void survives as EM/structural anatomy only |
-| The energy-sourced fork: gravitating charge = substrate energy, deriving the parent's scarcity flow as moving energy | mixed | Passes the equivalence principle by construction (inertia = excitation energy on this ontology) and lands on exactly the parent's surviving river branch (ORB-10159: σ = flow kinetic energy) — two independent adjudications converging. Price: deflationary (the two-substance layer does no *gravitational* work beyond being the medium). Lattice-level adjudication of which quantity controls a defect's far field: proposed faraday task **ORB-10164** |
-| Like-polarity defects repel, opposite attract, with a 1/r² far field (the EM correspondence) | untested | The canonical hydrodynamic precedent is *reversed* (Bjerknes: like attracts — studies note), and scalar/pressure mediation provably attracts like charges; the model's vector-sector (circulation) bet must be measured on the lattice: proposed faraday task **ORB-10163** |
-| The neutron as elementary balanced defect (1,1): decay, capture, annihilation-selection, and proton-stability bookkeeping all consistent | mixed | Worked (§(d) above): n → p + e⁻ winding-conserving; electron capture allowed; hydrogen annihilation forbidden; proton ≠ positron topologically (w₂ as baryon number). Owed: spin-½/statistics, magnetic moment, the neutrino slot. The composite-neutron alternative is independently dead (N-14 Bose statistics — studies note). Neutrality of the balanced defect on the lattice: part of **ORB-10163** |
+| The energy-sourced fork: gravitating charge = substrate energy, deriving the parent's scarcity flow as moving energy | mixed | Passes the equivalence principle by construction (inertia = excitation energy on this ontology) and lands on exactly the parent's surviving river branch (ORB-10159: σ = flow kinetic energy) — two independent adjudications converging. Price: deflationary (the two-substance layer does no *gravitational* work beyond being the medium). **ORB-10164 update ([two-substance-defect-gravity](../../orrery/lab/sims/two-substance-defect-gravity/), orrery `712a814`, § lattice adjudications): the lattice adjudication returned *underdetermined by nullity* — the fork is mooted pending the source law.** Every conserved configuration has a zero far monopole, so neither candidate is selected: void volume controls only the *compact* response (R² = 0.9925), the winding/flow-energy diagnostic is uncoupled from it (R² = 0.00032, zero spread at fixed core), and the far-field predictor fit is undefined. The analytic verdict stands unchanged — MICROSCOPE kills void-volume, energy survives by construction — but the lattice cannot adjudicate *which quantity gravitates* while nothing on it gravitates |
+| Like-polarity defects repel, opposite attract, with a 1/r² far field (the EM correspondence) | mixed | **Measured in 2-D (ORB-10163, [two-substance-vortex-lattice](../../orrery/lab/sims/two-substance-vortex-lattice/), orrery `7eb10ec`, § lattice adjudications):** sign supported — like repels (+0.137474 mean far force), opposite attracts (−0.137443); the Bjerknes reversal did not bite, *given the declared relative-phase coupling* (a model hypothesis, not emergent). Law: force exponent −1.051 with a log potential (fit RMSE 0.0070 vs 0.1383 for 1/r) — correct 2-D point-vortex physics; **the 3-D 1/r² half is deliberately unclaimed** (needs a vortex-line/ring apparatus, not yet filed). Contact mechanism qualified: the density/capacity term strengthens like-repulsion +2.51% at 8–16 cells but reverses below 12 cells (−0.0746 at the 8-cell probe) — the ontology's contact-repulsion mechanism is not monotonic in this parameterization |
+| The neutron as elementary balanced defect (1,1): decay, capture, annihilation-selection, and proton-stability bookkeeping all consistent | mixed | Worked (§(d) above): n → p + e⁻ winding-conserving; electron capture allowed; hydrogen annihilation forbidden; proton ≠ positron topologically (w₂ as baryon number). Owed: spin-½/statistics, magnetic moment, the neutrino slot. The composite-neutron alternative is independently dead (N-14 Bose statistics — studies note). Neutrality of the balanced defect: **measured (ORB-10163, § lattice adjudications)** — zero relative-phase charge with a retained 0.584 void fraction and a far-force residual of 1.88×10⁻⁴ of the charged-pair scale (2.58×10⁻⁵ absolute), consistent with the density-tail floor; 2-D statics, no dynamical stability shown |
 | **Kill condition B:** the coupled two-substance vacuum supports a single Maxwell photon sector (one speed, two transverse polarizations, no birefringence, no detectable frame, γ = 1 via flow drag) | untested | Stated as the theorem owed (§ above), with the Volovik Fermi-point theorem as the standard of proof ([studies/superfluid-vacuum-and-emergent-gauge-fields](../studies/superfluid-vacuum-and-emergent-gauge-fields.md)). Binding measurements if it fails: birefringence ξ < 1 × 10⁻¹⁶ (GRB 140206A), resonator anisotropy 10⁻¹⁷–10⁻¹⁸ per rest frame (×2 frames + relative flow), GRB dispersion, and the inherited ORB-10156 γ = 1 floor ([studies/lorentz-violation-bounds](../studies/lorentz-violation-bounds.md)) |
-| The model derives gravity-as-scarcity as its effective far field (defect ensembles produce accumulated depletion ∝ 1/r; moving defects produce the scarcity wake) | untested | The claim that founds the family's relation to the parent; nothing yet computed at the mechanic level. Gated on proposed faraday task **ORB-10164** (far-field profile, wake, gravitating quantity) |
+| The model derives gravity-as-scarcity as its effective far field (defect ensembles produce accumulated depletion ∝ 1/r; moving defects produce the scarcity wake) | refuted | **Measured (ORB-10164, [two-substance-defect-gravity](../../orrery/lab/sims/two-substance-defect-gravity/), orrery `712a814`, § lattice adjudications):** in a substance-conserving lattice the balanced defect's expelled halo cancels the signed monopole exactly (net deficit −2.0×10⁻¹⁴, 1.6×10⁻¹⁶ of the 122.88 void volume); the radii-36–44 signal is 3.95×10⁻⁷ of an uncompensated 1/r control the estimator resolves at relative RMSE 2.1×10⁻¹⁶. **Far-field sourcing from conservation-respecting voids is refuted at the mechanic level** — "moving clump of void creates scarcity" fails as stated; the parent's field requires a nonconserving sink or other net source, absent here (faraday's L-0005). Survives: the compact void structure (void-volume-controlled) and the *kinematic* wake (forced core drags a lagging wake, pattern/core velocity ratio 0.999997 at speed 0.30, lag 0.586 cells — motion imposed, no stability shown). What re-opens the row: paying the **source-law debt** (§ three-strike convergence) |
 | The proton as a confined composite of sub-integer vortices (fractional constituents, three to a proton — the confinement correspondence) | conjecture | Precedent exists (Babaev 2002 fractional-vortex confinement; BEC splitting of multiply-wound vortices — studies note), but why one polarity confines in triples while the other stays single is underived, and no quantitative correspondence to QCD is claimed |
 | **S2 disjunction, Branch A (charge-sourced):** a kpc-range S2 Yukawa sourced on S2 displacement or void volume, at galactic strength | refuted | **Computed (§A1):** any countable sourcing carries Δ(q/m) ≈ 8.6 × 10⁻⁴ between MICROSCOPE's materials, so \|α\| ≈ 0.68 predicts η ~ 6 × 10⁻⁴ vs the measured 3 × 10⁻¹⁵ — dead by ~11 orders, the same blade as kill condition A ([studies/equivalence-principle-tests](../studies/equivalence-principle-tests.md), [studies/fifth-force-searches](../studies/fifth-force-searches.md)) |
 | **Branch A (any sourcing):** a kpc-range Yukawa at galactic strength survives the solar-system light sector | refuted | **Computed (§A3):** at ξ₂ ≫ AU ephemerides calibrate G(1+α)M while light propagates on GM (scalar mediator: conformal invariance; vector: uncharged photon) → γ_eff − 1 = −2α/(1+α); Cassini forces \|α\| ≤ 1.2 × 10⁻⁵ vs the required 0.68 — 4.8 orders. Massive-tensor escape: vDVZ γ = ½, equally dead ([studies/fifth-force-searches](../studies/fifth-force-searches.md)). The parent's boost is exempt whatever carries it (the measured ORB-10157 headroom screening included) — it lives in σ, which light also reads on the river completion |
@@ -530,20 +670,24 @@ for the boost mechanism itself, whichever sector carries it.
 | Branch B kill-or-live: galactic/astronomical clock data | supported | **Computed and confronted (§B3):** redshift ≡ dynamics-inferred potential (one field; residual leak ≤ 10⁻¹⁴), consistent with solar 638 ± 6 vs 633.1 m/s, S2/Sgr A* f = 1.04 ± 0.05, and cluster ~10 km/s; degenerate with GR+DM in every clock channel; the cluster rung disfavors the clean-clock alternative at ~2σ ([studies/gravitational-redshift-astronomical](../studies/gravitational-redshift-astronomical.md)) |
 | Fixed-length-scale universality across external galaxies (β for the parent's boost, ξ₂ for any Yukawa reading) | untested | **Named risk (§A5):** the radial-acceleration relation organizes the discrepancy by acceleration — the exposure that killed Sanders' fixed r₀ ([studies/fifth-force-searches](../studies/fifth-force-searches.md)); the MW-only fit dodges it so far. Adjudication filed: tycho **ORB-10168** (SPARC catalog) + faraday **ORB-10169** (global β vs per-galaxy β, kill condition predeclared) |
 
-## Falsifiers → faraday/tycho (proposed, not run)
+## Falsifiers → faraday/tycho
 
 Sim tasks filed in ws_orrery per the house rule that evidence enters through orrery's
-catalog; data-acquisition tasks in ws_astrolabe (tycho), marked as such:
+catalog; data-acquisition tasks in ws_astrolabe (tycho), marked as such. Status per task:
 
 - **ORB-10163 — Two-substance lattice vortex defects: interaction sign, force law, and
   the neutron analog.** Measures the sign (the Bjerknes reversal risk), the far-field law
   (1/r²?), the short-range denser-region mechanism, and the balanced defect's neutrality.
-  Adjudicates the EM-correspondence and neutron rows.
+  **Run** — adjudicated § lattice adjudications: sign delivered in 2-D, contact mechanism
+  qualified, neutron neutral at the measured residual; the 3-D law remains open (a
+  vortex-line/ring apparatus is not yet filed).
 - **ORB-10164 — Two-substance lattice defect gravity: void-core far field, moving-defect
   wake, and which quantity gravitates.** Measures whether a defect core reproduces the
   parent's 1/r accumulated-depletion far field, whether motion produces the assumed
   scarcity wake, and whether void volume or flow energy controls the far-field amplitude —
-  the lattice-level face of kill condition A. Adjudicates the bridge rows.
+  the lattice-level face of kill condition A. **Run** — adjudicated § lattice
+  adjudications: far field negative (bridge row refuted), wake kinematic only, gravitating
+  quantity mooted by nullity.
 - **ORB-10167 — Yukawa-vs-scarcity shape discrimination on the Gaia rotation-curve fit.**
   Adds the Sanders-form Yukawa as a third model under the exact ORB-10077/ORB-10082
   protocol; measures whether the fitted band distinguishes exponential saturation from the
@@ -559,6 +703,15 @@ catalog; data-acquisition tasks in ws_astrolabe (tycho), marked as such:
 
 ## Open questions
 
+- **The source-law debt — where does substance go?** The family's one consolidated
+  gravitational debt (§ three-strike convergence): ORB-10162 measured that no natural
+  counting rule yields the r^(−3/2) volumetric sink, ORB-10164 measured that a conserving
+  two-substance lattice has no far monopole at all, and §B2's incompressible fork owes
+  exactly the same consumption law analytically. These were three open items; they are one
+  owed object — a derived law of non-conservation. Until it exists the family has no
+  gravitational sector: the parent bridge stays refuted, kill condition A's fork stays
+  mooted, and the B2 clock requirement stands unmet. Routes, unchanged: named postulate,
+  derivation from deeper S2 dynamics, or concession.
 - **Can the single-photon-sector theorem be proven — or must "two substances" be recast?**
   The Volovik standard suggests the theorem may only be available for one vacuum with a
   two-component order parameter, not two genuinely independent substances. If so, the
@@ -577,7 +730,9 @@ catalog; data-acquisition tasks in ws_astrolabe (tycho), marked as such:
 - **Does the substrate headroom mechanic reproduce the parent's fitted β-boost?** If the
   scarcity field is this model's far-field limit, the parent's one empirical success (the
   ORB-10077 galactic fit) becomes a constraint on substrate depletion at galactic scale —
-  untouched here, and the right kind of second observable if ORB-10164 survives. The
+  untouched here, and the right kind of second observable *once the source-law debt is
+  paid*: ORB-10164 measured the conserving substrate producing no far field at all, so
+  there is currently no far-field limit to constrain (§ lattice adjudications). The
   ORB-10161 resolution adds the constraint's shape: whatever carries the boost must live in
   the metric sector (Branch A is dead), and its fixed-β universality across external
   galaxies is now the family's live external falsifier (ORB-10168/ORB-10169).
