@@ -41,6 +41,22 @@ phenomenology (the β-headroom boost), plus a named completion path — a screen
 structure the counting mechanic does not yet supply — recorded in
 [studies/scalar-gravity-ppn-constraints](../studies/scalar-gravity-ppn-constraints.md).
 
+The ORB-10159 derivation (2026-07-12, § clock sector below) then closed the other measured
+gap: the static model predicts **zero gravitational time dilation** and is refuted by the
+clock ladder outright; the accumulating variant is refuted by the LLR Ġ/G bound. What
+survives is derived, not chosen: a steady-state completion in which space itself obeys the
+model's one rolling rule — free-falling into consuming masses at exactly the
+Gullstrand–Painlevé profile (½v² = c²σ, Schwarzschild clocks exact, the static Σ 1/count
+field returning as the flow's comoving time-integral) — with matter and light as
+excitations *of* the lattice (Unruh analog-gravity family; the aether/substance reading is
+excluded by 9–12 orders against resonator bounds). On that branch the photon sector
+*conditionally reopens with the right sign* (flow drag supplies γ = 1 exactly), the lattice
+rest frame stays hidden (emergent Lorentz invariance, spacing bounded to ≲ 10⁸ ℓ_Pl by GRB
+dispersion), and the multiplicative β factor is provably invisible to every current clock
+instrument. The completion's price is two owed ingredients, each gated on a proposed
+faraday sim: the volumetric consumption law the free-fall flow demands (**ORB-10162**) and
+excitation dynamics on a flowing lattice (**ORB-10158**, scope extended).
+
 ## Evidence ledger
 
 | Claim | Status | Evidence |
@@ -53,9 +69,15 @@ structure the counting mechanic does not yet supply — recorded in
 | The fitted scarcity model is an *absolute* description of the MW rotation curve | mixed | Reduced χ² ≈ 145 against the quoted statistical errors — a formal failure — but those errors omit dominant distance/selection/asymmetric-drift systematics, so even the true law would fail them (not a refutation). Held-out 15–18.75 kpc band: coherent one-signed ~4.9 km/s underprediction — the data flattens near 13–16 kpc where the model keeps declining; the shape term is *sufficient relative to the control, not complete*. Drift nuisance pinned at its 3 km/s lower bound and weakly identified → a radially-varying asymmetric-drift model (Faraday **ORB-10083**) is prerequisite to any stronger claim. See [scarcity-rotation-curve-fit](../../orrery/lab/sims/scarcity-rotation-curve-fit/) |
 | The fitted scarcity form leaves solar-system ephemerides (AU scale) inside observational precision | mixed | Constraint from the measured Newtonian-omission floor ([studies/solar-system-ephemeris-precision-floor](../studies/solar-system-ephemeris-precision-floor.md); Uranus rms 4.1e-9 AU is the tightest). **ORB-10097 ran** (Faraday; [solar-system-nbody](../../orrery/lab/sims/solar-system-nbody/) `scarcity/`, orrery `23fe253`, § below): the **multiplicative reading**, integrated on the exact ORB-10093 protocol with β and F(u) imported unchanged, puts **Uranus above its floor in the primary galactocentric orientation — 1.89× rms, 2.84× max** (7.7e-9 vs 4.1e-9 AU rms); the other seven planets stay below (Saturn next at 0.74×). Qualification: the six-axis orientation envelope **crosses** the Uranus floor (rms 0.66×–3.0×), so this is tension under the physically-motivated orientation, *not* an orientation-independent refutation. The **screened reading is identically Newtonian** — the explicit zero control — and is **unconstrained by this test**. **ORB-10156 update:** the superposition rule is no longer unfixed — the multiplicative reading is the *derived* local behavior (superposition row below), so this tension attaches to the model proper; the screened reading is not derivable from the mechanic and is no longer a fallback. Remaining honest out: the integrated factor imports the *fitted* exponent βF(R₀)/R₀² wholesale — a first-principles lattice computation could move the local log-gradient at O(1) (proposed faraday task **ORB-10157**), but not the sign or the existence of the modulation. Result: [summary.json](../../orrery/lab/sims/solar-system-nbody/scarcity/summary.json) |
 | Adding swirl to the scarcity field reproduces frame dragging | mixed | [frame-drag-swirl](../../orrery/lab/sims/frame-drag-swirl/) — right shape; real frame dragging (Lense–Thirring) has specific magnitude/falloff this toy hasn't been checked against (`conjecture — to verify`: study note needed) |
-| The scarcity picture is equivalent to weak-field GR's "gradient of time-flow rate" heuristic | mixed | **Worked computation (ORB-10156, § derivation below):** exact where the heuristic applies — both dynamics are a = c²∇σ with σ = GM/c²r, so scarcity coincides with the clock-rate deficit 1 − √(−g₀₀) point-by-point, and no static weak-field slow-motion massive-particle experiment can distinguish them. *Not* equivalent as a full weak-field account: the model has no mechanism making depleted regions tick slow (σ = clock deficit is a postulate, not counting — though if added, gravitational redshift comes out right for free), and the heuristic is only the g₀₀ half of a metric whose other half (Ψ) the model lacks — a measured difference (photon row). [studies/scalar-gravity-ppn-constraints](../studies/scalar-gravity-ppn-constraints.md) |
-| Light couples to scarcity so as to reproduce measured deflection and Shapiro delay (the photon sector; PPN γ) | refuted | **Derived, not assumed (ORB-10156, § below):** every photon coupling the lattice supports fails — photons blind to the field give zero deflection/delay (Nordström's fate); photons coupled to the stored time-potential give γ = 0 (half-GR: 0.875″ limb deflection, half Shapiro); the literal hop-on-depleted-lattice reading gives the wrong *sign* (light speeds up where points are sparse → bends away, Shapiro advance) with a non-PPN 1/r² profile. Best case \|γ − 1\| = 1 vs Cassini's (2.1 ± 2.3)×10⁻⁵ and VLBI's ~10⁻⁴ ([studies/scalar-gravity-ppn-constraints](../studies/scalar-gravity-ppn-constraints.md)). The hoped-for outcome — the lattice yielding time- and space-facing effects at the γ = 1 ratio — is **negative**: it would need a tick-rate deficit *and* a proper-space *excess* of GM/c²r each, and the mechanic supplies neither (depletion has the wrong sign for Ψ). Kills the model **as a complete theory of gravity as stated**; the galactic massive-sector result is untouched. Lattice-level check of the sign claim: proposed faraday task **ORB-10158** |
+| The scarcity picture is equivalent to weak-field GR's "gradient of time-flow rate" heuristic | mixed | **Worked computation (ORB-10156, § derivation below):** exact where the heuristic applies — both dynamics are a = c²∇σ with σ = GM/c²r, so scarcity coincides with the clock-rate deficit 1 − √(−g₀₀) point-by-point, and no static weak-field slow-motion massive-particle experiment can distinguish them. *Not* equivalent as a full weak-field account: the model has no mechanism making depleted regions tick slow (σ = clock deficit is a postulate, not counting — though if added, gravitational redshift comes out right for free), and the heuristic is only the g₀₀ half of a metric whose other half (Ψ) the model lacks — a measured difference (photon row). [studies/scalar-gravity-ppn-constraints](../studies/scalar-gravity-ppn-constraints.md). **ORB-10159 update:** on the river completion the missing clock mechanism is supplied — σ = ½v²/c² is *SR* dilation of a clock at rest in the free-fall inflow, and the identity σ = 1 − √(−g₀₀) becomes the exact GP lapse (§ clock sector (b)) |
+| Light couples to scarcity so as to reproduce measured deflection and Shapiro delay (the photon sector; PPN γ) | refuted | **Derived, not assumed (ORB-10156, § below):** every photon coupling the lattice supports fails — photons blind to the field give zero deflection/delay (Nordström's fate); photons coupled to the stored time-potential give γ = 0 (half-GR: 0.875″ limb deflection, half Shapiro); the literal hop-on-depleted-lattice reading gives the wrong *sign* (light speeds up where points are sparse → bends away, Shapiro advance) with a non-PPN 1/r² profile. Best case \|γ − 1\| = 1 vs Cassini's (2.1 ± 2.3)×10⁻⁵ and VLBI's ~10⁻⁴ ([studies/scalar-gravity-ppn-constraints](../studies/scalar-gravity-ppn-constraints.md)). The hoped-for outcome — the lattice yielding time- and space-facing effects at the γ = 1 ratio — is **negative**: it would need a tick-rate deficit *and* a proper-space *excess* of GM/c²r each, and the mechanic supplies neither (depletion has the wrong sign for Ψ). Kills the model **as a complete theory of gravity as stated**; the galactic massive-sector result is untouched. Lattice-level check of the sign claim: proposed faraday task **ORB-10158**. **ORB-10159 update:** stands as stated (static lattice); the dynamical excitation completion conditionally reopens the sector with the *right* sign — flow drag supplies the γΦ half exactly (γ = 1) — see the excitation-completion row below and § clock sector (e); ORB-10158's scope extended with a flowing-lattice arm |
 | The local superposition rule is multiplicative — accumulated background depletion modulates an embedded source's field generation; screening does not arise | supported | **Derived (ORB-10156, § below):** the fitted boost is literally a position-dependent coupling G_eff(r) = G·q(r)/q(R₀), and on a shared finite budget depletion is anonymous — no lattice rule lets a source respond only to *its own* depletion — so an embedded source (the Sun) generates with the background's G_eff(r_gal): exactly the reading ORB-10097 integrated. The screened branch's premise fails quantitatively in the model's own units: σ_sun < σ_gal ≈ 6×10⁻⁷ everywhere beyond ~0.017 AU (≈ 3.7 R☉), so the Sun's well never pins the local scarcity *level* (it dominates gradients, but the mechanic couples to levels). Neither of the model's two nonlinearities (headroom modulation; budget-exhaustion cutoff) is a chameleon or Vainshtein mechanism — a screened variant would be a *new model* owing exactly the chameleon design problem ([studies note](../studies/scalar-gravity-ppn-constraints.md)). Analytic over the continuum form; lattice-level confirmation filed as proposed faraday task **ORB-10157** |
+| The model as stated (static or accumulating depletion, no clock mechanism) is consistent with measured gravitational time dilation | refuted | **Derived (ORB-10159, § clock sector below):** a static scarcity field with universal tick rate predicts exactly zero dilation against the measured ladder — Pound–Rebka/Snider at 1%, Gravity Probe A tracking the GM/r *profile* to 7×10⁻⁵, GPS +38.6 μs/day as engineering fact, optical clocks resolving 1 mm ([studies/gravitational-time-dilation](../studies/gravitational-time-dilation.md)). The accumulating variant (consumption, no replenishment) is separately dead: σ̇/σ ~ 1/t_age ≈ 2×10⁻¹⁰ yr⁻¹ is an effective Ġ/G more than three orders above the LLR bound (7.1 ± 7.6)×10⁻¹⁴ yr⁻¹. Only the steady-state flow (river) branch survives as a dynamical completion — next row |
+| The dynamical-consumption flow law is the free-fall (Gullstrand–Painlevé) river ½v² = c²σ = GM/r; flux-conserving and budget-per-shell flows are refuted | mixed | **Derived (ORB-10159, §(b)):** continuity ties v(r) to where consumption happens. Sink-at-the-mass (flux-conserving) forces v ∝ 1/r² → dilation ∝ 1/r⁴, gravity ∝ 1/r⁵ — **the kill condition, confirmed: dead against GPS/GP-A/optical clocks and against Newton**. The mechanic's own equal-budget-per-shell bookkeeping read as a rate forces v ∝ 1/r → dilation ∝ 1/r², gravity ∝ 1/r³ — dead against clocks and internally inconsistent with its own verified static 1/r² force. The surviving law — space itself obeying the rolling rule, v·dv/dr = c²dσ/dr from rest at the reservoir — gives exactly GP, Schwarzschild dilation √(1 − 2GM/c²r), all clock tests passed by construction; the static Σ 1/count ∝ 1/r returns as the comoving time-integral of the flow and the ORB-10156 identity extends exactly (σ = ½v²/c² = 1 − √(−g₀₀)). Debt: continuity then demands a volumetric sink ∝ r^(−3/2) (per-shell draw growing as r^(1/2)) that no current counting rule produces — flow law earned, consumption law owed. Lattice adjudication: proposed faraday task **ORB-10162** ([studies/river-model-and-analog-gravity](../studies/river-model-and-analog-gravity.md)) |
+| Matter coupling: only the excitation (analog-gravity) reading lets the river buy time dilation while the lattice ontology does work | supported | **Derived by elimination (ORB-10159, §(c)):** the rules as stated make matter an external tracer reading ∇σ — a tracer inherits no SR-in-the-flowing-frame, so the river buys it no dilation (the drag objection is fatal: no coupling constant exists to carry it). The deflationary reading is exactly GR in GP coordinates — consistent, ontology idle (Hamilton & Lisle's own caution: nothing measurable flows). The excitation reading — matter as waves *of* the lattice, **Unruh 1981 acoustic-metric family, riding the GP river** — makes carriage constitutive with no coupling constant, and is the only reading delivering the clock sector with the ontology live. Price: excitation dynamics with one universal local speed is new structure the rules don't yet contain ([studies/river-model-and-analog-gravity](../studies/river-model-and-analog-gravity.md)) |
+| On the excitation branch the lattice rest frame is undetectable at current bounds (emergent Lorentz invariance); the substance/aether branch is excluded | supported | **Computed (ORB-10159, §(d)):** substance coupling at O(1) predicts resonator anisotropy ~β²: 1.5×10⁻⁶ (370 km/s CMB-frame motion) down to 2×10⁻⁸ (fully entrained, 42 km/s local solar inflow) vs measured 10⁻¹⁷–10⁻¹⁸ — **excluded by 9–12 orders**. Excitation branch: one medium, one limiting speed → MM null by construction; residual lattice-scale dispersion is bounded, not excluded — parity-symmetric hop rules give a quadratic subluminal term, and GRB 090510 (E_QG,2 > 1.3×10¹¹ GeV) bounds the spacing to a ≲ 1.5×10⁻²⁷ m ≈ 10⁸ ℓ_Pl; parity-asymmetric rules (linear term) are already excluded past the Planck scale (E_QG,1 > 7.6 E_Pl). **Placement: emergent-metric, analog-gravity family** — not an aether, not relabeled GR ([studies/lorentz-violation-bounds](../studies/lorentz-violation-bounds.md)) |
+| Under the excitation completion (free-fall flow, depletion as flow not standing deficit, universal local hop speed) the photon sector is exactly Schwarzschild's: γ = 1, deflection toward, Shapiro delay | mixed | **Computed (ORB-10159, §(e)):** a wave with constant local speed on GP inflow sees the acoustic metric with uniform c — exactly the Schwarzschild geometry (Unruh), so the γΦ half that the static mechanic provably cannot supply (photon row above) is delivered entirely by flow drag. The mathematics is exact and established; the row is `mixed` because all three premises are currently *owed postulates*, and any residual standing density deficit re-introduces the wrong-signed 1/r² index term as a contaminant whose absence Cassini/VLBI bound. The ORB-10156 refutation stands for the model as stated. Gate: **ORB-10158**, scope extended 2026-07-12 with a flowing-lattice arm (sign of deflection under inflow) alongside the static arm (contaminant magnitude) |
+| The multiplicative β factor leaves all current clock comparisons unaffected — clocks are not a second instrument on the ORB-10097 branch | supported | **Computed (ORB-10159, §(f)):** the derived multiplicative rule rescales locally generated σ by X(r_gal), \|X − 1\| ≤ 3.2×10⁻¹⁰ per AU of galactocentric offset. Fractional correction to any measured redshift ≤ 3×10⁻¹⁰ vs 2.5×10⁻⁵ best accuracy (five orders below); annual species-universal rate modulation ~3×10⁻¹⁸ vs 10⁻¹⁶-class comparisons (and blind to LPI/null-redshift tests *because* universal; ~16 ps/yr vs ~100 ns pulsar timing); terrestrial differentials ≲ 10⁻²¹ vs 10⁻¹⁸ optical-clock systematics. Orbits integrate accelerations twice over decades, clocks read rates instantaneously — the binding instrument on the multiplicative branch remains ORB-10097's Uranus channel ([studies/gravitational-time-dilation](../studies/gravitational-time-dilation.md)) |
 
 ## Confronting real data — the ORB-10077 rotation-curve fit
 
@@ -385,6 +407,217 @@ the honest position: **scarcity is a phenomenological modification of the massiv
 galactic scales — refuted as a complete theory of gravity, alive as exactly that
 modification.**
 
+## The clock sector — the ORB-10159 derivation
+
+ORB-10156 left the clock sector as the model's silent failure: σ = clock-rate deficit was
+flagged as a postulate the counting mechanic does not supply. This section makes that failure
+explicit, then derives what the dynamical completion is forced to be. The instruments here
+are the measured time-dilation ladder
+([studies/gravitational-time-dilation](../studies/gravitational-time-dilation.md)), the
+river/analog-gravity machinery
+([studies/river-model-and-analog-gravity](../studies/river-model-and-analog-gravity.md)),
+and the Lorentz-violation bounds
+([studies/lorentz-violation-bounds](../studies/lorentz-violation-bounds.md)).
+
+### (a) The static model has no clock sector — refuted, and the fork is forced
+
+Gravitational time dilation is a measured pure-g₀₀ effect: Pound–Rebka at 1% (with Snider),
+Gravity Probe A tracking the GM/r *profile* to 7×10⁻⁵ over 10⁴ km, GPS running a permanent
++38.6 μs/day (4.46×10⁻¹⁰) correction, optical clocks resolving one millimeter of height. The
+model as stated — a *static* stored field on a lattice with universal tick rate — predicts
+exactly zero: nothing in the counting rules makes a depleted region's physics run slow.
+**Refuted** (new ledger row above). Making depletion *dynamical* is the only completion path
+inside the ontology, and it forks three ways at the first step:
+
+- **Frozen:** depletion happened once (or accumulates too slowly to matter) — this is the
+  static branch again. Dead as above.
+- **Accumulating:** the mass keeps consuming and nothing replenishes, so σ grows. Since
+  a = c²∇σ, the effective coupling grows at σ̇/σ ~ 1/t_age ≈ 2×10⁻¹⁰ yr⁻¹ for a
+  4.6-Gyr-old Sun under any roughly constant consumption rate — an effective Ġ/G more than
+  three orders of magnitude above the LLR bound (7.1 ± 7.6)×10⁻¹⁴ yr⁻¹ (studies note).
+  Dead.
+- **Steady state:** consumption balanced by inward flow of space, standing field static.
+  The only live branch — and it is exactly the river reading. The question stops being
+  whether space flows and becomes *what flow law the mechanic implies*.
+
+### (b) The flow law, derived — and the kill condition applied
+
+In steady state, continuity ties the flow to the consumption's radial distribution: the
+volume flux through the shell at r equals the total consumption rate interior to it,
+F(r) = 4πr²n₀v(r) = C(<r). The river dictionary (studies note) then converts flow into
+physics: a static clock swims upstream at v(r) and dilates by √(1 − v²/c²) ≈ 1 − ½v²/c², and
+slow bodies accelerate at a = −∇(½v²). So each candidate consumption rule *is* a
+time-dilation profile and a force law — this is what makes the fork derivable:
+
+1. **Sink at the mass only** (the naive "mass eats space where it sits"): all consumption at
+   r = 0, so F is r-independent — the flux-conserving flow, v ∝ 1/r². Dilation ∝ v² ∝ 1/r⁴,
+   gravity ∝ ∇v² ∝ 1/r⁵. Wrong profile for clocks (GP-A/Galileo test GM/r), wrong law for
+   orbits. **The task's kill condition, confirmed: dead against GPS/optical-clock data** —
+   and against Newton, independently.
+2. **The mechanic's own bookkeeping, read as a rate** — equal absolute budget drawn per
+   shell (the Gauss's-law-analog rule, ledger row 2): consumption per unit radius constant,
+   F ∝ r, v ∝ 1/r. Dilation ∝ 1/r², gravity ∝ 1/r³. Dead against the clock ladder — and
+   *internally inconsistent*: the same bookkeeping read statically gives the verified 1/r²
+   force, read dynamically through the river dictionary it gives 1/r³. The static and
+   dynamical readings of one rule disagree, so the rule cannot be the whole story.
+3. **Space obeys the model's own rolling law.** The model has exactly one dynamical rule —
+   things accelerate down the scarcity gradient. If lattice points are not exempt from the
+   dynamics they create, an inflowing parcel obeys v·dv/dr = c²·dσ/dr, and falling from
+   rest at the outer reservoir: **½v² = c²σ = GM/r — the free-fall law, exactly the
+   Gullstrand–Painlevé river**, v = √(2GM/r). Dilation √(1 − 2GM/c²r): Schwarzschild
+   *exactly*, every row of the measured ladder passed by construction, and
+   a = −∇(½v²) = −GM/r² r̂ hands back the verified Newtonian sector unchanged.
+
+**The consistency identity, computed.** The task requires the static Σ 1/count ∝ 1/r result
+to be the time-integrated snapshot of the derived flow. On branch 3 it is, exactly and twice
+over. First, the accumulated dilution is a comoving integral: a parcel falling from the
+reservoir to r traverses every shell k > r and accumulates their per-shell dilutions —
+Σ_{k>r} 1/count(k) ∝ 1/r *is* the running record of the flow's history, which is why the
+static sims verified it. Second, the ORB-10156 Φ-sector identity extends without
+modification: the free-fall law gives σ = ½v²/c², and the GP lapse for a static observer is
+
+> √(−g₀₀) = √(1 − v²/c²) = √(1 − 2GM/c²r),  so 1 − √(−g₀₀) ≈ ½v²/c² = σ
+
+— the same σ = 1 − √(−g₀₀) computed statically in ORB-10156(c), now with a *mechanism*:
+scarcity is the flow's kinetic energy, and the clock deficit is SR dilation against the
+flow. The static verdict survives as the snapshot of the dynamical one.
+
+**The debt.** Branch 3's flow is not free: continuity dictates where consumption must
+happen. F ∝ r²·r^(−1/2) = r^(3/2) grows outward, so space is destroyed *throughout the
+volume* — sink density ∝ r^(−3/2), consumption per shell growing as r^(1/2) out to the
+budget's cutoff radius (the model's own finite-budget edge, ledger row 3, is what keeps the
+integral finite — the river's reservoir has a boundary). No current counting rule produces
+an r^(1/2)-per-shell draw; the equal-per-shell rule produces r⁰ and is refuted above. So the
+honest statement of record: **the flow law is earned** (one new postulate — space itself
+obeys the rolling rule — turns the mechanic's own dynamics into exact GP), **but the
+consumption law that sustains it is owed.** Whether a dynamical-consumption lattice actually
+self-organizes to the free-fall flow is a measurable property of the mechanic: proposed
+faraday task **ORB-10162** (emergent flow law, sink distribution, and the time-integrated
+snapshot check).
+
+### (c) Matter coupling: in the lattice, of the lattice, or neither
+
+The drag objection: a real river carries a swimmer by molecular collisions; matter has no
+coupling constant to space. What do the hop rules actually support?
+
+- **As stated: neither reading.** Matter in every sim is an *external tracer* — it has a
+  position, reads ∇σ, and is made of nothing the lattice knows about. An external tracer
+  inherits no SR-in-the-flowing-frame, so for it the river buys **no dilation at all**: the
+  clock sector's rescue in (b) silently assumed matter is built on the flowing medium. The
+  drag objection is fatal to the tracer reading.
+- **Deflationary (GR's answer):** the flow field is a map of which motions are force-free;
+  its local value is unobservable, only gradients are physical. Consistent — but it is
+  *exactly* GR in GP coordinates (Hamilton & Lisle's own caution: nothing measurable
+  flows), so the lattice ontology does no work. On this reading the model is relabeled GR
+  plus the galactic β-boost as a bolt-on phenomenology.
+- **Excitation (analog gravity, Unruh 1981):** matter is a wave *of* the lattice —
+  phonon-like — so being carried is constitutive, not an interaction; no coupling constant
+  is needed because there is no second substance. This is the only reading under which the
+  river mechanism in (b) actually delivers time dilation *and* "space" remains a physical
+  ingredient. Its price is new structure: the lattice must support excitation dynamics with
+  one universal local propagation speed (the current rules have no matter-wave sector; the
+  one-hop-per-tick signal rule of ORB-10156(iii) is the germ, but as a *static-lattice*
+  rule it produced the wrong-signed photon sector).
+
+**Verdict (ledger row): by elimination, the excitation reading is the only one that buys the
+clock sector while keeping the ontology live** — the canonical family is the GP river
+carrying Unruh-style excitations. It is a completion target, not a property of the current
+rules.
+
+### (d) The rest-frame question: aether, emergent metric, or relabeled GR
+
+The three placements, computed against measurement:
+
+- **Substance (aether):** if matter couples to the lattice as a foreign body, motion
+  relative to the lattice frame is detectable. The scales are fixed: 370 km/s through the
+  CMB frame (β² ≈ 1.5×10⁻⁶), or — granting full entrainment down to the local flow — the
+  solar GP inflow at Earth, 42 km/s (β² ≈ 2×10⁻⁸). Rotating-resonator bounds sit at
+  10⁻¹⁷–10⁻¹⁸ (Eisele 2009; Nagel 2015; SME tables). An O(1) substance coupling is
+  **excluded by 9–12 orders of magnitude**. Dead.
+- **Excitation (emergent metric):** all excitations of one medium share one limiting speed,
+  so no experiment made of excitations detects uniform motion through the medium —
+  Michelson–Morley is null *by construction*, and the SME anisotropy coefficients vanish at
+  leading order provided every species rides the same lattice (universality is the
+  emergent-LI condition). The invariance must still break at the lattice scale, as
+  energy-dependent dispersion — and this is *bounded, not excluded*: a parity-symmetric hop
+  rule has an even dispersion relation (ω = (2c/a)sin(ka/2)-type), so the leading correction
+  is quadratic and subluminal, δv/c ~ −(Ea/ħc)²; GRB 090510 gives E_QG,2 > 1.3×10¹¹ GeV,
+  which translates to a **maximum lattice spacing a ≲ 1.5×10⁻²⁷ m ≈ 10⁸ Planck lengths**. A
+  parity-*asymmetric* rule would generate a linear term, and the linear bounds
+  (E_QG,1 > 7.6 E_Planck) already exceed the Planck scale — so the hop rule is constrained
+  to be parity-symmetric. Both constraints are survivable; neither is currently testable
+  from inside the model.
+- **Relabeled GR:** the deflationary reading of (c) — no rest frame because the flow is
+  gauge. Consistent by construction and empirically empty.
+
+**Placement (ledger row): on its only viable branch the model is an emergent-metric theory
+of the analog-gravity family** — not an aether (killed at 9–12 orders), not merely relabeled
+GR (it retains in-principle discriminators: the quadratic lattice dispersion, the sink law
+of (b), and the galactic β-boost).
+
+### (e) What the excitation reading does to the refuted photon sector
+
+The ORB-10156 photon refutation computed light propagation on the *static* depleted lattice:
+sparser points → longer hops → n < 1 near mass → bending *away*, Shapiro *advance*. That
+verdict stands for the model as stated. But the excitation completion changes the
+computation's premises: on a *flowing* lattice with the depletion expressed as inflow rather
+than as a standing density deficit, a wave with constant local hop speed sees the acoustic
+metric with uniform c and GP flow — which is **exactly the Schwarzschild geometry** (Unruh;
+studies note). Deflection comes out *toward* the mass at the full γ = 1 magnitude and the
+Shapiro effect is a *delay*: the γΦ half of the metric that ORB-10156 proved the static
+mechanic cannot supply is delivered entirely by flow drag. The wrong-signed static effect
+survives only as a *contaminant*: any residual standing deficit adds a 1/r²-profile n < 1
+term on top of the flow term, and its measured absence (Cassini, VLBI) bounds how much of
+the depletion may live in density rather than flow.
+
+Recorded as a new `mixed` ledger row — the mathematics is exact but conditional on the three
+postulates the completion owes (free-fall flow, excitation matter, flow-not-deficit
+depletion). **ORB-10158's scope was extended accordingly** (2026-07-12 comment): a
+flowing-lattice propagation arm (does the sign flip to *toward*?) alongside the original
+static arm, which now measures the contaminant.
+
+### (f) Clock-rate screening: is the multiplicative β factor a second instrument?
+
+ORB-10156 derived the multiplicative rule: local field generation scales as
+X(r_gal) = q(r_gal)/q(R₀), with local log-gradient βF(R₀)/R₀² ≈ 3.2×10⁻¹⁰ /AU. If the same
+factor rescales local σ — and on the river reading it must, since σ and acceleration are one
+object — every locally generated clock deficit is multiplied by X. Computed against the
+clock instruments:
+
+- **Redshift-profile tests:** for any local comparison, both clocks carry nearly the same X
+  (Earth sits within 1 AU of the normalization point), so the *fractional* correction to a
+  measured redshift is |X − 1| ≤ 3.2×10⁻¹⁰ — five orders below the best profile-test
+  accuracy (Galileo 2.5×10⁻⁵, GP-A 7×10⁻⁵).
+- **Annual modulation:** Earth's galactocentric radius swings by ±1 AU, modulating X by
+  ±3.2×10⁻¹⁰; acting on the Sun's potential at Earth (σ_⊙ ≈ 9.9×10⁻⁹) this is a
+  species-universal rate modulation of amplitude ~3×10⁻¹⁸ — beneath 10⁻¹⁶-class clock
+  comparisons, invisible to null-redshift (LPI) tests *because* it is universal, and worth
+  only ~16 ps of annual timing residual against pulsar references (precision ~100 ns).
+- **Terrestrial differentials:** across an Earth-diameter baseline ΔX ~ 2.7×10⁻¹⁴, giving
+  rate differences ≲ 10⁻²¹ — three orders below even 10⁻¹⁸ optical-clock systematics.
+
+**Verdict (ledger row): the multiplicative branch is safe from — equivalently, unconstrained
+by — every current clock instrument.** Clocks do *not* become a second instrument on the
+ORB-10097 branch at 10⁻¹⁶, or even 10⁻¹⁸: orbits integrate accelerations twice over decades
+while clocks read rates instantaneously, so the Uranus channel keeps a lead of many orders.
+The binding constraint on the multiplicative rule remains ORB-10097's orientation-dependent
+Uranus tension.
+
+### (g) What the model now is
+
+Assembled, the clock sector forces a specific shape. To live, the model must become: a
+lattice whose points **free-fall down their own scarcity gradient** into consuming masses
+(steady state, GP flow — earned from the rolling rule; sink law owed, ORB-10162), carrying
+**matter and light as excitations with one universal local speed** (Unruh family — owed
+entirely; reopens the photon sector with the right sign, ORB-10158), with **emergent Lorentz
+invariance** breaking only below ~10⁸ Planck lengths (allowed), the multiplicative β-boost
+intact at galactic scale (clock-safe, (f)), and the solar-system sector reducing *exactly*
+to GR wherever the completion's postulates hold. Every step is computed above; every owed
+ingredient is named and gated on a sim. What is *not* available: the static model (dead
+against clocks), the accumulating model (dead against Ġ/G), flux-conserving or
+budget-per-shell rivers (dead against the profile), and any substance reading of the lattice
+(dead against the resonators).
+
 ## Open questions
 
 - **Does scarcity match a standard dark halo?** ORB-10082 ran: point estimate favors scarcity on
@@ -399,13 +632,24 @@ modification.**
   only the *magnitude*: the tested factor imports the fitted exponent; a lattice-level
   measurement of the modulation (proposed faraday task **ORB-10157**) could move the local
   log-gradient at O(1), not the sign.
-- **Can the counting mechanic earn a Ψ sector?** The theory's survival question after the
-  photon-sector refutation (§ above): is there a *derived* modification of the lattice —
-  not a bolt-on — under which depletion produces a proper-space **excess** of GM/c²r (the
-  sign currently comes out wrong) plus a matching clock mechanism, recovering γ = 1 locally
-  while preserving the β-boost? The chameleon family is the named target (studies note). If
-  no such mechanic exists, the model stays what it now provably is: a massive-sector
-  phenomenology, not a theory of gravity.
+- **Can the counting mechanic earn a Ψ sector?** *Reshaped by ORB-10159 (§ clock sector):*
+  the answer has a derived form — on the excitation completion, the γΦ half is supplied
+  entirely by **flow drag** (a wave on the GP inflow sees exact Schwarzschild; γ = 1 with
+  the right sign, no proper-space excess needed), and the matching clock mechanism comes
+  free (σ = ½v²/c² is SR dilation against the flow). The question therefore sharpens into
+  the two owed ingredients: (i) can any counting rule produce the free-fall flow's
+  volumetric sink law ∝ r^(−3/2) — measured by **ORB-10162**; (ii) do excitations of a
+  flowing lattice really propagate with the flow-drag sign — measured by **ORB-10158**
+  (extended scope). If either fails at the mechanic level, the model stays what ORB-10156
+  proved it is as stated: a massive-sector phenomenology, not a theory of gravity. (The
+  chameleon route of the studies note remains the fallback completion if the analog-gravity
+  route dies.)
+- **Does a dynamical-consumption lattice actually flow at free-fall?** The clock sector
+  lives or dies on this (§ (b)): flux-conserving and budget-per-shell flows are already
+  refuted against the measured dilation profile; only ½v² = c²σ survives, and it demands a
+  consumption law (per-shell draw ∝ r^(1/2)) no current rule produces. **ORB-10162** is the
+  direct adjudication — an emergent flux-conserving flow at the mechanic level would kill
+  the river completion outright.
 - Can the lattice model be normalized once (one constant) and then match *two* independent
   observables? That would upgrade "right shape" materially. (The rotation-curve fit uses one free
   β — a second, independent observable matched at the *same* β would be the real upgrade.)
