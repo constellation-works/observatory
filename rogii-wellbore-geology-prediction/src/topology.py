@@ -22,6 +22,7 @@ from pathlib import Path
 
 import numpy as np
 import pandas as pd
+from scipy.optimize import least_squares
 from scipy.spatial import cKDTree
 
 from .data import WellPair, list_wells, load_well
@@ -61,6 +62,103 @@ def build_surface_samples(train_dir: Path, cache_path: Path) -> pd.DataFrame:
     cache_path.parent.mkdir(parents=True, exist_ok=True)
     table.to_parquet(cache_path, index=False)
     return table
+
+
+class RegionalDipPrior:
+    """Regional dip-axis prior, expressed directly as a TVT residual.
+
+    A robust regional formation gradient ``beta = (dS/dX, dS/dY)`` is fitted
+    from within-well ANCC changes in the training fold.  Centering the fit on
+    changes, rather than absolute surface elevations, prevents regional
+    elevation offsets from masquerading as dip.
+
+    At inference the expected formation movement is ``beta @ (dX, dY)``.
+    Only its mismatch with the borehole's vertical movement changes TVT::
+
+        dTVT_raw = beta_x * dX + beta_y * dY - dZ
+
+    The prediction is anchored at the last observed ``TVT_input``.  A small
+    shrink factor is deliberate: the NNW-SSE axis gets the *direction* right
+    almost everywhere, but local departures from the regional plane make the
+    unshrunk magnitude noisy.  Grouped CV selected 0.15 over the constant-TVT
+    endpoint (0.0) and the literal unshrunk physical prior (1.0).
+
+    Formation surfaces are used only by ``fit``.  ``predict`` requires the
+    same inference-time X/Y/Z/TVT_input columns available in hidden test.
+    """
+
+    def __init__(
+        self,
+        train_dir: Path,
+        cache_path: Path,
+        residual_shrink: float = 0.15,
+    ):
+        if not 0.0 <= residual_shrink <= 1.0:
+            raise ValueError("residual_shrink must be between 0 and 1")
+        self.train_dir = train_dir
+        self.cache_path = cache_path
+        self.residual_shrink = residual_shrink
+        self.name = f"R_dipaxis_s{residual_shrink:g}"
+        self.beta_: np.ndarray | None = None
+
+    @property
+    def bearing_deg(self) -> float:
+        """Up-dip bearing in degrees clockwise from north."""
+        if self.beta_ is None:
+            raise RuntimeError("RegionalDipPrior must be fitted first")
+        return float((np.degrees(np.arctan2(self.beta_[0], self.beta_[1])) + 360) % 360)
+
+    @property
+    def dip_deg(self) -> float:
+        """Magnitude of the fitted regional dip in degrees."""
+        if self.beta_ is None:
+            raise RuntimeError("RegionalDipPrior must be fitted first")
+        return float(np.degrees(np.arctan(np.hypot(*self.beta_))))
+
+    def fit(self, train_wells: list[str], loader: WellLoader) -> None:
+        table = build_surface_samples(self.train_dir, self.cache_path)
+        table = table[table["well"].isin(set(train_wells))]
+
+        # One endpoint delta per well gives every well equal weight and strips
+        # out its unknown absolute surface elevation/intercept.
+        grouped = table.groupby("well", sort=False)
+        first = grouped[["X", "Y", "s"]].first()
+        last = grouped[["X", "Y", "s"]].last()
+        delta = last - first
+        delta = delta.replace([np.inf, -np.inf], np.nan).dropna()
+        delta = delta[np.hypot(delta["X"], delta["Y"]) >= 100.0]
+        if len(delta) < 3:
+            raise ValueError("at least three training wells are required to fit regional dip")
+
+        xy = delta[["X", "Y"]].to_numpy(dtype=float)
+        ds = delta["s"].to_numpy(dtype=float)
+        beta0, *_ = np.linalg.lstsq(xy, ds, rcond=None)
+        resid = ds - xy @ beta0
+        scale = max(1.4826 * np.median(np.abs(resid - np.median(resid))), 1.0)
+
+        # Soft-L1 keeps a handful of fault/terrace crossings from rotating the
+        # regional axis.  With fixed inputs this solve is deterministic.
+        fit = least_squares(
+            lambda beta: (xy @ beta - ds) / scale,
+            beta0,
+            loss="soft_l1",
+        )
+        self.beta_ = fit.x.astype(float)
+
+    def predict(self, pair: WellPair) -> np.ndarray:
+        if self.beta_ is None:
+            raise RuntimeError("RegionalDipPrior must be fitted before predict")
+        ps = pair.prediction_start
+        h = pair.horizontal
+        x = h["X"].to_numpy()
+        y = h["Y"].to_numpy()
+        z = h["Z"].to_numpy()
+        anchor = h["TVT_input"].to_numpy()[ps - 1]
+        dx = x[ps:] - x[ps - 1]
+        dy = y[ps:] - y[ps - 1]
+        dz = z[ps:] - z[ps - 1]
+        mismatch = self.beta_[0] * dx + self.beta_[1] * dy - dz
+        return anchor + self.residual_shrink * mismatch
 
 
 class SpatialTopology:

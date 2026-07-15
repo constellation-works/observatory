@@ -153,19 +153,24 @@ def summarize_by_distance(by_dist: pd.DataFrame) -> pd.DataFrame:
 
 
 def build_models(names: str, data_dir: Path) -> list[Model]:
-    from .topology import SpatialTopology
+    from .topology import RegionalDipPrior, SpatialTopology
 
     train_dir = data_dir / "train"
     cache = data_dir.parent / "results" / "cache" / "surface_samples.parquet"
     from .baselines import ConstantTVT
     from .ensemble import PrefixPlayoff, SoftBlendPlayoff
-    from .gate import LearnedGate
+    from .gate import DipAxisGate, LearnedGate
     from .gr import GRStateSpace
     from .topology import TrendCorrectedSpatial
 
     registry: dict[str, Callable[[], list[Model]]] = {
         "baselines": default_baselines,
         "stage2": lambda: [SpatialTopology(train_dir, cache)],
+        "dip-axis": lambda: [RegionalDipPrior(train_dir, cache)],
+        "dip-axis-sweep": lambda: [
+            RegionalDipPrior(train_dir, cache, residual_shrink=s)
+            for s in (0.1, 0.15, 0.2)
+        ],
         "playoff": lambda: [PrefixPlayoff(
             [ConstantTVT(), SpatialTopology(train_dir, cache)])],
         "playoff-sweep": lambda: [
@@ -174,11 +179,38 @@ def build_models(names: str, data_dir: Path) -> list[Model]:
             for w in (700.0, 1000.0) for m in (0.0, 1.0)
         ],
         "gate": lambda: [LearnedGate(train_dir, data_dir.parent / "results")],
+        "dip-gate": lambda: [
+            DipAxisGate(train_dir, data_dir.parent / "results")
+        ],
+        "dip-gate-sweep": lambda: [
+            DipAxisGate(train_dir, data_dir.parent / "results", residual_shrink=s)
+            for s in (0.1, 0.15, 0.2)
+        ],
         "gr": lambda: [GRStateSpace(LearnedGate(train_dir, data_dir.parent / "results"),
                                     shape_weight=0.0)],
         "gr-shrink": lambda: [GRStateSpace(
             LearnedGate(train_dir, data_dir.parent / "results"), shrink=0.5,
             shape_weight=0.0)],
+        "best": lambda: [GRStateSpace(
+            LearnedGate(train_dir, data_dir.parent / "results"),
+            level_weight=1.0, shape_weight=0.0,
+            sigma_vel=0.05, adaptive_scale=3.0, shrink=0.7,
+            bias_cache=(train_dir,
+                        data_dir.parent / "results" / "cache" / "bias_samples.csv"))],
+        "dip-best": lambda: [GRStateSpace(
+            DipAxisGate(train_dir, data_dir.parent / "results", residual_shrink=0.1),
+            level_weight=1.0, shape_weight=0.0,
+            sigma_vel=0.05, adaptive_scale=3.0, shrink=0.7,
+            bias_cache=(train_dir,
+                        data_dir.parent / "results" / "cache" / "bias_samples.csv"))],
+        "dip-best-sweep": lambda: [GRStateSpace(
+            DipAxisGate(train_dir, data_dir.parent / "results", residual_shrink=s),
+            level_weight=1.0, shape_weight=0.0,
+            sigma_vel=0.05, adaptive_scale=3.0, shrink=0.7,
+            bias_cache=(train_dir,
+                        data_dir.parent / "results" / "cache" / "bias_samples.csv"))
+            for s in (0.05, 0.1, 0.15)
+        ],
         "gr-bold": lambda: [
             GRStateSpace(LearnedGate(train_dir, data_dir.parent / "results"),
                          level_weight=1.0, shape_weight=0.0,

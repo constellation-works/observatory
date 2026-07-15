@@ -94,3 +94,57 @@ validation.
 When simulating a validation Prediction Start, mask `TVT_input` before deriving
 features. Compare the constant-TVT, local-trend, trajectory-only, GR-alignment,
 and combined approaches using RMSE on the complete masked suffix.
+
+## Where the model still fails: ramp wells (2026-07-15)
+
+Error analysis of the best stack (`results/gr-bold`, 11.65 global RMSE)
+shows the residual error is not diffuse — it is concentrated in one well
+type:
+
+- **90 of 773 wells have |net suffix ΔTVT| > 30 ft ("ramp wells") and carry
+  44% of the total squared error.** The top 5% of wells carry 45%.
+- Suffix TVT range is the strongest per-well error predictor
+  (Spearman +0.42); its top quartile scores 17.8 RMSE vs 7.3–9.4 for the
+  rest.
+- These are **smooth, sustained ramps, not faults**: max TVT move within any
+  50 ft of lateral is typically 3–9 ft on the worst wells; only 2 of the
+  top 20 exceed 10 ft.
+- The trajectory does not announce the ramp: corr(|net ΔZ|, |net ΔTVT|) is
+  0.07 across wells. The layer moves under a comparatively straight well —
+  the well *leaves its zone* stratigraphically.
+- On 38 of the 90 ramp wells, the raw spatial model D already beats the
+  full gated stack; substituting D on just those wells would take the
+  global RMSE from 11.65 to ~10.2. The gate hedges toward constant-TVT
+  because none of its features (short replay, support distance, dip)
+  distinguish a flat suffix from a ramp suffix.
+- GR often cannot rescue these wells: several worst ramp wells are missing
+  60–80% of suffix GR.
+
+Implication: the cheapest large gain is gate features that see the *ramp
+hypothesis* itself — D's own predicted |net ΔTVT| over the suffix (A's is
+zero by construction), suffix length, and their interaction with replay
+quality. If D predicts a large ramp and validates on the prefix, believe D.
+
+## Regional dip-axis residual (2026-07-15)
+
+The physical uphill/downhill split is predominantly one regional dip axis:
+uphill laterals head north/northwest and downhill laterals head south/southeast.
+A robust within-well fit on training-fold `ANCC` changes learns approximately
+
+```text
+expected Δsurface = -0.015 × ΔX + 0.032 × ΔY
+expected ΔTVT     = expected Δsurface - ΔZ
+```
+
+Across the five grouped folds the up-dip bearing is 333–336 degrees and the
+dip is approximately 2.0 degrees. This is stable, but the unshrunk regional
+plane is not locally accurate enough: using the full expected mismatch scores
+30.65 RMSE. Shrinking the residual to 10–15% improves constant-TVT from 15.91
+to about 15.4 without assuming the global plane is the local surface.
+
+The production implementation (`RegionalDipPrior` and `DipAxisGate`) fits the
+axis on training wells only, anchors at the last known `TVT_input`, and applies
+the shrunken residual only to the safe component of the A/D gate. The existing
+GR state-space model then estimates its remaining offset. With 10% residual
+shrink, grouped CV improves the geometric gate from 12.04 to 11.92 RMSE and
+the complete F5 stack from 11.65 to 11.48 RMSE.

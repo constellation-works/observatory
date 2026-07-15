@@ -35,11 +35,17 @@ from scipy.spatial import cKDTree
 from .baselines import ConstantTVT, Model, WellLoader
 from .data import WellPair, default_data_dir, list_wells, load_well
 from .ensemble import PrefixPlayoff, _masked_at
-from .topology import SpatialTopology
+from .topology import RegionalDipPrior, SpatialTopology
 
+#: Gate features. Ramp-hypothesis features (D's forecast |ΔTVT|, suffix
+#: length, interactions) were tried and *rejected*: with exact blend-SSE
+#: evaluation on gate_table_v4 they rank worse than these five, under both
+#: logistic and GBM models (see README experiment log, 2026-07-15). The gap
+#: to the blend oracle (~8.5) needs a feature that predicts D's
+#: *reliability*, not its boldness.
 FEATURES = ["log_score_ratio", "log_nbr_dist", "log_roughness",
             "log_dip_med", "log_dip_p90"]
-TABLE_NAME = "gate_table_v2.csv"
+TABLE_NAME = "gate_table_v4.csv"
 
 
 def replay_scores(pair: WellPair, a: Model, d: Model,
@@ -79,6 +85,18 @@ def support_features(pair: WellPair,
             float(np.percentile(grad, 90)))
 
 
+def ramp_features(pred_d: np.ndarray, anchor: float) -> tuple[float, float]:
+    """(end, max) |ΔTVT| that the spatial model forecasts for the suffix.
+
+    A's forecast is identically zero, so this is the *ramp hypothesis*: the
+    error analysis (INSIGHTS.md) shows failures concentrate in wells whose
+    suffix TVT ramps smoothly away from the anchor, and that D usually sees
+    the ramp while the gate hedges to constant-TVT.
+    """
+    dev = np.abs(pred_d - anchor)
+    return float(dev[-1]), float(dev.max())
+
+
 def featurize(s_a: float, s_d: float, nbr_dist: float, roughness: float,
               dip_med: float, dip_p90: float) -> list[float]:
     eps = 1e-6
@@ -90,10 +108,11 @@ def featurize(s_a: float, s_d: float, nbr_dist: float, roughness: float,
 
 
 def build_gate_table(data_dir: Path, out_path: Path,
-                     budget_s: float | None = None) -> pd.DataFrame:
+                     budget_s: float | None = None,
+                     results_dir: Path | None = None) -> pd.DataFrame:
     """Per-well features + leakage-safe labels; resumable, cached."""
     train_dir = data_dir / "train"
-    results = data_dir.parent / "results"
+    results = results_dir if results_dir is not None else data_dir.parent / "results"
     wells = list_wells(train_dir)
 
     done: set[str] = set()
@@ -113,13 +132,27 @@ def build_gate_table(data_dir: Path, out_path: Path,
             print(f"budget hit at {len(done)}/{len(wells)}; rerun to resume")
             break
         pair = load_well(train_dir, well,
-                         columns=["MD", "X", "Y", "Z", "GR", "TVT_input"])
+                         columns=["MD", "X", "Y", "Z", "GR", "TVT_input", "TVT"])
         d.exclude_well = well
         scores = replay_scores(pair, a, d, playoff)
         nbr_dist, roughness, dip_med, dip_p90 = support_features(pair, d)
+        pred_d = np.asarray(d.predict(pair), dtype=float)
         d.exclude_well = None
+        ps = pair.prediction_start
+        anchor = pair.horizontal["TVT_input"].to_numpy()[ps - 1]
+        ramp_end, ramp_max = ramp_features(pred_d, anchor)
+        # Exact blend algebra: for any weight w, the blended suffix SSE is
+        # w^2*sse_d + (1-w)^2*sse_a + 2w(1-w)*cross. Stored so gate models
+        # can be evaluated offline exactly and trained on the optimal w*.
+        true = pair.suffix_target()
+        err_a = anchor - true
+        err_d = pred_d - true
         row = {"well": well, "nbr_dist": nbr_dist, "roughness": roughness,
                "dip_med": dip_med, "dip_p90": dip_p90,
+               "ramp_end": ramp_end, "ramp_max": ramp_max,
+               "sfx_len": len(pair.horizontal) - ps,
+               "sse_a": float(err_a @ err_a), "sse_d": float(err_d @ err_d),
+               "cross": float(err_a @ err_d),
                "s_a": scores[0] if scores else np.nan,
                "s_d": scores[1] if scores else np.nan}
         pd.DataFrame([row]).to_csv(out_path, mode="a",
@@ -183,16 +216,58 @@ class LearnedGate:
         self._clf = make_pipeline(StandardScaler(), LogisticRegression(C=1.0))
         self._clf.fit(x, y, logisticregression__sample_weight=w)
 
-    def predict(self, pair: WellPair) -> np.ndarray:
+    def _blend_weight(self, pair: WellPair) -> float | None:
+        """Gate weight for D, or None when prefix replay is unavailable."""
         scores = replay_scores(pair, self.a, self.d, self.playoff)
-        pred_a = self.a.predict(pair)
         if scores is None:
-            return pred_a
+            return None
         nbr_dist, roughness, dip_med, dip_p90 = support_features(pair, self.d)
         x = np.array([featurize(scores[0], scores[1], nbr_dist, roughness,
                                 dip_med, dip_p90)])
-        w = float(self._clf.predict_proba(x)[0, 1])
+        return float(self._clf.predict_proba(x)[0, 1])
+
+    def predict(self, pair: WellPair) -> np.ndarray:
+        pred_a = self.a.predict(pair)
+        w = self._blend_weight(pair)
+        if w is None:
+            return pred_a
         return w * self.d.predict(pair) + (1.0 - w) * pred_a
+
+
+class DipAxisGate(LearnedGate):
+    """A/D gate whose safe component carries the regional dip residual.
+
+    The existing gate still estimates how much to trust the high-variance
+    local spatial surface D.  Where it falls back toward the safe constant
+    prior, that component is replaced by :class:`RegionalDipPrior`, adding
+    only the shrunken NNW-SSE formation-motion mismatch.  This preserves the
+    gate's leakage-safe A/D training labels while applying the regional prior
+    precisely where the stack previously assumed zero TVT movement.
+    """
+
+    def __init__(self, train_dir: Path, results_dir: Path,
+                 residual_shrink: float = 0.15):
+        super().__init__(train_dir, results_dir)
+        self.regional = RegionalDipPrior(
+            train_dir,
+            results_dir / "cache" / "surface_samples.parquet",
+            residual_shrink=residual_shrink,
+        )
+        # Distinct leading tag keeps downstream GRStateSpace experiment names
+        # separate from the original G gate (which derives its tag from the
+        # text before the first underscore).
+        self.name = f"H{residual_shrink:g}_dipaxis"
+
+    def fit(self, train_wells: list[str], loader: WellLoader) -> None:
+        super().fit(train_wells, loader)
+        self.regional.fit(train_wells, loader)
+
+    def predict(self, pair: WellPair) -> np.ndarray:
+        pred_safe = self.regional.predict(pair)
+        w = self._blend_weight(pair)
+        if w is None:
+            return pred_safe
+        return w * self.d.predict(pair) + (1.0 - w) * pred_safe
 
 
 def main() -> None:

@@ -90,6 +90,16 @@ id,tvt
 must be disabled, and Kaggle currently permits up to 9 hours on either CPU or
 GPU. Commit the Kaggle notebook, then submit its generated `submission.csv`.
 
+The pipeline is `python -m src.submit` (see its docstring for Kaggle paths).
+It rebuilds every derived artifact from training data when missing, fits the
+best-known stack on all training wells, discovers whatever wells are in
+`test/`, and conforms the output to `sample_submission.csv`. The Kaggle
+wrapper is `notebooks/kaggle_submission.ipynb`: upload `src/` as a dataset
+named `rogii-src`, attach it plus the competition data, run all. Validated
+locally on the visible test wells: ids match the sample exactly (14,151
+rows); RMSE 10.1 against their training copies (optimistic — those wells
+participate in the fitted caches).
+
 ## Timeline
 
 - Entry and team-merger deadline: July 29, 2026 at 23:59 UTC.
@@ -115,3 +125,5 @@ GPU. Commit the Kaggle notebook, then submit its generated `submission.csv`.
 | 2026-07-15 | F3: F2 + spatial GR bias field in emission | Same (`results/gr-bias`) | 11.92 | — | k-NN field of calibrated-GR residuals at true TVT (train wells), anchored ΔB subtracted; field magnitudes (±10 API p10–p90) match the GR-continuity surface |
 | 2026-07-15 | F4: windowed shape emission (rolling variance of pointwise diff, mean-removed) | Same (`results/gr-shape`) | 11.92 | — | Negative result: neutral at low weight, harmful at full weight, at every window 400–4,000 ft. Laterals stretch stratigraphy ~200:1, so shape-along-MD ≈ level-at-low-frequency; window mean-removal deletes the signal. Vertical-log fingerprint intuition does not transfer |
 | 2026-07-15 | **F5: bold level channel — full weight, σ_vel 0.05, adaptive_scale 3, shrink 0.7, bias field, no shape** | Same (`results/gr-bold`) | **11.65** | — | New best. Median 7.09, p90 15.79. The GR signal was there; the DP was too timid to use it |
+| 2026-07-15 | G3: gate + ramp-hypothesis features (D's forecast \|ΔTVT\|, suffix length, ramp×replay) | Same (`results/gate-v3`) + exact offline eval on `gate_table_v4` | 12.09 | — | Negative result: worse than the 5-feature gate (12.04) in CV, and confirmed offline with exact blend-SSE algebra under logistic and GBM alike. D's ramp *forecast* is available but its *reliability* isn't predictable from these features. Exact-eval infra (sse_a/sse_d/cross per well) kept in gate_table_v4; blend oracle = 8.49, so gate headroom remains |
+| 2026-07-15 | **F6: NNW-SSE regional dip residual inside G2, then F5 GR correction** | Same (`results/dip-axis`, `results/dip-gate`, `results/dip-best`) | **11.48** | — | Fold-fitted robust gradient points 333–336° at ~2.0° dip. Raw `β·ΔXY−ΔZ` is noisy (30.65 RMSE unshrunk), but 10% shrink improves A→15.40, G2→11.92, and the full stack F5→11.48. Production pipeline updated to this leakage-safe configuration |
