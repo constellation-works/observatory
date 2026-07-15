@@ -10,6 +10,10 @@ wheels/
 .venv
 artifacts
 data
+# Keep this competition's data dictionary while all downloaded data stays local.
+!rogii-wellbore-geology-prediction/data/
+rogii-wellbore-geology-prediction/data/*
+!rogii-wellbore-geology-prediction/data/README.md
 notebooks
 
 # OS / scratch
