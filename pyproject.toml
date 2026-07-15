@@ -1,0 +1,22 @@
+[project]
+name = "arc"
+version = "0.1.0"
+description = "A small playground for ARC-AGI reasoning models (Tiny Recursive Model and friends)."
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "torch>=2.6",
+    "numpy>=2.0",
+    "matplotlib>=3.9",  # ARC is a visual task — plot grids while you experiment
+    "tqdm>=4.66",       # progress bars for training loops
+]
+
+[dependency-groups]
+dev = [
+    "ipython>=8.0",     # interactive REPL for poking at models
+    "jupyterlab>=4.0",  # notebooks for scratch experiments
+    "ruff>=0.6",        # lint + format
+]
+
+[tool.ruff]
+line-length = 100
