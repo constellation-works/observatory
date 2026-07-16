@@ -246,17 +246,26 @@ class DipAxisGate(LearnedGate):
     """
 
     def __init__(self, train_dir: Path, results_dir: Path,
-                 residual_shrink: float = 0.15):
+                 residual_shrink: float = 0.15,
+                 uphill_shrink: float | None = None,
+                 downhill_shrink: float | None = None):
         super().__init__(train_dir, results_dir)
         self.regional = RegionalDipPrior(
             train_dir,
             results_dir / "cache" / "surface_samples.parquet",
             residual_shrink=residual_shrink,
+            uphill_shrink=uphill_shrink,
+            downhill_shrink=downhill_shrink,
         )
         # Distinct leading tag keeps downstream GRStateSpace experiment names
         # separate from the original G gate (which derives its tag from the
         # text before the first underscore).
-        self.name = f"H{residual_shrink:g}_dipaxis"
+        if self.regional.uphill_shrink == self.regional.downhill_shrink:
+            tag = f"{self.regional.uphill_shrink:g}"
+        else:
+            tag = (f"u{self.regional.uphill_shrink:g}"
+                   f"d{self.regional.downhill_shrink:g}")
+        self.name = f"H{tag}_dipaxis"
 
     def fit(self, train_wells: list[str], loader: WellLoader) -> None:
         super().fit(train_wells, loader)

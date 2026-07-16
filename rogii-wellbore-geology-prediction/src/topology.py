@@ -58,6 +58,11 @@ def build_surface_samples(train_dir: Path, cache_path: Path) -> pd.DataFrame:
         sample.insert(0, "well", well)
         frames.append(sample)
 
+    if not frames:
+        raise FileNotFoundError(
+            f"No paired horizontal wells found in {train_dir}. "
+            "Check the competition data mount/path before building caches."
+        )
     table = pd.concat(frames, ignore_index=True)
     cache_path.parent.mkdir(parents=True, exist_ok=True)
     table.to_parquet(cache_path, index=False)
@@ -77,11 +82,12 @@ class RegionalDipPrior:
 
         dTVT_raw = beta_x * dX + beta_y * dY - dZ
 
-    The prediction is anchored at the last observed ``TVT_input``.  A small
-    shrink factor is deliberate: the NNW-SSE axis gets the *direction* right
+    The prediction is anchored at the last observed ``TVT_input``.  Small
+    shrink factors are deliberate: the NNW-SSE axis gets the *direction* right
     almost everywhere, but local departures from the regional plane make the
-    unshrunk magnitude noisy.  Grouped CV selected 0.15 over the constant-TVT
-    endpoint (0.0) and the literal unshrunk physical prior (1.0).
+    unshrunk magnitude noisy.  The scalar prior's grouped-CV optimum is 0.15;
+    the final stack uses 0.15 downhill and 0.0 uphill because the correction's
+    benefit becomes asymmetric after the GR state-space update.
 
     Formation surfaces are used only by ``fit``.  ``predict`` requires the
     same inference-time X/Y/Z/TVT_input columns available in hidden test.
@@ -92,13 +98,23 @@ class RegionalDipPrior:
         train_dir: Path,
         cache_path: Path,
         residual_shrink: float = 0.15,
+        uphill_shrink: float | None = None,
+        downhill_shrink: float | None = None,
     ):
-        if not 0.0 <= residual_shrink <= 1.0:
-            raise ValueError("residual_shrink must be between 0 and 1")
+        uphill_shrink = residual_shrink if uphill_shrink is None else uphill_shrink
+        downhill_shrink = residual_shrink if downhill_shrink is None else downhill_shrink
+        if not all(0.0 <= value <= 1.0
+                   for value in (residual_shrink, uphill_shrink, downhill_shrink)):
+            raise ValueError("residual shrink factors must be between 0 and 1")
         self.train_dir = train_dir
         self.cache_path = cache_path
         self.residual_shrink = residual_shrink
-        self.name = f"R_dipaxis_s{residual_shrink:g}"
+        self.uphill_shrink = uphill_shrink
+        self.downhill_shrink = downhill_shrink
+        if uphill_shrink == downhill_shrink:
+            self.name = f"R_dipaxis_s{uphill_shrink:g}"
+        else:
+            self.name = f"R_dipaxis_u{uphill_shrink:g}_d{downhill_shrink:g}"
         self.beta_: np.ndarray | None = None
 
     @property
@@ -157,8 +173,18 @@ class RegionalDipPrior:
         dx = x[ps:] - x[ps - 1]
         dy = y[ps:] - y[ps - 1]
         dz = z[ps:] - z[ps - 1]
-        mismatch = self.beta_[0] * dx + self.beta_[1] * dy - dz
-        return anchor + self.residual_shrink * mismatch
+        expected_surface = self.beta_[0] * dx + self.beta_[1] * dy
+        mismatch = expected_surface - dz
+
+        # Use the whole suffix's physical Z direction to choose one stable
+        # regime. The regional plane supplies expected *formation movement*;
+        # it should not override the observed local steering direction on the
+        # handful of wells where those signs disagree. A row-by-row switch
+        # would introduce an artificial kink. Full X/Y/Z is available for the
+        # hidden suffix at inference.
+        shrink = (self.downhill_shrink if dz[-1] < 0.0
+                  else self.uphill_shrink)
+        return anchor + shrink * mismatch
 
 
 class SpatialTopology:

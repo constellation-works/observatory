@@ -40,6 +40,51 @@ def list_wells(split_dir: Path) -> list[str]:
     return sorted(horizontal & typewell)
 
 
+def resolve_data_dir(data_dir: Path) -> Path:
+    """Resolve local and Kaggle-mounted competition directory layouts.
+
+    Kaggle normally mounts a competition at ``/kaggle/input/<slug>``, but
+    some runtime/API combinations insert an extra ``competitions`` directory.
+    Rather than hardcode either layout, identify the root containing paired
+    ``train/`` files and ``sample_submission.csv``. Local valid paths return
+    immediately, so the recursive fallback is Kaggle-only in normal use.
+    """
+    data_dir = Path(data_dir)
+    if list_wells(data_dir / "train") and (data_dir / "sample_submission.csv").exists():
+        return data_dir
+
+    roots = [data_dir] if data_dir.exists() else []
+    if data_dir.parent.exists():
+        roots.append(data_dir.parent)
+    kaggle_input = Path("/kaggle/input")
+    if kaggle_input.exists():
+        roots.append(kaggle_input)
+
+    seen: set[Path] = set()
+    for root in roots:
+        if root in seen:
+            continue
+        seen.add(root)
+        for horizontal in root.rglob(f"*{HORIZONTAL_SUFFIX}"):
+            split_dir = horizontal.parent
+            if split_dir.name != "train":
+                continue
+            candidate = split_dir.parent
+            if (list_wells(candidate / "train")
+                    and (candidate / "sample_submission.csv").exists()):
+                return candidate
+
+    mounted = []
+    if kaggle_input.exists():
+        mounted = sorted(str(p.relative_to(kaggle_input))
+                         for p in kaggle_input.iterdir())
+    raise FileNotFoundError(
+        f"Could not locate ROGII competition data from {data_dir}. "
+        "Expected sample_submission.csv plus paired train/*.csv files. "
+        f"Top-level /kaggle/input entries: {mounted}"
+    )
+
+
 @dataclass(frozen=True)
 class WellPair:
     """One modeling example: a horizontal well and its typewell."""

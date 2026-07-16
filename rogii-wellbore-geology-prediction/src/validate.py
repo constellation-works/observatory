@@ -161,6 +161,7 @@ def build_models(names: str, data_dir: Path) -> list[Model]:
     from .ensemble import PrefixPlayoff, SoftBlendPlayoff
     from .gate import DipAxisGate, LearnedGate
     from .gr import GRStateSpace
+    from .panel import DirectPanelPhase, EarlyPanelBlend
     from .topology import TrendCorrectedSpatial
 
     registry: dict[str, Callable[[], list[Model]]] = {
@@ -198,11 +199,24 @@ def build_models(names: str, data_dir: Path) -> list[Model]:
             bias_cache=(train_dir,
                         data_dir.parent / "results" / "cache" / "bias_samples.csv"))],
         "dip-best": lambda: [GRStateSpace(
-            DipAxisGate(train_dir, data_dir.parent / "results", residual_shrink=0.1),
+            DipAxisGate(train_dir, data_dir.parent / "results",
+                        uphill_shrink=0.0, downhill_shrink=0.15),
             level_weight=1.0, shape_weight=0.0,
             sigma_vel=0.05, adaptive_scale=3.0, shrink=0.7,
             bias_cache=(train_dir,
                         data_dir.parent / "results" / "cache" / "bias_samples.csv"))],
+        "panel": lambda: [DirectPanelPhase()],
+        "panel-best": lambda: [EarlyPanelBlend(
+            GRStateSpace(
+                DipAxisGate(train_dir, data_dir.parent / "results",
+                            uphill_shrink=0.0, downhill_shrink=0.15),
+                level_weight=1.0, shape_weight=0.0,
+                sigma_vel=0.05, adaptive_scale=3.0, shrink=0.7,
+                bias_cache=(train_dir,
+                            data_dir.parent / "results" / "cache" / "bias_samples.csv")),
+            weight=0.30,
+            max_distance_ft=1000.0,
+        )],
         "dip-best-sweep": lambda: [GRStateSpace(
             DipAxisGate(train_dir, data_dir.parent / "results", residual_shrink=s),
             level_weight=1.0, shape_weight=0.0,

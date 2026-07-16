@@ -1,8 +1,8 @@
 """Hidden-test discovery and submission generation.
 
-Runs the full best-known stack (F6: GR state-space correction over the
-dip-axis-augmented A/D gate — see the README experiment log) against whatever
-wells are present in ``test/``, and writes ``submission.csv``.
+Runs the full best-known stack (F7: F6 plus a short-range phase-aware panel
+update — see the README experiment log) against whatever wells are present in
+``test/``, and writes ``submission.csv``.
 
 Designed for the Kaggle notebook rerun: internet-free, self-sufficient, and
 path-parameterized (competition input is read-only on Kaggle, so every
@@ -31,10 +31,11 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
-from .baselines import default_baselines
-from .data import default_data_dir, list_wells, load_well
+from .baselines import Model, default_baselines
+from .data import default_data_dir, list_wells, load_well, resolve_data_dir
 from .gate import TABLE_NAME, DipAxisGate, build_gate_table
 from .gr import GRStateSpace, build_bias_samples
+from .panel import DirectPanelPhase, EarlyPanelBlend
 from .topology import SpatialTopology, build_surface_samples
 from .validate import run_cv
 
@@ -47,7 +48,6 @@ def ensure_artifacts(data_dir: Path, results_dir: Path) -> None:
 
     build_surface_samples(train_dir, cache / "surface_samples.parquet")
     build_bias_samples(train_dir, cache / "bias_samples.csv")
-    build_gate_table(data_dir, cache / TABLE_NAME, results_dir=results_dir)
 
     # Leakage-safe per-well labels for the gate come from grouped CV runs.
     if not (results_dir / "baselines" / "per_well.csv").exists():
@@ -56,21 +56,34 @@ def ensure_artifacts(data_dir: Path, results_dir: Path) -> None:
         run_cv([SpatialTopology(train_dir, cache / "surface_samples.parquet")],
                data_dir, results_dir / "stage2")
 
+    build_gate_table(data_dir, cache / TABLE_NAME, results_dir=results_dir)
 
-def build_model(data_dir: Path, results_dir: Path) -> GRStateSpace:
-    """The best-known configuration (F6), fitted on all training wells."""
+
+def build_model(data_dir: Path, results_dir: Path) -> Model:
+    """The best-known configuration (F7), fitted on all training wells."""
     train_dir = data_dir / "train"
-    model = GRStateSpace(
-        DipAxisGate(train_dir, results_dir, residual_shrink=0.1),
-        level_weight=1.0, shape_weight=0.0,
-        sigma_vel=0.05, adaptive_scale=3.0, shrink=0.7,
+    f6 = GRStateSpace(
+        DipAxisGate(
+            train_dir, results_dir, uphill_shrink=0.0, downhill_shrink=0.15
+        ),
+        level_weight=1.0,
+        shape_weight=0.0,
+        sigma_vel=0.05,
+        adaptive_scale=3.0,
+        shrink=0.7,
         bias_cache=(train_dir, results_dir / "cache" / "bias_samples.csv"),
     )
-    model.fit(list_wells(train_dir), None)
+    model = EarlyPanelBlend(
+        f6,
+        panel=DirectPanelPhase(),
+        weight=0.30,
+        max_distance_ft=1000.0,
+    )
+    model.fit(list_wells(train_dir), lambda name: load_well(train_dir, name))
     return model
 
 
-def predict_test(model: GRStateSpace, data_dir: Path) -> pd.DataFrame:
+def predict_test(model: Model, data_dir: Path) -> pd.DataFrame:
     test_dir = data_dir / "test"
     rows = []
     for well in list_wells(test_dir):
@@ -112,7 +125,8 @@ def main() -> None:
     ap.add_argument("--out", type=Path, default=None)
     args = ap.parse_args()
 
-    data_dir = args.data_dir
+    data_dir = resolve_data_dir(args.data_dir)
+    print(f"competition data: {data_dir}")
     results_dir = args.results_dir or data_dir.parent / "results"
     out = args.out or data_dir.parent / "submissions" / "submission.csv"
 
