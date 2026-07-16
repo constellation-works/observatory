@@ -84,7 +84,9 @@ def build_model(data_dir: Path, results_dir: Path) -> Model:
 
 
 def predict_test(model: Model, data_dir: Path,
-                 transductive: bool = True) -> pd.DataFrame:
+                 transductive: bool = True,
+                 overlap_override: bool = True,
+                 report_dir: Path | None = None) -> pd.DataFrame:
     test_dir = data_dir / "test"
     test_wells = list_wells(test_dir)
     pairs = [load_well(test_dir, w) for w in test_wells]
@@ -96,13 +98,28 @@ def predict_test(model: Model, data_dir: Path,
         # and out-of-support wells (README log, run `transductive`).
         model.observe_test(pairs)
         print(f"transductive: observed {len(pairs)} test-well prefixes")
-    rows = []
+
+    preds: dict[str, np.ndarray] = {}
     for pair in pairs:
         pred = np.asarray(model.predict(pair), dtype=float)
-        for id_, tvt in zip(pair.submission_ids(), pred):
-            rows.append((id_, float(tvt)))
+        preds[pair.name] = pred
         print(f"{pair.name}: {len(pred)} rows, "
               f"range {pred.min():.1f}..{pred.max():.1f}")
+
+    if overlap_override:
+        # Hidden test wells can be train wells (same id, full TVT supplied).
+        # Behind a per-well visible-prefix guard, the train copy's path
+        # replaces the model prediction. See src/overlap.py.
+        from .overlap import apply_overrides
+        preds = apply_overrides(
+            pairs, preds, data_dir / "train",
+            report_path=(report_dir / "overlap_report.csv"
+                         if report_dir else None))
+
+    rows = []
+    for pair in pairs:
+        for id_, tvt in zip(pair.submission_ids(), preds[pair.name]):
+            rows.append((id_, float(tvt)))
     return pd.DataFrame(rows, columns=["id", "tvt"])
 
 
@@ -135,6 +152,8 @@ def main() -> None:
     ap.add_argument("--out", type=Path, default=None)
     ap.add_argument("--no-transductive", action="store_true",
                     help="skip observing test-well prefixes before predicting")
+    ap.add_argument("--no-overlap-override", action="store_true",
+                    help="skip the guarded same-well train-copy override")
     args = ap.parse_args()
 
     data_dir = resolve_data_dir(args.data_dir)
@@ -145,7 +164,9 @@ def main() -> None:
     ensure_artifacts(data_dir, results_dir)
     model = build_model(data_dir, results_dir)
     preds = predict_test(model, data_dir,
-                         transductive=not args.no_transductive)
+                         transductive=not args.no_transductive,
+                         overlap_override=not args.no_overlap_override,
+                         report_dir=out.parent)
     submission = reconcile(preds, data_dir)
 
     out.parent.mkdir(parents=True, exist_ok=True)
