@@ -78,6 +78,7 @@ def run_cv(
     n_folds: int = 5,
     seed: int = 42,
     budget_s: float | None = None,
+    transductive: bool = False,
 ) -> pd.DataFrame:
     train_dir = data_dir / "train"
     wells = list_wells(train_dir)
@@ -104,6 +105,15 @@ def run_cv(
             continue
         for model in todo:
             model.fit(train_wells, loader)
+        if transductive:
+            # Simulate Kaggle-time inference: models may observe the
+            # held-out wells' *inference view* (no TVT, no surfaces) —
+            # exactly what the rerun notebook sees for hidden test wells.
+            test_view = [load_well(train_dir, w, columns=INFERENCE_COLS)
+                         for w in held_out]
+            for model in todo:
+                if hasattr(model, "observe_test"):
+                    model.observe_test(test_view)
         for well in held_out:
             if budget_s is not None and time.time() - t0 > budget_s:
                 stopped = True
@@ -273,11 +283,15 @@ def main() -> None:
     ap.add_argument("--seed", type=int, default=42)
     ap.add_argument("--budget-s", type=float, default=None,
                     help="stop after this many seconds; rerun to resume")
+    ap.add_argument("--transductive", action="store_true",
+                    help="let models observe held-out wells' inference view "
+                         "(prefix only), simulating Kaggle-rerun conditions")
     args = ap.parse_args()
 
     out_dir = args.data_dir.parent / "results" / args.run
     run_cv(build_models(args.models, args.data_dir), args.data_dir, out_dir,
-           n_folds=args.n_folds, seed=args.seed, budget_s=args.budget_s)
+           n_folds=args.n_folds, seed=args.seed, budget_s=args.budget_s,
+           transductive=args.transductive)
 
 
 if __name__ == "__main__":

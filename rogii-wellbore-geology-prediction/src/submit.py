@@ -83,15 +83,25 @@ def build_model(data_dir: Path, results_dir: Path) -> Model:
     return model
 
 
-def predict_test(model: Model, data_dir: Path) -> pd.DataFrame:
+def predict_test(model: Model, data_dir: Path,
+                 transductive: bool = True) -> pd.DataFrame:
     test_dir = data_dir / "test"
+    test_wells = list_wells(test_dir)
+    pairs = [load_well(test_dir, w) for w in test_wells]
+    if transductive and hasattr(model, "observe_test"):
+        # Test wells' observed prefixes (s = TVT_input + Z, prefix GR
+        # residuals) densify the spatial surface and GR bias field exactly
+        # where predictions happen — including hidden wells supporting each
+        # other. No labels involved; CV-neutral globally, improves the tail
+        # and out-of-support wells (README log, run `transductive`).
+        model.observe_test(pairs)
+        print(f"transductive: observed {len(pairs)} test-well prefixes")
     rows = []
-    for well in list_wells(test_dir):
-        pair = load_well(test_dir, well)
+    for pair in pairs:
         pred = np.asarray(model.predict(pair), dtype=float)
         for id_, tvt in zip(pair.submission_ids(), pred):
             rows.append((id_, float(tvt)))
-        print(f"{well}: {len(pred)} rows, "
+        print(f"{pair.name}: {len(pred)} rows, "
               f"range {pred.min():.1f}..{pred.max():.1f}")
     return pd.DataFrame(rows, columns=["id", "tvt"])
 
@@ -123,6 +133,8 @@ def main() -> None:
     ap.add_argument("--data-dir", type=Path, default=default_data_dir())
     ap.add_argument("--results-dir", type=Path, default=None)
     ap.add_argument("--out", type=Path, default=None)
+    ap.add_argument("--no-transductive", action="store_true",
+                    help="skip observing test-well prefixes before predicting")
     args = ap.parse_args()
 
     data_dir = resolve_data_dir(args.data_dir)
@@ -132,7 +144,8 @@ def main() -> None:
 
     ensure_artifacts(data_dir, results_dir)
     model = build_model(data_dir, results_dir)
-    preds = predict_test(model, data_dir)
+    preds = predict_test(model, data_dir,
+                         transductive=not args.no_transductive)
     submission = reconcile(preds, data_dir)
 
     out.parent.mkdir(parents=True, exist_ok=True)

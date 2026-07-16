@@ -517,6 +517,12 @@ class EarlyPanelBlend:
         self.prior.fit(train_wells, loader)
         self.panel.fit(train_wells, loader)
 
+    def observe_test(self, pairs) -> None:
+        """Delegate the transductive step; the panel itself needs targets
+        that test wells cannot supply, so only the prior benefits."""
+        if hasattr(self.prior, "observe_test"):
+            self.prior.observe_test(pairs)
+
     def predict(self, pair: WellPair) -> np.ndarray:
         base = np.asarray(self.prior.predict(pair), dtype=float)
         panel = np.asarray(self.panel.predict(pair), dtype=float)

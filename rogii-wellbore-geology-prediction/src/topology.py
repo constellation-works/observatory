@@ -221,6 +221,42 @@ class SpatialTopology:
         self._wells = table["well"].to_numpy()
         self._tree = cKDTree(self._xy)
 
+    def observe_test(self, pairs: list[WellPair]) -> None:
+        """Densify the surface with *test wells' observed prefixes*.
+
+        At inference time every test well exposes ~1,700 ft of known
+        topology (``s = TVT_input + Z``) along its prefix — unlabeled-suffix
+        information that is legitimately available when Kaggle reruns the
+        notebook, and that supports exactly the wells being predicted
+        (including each other). The prefix topology sits on a per-well/
+        typewell datum, so each well's samples are level-aligned to the
+        fitted train surface (median offset over its own prefix) before
+        joining the pool. All offsets are computed against the original
+        train-only surface first, so the result is order-independent.
+        """
+        new_xy, new_s, new_wells = [], [], []
+        for pair in pairs:
+            h = pair.horizontal
+            ps = pair.prediction_start
+            md = h["MD"].to_numpy()[:ps]
+            keep = np.searchsorted(md, np.arange(md[0], md[-1] + 1, SAMPLE_SPACING_FT))
+            keep = np.unique(np.clip(keep, 0, ps - 1))
+            s_tvt = (h["TVT_input"].to_numpy() + h["Z"].to_numpy())[keep]
+            xy = h[["X", "Y"]].to_numpy()[keep]
+            ok = np.isfinite(s_tvt)
+            if ok.sum() < 3:
+                continue
+            offset = float(np.median(self._f_hat(xy[ok]) - s_tvt[ok]))
+            new_xy.append(xy[ok])
+            new_s.append(s_tvt[ok] + offset)
+            new_wells.append(np.full(ok.sum(), pair.name))
+        if not new_xy:
+            return
+        self._xy = np.vstack([self._xy] + new_xy)
+        self._s = np.concatenate([self._s] + new_s)
+        self._wells = np.concatenate([self._wells] + new_wells)
+        self._tree = cKDTree(self._xy)
+
     def _f_hat(self, queries: np.ndarray) -> np.ndarray:
         """Weighted-plane F estimate at each (x, y) query point."""
         return self._fit_planes(queries)[0]

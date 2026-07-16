@@ -198,6 +198,10 @@ class LearnedGate:
                 .merge(rmse_d[["well", "rmse"]].rename(columns={"rmse": "rmse_d"}), on="well")
                 .merge(rmse_a[["well", "rmse"]].rename(columns={"rmse": "rmse_a"}), on="well"))
 
+    def observe_test(self, pairs) -> None:
+        """Transductive step: test-well prefixes densify the D surface."""
+        self.d.observe_test(pairs)
+
     def fit(self, train_wells: list[str], loader: WellLoader) -> None:
         from sklearn.linear_model import LogisticRegression
         from sklearn.pipeline import make_pipeline
@@ -270,6 +274,9 @@ class DipAxisGate(LearnedGate):
     def fit(self, train_wells: list[str], loader: WellLoader) -> None:
         super().fit(train_wells, loader)
         self.regional.fit(train_wells, loader)
+
+    def observe_test(self, pairs) -> None:
+        super().observe_test(pairs)
 
     def predict(self, pair: WellPair) -> np.ndarray:
         pred_safe = self.regional.predict(pair)

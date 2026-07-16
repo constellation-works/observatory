@@ -161,6 +161,11 @@ class BiasField:
         w = 0.5 ** (dist.mean(axis=1) / self.halflife_ft)
         return b * w
 
+    def augment(self, xy: np.ndarray, r: np.ndarray) -> None:
+        self._xy = np.vstack([self._xy, xy])
+        self._r = np.concatenate([self._r, r])
+        self._tree = cKDTree(self._xy)
+
 
 class GRStateSpace:
     """Rung F: Viterbi offset correction of a geometric prior using GR."""
@@ -219,6 +224,40 @@ class GRStateSpace:
             table = build_bias_samples(train_dir, cache_path)
             table = table[table["well"].isin(set(train_wells))]
             self._bias_field = BiasField(table)
+
+    def observe_test(self, pairs: list[WellPair]) -> None:
+        """Transductive step: test prefixes densify the surface + GR field.
+
+        The GR residual samples use only prefix rows (``TVT_input``), the
+        same calibration as prediction, and no suffix information.
+        """
+        if hasattr(self.prior, "observe_test"):
+            self.prior.observe_test(pairs)
+        if self._bias_field is None:
+            return
+        xs, rs = [], []
+        for pair in pairs:
+            grid, ref = _resample_reference(pair.typewell)
+            gh = _smooth_horizontal(pair.horizontal["GR"].to_numpy())
+            calib = _calibrate(pair, grid, ref, gh)
+            if calib is None:
+                continue
+            a, b, _ = calib
+            ps = pair.prediction_start
+            h = pair.horizontal
+            tvt_in = h["TVT_input"].to_numpy()[:ps]
+            resid = (gh[:ps] - b) / a - np.interp(tvt_in, grid, ref)
+            md = h["MD"].to_numpy()[:ps]
+            which = np.digitize(md, np.arange(md[0], md[-1] + 200.0, 200.0))
+            df = pd.DataFrame({"which": which, "X": h["X"].to_numpy()[:ps],
+                               "Y": h["Y"].to_numpy()[:ps], "r": resid})
+            g = df.groupby("which").agg(X=("X", "median"), Y=("Y", "median"),
+                                        r=("r", "median")).dropna()
+            if len(g):
+                xs.append(g[["X", "Y"]].to_numpy())
+                rs.append(g["r"].to_numpy())
+        if xs:
+            self._bias_field.augment(np.vstack(xs), np.concatenate(rs))
 
     def predict(self, pair: WellPair) -> np.ndarray:
         base = np.asarray(self.prior.predict(pair), dtype=float)
