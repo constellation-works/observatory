@@ -1,0 +1,25 @@
+# Parallax futures recorder — liquidations (forceOrder), funding (markPrice), trades, book.
+# Install: see parallax-record-spot.service.
+#
+# DISK-LIGHT MODE: on a box with tight storage, drop the depth feed by adding
+#   --streams "aggTrade,bookTicker,forceOrder,markPrice@1s"
+# to ExecStart — a few hundred MB/day instead of 1-3 GB/day. The liquidation and
+# funding record stays complete; only the perp book is deferred until real storage
+# exists (dk-server-2 mirror).
+
+[Unit]
+Description=Parallax recorder — Binance USDT-M futures BTCUSDT (liquidations + funding)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=exec
+WorkingDirectory=%h/constellation/codebases/parallax
+ExecStart=%h/.local/bin/uv run parallax book record --symbol BTCUSDT --market futures
+Restart=always
+RestartSec=10
+KillSignal=SIGTERM
+TimeoutStopSec=20
+
+[Install]
+WantedBy=default.target

@@ -1,0 +1,29 @@
+# Parallax spot L2 recorder — systemd user unit.
+# Install (as the login user, linger already enabled on the box):
+#   mkdir -p ~/.config/systemd/user
+#   cp deploy/systemd/parallax-record-*.service ~/.config/systemd/user/
+#   systemctl --user daemon-reload
+#   systemctl --user enable --now parallax-record-spot.service
+# Logs: journalctl --user -u parallax-record-spot -f
+#
+# WorkingDirectory assumes the constellation checkout at %h/constellation — adjust
+# if the box layout differs. Requires `uv sync --group capture` run once in the repo.
+
+[Unit]
+Description=Parallax L2 recorder — Binance spot BTCUSDT
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=exec
+WorkingDirectory=%h/constellation/codebases/parallax
+ExecStart=%h/.local/bin/uv run parallax book record --symbol BTCUSDT
+Restart=always
+RestartSec=10
+# The recorder handles reconnects itself; Restart= covers process death only.
+# Capture integrity note: SIGTERM lets it write the capture_stopped record.
+KillSignal=SIGTERM
+TimeoutStopSec=20
+
+[Install]
+WantedBy=default.target

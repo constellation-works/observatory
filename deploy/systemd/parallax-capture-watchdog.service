@@ -1,0 +1,17 @@
+# Parallax capture stall watchdog — detector only, never an actor.
+# Fires via parallax-capture-watchdog.timer every 5 minutes. If no capture file is
+# newer than 10 minutes, it logs at err priority (journalctl -t parallax-watchdog)
+# and leaves a .stall-alert marker for other tooling to notice; on recovery the
+# marker is removed. It deliberately does NOT restart the recorders — Restart=always
+# on the recorder units owns recovery; a watchdog that also acts can fight it.
+#
+# Install both files (see parallax-record-spot.service for the path-adjust note):
+#   systemctl --user enable --now parallax-capture-watchdog.timer
+
+[Unit]
+Description=Parallax capture stall watchdog
+
+[Service]
+Type=oneshot
+WorkingDirectory=%h/constellation/codebases/parallax
+ExecStart=/bin/bash -c 'if find data/R01-crypto/raw/book -name "*.jsonl.gz" -mmin -10 | grep -q .; then rm -f data/R01-crypto/raw/book/.stall-alert; else echo "CAPTURE STALLED: no capture file newer than 10 minutes under $(pwd)/data/R01-crypto/raw/book" | systemd-cat -t parallax-watchdog -p err; date -u +%%Y-%%m-%%dT%%H:%%M:%%SZ > data/R01-crypto/raw/book/.stall-alert; exit 1; fi'
