@@ -4,7 +4,7 @@ status: growing
 families: [gravity-as-scarcity]
 almanac: 15-discussions/26-07/gravity-as-scarcity-of-space.md
 created: 2026-07-09
-updated: 2026-07-12
+updated: 2026-08-07
 ---
 
 # Gravity as the gradient of scarce space
@@ -1052,3 +1052,7 @@ far-field scarcity from voids** (that doc's § lattice adjudications). The candi
 bridge to this doc therefore hangs on the same object as this doc's own river debt: the
 r^(−3/2)/non-conservation **source law**, one consolidated debt across ORB-10162,
 ORB-10164, and that doc's §B2 obligation. Nothing in that doc moves this ledger.
+
+**Successor branch:** [the retarded-scarcity wake](retarded-scarcity-wake.md) isolates the
+new moving-substrate question — a possible leading/trailing potential dipole — without
+reopening or extending this document's fixed-β, photon-sector, or source-law verdicts.
