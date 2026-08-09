@@ -3,8 +3,8 @@ status: work-in-progress
 """
 
 
-from collections import defaultdict
 import os
+from collections import defaultdict
 from typing import BinaryIO
 import regex as re
 import heapq
