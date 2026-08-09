@@ -4,7 +4,7 @@ status: exploratory
 families: [retarded-scarcity-wake]
 almanac: 15-discussions/26-08/from-galactic-motion-to-the-moving-gravity-medium-problem.md
 created: 2026-08-07
-updated: 2026-08-07
+updated: 2026-08-08
 ---
 
 # The retarded-scarcity wake
@@ -19,13 +19,24 @@ making the scarcity potential greater on the leading edge and the gravitational 
 stronger on the trailing edge. A sufficiently fast source may form a wake or cone if it
 outruns disturbances supported by the substrate.
 
-**Current verdict:** exploratory and untested. The leading/trailing effect follows from the
-specific delayed-center rule written below; it does **not** follow from finite propagation
-speed or the word "medium" alone. A consistent causal field can contain velocity-dependent
-terms that remove the first-order lag, and an excitation medium can hide uniform motion at
-low energy. This theory exists to make the fork executable: compare the delayed-center wake
-against a causal wave-field control, then keep or kill the wake at the mechanic level before
-looking for it in galaxies.
+**Current analytic verdict (revised 2026-08-08): the Branch A shortcut fails under its stated
+Poisson-vacuum interpretation; the fork survives only as an explicit substrate equation.** The
+leading/trailing effect follows from the delayed-center rule below; it does **not** follow from
+finite propagation speed or the word "medium" alone. [Moving-source field
+consistency](moving-source-field-consistency.md) shows that \(\Phi_{\rm lag}\) is not the
+source-free exterior solution of the standard Poisson equation for a compact galaxy and that its
+alternative retarded-direction force is non-conservative. This does not exclude every local
+substrate theory: a different operator or physical distributed response could reproduce similar
+phenomenology, but must be specified as new Branch C dynamics. In a specified boost-invariant
+control, the first-order lag cancels for uniform motion. Under Principia's evidence contract,
+these analytic claims remain `untested` until the negative-control calculations are cataloged in
+Orrery.
+
+The doc-level status stays `exploratory` rather than `refuted`: Branch C is unadjudicated. What
+died is the claim that the delayed-center mechanic is the ordinary compact-source field with a
+propagation delay added. See the successor for the reordered program: a specified calibration
+control, a derived Branch C amplitude law, and observational baseline work that does not yet claim
+to bound every wake model.
 
 ## Evidence ledger
 
@@ -33,11 +44,15 @@ looking for it in galaxies.
 |---|---|---|
 | A localized scarcity source has a potential-like scalar that increases numerically from the deep center toward the edge, while its gradient attracts matter inward | supported | By construction in [scarcity-grid-weight-black-hole](../../orrery/lab/sims/scarcity-grid-weight-black-hole/) and [scarcity-capped-cumulative-field](../../orrery/lab/sims/scarcity-capped-cumulative-field/); inherited only as mechanics from [gravity-as-scarcity](gravity-as-scarcity.md), not as evidence that nature uses scarcity |
 | There exists a physical gravitational substrate with a locally meaningful velocity field **U**, distinct in principle from the CMB frame | conjecture | No source law, substrate equation, or direct evidence. An O(1) substance coupling to a preferred frame is already bounded by [lorentz-violation-bounds](../studies/lorentz-violation-bounds.md); an excitation-medium reading can hide uniform motion at leading order ([river-model-and-analog-gravity](../studies/river-model-and-analog-gravity.md)) |
-| Under the delayed-center postulate, uniform translation produces a first-order potential dipole proportional to \(v/c_g\), with higher conventional potential on the leading edge and stronger attraction on the trailing edge | untested | Analytic expansion in § Minimal wake model; requires a cataloged Orrery solver before it becomes evidence |
-| A centrally concentrated galaxy preserves a larger coherent wake than a diffuse distribution with the same total mass | untested | Distributed-source prediction in § Density dependence; no apparatus yet |
-| The wake displaces the dynamical center behind the baryonic center and produces an \(m=1\) leading/trailing rotation asymmetry rather than an axisymmetric flat-curve boost | untested | Prediction in § Observable signatures; no apparatus or data confrontation yet |
-| A causal substrate equation can cancel the delayed-center model's first-order dipole while retaining finite propagation speed | conjecture | The excitation-medium precedent shows that a medium need not expose uniform motion ([river-model-and-analog-gravity](../studies/river-model-and-analog-gravity.md)); the moving-source cancellation itself needs a dedicated study and control solver |
-| A gravitational cone forms when \(v>c_g\) | conjecture | Mach/Cherenkov analogy only; requires a sourced study note and a hyperbolic substrate model before being treated as an established prediction |
+| Under the delayed-center postulate, uniform translation produces a first-order potential dipole proportional to \(v/c_g\), with higher conventional potential on the leading edge and stronger attraction on the trailing edge | untested | The algebra is internally consistent, but \(\Phi_{\rm lag}\) is not the compact-source exterior solution of the standard Poisson equation: it has \(\nabla^2\Phi\neq0\) outside the galaxy and a linearly divergent Poisson-equivalent dipole moment. The analytic check awaits a cataloged negative-control fixture — [moving-source-field-consistency](moving-source-field-consistency.md) |
+| The first-order acceleration contrast is \((g_{\rm trail}-g_{\rm lead})/g_0\simeq4\beta_g\) | untested | Analytically corrected to \(2\beta_g\) in § Leading/trailing sign. \(4\beta_g\) follows from a *different*, non-potential force rule than the declared \(\mathbf{a}=-\nabla\Phi\); the fixture remains to be cataloged — [moving-source-field-consistency](moving-source-field-consistency.md) |
+| The alternative "force points toward the retarded position" rule is a legitimate conservative mechanic | untested | Analytically it has nonzero curl and admits loop-dependent work \(\sim\beta_g GM/R\); constant-\(R\) circles return zero, so the fixture must vary eccentricity and apsidal orientation — [moving-source-field-consistency](moving-source-field-consistency.md) |
+| A centrally concentrated galaxy preserves a larger coherent wake than a diffuse distribution with the same total mass | untested | The delayed-center concentration law is moot once that shortcut is rejected. A concrete Branch C equation may have a different density response, which must be derived rather than inherited |
+| The wake displaces the dynamical center behind the baryonic center and produces an \(m=1\) leading/trailing rotation asymmetry rather than an axisymmetric flat-curve boost | untested | A possible Branch C signature, but no amplitude law exists. \(A_1\sim2\times10^{-3}\) is only the delayed-center toy scale and is roughly 50–100× below representative observed lopsidedness scales; it is not a ceiling on Branch C — [moving-source-field-consistency](moving-source-field-consistency.md) § The delayed-center toy supplies a scale, not a ceiling |
+| A correlation between observed asymmetry axes and a common inferred substrate velocity would be evidence for the wake (§ Observable signatures, last bullet; rejection gate 6) | untested | A cosmological baseline is required. Peculiar velocity and environment share causes, but the leading tidal tensor is quadrupolar and does not by itself establish an \(m=1\) phase correlation. The null correlation must be measured, not assumed — [moving-source-field-consistency](moving-source-field-consistency.md) § A degeneracy to measure, not assume |
+| A boost-violating model may produce a lopsidedness-versus-vertical-distortion split set partly by the angle between \(\mathbf{w}\) and the disk normal | untested | New candidate signature; the response is not parameter-free and may be bowl-like rather than an integral-sign warp — [moving-source-field-consistency](moving-source-field-consistency.md) § A candidate geometric discriminator |
+| A specified boost-invariant causal field can cancel the delayed-center model's first-order dipole while retaining finite propagation speed | conjecture — to verify | Established in electromagnetism and general relativity, pending the local study note; it is a calibration result for those specified equations, not a verdict on every preferred-medium equation — [moving-source-field-consistency](moving-source-field-consistency.md) |
+| A gravitational cone forms when \(v>c_g\) | conjecture — to verify | In a conventionally coupled gravity mode this regime is excluded: GW170817 pins the observed tensor speed near \(c\), while Moore & Nelson give conservative and extragalactic Cherenkov bounds of \(2\times10^{-15}\) and ~\(2\times10^{-19}\). Applying those bounds to an extra substrate mode requires its matter coupling and dispersion — [moving-source-field-consistency](moving-source-field-consistency.md) |
 | The new velocity-dependent branch rescues the parent scarcity theory's fixed-β galactic law, photon sector, or source-law debt | refuted | It does not address those failures. The parent ledger remains controlling: [gravity-as-scarcity](gravity-as-scarcity.md) |
 
 ## Relationship to gravity as scarcity
@@ -113,7 +128,7 @@ At the leading edge, \(\theta=0\):
 \[
 \Phi_{\rm lead}\simeq-\frac{GM}{R}(1-\beta_g),
 \qquad
-g_{\rm lead}\simeq g_0(1-2\beta_g).
+g_{\rm lead}\simeq g_0(1-\beta_g).
 \]
 
 At the trailing edge, \(\theta=\pi\):
@@ -121,7 +136,7 @@ At the trailing edge, \(\theta=\pi\):
 \[
 \Phi_{\rm trail}\simeq-\frac{GM}{R}(1+\beta_g),
 \qquad
-g_{\rm trail}\simeq g_0(1+2\beta_g).
+g_{\rm trail}\simeq g_0(1+\beta_g).
 \]
 
 So the leading potential is greater (less negative), while the trailing gravitational field
@@ -130,12 +145,23 @@ is stronger. To first order, the edge-to-edge contrasts are
 \[
 \Phi_{\rm lead}-\Phi_{\rm trail}\simeq2\frac{GM}{R}\beta_g,
 \qquad
-\frac{g_{\rm trail}-g_{\rm lead}}{g_0}\simeq4\beta_g.
+\frac{g_{\rm trail}-g_{\rm lead}}{g_0}\simeq2\beta_g.
 \]
 
-These coefficients belong to the delayed point-center approximation. A distributed source,
-a velocity-dependent coupling, or a consistent wave equation may change them or cancel the
-entire first-order term.
+**Corrected 2026-08-07.** This section previously gave \(4\beta_g\) for the acceleration
+contrast. That coefficient does not come from \(\mathbf{a}=-\nabla\Phi\) applied to the
+\(\Phi_{\rm lag}\) above; it comes from a *different* rule — a point mass at fixed separation
+\(R(1+\beta_g)\), giving \(g_0/(1+\beta_g)^2\simeq g_0(1-2\beta_g)\). The two rules are not the
+same object and are not both derivable from the postulate as stated. The gradient rule gives
+\(2\beta_g\) and is the one this section's declared \(\mathbf{a}=-\nabla\Phi\) requires; the
+alternative rule is separately non-conservative. See
+[moving-source-field-consistency](moving-source-field-consistency.md) § Two rules.
+
+These coefficients belong to the delayed point-center approximation. They are recorded here for
+provenance only: the successor rejects the postulate as the compact-source exterior solution of
+the standard Poisson equation. Specified boost-invariant controls such as electromagnetism and
+general relativity cancel the naïve first-order lag; an alternative substrate equation must state
+its own dynamics and coupling.
 
 ## Density dependence
 
@@ -161,15 +187,26 @@ survives.
 ## Competing substrate branches
 
 The first apparatus must compare mechanisms, not merely render the favored picture.
+**Narrowed analytically on 2026-08-08** — the Poisson-vacuum reading of A is dead; B is a known
+calibration only after its boost-invariant equation is specified; C remains open; D is excluded
+for conventionally coupled gravity modes but not automatically for every hypothetical substrate
+mode. Retained below as the original statement of the fork, with each disposition noted.
 
-### Branch A — delayed-center memory
+### Branch A — delayed-center memory — **analytically rejected; fixture pending**
 
 The postulate above: the field points toward a retarded matter configuration without a
 velocity term that recenters the steady solution. Prediction: an \(O(\beta_g)\) dipole,
 dynamical-center lag, leading/trailing asymmetry, and possible momentum transfer to the
 substrate.
 
-### Branch B — causal steady field
+*Analytic disposition:* rejected as the source-free exterior solution of the standard Poisson
+equation for a compact galaxy. Under that diagnostic it requires an effective dipolar density
+\(\propto\cos\theta/R^3\) filling space, with a linearly divergent dipole moment. A different
+operator or a physical substrate response is not excluded, but would constitute a new model with
+new conservation and source obligations. See
+[moving-source-field-consistency](moving-source-field-consistency.md).
+
+### Branch B — causal steady field — **specified control required**
 
 A hyperbolic substrate equation evolves a field sourced by the moving density and is allowed
 to reach steady state in the galaxy's comoving coordinates. Prediction to adjudicate: the
@@ -177,7 +214,12 @@ first-order dipole may cancel, leaving a fore-aft-symmetric deformation beginnin
 \(O(\beta_g^2)\). If so, finite propagation is real but the delayed-center postulate is
 refuted.
 
-### Branch C — emergent metric
+*Disposition:* electromagnetism and general relativity provide known boost-invariant controls in
+which velocity-dependent terms remove the naïve first-order lag. Branch B becomes a calibration
+target only after the control equation, source coupling, frame, and tracer observable are fixed. A
+generic causal hyperbolic substrate is not settled by naming those precedents.
+
+### Branch C — emergent metric — **the surviving branch**
 
 Matter and measuring devices are excitations of the same substrate, so uniform motion is
 hidden at leading order. The candidate rest frame is then observable only through
@@ -185,7 +227,13 @@ microstructure-scale dispersion or other Lorentz-breaking corrections. Existing 
 carried by [lorentz-violation-bounds](../studies/lorentz-violation-bounds.md). This branch may
 erase the proposed galactic wake altogether.
 
-### Branch D — supercritical wake
+*Disposition:* untouched by the analytic pass, and now the whole of the live question. Note the
+change in epistemic status it forces: with A dead, a wake requires *explicit* boost-violation, so
+its amplitude is a free parameter **bounded** by Lorentz tests rather than **predicted** by
+retardation. The branch is worth pursuing only if some breaking parameter yields an \(A_1\) the
+existing bounds do not already crush.
+
+### Branch D — supercritical wake — **ordinary gravity excluded**
 
 If \(|\mathbf{w}|>c_g\), disturbances cannot propagate ahead of the source and a Mach-like
 cone may form. This is the closest branch to the electron-cone intuition in the Almanac
@@ -193,6 +241,13 @@ discussion, but it is conditional and presently only a conjecture. If \(c_g\) is
 with the observed tensor gravitational-wave speed, massive planets and galaxies cannot
 enter this branch; any additional slower substrate mode must be specified and confronted
 with [scalar-gravity-ppn-constraints](../studies/scalar-gravity-ppn-constraints.md).
+
+*Disposition:* for a conventionally coupled gravitational mode, the escape hatch is closed.
+Moore & Nelson 2001 give a conservative Cherenkov speed-deficit bound of \(2\times10^{-15}\) for
+Galactic cosmic-ray origins and ~\(2\times10^{-19}\) for extragalactic origins (`conjecture — to
+verify` pending the moving-source study note). Either keeps a galaxy moving at \(10^{-3}c\) far
+below the mode speed. Extending that conclusion to an extra substrate mode requires its coupling
+to matter and its dispersion to be specified.
 
 ## Observable signatures
 
@@ -205,13 +260,32 @@ an axis even while stars orbit:
 - weaker attraction on the leading side;
 - secular torque, heating, or drag if the substrate absorbs momentum;
 - a correlation of the asymmetry axis with the galaxy's velocity relative to one common
-  inferred frame, rather than with its disk scale alone.
+  inferred frame, rather than with its disk scale alone. **Degenerate — see below.**
+
+> **Amended 2026-08-08.** The last bullet requires a cosmological-simulation baseline. Peculiar
+> velocity and environment share causes, but the leading tidal tensor is quadrupolar and does not
+> by itself predict an \(m=1\) phase alignment; the null correlation must be measured rather than
+> assumed. The fifth bullet is also compromised under one reading of the mechanic: loop-dependent
+> work can arise as an artifact of the non-conservative force rule, independent of any substrate
+> momentum exchange. A candidate geometric signature keyed to the angle between **w** and the disk
+> normal is proposed, but its vertical response is parameter-dependent and not yet derived, in
+> [moving-source-field-consistency](moving-source-field-consistency.md).
 
 This is not yet an explanation of flat rotation curves. An axisymmetric dark-matter-like
 signal is \(m=0\); this proposal is primarily \(m=1\). Any claim that orbital averaging turns
 the dipole into a radial boost must be derived and tested separately.
 
 ## Future Orrery apparatus
+
+> **Superseded 2026-08-08.** The staged program below did not sufficiently distinguish the
+> Poisson-vacuum shortcut, a specified boost-invariant control, and a genuinely boost-violating
+> substrate equation. The replacement program — a negative-control fixture, an explicit
+> calibration equation, a derived Branch C amplitude law, and observational baseline work — is in
+> [moving-source-field-consistency](moving-source-field-consistency.md) § Proposed program.
+> Two specification gaps found there apply to any successor apparatus: tracer studies need the
+> velocity-coupling (gravitomagnetic-analogue) sector specified or they measure the chosen frame,
+> and they must seed eccentric as well as circular orbits or they cannot see non-conservation.
+> This section is retained for provenance.
 
 No apparatus is authorized or implemented by this document. When the theory is promoted to
 an experiment, the first Faraday task should build a cataloged Orrery sim with frozen rules
@@ -283,7 +357,11 @@ The wake branch is refuted, not repaired, if any of these gates fires:
 - Derive, rather than postulate, the substrate evolution equation and its conserved
   quantities.
 - Decide whether \(S\) is a standing scalar, a flow history, or an effective metric field.
-- Specify what defines **U**, without assuming it equals the CMB frame.
+- Specify what defines **U**, without assuming it equals the CMB frame. **Prior question
+  (2026-08-08):** does the substrate comove with the Hubble flow? Until that is answered
+  \(\mathbf{w}\) has no definition and every \(\beta_g\) in this doc assumes an answer nobody wrote.
+  Established physics for it is in
+  [cosmological-expansion-and-bound-systems](../studies/cosmological-expansion-and-bound-systems.md).
 - Determine whether the same substrate carries tensor gravitational waves or an additional
   mode with its own \(c_g\).
 - Add a sourced Principia study on moving-source fields, gravitational aberration,
@@ -294,6 +372,8 @@ The wake branch is refuted, not repaired, if any of these gates fires:
 
 ## Related
 
+- [Moving-source field consistency](moving-source-field-consistency.md) — the successor that
+  adjudicates this fork analytically and carries the replacement program
 - [Gravity as the gradient of scarce space](gravity-as-scarcity.md) — parent mechanics and
   its unchanged empirical verdicts
 - [The two-substance vortex vacuum](two-substance-vortex-vacuum.md) — candidate substrate

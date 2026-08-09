@@ -56,6 +56,17 @@ one place to be wrong, one place to fix.
   redshift rungs beyond the solar neighborhood: solar Fe lines (HARPS-LFC), S2/S0-2 at
   Sgr A* (GRAVITY, Do), and stacked galaxy clusters (Wojtak) with the Kaiser kinematic
   caveat — redshift tracking the dynamics-inferred potential at every measured scale.
+- [cosmological-expansion-and-bound-systems](cosmological-expansion-and-bound-systems.md) —
+  where expansion reaches: locally \(\Lambda\) *is* a centrifugal term (\(\omega^2=\Lambda c^2/3\),
+  period 106 Gyr), so the max turnaround radius is the cosmological Hill radius (~1 Mpc for
+  10¹² M⊙); the term is 2×10⁻⁴ of self-gravity at a galaxy's disk edge; Price & Romano's
+  all-or-nothing barrier as a saddle-node at \(r_c\) (the orbit's valley exists, it just never
+  migrates); why no energy is dissipated (static potential, no \(\dot r\) term) while global energy
+  genuinely is not conserved, set against the measured inspiral ladder — solar mass loss, lunar
+  tides, Hulse–Taylor, WASP-12b — where a real sink always shows up; the solar-system
+  non-expansion bound (≳70×);
+  the \(\dot G/G\) wall on "gravity and expansion are one phenomenon"; and the two
+  near-coincidence traps — lunar recession vs \(H_0r\), galaxy size growth vs the scale factor.
 
 ## Wanted (backlog)
 
