@@ -3,7 +3,8 @@
 Our own theories — one living document per line of inquiry, maintained by **kepler**
 (`agentbase/kepler/memory`), the physicist agent. Almanac keeps the *discussion* (how an idea
 unfolded); this directory keeps the *current state of the theory* and its standing against
-evidence.
+evidence. A cross-family rollup of every claim, grouped by verdict, lives in
+[../ledger.md](../ledger.md) — resync it in the same commit when a ledger here changes.
 
 ## The contract
 

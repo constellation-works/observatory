@@ -8,6 +8,9 @@ Prose only. The experiments these theories are tested against live in the siblin
 [**orrery**](../orrery) (`codebases/orrery`), the cabinet of cataloged physics sims.
 
 ```
+ledger.md  Master ledger — every theory claim across all families, grouped by verdict
+           (refuted / mixed / supported / untested / conjecture). Derived index; resync
+           when any theory ledger changes.
 theory/    Our own theories — one living doc per line of inquiry, each with an
            evidence ledger (claim → status → sims/studies). Contract in theory/README.md.
 studies/   Sourced notes on established physics — real citations only. Contract in
