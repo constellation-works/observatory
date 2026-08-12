@@ -1010,7 +1010,13 @@ organize (by acceleration). What remains live:*
   (ORB-10161 Branch B's obligation), or concede the clock sector. **ORB-10158** (excitation
   dynamics; the flowing-lattice photon arm) stays open behind it. Paying this debt would
   make the GP-conditional clock and photon sectors physical rather than conditional — it
-  would not, by itself, answer the galactic question below.
+  would not, by itself, answer the galactic question below. **The named-postulate route now
+  has a concrete candidate** (2026-08-11):
+  [shear-sourced-consumption](shear-sourced-consumption.md) — destruction ∝ density ×
+  anisotropic strain rate, which uniquely selects the GP profile with free amplitude and is
+  silent in homogeneous expansion. Untested; its falsifier gates (attractor, amplitude
+  coupling, on-lattice silence) are filed to faraday. Nothing in this ledger moves until
+  they run.
 - **What carries the MW boost — ORB-10170's three readings, demoted to a single-galaxy
   question.** The carrier alternatives stand as measured (ORB-10157, § superposition
   adjudication): (i) the measured headroom-screening law at O(1) galactic occupancy
