@@ -4,7 +4,7 @@ status: growing
 families: [gravity-as-scarcity]
 almanac: 15-discussions/26-07/gravity-as-scarcity-of-space.md
 created: 2026-07-09
-updated: 2026-08-07
+updated: 2026-08-12
 ---
 
 # Gravity as the gradient of scarce space
@@ -1011,12 +1011,17 @@ organize (by acceleration). What remains live:*
   dynamics; the flowing-lattice photon arm) stays open behind it. Paying this debt would
   make the GP-conditional clock and photon sectors physical rather than conditional — it
   would not, by itself, answer the galactic question below. **The named-postulate route now
-  has a concrete candidate** (2026-08-11):
+  has a surviving candidate** (2026-08-11; adjudicated 2026-08-12):
   [shear-sourced-consumption](shear-sourced-consumption.md) — destruction ∝ density ×
-  anisotropic strain rate, which uniquely selects the GP profile with free amplitude and is
-  silent in homogeneous expansion. Untested; its falsifier gates (attractor, amplitude
-  coupling, on-lattice silence) are filed to faraday. Nothing in this ledger moves until
-  they run.
+  anisotropic strain rate. **ORB-10751 passed all three predeclared kill gates** (orrery
+  `a8da4ec`): the GP profile is a measured dynamical attractor (exponent −0.5000150 ±
+  1.6×10⁻⁵), the amplitude is monotonically core-controllable, and uniform expansion
+  consumes zero at apparatus precision. The debt accordingly **narrows to the
+  amplitude–mass boundary coupling** (why energy E imposes A = √(2GM)) — plus one new
+  measured wrinkle: the shear law's two-core superposition diverges from the counting
+  mechanic's ORB-10157 screening family (stronger screening; coarse-grid exploratory), so
+  the two lattice models now disagree on a measurable and at most one can carry the MW
+  boost's phenomenology.
 - **What carries the MW boost — ORB-10170's three readings, demoted to a single-galaxy
   question.** The carrier alternatives stand as measured (ORB-10157, § superposition
   adjudication): (i) the measured headroom-screening law at O(1) galactic occupancy
@@ -1037,7 +1042,14 @@ organize (by acceleration). What remains live:*
   length, and the fitted length tracks galaxy size (ρ = 0.343, p ≈ 2×10⁻⁵). A headroom
   rule whose effective scale co-varies with the baryon distribution — *derived* from
   counting rather than refit per galaxy — is the only shape a successor could take. Nothing
-  currently supplies one; until something does, this is a question, not a branch.
+  currently supplies one; until something does, this is a question, not a branch. **First
+  stellar-scale constraint (ORB-10753, tycho, 2026-08-12):** Gaia DR3 wide binaries on a
+  predeclared pipeline are **Newtonian-consistent across the a₀ boundary** (low-g median
+  ṽ = 0.702 vs mock 0.677, robust to every contested modeling choice; n = 16 below a₀ on
+  one 25° cone — a pipeline-validated null, not a decisive one;
+  [studies/gaia-wide-binaries-low-acceleration](../studies/gaia-wide-binaries-low-acceleration.md)).
+  Any successor that makes the boost a universal property of gravity below a₀ must also
+  explain why wide binaries don't show it at current power.
 
 ## Related
 

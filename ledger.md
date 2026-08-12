@@ -2,7 +2,7 @@
 title: "Master ledger — every theory claim, grouped by verdict"
 status: active
 created: 2026-08-11
-updated: 2026-08-11
+updated: 2026-08-12
 ---
 
 # Master ledger
@@ -12,17 +12,19 @@ instead of by document. This file is a derived index: the **source of truth stay
 doc's own evidence ledger**, which carries the full qualifications this table compresses.
 Resync this file in the same commit whenever a theory doc's ledger changes.
 
-**Last synced: 2026-08-11** against: gravity-as-scarcity (upd. 2026-08-11),
+**Last synced: 2026-08-12** against: gravity-as-scarcity (upd. 2026-08-12),
 two-substance-vortex-vacuum (2026-07-12), retarded-scarcity-wake (2026-08-08),
-moving-source-field-consistency (2026-08-08), shear-sourced-consumption (2026-08-11),
-vortex-electron (2026-07-09), swirl-photon (2026-07-09).
+moving-source-field-consistency (2026-08-08), shear-sourced-consumption (2026-08-12),
+vortex-electron (2026-07-09), swirl-photon (2026-07-09), plus
+[studies/gaia-wide-binaries-low-acceleration](studies/gaia-wide-binaries-low-acceleration.md)
+(2026-08-12).
 
 ## Theory families at a glance
 
 | Doc | Doc status | Headline verdict |
 |---|---|---|
-| [gravity-as-scarcity](theory/gravity-as-scarcity.md) | growing | **No universal-gravity branch is live.** Fixed-β universality refuted at SPARC (ORB-10169); photon sector (ORB-10156) and clock sector as stated (ORB-10159) refuted; the river completion refuted at the mechanic level (ORB-10162). Survives: MW fit as single-galaxy phenomenology, measured lattice laws (headroom screening), and the GP-conditional derivations — all gated on the unpaid source-law debt |
-| [shear-sourced-consumption](theory/shear-sourced-consumption.md) | exploratory | Candidate payment of the source-law debt: destruction ∝ density × anisotropic (tidal) strain rate — uniquely selects the GP profile with free amplitude, silent in Hubble flow, budget closes at the turnaround radius. A named postulate, all rows untested; gates filed as **ORB-10751** (faraday) |
+| [gravity-as-scarcity](theory/gravity-as-scarcity.md) | growing | **No universal-gravity branch is live.** Fixed-β universality refuted at SPARC (ORB-10169); photon sector (ORB-10156) and clock sector as stated (ORB-10159) refuted; the river completion refuted at the mechanic level (ORB-10162). Survives: MW fit as single-galaxy phenomenology, measured lattice laws (headroom screening), and the GP-conditional derivations — gated on the source-law debt, now narrowed to the amplitude–mass coupling after ORB-10751 |
+| [shear-sourced-consumption](theory/shear-sourced-consumption.md) | growing | **Survived its falsifiers** — ORB-10751 passed all three predeclared kill gates on-lattice: GP is a measured dynamical attractor (exponent −0.5000150 ± 1.6×10⁻⁵), amplitude core-controllable, uniform expansion consumes zero. Residue: the A = √(2GM) mass coupling is still underived, and the two-core probe measured a **different superposition family than ORB-10157** (coarse grid) — the shear law and the counting mechanic now disagree on a measurable |
 | [two-substance-vortex-vacuum](theory/two-substance-vortex-vacuum.md) | exploratory | **No gravitational sector** pending the source-law debt: void-volume sourcing dead ~11 orders (MICROSCOPE), conserved-void far field dead on the lattice (ORB-10164), S2 fifth force dead three ways (ORB-10161). Alive: EM sign structure won in 2-D (ORB-10163), charge-as-winding topology, S2-as-metric-medium at a steep equation-of-state price |
 | [retarded-scarcity-wake](theory/retarded-scarcity-wake.md) | exploratory | Delayed-center shortcut (Branch A) analytically rejected as a Poisson-vacuum field; Branch C (explicit boost violation) is the only live fork, with its amplitude a bounded free parameter, not a prediction |
 | [moving-source-field-consistency](theory/moving-source-field-consistency.md) | growing | Adjudication doc for the wake fork: the decisive algebra exists but its rows stay `untested` until the negative-control fixture is cataloged in orrery |
@@ -69,6 +71,8 @@ Evidence cuts both ways — the source row says exactly how.
 | two-substance | Like polarities repel, opposite attract, with 1/r² far field (EM correspondence) | ORB-10163: **sign won in 2-D** (Bjerknes reversal did not bite, given the declared coupling); law correct 2-D point-vortex physics; the 3-D 1/r² half deliberately unclaimed |
 | two-substance | The neutron as elementary balanced (1,1) defect | Bookkeeping passes every posed test (decay, capture, annihilation selection, proton stability); neutrality measured (ORB-10163). Owed: spin-½, statistics, magnetic moment, the neutrino slot |
 | two-substance | Branch A β identification: a kpc Yukawa reproduces the fitted boost shape | ORB-10167: **shape-degenerate** on the MW band (bootstrap ΔAIC spans zero) — the band never identified the boost's functional form. Moot for the dead branch; a live caveat on the parent's one empirical success |
+| shear-consumption | A mass of energy E imposes specifically A = √(2GM) via its boundary condition | Controllability measured (ORB-10751 amplitude gate); the *identification* — why energy E sets that flux — remains underived. The surviving hard core of the source-law debt |
+| shear-consumption | Two-source superposition reproduces the ORB-10157 headroom-screening family | **Measured divergence** (ORB-10751 two-core probe, exploratory, coarse 25³ grid): best fit A(D) = 1/(1+6.82 D^0.668) at log-RMSE 0.031 vs the ORB-10157 family at 0.421 — much stronger screening. The two lattice models disagree; needs a resolution-converged rerun before reconciliation |
 
 ## Supported
 
@@ -91,6 +95,11 @@ claims about nature (marked ⊙).
 | two-substance | A charge-coupled fifth force cannot source time dilation | ORB-10161, derived on measured anchors (Galileo eccentric-orbit test, null-redshift comparisons) |
 | two-substance | The forced merger: the only Eötvös-, Cassini-, and clock-consistent S2 coupling is metric | ORB-10161 (§A6, §B4): every consistency repair of Branch A is a step into the metric sector |
 | two-substance | Branch B lives on every current clock instrument (redshift ≡ dynamics-inferred potential) | ORB-10161 (§B3): solar, S2/Sgr A*, and cluster redshift rungs all consistent; degenerate with GR+DM |
+| gravity-as-scarcity | Gaia DR3 wide binaries are Newtonian-consistent across the a₀ boundary (this footprint) | **ORB-10753** (tycho): predeclared pipeline, 156 pairs, forward-modeled Keplerian mocks — low-g median ṽ = 0.702 vs mock 0.677, robust to eccentricity prior and RUWE cut; n = 16 below a₀ on one 25° cone, so a validated null, not a decisive one ([studies/gaia-wide-binaries-low-acceleration](studies/gaia-wide-binaries-low-acceleration.md)) |
+| shear-consumption | The shear law + continuity uniquely select the GP profile (free amplitude); the sink identity holds at coefficient 1 | Closed-form ODE derivation, now backed by the cataloged dynamical run: **ORB-10751** ([shear-consumption-lattice](../orrery/lab/sims/shear-consumption-lattice/), orrery `a8da4ec`) |
+| shear-consumption | GP is a dynamical *attractor* under the law | ORB-10751 attractor gate: measured exponent −0.5000150, combined error 1.6×10⁻⁵, two initial conditions, resolution + timestep converged |
+| shear-consumption | A core boundary condition selects the exterior amplitude monotonically and stably | ORB-10751 amplitude gate: strictly monotonic over core flux 0.003–0.3; initial-condition spread < 10⁻⁶ |
+| shear-consumption | The law consumes nothing in homogeneous Hubble flow | ORB-10751 silence gate: ≤ 3.7×10⁻¹⁶ of n\|H\| on a uniformly expanding lattice |
 | retarded-wake | ⊙ A localized scarcity source has a potential-like scalar rising outward while attracting inward | By construction, inherited from parent sims — mechanics only |
 | vortex-electron | The friction-vortex rule reproduces *single-particle* spin statistics | vortex-bell sims — contextual single-spin behavior works (Bell's own 1964 single-spin model) |
 | vortex-electron | A tabletop analog demonstrates the classical CHSH ceiling empirically | pingpong-bell: \|S\| = 1.49 ± 0.17 — inside the bound, as any local mechanism must be |
@@ -107,8 +116,6 @@ stay here per the house rule (evidence enters only through a cataloged sim or so
 |---|---|---|
 | two-substance | Kill condition B: the two-substance vacuum supports a single Maxwell photon sector (one cone, one unit, γ = 1) | The owed theorem (Volovik Fermi-point standard) or a lattice stand-in; binding walls already measured if it fails |
 | two-substance | Branch B: an S2 equation of state delivering exact Schwarzschild clocks exists | Requirement computed (§B2): κ ≤ 4×10⁻¹⁴ and a ≥ 10⁷ two-speed hierarchy — no standard condensate qualifies; needs a microphysical proposal either way |
-| shear-consumption | The shear law + continuity uniquely select the GP profile (free amplitude); the GP sink equals n(e_rr − e_θθ) at coefficient 1; Hubble flow consumes zero | Closed-form derivations, uncataloged — decisive on paper, `untested` per the house rule until an orrery fixture lands |
-| shear-consumption | GP is a dynamical *attractor*; a core boundary condition selects the amplitude; two-source behavior matches the ORB-10157 screening family | **ORB-10751** (faraday, ws_orrery, high) — attractor/amplitude/silence kill gates plus a superposition probe |
 | retarded-wake | Delayed-center dipole, its 2β contrast, the retarded-direction rule's non-conservation | The negative-control fixture in orrery — the algebra is done in [moving-source-field-consistency](theory/moving-source-field-consistency.md) and rejects the Poisson-vacuum reading |
 | retarded-wake | Concentration controls wake coherence; m=1 lopsidedness signature; axis–velocity correlation | Moot for the dead shortcut; for Branch C, an amplitude law A₁ = F(ε_boost, β_g, ρ, coupling) must exist first |
 | retarded-wake | Lopsidedness-vs-vertical-warp split keyed to the substrate wind's angle to the disk | The vertical disk response must be derived (bowl vs integral-sign warp) and checked against standard tides |
@@ -123,7 +130,7 @@ Not yet backed by anything; `— to verify` rows await a sourced study note.
 | Family | Claim | Note |
 |---|---|---|
 | two-substance | The proton as a confined composite of sub-integer vortices | Babaev-confinement precedent exists; why one polarity confines in triples is underived; no quantitative QCD correspondence claimed |
-| shear-consumption | Hubble generation inside R feeds a mass's GP intake exactly at the turnaround radius (— to verify) | Arithmetic identity given the law; comparison to measured turnaround scales owed to the cosmology study note |
+| shear-consumption | Hubble generation inside R feeds a mass's GP intake exactly at the turnaround radius (— to verify) | Arithmetic identity given the law; the observational comparison is filed as **ORB-10754** (tycho, ws_astrolabe): measured turnaround radii vs (2GM/H₀²)^(1/3) |
 | shear-consumption | "Shear consumes, isotropic strain doesn't" ↔ GR's Weyl/Ricci split | Resonance only; nothing derived, no citation |
 | retarded-wake | A physical gravitational substrate with a meaningful velocity field **U** exists | No source law, equation, or evidence; O(1) preferred-frame coupling already bounded |
 | retarded-wake | A boost-invariant causal field cancels the first-order dipole (— to verify) | Established in EM (Heaviside) and GR (Carlip 2000); the moving-source study note is owed |
@@ -138,16 +145,24 @@ Not yet backed by anything; `— to verify` rows await a sourced study note.
 
 The recurring objects the verdicts above keep pointing at — what actually moves rows:
 
-1. **The source-law debt** (one debt, three strikes: ORB-10162, ORB-10164, §B2). A derived
-   law of non-conservation — *where does substance go*. Until paid: no gravitational sector
-   in the two-substance family, the river completion stays a postulate, and kill condition
-   A's fork stays mooted. *The named-postulate route now has a candidate*:
-   [shear-sourced-consumption](theory/shear-sourced-consumption.md) (2026-08-11), gated on
-   **ORB-10751**. If its gates pass, the debt narrows to the amplitude–mass boundary
-   coupling; if they fail, the routes shrink to derivation-from-S2 or concession.
+1. **The source-law debt** (one debt, three strikes: ORB-10162, ORB-10164, §B2) — **narrowed
+   2026-08-12.** The named-postulate route survived:
+   [shear-sourced-consumption](theory/shear-sourced-consumption.md) passed all three
+   ORB-10751 kill gates (attractor, amplitude, silence). What remains of the debt is the
+   **amplitude–mass boundary coupling** — why a mass of energy E imposes A = √(2GM) — plus
+   the new measured wrinkle that the shear law's superposition family diverges from the
+   counting mechanic's (ORB-10157): at most one of the two lattice models can carry the MW
+   boost. Until the coupling is derived, the river completion is a postulated-law physics,
+   no longer a bare conditional.
 2. **The acceleration-organization problem** (ORB-10169's residue). Any successor to the
    fixed-β boost must organize by acceleration or co-vary with galaxy structure; the counting
-   mechanic contains no derivation of an acceleration scale.
+   mechanic contains no derivation of an acceleration scale. **First stellar-scale datum
+   (ORB-10753, 2026-08-12):** wide binaries are Newtonian-consistent across the a₀ boundary
+   on a predeclared pipeline
+   ([studies/gaia-wide-binaries-low-acceleration](studies/gaia-wide-binaries-low-acceleration.md))
+   — thin statistics below a₀ (n = 16, one 25° cone), but the burden now runs against
+   universal-gravity carriers; the follow-up with teeth is a multi-cone campaign at
+   n ≫ 10³ pairs below a₀.
 3. **The single-cone theorem** (kill condition B). One emergent photon sector from a
    two-component vacuum, to the Volovik standard — possibly requiring the ontology be recast
    as one vacuum with a two-component order parameter.

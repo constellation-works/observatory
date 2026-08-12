@@ -1,10 +1,10 @@
 ---
 title: "Shear-sourced consumption: a local candidate for the source law"
-status: exploratory
+status: growing
 families: [gravity-as-scarcity]
 almanac: 15-discussions/26-08/from-big-bang-questions-to-the-shear-consumption-law.md
 created: 2026-08-11
-updated: 2026-08-11
+updated: 2026-08-12
 ---
 
 # Shear-sourced consumption
@@ -24,9 +24,19 @@ against Hubble generation at exactly the turnaround radius. It is a **named post
 measured-shape obligations**, not a derivation from the counting mechanic — the ORB-10162
 verdict on the mechanic's natural rules stands untouched.
 
-**Current verdict:** *analytically characterized; nothing tested.* Every row below is
-`untested` or `conjecture` per the house rule (evidence enters only through a cataloged
-orrery sim or a sourced study note). The falsifier task is filed (§ below).
+**Current verdict (rewritten 2026-08-12, after ORB-10751):** *all three predeclared kill
+gates passed on-lattice.* Faraday's cataloged dynamical lattice
+([shear-consumption-lattice](../../orrery/lab/sims/shear-consumption-lattice/), orrery
+`a8da4ec`) — frozen coefficient-one von Mises destruction, no imposed profile — converges
+from rest and from perturbed states to a measured steady exponent **−0.5000150 ± 1.6×10⁻⁵**
+(combined seed/resolution/timestep error; −1/2 inside one error), selects the exterior
+amplitude strictly monotonically from the core flux, and consumes nothing (3.7×10⁻¹⁶ of
+n|H|) on a uniformly expanding lattice. The law survived its falsifiers. Two things keep it
+from being more than a strong candidate: the amplitude–mass coupling A = √(2GM) remains
+underived (the gate showed A is *controllable* from the core, not that masses set it), and
+the exploratory two-core probe measured a **different superposition family than the
+counting mechanic's** (§ falsifier postscript) — the two lattice models now disagree on a
+measurable, and at most one of them is the mechanic behind the MW boost.
 
 ## The law
 
@@ -131,14 +141,15 @@ Stated before anyone gets excited:
 
 | Claim | Status | Evidence |
 |---|---|---|
-| The shear-consumption law + continuity uniquely select v ∝ r^(−1/2) (GP) among steady radial flows, with free amplitude | untested | Closed-form ODE derivation (§ above); decisive on paper but uncataloged — awaits an orrery fixture per the house rule |
-| The GP sink s = (3/2)nv/r equals n(e_rr − e_θθ) at coefficient exactly 1, and equals the von Mises form for radial flows | untested | Algebraic identity (§ the law); same cataloging debt |
-| The law consumes nothing in homogeneous Hubble flow (cosmological silence) | untested | e^dev = 0 for **v** = H**r** — one-line check, uncataloged |
-| Global budget: Hubble generation inside R balances GP intake exactly at the turnaround radius R³ = 2GM/H² | conjecture — to verify | Arithmetic identity given the law; the comparison to measured turnaround scales needs the cosmology study note |
+| The shear-consumption law + continuity uniquely select v ∝ r^(−1/2) (GP) among steady radial flows, with free amplitude | supported | Closed-form ODE derivation (§ above), now cataloged with its dynamical confirmation: **ORB-10751** measures steady exponent −0.5000149713 ± 2.9×10⁻⁷ (regression SE), ± 1.6×10⁻⁵ combined across seeds/resolution/timestep — −1/2 within one combined error |
+| The GP sink s = (3/2)nv/r equals n(e_rr − e_θθ) at coefficient exactly 1, and equals the von Mises form for radial flows | supported | Algebraic identity (§ the law), exercised on-lattice: ORB-10751's frozen rule *is* the coefficient-one von Mises law and the GP profile emerges under it |
+| The law consumes nothing in homogeneous Hubble flow (cosmological silence) | supported | ORB-10751 silence gate: uniformly expanding lattice shows max consumption density 7.4×10⁻¹⁸ = 3.7×10⁻¹⁶ of n\|H\| — consistent with zero |
+| GP is a dynamical *attractor* under the law (arbitrary initial flows converge) | supported | ORB-10751 attractor gate: convergence from rest and from perturbed initial states; initial-condition exponent difference 1.2×10⁻⁶; resolution (128/256/512 shells) and timestep (dt 0.2/0.1/0.05) sequences both converge on −1/2 |
+| A core boundary condition selects the exterior amplitude A monotonically and stably | supported | ORB-10751 amplitude gate: exterior half-power amplitude rises strictly (2.4×10⁻⁴ → 2.6×10⁻²) across core flux 0.003–0.3; max initial-condition relative spread 9.6×10⁻⁷ |
+| A mass of energy E imposes specifically A = √(2GM) via its boundary condition | mixed | The *controllability* half is measured (row above); the *identification* half — why a mass of energy E sets that particular flux — remains underived. This is the surviving hard core of the source-law debt |
+| Two-source superposition under the shear law reproduces the measured headroom-screening family (ORB-10157) | mixed — measured divergence | ORB-10751 two-core probe (exploratory, coarse 25³ grid): best fit A(D) = 1/(1 + 6.82 D^0.668) at log-RMSE 0.031; the ORB-10157 family (1−D)^1.071 fits at log-RMSE 0.421 with substantially weaker screening. **The shear law and the counting mechanic disagree on superposition** — at most one matches whatever nature does. Needs a resolution-converged rerun before it carries weight |
+| Global budget: Hubble generation inside R balances GP intake exactly at the turnaround radius R³ = 2GM/H² | conjecture — to verify | Arithmetic identity given the law; the observational comparison is now filed as **ORB-10754** (tycho, ws_astrolabe): measured turnaround radii vs (2GM/H₀²)^(1/3), feeding [studies/cosmological-expansion-and-bound-systems](../studies/cosmological-expansion-and-bound-systems.md) |
 | "Shear consumes, isotropic strain doesn't" corresponds to GR's Weyl/Ricci split | conjecture | Resonance only; no derivation, no citation yet |
-| GP is a dynamical *attractor* under the law (arbitrary initial flows converge) | untested | **ORB-10751**'s primary gate (§ below) |
-| A mass of energy E imposes amplitude A = √(2GM) via its boundary condition | untested | Underived (debt 2); the falsifier probes whether an imposed core consumption rate selects A |
-| Two-source superposition under the shear law reproduces the measured headroom-screening family (ORB-10157) or something else | untested | Lattice question; no analytic claim made |
 
 ## Falsifier → faraday
 
@@ -156,6 +167,34 @@ no imposed profile — with predeclared gates:
    zero (the cosmological-silence check, on-lattice).
 4. **Superposition probe:** two cores; measure the modulation law and compare against the
    ORB-10157 headroom-screening family. Exploratory, not a kill gate.
+
+### Adjudication (ORB-10751, faraday, 2026-08-12) — all three kill gates passed
+
+Cataloged as [shear-consumption-lattice](../../orrery/lab/sims/shear-consumption-lattice/)
+(orrery `a8da4ec`; deterministic, byte-identical rerun verified, run-record SHA
+`294f74c8…`). Apparatus: radial finite-volume lattice, nearest-neighbour Fick transport,
+frozen coefficient-one von Mises destruction computed from neighbour flow differences,
+fixed-flux core, unit-density outer reservoir — **the velocity profile is measured, never
+imposed.** Verified at source against `summary.json`:
+
+1. **Attractor — passed.** p = −0.5000149713, regression SE 2.9×10⁻⁷, combined
+   seed/resolution/timestep error 1.6×10⁻⁵; the two initial conditions agree to 1.2×10⁻⁶;
+   128/256/512-shell and dt-halving sequences both approach −1/2 monotonically.
+2. **Amplitude — passed.** Exterior amplitude strictly monotonic in core flux across two
+   orders of magnitude (0.003 → 0.3), initial-condition spread < 10⁻⁶. The coupling *route*
+   is open; the √(2GM) identification remains underived (debt 2 stands, narrowed).
+3. **Silence — passed.** Uniform expansion consumes ≤ 3.7×10⁻¹⁶ of n|H| — zero at apparatus
+   precision.
+4. **Superposition probe — divergence measured** (exploratory; coarse 25³ grid, stated as
+   the run's strongest limitation). The two-core modulation is best fit by
+   A(D) = 1/(1 + 6.82 D^0.668) (log-RMSE 0.031); the ORB-10157 screening family fits poorly
+   (log-RMSE 0.421) and screens far less. Consequence if it survives resolution: the shear
+   law and the counting mechanic make **incompatible superposition predictions**, and the
+   shear law's stronger screening pushes the solar-system channel toward the *screened*
+   reading — the one ORB-10097/ORB-10098 found unconstrained (predicts ~0 AU-scale
+   deviation), not the multiplicative reading that carries the Uranus tension. A
+   resolution-converged two-core run is the natural follow-up before any reconciliation
+   with the ORB-10157 family is attempted.
 
 ## Related
 
