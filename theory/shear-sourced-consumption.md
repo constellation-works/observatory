@@ -99,10 +99,14 @@ killed previous candidates and is delivered here:
   picture. In an expanding universe, Hubble generation at 3H per unit volume supplies
   4πnHR³ inside R, and this balances the intake exactly where HR = √(2GM/R) — i.e. at
   R³ = 2GM/H², the **turnaround radius**, the physically correct boundary where infall
-  detaches from expansion (standard structure-formation turnaround scales agree at order
-  unity; `conjecture — to verify`, cosmology study note owed:
+  detaches from expansion. Masses eat what expansion makes, with no tuned cutoff.
+  **Measured (ORB-10754, 2026-08-12): order-unity yes, exact no** — against the
+  Karachentsev-program zero-velocity radii with *independent* (orbital/virial) masses,
+  R_meas/R_sc ≈ 0.55 median (0.43–0.83); the data track the ΛCDM zero-velocity formula
+  (ratio ≈ 1.0), whose O(1) matter/Λ factors this law's pure-Hubble idealization drops.
+  Details and the circularity discipline in
   [studies/cosmological-expansion-and-bound-systems](../studies/cosmological-expansion-and-bound-systems.md)
-  is the natural carrier). Masses eat what expansion makes, with no tuned cutoff.
+  § measured turnaround radii.
 - **All consumption is distributed; the mass itself eats nothing.** The inward flux
   4πr²nv ∝ r^(3/2) → 0 at the center: the law needs no point sink at the matter, so it
   evades ORB-10162's specific failure (central-only consumption gives the refuted
@@ -148,7 +152,7 @@ Stated before anyone gets excited:
 | A core boundary condition selects the exterior amplitude A monotonically and stably | supported | ORB-10751 amplitude gate: exterior half-power amplitude rises strictly (2.4×10⁻⁴ → 2.6×10⁻²) across core flux 0.003–0.3; max initial-condition relative spread 9.6×10⁻⁷ |
 | A mass of energy E imposes specifically A = √(2GM) via its boundary condition | mixed | The *controllability* half is measured (row above); the *identification* half — why a mass of energy E sets that particular flux — remains underived. This is the surviving hard core of the source-law debt |
 | Two-source superposition under the shear law reproduces the measured headroom-screening family (ORB-10157) | mixed — measured divergence | ORB-10751 two-core probe (exploratory, coarse 25³ grid): best fit A(D) = 1/(1 + 6.82 D^0.668) at log-RMSE 0.031; the ORB-10157 family (1−D)^1.071 fits at log-RMSE 0.421 with substantially weaker screening. **The shear law and the counting mechanic disagree on superposition** — at most one matches whatever nature does. Needs a resolution-converged rerun before it carries weight |
-| Global budget: Hubble generation inside R balances GP intake exactly at the turnaround radius R³ = 2GM/H² | conjecture — to verify | Arithmetic identity given the law; the observational comparison is now filed as **ORB-10754** (tycho, ws_astrolabe): measured turnaround radii vs (2GM/H₀²)^(1/3), feeding [studies/cosmological-expansion-and-bound-systems](../studies/cosmological-expansion-and-bound-systems.md) |
+| Global budget: Hubble generation inside R balances GP intake exactly at the turnaround radius R³ = 2GM/H² | mixed | **ORB-10754** (tycho, 11 systems, Karachentsev program + Virgo/Fornax): with independent masses, measured turnaround radii sit at 0.43–0.83× (median ≈ 0.55) the budget radius — right scale, wrong coefficient. Data track the ΛCDM zero-velocity formula (≈ 1.0), whose matter/Λ factors the pure-Hubble idealization here drops. Circular R₀-derived masses excluded per the compilation's own flags ([study note](../studies/cosmological-expansion-and-bound-systems.md)) |
 | "Shear consumes, isotropic strain doesn't" corresponds to GR's Weyl/Ricci split | conjecture | Resonance only; no derivation, no citation yet |
 
 ## Falsifier → faraday

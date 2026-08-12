@@ -17,7 +17,8 @@ two-substance-vortex-vacuum (2026-07-12), retarded-scarcity-wake (2026-08-08),
 moving-source-field-consistency (2026-08-08), shear-sourced-consumption (2026-08-12),
 vortex-electron (2026-07-09), swirl-photon (2026-07-09), plus
 [studies/gaia-wide-binaries-low-acceleration](studies/gaia-wide-binaries-low-acceleration.md)
-(2026-08-12).
+and [studies/cosmological-expansion-and-bound-systems](studies/cosmological-expansion-and-bound-systems.md)
+(both 2026-08-12).
 
 ## Theory families at a glance
 
@@ -73,6 +74,7 @@ Evidence cuts both ways — the source row says exactly how.
 | two-substance | Branch A β identification: a kpc Yukawa reproduces the fitted boost shape | ORB-10167: **shape-degenerate** on the MW band (bootstrap ΔAIC spans zero) — the band never identified the boost's functional form. Moot for the dead branch; a live caveat on the parent's one empirical success |
 | shear-consumption | A mass of energy E imposes specifically A = √(2GM) via its boundary condition | Controllability measured (ORB-10751 amplitude gate); the *identification* — why energy E sets that flux — remains underived. The surviving hard core of the source-law debt |
 | shear-consumption | Two-source superposition reproduces the ORB-10157 headroom-screening family | **Measured divergence** (ORB-10751 two-core probe, exploratory, coarse 25³ grid): best fit A(D) = 1/(1+6.82 D^0.668) at log-RMSE 0.031 vs the ORB-10157 family at 0.421 — much stronger screening. The two lattice models disagree; needs a resolution-converged rerun before reconciliation |
+| shear-consumption | The global budget closes exactly at the turnaround radius R³ = 2GM/H² | **ORB-10754** measured: order-unity yes, exact no — with independent masses, turnaround radii sit at median ≈ 0.55× (0.43–0.83) the budget radius; data track the ΛCDM zero-velocity formula whose matter/Λ factors the pure-Hubble idealization drops ([studies/cosmological-expansion-and-bound-systems](studies/cosmological-expansion-and-bound-systems.md)) |
 
 ## Supported
 
@@ -130,7 +132,6 @@ Not yet backed by anything; `— to verify` rows await a sourced study note.
 | Family | Claim | Note |
 |---|---|---|
 | two-substance | The proton as a confined composite of sub-integer vortices | Babaev-confinement precedent exists; why one polarity confines in triples is underived; no quantitative QCD correspondence claimed |
-| shear-consumption | Hubble generation inside R feeds a mass's GP intake exactly at the turnaround radius (— to verify) | Arithmetic identity given the law; the observational comparison is filed as **ORB-10754** (tycho, ws_astrolabe): measured turnaround radii vs (2GM/H₀²)^(1/3) |
 | shear-consumption | "Shear consumes, isotropic strain doesn't" ↔ GR's Weyl/Ricci split | Resonance only; nothing derived, no citation |
 | retarded-wake | A physical gravitational substrate with a meaningful velocity field **U** exists | No source law, equation, or evidence; O(1) preferred-frame coupling already bounded |
 | retarded-wake | A boost-invariant causal field cancels the first-order dipole (— to verify) | Established in EM (Heaviside) and GR (Carlip 2000); the moving-source study note is owed |

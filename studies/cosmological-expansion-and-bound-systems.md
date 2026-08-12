@@ -2,7 +2,7 @@
 title: "Cosmological expansion and bound systems — where expansion reaches, and where it does not"
 status: active
 created: 2026-08-08
-updated: 2026-08-08
+updated: 2026-08-12
 ---
 
 # Cosmological expansion and bound systems
@@ -296,7 +296,40 @@ used to constrain the dark-energy equation of state and modified gravity. Note t
 matters for this corpus: a galaxy's visible disk is ~30 kpc and its turnaround radius is ~1 Mpc —
 a factor of ~30 in radius, ~10⁴ in the acceleration ratio.
 
-## The solar-system bound
+## Measured turnaround radii — the ORB-10754 compilation (2026-08-12)
+
+The observational side, compiled by tycho (ORB-10754, ws_astrolabe; apparatus and dataset
+`catalog/turnaround_radii` in astrolabe, 11 systems; full table and bibliography in the task
+record). Sources: the Karachentsev velocity-flow program (Local Group, M81, CenA, M83,
+IC342/Maffei, NGC253/Sculptor, NGC4736/CVn zero-velocity radii, 2002–2018), Virgo
+(Karachentsev et al. 2014, ApJ 782, 4), Fornax–Eridanus (Nasonova et al. 2011, A&A 532,
+A104), against two predictions: the shear-consumption budget radius
+\(R_{\rm sc}=(2GM/H_0^{2})^{1/3}\)
+([theory/shear-sourced-consumption](../theory/shear-sourced-consumption.md)) and the standard
+ΛCDM zero-velocity relation.
+
+**The circularity lesson comes first.** Nearly every published \(R_0\to M\) conversion in
+this literature derives the mass *from* the measured radius via the ΛCDM \(R_0\)–\(M\)
+relation. Comparing measured \(R_0\) against \(R_{\rm sc}(M_{R_0})\) then returns a
+near-constant ratio (~0.65–0.73) fixed by the identity between the two formulas — bookkeeping,
+not evidence. The honest comparison uses the independent (orbital/virial) mass columns, which
+exist for 10 of 11 systems.
+
+**Result (independent masses, H₀ = 70):** measured turnaround radii run systematically
+*below* the budget radius — \(R_{\rm ta}/R_{\rm sc}\) median ≈ 0.55, range 0.43–0.83 — while
+tracking the ΛCDM zero-velocity prediction at ratio ≈ 1.0 and sitting at ~0.7–0.8 of the
+Pavlidou–Tomaras maximum, safely inside the bound. \(H_0\) 67→73 moves predictions by ~5.5%
+(\(\propto H_0^{-2/3}\)) — nowhere near the factor ~2. Caveats carried from the compilation:
+unrelaxed systems (Sculptor filament, CVn cloud) have unreliable \(R_0\) masses; IC342/Maffei
+and M83 are coarser.
+
+**Verdict for the shear-consumption budget check: order-unity yes, exact no.** The naive
+balance radius \((2GM/H_0^2)^{1/3}\) — derived in a pure-Hubble, matter- and Λ-free picture —
+overpredicts measured turnaround by ~1.5–2×, exactly the kind of O(1) factor the idealization
+drops (real expansion decelerates inside overdensities and feels Λ; the ΛCDM zero-velocity
+formula that carries those factors fits at ~1.0). The shear doc's ledger row moves from
+`conjecture — to verify` to **mixed**: the budget closes at the right *scale*, and the naive
+coefficient is measured wrong in a direction the idealization predicts.
 
 If bound orbits followed the Hubble flow at \(\dot r=H_0 r\):
 
