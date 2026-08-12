@@ -151,7 +151,7 @@ Stated before anyone gets excited:
 | GP is a dynamical *attractor* under the law (arbitrary initial flows converge) | supported | ORB-10751 attractor gate: convergence from rest and from perturbed initial states; initial-condition exponent difference 1.2×10⁻⁶; resolution (128/256/512 shells) and timestep (dt 0.2/0.1/0.05) sequences both converge on −1/2 |
 | A core boundary condition selects the exterior amplitude A monotonically and stably | supported | ORB-10751 amplitude gate: exterior half-power amplitude rises strictly (2.4×10⁻⁴ → 2.6×10⁻²) across core flux 0.003–0.3; max initial-condition relative spread 9.6×10⁻⁷ |
 | A mass of energy E imposes specifically A = √(2GM) via its boundary condition | mixed | The *controllability* half is measured (row above); the *identification* half — why a mass of energy E sets that particular flux — remains underived. This is the surviving hard core of the source-law debt |
-| Two-source superposition under the shear law reproduces the measured headroom-screening family (ORB-10157) | mixed — measured divergence | ORB-10751 two-core probe (exploratory, coarse 25³ grid): best fit A(D) = 1/(1 + 6.82 D^0.668) at log-RMSE 0.031; the ORB-10157 family (1−D)^1.071 fits at log-RMSE 0.421 with substantially weaker screening. **The shear law and the counting mechanic disagree on superposition** — at most one matches whatever nature does. Needs a resolution-converged rerun before it carries weight |
+| Two-source superposition under the shear law reproduces the measured headroom-screening family (ORB-10157) | mixed — measured divergence | ORB-10751 two-core probe (exploratory, coarse 25³ grid): best fit A(D) = 1/(1 + 6.82 D^0.668) at log-RMSE 0.031; the ORB-10157 family (1−D)^1.071 fits at log-RMSE 0.421 with substantially weaker screening. **The shear law and the counting mechanic disagree on superposition** — at most one matches whatever nature does. Resolution-converged adjudication filed as **ORB-10755** |
 | Global budget: Hubble generation inside R balances GP intake exactly at the turnaround radius R³ = 2GM/H² | mixed | **ORB-10754** (tycho, 11 systems, Karachentsev program + Virgo/Fornax): with independent masses, measured turnaround radii sit at 0.43–0.83× (median ≈ 0.55) the budget radius — right scale, wrong coefficient. Data track the ΛCDM zero-velocity formula (≈ 1.0), whose matter/Λ factors the pure-Hubble idealization here drops. Circular R₀-derived masses excluded per the compilation's own flags ([study note](../studies/cosmological-expansion-and-bound-systems.md)) |
 | "Shear consumes, isotropic strain doesn't" corresponds to GR's Weyl/Ricci split | conjecture | Resonance only; no derivation, no citation yet |
 
@@ -196,9 +196,10 @@ imposed.** Verified at source against `summary.json`:
    law and the counting mechanic make **incompatible superposition predictions**, and the
    shear law's stronger screening pushes the solar-system channel toward the *screened*
    reading — the one ORB-10097/ORB-10098 found unconstrained (predicts ~0 AU-scale
-   deviation), not the multiplicative reading that carries the Uranus tension. A
-   resolution-converged two-core run is the natural follow-up before any reconciliation
-   with the ORB-10157 family is attempted.
+   deviation), not the multiplicative reading that carries the Uranus tension. The
+   resolution-converged adjudication is filed as **ORB-10755** (faraday, ws_orrery, high):
+   ≥3-rung resolution ladder, deeper-depletion range, separation control — converged
+   family or artifact-verdict, predeclared.
 
 ## Related
 
