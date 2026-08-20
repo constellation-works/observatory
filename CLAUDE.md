@@ -4,7 +4,7 @@ summary: "Operating rules and structural conventions for the Parallax research p
 tags: [parallax, repository-guide, research-conventions]
 related: ["README.md", "docs/ARCHITECTURE.md", "docs/research/README.md"]
 created_on: 2026-07-31
-updated_on: 2026-08-03
+updated_on: 2026-08-19
 status: active
 ---
 
@@ -77,6 +77,11 @@ boundary.
   alternatives, and rejection criteria. Its `hypothesis_id` must match the filename.
 - An experiment tests exactly one primary hypothesis. Its `experiment_id` and `hypothesis_id` must
   match an existing local record, and `related` must link that hypothesis document.
+- Sequence is hypothesis → notebook → experiment. Implement methodology at
+  `notebooks/RNN-title/ENN-<title>.ipynb` or `.py` after freezing `HNN` and before writing `ENN`.
+  The experiment's **Command or notebook** field must name that file. Do not fill results from an
+  uncommitted ad hoc session. Agent procedure:
+  `.agents/skills/hypothesis-notebook-experiment/SKILL.md`.
 - Freeze the experiment's methodology before opening final evaluation data. Append results,
   deviations, and one outcome—`reject`, `revise`, `advance`, or `inconclusive`—without rewriting the
   preregistration.

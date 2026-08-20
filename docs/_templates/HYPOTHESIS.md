@@ -4,7 +4,7 @@ summary: "Template for a durable, falsifiable hypothesis within a numbered resea
 tags: [parallax, hypothesis, template]
 related: ["docs/research/README.md", "docs/RESEARCH_PROTOCOL.md", "docs/_templates/EXPERIMENT.md"]
 created_on: 2026-08-03
-updated_on: 2026-08-03
+updated_on: 2026-08-19
 status: draft
 research_id: RNN
 domain: domain-title
@@ -45,8 +45,9 @@ Define the evidence that would reject or materially weaken the claim before crea
 
 ## Experiment queue
 
-Link each `E<NN>-<title>.md` record created to test this hypothesis. A hypothesis may have multiple
-experiments, but each experiment names exactly one primary hypothesis.
+Link each `E<NN>-<title>.md` record created to test this hypothesis, and the matching
+`notebooks/RNN-title/ENN-<title>` methodology. A hypothesis may have multiple experiments, but each
+experiment names exactly one primary hypothesis.
 
 ## Decision history
 

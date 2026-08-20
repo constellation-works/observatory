@@ -2,9 +2,9 @@
 title: "H03 Clock-Phase Conditioning"
 summary: "Tests whether participant timing changes the response of Bitcoin prices to book pressure."
 tags: [parallax, crypto, clock-phase, market-sessions]
-related: ["docs/research/R01-crypto/hypothesis/H02-active-fluid-microstructure-features.md", "docs/research/R01-crypto/RESEARCH_AGENDA.md", "docs/research/R01-crypto/MICROSTRUCTURE.md"]
+related: ["docs/research/R01-crypto/hypothesis/H02-active-fluid-microstructure-features.md", "docs/research/R01-crypto/hypothesis/H08-day-trader-night-flattening.md", "docs/research/R01-crypto/RESEARCH_AGENDA.md", "docs/research/R01-crypto/MICROSTRUCTURE.md"]
 created_on: 2026-08-03
-updated_on: 2026-08-03
+updated_on: 2026-08-19
 status: active
 research_id: R01
 domain: crypto

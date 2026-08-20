@@ -4,7 +4,7 @@ summary: "Point-in-time ingestion, normalization, partitioning, and immutability
 tags: [parallax, crypto, market-data, data-contract]
 related: ["docs/research/R01-crypto/README.md", "docs/research/R01-crypto/PROTOCOL.md"]
 created_on: 2026-07-31
-updated_on: 2026-08-03
+updated_on: 2026-08-19
 status: active
 research_id: R01
 domain: crypto
@@ -30,6 +30,12 @@ derived table lives in `processed/` with its inputs and transformation revision 
 Coinbase documents that historical rates can be incomplete and omits intervals with no ticks.
 Missing buckets therefore remain missing in raw data. Any later fill policy belongs in a versioned
 processed dataset, never the raw layer.
+
+External versioned tapes (including local Kaggle snapshots) used by an experiment are cited in that
+experiment's data contract: handle, numeric version, file path, SHA-256, retrieval time, license,
+and information cutoff. They are not imported into `data/R01-crypto/raw/` unless an immutable R01
+snapshot is created. Do not treat a Kaggle mirror as a substitute for the Binance and Coinbase
+contracts above.
 
 ## Backfill
 

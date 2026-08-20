@@ -4,7 +4,7 @@ summary: "The numbered research, notebook, domain-package, and common-infrastruc
 tags: [parallax, architecture, research-conventions]
 related: ["CLAUDE.md", "docs/research/README.md", "docs/RESEARCH_PROTOCOL.md"]
 created_on: 2026-08-03
-updated_on: 2026-08-03
+updated_on: 2026-08-19
 status: active
 ---
 
@@ -82,8 +82,8 @@ component:
    boundaries under the data directory.
 5. Create `src/parallax/<title>/`, translating hyphens to underscores for Python.
 6. Add the program to `docs/research/README.md` and connect all Markdown through `related`.
-7. Create the first `HNN-title.md`, then preregister its first `ENN-title.md` experiment before
-   opening final evaluation data.
+7. Create the first `HNN-title.md`, implement `notebooks/RNN-title/ENN-title` methodology, then
+   write `ENN-title.md` from that run. Preregister before opening final evaluation data.
 
 Repository tests enforce the docs/notebooks/data mirror, source-package mapping, record and data
 directories, file and frontmatter identities, hypothesis links, required experiment sections, and

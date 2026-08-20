@@ -4,7 +4,7 @@ summary: "Program-wide motivation, comparison ladder, and sequence for the regis
 tags: [parallax, crypto, research-agenda, hypotheses]
 related: ["docs/research/R01-crypto/README.md", "docs/research/R01-crypto/hypothesis/README.md", "docs/research/R01-crypto/PROTOCOL.md"]
 created_on: 2026-08-01
-updated_on: 2026-08-03
+updated_on: 2026-08-19
 status: active
 research_id: R01
 domain: crypto
@@ -73,6 +73,7 @@ E[future BTC mid return]
 | [H05](hypothesis/H05-equity-high-bitcoin-catch-up.md) | When equities are near highs and BTC is abnormally quiet or weak, continuing risk appetite sometimes produces BTC catch-up. | Momentum and unconditional BTC returns | Underperformance persists, or effect disappears when confirmation and risk-off states are separated. |
 | [H06](hypothesis/H06-speculative-influx-weekend-flow.md) | A latent influx of speculative investors changes weekend BTC flow when institutional liquidity recedes. | Weekend/time-of-week seasonality alone | Only relative retail share rises, absolute speculative activity does not, or the state predicts neither direction nor volatility. |
 | [H07](hypothesis/H07-multiscale-conditioning.md) | Daily macro and speculative states improve the microstructure model by changing its pressure-response coefficients. | Best H02/H03 model | Mixed-frequency conditioning adds no stable out-of-sample value. |
+| [H08](hypothesis/H08-day-trader-night-flattening.md) | US night hours (21:00–00:00 Pacific, with an Eastern copy) have more negative Bitcoin hourly drift because day traders flatten to lock in P&L. | Complementary-hour mean; buy-and-hold | Pacific night mean is not below complementary hours; or an apparent leak is weekend-equal, crash-hour-only, or unexplained by later flow/inventory evidence. |
 
 H01 is prior art and a required control, not the proposed edge. The primary research question begins
 at H02.
@@ -182,6 +183,11 @@ and scheduled macro releases remain separate states until evidence supports comb
 
 The likely value is improved calibration and regime recognition, not a rule such as “buy every
 Tuesday at 15:00.”
+
+H08 is a different clock claim: a signed night-session drift from day-trader flattening, not a
+session-normalized pressure response. Exploratory [E01](experiments/E01-bitstamp-us-night-hourly-drift.md)
+revised the frozen Pacific 21:00–00:00 window. A restated Eastern-evening clock, if pursued, is a
+new hypothesis and needs a preregistered test on unseen data.
 
 ## H04: daily macro weather
 

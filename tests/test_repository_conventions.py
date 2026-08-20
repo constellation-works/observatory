@@ -200,6 +200,27 @@ def test_hypothesis_and_experiment_records_follow_their_contracts() -> None:
             )
             assert {"## Methodology", "## Results", "## Outcome"} <= _headings(path)
 
+            notebook_dir = ROOT / "notebooks" / research_root.name
+            methodologies = [
+                candidate
+                for candidate in notebook_dir.iterdir()
+                if candidate.is_file()
+                and candidate.suffix in {".ipynb", ".py"}
+                and candidate.name.startswith(f"{experiment_id}-")
+            ]
+            assert methodologies, (
+                f"{path.relative_to(ROOT)} has no methodology at "
+                f"notebooks/{research_root.name}/{experiment_id}-*.ipynb or .py"
+            )
+            body = path.read_text()
+            assert any(
+                methodology.relative_to(ROOT).as_posix() in body or methodology.name in body
+                for methodology in methodologies
+            ), (
+                f"{path.relative_to(ROOT)} must name its "
+                f"notebooks/{research_root.name}/{experiment_id}-* methodology"
+            )
+
 
 def test_idea_and_session_records_follow_their_contracts() -> None:
     for path in sorted((ROOT / "docs" / "ideas").glob("*.md")):

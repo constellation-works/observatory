@@ -4,7 +4,7 @@ summary: "The domain-neutral evidence contract shared by every numbered Parallax
 tags: [parallax, research, preregistration, reproducibility]
 related: ["docs/ARCHITECTURE.md", "docs/research/README.md"]
 created_on: 2026-07-31
-updated_on: 2026-08-03
+updated_on: 2026-08-19
 status: active
 ---
 
@@ -21,11 +21,13 @@ may add stricter requirements but cannot weaken this common contract.
 
 1. Form one falsifiable claim in `hypothesis/H<NN>-<title>.md` using the generic hypothesis
    template. Freeze its baseline, alternatives, and rejection criteria.
-2. Create `experiments/E<NN>-<title>.md` for one test of that primary hypothesis. Link the hypothesis
-   in `related` and in `hypothesis_id`.
-3. Freeze the methodology before opening final evaluation data.
-4. Append results, protocol deviations, and an outcome without editing the frozen question or plan.
-5. Update both registries. A revision or unexpected finding receives a new hypothesis identity.
+2. Implement the methodology in `notebooks/RNN-title/ENN-<title>.ipynb` or `.py`, named with the
+   experiment id. Run it. This file is the method; the experiment record quotes it.
+3. Create `experiments/E<NN>-<title>.md` for one test of that primary hypothesis. Link the hypothesis
+   in `related` and in `hypothesis_id`. Set **Command or notebook** to the methodology path.
+4. Freeze the methodology before opening final evaluation data.
+5. Append results, protocol deviations, and an outcome without editing the frozen question or plan.
+6. Update both registries. A revision or unexpected finding receives a new hypothesis identity.
 
 Hypothesis and experiment counters are independent, zero-padded, scoped to an `RNN` program, and
 never recycled. One hypothesis can motivate many experiments; one experiment has exactly one

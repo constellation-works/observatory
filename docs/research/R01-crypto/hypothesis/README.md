@@ -4,7 +4,7 @@ summary: "Canonical registry of durable, falsifiable hypotheses in the crypto re
 tags: [parallax, crypto, hypotheses, research-registry]
 related: ["docs/research/R01-crypto/README.md", "docs/research/R01-crypto/experiments/README.md", "docs/_templates/HYPOTHESIS.md"]
 created_on: 2026-08-03
-updated_on: 2026-08-03
+updated_on: 2026-08-19
 status: active
 research_id: R01
 domain: crypto
@@ -25,6 +25,7 @@ baseline, and rejection criteria before designing a confirmatory experiment.
 | H05 | [Equity-high Bitcoin catch-up](H05-equity-high-bitcoin-catch-up.md) | untested |
 | H06 | [Speculative influx and weekend flow](H06-speculative-influx-weekend-flow.md) | untested |
 | H07 | [Multiscale conditioning](H07-multiscale-conditioning.md) | untested |
+| H08 | [Day-trader night flattening](H08-day-trader-night-flattening.md) | revised |
 
 The broader motivation and experiment sequence remain in
 [`RESEARCH_AGENDA.md`](../RESEARCH_AGENDA.md). Each row above is the source of truth for the frozen

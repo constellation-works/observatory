@@ -4,7 +4,7 @@ summary: "Template for the charter and evidence contract of a numbered research 
 tags: [parallax, research, template]
 related: ["docs/research/README.md", "docs/_templates/HYPOTHESIS.md", "docs/_templates/EXPERIMENT.md"]
 created_on: 2026-08-03
-updated_on: 2026-08-03
+updated_on: 2026-08-19
 status: active
 ---
 
@@ -36,5 +36,7 @@ What privacy, consent, security, financial, medical, legal, or social risks appl
 
 ## First question
 
-Write it as `hypothesis/H<NN>-<title>.md`, then preregister its first
-`experiments/E<NN>-<title>.md` test before opening final evaluation data.
+Write it as `hypothesis/H<NN>-<title>.md`, implement the methodology under
+`notebooks/RNN-title/ENN-<title>.ipynb` or `.py`, then write
+`experiments/E<NN>-<title>.md` from that run before treating the result as
+preregistered.

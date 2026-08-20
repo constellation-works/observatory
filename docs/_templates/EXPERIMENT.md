@@ -4,7 +4,7 @@ summary: "Template for preregistering methodology and preserving results and out
 tags: [parallax, experiment, template]
 related: ["docs/research/README.md", "docs/RESEARCH_PROTOCOL.md", "docs/_templates/HYPOTHESIS.md"]
 created_on: 2026-08-03
-updated_on: 2026-08-03
+updated_on: 2026-08-19
 status: draft
 research_id: RNN
 domain: domain-title
@@ -67,7 +67,8 @@ the affected analysis exploratory and requires a new experiment for confirmation
 - **Code revision:**
 - **Environment or lockfile:**
 - **Random seeds:**
-- **Command or notebook:**
+- **Command or notebook:** `notebooks/RNN-title/ENN-title.ipynb` or `.py` (required; run it and
+  quote its labeled outputs)
 - **Artifacts:**
 
 ## Results
