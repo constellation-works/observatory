@@ -4,7 +4,7 @@ summary: "Program-wide motivation, comparison ladder, and sequence for the regis
 tags: [parallax, crypto, research-agenda, hypotheses]
 related: ["docs/research/R01-crypto/README.md", "docs/research/R01-crypto/hypothesis/README.md", "docs/research/R01-crypto/PROTOCOL.md"]
 created_on: 2026-08-01
-updated_on: 2026-08-19
+updated_on: 2026-08-20
 status: active
 research_id: R01
 domain: crypto
@@ -36,6 +36,12 @@ reliably tell us when we do **not** have an edge.
 
 The main adversary is hindsight. Every experiment must preserve its hypothesis, variables, lags,
 horizons, cost assumptions, and rejection criterion before its test interval is examined.
+
+A second adversary is the market itself. A public signed pattern that is larger than cost is what
+other participants delete. [H10](hypothesis/H10-signed-predictor-lift-decays.md) is the prior that
+such lift does not persist as a standing rule; the durable output is the lifetime of that lift, and
+an honest “no edge” after lag and cost. H01–H07 still get tests; they report decay and
+walk-forward death, not a mascot clock.
 
 ## One system at two timescales
 
@@ -74,9 +80,12 @@ E[future BTC mid return]
 | [H06](hypothesis/H06-speculative-influx-weekend-flow.md) | A latent influx of speculative investors changes weekend BTC flow when institutional liquidity recedes. | Weekend/time-of-week seasonality alone | Only relative retail share rises, absolute speculative activity does not, or the state predicts neither direction nor volatility. |
 | [H07](hypothesis/H07-multiscale-conditioning.md) | Daily macro and speculative states improve the microstructure model by changing its pressure-response coefficients. | Best H02/H03 model | Mixed-frequency conditioning adds no stable out-of-sample value. |
 | [H08](hypothesis/H08-day-trader-night-flattening.md) | US night hours (21:00–00:00 Pacific, with an Eastern copy) have more negative Bitcoin hourly drift because day traders flatten to lock in P&L. | Complementary-hour mean; buy-and-hold | Pacific night mean is not below complementary hours; or an apparent leak is weekend-equal, crash-hour-only, or unexplained by later flow/inventory evidence. |
+| [H09](hypothesis/H09-whale-weak-window-early-polymarket-lean.md) | A whale targeting weak windows shows up as an early same-direction lean in Polymarket BTC 5-minute Up/Down books toward the eventual winner. | Uninformed 0.5 mid at the same elapsed second | Early outcome-signed mid is not above 0 and agreement is not above 50%; or any lean is only already-decided opens / a mechanical copy of contemporaneous BTC. |
+| [H10](hypothesis/H10-signed-predictor-lift-decays.md) | A public signed Bitcoin predictor that lifts in a discovery window does not persist as a walk-forward rule after execution lag and cost; report lifetime, not an entry. | Frozen discovery-window rule continued into later blocks | Walk-forward net lift stays above the cost screen across two later non-overlapping regimes. |
 
 H01 is prior art and a required control, not the proposed edge. The primary research question begins
-at H02.
+at H02. H08 and H09 are archived (`revised`); they are not in the live queue. H10 is the
+non-persistence prior on how surviving tests are reported.
 
 ## H01–H02: order-book physics
 

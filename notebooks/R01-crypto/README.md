@@ -2,9 +2,9 @@
 title: "R01 Crypto Notebooks"
 summary: "Exploratory notebooks and disposable analyses for the R01 crypto research program."
 tags: [parallax, crypto, notebooks, exploration]
-related: ["docs/research/R01-crypto/README.md", "docs/research/R01-crypto/RESEARCH_AGENDA.md", "docs/research/R01-crypto/experiments/E01-bitstamp-us-night-hourly-drift.md"]
+related: ["docs/research/R01-crypto/README.md", "docs/research/R01-crypto/RESEARCH_AGENDA.md", "docs/research/R01-crypto/experiments/E01-bitstamp-us-night-hourly-drift.md", "docs/research/R01-crypto/experiments/E02-btc-5m-early-polymarket-lean.md"]
 created_on: 2026-08-03
-updated_on: 2026-08-19
+updated_on: 2026-08-20
 status: active
 research_id: R01
 domain: crypto
@@ -22,3 +22,4 @@ artifact paths. Reusable logic and every implementation supporting a durable cla
 | Experiment | Methodology |
 |---|---|
 | [E01](../../docs/research/R01-crypto/experiments/E01-bitstamp-us-night-hourly-drift.md) | [E01-bitstamp-us-night-hourly-drift.py](E01-bitstamp-us-night-hourly-drift.py) / [E01-bitstamp-us-night-hourly-drift.ipynb](E01-bitstamp-us-night-hourly-drift.ipynb) |
+| [E02](../../docs/research/R01-crypto/experiments/E02-btc-5m-early-polymarket-lean.md) | [E02-btc-5m-early-polymarket-lean.py](E02-btc-5m-early-polymarket-lean.py) / [E02-btc-5m-early-polymarket-lean.ipynb](E02-btc-5m-early-polymarket-lean.ipynb) |

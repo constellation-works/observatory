@@ -4,7 +4,7 @@ summary: "Registry for preregistered crypto experiments and their preserved outc
 tags: [parallax, crypto, experiments, research-registry]
 related: ["docs/research/R01-crypto/hypothesis/README.md", "docs/research/R01-crypto/PROTOCOL.md", "docs/_templates/EXPERIMENT.md"]
 created_on: 2026-08-03
-updated_on: 2026-08-19
+updated_on: 2026-08-20
 status: active
 research_id: R01
 domain: crypto
@@ -19,6 +19,7 @@ frontmatter and `related`, and freezes its methodology before final evaluation.
 | ID | Experiment | Hypothesis | Methodology | Preregistered | Outcome |
 |---|---|---|---|---|---|
 | E01 | [Bitstamp US night hourly drift](E01-bitstamp-us-night-hourly-drift.md) | [H08](../hypothesis/H08-day-trader-night-flattening.md) | [script](../../../../notebooks/R01-crypto/E01-bitstamp-us-night-hourly-drift.py) | false | revised |
+| E02 | [BTC 5-minute early Polymarket lean](E02-btc-5m-early-polymarket-lean.md) | [H09](../hypothesis/H09-whale-weak-window-early-polymarket-lean.md) | [script](../../../../notebooks/R01-crypto/E02-btc-5m-early-polymarket-lean.py) | true | revised |
 
 Retain every experiment after rejection, invalidation, revision, or an inconclusive result. A
 `preregistered: false` record cannot `advance` its hypothesis.

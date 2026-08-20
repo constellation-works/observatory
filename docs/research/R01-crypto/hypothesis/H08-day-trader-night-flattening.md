@@ -4,8 +4,8 @@ summary: "Tests whether US night hours have more negative Bitcoin hourly drift b
 tags: [parallax, crypto, clock-phase, day-traders, night-session]
 related: ["docs/research/R01-crypto/hypothesis/H03-clock-phase-conditioning.md", "docs/research/R01-crypto/hypothesis/H06-speculative-influx-weekend-flow.md", "docs/research/R01-crypto/experiments/E01-bitstamp-us-night-hourly-drift.md", "docs/research/R01-crypto/RESEARCH_AGENDA.md"]
 created_on: 2026-08-19
-updated_on: 2026-08-19
-status: active
+updated_on: 2026-08-20
+status: archived
 research_id: R01
 domain: crypto
 hypothesis_id: H08
@@ -89,3 +89,5 @@ inventory evidence shows no net selling by short-horizon US-session traders.
   The Eastern copy is directionally negative and stronger on weekdays, but not distinguishable at
   conventional significance, and it cannot identify day traders. A restated clock belongs in a new
   hypothesis and a preregistered experiment on unseen data.
+- 2026-08-20 — archived. No restated night-clock hypothesis will be opened from this line; later
+  work starts elsewhere.
