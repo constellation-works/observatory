@@ -1,0 +1,32 @@
+{
+  "$comment": "Documentation for gates/<id>.json. Enforced by scripts/check-theory.py.",
+  "type": "object",
+  "required": [
+    "id",
+    "doc",
+    "family",
+    "kind",
+    "owed_object",
+    "inherited_postulates",
+    "new_postulates",
+    "control",
+    "kill",
+    "forbidden_reopens",
+    "comparator"
+  ],
+  "properties": {
+    "id": { "type": "string" },
+    "doc": { "type": "string", "description": "theory/<doc>.md stem this front lives on" },
+    "family": { "type": "string" },
+    "kind": { "enum": ["existence", "control", "derivation", "phenomenology"] },
+    "owed_object": { "type": "string" },
+    "inherited_postulates": { "type": "array", "items": { "type": "string" } },
+    "new_postulates": { "type": "array", "items": { "type": "string" } },
+    "control": { "type": "string" },
+    "kill": { "type": "string" },
+    "forbidden_reopens": { "type": "array", "items": { "type": "string" } },
+    "blocked_phenomenology": { "type": "array", "items": { "type": "string" } },
+    "comparator": { "type": "string" },
+    "claims": { "type": "array", "items": { "type": "string" } }
+  }
+}

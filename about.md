@@ -1,7 +1,7 @@
 ---
 codebase: principia
 owner: daniel
-summary: The constellation's theory corpus — our own physics theories plus the sourced notes on the established physics they must respect. Prose only; experiments live in the sibling orrery repo.
+summary: The constellation's theory corpus — our own physics theories plus the sourced notes on the established physics they must respect. Prose plus a machine-checked claim registry; experiments live in the sibling orrery repo.
 status: active
 stack: Markdown (prose)
 gate: direct

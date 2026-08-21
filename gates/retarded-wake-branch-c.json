@@ -1,0 +1,23 @@
+{
+  "id": "retarded-wake-branch-c",
+  "doc": "moving-source-field-consistency",
+  "family": "retarded-scarcity-wake",
+  "kind": "derivation",
+  "owed_object": "An explicit boost-violating substrate equation with a map from breaking parameters to observables — or close Branch C.",
+  "inherited_postulates": [],
+  "new_postulates": [],
+  "control": "Boost-invariant causal field (Heaviside / Carlip): uniform motion cancels the first-order dipole.",
+  "kill": "No equation, or the equation is already bounded by Cherenkov / resonator / Cassini walls once couplings are specified.",
+  "forbidden_reopens": [
+    "retarded-wake-rescues-parent",
+    "scarcity-fixed-beta-universality"
+  ],
+  "blocked_phenomenology": [
+    "lopsidedness-fit",
+    "axis-alignment"
+  ],
+  "comparator": "Specified boost-invariant control, not the delayed-center Poisson-vacuum shortcut.",
+  "claims": [
+    "moving-source-branch-c-not-adjudicated"
+  ]
+}

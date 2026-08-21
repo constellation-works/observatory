@@ -1,0 +1,33 @@
+{
+  "id": "closed-system-moving-existence",
+  "doc": "moving-sources-in-the-closed-system",
+  "family": "gravity-as-scarcity",
+  "kind": "existence",
+  "owed_object": "Does a non-cavitating moving solution exist at solar-system winds, with a floor that still lets matter be an excitation?",
+  "inherited_postulates": [
+    "postulate-rolling-rule",
+    "postulate-elliptic-sigma",
+    "postulate-shear-law"
+  ],
+  "new_postulates": [],
+  "control": "Pure-wind state (already passed: zero consumption). Do not PPN-reduce, ray-trace, or galaxy-fit until this card passes.",
+  "kill": "Cavitation in physical units at Earth/Sun orbital winds, or no regular settled flow that is an excitation medium.",
+  "forbidden_reopens": [
+    "scarcity-fixed-beta-universality",
+    "scarcity-static-photon-gamma",
+    "scarcity-static-clocks",
+    "scarcity-counting-produces-gp"
+  ],
+  "blocked_phenomenology": [
+    "ppn",
+    "photon-modulation",
+    "sparc",
+    "drag-ephemerides"
+  ],
+  "comparator": "GR mass-frame Schwarzschild (uniform U is gauge). Not Galilean U+v_GP.",
+  "claims": [
+    "moving-cavitation-floor",
+    "moving-theorem-1-bernoulli-realized",
+    "moving-theorem-2-wake-not-gauge"
+  ]
+}

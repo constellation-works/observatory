@@ -1,0 +1,27 @@
+{
+  "id": "two-substance-photon-sector",
+  "doc": "two-substance-vortex-vacuum",
+  "family": "two-substance-vortex-vacuum",
+  "kind": "existence",
+  "owed_object": "A single Maxwell photon sector (one cone, two polarizations, no birefringence, no detectable frame, γ=1), or a recast to one substance with a two-component order parameter.",
+  "inherited_postulates": [
+    "postulate-lambda-coupling"
+  ],
+  "new_postulates": [],
+  "control": "The packet fixture already has c₊ ≠ c₋. That split is a standing witness against one cone.",
+  "kill": "Birefringence, two speeds, resonator anisotropy, or γ≠1. Volovik Fermi-point standard for a proof.",
+  "forbidden_reopens": [
+    "two-substance-void-volume-ep",
+    "two-substance-conserving-far-field",
+    "two-substance-s2-fifth-force-charge",
+    "two-substance-fixed-length-universality"
+  ],
+  "blocked_phenomenology": [
+    "gravitating-radiation",
+    "s2-clocks"
+  ],
+  "comparator": "Maxwell + measured Lorentz-violation and γ=1 floors in studies/lorentz-violation-bounds and scalar-gravity-ppn-constraints.",
+  "claims": [
+    "two-substance-kill-condition-b"
+  ]
+}

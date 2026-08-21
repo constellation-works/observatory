@@ -8,19 +8,20 @@ Prose only. The experiments these theories are tested against live in the siblin
 [**orrery**](../orrery) (`codebases/orrery`), the cabinet of cataloged physics sims.
 
 ```
-ledger.md  Master ledger — every theory claim across all families, grouped by verdict
-           (refuted / mixed / supported / untested / conjecture). Derived index; resync
-           when any theory ledger changes.
-theory/    Our own theories — one living doc per line of inquiry, each with an
-           evidence ledger (claim → status → sims/studies). Contract in theory/README.md.
-studies/   Sourced notes on established physics — real citations only. Contract in
-           studies/README.md.
+policy.md  Research procedure. Enforced by scripts/check-theory.py.
+ledger.md  Generated rollup of every claim, grouped by verdict. Do not hand-edit.
+theory/    Living essays + <doc>.claims.json (canonical claim registry).
+gates/     Live fronts / owed objects. New work starts with a gate card.
+schema/    Field docs and the refuted wall.
+studies/   Sourced notes on established physics. Contract in studies/README.md.
+scripts/   check-theory.py — run before landing theory changes.
 ```
 
 ## How it fits together
 
 - **theory/** claims cite evidence: a **sim** in orrery (`../../orrery/lab/sims/<slug>/`) or a
-  **study** note here. Every claim carries a status; refuted branches keep their docs.
+  **study** note here. Every claim lives in `<doc>.claims.json` (kind, status, kill, control)
+  with a matching essay table; refuted branches keep their docs. New work is a `gates/` card.
 - **studies/** is the one place we write down established physics, with a verifiable citation,
   so theory docs and sim docstrings point here instead of restating facts from memory.
 - **orrery/lab/sims/** is where the experiments run. principia is prose; orrery is executable.

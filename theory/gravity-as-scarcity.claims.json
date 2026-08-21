@@ -1,0 +1,277 @@
+{
+  "doc": "gravity-as-scarcity",
+  "title": "Gravity as the gradient of scarce space",
+  "status": "growing",
+  "families": [
+    "gravity-as-scarcity"
+  ],
+  "updated": "2026-08-21",
+  "headline": "No universal-gravity branch is live. Fixed-β universality, static photon and clock sectors, and counting→GP are refuted. The closed system is measured statically; the moving sector is the live front.",
+  "live_fronts": [
+    "closed-system-moving-existence"
+  ],
+  "claims": [
+    {
+      "id": "scarcity-newton-from-budget",
+      "family": "gravity-as-scarcity",
+      "kind": "model-property",
+      "status": "supported",
+      "claim": "Accumulated per-shell dilution Σ 1/count(k) ∝ 1/r, so \"gravity = gradient of scarcity\" reproduces Newton's 1/r²",
+      "evidence": "by construction in [scarcity-grid-weight-black-hole](../../orrery/lab/sims/scarcity-grid-weight-black-hole/), [scarcity-capped-cumulative-field](../../orrery/lab/sims/scarcity-capped-cumulative-field/); note: storing 1/r² and differentiating gives 1/r³ — the stored field must be potential-like (correction #1 in the thread)",
+      "links": [
+        "../../orrery/lab/sims/scarcity-grid-weight-black-hole/",
+        "../../orrery/lab/sims/scarcity-capped-cumulative-field/"
+      ],
+      "in_doc_ledger": true
+    },
+    {
+      "id": "scarcity-gauss-from-budget",
+      "family": "gravity-as-scarcity",
+      "kind": "model-property",
+      "status": "supported",
+      "claim": "Dividing a fixed budget across shells yields inverse-square from pure geometry (Gauss's law analog)",
+      "evidence": "[scarcity-shell-depletion-field](../../orrery/lab/sims/scarcity-shell-depletion-field/)",
+      "links": [
+        "../../orrery/lab/sims/scarcity-shell-depletion-field/"
+      ],
+      "in_doc_ledger": true
+    },
+    {
+      "id": "scarcity-yukawa-cutoff",
+      "family": "gravity-as-scarcity",
+      "kind": "model-property",
+      "status": "supported",
+      "claim": "Subtractive budget gives a hard cutoff radius r ≈ (3T/4π)^⅓ beyond which gravity dies (Yukawa-cartoon)",
+      "evidence": "[scarcity-capped-cumulative-field](../../orrery/lab/sims/scarcity-capped-cumulative-field/), [scarcity-star-well-headroom](../../orrery/lab/sims/scarcity-star-well-headroom/) — as a property of the *model*; no claim it matches nature",
+      "links": [
+        "../../orrery/lab/sims/scarcity-capped-cumulative-field/",
+        "../../orrery/lab/sims/scarcity-star-well-headroom/"
+      ],
+      "in_doc_ledger": true
+    },
+    {
+      "id": "scarcity-mw-shape-beats-baryons",
+      "family": "gravity-as-scarcity",
+      "kind": "nature",
+      "status": "supported",
+      "claim": "An extended (distributed) mass under the model bends rotation curves toward flat (dark-matter/MOND-adjacent) — the *shape*",
+      "evidence": "Qualitative: [rotation-curve-distributed-mass](../../orrery/lab/sims/rotation-curve-distributed-mass/). Quantitative: fit to real Gaia DR3 data ([scarcity-rotation-curve-fit](../../orrery/lab/sims/scarcity-rotation-curve-fit/), ORB-10077) — with one free β the scarcity shape beats the nested no-halo baryons control decisively (RMSE 2.70 vs 18.40 km/s; ΔAIC ≈ −10⁵, stable across 27 profile variants). Measured curve & data lineage: [studies/milky-way-rotation-curve](../studies/milky-way-rotation-curve.md). **ORB-10167 qualification (§ form and universality adjudication below):** the band never tested the *functional form* — a canonical Sanders-form Yukawa under the identical protocol is **shape-degenerate** with scarcity (best fit α = −0.679, ξ = 4.642 kpc, landing on the ORB-10161 analytic matching point; RMSE 2.91 vs 2.70 km/s; ΔAIC(scarcity − Yukawa) = −369.6 point estimate with all 27 profile variants preferring scarcity, but the 200-resample bootstrap 95% interval **[−503.9, +1051.9]** spans zero → degenerate per the predeclared rule; held-out both underpredict, 5.26 vs 5.52 km/s). This row's evidential content is \"a ~5 kpc rise-and-saturate boost beats baryons\" — carrier (ORB-10157/ORB-10170) and form (ORB-10167) unidentified",
+      "links": [
+        "../../orrery/lab/sims/rotation-curve-distributed-mass/",
+        "../../orrery/lab/sims/scarcity-rotation-curve-fit/",
+        "../studies/milky-way-rotation-curve.md"
+      ],
+      "in_doc_ledger": true
+    },
+    {
+      "id": "scarcity-mw-vs-nfw",
+      "family": "gravity-as-scarcity",
+      "kind": "nature",
+      "status": "mixed",
+      "claim": "Fit to real MW data, the scarcity model **matches or beats a standard dark-matter halo once AIC penalizes parameter count**",
+      "evidence": "**ORB-10082 ran** ([scarcity-rotation-curve-fit](../../orrery/lab/sims/scarcity-rotation-curve-fit/), orrery `a9f93bd`) — reframed by Daniel before execution: NFW+baryons keeps a free baryonic scale plus M200 and concentration (3 physical params vs scarcity's 2; no longer equal-dof, AIC penalizes the extra). Point estimate favors scarcity — RMSE 2.70 vs 3.66 km/s, ΔAIC(scarcity−NFW) = −1663, same sign on all 27 profile variants (−2293 to −847) — **but the 200-resample bootstrap 95% CI spans −4129 to +1102 → statistically inconclusive, not a scarcity win**. Cutting the other way: NFW slightly wins the held-out band (4.99 vs 5.26 km/s RMSE) and flips the coherent residual sign; NFW is itself weakly identified here (drift pinned at its 10 km/s *upper* bound, c ≈ 37 — far above a typical MW-mass halo), so the 5–15 kpc band limits what the comparison establishes *in either direction*. Gate: **ORB-10083** (radially varying drift, applied identically to all three models)",
+      "links": [
+        "../../orrery/lab/sims/scarcity-rotation-curve-fit/"
+      ],
+      "in_doc_ledger": true
+    },
+    {
+      "id": "scarcity-mw-absolute-curve",
+      "family": "gravity-as-scarcity",
+      "kind": "nature",
+      "status": "mixed",
+      "claim": "The fitted scarcity model is an *absolute* description of the MW rotation curve",
+      "evidence": "Reduced χ² ≈ 145 against the quoted statistical errors — a formal failure — but those errors omit dominant distance/selection/asymmetric-drift systematics, so even the true law would fail them (not a refutation). Held-out 15–18.75 kpc band: coherent one-signed ~4.9 km/s underprediction — the data flattens near 13–16 kpc where the model keeps declining; the shape term is *sufficient relative to the control, not complete*. Drift nuisance pinned at its 3 km/s lower bound and weakly identified → a radially-varying asymmetric-drift model (Faraday **ORB-10083**) is prerequisite to any stronger claim. See [scarcity-rotation-curve-fit](../../orrery/lab/sims/scarcity-rotation-curve-fit/)",
+      "links": [
+        "../../orrery/lab/sims/scarcity-rotation-curve-fit/"
+      ],
+      "in_doc_ledger": true
+    },
+    {
+      "id": "scarcity-fixed-beta-universality",
+      "family": "gravity-as-scarcity",
+      "kind": "nature",
+      "status": "refuted",
+      "claim": "One global β (the MW's fitted ~5.25 kpc) fits external galaxies — the fixed-β scarcity form is a universal law",
+      "evidence": "**Measured (ORB-10169, [sparc-scarcity-universality](../../orrery/lab/sims/sparc-scarcity-universality/), orrery `1ab8085`, § form and universality adjudication below):** 149 SPARC galaxies / 3,150 points (standard Q ≤ 2, inclination ≥ 30° cuts; uniform no-drift nuisance policy; honest AIC — global k = 150, per-galaxy k = 298, MOND control k = 150). Global β = 5.526 kpc (5% from the MW's 5.25 — recorded, not exculpatory); per-galaxy β_i improves AIC by **51,723** (106,619 → 54,896); β_i tracks disk scale length at Spearman ρ = 0.343, p = 1.86×10⁻⁵ (and characteristic acceleration at ρ = 0.401, p = 4.1×10⁻⁷); constant-β heterogeneity p underflows to zero; the same-policy global-a₀ MOND control reaches AIC 29,198 vs global scarcity's 106,619 — the discrepancy organizes by acceleration, not fixed length (the radial-acceleration-relation verdict; McGaugh, Lelli & Schombert 2016, [studies/fifth-force-searches](../studies/fifth-force-searches.md)). **The predeclared kill condition fired on both prongs — the same verdict Sanders' fixed r₀ received.** Caveats (spherical enclosed-mass surrogate over thin-disk component curves; statistical-only errors — absolute χ² unacceptable for all fits, MOND control included; no-drift policy differs from the MW apparatus; validation parquets reconstructed from the published tables) gate decisiveness, not the verdict: none manufactures a p ~ 10⁻⁵ size correlation or a five-figure acceleration-organization gap under an identical likelihood",
+      "links": [
+        "../../orrery/lab/sims/sparc-scarcity-universality/",
+        "../studies/fifth-force-searches.md"
+      ],
+      "in_doc_ledger": true
+    },
+    {
+      "id": "scarcity-solar-system-ephemerides",
+      "family": "gravity-as-scarcity",
+      "kind": "nature",
+      "status": "mixed",
+      "claim": "The fitted scarcity form leaves solar-system ephemerides (AU scale) inside observational precision",
+      "evidence": "Constraint from the measured Newtonian-omission floor ([studies/solar-system-ephemeris-precision-floor](../studies/solar-system-ephemeris-precision-floor.md); Uranus rms 4.1e-9 AU is the tightest). **ORB-10097 ran** (Faraday; [solar-system-nbody](../../orrery/lab/sims/solar-system-nbody/) `scarcity/`, orrery `23fe253`, § below): the **multiplicative reading**, integrated on the exact ORB-10093 protocol with β and F(u) imported unchanged, puts **Uranus above its floor in the primary galactocentric orientation — 1.89× rms, 2.84× max** (7.7e-9 vs 4.1e-9 AU rms); the other seven planets stay below (Saturn next at 0.74×). Qualification: the six-axis orientation envelope **crosses** the Uranus floor (rms 0.66×–3.0×), so this is tension under the physically-motivated orientation, *not* an orientation-independent refutation. The **screened reading is identically Newtonian** — the explicit zero control — and is **unconstrained by this test**. **ORB-10156 update, reversed by measurement (ORB-10157):** the multiplicative reading was briefly the *derived* local behavior; the lattice measurement (superposition rows below, § superposition adjudication) has since refuted the derivation — the mechanic's own modulation is survivor-fraction headroom screening A(D) = (1−D)^1.07079, unit gain, keyed to *local occupancy*, not the β-amplified q-ratio this run integrated. The tension is now **conditioned, not derived**: it stands iff the fitted galactic boost is identified with the measured screening law (which demands O(1) ambient occupancy depletion across the disk — a normalization nothing has fixed); on that identification the boost's fitted local log-gradient (3.2×10⁻¹⁰/AU) transfers to the Sun's field unchanged and every integrated number here stands; without it, this run tested a transplanted rule the mechanic doesn't supply. The anticipated \"honest out\" (a lattice computation moving the log-gradient at O(1)) was used, and overshot: the lattice moved not the gradient but the rule's derivational status — though, as anticipated, neither the sign nor the *existence* of the modulation moved (the exemption reading — the Sun generating as if alone, ephemerides exactly Newtonian — is measured dead at log-RMSE 1.074, so the tension cannot be dissolved by exemption, only relocated by normalization). Result: [summary.json](../../orrery/lab/sims/solar-system-nbody/scarcity/summary.json)",
+      "links": [
+        "../studies/solar-system-ephemeris-precision-floor.md",
+        "../../orrery/lab/sims/solar-system-nbody/",
+        "../../orrery/lab/sims/solar-system-nbody/scarcity/summary.json"
+      ],
+      "in_doc_ledger": true
+    },
+    {
+      "id": "scarcity-frame-dragging",
+      "family": "gravity-as-scarcity",
+      "kind": "nature",
+      "status": "mixed",
+      "claim": "Adding swirl to the scarcity field reproduces frame dragging",
+      "evidence": "[frame-drag-swirl](../../orrery/lab/sims/frame-drag-swirl/) — right shape; real frame dragging (Lense–Thirring) has specific magnitude/falloff this toy hasn't been checked against (`conjecture — to verify`: study note needed)",
+      "links": [
+        "../../orrery/lab/sims/frame-drag-swirl/"
+      ],
+      "in_doc_ledger": true
+    },
+    {
+      "id": "scarcity-gr-clock-heuristic",
+      "family": "gravity-as-scarcity",
+      "kind": "derived",
+      "status": "mixed",
+      "claim": "The scarcity picture is equivalent to weak-field GR's \"gradient of time-flow rate\" heuristic",
+      "evidence": "**Worked computation (ORB-10156, § derivation below):** exact where the heuristic applies — both dynamics are a = c²∇σ with σ = GM/c²r, so scarcity coincides with the clock-rate deficit 1 − √(−g₀₀) point-by-point, and no static weak-field slow-motion massive-particle experiment can distinguish them. *Not* equivalent as a full weak-field account: the model has no mechanism making depleted regions tick slow (σ = clock deficit is a postulate, not counting — though if added, gravitational redshift comes out right for free), and the heuristic is only the g₀₀ half of a metric whose other half (Ψ) the model lacks — a measured difference (photon row). [studies/scalar-gravity-ppn-constraints](../studies/scalar-gravity-ppn-constraints.md). **ORB-10159 update:** on the river completion the missing clock mechanism is supplied — σ = ½v²/c² is *SR* dilation of a clock at rest in the free-fall inflow, and the identity σ = 1 − √(−g₀₀) becomes the exact GP lapse (§ clock sector (b)). **ORB-10162 update:** that mechanism now rests on an *imposed* flow — the mechanic's natural rules measurably do not produce it (river row below)",
+      "links": [
+        "../studies/scalar-gravity-ppn-constraints.md"
+      ],
+      "in_doc_ledger": true
+    },
+    {
+      "id": "scarcity-static-photon-gamma",
+      "family": "gravity-as-scarcity",
+      "kind": "nature",
+      "status": "refuted",
+      "claim": "Light couples to scarcity so as to reproduce measured deflection and Shapiro delay (the photon sector; PPN γ)",
+      "evidence": "**Derived, not assumed (ORB-10156, § below):** every photon coupling the lattice supports fails — photons blind to the field give zero deflection/delay (Nordström's fate); photons coupled to the stored time-potential give γ = 0 (half-GR: 0.875″ limb deflection, half Shapiro); the literal hop-on-depleted-lattice reading gives the wrong *sign* (light speeds up where points are sparse → bends away, Shapiro advance) with a non-PPN 1/r² profile. Best case \\|γ − 1\\| = 1 vs Cassini's (2.1 ± 2.3)×10⁻⁵ and VLBI's ~10⁻⁴ ([studies/scalar-gravity-ppn-constraints](../studies/scalar-gravity-ppn-constraints.md)). The hoped-for outcome — the lattice yielding time- and space-facing effects at the γ = 1 ratio — is **negative**: it would need a tick-rate deficit *and* a proper-space *excess* of GM/c²r each, and the mechanic supplies neither (depletion has the wrong sign for Ψ). Kills the model **as a complete theory of gravity as stated**; the galactic massive-sector result is untouched. Lattice-level check of the sign claim: proposed faraday task **ORB-10158**. **ORB-10159 update:** stands as stated (static lattice); the dynamical excitation completion conditionally reopens the sector with the *right* sign — flow drag supplies the γΦ half exactly (γ = 1) — see the excitation-completion row below and § clock sector (e); ORB-10158's scope extended with a flowing-lattice arm",
+      "links": [
+        "../studies/scalar-gravity-ppn-constraints.md"
+      ],
+      "in_doc_ledger": true
+    },
+    {
+      "id": "scarcity-multiplicative-superposition",
+      "family": "gravity-as-scarcity",
+      "kind": "derived",
+      "status": "refuted",
+      "claim": "The local superposition rule is multiplicative — accumulated background depletion modulates an embedded source's field generation with the fitted q-ratio coupling; screening does not arise",
+      "evidence": "**Derived (ORB-10156, §(d) below), then measured against (ORB-10157, [lattice-two-source-superposition](../../orrery/lab/sims/lattice-two-source-superposition/), § superposition adjudication below):** the derivation ran — the fitted boost is literally a position-dependent coupling G_eff(r) = G·q(r)/q(R₀); depletion on a shared budget is anonymous; *therefore* an embedded source generates with the background's coupling. Set `supported` 2026-07-12; superseded the same day. The lattice measured the mechanic's actual modulation as **A(D) = (1−D)^1.07079** (log-RMSE 0.0031 vs 2.077 for the inverse-headroom enhancement operationalization and 1.074 for independence) — survivor-fraction screening at unit gain in *local occupancy*, carrying no imprint of a β-amplified response to *accumulated* dilution. The failing step is the transplant: anonymity licenses only \"embedded sources are not exempt\" — it does not make the fitted macroscopic factor the mechanic's transfer function; a coupling that responds to ambient occupancy with the fitted gain is a rule the counting mechanic does not contain (faraday's declared caveat: an occupancy-dependent attempt rate is a *different microscopic model*). What survives of the derivation: the anonymity argument itself (independence refuted — the exemption ORB-10097 called \"screened\" does not arise, so the old σ_sun < σ_gal level-vs-gradient point stands with its variable transposed), and the sign (the integrated factor was suppression-signed, like the measured law; the gap is gain and variable, not direction). Superposition question reopened with sharper alternatives (open questions below)",
+      "links": [
+        "../../orrery/lab/sims/lattice-two-source-superposition/"
+      ],
+      "in_doc_ledger": true
+    },
+    {
+      "id": "scarcity-headroom-screening",
+      "family": "gravity-as-scarcity",
+      "kind": "model-property",
+      "status": "supported",
+      "claim": "The mechanic's measured superposition rule is headroom screening: an embedded source's field scales as the local survivor fraction, A(D) = (1−D)^1.071, with no exhaustion upturn",
+      "evidence": "**Measured (ORB-10157, [lattice-two-source-superposition](../../orrery/lab/sims/lattice-two-source-superposition/), § superposition adjudication below):** 129² shared-budget lattice, 50,000 anonymous slots/cell, compact source (peak exposure 0.1) embedded in an extended disk well; sweeping ambient depletion D = 0.01–0.90 (12 levels, 32 replicates, seed 42, byte-identical reruns; all finite-count means within 2.31 SE of the exact binomial expectation), A(D) = (1−D)^1.07079, log-RMSE 0.0031; resolution checks 1.0725 (97²) / 1.0700 (161²), amplitude shifts ≤ 4.4×10⁻⁴; exponent excess over 1 attributed to spatially varying headroom across the 4–18-cell measurement annulus. Continuous suppression through exhaustion — amplitude 0.1790 at D = 0.80, 0.0029 at 0.995, no upturn. This is the turn-7 headroom rule (wells dug from remaining capacity) returned by the mechanic at unit gain — same family as the fitted q(r) boost (suppression; boost rising where depletion falls); it reproduces the *fitted* galactic form only under the O(1)-occupancy identification (§ below). Caveats (2D static pinned geometry, anonymous fixed-coupling attempts, declared-not-emergent profiles) scope extrapolation, not this verdict",
+      "links": [
+        "../../orrery/lab/sims/lattice-two-source-superposition/"
+      ],
+      "in_doc_ledger": true
+    },
+    {
+      "id": "scarcity-static-clocks",
+      "family": "gravity-as-scarcity",
+      "kind": "nature",
+      "status": "refuted",
+      "claim": "The model as stated (static or accumulating depletion, no clock mechanism) is consistent with measured gravitational time dilation",
+      "evidence": "**Derived (ORB-10159, § clock sector below):** a static scarcity field with universal tick rate predicts exactly zero dilation against the measured ladder — Pound–Rebka/Snider at 1%, Gravity Probe A tracking the GM/r *profile* to 7×10⁻⁵, GPS +38.6 μs/day as engineering fact, optical clocks resolving 1 mm ([studies/gravitational-time-dilation](../studies/gravitational-time-dilation.md)). The accumulating variant (consumption, no replenishment) is separately dead: σ̇/σ ~ 1/t_age ≈ 2×10⁻¹⁰ yr⁻¹ is an effective Ġ/G more than three orders above the LLR bound (7.1 ± 7.6)×10⁻¹⁴ yr⁻¹. Only the steady-state flow (river) branch survives as a dynamical completion — next row (where ORB-10162 has since measured the mechanic's natural rules failing to produce it)",
+      "links": [
+        "../studies/gravitational-time-dilation.md"
+      ],
+      "in_doc_ledger": true
+    },
+    {
+      "id": "scarcity-counting-produces-gp",
+      "family": "gravity-as-scarcity",
+      "kind": "nature",
+      "status": "refuted",
+      "claim": "The dynamical-consumption flow law is the free-fall (Gullstrand–Painlevé) river ½v² = c²σ = GM/r — i.e. the mechanic's own dynamics produce it; flux-conserving and budget-per-shell flows are refuted",
+      "evidence": "**Derived (ORB-10159, §(b)), then measured (ORB-10162, [dynamical-consumption-lattice](../../orrery/lab/sims/dynamical-consumption-lattice/), orrery `98396a8`, § lattice adjudication below):** faraday's dynamical-consumption lattice, at steady state (1e-9 stationarity; byte-identical reruns), locks in exactly the two refuted flows over 1.7 decades of radius — central-only v ∝ r^(−2.00062 ± 0.00002) (flux-conserving, the predeclared kill condition), equal-per-shell v ∝ r^(−0.99454 ± 0.00036) (budget flow) — with per-shell sink scaling r^(0.00029 ± 0.00026), cleanly discriminating the implemented r⁰ draw from the r^(1/2) the free-fall branch demands. Neither natural rule self-organizes toward GP; σ = v²/2c² fails on both branches (7–8 dex, apparatus hop-speed c — expected, since neither branch *is* GP). **Per the predeclared gate the river completion is refuted at the mechanic level: the existing counting rules do not produce the free-fall flow.** What survives, exactly: the analytic branch-3 result — space obeying the rolling rule yields GP, Schwarzschild clocks exact, σ = ½v²/c² = 1 − √(−g₀₀) — as a *postulate* whose sustaining r^(−3/2) volumetric destruction law is now a measured debt, not just an analytic one. Cutting both ways: central-only's standing deficit reproduces the finite-reservoir 1/r field (R² 0.99999992) while its comoving dilution is zero pre-sink — the verified static shape returns as a diffusion profile, *not* a flow record (snapshot reconciliation in § below). Remaining routes: impose the rule by hand, derive it from S2 substrate dynamics (**ORB-10161 Branch B's obligation**, [two-substance-vortex-vacuum](two-substance-vortex-vacuum.md) §B2), or concede the clock sector. Apparatus caveats (radial shell reduction; apparatus-specific c normalization) recorded in § below — neither gates this verdict ([studies/river-model-and-analog-gravity](../studies/river-model-and-analog-gravity.md))",
+      "links": [
+        "../../orrery/lab/sims/dynamical-consumption-lattice/",
+        "two-substance-vortex-vacuum.md",
+        "../studies/river-model-and-analog-gravity.md"
+      ],
+      "in_doc_ledger": true
+    },
+    {
+      "id": "scarcity-excitation-reading-only",
+      "family": "gravity-as-scarcity",
+      "kind": "derived",
+      "status": "supported",
+      "claim": "Matter coupling: only the excitation (analog-gravity) reading lets the river buy time dilation while the lattice ontology does work",
+      "evidence": "**Derived by elimination (ORB-10159, §(c)):** the rules as stated make matter an external tracer reading ∇σ — a tracer inherits no SR-in-the-flowing-frame, so the river buys it no dilation (the drag objection is fatal: no coupling constant exists to carry it). The deflationary reading is exactly GR in GP coordinates — consistent, ontology idle (Hamilton & Lisle's own caution: nothing measurable flows). The excitation reading — matter as waves *of* the lattice, **Unruh 1981 acoustic-metric family, riding the GP river** — makes carriage constitutive with no coupling constant, and is the only reading delivering the clock sector with the ontology live. Price: excitation dynamics with one universal local speed is new structure the rules don't yet contain ([studies/river-model-and-analog-gravity](../studies/river-model-and-analog-gravity.md)). **Viability caveat (ORB-10938, 2026-08-21):** the elimination argument stands, but the reading acquired a measured wound — the settled moving closed system cavitates at U/v_GP = 0.3 (ladder-confirmed cutoff-ward trough), and an excitation has no medium inside a hole; see [moving-sources-in-the-closed-system](moving-sources-in-the-closed-system.md) cavitation row",
+      "links": [
+        "../studies/river-model-and-analog-gravity.md",
+        "moving-sources-in-the-closed-system.md"
+      ],
+      "in_doc_ledger": true
+    },
+    {
+      "id": "scarcity-excitation-hides-rest-frame",
+      "family": "gravity-as-scarcity",
+      "kind": "nature",
+      "status": "supported",
+      "claim": "On the excitation branch the lattice rest frame is undetectable at current bounds (emergent Lorentz invariance); the substance/aether branch is excluded",
+      "evidence": "**Computed (ORB-10159, §(d)):** substance coupling at O(1) predicts resonator anisotropy ~β²: 1.5×10⁻⁶ (370 km/s CMB-frame motion) down to 2×10⁻⁸ (fully entrained, 42 km/s local solar inflow) vs measured 10⁻¹⁷–10⁻¹⁸ — **excluded by 9–12 orders**. Excitation branch: one medium, one limiting speed → MM null by construction; residual lattice-scale dispersion is bounded, not excluded — parity-symmetric hop rules give a quadratic subluminal term, and GRB 090510 (E_QG,2 > 1.3×10¹¹ GeV) bounds the spacing to a ≲ 1.5×10⁻²⁷ m ≈ 10⁸ ℓ_Pl; parity-asymmetric rules (linear term) are already excluded past the Planck scale (E_QG,1 > 7.6 E_Pl). **Placement: emergent-metric, analog-gravity family** — not an aether, not relabeled GR ([studies/lorentz-violation-bounds](../studies/lorentz-violation-bounds.md))",
+      "links": [
+        "../studies/lorentz-violation-bounds.md"
+      ],
+      "in_doc_ledger": true
+    },
+    {
+      "id": "scarcity-excitation-photon-gamma",
+      "family": "gravity-as-scarcity",
+      "kind": "nature",
+      "status": "mixed",
+      "claim": "Under the excitation completion (free-fall flow, depletion as flow not standing deficit, universal local hop speed) the photon sector is exactly Schwarzschild's: γ = 1, deflection toward, Shapiro delay",
+      "evidence": "**Computed (ORB-10159, §(e)):** a wave with constant local speed on GP inflow sees the acoustic metric with uniform c — exactly the Schwarzschild geometry (Unruh), so the γΦ half that the static mechanic provably cannot supply (photon row above) is delivered entirely by flow drag. The mathematics is exact and established; the row is `mixed` because all three premises are currently *owed postulates*, and any residual standing density deficit re-introduces the wrong-signed 1/r² index term as a contaminant whose absence Cassini/VLBI bound. The ORB-10156 refutation stands for the model as stated. **ORB-10162 update:** the free-fall-flow premise took its measured hit — neither natural counting rule produces it (river row above) — so all three premises now stand as imposed postulates (the flow's destruction law owed to S2 dynamics, ORB-10161 §B2); the acoustic-metric mathematics is untouched. Gate: **ORB-10158**, scope extended 2026-07-12 with a flowing-lattice arm (sign of deflection under inflow) alongside the static arm (contaminant magnitude)",
+      "links": [],
+      "in_doc_ledger": true
+    },
+    {
+      "id": "scarcity-clocks-not-second-instrument",
+      "family": "gravity-as-scarcity",
+      "kind": "derived",
+      "status": "supported",
+      "claim": "The multiplicative β factor leaves all current clock comparisons unaffected — clocks are not a second instrument on the ORB-10097 branch",
+      "evidence": "**Computed (ORB-10159, §(f)):** the multiplicative rule (derived by ORB-10156; since measured to be the mechanic's behavior only under the fitted-boost identification — ORB-10157, superposition rows above) rescales locally generated σ by X(r_gal), \\|X − 1\\| ≤ 3.2×10⁻¹⁰ per AU of galactocentric offset — a branch property, holding for *any* multiplicative carrier of the fitted boost shape, the measured screening law included. Fractional correction to any measured redshift ≤ 3×10⁻¹⁰ vs 2.5×10⁻⁵ best accuracy (five orders below); annual species-universal rate modulation ~3×10⁻¹⁸ vs 10⁻¹⁶-class comparisons (and blind to LPI/null-redshift tests *because* universal; ~16 ps/yr vs ~100 ns pulsar timing); terrestrial differentials ≲ 10⁻²¹ vs 10⁻¹⁸ optical-clock systematics. Orbits integrate accelerations twice over decades, clocks read rates instantaneously — the binding instrument on the multiplicative branch remains ORB-10097's Uranus channel ([studies/gravitational-time-dilation](../studies/gravitational-time-dilation.md))",
+      "links": [
+        "../studies/gravitational-time-dilation.md"
+      ],
+      "in_doc_ledger": true
+    },
+    {
+      "kind": "postulate",
+      "status": "mixed",
+      "in_doc_ledger": false,
+      "evidence": "Named postulate; lattice consistency is not a derivation.",
+      "links": [],
+      "named": "2026-07-12",
+      "expires": "2026-09-21",
+      "id": "postulate-rolling-rule",
+      "family": "gravity-as-scarcity",
+      "claim": "Space obeys the inertial rolling rule a = c²∇σ.",
+      "kill": "Derive the rolling rule from a local mechanism, or concede the ontology is idle (Hamilton–Lisle)."
+    },
+    {
+      "kind": "postulate",
+      "status": "mixed",
+      "in_doc_ledger": false,
+      "evidence": "Named postulate; lattice consistency is not a derivation.",
+      "links": [],
+      "named": "2026-07-09",
+      "expires": "2026-09-21",
+      "id": "postulate-elliptic-sigma",
+      "family": "gravity-as-scarcity",
+      "claim": "The counting level σ = GM/c²r is elliptic (instantaneous draw), not retarded.",
+      "kill": "Replace with finite level-propagation, or derive the elliptic draw from a local mechanism."
+    }
+  ]
+}

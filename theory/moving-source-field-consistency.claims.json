@@ -1,0 +1,164 @@
+{
+  "doc": "moving-source-field-consistency",
+  "title": "Moving-source field consistency: what survives of the wake",
+  "status": "growing",
+  "families": [
+    "retarded-scarcity-wake"
+  ],
+  "updated": "2026-08-21",
+  "headline": "Delayed-center construction is not a Poisson-vacuum exterior. Analytic rows stay untested until cataloged. Branch C still lacks an explicit equation.",
+  "live_fronts": [
+    "retarded-wake-branch-c"
+  ],
+  "claims": [
+    {
+      "id": "moving-source-legendre-not-laplace",
+      "family": "retarded-scarcity-wake",
+      "kind": "derived",
+      "status": "untested",
+      "claim": "For \\(\\lvert\\beta_g\\rvert<1\\), the delayed-center potential with \\(\\boldsymbol{\\Delta}(R)=-\\mathbf{w}R/c_g\\) has a convergent Legendre expansion whose angular shape is radius-independent and whose \\(n\\ge1\\) terms are forbidden by the standard exterior Laplace equation",
+      "evidence": "Closed-form derivation in § The delayed-center potential is not a Poisson-vacuum field; identity checked numerically to \\(10^{-8}\\), but the check is uncataloged and therefore not yet admissible under the house rule",
+      "links": [],
+      "in_doc_ledger": true,
+      "kill": "Catalog the negative-control fixture; algebra is done."
+    },
+    {
+      "id": "moving-source-poisson-dipole-divergence",
+      "family": "retarded-scarcity-wake",
+      "kind": "derived",
+      "status": "untested",
+      "claim": "Under the standard Poisson operator, \\(\\Phi_{\\rm lag}\\) has \\(\\nabla^2\\Phi\\neq0\\) outside the compact matter source, corresponding at first order to an effective dipolar density \\(\\propto\\cos\\theta/R^3\\) whose dipole moment diverges linearly with box radius",
+      "evidence": "Same section; analytic calculation plus an uncataloged finite-difference check. This excludes a compact-source Poisson-vacuum interpretation, not every possible local substrate equation",
+      "links": [],
+      "in_doc_ledger": true,
+      "kill": "Catalog the finite-difference check as an orrery fixture."
+    },
+    {
+      "id": "moving-source-retarded-direction-curl",
+      "family": "retarded-scarcity-wake",
+      "kind": "derived",
+      "status": "untested",
+      "claim": "The alternative retarded-direction rule has nonzero curl and admits closed loops with work \\(\\sim\\beta_g GM/R\\)",
+      "evidence": "§ Two rules, and only one of them is even a force law; constant-\\(R\\) circles return zero, while generic loops spanning radius and angle need not",
+      "links": [],
+      "in_doc_ledger": true,
+      "kill": "Catalog generic loops spanning radius and angle."
+    },
+    {
+      "id": "moving-source-2beta-not-4beta",
+      "family": "retarded-scarcity-wake",
+      "kind": "derived",
+      "status": "untested",
+      "claim": "The parent's first-order acceleration contrast is \\(2\\beta_g\\), not \\(4\\beta_g\\), when its declared rule \\(\\mathbf{a}=-\\nabla\\Phi\\) is used",
+      "evidence": "§ The corrected first-order contrast; the derivation is analytic but not yet represented by an admissible Orrery fixture",
+      "links": [],
+      "in_doc_ledger": true,
+      "kill": "Catalog the declared a=−∇Φ contrast."
+    },
+    {
+      "id": "moving-source-em-gr-aberration-cancel",
+      "family": "retarded-scarcity-wake",
+      "kind": "nature",
+      "status": "conjecture",
+      "claim": "Electromagnetism and general relativity cancel the naïve retarded-position aberration for a uniformly moving source, leaving no \\(O(\\beta_g)\\) dipole in the relevant physical interaction",
+      "evidence": "Heaviside/Liénard–Wiechert field for electromagnetism and [Carlip 2000](https://arxiv.org/abs/gr-qc/9909087) for general relativity. **No `studies/` note yet**; these examples define controls but do not settle every preferred-medium equation",
+      "links": [
+        "https://arxiv.org/abs/gr-qc/9909087"
+      ],
+      "in_doc_ledger": true
+    },
+    {
+      "id": "moving-source-boost-invariant-no-dipole",
+      "family": "retarded-scarcity-wake",
+      "kind": "nature",
+      "status": "conjecture",
+      "claim": "In a specified boost-invariant control theory, uniform motion produces no first-order wake; acceleration or explicit boost violation is required for an \\(O(\\beta_g)\\) dipole",
+      "evidence": "§ Why uniform motion does not make a wake in the boost-invariant control; this does not settle an unspecified preferred-medium equation",
+      "links": [],
+      "in_doc_ledger": true
+    },
+    {
+      "id": "moving-source-toy-lopsidedness-scale",
+      "family": "retarded-scarcity-wake",
+      "kind": "nature",
+      "status": "conjecture",
+      "claim": "The delayed-center toy scale \\(A_1\\sim2\\times10^{-3}\\) is roughly 50–100× below representative observed disk-lopsidedness scales",
+      "evidence": "\\(\\beta_g\\approx2\\times10^{-3}\\) from ~600 km/s; the cited review reports both a larger-sample characteristic scale near 0.1 and older thresholds near 0.2 ([Jog & Combes 2009 review](https://ned.ipac.caltech.edu/level5/Sept09/Jog/Jog2.html), [arXiv:0811.1101](https://arxiv.org/pdf/0811.1101)). This is not a ceiling on Branch C, whose amplitude law is unknown",
+      "links": [
+        "https://ned.ipac.caltech.edu/level5/Sept09/Jog/Jog2.html",
+        "https://arxiv.org/pdf/0811.1101"
+      ],
+      "in_doc_ledger": true
+    },
+    {
+      "id": "moving-source-large-n-alignment",
+      "family": "retarded-scarcity-wake",
+      "kind": "nature",
+      "status": "untested",
+      "claim": "If \\(A_1=2\\times10^{-3}\\) and the foreground is independent zero-mean scatter, a large-\\(N\\) alignment statistic could measure it",
+      "evidence": "§ Idealized detectability of the toy amplitude — the arithmetic is straightforward, but catalog errors, correlated structure, velocity-direction uncertainty, and the applicability of the toy amplitude remain unvalidated",
+      "links": [],
+      "in_doc_ledger": true,
+      "kill": "Noise model, catalog errors, and null correlation unvalidated."
+    },
+    {
+      "id": "moving-source-structure-formation-confounder",
+      "family": "retarded-scarcity-wake",
+      "kind": "nature",
+      "status": "conjecture",
+      "claim": "Standard structure formation may correlate peculiar velocity with an \\(m=1\\) asymmetry axis, confounding an alignment test",
+      "evidence": "§ A degeneracy to measure, not assume — the common-cause intuition is plausible, but the leading tidal tensor is quadrupolar and does not by itself establish an \\(m=1\\) phase correlation",
+      "links": [],
+      "in_doc_ledger": true
+    },
+    {
+      "id": "moving-source-orientation-split",
+      "family": "retarded-scarcity-wake",
+      "kind": "nature",
+      "status": "untested",
+      "claim": "A boost-violating model may produce an orientation-dependent split between in-plane lopsidedness and vertical displacement or warping",
+      "evidence": "§ A candidate geometric discriminator — the disk response and its parameters are not derived, and the perpendicular forcing may produce a bowl-like displacement rather than an integral-sign warp",
+      "links": [],
+      "in_doc_ledger": true,
+      "kill": "Disk response and parameters are not derived."
+    },
+    {
+      "id": "moving-source-cherenkov-bound",
+      "family": "retarded-scarcity-wake",
+      "kind": "nature",
+      "status": "conjecture",
+      "claim": "A conventionally coupled subluminal gravitational mode is tightly constrained by gravitational Cherenkov losses",
+      "evidence": "[Moore & Nelson 2001](https://arxiv.org/abs/hep-ph/0106220) give a conservative \\(2\\times10^{-15}\\) speed deficit for Galactic cosmic-ray origins and ~\\(2\\times10^{-19}\\) for extragalactic origins; applicability to an extra substrate mode depends on its coupling and dispersion",
+      "links": [
+        "https://arxiv.org/abs/hep-ph/0106220"
+      ],
+      "in_doc_ledger": true
+    },
+    {
+      "id": "moving-source-gravitomagnetic-gap",
+      "family": "retarded-scarcity-wake",
+      "kind": "nature",
+      "status": "conjecture",
+      "claim": "A tracer prediction is uninterpretable until the substrate model specifies all velocity-dependent couplings",
+      "evidence": "§ The gravitomagnetic gap — electromagnetism supplies a warning, not a proof that an unknown substrate has the same cancellation",
+      "links": [],
+      "in_doc_ledger": true
+    },
+    {
+      "id": "moving-source-branch-c-not-adjudicated",
+      "family": "retarded-scarcity-wake",
+      "kind": "nature",
+      "status": "untested",
+      "claim": "Branch C is not adjudicated by the Poisson-vacuum calculation",
+      "evidence": "A specific boost-violating substrate equation and a map from its breaking parameters to observables are still absent",
+      "links": [],
+      "in_doc_ledger": true,
+      "tags": [
+        "existence",
+        "preferred-frame"
+      ],
+      "kill": "Write an explicit boost-violating substrate equation with a map from breaking parameters to observables, or close Branch C.",
+      "comparator": "A specified boost-invariant control (Heaviside/Carlip cancellation), not the delayed-center shortcut."
+    }
+  ]
+}

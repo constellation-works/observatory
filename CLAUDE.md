@@ -3,26 +3,32 @@
 The constellation's **theory corpus**: our own physics theories (`theory/`) and the sourced
 notes on established physics they must respect (`studies/`). Named for Newton's *Principia*.
 
-principia is **prose**. The experiments its claims are tested against are cataloged sims in the
-sibling repo [**orrery**](../orrery) (`codebases/orrery/lab/sims/`). The split is deliberate:
-one repo accumulates *theory*, the other accumulates *runnable evidence*, and neither can
-silently drift from the other because every claim links across the gap.
+principia is **prose plus a machine-checked claim registry**. The experiments its claims are
+tested against are cataloged sims in the sibling repo [**orrery**](../orrery)
+(`codebases/orrery/lab/sims/`). The split is deliberate: one repo accumulates *theory*, the
+other accumulates *runnable evidence*, and neither can silently drift from the other because
+every claim links across the gap. New theory work starts as a gate card; see
+[policy.md](policy.md).
 
 ## Layout
 
 ```
-theory/     Our own theories — one living document per line of inquiry, each with an
-            evidence ledger: a table mapping every claim to a status and the sims/studies
-            that back it. Contract in theory/README.md.
-studies/    Sourced notes on established physics — one note per fact-cluster (a bound, a
-            measured value, an experiment lineage), each load-bearing fact carrying a
-            verifiable citation. Contract in studies/README.md.
+policy.md   Research procedure (gate cards, kinds, family split, expiry). The lock is
+            scripts/check-theory.py; this file is the English.
+theory/     Living essays plus theory/<doc>.claims.json — the claim registry is canonical.
+            Essay tables must match the registry. Contract in theory/README.md.
+gates/      One JSON card per live front / owed object. New work starts here.
+schema/     Claim and gate field docs; wall.json is the immortal refuted-id list.
+studies/    Sourced notes on established physics. Contract in studies/README.md.
+scripts/    check-theory.py — the pre-commit research-policy gate.
+ledger.md   Generated rollup. Never hand-edit; --write-ledger regenerates it.
 ```
 
 ## The evidence-ledger contract
 
-Each `theory/` doc carries frontmatter (`title`, `status`, `families`, `almanac`, `created`,
-`updated`) and an **evidence ledger** table. Claim statuses:
+Each `theory/` doc has a matching `theory/<doc>.claims.json` (canonical) and an essay
+**evidence ledger** table that must match it byte-for-byte in the `claim` column. Claim
+statuses:
 
 | Claim status | Meaning |
 |---|---|
@@ -38,7 +44,7 @@ correspondence record).
 
 ## Rules of the house
 
-These are kepler's standing rules (`agentbase/kepler/memory/rules/`), enforced on every edit:
+Standing rules, machine-checked by `scripts/check-theory.py` on every theory change:
 
 - **Theory bends to evidence, never the reverse.** A sim or study that contradicts a claim
   changes that claim's status **in the same change-set** that lands the evidence. Softening the
@@ -55,9 +61,17 @@ These are kepler's standing rules (`agentbase/kepler/memory/rules/`), enforced o
   sourced right now is written `conjecture — to verify`, never stated as settled. Citations are
   checked against the actual source before being recorded.
 - **Evidence enters through orrery's catalog.** A sim becomes admissible evidence only once
-  faraday catalogs it under `orrery/lab/sims/<slug>/` with its `sim.json` and provenance. A
-  theory question that needs a new or changed experiment becomes a **faraday task** — theory
-  work here does not silently implement or redesign the sim that tests it.
+  it is cataloged under `orrery/lab/sims/<slug>/` with its `sim.json` and provenance. A
+  theory question that needs a new or changed experiment becomes an orrery Orbit task —
+  theory work here does not silently implement or redesign the sim that tests it.
+- **New work is a gate card.** Before a new untested row or a new sim, add `gates/<id>.json`
+  with one owed object, one family, a this-week kill, and a control. Phenomenology cards are
+  rejected until the family's existence claim is `supported`. See [policy.md](policy.md).
+- **Named postulates expire.** `kind: postulate` cannot be `supported`. Underived postulates
+  past `expires` fail the check. A coupling written into a Hamiltonian is a postulate or a
+  `hook`, not a nature result.
+- **Families do not pay each other's debts.** `pays_debt_of` must be same-family. Reopening a
+  wall id in `schema/wall.json` requires `daniel_reopen: true`.
 
 ## Cross-links to orrery
 
@@ -71,25 +85,24 @@ note (via orrery `sim.json` `provenance.almanac`) records the discussion it was 
 
 ## Validating a change
 
-principia is a **prose corpus — there is no build, test suite, or CI to run**. That is by
-design, not an omission: nothing here compiles, so land nothing that would need it. The checks
-below are the whole validation surface, and each is portable — plain `git`/shell, no provider-
-or host-specific tooling:
+principia is still a **prose corpus** — nothing here compiles — but the research policy is
+machine-checked. The checks below are the whole validation surface; they are portable (stdlib
+`python3` and `git`, no host-specific tooling):
 
-- **`git diff --check`** — catches trailing whitespace and any leftover merge-conflict markers
-  before they land. Run it on every commit.
-- **Relative links resolve.** Edits routinely touch intra-corpus links (`../studies/…`,
-  `../theory/…`) and cross-repo sim links (`../../orrery/lab/sims/<slug>/`). Confirm each
-  changed link's target exists *from the editing file's directory*. No script enforces this —
-  it is a manual read, or a throwaway shell one-liner over the changed files.
+- **`python3 scripts/check-theory.py`** — required on every `theory/`, `gates/`, `schema/`,
+  `policy.md`, or `ledger.md` change. Validates claim registries against essay tables, gate
+  cards, the refuted wall, postulate expiry, hook controls, family-split, preferred-frame
+  comparators, link resolution, and that `ledger.md` matches the generated rollup.
+  `--write-ledger` regenerates `ledger.md`. `--selftest` runs the fixture checks.
+- **`git diff --check`** — trailing whitespace and leftover merge-conflict markers.
 - **Frontmatter stays intact.** A touched `theory/` doc keeps its `title, status, families,
   almanac, created, updated` keys with a valid doc-level `status`; a touched `studies/` note
   keeps `title, status, created, updated`. Contracts: `theory/README.md`, `studies/README.md`.
-- **Ledger tracks the claim.** If a claim's backing changed, its evidence-ledger row status
-  changed in the *same* commit (see *Rules of the house*).
+- **Ledger tracks the claim.** If a claim's backing changed, its registry status **and** the
+  essay table status changed in the *same* commit. The checker will refuse a split.
 
-That is the full pre-commit gate — there is no compile step to pass and no automated runner to
-wait on; reviewer eyes plus the checks above are the bar.
+Do not land theory work that fails `scripts/check-theory.py`. Reviewer eyes still own
+whether a derivation is genuine and whether a comparator is the right GR frame.
 
 ## Conventions
 
