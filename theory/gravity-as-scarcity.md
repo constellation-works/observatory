@@ -4,7 +4,7 @@ status: growing
 families: [gravity-as-scarcity]
 almanac: 15-discussions/26-07/gravity-as-scarcity-of-space.md
 created: 2026-07-09
-updated: 2026-08-12
+updated: 2026-08-20
 ---
 
 # Gravity as the gradient of scarce space
@@ -1021,7 +1021,18 @@ organize (by acceleration). What remains live:*
   measured wrinkle: the shear law's two-core superposition diverges from the counting
   mechanic's ORB-10157 screening family (stronger screening; coarse-grid exploratory), so
   the two lattice models now disagree on a measurable and at most one can carry the MW
-  boost's phenomenology.
+  boost's phenomenology. **The amplitude core now has an analytic closure candidate**
+  (2026-08-20, [shear-sourced-consumption](shear-sourced-consumption.md) § the
+  level-matching closure): the flux-type coupling ("matter sets its surface inflow via its
+  own internal consumption") is excluded in closed form — it makes source strength track
+  bulk density, G_eff ∝ ρ_body, independent of M — and the conjunction {counting level
+  σ = GM/c²r, rolling rule for space (ORB-10159 branch 3), shear law} is closed,
+  parameter-free, and uniquely selects A = √(2GM), with the shear coefficient k = 1
+  *forced* by consistency. If its lattice gates pass (**ORB-10932**: level, density,
+  composition), the amplitude debt dissolves into postulates already named, and the
+  superposition wrinkle is predicted to be a flux-boundary artifact (level cores restoring
+  the ORB-10157 family — comment on **ORB-10755**); external universality sourcing is
+  **ORB-10933**. Nothing moves this ledger until those gates run.
 - **What carries the MW boost — ORB-10170's three readings, demoted to a single-galaxy
   question.** The carrier alternatives stand as measured (ORB-10157, § superposition
   adjudication): (i) the measured headroom-screening law at O(1) galactic occupancy
