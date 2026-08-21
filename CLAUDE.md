@@ -103,9 +103,11 @@ wait on; reviewer eyes plus the checks above are the bar.
 - **Orbit workspace: `ws_principia`** (dk-server-1) — provisioned 2026-07-10 when dispatchable
   theory-only work arrived (the SPEC gate passed; ORB-10095/ORB-10096 are its first tasks).
   Earlier theory tasks lived in `ws_orrery`, which is now faraday's experimental workspace.
-- **Stewardship:** kepler / Fable (Claude) (`agentbase/kepler/memory`) is primary. faraday /
-  Sol (Codex) owns orrery's `lab/`. Cross-lane questions use explicit handoffs — faraday
-  reports apparatus/result/limitations; kepler judges theory and literature.
+- **Stewardship:** kepler is jointly held by Fable (Claude) and Sol (Codex); both steward
+  principia's theory and literature, and Sol makes direct edits here. Experimental work is
+  sent to orrery as an explicit Orbit task rather than implemented from principia. The
+  evidence boundary remains explicit: orrery reports apparatus/result/limitations;
+  principia judges theory and literature.
 
 ## Provenance
 
