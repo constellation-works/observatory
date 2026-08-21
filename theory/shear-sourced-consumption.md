@@ -207,10 +207,16 @@ Stated before anyone gets excited:
    **linear in the wind** (≈56·U^0.98) — a fixed-strength sink (wind-independent
    consumption Q, captured momentum n·Q·U; corrected from an earlier "momentum-capture"
    reading at the 2026-08-21 critique), overturning the constructed branch's
-   near-U-independence. The extended-horizon fixture is the successor (amended:
-   cavitation named a kill outcome; early velocity-sector Bernoulli residual admitted);
-   an acoustic ray-tracing scale estimate (ORB-10939) brackets the photon sector.
-   Rotation and waves remain open.
+   near-U-independence. The extended horizon (ORB-10938, same day) then finished the
+   sentence: the system **settles** at every wind by T = 600, but the settled flow is
+   rotational and refutes the Bernoulli closure beyond error, the settled drag is
+   **superlinear** (81.2·U^1.33 — the linear law was the transient), and the trough
+   **cavitates at U/v_GP = 0.3** (ladder-confirmed; finite floor only at trans-critical
+   wind) — so under this law a slowly moving core drains a hole in the medium: either a
+   floor mechanism is missing from the law or the excitation reading dies around moving
+   masses ([moving-sources-in-the-closed-system](moving-sources-in-the-closed-system.md),
+   third adjudication). An acoustic ray-tracing scale estimate (ORB-10939) brackets the
+   photon sector. Rotation and waves remain open.
 6. **It does not touch the galactic question.** The acceleration-organization problem
    (ORB-10169) is untouched: this law addresses the clock/photon-sector debt, not the
    boost's carrier or form.
