@@ -84,8 +84,11 @@ E[future BTC mid return]
 | [H10](hypothesis/H10-signed-predictor-lift-decays.md) | A public signed Bitcoin predictor that lifts in a discovery window does not persist as a walk-forward rule after execution lag and cost; report lifetime, not an entry. | Frozen discovery-window rule continued into later blocks | Walk-forward net lift stays above the cost screen across two later non-overlapping regimes. |
 
 H01 is prior art and a required control, not the proposed edge. The primary research question begins
-at H02. H08 and H09 are archived (`revised`); they are not in the live queue. H10 is the
-non-persistence prior on how surviving tests are reported.
+at H02. H08 is archived (`revised`) and is not in the live queue. H09 also closed as `revised` and
+was archived, then re-opened on 2026-08-20 for one specific follow-up: the BTC-residual control that
+E02 could not run, at a 15-minute horizon where local 1-minute Bitstamp bars are fine enough to
+serve as the control. Its whale mechanism remains unsupported; only the residual-lead question is
+live. H10 is the non-persistence prior on how surviving tests are reported.
 
 ## H01–H02: order-book physics
 

@@ -2,9 +2,9 @@
 title: "R04 AI Assistants"
 summary: "Paused charter for measuring attention elasticity of AI assistant providers; Google Trends was found too coarse to measure the smaller providers."
 tags: [parallax, ai-assistants, attention-elasticity, search-attention, paused]
-related: ["docs/research/R04-ai-assistants/docs/TRACKING_UNIVERSE.md", "docs/research/R04-ai-assistants/docs/LAUNCH_REGISTRY.md", "docs/research/R04-ai-assistants/hypothesis/README.md", "docs/research/R04-ai-assistants/experiments/README.md", "docs/research/README.md"]
+related: ["docs/research/R04-ai-assistants/docs/TRACKING_UNIVERSE.md", "docs/research/R04-ai-assistants/docs/LAUNCH_REGISTRY.md", "docs/research/R04-ai-assistants/docs/WHOISUSINGAI_API.md", "docs/research/R04-ai-assistants/hypothesis/README.md", "docs/research/R04-ai-assistants/experiments/README.md", "docs/research/README.md"]
 created_on: 2026-08-03
-updated_on: 2026-08-03
+updated_on: 2026-08-16
 status: paused
 research_id: R04
 domain: ai-assistants

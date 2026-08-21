@@ -26,7 +26,7 @@ baseline, and rejection criteria before designing a confirmatory experiment.
 | H06 | [Speculative influx and weekend flow](H06-speculative-influx-weekend-flow.md) | untested | active |
 | H07 | [Multiscale conditioning](H07-multiscale-conditioning.md) | untested | active |
 | H08 | [Day-trader night flattening](H08-day-trader-night-flattening.md) | revised | archived |
-| H09 | [Whale weak-window early Polymarket lean](H09-whale-weak-window-early-polymarket-lean.md) | revised | archived |
+| H09 | [Whale weak-window early Polymarket lean](H09-whale-weak-window-early-polymarket-lean.md) | revised | active |
 | H10 | [Signed predictor lift decays](H10-signed-predictor-lift-decays.md) | untested | active |
 
 The broader motivation and experiment sequence remain in
