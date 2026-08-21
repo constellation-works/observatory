@@ -200,9 +200,12 @@ Stated before anyone gets excited:
    first-order wake difference from GR's moving-source river, and a new named debt
    (consumed momentum); the wind-tunnel fixture ran the same day (ORB-10935): Galilean
    null exact, drag-sign consumed momentum measured, but **no smooth steady branch found
-   at any wind** — the law's behavior in translating configurations may be intrinsically
-   unsteady; the dynamical-relaxation fixture is the successor. Rotation and waves remain
-   open.
+   at any wind**. The dynamical-relaxation fixture (ORB-10937, same day) then evolved the
+   real equations: slow relaxation unresolved at horizon (velocity settles, the
+   consumption trough still deepening at a U-independent rate), and the realized drag is
+   **linear in the wind** (≈56·U^0.98) — the physically sensible momentum-capture form,
+   overturning the constructed branch's near-U-independence. The extended-horizon fixture
+   is the successor. Rotation and waves remain open.
 6. **It does not touch the galactic question.** The acceleration-organization problem
    (ORB-10169) is untouched: this law addresses the clock/photon-sector debt, not the
    boost's carrier or form.

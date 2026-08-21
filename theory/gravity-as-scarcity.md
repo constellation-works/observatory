@@ -1061,9 +1061,16 @@ organize (by acceleration). What remains live:*
   forbids stagnation points (a qualitative anti-GR discriminator), and the consumed-
   momentum debt measured with **drag sign** at every wind — but no globally smooth steady
   branch exists at any swept U, so whether the dynamics realize the theorems' steady
-  premise is now the live question; the dynamical-relaxation successor fixture is filed.
-  The moving-source bounds studies note (ORB-10936) is still pending; the "what is U
-  locally" question couples to the galactic-carrier bullet below.
+  premise is now the live question. **ORB-10937 ran the dynamical relaxation
+  (2026-08-21):** evolving the real equations (Bernoulli imposed nowhere) returned slow
+  relaxation unresolved at the T = 60 horizon — the velocity sector settles, the
+  consumption trough is still deepening at a U-independent rate (e-fold ~65) — so no
+  steady sample was admitted and the Theorem 1 kill remains undelivered; the realized
+  drag, though, is **linear in the wind** (|∫s·v_x| ≈ 56·U^0.98), overturning the
+  constructed branch's near-U-independent scaling, and the dynamical Galilean null is
+  exact. The extended-horizon successor fixture is filed. The moving-source bounds
+  studies note (ORB-10936) is still pending; the "what is U locally" question couples to
+  the galactic-carrier bullet below.
 - **What carries the MW boost — ORB-10170's three readings, demoted to a single-galaxy
   question.** The carrier alternatives stand as measured (ORB-10157, § superposition
   adjudication): (i) the measured headroom-screening law at O(1) galactic occupancy
