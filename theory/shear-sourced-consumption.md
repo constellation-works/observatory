@@ -196,16 +196,21 @@ Stated before anyone gets excited:
    fields?) or pathology is unknown and must be bounded before the law is more than a
    steady-state statement. **Update 2026-08-21:** the translating case is now opened
    analytically in [moving-sources-in-the-closed-system](moving-sources-in-the-closed-system.md)
-   — exact speed isotropy (the wind cancels from clocks at first order), a proven
-   first-order wake difference from GR's moving-source river, and a new named debt
+   — exact speed isotropy (the wind cancels from the speed field; the clock question is
+   relational and open), a first-order wake in the direction field where mass-frame GR
+   (exactly Schwarzschild — uniform motion is gauge) has none, and a new named debt
    (consumed momentum); the wind-tunnel fixture ran the same day (ORB-10935): Galilean
    null exact, drag-sign consumed momentum measured, but **no smooth steady branch found
    at any wind**. The dynamical-relaxation fixture (ORB-10937, same day) then evolved the
    real equations: slow relaxation unresolved at horizon (velocity settles, the
    consumption trough still deepening at a U-independent rate), and the realized drag is
-   **linear in the wind** (≈56·U^0.98) — the physically sensible momentum-capture form,
-   overturning the constructed branch's near-U-independence. The extended-horizon fixture
-   is the successor. Rotation and waves remain open.
+   **linear in the wind** (≈56·U^0.98) — a fixed-strength sink (wind-independent
+   consumption Q, captured momentum n·Q·U; corrected from an earlier "momentum-capture"
+   reading at the 2026-08-21 critique), overturning the constructed branch's
+   near-U-independence. The extended-horizon fixture is the successor (amended:
+   cavitation named a kill outcome; early velocity-sector Bernoulli residual admitted);
+   an acoustic ray-tracing scale estimate (ORB-10939) brackets the photon sector.
+   Rotation and waves remain open.
 6. **It does not touch the galactic question.** The acceleration-organization problem
    (ORB-10169) is untouched: this law addresses the clock/photon-sector debt, not the
    boost's carrier or form.

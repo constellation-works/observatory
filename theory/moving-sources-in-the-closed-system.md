@@ -22,15 +22,16 @@ substrate equation with derived dynamics
 not a model; Branch C — matter as excitations of the medium — is the only live reading).
 The closed system **is** such an explicit substrate equation, and its uniform-motion
 problem turns out to be partly solvable in closed form. Two exact results fall out, one
-reassuring and one sharp: the wind is invisible in the *speed* field (and therefore, in
-the excitation reading, in the clock sector at first order), and the flow *pattern* around
-a moving mass provably differs from general relativity's moving-source river at first
-order in the wind — a measurable wake, with a new named debt (consumed momentum) attached.
+reassuring and one sharp: the wind is invisible in the *speed* field (what that means
+for clocks is a relational question — Theorem 1, consequence 2), and the flow *pattern* around
+a moving mass carries a wake at first order in the wind that general relativity — for
+which uniform motion is gauge — has no mass-frame counterpart of: a measurable
+direction-field departure, with a new named debt (consumed momentum) attached.
 
 **Current verdict:** the wind-tunnel fixture ran (ORB-10935, faraday, 2026-08-21 — §
 adjudication below) and split the front cleanly. The Galilean null and the Bernoulli
 branch's lattice realization are verified at machine precision, the measured wake differs
-grossly from GR's boosted river (0.46–0.73 rad RMS), and the Bernoulli speed law's
+grossly from the Galilean river comparator U + v_GP (0.46–0.73 rad RMS), and the Bernoulli speed law's
 no-stagnation-point corollary gives a sharp qualitative discriminator. But the apparatus's
 predeclared steady-existence measurable returned a real wrinkle: **no globally smooth
 steady single-valued flow branch exists at any swept wind strength** (ladder-stable
@@ -52,6 +53,19 @@ is **linear in the wind** (|∫s·v_x dV| ≈ 56·U^0.98, drag sign at every U),
 branch's near-U-independent 20.3·U^0.098. The extended-horizon fixture (filed at this
 adjudication) inherits the kill next.
 
+A requested outside critique was then arbitrated (grok, Daniel, 2026-08-21 — § frame
+critique below) and re-aimed the confrontation: mass-frame GR is exactly Schwarzschild
+(uniform motion is gauge), so the boosted-GP comparator was a Galilean coordinate
+picture, not a GR observable. Theorem 2 is restated with corrected order counting — the
+wake/g₀ᵢ direction sector carries the first-order-in-U physics, while the speed field's
+U² term is second-order and its observability is an open relational question. The clock
+"cancellation" is retracted to its common-mode core, the linear drag re-read as a
+fixed-strength sink (with a posture-3 timescale that is phenomenologically silent under
+any cosmological substrate inertia), cavitation of the trough named a live branch kill
+(predeclared into ORB-10938 by amendment), a photon-sector modulation *scale estimate*
+filed (ORB-10939), and one new named obligation recorded: the **PPN reduction of the
+effective metric** — raw U/c is not comparable to α₁/α₂.
+
 ## Setup
 
 Substrate of uniform density n, at rest at infinity (frame Σ — the reservoir frame the
@@ -63,7 +77,12 @@ all Galilean-covariant): the wind blows past at −**U** at infinity, and the le
 Poisson accumulation). So σ = GM/c²r rides rigidly with the source. A finite
 level-propagation speed would add retardation distortions on top; that is the
 [retarded-scarcity-wake](retarded-scarcity-wake.md) family's question and is out of scope
-here — this doc analyzes the closed system *as implemented and measured*.
+here — this doc analyzes the closed system *as implemented and measured*. One structural
+fact to keep in view (recorded at the 2026-08-21 critique): the system as implemented has
+**two causalities** — the level is elliptic (instantaneous) while excitations ride the
+flow at finite c. The instantaneous level dodges retarded wakes by construction, and it
+dodges Carlip's aberration-cancellation question the same way, because there is nothing
+to cancel; but any ray-tracing of the analog metric traces exactly this hybrid.
 
 Steady state in the mass frame. The flow **v** (substrate velocity in the mass frame)
 obeys:
@@ -96,48 +115,87 @@ The constant is fixed at infinity. Consequences, each exact at this order:
    dynamical: the velocity sector settles but the density trough is still relaxing at the
    feasible horizon — existence remains the live question, now looking like slow
    convergence rather than intrinsic unsteadiness).
-2. **The clock sector inherits no first-order wind anomaly.** In the excitation reading
+2. **The clock sector: what is settled and what is not.** In the excitation reading
    (the only surviving one — [lorentz-violation-bounds](../studies/lorentz-violation-bounds.md)),
    a clock at rest in the mass frame dilates by its speed relative to the local river:
-   1 − |**v**|²/2c² = **1 − U²/2c² − GM/c²r** — precisely the special-relativistic
-   dilation for absolute motion U compounded with the gravitational term, the combination
-   that agrees with general relativity's boosted-Schwarzschild static clock at first
-   order (the GP-dilation identity is the river model's own,
+   1 − |**v**|²/2c² = **1 − U²/2c² − GM/c²r** against reservoir time (the GP-dilation
+   identity is the river model's own,
    [river-model-and-analog-gravity](../studies/river-model-and-analog-gravity.md)).
-   The classic ether-drift clock anomaly — the thing that kills naive medium theories —
-   *cancels by structure*: Bernoulli against a comoving level converts wind speed into
-   exactly the SR dilation the wind should produce. Second-order cross terms
-   (O(U²·GM/c⁴r)) are not examined here and belong to PPN territory.
+   What is settled: relative to a reservoir-rest clock the wind term is exactly SR's
+   dilation for motion at U, and a *uniform* U is common-mode — no local differential
+   experiment (Pound–Rebka, GPS height, spectroscopy) sees it. What is *not* settled, in
+   either direction (critique + arbitration, 2026-08-21): general relativity in the same
+   frame reads √(1 − 2GM/c²r) with no U term — a uniformly moving mass's rest frame is
+   Schwarzschild — so the U²/2c² piece *referenced to absolute reservoir time* looks
+   like a gravitational preferred-frame term; but a uniform flow can equally be
+   coordinate-like for the medium's excitations, in which case nothing local ever
+   measures it. An earlier claim here that the ether-drift clock anomaly "cancels by
+   structure" was too strong and is retracted; the opposite claim — that the term
+   becomes observable as soon as U modulates — is not established either. Only
+   *relational* predictions (clock pairs, orbital cross terms) decide it, and those
+   require reducing the effective metric to observable PPN coefficients — a named
+   obligation of this front. Second-order cross terms (O(U²·GM/c⁴r)) are not examined
+   here and belong to the same PPN territory.
 3. **Multi-source form.** Levels superpose by the counting family (measured through
    superposition order: ORB-10157, ORB-10934), so in the dilute regime
-   |**v**|² = U² + 2c²Σᵢσᵢ. The theorem survives source multiplicity.
+   |**v**|² = U² + 2c²Σᵢσᵢ. The theorem survives source multiplicity — with one caveat
+   recorded at the 2026-08-21 critique: the constant is one Bernoulli constant fixed at
+   one shared infinity. Levels superpose linearly; **wakes do not** — the two-body
+   problem, which is the actual PPN and binary-pulsar setting, is a new problem, not a
+   corollary.
 4. **The pure-wind state is exactly steady and exactly silent.** Uniform **v** = −**U**
    with no source has zero strain (checked), zero consumption, and satisfies all three
    equations — the Galilean null the apparatus must reproduce identically.
 
-## Theorem 2 — the wake is not the boost: a first-order discriminator against GR
+## Theorem 2 — the wake is not GR's: the discriminator, restated in the right frame
 
-General relativity's river around a uniformly moving mass is, at leading order in U/c, the
-kinematic boost of the static GP river: **v**_GR = **U** + **v**_GP. Its speed field is
-**anisotropic**: |**v**_GR|² = U² + 2GM/r + 2**U**·**v**_GP — a speed dipole of magnitude
-2U·v_GP·cosθ. The closed system **forbids that dipole** (Theorem 1). Equivalently, checked
-symbolically: the boosted-GP field fails the closed system's momentum equation with
-residual exactly (**U**·∇)**v**_GP ≠ 0 — it would require the comoving level to carry a
+The exact algebra first, unchanged and symbolically checked: the Galilean field
+**v** = **U** + **v**_GP fails the closed system's momentum equation with residual
+exactly (**U**·∇)**v**_GP ≠ 0 — it would require the comoving level to carry a
 velocity-coupled dipole term **U**·**v**_GP/c², which the counting mechanic does not
 generate. Draws source a scalar level; nothing sources a vector potential.
 
-Stated structurally: **the closed system as it stands has no gravitomagnetic sector.** Its
-g₀ᵢ-analog is whatever direction field the wake dynamics produce, not GR's
-velocity-coupled term. The two theories therefore differ at **O(U·v_GP)** — first order in
-the wind — in every observable that rides the flow's *direction* rather than its speed:
-photon propagation (fore-aft deflection and Shapiro asymmetry around a moving lens), and
-orbiting-clock cross terms (for an orbital velocity **w**, dilation reads
-|**v** − **w**|²; the −2**v**·**w** term samples the direction field, so the wake pattern
-sets an O(Uw/c²) orbital-phase modulation that GR fixes differently). Whether the
-measured wake conspires toward or away from GR's structure is exactly what the wind-tunnel
-apparatus measures; the external bounds it must then face (moving-lens deflection,
-preferred-frame PPN α₁/α₂, frame-dragging measurements) are the studies note's cargo —
-`conjecture — to verify` until sourced.
+What that comparator *is* was corrected at the 2026-08-21 frame critique.
+**U** + **v**_GP is GR's moving river only as a *lab-frame coordinate picture* — the
+Painlevé–Gullstrand shift dragged along Galileanly; it is not a GR observable. In GR a
+uniformly moving mass has a rest frame, that rest frame is exactly Schwarzschild, and
+uniform motion is gauge: mass-frame physics cannot depend on U. The "GR speed dipole
+2**U**·**v**_GP" this section's first draft forbade — and boosted-GP's axis stagnation
+zeros — are artifacts of adding **U** in the wrong frame; ORB-10935's measured
+departures from that field remain informative about the wake but say nothing against GR
+proper.
+
+The restated discriminator, with the order counting done carefully (arbitration,
+2026-08-21):
+
+- **At O(U²), in g₀₀:** the closed system's mass-frame speed field is √(U² + 2c²σ)
+  where GR's is √(2GM/r) — motion through the substrate enters the analog metric's g₀₀
+  at *second* order in U. Whether that term is observable at all is the open relational
+  question of the clock consequence above (a uniform flow can be coordinate-like for
+  excitations); it is not automatically a measurable anomaly.
+- **At O(U), in the direction field — the g₀ᵢ-analog sector:** this is where genuinely
+  first-order-in-U physics lives, and it is the sector Theorem 2's observables always
+  pointed at. In the mass frame GR's optics and orbital cross terms are exactly
+  Schwarzschild's — the deflection field is static radial GP, no wake. The closed
+  system's wake distorts the direction field away from radial GP at O(U). Every
+  observable that samples flow *direction* — photon fore-aft deflection and Shapiro
+  asymmetry around a moving lens, orbiting-clock −2**v**·**w** cross terms (an O(Uw/c²)
+  orbital-phase modulation) — differs at first order in the wind, against the *right*
+  comparator.
+
+On gravitomagnetism the slogan sharpens rather than survives: in the excitation reading
+g₀ᵢ *is* the river, and the static GP shift is already a large, gauge g₀ᵢ (it reproduces
+Schwarzschild in GP coordinates). Gravitomagnetism proper is the *physical*
+O(GM·U/c²r) sector (GP-B, LAGEOS, binary pulsars), and the obligation is not "no shift
+vector exists" but: **does the wake's deflection field δv = v − v_∞ reproduce the GEM
+sector where GEM is measured?** The counting mechanic sources no vector potential, so
+the answer comes from emergent wake dynamics or not at all. That confrontation needs
+three things, none yet in hand: a settled realized wake (the relaxation fixtures), the
+sourced external walls (moving-lens deflection, preferred-frame PPN α₁/α₂,
+frame-dragging — the studies note's cargo, `conjecture — to verify` until sourced), and
+a **PPN reduction of the effective metric to observable coefficients** — raw U/c is not
+comparable to α₁/α₂ bounds, and that reduction is recorded as a named obligation of
+this front.
 
 ## The new debt the wake exposes: consumed momentum
 
@@ -161,6 +219,29 @@ any of it to a physical drag requires the substrate-inertia normalization nothin
 family has fixed — the same class of gap as the D ↔ σ normalization on the carrier
 question. Recorded as a **named debt**, not resolved here.
 
+**The realized scaling and its reading (ORB-10937; slogan corrected at the 2026-08-21
+critique).** The dynamics returned drag *linear* in the wind: rate ≈ n·Q·U with Q a
+wind-independent volume-consumption rate. Linear-in-U is the signature of a
+**fixed-strength sink** — consumption set by the gravity-dominated trough, the wind only
+supplying the momentum each consumed parcel carries — *not* of momentum-flux capture (a
+capture cross-section times wind, ram-pressure ρU²A, is quadratic; the earlier "flux
+capture" slogan here was wrong). And the stakes are boundable, order-of-magnitude, under
+explicit hypotheses: Q physically truncates where the wind takes over — the matching
+radius r_m = 2GM/U², a few solar radii for the Sun at U ~ 300 km/s — so Q ≲ πr_m²U and
+the posture-3 drag time is τ = MU/F ~ U³/(4πG²M·n_s): the Bondi–Hoyle–Lyttleton form
+with the substrate's inertia density n_s in place of gas density. For the Sun at
+U = 300 km/s, τ ~ 2×10⁵/n_s seconds (n_s in kg/m³); age-of-solar-system safety
+(τ > 1.4×10¹⁷ s) needs only n_s ≲ 2×10⁻¹² kg/m³ — nine orders of magnitude above the
+local dark-matter density and fourteen above the cosmological critical density. **The
+fork this exposes:** for any cosmologically-motivated substrate inertia, posture 3 is
+phenomenologically silent (drag times ≥ 10⁹ Gyr) and ephemerides cannot see it; only a
+dense substrate (≳ 10⁻¹² kg/m³, let alone a Planckian medium) dies on contact. The
+three postures remain three different theories — posture 1 is directional momentum
+non-conservation (theoretically worse, phenomenologically quieter), posture 2 moves the
+books to cosmology — and which one the model owes stays open with the normalization
+debt; but the estimate relocates the fast kills: they sit in the photon and clock
+sectors, not the drag.
+
 ## What sets U — the inherited question, sharpened
 
 [retarded-scarcity-wake](retarded-scarcity-wake.md) § open debts already asks what defines
@@ -181,18 +262,31 @@ mechanism the rolling rule does not provide), or the galactic field is not river
 [gravity-as-scarcity](gravity-as-scarcity.md) § what remains live), or the model eats a
 preferred-frame contradiction at O(10⁻³).
 
+Two sharpenings from the 2026-08-21 critique stand under arbitration: (i) the
+wind/gravity matching radius r_m = 2GM/U² is a few solar radii at U ~ 300 km/s, so
+grazing-limb deflection measurements live *in the matching region*, not in a clean
+wind-dominated far field — far-field wake multipoles from a half-width-12 box are not
+yet the right observable objects; (ii) even if the galactic field is not river-carried,
+the *local* orbital winds remain — Earth moves at ~30 km/s through the Sun's river
+(~42 km/s at 1 AU), binary components through each other's wells — so the moving-source
+problem stands at U/c ~ 10⁻⁴ in every bound system, independent of the galactic-carrier
+question. Whether those winds are in tension with preferred-frame bounds is *not* a raw
+U/c comparison: it awaits the PPN reduction of the effective metric plus the studies
+note's sourced walls.
+
 ## Evidence ledger
 
 | Claim | Status | Evidence |
 |---|---|---|
 | Steady irrotational flow of the closed system around a uniformly moving mass has exactly isotropic speed \|v\|² = U² + 2c²σ; the wake is confined to the direction field (Theorem 1) | mixed | The algebra is exact (sympy) and its lattice realization is verified at machine precision — ORB-10935 G1: normalized speed dipoles 0.8–2.7×10⁻¹⁶, pointwise Bernoulli residual ≤3.9×10⁻¹⁶, all 8 U×r cases converged ([level-core-wind-tunnel](../../orrery/lab/sims/level-core-wind-tunnel/)). But the apparatus *imposes* the speed law (Hamilton–Jacobi march) and found **no globally smooth steady single-valued branch at any swept U** (§ adjudication). The dynamical fixture (ORB-10937, [level-core-dynamical-relaxation](../../orrery/lab/sims/level-core-dynamical-relaxation/)) then evolved the real equations with Bernoulli imposed nowhere: no case met the joint steadiness criterion by T = 60, so **no steady sample was admitted and the kill remains undelivered** — a finite-horizon result (velocity sector settles; density trough still relaxing, e-fold ~65 ≈ horizon), not a refutation of steadiness. The extended-horizon fixture inherits the kill |
-| A clock comoving with the moving mass reads 1 − U²/2c² − GM/c²r — no first-order ether-drift clock anomaly; wind dilation is exactly SR's | untested | Corollary of Theorem 1 in the excitation reading (readings and dilation identity: [river-model-and-analog-gravity](../studies/river-model-and-analog-gravity.md), [lorentz-violation-bounds](../studies/lorentz-violation-bounds.md)). Rides on Theorem 1's realization — unresolved until the steady-existence question settles (see the mixed row above). Second-order cross terms unexamined (PPN territory) |
+| A clock comoving with the moving mass reads 1 − U²/2c² − GM/c²r against reservoir time; the uniform-wind term is SR-exact and common-mode, and whether it is observable at all is an open *relational* question — GR in the same frame has no U term, but a uniform flow can be coordinate-like for excitations | untested | Corollary of Theorem 1 in the excitation reading (readings and dilation identity: [river-model-and-analog-gravity](../studies/river-model-and-analog-gravity.md), [lorentz-violation-bounds](../studies/lorentz-violation-bounds.md)). The first-draft claim that the ether-drift clock anomaly "cancels by structure" was retracted at the 2026-08-21 critique/arbitration as too strong; the converse (observable once U modulates) is equally unestablished. Decision requires relational clock/orbital predictions via the PPN reduction of the effective metric (named obligation) — and still rides on Theorem 1's dynamical realization. Second-order cross terms unexamined (PPN territory) |
 | The pure-wind state (no source) is an exact steady solution with exactly zero consumption | supported | ORB-10935 G4 (kill gate): no-core wind states at all four speeds keep maximum pointwise consumption ≤2.2×10⁻¹⁷ and speed error exactly 0.0 on every rung — the real frozen stencil evaluated, not a construction ([level-core-wind-tunnel](../../orrery/lab/sims/level-core-wind-tunnel/)). ORB-10937 G5 (kill gate) adds the dynamical twin: pure wind advanced to T = 60 by the full SSP-RK2 time integrator preserves velocity and density exactly with consumption at floating precision, on every rung and wind ([level-core-dynamical-relaxation](../../orrery/lab/sims/level-core-dynamical-relaxation/)) |
-| The boosted-GP field is not a solution of the closed system — residual (U·∇)v_GP; the steady wake differs from GR's moving-source river at O(U·v_GP), and the GR speed dipole 2U·v_GP is forbidden (Theorem 2) | mixed | Boost-failure is exact (symbolic residual) and the measured departure is gross, not perturbative — ORB-10935 G2: 0.456–0.732 rad weighted RMS direction departure from U + v_GP across all U, fore-aft n_x asymmetry −0.86…−0.92, and **no stagnation point can exist on any Bernoulli branch** (q ≥ U > 0) while boosted GP has axis speed zeros — a sharp qualitative discriminator. Mixed because the realized wake is provisional on the same steady-existence question as Theorem 1 — ORB-10937 admitted no steady case, so the realized direction field has still not been measured on a settled flow |
-| The closed system has no gravitomagnetic sector; reproducing tested g₀ᵢ phenomenology (moving-lens deflection, frame dragging, preferred-frame PPN α₁/α₂) from emergent wake dynamics is an open obligation with existing external bounds | conjecture — to verify | Structural (no vector source in the counting mechanic); the external bounds await the moving-source studies note this doc's program files (the note [moving-source-field-consistency](moving-source-field-consistency.md) § open debts already demanded) |
-| Consumed momentum has no bookkeeping; the wake makes the gap observable (possible secular drag on moving sources) | mixed | ORB-10935 G3 measured the constructed branch: drag sign at every wind, fit \|∫s·v_x dV\| = 20.3·U^0.098 — nearly U-independent. ORB-10937 G4 then measured the *realized* (time-averaged, still-relaxing) flow and the constructed scaling **did not survive**: consumed +x momentum is **linear in the wind** — consumed/U = 61.8, 61.8, 61.1, 57.2 across the 33× sweep, fit \|∫s·v_x dV\| = 55.9·U^0.979, drag sign at every U, finest adjacent-rung shifts within the 25% target ([level-core-dynamical-relaxation](../../orrery/lab/sims/level-core-dynamical-relaxation/)). Linear-in-U drag is what momentum-flux capture predicts (rate ∝ nU × capture volume) and is the physically sensible secular-drag form. The surface ledger stays advective-only; the debt itself (where the momentum goes, physical normalization) remains open |
+| The Galilean field U + v_GP is not a solution of the closed system (exact residual (U·∇)v_GP); the physical discriminator against GR is mass-frame: GR there is exactly Schwarzschild (U is gauge) while the closed system's wake distorts the direction field at O(U) and the speed field at O(U²) (Theorem 2, restated 2026-08-21) | mixed | Boost-failure is exact (symbolic residual). ORB-10935 G2's 0.456–0.732 rad weighted RMS direction departures, fore-aft n_x asymmetry −0.86…−0.92, and the no-stagnation corollary (q ≥ U > 0 vs axis speed zeros) are measurements against the *Galilean river picture* — informative about the wake, silent about GR proper (frame critique, 2026-08-21). The GR confrontation runs through the realized wake on a settled flow (none admitted yet — ORB-10937/ORB-10938), the sourced walls (studies note), and the PPN reduction (named obligation); ORB-10939 brackets the photon-sector modulation scale across candidate direction fields meanwhile |
+| The counting mechanic sources no vector potential; the physical gravitomagnetic obligation is whether the wake's deflection field δv reproduces the measured O(GM·U/c²r) GEM sector (GP-B, LAGEOS, binary pulsars) — the static GP shift and any uniform wind are coordinate | conjecture — to verify | Structural (no vector source in the counting mechanic); slogan corrected at the 2026-08-21 critique — a g₀ᵢ-analog exists (the river itself, gauge for the static and uniform parts), and the question is its physical O(U) deflection sector. External bounds await the moving-source studies note (the note [moving-source-field-consistency](moving-source-field-consistency.md) § open debts already demanded); PPN-coefficient contact awaits the named reduction |
+| Consumed momentum has no bookkeeping; the wake makes the gap observable (possible secular drag on moving sources) | mixed | ORB-10935 G3 measured the constructed branch: drag sign at every wind, fit \|∫s·v_x dV\| = 20.3·U^0.098 — nearly U-independent. ORB-10937 G4 then measured the *realized* (time-averaged, still-relaxing) flow and the constructed scaling **did not survive**: consumed +x momentum is **linear in the wind** — consumed/U = 61.8, 61.8, 61.1, 57.2 across the 33× sweep, fit \|∫s·v_x dV\| = 55.9·U^0.979, drag sign at every U, finest adjacent-rung shifts within the 25% target ([level-core-dynamical-relaxation](../../orrery/lab/sims/level-core-dynamical-relaxation/)). Linear-in-U means a **fixed-strength sink** — wind-independent volume consumption Q with captured momentum n·Q·U; flux capture (area × wind) would be quadratic (slogan corrected at the 2026-08-21 critique). Posture-3 back-of-envelope (§ consumed momentum): BHL-form τ ~ U³/(4πG²M·n_s), phenomenologically silent for any cosmological substrate inertia — the drag is not the fast kill. The surface ledger stays advective-only; the debt itself (where the momentum goes, physical normalization) remains open |
 | No globally smooth steady single-valued flow branch exists around a moving core at any swept wind strength — the moving system's steady state, if any, is not a positive-x Bernoulli graph | supported | ORB-10935's predeclared steady-existence measurable: caustic clip fractions at finest 0.740, 0.713, 0.573, 0.028 for U/v_GP ∈ {0.03, 0.1, 0.3, 1}, ladder-stable across 41³/61³/81³. At low U partly structural (the near-radial GP inflow limit is not a positive-x graph), but the trans-critical wind also clips. ORB-10937's dynamics neither confirm nor deny a steady end-state within T = 60: the flow is classified `decaying_slowly_not_yet_saturated` at every (U, rung) — what the true dynamics settle to is now the extended-horizon fixture's question |
 | The approach to steadiness is rate-limited by the density sector, not the velocity sector: the velocity field settles while the consumption trough relaxes at a U-independent rate | supported | ORB-10937 G1 finest rung, all four winds: the velocity residual meets its half of the predeclared criterion over the window (max dv_rms 5.2–5.3×10⁻⁴ < 2×10⁻³) while the density residual fails it everywhere (dn_rms 4.5–6.1×10⁻³), with minimum density still declining monotonically (0.27–0.32 at T = 60) and late log-residual slope −0.0148…−0.0173 per time unit across the whole sweep — an e-folding time ~65, U-independent, comparable to the horizon ([level-core-dynamical-relaxation](../../orrery/lab/sims/level-core-dynamical-relaxation/)). Consistent with relaxation toward a consumption–resupply balance rather than turbulence: no growing modes, no saturated shedding frequency dominates |
+| The relaxing trough ends in a finite density floor n_∞(U) > 0 rather than cavitation (n → 0 around a moving core); cavitation would void the excitation reading in a hole around every moving mass — a branch kill | untested | Named at the 2026-08-21 critique: ORB-10937's residual log-slope is not the same series as n_min's, and minimum density 0.27–0.32 still falling at T = 60 does not distinguish a floor from slow cavitation. Predeclared by amendment as a named outcome of the extended-horizon fixture (ORB-10938): track n_min(t) toward a floor vs toward the positivity cutoff |
 | The local wind U at real bodies is O(local orbital/infall speeds) if the relevant fields are river-carried, putting photon-sector wake effects at O(10⁻³) relative scale for the Sun | conjecture | Arithmetic over sourced velocity scales ([lorentz-violation-bounds](../studies/lorentz-violation-bounds.md) § velocity scales); contingent on the open galactic-carrier question; kill test executable only after the realized wake structure + the studies note |
 
 ## The program — gates predeclared
@@ -322,10 +416,11 @@ rerun verified. Two initial conditions (ramped pure wind; wind/GP blend) at (33�
    with finest values 0.263, 0.876, 2.60, 8.11 — consumed/U = 61.8, 61.8, 61.1, 57.2,
    i.e. **linear in the wind within ~8% across a 33× sweep** (fit |∫s·v_x dV| =
    55.9·U^0.979, vs the constructed branch's 20.3·U^0.098). All finest adjacent-rung
-   shifts pass the 25% convergence target. Linear-in-U drag is what momentum-flux
-   capture predicts — the core eats the incoming flux at a rate ∝ nU × capture volume —
-   and is the physically sensible form for a secular drag; the constructed branch's
-   near-U-independence was an artifact of the imposed-Bernoulli ansatz. Ledger stays
+   shifts pass the 25% convergence target. Linear-in-U is the signature of a
+   **fixed-strength sink** — wind-independent volume consumption Q, captured momentum
+   n·Q·U; flux capture (area × wind) would be quadratic. The slogan first written here
+   said "flux capture" and was corrected at the 2026-08-21 critique; the constructed
+   branch's near-U-independence was an artifact of the imposed-Bernoulli ansatz. Ledger stays
    advective-only (no level-stress surface term supplied by the model).
 4. **G5 — pass, exactly.** Pure wind, no core, advanced to T = 60 by the identical full
    time integrator: velocity and density preserved exactly, consumption at floating
@@ -352,6 +447,54 @@ ws_orrery) — same apparatus, T ≥ 600 (~9 observed e-folds), sectoral residua
 trough-saturation diagnostic predeclared, global mass budget (boundary influx vs ∫s dV →
 balance) as the steady-approach signature, and the same inherited kill: any admitted
 steady case's speed field is the discovered test of Theorem 1.
+
+By amendment at the 2026-08-21 critique triage, the successor (ORB-10938, running) also
+predeclares: **cavitation as a named outcome and kill** (track n_min(t) toward a finite
+floor vs toward the positivity cutoff — n → 0 voids the excitation reading around every
+moving mass); the **early velocity-sector Bernoulli residual** (Theorem 1 is a statement
+about **v** alone, and the velocity sector already meets its criterion — measure
+|v|² − U² − 2c²σ on any settled velocity sector without waiting for the density to
+finish); adjacent-rung agreement on the decay *slope* (the ~65 e-fold is the most
+artifact-prone number in ORB-10937 — donor-cell diffusion acts as an effective
+relaxation rate); and ‖∇×v‖ on every case (a velocity sector that settles with growing
+curl fails Theorem 1's irrotational premise numerically). A photon-sector modulation
+scale estimate is filed alongside (ORB-10939 — acoustic ray tracing across candidate
+direction fields vs boosted Schwarzschild; a bracket, not a falsifier, the direction
+field being exactly the unsettled quantity).
+
+### Frame critique and arbitration (grok, Daniel — 2026-08-21): the comparator moves to the right frame
+
+A requested outside critique of this doc (orchestrator inbox,
+msg-2026-08-20-moving-sources-closed-system-critique) was arbitrated by Daniel and
+reconciled in this change-set. Accepted and folded in place: the boosted-GP comparator
+is GR's lab-frame coordinate picture, not a GR observable (Theorem 2 restated —
+mass-frame GR is Schwarzschild; the speed-dipole and axis-stagnation contrasts demoted
+to Galilean-picture comparisons); the clock corollary's "cancels by structure"
+retracted; the linear drag re-read as a fixed-strength sink with a posture-3 timescale
+bound; cavitation vs finite floor named as the trough's undistinguished end-states;
+Theorem 1's velocity-only character exploited (early Bernoulli residual on a settled
+velocity sector); the matching-region and local-orbital-wind sharpenings under § what
+sets U; the two-causalities note under § setup; the multi-source caveat under Theorem 1.
+
+Where the arbitration trimmed the critique — recorded so the ledger does not overclaim
+in the other direction:
+
+1. The U² term in g₀₀ is *second* order in U; genuinely first-order effects arise
+   through the wake/g₀ᵢ sector — which is where Theorem 2's observables already pointed.
+2. U/c ~ 10⁻³ is not directly comparable to PPN α₁/α₂ — the effective metric must first
+   be reduced to observable PPN coefficients. That reduction is now a named obligation
+   of this front.
+3. Neither the cancellation nor the observability of the common U² clock term is
+   established: a uniform flow can be coordinate-like for excitations. Only relational
+   clock/orbital predictions settle it.
+4. Ray tracing cartoon direction fields is a *scale estimate*, not a falsifier — the
+   direction field is exactly the unsettled quantity. ORB-10939 is scoped accordingly:
+   its primary deliverable is the cross-field spread of the modulation, which quantifies
+   how much the photon sector is hostage to the relaxation outcome.
+
+Actions in this change-set: the theorem and ledger restatements above; ORB-10938 amended
+(cavitation outcome, early velocity-sector residual, slope convergence, curl reporting);
+ORB-10939 filed (photon-sector modulation scale, medium, ws_orrery).
 
 **Moving-source bounds studies note (kepler, ws_principia — filed with this doc).** The
 sourced walls Theorem 2's confrontation needs: gravitational aberration in GR (the Carlip

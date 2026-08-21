@@ -1057,8 +1057,9 @@ organize (by acceleration). What remains live:*
   **no gravitomagnetic sector**, so moving-lens, preferred-frame (α₁/α₂), and
   frame-dragging phenomenology all hang on the measured wake. **ORB-10935 ran the wind
   tunnel (2026-08-21):** the Galilean null and the Bernoulli branch are exact at machine
-  precision, the wake departs from the boosted river by 0.46–0.73 rad RMS, the speed law
-  forbids stagnation points (a qualitative anti-GR discriminator), and the consumed-
+  precision, the wake departs from the Galilean river comparator U + v_GP by 0.46–0.73
+  rad RMS, the speed law forbids stagnation points (a discriminator against that
+  Galilean picture — mass-frame GR proper is Schwarzschild; 2026-08-21 reframe), and the consumed-
   momentum debt measured with **drag sign** at every wind — but no globally smooth steady
   branch exists at any swept U, so whether the dynamics realize the theorems' steady
   premise is now the live question. **ORB-10937 ran the dynamical relaxation
@@ -1066,11 +1067,17 @@ organize (by acceleration). What remains live:*
   relaxation unresolved at the T = 60 horizon — the velocity sector settles, the
   consumption trough is still deepening at a U-independent rate (e-fold ~65) — so no
   steady sample was admitted and the Theorem 1 kill remains undelivered; the realized
-  drag, though, is **linear in the wind** (|∫s·v_x| ≈ 56·U^0.98), overturning the
+  drag, though, is **linear in the wind** (|∫s·v_x| ≈ 56·U^0.98) — a fixed-strength
+  sink, corrected from an earlier "momentum-capture" reading — overturning the
   constructed branch's near-U-independent scaling, and the dynamical Galilean null is
-  exact. The extended-horizon successor fixture is filed. The moving-source bounds
-  studies note (ORB-10936) is still pending; the "what is U locally" question couples to
-  the galactic-carrier bullet below.
+  exact. The extended-horizon successor fixture is filed (amended 2026-08-21: cavitation
+  of the trough named a kill outcome; early velocity-sector Bernoulli residual
+  admitted). A frame critique arbitrated the same day restated the GR comparison
+  (mass-frame GR is Schwarzschild; the Galilean U + v_GP picture is not a GR
+  observable) and named the PPN reduction of the effective metric as an obligation; an
+  acoustic ray-tracing scale estimate (ORB-10939) brackets the photon-sector modulation
+  meanwhile. The moving-source bounds studies note (ORB-10936) is still pending; the
+  "what is U locally" question couples to the galactic-carrier bullet below.
 - **What carries the MW boost — ORB-10170's three readings, demoted to a single-galaxy
   question.** The carrier alternatives stand as measured (ORB-10157, § superposition
   adjudication): (i) the measured headroom-screening law at O(1) galactic occupancy
