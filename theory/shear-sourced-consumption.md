@@ -194,7 +194,12 @@ Stated before anyone gets excited:
    configurations all shear; the law consumes in all of them. Whether that produces
    phenomenology (secular drag on orbiting bodies? consumption in gravitational-wave
    fields?) or pathology is unknown and must be bounded before the law is more than a
-   steady-state statement.
+   steady-state statement. **Update 2026-08-21:** the translating case is now opened
+   analytically in [moving-sources-in-the-closed-system](moving-sources-in-the-closed-system.md)
+   — exact speed isotropy (the wind cancels from clocks at first order), a proven
+   first-order wake difference from GR's moving-source river, and a new named debt
+   (consumed momentum); the wind-tunnel lattice fixture is filed with that doc. Rotation
+   and waves remain open.
 6. **It does not touch the galactic question.** The acceleration-organization problem
    (ORB-10169) is untouched: this law addresses the clock/photon-sector debt, not the
    boost's carrier or form.

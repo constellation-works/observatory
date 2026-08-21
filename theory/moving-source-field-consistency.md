@@ -4,7 +4,7 @@ status: growing
 families: [retarded-scarcity-wake]
 almanac: 15-discussions/26-08/from-galactic-motion-to-the-moving-gravity-medium-problem.md
 created: 2026-08-07
-updated: 2026-08-08
+updated: 2026-08-21
 ---
 
 # Moving-source field consistency
@@ -455,6 +455,11 @@ What would overturn or materially narrow the argument above:
 
 - [The retarded-scarcity wake](retarded-scarcity-wake.md) — the parent branch this document
   adjudicates; its Branch C and its observational program survive
+- [Moving sources in the closed system](moving-sources-in-the-closed-system.md) — what this
+  document demanded (an explicit substrate equation with derived moving-source behavior),
+  now supplied for the measured elliptic-level closed system of the gravity-as-scarcity
+  family: exact speed isotropy, a proven first-order wake difference from GR's boosted
+  river, and a predeclared wind-tunnel fixture (2026-08-21)
 - [Gravity as the gradient of scarce space](gravity-as-scarcity.md) — grandparent mechanics and its
   unchanged empirical verdicts
 - [Lorentz-violation bounds](../studies/lorentz-violation-bounds.md) — the wall that Branch C, and

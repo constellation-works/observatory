@@ -1047,6 +1047,17 @@ organize (by acceleration). What remains live:*
   External universality sourcing remains **ORB-10933** (backlog). Adjudication details:
   [shear-sourced-consumption](shear-sourced-consumption.md) § adjudications (ORB-10932,
   ORB-10755, ORB-10934).
+- **The moving-source front (opened 2026-08-21, kepler).** With the closure fully measured,
+  the next structural exposure is a source moving *through* the substrate —
+  [moving-sources-in-the-closed-system](moving-sources-in-the-closed-system.md). Two exact
+  results (analytic, fixture pending): the wind cancels from the speed field and the
+  first-order clock sector (Bernoulli against the comoving level turns wind speed into
+  exactly SR's dilation), and the wake provably differs from GR's boosted river at
+  O(U·v_GP) — the closed system has **no gravitomagnetic sector**, so moving-lens,
+  preferred-frame (α₁/α₂), and frame-dragging phenomenology all hang on the measured wake.
+  New named debt: consumed momentum (drag on moving sources). The wind-tunnel lattice
+  fixture and the moving-source bounds studies note are filed with that doc; the "what is
+  U locally" question couples to the galactic-carrier bullet below.
 - **What carries the MW boost — ORB-10170's three readings, demoted to a single-galaxy
   question.** The carrier alternatives stand as measured (ORB-10157, § superposition
   adjudication): (i) the measured headroom-screening law at O(1) galactic occupancy
@@ -1099,3 +1110,5 @@ ORB-10164, and that doc's §B2 obligation. Nothing in that doc moves this ledger
 **Successor branch:** [the retarded-scarcity wake](retarded-scarcity-wake.md) isolates the
 new moving-substrate question — a possible leading/trailing potential dipole — without
 reopening or extending this document's fixed-β, photon-sector, or source-law verdicts.
+The elliptic-level counterpart — what the *measured closed system* says about a moving
+source, exactly — is [moving-sources-in-the-closed-system](moving-sources-in-the-closed-system.md).
