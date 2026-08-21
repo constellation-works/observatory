@@ -1033,16 +1033,20 @@ organize (by acceleration). What remains live:*
   A² = 2c²σ_s·r_s (exponent 0.5 ± 7.5×10⁻¹⁶ over 3 decades of mass), the amplitude is
   radius-independent at fixed draw (the flux signature did not revive), and composition is
   quadrature (A ∝ N^0.5±2×10⁻¹⁵). **The amplitude core of this debt is paid** — dissolved
-  into postulates already named, no new postulate created. What remains of the debt is the
-  superposition wrinkle, now sharpened: ORB-10755 (orrery `acc9fab`) resolution-converged
-  the divergent family *under flux cores* (1/(1 + 4.63·D^0.606) at 65³), so the divergence
-  is real physics of that boundary condition; whether level cores — the closure's physical
-  boundary — restore the ORB-10157 family is the filed discriminator **ORB-10934**
-  (predeclared both ways: confirmation dissolves the two-model disagreement into one
-  mechanic with one physical boundary condition; refutation makes the disagreement real
-  and the closure's prediction dead). External universality sourcing remains **ORB-10933**
-  (backlog). Adjudication details: [shear-sourced-consumption](shear-sourced-consumption.md)
-  § adjudications (ORB-10932, ORB-10755).
+  into postulates already named, no new postulate created. What remained was the
+  superposition wrinkle, sharpened by ORB-10755 (orrery `acc9fab`): the divergent family
+  is resolution-converged *under flux cores* (1/(1 + 4.63·D^0.606) at 65³) — real physics
+  of that boundary condition. **The discriminator ran and confirmed the closure
+  (2026-08-21): ORB-10934** (orrery `9e273e2`) — full 3-D draw-sourced level cores, same
+  frozen stencil — measured the two-core family reverting to the counting mechanic's
+  headroom screening (continuum p = 1.0717 ± 0.0036 vs ORB-10157's 1.071; flux family
+  loses ~14× in log-RMSE; far-field quadrature at 5×10⁻¹⁶). **The two-model disagreement
+  is dissolved** — one mechanic, two boundary conditions, only the level one physical —
+  and with it the debt's superposition wrinkle. The GP-conditional clock and photon
+  sectors now wait on the photon gate (ORB-10158's excitation arm), not on this debt.
+  External universality sourcing remains **ORB-10933** (backlog). Adjudication details:
+  [shear-sourced-consumption](shear-sourced-consumption.md) § adjudications (ORB-10932,
+  ORB-10755, ORB-10934).
 - **What carries the MW boost — ORB-10170's three readings, demoted to a single-galaxy
   question.** The carrier alternatives stand as measured (ORB-10157, § superposition
   adjudication): (i) the measured headroom-screening law at O(1) galactic occupancy
