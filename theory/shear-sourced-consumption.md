@@ -4,7 +4,7 @@ status: growing
 families: [gravity-as-scarcity]
 almanac: 15-discussions/26-08/from-big-bang-questions-to-the-shear-consumption-law.md
 created: 2026-08-11
-updated: 2026-08-20
+updated: 2026-08-21
 ---
 
 # Shear-sourced consumption
@@ -56,6 +56,21 @@ by the counting family, not the flux family). Every claim is gated: **ORB-10932*
 density, and composition gates), the level-core note on **ORB-10755**, and the sourcing
 task **ORB-10933**. If ORB-10932's gates pass, the source-law debt's amplitude core
 dissolves into postulates the family had already named — no new debt is created.
+
+**Adjudication (2026-08-21):** ORB-10932's three gates **all passed** on faraday's
+cataloged level-coupled lattice
+([level-coupled-shear-lattice](../../orrery/lab/sims/level-coupled-shear-lattice/), orrery
+`82b885c`): the level closure A² = 2c²σ_s·r_s is measured (A-vs-level exponent
+0.5000000000000002 ± 7.5×10⁻¹⁶ regression SE across 3 decades of mass), the amplitude is
+independent of core radius at fixed draw (exponent −2×10⁻¹⁷ ± 9×10⁻¹⁵ over a 4× span —
+the flux signature A ∝ r_s^(−3/2) did **not** revive), and composition is quadrature
+(A-vs-N exponent 0.4999999999999982 ± 2.0×10⁻¹⁵ across 1.5 decades). **The amplitude core
+of the source-law debt is paid** — dissolved into the named postulates. In the same
+window, **ORB-10755** resolution-converged the flux-core superposition family
+(c = 4.63 ± 0.18, β = 0.606 ± 0.027 at 65³), sharply distinct from ORB-10157's headroom
+family, with level cores explicitly out of scope there. The closure's one remaining live
+measurable is therefore its superposition prediction — the level-core two-core
+discriminator, filed as **ORB-10934**, predeclared both ways.
 
 ## The law
 
@@ -148,12 +163,18 @@ Stated before anyone gets excited:
    closure below):** the natural guess is now excluded in closed form, and the coupling has
    an analytic closure — level matching against the counting field — that dissolves this
    debt into already-named postulates iff its lattice gates pass (**ORB-10932**).
+   **Adjudicated 2026-08-21: the gates passed** (§ adjudication under the closure section);
+   this debt is paid.
 3. **Stability is unproven.** Uniqueness of the steady state is not convergence to it. If GP
    is a repeller rather than an attractor under time-dependent dynamics, the law is dead on
    arrival. Lattice question.
 4. **Superposition is unknown.** Two-source behavior under the shear law has no analytic
    result here — and after ORB-10157 (the multiplicative rule's derivation dying by
-   measurement), no superposition claim gets stated without a lattice run.
+   measurement), no superposition claim gets stated without a lattice run. **Update
+   2026-08-21:** the flux-core arm is now resolution-converged (**ORB-10755** — the
+   divergent family is real physics of flux cores, not a grid artifact); the level-core
+   arm, the closure's physical boundary condition, is the open discriminator
+   (**ORB-10934**).
 5. **Non-radial flows are unexplored.** Rotating, translating, and wave-carrying
    configurations all shear; the law consumes in all of them. Whether that produces
    phenomenology (secular drag on orbiting bodies? consumption in gravitational-wave
@@ -172,12 +193,12 @@ Stated before anyone gets excited:
 | The law consumes nothing in homogeneous Hubble flow (cosmological silence) | supported | ORB-10751 silence gate: uniformly expanding lattice shows max consumption density 7.4×10⁻¹⁸ = 3.7×10⁻¹⁶ of n\|H\| — consistent with zero |
 | GP is a dynamical *attractor* under the law (arbitrary initial flows converge) | supported | ORB-10751 attractor gate: convergence from rest and from perturbed initial states; initial-condition exponent difference 1.2×10⁻⁶; resolution (128/256/512 shells) and timestep (dt 0.2/0.1/0.05) sequences both converge on −1/2 |
 | A core boundary condition selects the exterior amplitude A monotonically and stably | supported | ORB-10751 amplitude gate: exterior half-power amplitude rises strictly (2.4×10⁻⁴ → 2.6×10⁻²) across core flux 0.003–0.3; max initial-condition relative spread 9.6×10⁻⁷ |
-| A mass of energy E imposes specifically A = √(2GM) via its boundary condition | mixed | The *controllability* half is measured (row above); the *identification* half now has a closed-form candidate — the level-matching closure (§ 2026-08-20): counting level + rolling rule + shear law force A = √(2GM) uniquely, with no new postulate. `mixed` until the closed system is measured to be a lattice attractor: **ORB-10932** level gate |
-| The amplitude coupling is flux-type — a universal per-energy consumption rate matched at the matter surface (the doc's recorded natural guess) | refuted | Closed-form (§ closure (a), symbolically checked): flux matching forces G_eff = κ²ρ_body/(24πn²) — source strength ∝ bulk density, independent of M — contradicting the counting mechanic's verified mass-only σ ∝ M normalization and breaking mass additivity except at universal packing density. External universality bounds `conjecture — to verify` → **ORB-10933**; lattice discriminator predeclared as **ORB-10932**'s density gate |
-| The closed system {draw-sourced 1/r level, inertial rolling rule, coefficient-one shear law} is consistent, parameter-free, and uniquely selects GP with A = √(2GM); consistency forces the shear coefficient k = 1 | supported | Closed-form derivation (§ closure (b)): Bernoulli against the 1/r level gives ½v² = c²σ = GM/r at every radius; shear+continuity independently give v ∝ r^((k−2)/(k+1)), matching only at k = 1. Verified symbolically. The *attractor* question is separate and `untested` → **ORB-10932** |
-| Newtonian mass additivity forces quadrature composition of river amplitudes (A² additive; A ∝ √N for clustered sources) | supported | Algebra (§ closure (c)): GM_eff = A²/2 and mass additivity. Kills linear velocity superposition (σ ∝ N²) and one-amplitude laws (s ∝ nv³) structurally; level coupling passes by construction. Lattice gate: **ORB-10932** composition gate (kill on converged exponent ≠ 1/2) |
-| The ORB-10751 two-core superposition divergence is a flux-boundary artifact; level-type cores restore the counting mechanic's ORB-10157 headroom family | conjecture | Predicted by the closure (§ closure (d)); recorded as a pre-pickup comment on **ORB-10755**. A converged confirmation of the divergent family under flux cores would not adjudicate the level-coupled system; the level-core arm does |
-| Two-source superposition under the shear law reproduces the measured headroom-screening family (ORB-10157) | mixed — measured divergence | ORB-10751 two-core probe (exploratory, coarse 25³ grid): best fit A(D) = 1/(1 + 6.82 D^0.668) at log-RMSE 0.031; the ORB-10157 family (1−D)^1.071 fits at log-RMSE 0.421 with substantially weaker screening. **The shear law and the counting mechanic disagree on superposition** — at most one matches whatever nature does. Resolution-converged adjudication filed as **ORB-10755** |
+| A mass of energy E imposes specifically A = √(2GM) via its boundary condition | supported | Controllability measured (row above); identification closed analytically (§ the closure) and **measured as a lattice attractor: ORB-10932 level gate passed** — A vs c²σ_s·r_s exponent 0.5000000000000002 ± 7.5×10⁻¹⁶ (regression SE) across 3 decades of mass, max \|A²/(2c²σ_s·r_s) − 1\| = 4.7×10⁻³, rest/perturbed amplitude spread 2.4×10⁻⁹ ([level-coupled-shear-lattice](../../orrery/lab/sims/level-coupled-shear-lattice/), orrery `82b885c`) |
+| The amplitude coupling is flux-type — a universal per-energy consumption rate matched at the matter surface (the doc's recorded natural guess) | refuted | Closed-form (§ closure (a), symbolically checked): flux matching forces G_eff = κ²ρ_body/(24πn²) — source strength ∝ bulk density, independent of M — contradicting the counting mechanic's verified mass-only σ ∝ M normalization and breaking mass additivity except at universal packing density. **Lattice discriminator ran (ORB-10932 density gate): at fixed draw, A is independent of core radius over a 4× span (exponent −2×10⁻¹⁷ ± 9×10⁻¹⁵) — the flux signature A ∝ r_s^(−3/2) did not revive.** External universality bounds remain `conjecture — to verify` → **ORB-10933** (backlog) |
+| The closed system {draw-sourced 1/r level, inertial rolling rule, coefficient-one shear law} is consistent, parameter-free, and uniquely selects GP with A = √(2GM); consistency forces the shear coefficient k = 1 | supported | Closed-form derivation (§ closure (b)): Bernoulli against the 1/r level gives ½v² = c²σ = GM/r at every radius; shear+continuity independently give v ∝ r^((k−2)/(k+1)), matching only at k = 1. Verified symbolically. **The attractor question is now measured: ORB-10932 converges to the closed system from rest and from seeded perturbed states** (96/192/384-shell ladder, finest relative amplitude shift 3.2×10⁻³; CFL-halving shift 1.0×10⁻⁹) |
+| Newtonian mass additivity forces quadrature composition of river amplitudes (A² additive; A ∝ √N for clustered sources) | supported | Algebra (§ closure (c)): GM_eff = A²/2 and mass additivity. Kills linear velocity superposition (σ ∝ N²) and one-amplitude laws (s ∝ nv³) structurally; level coupling passes by construction. **Measured: ORB-10932 composition gate passed** — A vs N exponent 0.4999999999999982 ± 2.0×10⁻¹⁵ across 1.5 decades of N (radial-monopole reduction; nonspherical near-field is ORB-10934's territory) |
+| The ORB-10751 two-core superposition divergence is a flux-boundary artifact; level-type cores restore the counting mechanic's ORB-10157 headroom family | conjecture | Predicted by the closure (§ closure (d)). The flux arm is now settled: **ORB-10755** converged the divergent family under flux cores (c = 4.63 ± 0.18, β = 0.606 ± 0.027 at 65³) — real physics of that boundary condition, not a grid artifact, and by design not an adjudication of the level-coupled system. The level-core discriminator is filed as **ORB-10934** (family gate predeclared both ways) |
+| Two-source superposition under the shear law reproduces the measured headroom-screening family (ORB-10157) | mixed — flux arm converged divergent, level arm untested | **ORB-10755** (25³/41³/65³ ladder, fixed physical core width, matched depletion grid, second-order spacing extrapolation): under flux cores the family converges to A(D) = 1/(1 + c·D^β), c = 4.6251 ± 0.1841, β = 0.60556 ± 0.02687; 65³ log-RMSE 0.051 vs 0.241 (constrained headroom) and 0.480 (fixed ORB-10157); separation controls log-RMSE 0.035; step-halving shift 1.8×10⁻⁷. **Under flux cores the answer is a converged no.** Under level cores — the boundary condition the closure says is physical — `untested` → **ORB-10934** |
 | Global budget: Hubble generation inside R balances GP intake exactly at the turnaround radius R³ = 2GM/H² | mixed | **ORB-10754** (tycho, 11 systems, Karachentsev program + Virgo/Fornax): with independent masses, measured turnaround radii sit at 0.43–0.83× (median ≈ 0.55) the budget radius — right scale, wrong coefficient. Data track the ΛCDM zero-velocity formula (≈ 1.0), whose matter/Λ factors the pure-Hubble idealization here drops. Circular R₀-derived masses excluded per the compilation's own flags ([study note](../studies/cosmological-expansion-and-bound-systems.md)) |
 | "Shear consumes, isotropic strain doesn't" corresponds to GR's Weyl/Ricci split | conjecture | Resonance only; no derivation, no citation yet |
 
@@ -226,6 +247,20 @@ imposed.** Verified at source against `summary.json`:
    resolution-converged adjudication is filed as **ORB-10755** (faraday, ws_orrery, high):
    ≥3-rung resolution ladder, deeper-depletion range, separation control — converged
    family or artifact-verdict, predeclared.
+
+### Adjudication (ORB-10755, faraday, 2026-08-21) — the divergence survives resolution, under flux cores
+
+Faraday promoted the probe to a deterministic 25³/41³/65³ ladder with fixed physical
+source width and the frozen coefficient-one rule (orrery `acc9fab`; run record
+`2026-08-21-seed-42.json`, SHA `78d428a4…`). Fitted on one matched depletion grid per
+rung, with second-order spacing extrapolation: **c = 4.6251 ± 0.1841,
+β = 0.60556 ± 0.02687** in A(D) = 1/(1 + c·D^β); 65³ log-RMSE 0.051 against 0.241
+(constrained headroom) and 0.480 (fixed ORB-10157 family). Depletion extended to
+D = 0.243; three fixed-mass separation controls fit A(D) at log-RMSE 0.035; 65³
+step-halving shifts the result by 1.8×10⁻⁷. **The divergent family is converged physics
+of flux-type cores — not a grid artifact.** The run kept the level-core closure explicitly
+out of scope as a distinct boundary model, so this settles the flux arm only; the
+discriminating level-core arm is **ORB-10934** (§ closure (d)).
 
 ## The amplitude–mass coupling — the level-matching closure (kepler, 2026-08-20)
 
@@ -339,7 +374,9 @@ superposition family reverts to ORB-10157's headroom screening.** If it holds, t
 lattice models disagree on a measurable" wrinkle dissolves: there is one mechanic with two
 boundary conditions, only one of them physical. Recorded on **ORB-10755** as a pre-pickup
 comment (a converged confirmation of the divergent family under flux cores would not
-adjudicate the level-coupled system). One independent pressure point, also recorded there:
+adjudicate the level-coupled system — which is exactly what ORB-10755 then delivered:
+converged flux-arm divergence, level cores out of scope; the level-core discriminator is
+**ORB-10934**). One independent pressure point, also recorded there:
 a non-analytic small-D family (D^p, p < 1) has unbounded d ln A/dD as D → 0 and cannot
 limit to linear superposition, which the solar system measures to high precision
 (`conjecture — to verify`: the precise PPN-nonlinearity bound belongs to ORB-10933's
@@ -359,12 +396,49 @@ level and the flowing substrate as two coupled ledgers over one lattice — draw
 level *under* advection and consumption is part of what ORB-10932 measures, not something
 this section may assume.
 
+### Adjudication (ORB-10932, faraday, 2026-08-21) — all three gates passed
+
+Cataloged as
+[level-coupled-shear-lattice](../../orrery/lab/sims/level-coupled-shear-lattice/) (orrery
+`82b885c`; deterministic, byte-identical rerun verified; results SHA `9f37e9fc…`, run
+record SHA `d9824591…`). Apparatus: draw-sourced radial finite-volume scarcity field
+(discrete Gauss accumulation, isolated Robin outer face representing rest at infinity),
+semi-Lagrangian material rolling update D₋u/Dt = −c²∂σ/∂r — no Fick transport — and the
+consumption stencil copied **byte-identically** from ORB-10751 (function SHA
+`aa1155e0…`). Verified at source against `assets/results.json`:
+
+1. **Level gate — passed.** A vs c²σ_s·r_s exponent 0.5000000000000002 ± 7.5×10⁻¹⁶
+   (regression SE) across 3 decades of mass; max |A²/(2c²σ_s·r_s) − 1| = 4.7×10⁻³;
+   rest/perturbed amplitude spread 2.4×10⁻⁹. The closed system is a lattice attractor and
+   lands on the closure's amplitude.
+2. **Density gate — passed, level-closure branch.** At fixed draw, A vs core radius
+   exponent −2×10⁻¹⁷ ± 9×10⁻¹⁵ over a 4× span (max/min amplitude ratio 1 + 1.1×10⁻¹³);
+   the flux signature A ∝ r_s^(−3/2) did not revive. The flux-vs-level discriminator
+   fired level-ward.
+3. **Composition gate — passed.** A vs N exponent 0.4999999999999982 ± 2.0×10⁻¹⁵ across
+   1.5 decades of individually counted unit-core draws — quadrature, as mass additivity
+   demands.
+
+Convergence recorded: 96/192/384-shell amplitudes 1.4312681 / 1.4232051 / 1.4186927
+(finest relative shift 3.2×10⁻³); CFL 0.4→0.2 shift 1.0×10⁻⁹; the copied stencil stays
+silent on isotropic Hubble flow (max consumption density 6×10⁻¹⁸). Declared limitations,
+carried forward honestly: the apparatus is a **spherical reduction** (composition keeps
+only the radial monopole — nonspherical near-field core interactions are exactly
+ORB-10934's territory), the draw field drives momentum **one-way** (no backreaction of
+shear destruction on draw count), and the finite Robin face stands in for rest at
+infinity. **Consequence:** the amplitude core of the source-law debt is paid — A = √(2GM)
+is no longer imposed or merely controllable but *selected* by {counting level + rolling
+rule + coefficient-one shear law}, with the coefficient forced. The closure's one
+remaining live measurable is the superposition prediction (§ (d)) → **ORB-10934**.
+
 ## Related
 
 - [gravity-as-scarcity](gravity-as-scarcity.md) — the parent; this doc addresses its
-  source-law debt (§ open questions) and, if the gates pass, converts the GP-conditional
-  clock (ORB-10159) and photon (ORB-10158-gated) sectors from conditional to postulated-law
-  physics. Nothing here moves the parent's ledger.
+  source-law debt (§ open questions). With ORB-10751 and ORB-10932 both passed, the law
+  and its amplitude stand on measured postulated-law footing for a single source; the
+  conversion of the GP-conditional clock (ORB-10159) and photon (ORB-10158-gated) sectors
+  rides on the remaining superposition discriminator (**ORB-10934**) and the photon gate.
+  Nothing here moves the parent's ledger beyond its own source-law bullet.
 - [two-substance-vortex-vacuum](two-substance-vortex-vacuum.md) — §B2's incompressible fork
   owes exactly this law; if the shear law survives its gates, that family's Branch B
   inherits it as the candidate S2 non-conservation dynamics (ORB-10164's L-0005 handoff).

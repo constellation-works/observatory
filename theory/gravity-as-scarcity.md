@@ -4,7 +4,7 @@ status: growing
 families: [gravity-as-scarcity]
 almanac: 15-discussions/26-07/gravity-as-scarcity-of-space.md
 created: 2026-07-09
-updated: 2026-08-20
+updated: 2026-08-21
 ---
 
 # Gravity as the gradient of scarce space
@@ -1028,11 +1028,21 @@ organize (by acceleration). What remains live:*
   bulk density, G_eff ∝ ρ_body, independent of M — and the conjunction {counting level
   σ = GM/c²r, rolling rule for space (ORB-10159 branch 3), shear law} is closed,
   parameter-free, and uniquely selects A = √(2GM), with the shear coefficient k = 1
-  *forced* by consistency. If its lattice gates pass (**ORB-10932**: level, density,
-  composition), the amplitude debt dissolves into postulates already named, and the
-  superposition wrinkle is predicted to be a flux-boundary artifact (level cores restoring
-  the ORB-10157 family — comment on **ORB-10755**); external universality sourcing is
-  **ORB-10933**. Nothing moves this ledger until those gates run.
+  *forced* by consistency. **The gates ran and passed (2026-08-21).** ORB-10932 (orrery
+  `82b885c`) measured all three: the closed system is a lattice attractor landing on
+  A² = 2c²σ_s·r_s (exponent 0.5 ± 7.5×10⁻¹⁶ over 3 decades of mass), the amplitude is
+  radius-independent at fixed draw (the flux signature did not revive), and composition is
+  quadrature (A ∝ N^0.5±2×10⁻¹⁵). **The amplitude core of this debt is paid** — dissolved
+  into postulates already named, no new postulate created. What remains of the debt is the
+  superposition wrinkle, now sharpened: ORB-10755 (orrery `acc9fab`) resolution-converged
+  the divergent family *under flux cores* (1/(1 + 4.63·D^0.606) at 65³), so the divergence
+  is real physics of that boundary condition; whether level cores — the closure's physical
+  boundary — restore the ORB-10157 family is the filed discriminator **ORB-10934**
+  (predeclared both ways: confirmation dissolves the two-model disagreement into one
+  mechanic with one physical boundary condition; refutation makes the disagreement real
+  and the closure's prediction dead). External universality sourcing remains **ORB-10933**
+  (backlog). Adjudication details: [shear-sourced-consumption](shear-sourced-consumption.md)
+  § adjudications (ORB-10932, ORB-10755).
 - **What carries the MW boost — ORB-10170's three readings, demoted to a single-galaxy
   question.** The carrier alternatives stand as measured (ORB-10157, § superposition
   adjudication): (i) the measured headroom-screening law at O(1) galactic occupancy
