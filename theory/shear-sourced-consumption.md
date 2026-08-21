@@ -198,8 +198,11 @@ Stated before anyone gets excited:
    analytically in [moving-sources-in-the-closed-system](moving-sources-in-the-closed-system.md)
    — exact speed isotropy (the wind cancels from clocks at first order), a proven
    first-order wake difference from GR's moving-source river, and a new named debt
-   (consumed momentum); the wind-tunnel lattice fixture is filed with that doc. Rotation
-   and waves remain open.
+   (consumed momentum); the wind-tunnel fixture ran the same day (ORB-10935): Galilean
+   null exact, drag-sign consumed momentum measured, but **no smooth steady branch found
+   at any wind** — the law's behavior in translating configurations may be intrinsically
+   unsteady; the dynamical-relaxation fixture is the successor. Rotation and waves remain
+   open.
 6. **It does not touch the galactic question.** The acceleration-organization problem
    (ORB-10169) is untouched: this law addresses the clock/photon-sector debt, not the
    boost's carrier or form.

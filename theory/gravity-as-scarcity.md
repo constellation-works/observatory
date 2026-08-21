@@ -1047,17 +1047,23 @@ organize (by acceleration). What remains live:*
   External universality sourcing remains **ORB-10933** (backlog). Adjudication details:
   [shear-sourced-consumption](shear-sourced-consumption.md) § adjudications (ORB-10932,
   ORB-10755, ORB-10934).
-- **The moving-source front (opened 2026-08-21, kepler).** With the closure fully measured,
-  the next structural exposure is a source moving *through* the substrate —
+- **The moving-source front (opened 2026-08-21, kepler; first fixture adjudicated the
+  same day).** With the closure fully measured, the next structural exposure is a source
+  moving *through* the substrate —
   [moving-sources-in-the-closed-system](moving-sources-in-the-closed-system.md). Two exact
-  results (analytic, fixture pending): the wind cancels from the speed field and the
-  first-order clock sector (Bernoulli against the comoving level turns wind speed into
-  exactly SR's dilation), and the wake provably differs from GR's boosted river at
-  O(U·v_GP) — the closed system has **no gravitomagnetic sector**, so moving-lens,
-  preferred-frame (α₁/α₂), and frame-dragging phenomenology all hang on the measured wake.
-  New named debt: consumed momentum (drag on moving sources). The wind-tunnel lattice
-  fixture and the moving-source bounds studies note are filed with that doc; the "what is
-  U locally" question couples to the galactic-carrier bullet below.
+  results: the wind cancels from the speed field and the first-order clock sector
+  (Bernoulli against the comoving level turns wind speed into exactly SR's dilation), and
+  the wake provably differs from GR's boosted river at O(U·v_GP) — the closed system has
+  **no gravitomagnetic sector**, so moving-lens, preferred-frame (α₁/α₂), and
+  frame-dragging phenomenology all hang on the measured wake. **ORB-10935 ran the wind
+  tunnel (2026-08-21):** the Galilean null and the Bernoulli branch are exact at machine
+  precision, the wake departs from the boosted river by 0.46–0.73 rad RMS, the speed law
+  forbids stagnation points (a qualitative anti-GR discriminator), and the consumed-
+  momentum debt measured with **drag sign** at every wind — but no globally smooth steady
+  branch exists at any swept U, so whether the dynamics realize the theorems' steady
+  premise is now the live question; the dynamical-relaxation successor fixture is filed.
+  The moving-source bounds studies note (ORB-10936) is still pending; the "what is U
+  locally" question couples to the galactic-carrier bullet below.
 - **What carries the MW boost — ORB-10170's three readings, demoted to a single-galaxy
   question.** The carrier alternatives stand as measured (ORB-10157, § superposition
   adjudication): (i) the measured headroom-screening law at O(1) galactic occupancy

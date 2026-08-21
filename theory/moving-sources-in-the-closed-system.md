@@ -1,6 +1,6 @@
 ---
 title: "Moving sources in the closed system: the substrate wind, exactly"
-status: exploratory
+status: growing
 families: [gravity-as-scarcity]
 almanac: 15-discussions/26-08/from-galactic-motion-to-the-moving-gravity-medium-problem.md
 created: 2026-08-21
@@ -27,12 +27,18 @@ the excitation reading, in the clock sector at first order), and the flow *patte
 a moving mass provably differs from general relativity's moving-source river at first
 order in the wind — a measurable wake, with a new named debt (consumed momentum) attached.
 
-**Current verdict:** analytic, awaiting its lattice fixture. All algebra below is verified
-symbolically (sympy script attached to the wind-tunnel task filing); under the house rule
-the theorem rows stay `untested` until the cataloged apparatus measures them
-(precedent: [moving-source-field-consistency](moving-source-field-consistency.md), which
-holds decisive-on-paper algebra to the same standard). The wind-tunnel lattice task is
-predeclared both ways below.
+**Current verdict:** the wind-tunnel fixture ran (ORB-10935, faraday, 2026-08-21 — §
+adjudication below) and split the front cleanly. The Galilean null and the Bernoulli
+branch's lattice realization are verified at machine precision, the measured wake differs
+grossly from GR's boosted river (0.46–0.73 rad RMS), and the Bernoulli speed law's
+no-stagnation-point corollary gives a sharp qualitative discriminator. But the apparatus's
+predeclared steady-existence measurable returned a real wrinkle: **no globally smooth
+steady single-valued flow branch exists at any swept wind strength** (ladder-stable
+caustics). Because the apparatus *imposes* Bernoulli (a Hamilton–Jacobi march of the speed
+law) rather than letting the dynamics discover it, the theorem rows sit at `mixed`, not
+`supported`: the conditional algebra is machine-verified, and its premise — that the
+moving system reaches a steady irrotational state — is now the front's live question. The
+dynamical-relaxation fixture (filed as the successor, § adjudication) inherits the kill.
 
 ## Setup
 
@@ -73,7 +79,9 @@ The constant is fixed at infinity. Consequences, each exact at this order:
    consumption rule, being a property of {comoving elliptic level + rolling rule +
    irrotational inflow} alone. The shear law's role is downstream: with continuity it
    selects the direction field (and decides whether a steady wake exists at all — an
-   existence question only the lattice can answer).
+   existence question only the lattice can answer; first answer 2026-08-21, § adjudication:
+   no globally smooth single-valued branch at any swept wind — existence is now the live
+   question).
 2. **The clock sector inherits no first-order wind anomaly.** In the excitation reading
    (the only surviving one — [lorentz-violation-bounds](../studies/lorentz-violation-bounds.md)),
    a clock at rest in the mass frame dilates by its speed relative to the local river:
@@ -163,13 +171,14 @@ preferred-frame contradiction at O(10⁻³).
 
 | Claim | Status | Evidence |
 |---|---|---|
-| Steady irrotational flow of the closed system around a uniformly moving mass has exactly isotropic speed \|v\|² = U² + 2c²σ; the wake is confined to the direction field (Theorem 1) | untested | Closed-form global Bernoulli (§ Theorem 1), consumption-law-independent; symbolically verified (sympy, attached to the wind-tunnel filing). Awaiting the cataloged fixture: speed-isotropy gate G1, predeclared kill on converged anisotropy |
-| A clock comoving with the moving mass reads 1 − U²/2c² − GM/c²r — no first-order ether-drift clock anomaly; wind dilation is exactly SR's | untested | Corollary of Theorem 1 in the excitation reading (readings and dilation identity: [river-model-and-analog-gravity](../studies/river-model-and-analog-gravity.md), [lorentz-violation-bounds](../studies/lorentz-violation-bounds.md)). Second-order cross terms unexamined (PPN territory) |
-| The pure-wind state (no source) is an exact steady solution with exactly zero consumption | untested | Uniform flow has zero strain (§ Theorem 1.4, symbolically checked); null-control gate G4 |
-| The boosted-GP field is not a solution of the closed system — residual (U·∇)v_GP; the steady wake differs from GR's moving-source river at O(U·v_GP), and the GR speed dipole 2U·v_GP is forbidden (Theorem 2) | untested | Symbolic residual and dipole checks (§ Theorem 2). Wake-structure gate G2 measures the realized direction field against the boost comparator |
+| Steady irrotational flow of the closed system around a uniformly moving mass has exactly isotropic speed \|v\|² = U² + 2c²σ; the wake is confined to the direction field (Theorem 1) | mixed | The algebra is exact (sympy) and its lattice realization is verified at machine precision — ORB-10935 G1: normalized speed dipoles 0.8–2.7×10⁻¹⁶, pointwise Bernoulli residual ≤3.9×10⁻¹⁶, all 8 U×r cases converged ([level-core-wind-tunnel](../../orrery/lab/sims/level-core-wind-tunnel/)). But the apparatus *imposes* the speed law (Hamilton–Jacobi march) and found **no globally smooth steady single-valued branch at any swept U** (§ adjudication) — whether the dynamics realize the theorem's steady-irrotational premise is open; the relaxation fixture inherits the kill |
+| A clock comoving with the moving mass reads 1 − U²/2c² − GM/c²r — no first-order ether-drift clock anomaly; wind dilation is exactly SR's | untested | Corollary of Theorem 1 in the excitation reading (readings and dilation identity: [river-model-and-analog-gravity](../studies/river-model-and-analog-gravity.md), [lorentz-violation-bounds](../studies/lorentz-violation-bounds.md)). Rides on Theorem 1's realization — unresolved until the steady-existence question settles (see the mixed row above). Second-order cross terms unexamined (PPN territory) |
+| The pure-wind state (no source) is an exact steady solution with exactly zero consumption | supported | ORB-10935 G4 (kill gate): no-core wind states at all four speeds keep maximum pointwise consumption ≤2.2×10⁻¹⁷ and speed error exactly 0.0 on every rung — the real frozen stencil evaluated, not a construction ([level-core-wind-tunnel](../../orrery/lab/sims/level-core-wind-tunnel/)) |
+| The boosted-GP field is not a solution of the closed system — residual (U·∇)v_GP; the steady wake differs from GR's moving-source river at O(U·v_GP), and the GR speed dipole 2U·v_GP is forbidden (Theorem 2) | mixed | Boost-failure is exact (symbolic residual) and the measured departure is gross, not perturbative — ORB-10935 G2: 0.456–0.732 rad weighted RMS direction departure from U + v_GP across all U, fore-aft n_x asymmetry −0.86…−0.92, and **no stagnation point can exist on any Bernoulli branch** (q ≥ U > 0) while boosted GP has axis speed zeros — a sharp qualitative discriminator. Mixed because the realized wake is provisional on the same steady-existence question as Theorem 1 |
 | The closed system has no gravitomagnetic sector; reproducing tested g₀ᵢ phenomenology (moving-lens deflection, frame dragging, preferred-frame PPN α₁/α₂) from emergent wake dynamics is an open obligation with existing external bounds | conjecture — to verify | Structural (no vector source in the counting mechanic); the external bounds await the moving-source studies note this doc's program files (the note [moving-source-field-consistency](moving-source-field-consistency.md) § open debts already demanded) |
-| Consumed momentum has no bookkeeping; the wake makes the gap observable (possible secular drag on moving sources) | conjecture | New named debt (§ consumed momentum). Momentum-budget gate G3 measures the wake's asymmetry in lattice units; physical normalization requires the unfixed substrate-inertia scale |
-| The local wind U at real bodies is O(local orbital/infall speeds) if the relevant fields are river-carried, putting photon-sector wake effects at O(10⁻³) relative scale for the Sun | conjecture | Arithmetic over sourced velocity scales ([lorentz-violation-bounds](../studies/lorentz-violation-bounds.md) § velocity scales); contingent on the open galactic-carrier question; kill test executable only after G2 + the studies note |
+| Consumed momentum has no bookkeeping; the wake makes the gap observable (possible secular drag on moving sources) | mixed | ORB-10935 G3 (pass_converged) measured it in lattice units on the constructed branch: consumed +x momentum has **drag sign at every wind** (14.2, 12.2, 10.7, 21.5 with U ratio), four-wind fit \|∫s·v_x dV\| = 20.3·U^0.098 — nearly U-independent; the flux-minus-consumed residual carries the deliberately unmodeled level-stress surface term. Provisional on steady existence; the debt itself (where the momentum goes, physical normalization) remains open |
+| No globally smooth steady single-valued flow branch exists around a moving core at any swept wind strength — the moving system's steady state, if any, is not a positive-x Bernoulli graph | supported | ORB-10935's predeclared steady-existence measurable: caustic clip fractions at finest 0.740, 0.713, 0.573, 0.028 for U/v_GP ∈ {0.03, 0.1, 0.3, 1}, ladder-stable across 41³/61³/81³. At low U partly structural (the near-radial GP inflow limit is not a positive-x graph), but the trans-critical wind also clips. What the true dynamics settle to is the successor fixture's question |
+| The local wind U at real bodies is O(local orbital/infall speeds) if the relevant fields are river-carried, putting photon-sector wake effects at O(10⁻³) relative scale for the Sun | conjecture | Arithmetic over sourced velocity scales ([lorentz-violation-bounds](../studies/lorentz-violation-bounds.md) § velocity scales); contingent on the open galactic-carrier question; kill test executable only after the realized wake structure + the studies note |
 
 ## The program — gates predeclared
 
@@ -198,6 +207,71 @@ Also predeclared as *out of scope here*: rotating sources (the frame-dragging
 confrontation needs its own apparatus), finite level-propagation speed (the
 retarded-wake family's territory), and any observational fit before G2's wake structure
 and the studies note both exist.
+
+### Adjudication (ORB-10935, faraday, 2026-08-21) — the branch is exact, the wake is not the boost, and steady existence is now the question
+
+**Apparatus.** [level-core-wind-tunnel](../../orrery/lab/sims/level-core-wind-tunnel/)
+(orrery `3f08098`): the ORB-10934 3-D draw-sourced elliptic level extended with a uniform
+wind, in the comoving-core frame (wind enters only at the upstream face; the level is
+solved once per rung and rides with the core). Fixed physical domain (half-width 12) and
+core width (σ = 0.75) across a 41³/61³/81³ ladder; wind sweep U/v_GP(r=5) ∈ {0.03, 0.1,
+0.3, 1}; consumption stencil byte-identical to ORB-10751 (SHA-256
+`aa1155e0…` exact match); deterministic, no RNG, byte-identical rerun verified.
+**Method caveat, load-bearing:** the direction field is *constructed* as the positive-x
+Hamilton–Jacobi branch of |∇Φ|² = U² + 2σ — the apparatus imposes Bernoulli and asks
+whether a globally consistent branch exists and what it looks like. It does not evolve
+the rolling rule to a steady state. The gates read accordingly.
+
+1. **G1 — pass, at machine precision.** On the constructed branch, normalized speed
+   dipoles are 0.8–2.7×10⁻¹⁶ with low multipoles inside combined apparatus errors of
+   1.7–5.8×10⁻⁴, and the pointwise speed matches √(U² + 2c²σ) to ≤3.9×10⁻¹⁶ — for every
+   wind strength and both measurement radii, converged. The Bernoulli branch's lattice
+   realization is exact; what G1 does *not* test, given the construction, is whether the
+   dynamics select this branch.
+2. **G2 — measured, converged.** The realized direction field departs from the boosted-GP
+   comparator U + v_GP by 0.456–0.732 rad weighted RMS across the sweep — gross, not
+   perturbative — with fore-aft mean-n_x asymmetry −0.86…−0.92. And one exact corollary
+   surfaced with teeth: **the Bernoulli speed law forbids stagnation points** (q =
+   √(U² + 2c²σ) ≥ U > 0 everywhere), while the boosted-GP field has axis speed zeros. A
+   moving-mass flow with a stagnation point would refute the speed law outright — a
+   qualitative, parameter-free discriminator between the closed system and GR's river.
+3. **The predeclared steady-existence measurable returned its wrinkle.** At every swept
+   wind the march hits caustics: clip fractions at the finest rung 0.740, 0.713, 0.573,
+   0.028 (U ascending), stable across the ladder. No globally smooth steady single-valued
+   branch exists in this ansatz. At low U this is partly structural — the U → 0 limit is
+   the radial GP inflow, which no positive-x potential graph can represent — but even the
+   trans-critical wind clips. Honest reading: the theorems' shared premise (a steady
+   irrotational state) has not been shown to be dynamically realized. Steady-wake
+   existence — steady non-graph flow, a genuinely unsteady wake, or no attractor at all —
+   is now the front's live question.
+4. **G3 — pass, converged.** On the constructed branch the consumed +x momentum integral
+   has **drag sign at every wind** (posture 3's sign, in lattice units): 14.2, 12.2, 10.7,
+   21.5 across the sweep, four-wind fit |∫s·v_x dV| = 20.3·U^0.0976 — nearly
+   U-independent, which itself wants explaining if it survives the dynamical apparatus.
+   The advective flux-minus-consumed residual is reported, not zeroed: the level-stress
+   surface term is deliberately unmodeled.
+5. **G4 — pass, exactly.** The pure-wind null: no-core wind states at all four speeds
+   keep maximum pointwise consumption ≤2.2×10⁻¹⁷ and speed error exactly zero on every
+   rung — the real frozen stencil evaluated on the real lattice, the moving-frame twin of
+   ORB-10751's Hubble-silence gate. This one is a true dynamical statement, not a
+   construction.
+
+**Declared limits:** one-way draw coupling; finite zero-level Dirichlet box (fixed
+physical geometry across the ladder, no infinite-reservoir extrapolation); single-valued
+positive-x graph ansatz (the caustic diagnostic is the honest boundary of its
+representational reach); advective-only momentum surface term.
+
+**Consequence and successor.** The front's structure after ORB-10935: the *conditional*
+content (Bernoulli branch, boost-failure, no-stagnation corollary, drag-sign asymmetry,
+Galilean null) is measured and healthy; the *premise* (steady realization) is not. The
+successor fixture is the **dynamical-relaxation wind tunnel** (ORB-10937, filed at this
+adjudication, faraday, ws_orrery): evolve the actual equations — rolling rule +
+continuity + shear — as an initial-value problem from a blended wind/GP start, and let
+the dynamics decide. If a steady state emerges, its speed field is a *discovered* test of
+Theorem 1 (the kill G1 could not deliver by construction) and its direction field
+supersedes G2's branch. If none emerges, the moving closed system is intrinsically
+unsteady, and the wake confrontation changes character entirely (time-dependent lensing
+residuals, not static wake multipoles).
 
 **Moving-source bounds studies note (kepler, ws_principia — filed with this doc).** The
 sourced walls Theorem 2's confrontation needs: gravitational aberration in GR (the Carlip
