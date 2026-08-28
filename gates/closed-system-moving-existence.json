@@ -10,7 +10,7 @@
     "postulate-shear-law"
   ],
   "new_postulates": [],
-  "control": "Pure-wind state (already passed: zero consumption). No PPN numbers, observational ray-tracing fits, or galaxy fits until this card passes; the coefficient reduction as algebra (ppn-reduction-of-the-settled-flow, ORB-11039) and scale estimates (ORB-10939) are allowed and stay conjecture/untested — amended 2026-08-28 to match the 2026-08-21 arbitration's named obligation.",
+  "control": "Pure-wind state (already passed: zero consumption). No PPN numbers, observational ray-tracing fits, or galaxy fits until this card passes; the coefficient reduction as algebra (ppn-reduction-of-the-settled-flow, ORB-11039) and scale estimates (ORB-10939) are allowed — its structural rows move on cataloged evidence (ORB-11040 symbolic, ORB-11041 far-field) while phenomenology numbers stay blocked — amended 2026-08-28 to match the 2026-08-21 arbitration's named obligation.",
   "kill": "Cavitation in physical units at Earth/Sun orbital winds, or no regular settled flow that is an excitation medium.",
   "forbidden_reopens": [
     "scarcity-fixed-beta-universality",
@@ -30,6 +30,7 @@
     "moving-theorem-1-bernoulli-realized",
     "moving-theorem-2-wake-not-gauge",
     "ppn-slots-far-field",
+    "ppn-half-order-hazard",
     "ppn-alpha-contact"
   ]
 }

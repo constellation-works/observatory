@@ -83,6 +83,9 @@ observable is a functional of **u** alone. The wind enters only through what it 
 the disturbance — there is no separate "wind term" in the geometry. This is the moving
 front's entire metric content in one line, and it is what makes the rest of the
 reduction well-posed: the object to reduce is **u**, a field the lattice measures.
+Now cataloged: the symbolic fixture verifies the tensor transform and the u-only
+dependence exactly (ORB-11040 G1,
+[ppn-reduction-symbolic-checks](../../orrery/lab/sims/ppn-reduction-symbolic-checks/)).
 
 ## The uniform wind is exactly flat
 
@@ -108,7 +111,9 @@ coordinates: **Riemann ≡ 0, at every order in U.** Consequences:
 - **The dynamical Galilean null is the lattice shadow of this flatness** (ORB-10935 G4,
   ORB-10937 G5, ORB-10938 G6: the pure-wind state persists with consumption at floating
   precision). The metric statement is stronger (flatness is exact geometry, not
-  persistence of a solution) and is owed a symbolic catalog entry (§ the program).
+  persistence of a solution) and is now cataloged: all 256 Riemann components vanish
+  symbolically at every order in U (ORB-11040 G2,
+  [ppn-reduction-symbolic-checks](../../orrery/lab/sims/ppn-reduction-symbolic-checks/)).
 - **What flatness does not buy:** the medium sectors. Cavitation is diagnosed in n, not
   in the metric; consumed momentum is bookkeeping the metric never sees. A uniform wind
   is invisible to clocks and rays and still perfectly capable of drilling a hole in the
@@ -130,7 +135,8 @@ a static metric with lapse √(1 − u²/c²) and a spatial stretch along the fl
 static GP inflow (**u** radial, |u|² = 2c²σ) the condition holds and the diagonal form
 is **exactly Schwarzschild**: lapse √(1 − 2GM/c²r), g_rr = 1/(1 − 2GM/c²r)
 ([river-model-and-analog-gravity](../studies/river-model-and-analog-gravity.md) — the
-standard PG↔Schwarzschild map, here rederived as the λ above). The U = 0 control of the
+standard PG↔Schwarzschild map, here rederived as the λ above; both the identity and the
+Schwarzschild endpoint are now cataloged, ORB-11040 G3). The U = 0 control of the
 reduction therefore lands on **γ = β = 1**, consistent with the excitation-completion
 photon row and the Cassini wall
 ([scalar-gravity-ppn-constraints](../studies/scalar-gravity-ppn-constraints.md)) — with
@@ -172,8 +178,10 @@ value (at 33³/41³ the low-wind vorticity RMS *rises* under refinement — 0.01
 U/v_GP = 0.03 — and the trans-critical value falls 0.018 → 0.0036, so the per-wind
 scaling of the curl field, hence the O(U) linearity of the GEM-analog sector, is
 **unmeasured**); and the speed multipoles are rung-converged only at U/v_GP = 0.3
-(r = 3) and U/v_GP = 1 (r = 5). The two obstruction pieces are exact algebra; their
-magnitudes are near-zone lattice numbers at one converged wind.
+(r = 3) and U/v_GP = 1 (r = 5). The two obstruction pieces are exact, now-cataloged
+algebra — verified symbolically with static-GP and anisotropic-field controls
+(ORB-11040 G4) — while their magnitudes are near-zone lattice numbers at one converged
+wind.
 
 ## Order bookkeeping, and the half-order hazard
 
@@ -186,13 +194,24 @@ enters at δv = O(U·f) with f an order-one measured structure, and the cross te
 > u_GP·δv/c² = O(√ε · ε_w)
 
 sit **between** PPN orders: larger than every genuine PPN moving-source term
-(O(ε·ε_w)) by ε^(−1/2). Whether each such half-order piece is gauge (absorbed by the λ
-shift and a spatial coordinate choice, as the static half-order piece is) or survives
-into an observable slot is precisely what the symbolic fixture must settle order by
-order (§ the program). **Predeclared:** a surviving √ε·ε_w term in any observable slot
-is a super-PPN preferred-frame effect — parametrically *larger* than the α₁ class — and
-would kill the model against the same walls faster than any α-slot number. No such term
-is claimed absent; the hazard is named so the fixture cannot skip it.
+(O(ε·ε_w)) by ε^(−1/2). **The fixture has now settled this order by order (ORB-11040
+G5,
+[ppn-reduction-symbolic-checks](../../orrery/lab/sims/ppn-reduction-symbolic-checks/)),
+and the predeclared hazard fired.** The g₀ᵢ ladder gauges away exactly as the static
+half-order piece does — its surviving transverse parts at O(ε_w) and O(ε·ε_w) are
+precisely the two-piece obstruction (§ gauge split), nothing new. But the lapse keeps
+2 **u**_GP·δ**v**/c² at √ε·ε_w (a stationary temporal shift cannot touch g₀₀) and the
+spatial stretch keeps its symmetric partner u_(GP,i) δv_j + δv_i u_(GP,j), and these
+are *observable*: for a generic potential base flow and potential wake the fixture
+exhibits nonzero linearized curvature (R₀ᵢ₀ⱼ = −diag(2, 4, 6) on the witness pair), so
+no temporal or spatial coordinate choice removes them. Recorded verdict: **KILL for a
+generic wake — survival requires cancellations in the realized wake.** The kill is
+armed, not fired: the arbiter is the realized wake's own u_GP·δv contraction, and that
+object is already measured — it *is* the speed-field ŵ-dipole, which ORB-11041 finds
+carrying slot-matching tails rather than cancellation, modulo the shell-instability and
+one-cell-core caveats and the fact that trans-critical winds are not the clean
+double-expansion regime. The larger-box rung owed on the slots row (§ the program) now
+arbitrates the model's heaviest confrontation.
 
 ## The slots: which measured object feeds which coefficient
 
@@ -239,7 +258,10 @@ Two structural readings before any number exists:
   *is* near-zone-confined and the α₁ slot yields no converged regime at all. The
   worrying direction has hardened from near-zone growth into resolved tails — modulo
   the shell-instability and one-cell-core caveats carried in the ledger, and the still
-  unpayable lattice-to-physical normalization.
+  unpayable lattice-to-physical normalization. The symbolic fixture stacks a
+  parametrically worse confrontation on the same measurable: the surviving √ε·ε_w
+  lapse term is this same u_GP·δv contraction (§ order bookkeeping), so the owed
+  larger-box rung arbitrates both the α-class tails and the super-PPN hazard at once.
 
 ## The far field is trans-critical — where the coefficients live
 
@@ -276,25 +298,28 @@ matching radius r_m = 2GM/U² where the ratio crosses 1. Consequences:
 
 | Claim | Status | Evidence |
 |---|---|---|
-| In the reservoir frame the analog metric of the moving closed system is exactly the PG-form metric of the disturbance field u = v + U, translating rigidly with the source; every metric-sector observable is a functional of u alone (Statement 0) | untested | Two-line coordinate substitution (§ Statement 0); decisive on paper, uncataloged — per policy stays untested until the symbolic fixture (§ the program) lands it. Downstream of the acoustic-metric family ([river-model-and-analog-gravity](../studies/river-model-and-analog-gravity.md)) |
-| The pure-wind analog metric is exactly flat (Riemann = 0): a uniform wind is coordinate for metric-coupled excitations — the U²/2c² clock term is SR kinematics of the emergent metric, not an observable anomaly — and preferred-frame physics can enter the metric sector only through the disturbance field | untested | Immediate corollary of Statement 0 (u = 0 gives Minkowski exactly); answers the clock-sector relational question at metric level in the coordinate-like direction the 2026-08-21 arbitration held open. Lattice shadow already cataloged (pure-wind nulls: ORB-10935 G4, ORB-10937 G5, ORB-10938 G6, [level-core-dynamical-relaxation](../../orrery/lab/sims/level-core-dynamical-relaxation/)) but the geometric statement itself awaits the symbolic fixture. Scope: metric sector only — the medium sectors (consumption, cavitation, drag) keep their anchored frame |
-| Wherever u/(c² − u²) is curl-free the analog metric diagonalizes exactly to lapse √(1 − u²/c²) with spatial stretch δ_ij + u_i u_j/(c² − u²); on static GP this is exactly Schwarzschild, so the U = 0 control of the reduction lands on γ = β = 1 | mixed | The identity is exact algebra (§ diagonalization) and its static endpoint is the sourced PG↔Schwarzschild map ([river-model-and-analog-gravity](../studies/river-model-and-analog-gravity.md)); the γ = 1 reading against Cassini is the excitation-completion row's, premises owed as postulates ([gravity-as-scarcity](gravity-as-scarcity.md) § scarcity-excitation-photon-gamma); the identity's own catalog entry awaits the symbolic fixture |
-| The exact obstruction to gauging away the g₀ᵢ sector is curl of u/(c² − u²), which splits into a vorticity term and a Bernoulli-anisotropy term (grad of the squared speed crossed with u); both source fields are measured nonzero in the settled flow, so the moving closed system has a physical gravitomagnetic-analog sector even though the counting mechanic sources no vector potential | untested | Exact algebra (§ gauge split), uncataloged. Its two source fields are cataloged: rung-stable vorticity RMS 0.0148 → 0.0150 (41³ → 61³) and rung-converged speed anisotropy at U/v_GP = 0.3 (ORB-10938 G3/G4, [level-core-dynamical-relaxation](../../orrery/lab/sims/level-core-dynamical-relaxation/)). Per-wind scaling is now measured (ORB-11041 G4, [level-core-far-field-slot-coefficients](../../orrery/lab/sims/level-core-far-field-slot-coefficients/)): the Bernoulli-anisotropy field is rung-converged but not O(U) — its outer-shell amplitude falls with wind and it decays faster than the PPN-equivalent tail at the two higher winds (near-zone-confined) — while vorticity stays unresolved under refinement (20–34% rung shifts, plausibly the one-cell core); the GEM-analog sector is measured nonlinear, not absent |
+| In the reservoir frame the analog metric of the moving closed system is exactly the PG-form metric of the disturbance field u = v + U, translating rigidly with the source; every metric-sector observable is a functional of u alone (Statement 0) | supported | Two-line coordinate substitution (§ Statement 0), now cataloged: the symbolic fixture (ORB-11040 G1, [ppn-reduction-symbolic-checks](../../orrery/lab/sims/ppn-reduction-symbolic-checks/)) verifies the tensor transform lands exactly on the PG form of u = v + U and that the transformed metric depends on v and U only through u (explicit wind derivatives at fixed u vanish identically). Downstream of the acoustic-metric family ([river-model-and-analog-gravity](../studies/river-model-and-analog-gravity.md)) |
+| The pure-wind analog metric is exactly flat (Riemann = 0): a uniform wind is coordinate for metric-coupled excitations — the U²/2c² clock term is SR kinematics of the emergent metric, not an observable anomaly — and preferred-frame physics can enter the metric sector only through the disturbance field | supported | Immediate corollary of Statement 0 (u = 0 gives Minkowski exactly), now cataloged: the symbolic fixture (ORB-11040 G2, [ppn-reduction-symbolic-checks](../../orrery/lab/sims/ppn-reduction-symbolic-checks/)) checks all 256 Riemann components of the pure-wind metric symbolically — identically zero at every order in U — and confirms the metric is the exact Minkowski pullback under x → x + Ut; answers the clock-sector relational question at metric level in the coordinate-like direction the 2026-08-21 arbitration held open. Lattice shadow separately cataloged (pure-wind nulls: ORB-10935 G4, ORB-10937 G5, ORB-10938 G6, [level-core-dynamical-relaxation](../../orrery/lab/sims/level-core-dynamical-relaxation/)). Scope: metric sector only — the medium sectors (consumption, cavitation, drag) keep their anchored frame |
+| Wherever u/(c² − u²) is curl-free the analog metric diagonalizes exactly to lapse √(1 − u²/c²) with spatial stretch δ_ij + u_i u_j/(c² − u²); on static GP this is exactly Schwarzschild, so the U = 0 control of the reduction lands on γ = β = 1 | supported | The identity is exact algebra (§ diagonalization), now cataloged: the symbolic fixture (ORB-11040 G3, [ppn-reduction-symbolic-checks](../../orrery/lab/sims/ppn-reduction-symbolic-checks/)) verifies the diagonalization exactly for general steady u (cross terms vanish, lapse and spatial stretch exact) and lands the static GP endpoint on Schwarzschild exactly (lapse² = 1 − ε, g_rr = 1/(1 − ε)) — the sourced PG↔Schwarzschild map ([river-model-and-analog-gravity](../studies/river-model-and-analog-gravity.md)) rederived. Standing caveat: the γ = 1 reading against Cassini is the excitation-completion row's, premises owed as postulates ([gravity-as-scarcity](gravity-as-scarcity.md) § scarcity-excitation-photon-gamma) |
+| The exact obstruction to gauging away the g₀ᵢ sector is curl of u/(c² − u²), which splits into a vorticity term and a Bernoulli-anisotropy term (grad of the squared speed crossed with u); both source fields are measured nonzero in the settled flow, so the moving closed system has a physical gravitomagnetic-analog sector even though the counting mechanic sources no vector potential | supported | Exact algebra (§ gauge split), now cataloged: the symbolic fixture (ORB-11040 G4, [ppn-reduction-symbolic-checks](../../orrery/lab/sims/ppn-reduction-symbolic-checks/)) verifies the two-piece identity symbolically (residual ≡ 0), confirms both pieces vanish on static GP, and exhibits the anisotropy piece nonzero on a generic anisotropic test field. Its two source fields are cataloged: rung-stable vorticity RMS 0.0148 → 0.0150 (41³ → 61³) and rung-converged speed anisotropy at U/v_GP = 0.3 (ORB-10938 G3/G4, [level-core-dynamical-relaxation](../../orrery/lab/sims/level-core-dynamical-relaxation/)). Per-wind scaling is measured (ORB-11041 G4, [level-core-far-field-slot-coefficients](../../orrery/lab/sims/level-core-far-field-slot-coefficients/)): the Bernoulli-anisotropy field is rung-converged but not O(U) — its outer-shell amplitude falls with wind and it decays faster than the PPN-equivalent tail at the two higher winds (near-zone-confined) — while vorticity stays unresolved under refinement (20–34% rung shifts, plausibly the one-cell core); the GEM-analog sector is measured nonlinear, not absent |
+| In the double expansion (ε = 2GM/c²r, ε_w = U/c) the moving metric keeps generic slot-surviving half-order terms at O(√ε·ε_w) — the u_GP·δv contraction in the lapse and its symmetric partner in the spatial stretch — whose linearized curvature is nonzero for a generic potential wake: no temporal shift or spatial coordinate choice removes them, so a generic settled wake is a super-PPN preferred-frame effect, parametrically larger than the α₁ class, and the model survives only if the realized wake cancels the contraction's far-field curvature | supported | The predeclared hazard of § order bookkeeping, now executed (ORB-11040 G5, [ppn-reduction-symbolic-checks](../../orrery/lab/sims/ppn-reduction-symbolic-checks/)): every monomial of h₀₀/h₀ᵢ/h_ij through O(ε·ε_w) is classified gauge-removable or slot-surviving; the h₀ᵢ ladder gauges away exactly as the static half-order piece does (its surviving transverse parts are the two-piece obstruction, previous row), but h₀₀ and h_ij keep 2a·b-type terms at √ε·ε_w with an explicit curvature witness — potential base flow, potential wake, R₀ᵢ₀ⱼ = −diag(2, 4, 6) ≠ 0 — and the fixture records the verdict as a KILL for a generic wake, conditional on realized-wake cancellations. The realized-wake arbiter is already a measured object: the speed-field ŵ-dipole is the same 2 u_GP·δv contraction, and ORB-11041 finds it carrying slot-matching tails rather than cancellation — but that reading is shell-unstable, one-cell-core, and taken at trans-critical winds where the double expansion is not clean, so the half-order kill is armed, not fired. The larger-box, better-resolved-core rung owed on the slots row is also this row's arbiter |
 | Effective preferred-frame coefficients are far-field slot coefficients of the settled wake — the non-gauge g₀ᵢ dipole against the PPN Φw/c³ structure (α₁ slot) and the speed-field wind-axis anisotropy against the w-quadrupole structure (α₂ slot) — defined only at r much greater than the matching radius r_m = 2GM/U²; the far-field fixture now reads that zone and finds the speed sector carrying slot-matching tails while the total non-gauge g₀ᵢ dipole has no converged scaling regime at any wind | mixed | § slots and § far field: slot mapping schematic against the sourced PPN formalism ([moving-source-gravity-bounds](../studies/moving-source-gravity-bounds.md)). Measured by ORB-11041 ([level-core-far-field-slot-coefficients](../../orrery/lab/sims/level-core-far-field-slot-coefficients/): half-width-24 box, one-unit core, shells to r = 20, 41³ → 57³, winds U/v_GP(5) = 0.65/0.8/1.0): the ŵ-dipole has a rung-converged slot-matching tail at all three winds (2α₃−α₁-class lattice proxies 14.1 ± 3.5 / 9.8 ± 2.1 / 6.6 ± 1.3, falling with wind); the ŵ-quadrupole resolves an α₂-slot proxy only at 0.8 (52.2 ± 13.2); the α₁ slot is unextractable — no converged scaling regime for the total non-gauge g₀ᵢ dipole at any wind. Caveats carried: the resolved proxies drift monotonically outward across shells 14 → 17 → 20 (α₂ shell values 37.5 → 49.6 → 69.5) with the outer shell four units from an open face — shell-unstable pending a larger box — and the one-unit core is resolved by about one cell |
 | The PPN-defining far field of any moving source is locally trans-critical (U over v_GP grows like √r), the regime where the lattice trough floors rather than cavitates; under the galactic-carried wind reading planetary orbits sit deep in that zone (solar r_m of a few solar radii), while under the local-orbital reading Earth sits near matching at the cavitation-prone ratio — the cavitation kill and the PPN far zone are radially separated strata of one flow | supported | Scaling arithmetic exact from the GP profile; trough behavior per stratum is ORB-10938 G1 (floor at U/v_GP = 1, cavitation kill at 0.3); real-body ratios from sourced velocity scales ([lorentz-violation-bounds](../studies/lorentz-violation-bounds.md) § velocity scales). The extrapolating part is now tested: the far-field fixture's control passed (ORB-11041 G1, [level-core-far-field-slot-coefficients](../../orrery/lab/sims/level-core-far-field-slot-coefficients/)) — all six runs settle jointly and the trough floors (final n_min 0.186–0.25, no cavitation candidate on adjacent rungs) in a wind-dominated box whose outer shells sit at local ratios 2.2–3.5. Real-body readings remain arithmetic on sourced scales, not lattice results |
-| The settled wake's far-field slot coefficients land under the measured preferred-frame walls (α₁ at 10⁻⁴ LLR and 7×10⁻⁵ pulsar, α₂ at about 10⁻⁷ solar spin axis and 1.6×10⁻⁹ pulsar) — equivalently the wake is a near-zone structure whose anisotropies carry no slot-matching far-field tails; a generic order-one surviving coefficient is excluded by four (α₁) to seven-plus (α₂) orders | conjecture | The confrontation this doc defines but cannot execute: walls sourced ([moving-source-gravity-bounds](../studies/moving-source-gravity-bounds.md)); the far-field fixture has now run (ORB-11041, [level-core-far-field-slot-coefficients](../../orrery/lab/sims/level-core-far-field-slot-coefficients/)) and its direction is adverse — nonzero slot-matching lattice tails in the speed sector (2α₃−α₁ class at all three winds, α₂ at U/v_GP(5) = 0.8) where the survival shape demanded none — but contact stays barred: the resolved proxies are shell-unstable (monotone outward drift toward an open face), the α₁ slot is unextractable, the Bernoulli obstruction is near-zone-confined (the survival direction), physical normalization of lattice units is an open family debt, and the existence card (`closed-system-moving-existence`) blocks phenomenology |
+| The settled wake's far-field slot coefficients land under the measured preferred-frame walls (α₁ at 10⁻⁴ LLR and 7×10⁻⁵ pulsar, α₂ at about 10⁻⁷ solar spin axis and 1.6×10⁻⁹ pulsar) — equivalently the wake is a near-zone structure whose anisotropies carry no slot-matching far-field tails; a generic order-one surviving coefficient is excluded by four (α₁) to seven-plus (α₂) orders | conjecture | The confrontation this doc defines but cannot execute: walls sourced ([moving-source-gravity-bounds](../studies/moving-source-gravity-bounds.md)); the far-field fixture has now run (ORB-11041, [level-core-far-field-slot-coefficients](../../orrery/lab/sims/level-core-far-field-slot-coefficients/)) and its direction is adverse — nonzero slot-matching lattice tails in the speed sector (2α₃−α₁ class at all three winds, α₂ at U/v_GP(5) = 0.8) where the survival shape demanded none — and the symbolic fixture (ORB-11040 G5) raises the stakes on the same contraction: a generic wake's surviving u_GP·δv term is super-PPN (√ε·ε_w, the half-order-hazard row) unless the realized wake cancels it. Contact stays barred: the resolved proxies are shell-unstable (monotone outward drift toward an open face), the α₁ slot is unextractable, the Bernoulli obstruction is near-zone-confined (the survival direction), physical normalization of lattice units is an open family debt, and the existence card (`closed-system-moving-existence`) blocks phenomenology |
 
 ## The program — what this reduction demands next
 
 Per the house rule, theory does not implement its own sims; both fixtures below are
 filed as orrery Orbit tasks at this doc's landing.
 
-1. **Symbolic reduction fixture (small).** Sympy catalog entry verifying, exactly:
-   Statement 0 (the reservoir-frame PG form); Riemann ≡ 0 for the pure-wind metric; the
-   diagonalization identity and its static Schwarzschild endpoint; the two-piece
-   obstruction formula; and the order-by-order fate of every √ε·ε_w half-order term
-   (gauge or observable — the predeclared hazard). Upgrades the four untested algebra
-   rows above to model-property/supported or kills them.
+1. **Symbolic reduction fixture — executed** (ORB-11040,
+   [ppn-reduction-symbolic-checks](../../orrery/lab/sims/ppn-reduction-symbolic-checks/)):
+   Statement 0, pure-wind flatness (all 256 Riemann components, every order in U), the
+   diagonalization identity with its exact Schwarzschild endpoint, and the two-piece
+   obstruction all verified exactly — the four algebra rows above are landed. The
+   half-order bookkeeping fired the predeclared hazard: generic slot-surviving √ε·ε_w
+   terms in h₀₀ and h_ij with a nonzero curvature witness, recorded by the fixture as a
+   kill conditional on realized-wake cancellations (§ order bookkeeping and the ledger).
 2. **Far-field slot-coefficient fixture — executed** (ORB-11041,
    [level-core-far-field-slot-coefficients](../../orrery/lab/sims/level-core-far-field-slot-coefficients/)):
    the settled-flow apparatus (stencil byte-identical to ORB-10938) with a one-unit core
@@ -305,7 +330,11 @@ filed as orrery Orbit tasks at this doc's landing.
    direction field is the input ORB-10939's ray tracing should bracket against, one
    derivative up. **Owed next:** a larger-box, better-resolved-core rung that tests
    shell stability of the resolved proxies — the monotone outward drift and the
-   one-cell core are the two ways the current tails could be apparatus artifacts.
+   one-cell core are the two ways the current tails could be apparatus artifacts. That
+   rung now carries double weight: the speed-field ŵ-dipole it re-measures is the same
+   u_GP·δv contraction whose generic survival the symbolic fixture flags as super-PPN
+   (§ order bookkeeping), so it arbitrates the α-class tails and the half-order hazard
+   at once.
 3. **Out of scope, unchanged:** rotating sources (spin GEM: GP-B/LARES need their own
    apparatus); the two-body problem (levels superpose, wakes do not — the actual
    binary-pulsar setting is a new problem); the lattice-to-physical normalization (the
