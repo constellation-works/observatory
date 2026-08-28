@@ -5,7 +5,7 @@
   "families": [
     "gravity-as-scarcity"
   ],
-  "updated": "2026-08-21",
+  "updated": "2026-08-28",
   "headline": "Named shear law survived static falsifiers; amplitude core paid by level matching. Still a postulate, not a derivation from counting. Family live front is the moving closed system.",
   "live_fronts": [
     "closed-system-moving-existence"
@@ -79,8 +79,10 @@
       "kind": "derived",
       "status": "refuted",
       "claim": "The amplitude coupling is flux-type — a universal per-energy consumption rate matched at the matter surface (the doc's recorded natural guess)",
-      "evidence": "Closed-form (§ closure (a), symbolically checked): flux matching forces G_eff = κ²ρ_body/(24πn²) — source strength ∝ bulk density, independent of M — contradicting the counting mechanic's verified mass-only σ ∝ M normalization and breaking mass additivity except at universal packing density. **Lattice discriminator ran (ORB-10932 density gate): at fixed draw, A is independent of core radius over a 4× span (exponent −2×10⁻¹⁷ ± 9×10⁻¹⁵) — the flux signature A ∝ r_s^(−3/2) did not revive.** External universality bounds remain `conjecture — to verify` → **ORB-10933** (backlog)",
-      "links": [],
+      "evidence": "Closed-form (§ closure (a), symbolically checked): flux matching forces G_eff = κ²ρ_body/(24πn²) — source strength ∝ bulk density, independent of M — contradicting the counting mechanic's verified mass-only σ ∝ M normalization and breaking mass additivity except at universal packing density. **Lattice discriminator ran (ORB-10932 density gate): at fixed draw, A is independent of core radius over a 4× span (exponent −2×10⁻¹⁷ ± 9×10⁻¹⁵) — the flux signature A ∝ r_s^(−3/2) did not revive.** **External universality bounds now sourced (ORB-10933): [source-side-universality-of-g](../studies/source-side-universality-of-g.md).** Writing G_eff = G₀(ρ/ρ₀)^p, laboratory determinations whose *source* masses span ~1.0–18.0 g/cc (lake water; #316 stainless steel; mercury; 95%-W Inermet180) agree to ≲10⁻³, bounding p below 10⁻³ in magnitude against this coupling's p = 1 — excluded by ~three orders of magnitude (the homogeneous-source pair, steel 8.0 vs tungsten alloy 18.0, alone gives p ≤ 4.3×10⁻⁴). The lunar Fe/Al active–passive bound 3.9×10⁻¹⁴ kills the per-element variant far harder but is null against the bulk-density variant; Kreuzer 1968 is a null at *equal* density (composition only); ephemeris consistency discriminates nothing on its own, since every dynamical channel measures G_eff·M",
+      "links": [
+        "../studies/source-side-universality-of-g.md"
+      ],
       "in_doc_ledger": true
     },
     {

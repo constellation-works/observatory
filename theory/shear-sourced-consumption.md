@@ -4,7 +4,7 @@ status: growing
 families: [gravity-as-scarcity]
 almanac: 15-discussions/26-08/from-big-bang-questions-to-the-shear-consumption-law.md
 created: 2026-08-11
-updated: 2026-08-21
+updated: 2026-08-28
 ---
 
 # Shear-sourced consumption
@@ -231,7 +231,7 @@ Stated before anyone gets excited:
 | GP is a dynamical *attractor* under the law (arbitrary initial flows converge) | supported | ORB-10751 attractor gate: convergence from rest and from perturbed initial states; initial-condition exponent difference 1.2×10⁻⁶; resolution (128/256/512 shells) and timestep (dt 0.2/0.1/0.05) sequences both converge on −1/2 |
 | A core boundary condition selects the exterior amplitude A monotonically and stably | supported | ORB-10751 amplitude gate: exterior half-power amplitude rises strictly (2.4×10⁻⁴ → 2.6×10⁻²) across core flux 0.003–0.3; max initial-condition relative spread 9.6×10⁻⁷ |
 | A mass of energy E imposes specifically A = √(2GM) via its boundary condition | supported | Controllability measured (row above); identification closed analytically (§ the closure) and **measured as a lattice attractor: ORB-10932 level gate passed** — A vs c²σ_s·r_s exponent 0.5000000000000002 ± 7.5×10⁻¹⁶ (regression SE) across 3 decades of mass, max \|A²/(2c²σ_s·r_s) − 1\| = 4.7×10⁻³, rest/perturbed amplitude spread 2.4×10⁻⁹ ([level-coupled-shear-lattice](../../orrery/lab/sims/level-coupled-shear-lattice/), orrery `82b885c`) |
-| The amplitude coupling is flux-type — a universal per-energy consumption rate matched at the matter surface (the doc's recorded natural guess) | refuted | Closed-form (§ closure (a), symbolically checked): flux matching forces G_eff = κ²ρ_body/(24πn²) — source strength ∝ bulk density, independent of M — contradicting the counting mechanic's verified mass-only σ ∝ M normalization and breaking mass additivity except at universal packing density. **Lattice discriminator ran (ORB-10932 density gate): at fixed draw, A is independent of core radius over a 4× span (exponent −2×10⁻¹⁷ ± 9×10⁻¹⁵) — the flux signature A ∝ r_s^(−3/2) did not revive.** External universality bounds remain `conjecture — to verify` → **ORB-10933** (backlog) |
+| The amplitude coupling is flux-type — a universal per-energy consumption rate matched at the matter surface (the doc's recorded natural guess) | refuted | Closed-form (§ closure (a), symbolically checked): flux matching forces G_eff = κ²ρ_body/(24πn²) — source strength ∝ bulk density, independent of M — contradicting the counting mechanic's verified mass-only σ ∝ M normalization and breaking mass additivity except at universal packing density. **Lattice discriminator ran (ORB-10932 density gate): at fixed draw, A is independent of core radius over a 4× span (exponent −2×10⁻¹⁷ ± 9×10⁻¹⁵) — the flux signature A ∝ r_s^(−3/2) did not revive.** **External universality bounds now sourced (ORB-10933): [source-side-universality-of-g](../studies/source-side-universality-of-g.md).** Writing G_eff = G₀(ρ/ρ₀)^p, laboratory determinations whose *source* masses span ~1.0–18.0 g/cc (lake water; #316 stainless steel; mercury; 95%-W Inermet180) agree to ≲10⁻³, bounding p below 10⁻³ in magnitude against this coupling's p = 1 — excluded by ~three orders of magnitude (the homogeneous-source pair, steel 8.0 vs tungsten alloy 18.0, alone gives p ≤ 4.3×10⁻⁴). The lunar Fe/Al active–passive bound 3.9×10⁻¹⁴ kills the per-element variant far harder but is null against the bulk-density variant; Kreuzer 1968 is a null at *equal* density (composition only); ephemeris consistency discriminates nothing on its own, since every dynamical channel measures G_eff·M |
 | The closed system {draw-sourced 1/r level, inertial rolling rule, coefficient-one shear law} is consistent, parameter-free, and uniquely selects GP with A = √(2GM); consistency forces the shear coefficient k = 1 | supported | Closed-form derivation (§ closure (b)): Bernoulli against the 1/r level gives ½v² = c²σ = GM/r at every radius; shear+continuity independently give v ∝ r^((k−2)/(k+1)), matching only at k = 1. Verified symbolically. **The attractor question is now measured: ORB-10932 converges to the closed system from rest and from seeded perturbed states** (96/192/384-shell ladder, finest relative amplitude shift 3.2×10⁻³; CFL-halving shift 1.0×10⁻⁹) |
 | Newtonian mass additivity forces quadrature composition of river amplitudes (A² additive; A ∝ √N for clustered sources) | supported | Algebra (§ closure (c)): GM_eff = A²/2 and mass additivity. Kills linear velocity superposition (σ ∝ N²) and one-amplitude laws (s ∝ nv³) structurally; level coupling passes by construction. **Measured: ORB-10932 composition gate passed** — A vs N exponent 0.4999999999999982 ± 2.0×10⁻¹⁵ across 1.5 decades of N (radial-monopole reduction; nonspherical near-field is ORB-10934's territory) |
 | The ORB-10751 two-core superposition divergence is a flux-boundary artifact; level-type cores restore the counting mechanic's ORB-10157 headroom family | supported | Predicted by the closure (§ closure (d)); **measured both ways, 2026-08-21.** Flux arm: **ORB-10755** converged the divergent family under flux cores (c = 4.63 ± 0.18, β = 0.606 ± 0.027 at 65³) — real physics of that boundary condition. Level arm: **ORB-10934 family gate confirmed** — full 3-D draw-sourced level cores, same frozen stencil, revert to (1−D)^p with continuum p = 1.0717 ± 0.0036 (consistent with 1.071); free flux family loses ~14× in log-RMSE (0.0949 vs 0.0066) with β driven to the analytic bound 2 — no non-analytic revival ([level-core-two-core-superposition](../../orrery/lab/sims/level-core-two-core-superposition/), orrery `9e273e2`) |
@@ -332,10 +332,19 @@ This fails twice:
    and Earth (5.5 g/cc) generating with effective couplings differing ×4; a body's exterior
    gravity strengthening as it contracts at fixed mass — is grossly non-Newtonian. The
    discriminating channels need care (every purely dynamical channel measures only the
-   product G_eff·M; the discrimination enters through inertially calibrated masses —
-   laboratory G determinations with source materials spanning ~2–19 g/cc agree at ~10⁻⁴ —
-   and through additivity). `conjecture — to verify`: the precise sourced bounds are
-   **ORB-10933**'s studies note.
+   product G_eff·M; the discrimination enters through inertially calibrated masses — the
+   laboratory route — and through additivity). **Now sourced** —
+   [studies/source-side-universality-of-g](../studies/source-side-universality-of-g.md)
+   (ORB-10933): writing G_eff = G₀(ρ/ρ₀)^p, laboratory determinations whose *source* masses
+   span ~1.0–18.0 g/cc (lake water; #316 stainless steel; mercury; 95%-W Inermet180) agree
+   to ≲10⁻³, giving **|p| ≲ 10⁻³** against this coupling's p = 1 — excluded by ~three orders
+   of magnitude. The homogeneous-source pair alone (steel 8.0 vs tungsten alloy 18.0, the
+   clean whole-body-mean-density lever) gives |p| ≤ 4.3×10⁻⁴. The lunar Fe/Al active/passive
+   bound (3.9×10⁻¹⁴, Singh et al. 2023) kills the *per-element* variant far harder but is
+   null against the *bulk*-density variant, and Kreuzer 1968 is a null at **equal** density
+   and constrains composition only; ephemeris consistency across the 8× planetary
+   bulk-density span discriminates nothing on its own, since JPL's masses are derived from
+   GM. The note states each of these scopes precisely.
 
 A subtlety recorded for honesty: at *universal packing density* the flux coupling
 accidentally reproduces mass scaling (r_s ∝ M^(1/3) gives A ∝ √M, G = κ²ρ/(24πn²)
@@ -415,10 +424,14 @@ adjudicate the level-coupled system — which is exactly what ORB-10755 then del
 converged flux-arm divergence, level cores out of scope; the level-core discriminator is
 **ORB-10934**). One independent pressure point, also recorded there:
 a non-analytic small-D family (D^p, p < 1) has unbounded d ln A/dD as D → 0 and cannot
-limit to linear superposition, which the solar system measures to high precision
-(`conjecture — to verify`: the precise PPN-nonlinearity bound belongs to ORB-10933's
-studies note, and the D ↔ σ normalization is the same one the parent's carrier question
-leaves unfixed). **Adjudicated 2026-08-21: the prediction held** (§ adjudication below) —
+limit to linear superposition, which the solar system measures to high precision (the
+PPN-nonlinearity comparator is now sourced —
+[studies/source-side-universality-of-g](../studies/source-side-universality-of-g.md)
+§ superposition nonlinearity: β − 1 = (1.2 ± 1.1)×10⁻⁴ from LLR plus Cassini γ, Williams,
+Turyshev & Boggs 2004; `conjecture — to verify` survives only for the *conversion*, since
+β is an analytic post-Newtonian bound and turning it into a number for a non-analytic D^p
+family first needs the D ↔ σ normalization the parent's carrier question leaves
+unfixed). **Adjudicated 2026-08-21: the prediction held** (§ adjudication below) —
 the level-core lattice reverts to the headroom family, and its small-D slope is measured
 *bounded* (−1.006…−1.054), exactly the analytic behavior the linear-superposition limit
 needs.

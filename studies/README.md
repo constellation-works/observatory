@@ -73,6 +73,15 @@ one place to be wrong, one place to fix.
   solitary pulsars), the 2002 Jupiter-VLBI moving-lens measurement and its interpretation
   dispute, frame dragging as measured (GP-B, LAGEOS/LARES with the error-budget criticisms),
   and the Moore–Nelson gravitational-Cherenkov bounds on subluminal gravity.
+- [source-side-universality-of-g](source-side-universality-of-g.md) — the wall on a
+  source-strength that tracks the source's *density*: which channels discriminate (only the
+  laboratory route, because every dynamical channel measures \(G_\text{eff}M\)), the
+  laboratory G ladder across source-mass densities ~1.0–18.0 g/cm³ (lake water, #316
+  stainless steel, mercury, tungsten alloy) agreeing to ≲10⁻³, the active/passive-mass
+  lineage (Kreuzer 1968 at equal density — composition only; Bartlett & van Buren 1986 and
+  Singh et al. 2023 lunar Fe/Al at 4×10⁻¹² → 3.9×10⁻¹⁴, killing the *local* variant and
+  null against the *bulk* variant), the GM/M degeneracy that makes ephemeris consistency
+  non-discriminating, and the PPN-β superposition-nonlinearity comparator.
 
 ## Wanted (backlog)
 
