@@ -56,7 +56,7 @@ Newtonian baseline is therefore *contained in* these residuals. A proposed modif
 under the same protocol (fixed first-epoch ICs, same grid, same frame), predicts a deviation
 from the Newtonian baseline **larger than a planet's floor** would have shown up here — it is
 excluded at that amplitude. The gravity-as-scarcity constraint row in
-[theory/gravity-as-scarcity](../theory/gravity-as-scarcity.md) applies this bound. Its
+[theory/gravity-as-scarcity](../theory/gravity-as-scarcity/) applies this bound. Its
 numerical adjudication (ORB-10097, orrery `23fe253`) split the model's two local-field
 readings against exactly this floor: the **multiplicative** reading exceeds Uranus's floor in
 the primary galactocentric orientation (1.89× rms, 2.84× max; the six-axis orientation

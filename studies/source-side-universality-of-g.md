@@ -9,7 +9,7 @@ updated: 2026-08-28
 
 The measured wall around any theory whose **source strength depends on a property of the
 source body other than its mass** — specifically, on the source's *density*. This note
-exists because [theory/shear-sourced-consumption](../theory/shear-sourced-consumption.md)
+exists because [theory/shear-sourced-consumption](../theory/shear-sourced-consumption/)
 § closure (a) derives, in closed form, that a flux-type amplitude coupling forces
 \(G_\text{eff} = \kappa^2\rho_\text{body}/(24\pi n^2)\) — exterior gravity proportional to
 the source's bulk density, independent of its mass — and rests one leg of its exclusion on
@@ -245,7 +245,7 @@ the note.
 
 ## Superposition nonlinearity (the separate question)
 
-Recorded here because [theory/shear-sourced-consumption](../theory/shear-sourced-consumption.md)
+Recorded here because [theory/shear-sourced-consumption](../theory/shear-sourced-consumption/)
 § closure (d) asks for it: the measured wall on *nonlinearity in the superposition of
 gravity* is the PPN parameter β. From lunar laser ranging combined with the Cassini γ
 determination — J. G. Williams, S. G. Turyshev & D. H. Boggs, "Progress in Lunar Laser
@@ -266,7 +266,7 @@ leaves open. The bound is sourced; the conversion is not, and remains owed.
 
 ## What this binds in our corpus
 
-- [theory/shear-sourced-consumption](../theory/shear-sourced-consumption.md) § closure (a) —
+- [theory/shear-sourced-consumption](../theory/shear-sourced-consumption/) § closure (a) —
   the flux-type amplitude coupling's *external* leg. The laboratory route is the
   discriminating one (source-mass densities ~1.0 to ~18.0 g/cm³, agreement ≲10⁻³ ⟹
   \(|p| \lesssim 10^{-3}\) vs the predicted \(p = 1\)); the lunar active/passive tests kill
@@ -274,7 +274,7 @@ leaves open. The bound is sourced; the conversion is not, and remains owed.
   consistency alone discriminates nothing because every dynamical channel measures
   \(G_\text{eff}M\). The doc's `conjecture — to verify` on this passage is upgraded in the
   change-set that lands this note.
-- [theory/shear-sourced-consumption](../theory/shear-sourced-consumption.md) § closure (d) —
+- [theory/shear-sourced-consumption](../theory/shear-sourced-consumption/) § closure (d) —
   the PPN-nonlinearity comparator for a non-analytic small-D superposition family: β − 1 =
   (1.2 ± 1.1)×10⁻⁴, with the normalization gap stated above.
 - [equivalence-principle-tests](equivalence-principle-tests.md) — cross-link, and a boundary:

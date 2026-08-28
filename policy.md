@@ -22,8 +22,8 @@ for a phenomenology card.
 
 ## Kinds of claim
 
-Canonical files: `theory/<doc>.claims.json`. Every `## Evidence ledger` row in
-the matching essay must appear there, byte-for-byte in `claim`.
+Canonical files: `theory/<doc>/claims.json`. Every `## Evidence ledger` row in
+`theory/<doc>/evidence-ledger.md` must appear there, byte-for-byte in `claim`.
 
 | kind | what it is |
 |---|---|

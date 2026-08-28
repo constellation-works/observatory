@@ -13,7 +13,7 @@ The laboratory-to-orbit clock ladder lives in
 hole, and stacked galaxy clusters. These are the instruments for any theory in which clock
 rates could decouple from the dynamically inferred potential at astronomical scales (the
 S2-disjunction confrontation in
-[theory/two-substance-vortex-vacuum](../theory/two-substance-vortex-vacuum.md), ORB-10161).
+[theory/two-substance-vortex-vacuum](../theory/two-substance-vortex-vacuum/), ORB-10161).
 
 ## The measured rungs
 
@@ -56,7 +56,7 @@ to distinguish them.
 ## What this binds in our corpus
 
 The Branch B (metric-medium) kill-or-live row of the S2 disjunction
-([theory/two-substance-vortex-vacuum](../theory/two-substance-vortex-vacuum.md), ORB-10161):
+([theory/two-substance-vortex-vacuum](../theory/two-substance-vortex-vacuum/), ORB-10161):
 its surviving form predicts redshift ≡ dynamics-inferred potential at all scales, consistent
 with every rung above and degenerate with GR + dark matter in the clock channel. The
 clean-clock alternative (redshift reads baryons only) is what rung 1 disfavors. The

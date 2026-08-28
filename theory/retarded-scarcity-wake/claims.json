@@ -1,0 +1,171 @@
+{
+  "doc": "retarded-scarcity-wake",
+  "title": "The retarded-scarcity wake: moving gravity through a substrate",
+  "status": "exploratory",
+  "families": [
+    "retarded-scarcity-wake"
+  ],
+  "updated": "2026-08-08",
+  "headline": "Delayed-center shortcut fails as a Poisson-vacuum field. Only live fork is an explicit boost-violating substrate equation (Branch C).",
+  "live_fronts": [
+    "retarded-wake-branch-c"
+  ],
+  "claims": [
+    {
+      "id": "retarded-wake-potential-like-scalar",
+      "family": "retarded-scarcity-wake",
+      "kind": "model-property",
+      "status": "supported",
+      "claim": "A localized scarcity source has a potential-like scalar that increases numerically from the deep center toward the edge, while its gradient attracts matter inward",
+      "evidence": "By construction in [scarcity-grid-weight-black-hole](../../../orrery/lab/sims/scarcity-grid-weight-black-hole/) and [scarcity-capped-cumulative-field](../../../orrery/lab/sims/scarcity-capped-cumulative-field/); inherited only as mechanics from [gravity-as-scarcity](../gravity-as-scarcity/), not as evidence that nature uses scarcity",
+      "links": [
+        "../../../orrery/lab/sims/scarcity-grid-weight-black-hole/",
+        "../../../orrery/lab/sims/scarcity-capped-cumulative-field/",
+        "../gravity-as-scarcity/"
+      ],
+      "in_doc_ledger": true
+    },
+    {
+      "id": "retarded-wake-substrate-u-exists",
+      "family": "retarded-scarcity-wake",
+      "kind": "nature",
+      "status": "conjecture",
+      "claim": "There exists a physical gravitational substrate with a locally meaningful velocity field **U**, distinct in principle from the CMB frame",
+      "evidence": "No source law, substrate equation, or direct evidence. An O(1) substance coupling to a preferred frame is already bounded by [lorentz-violation-bounds](../../studies/lorentz-violation-bounds.md); an excitation-medium reading can hide uniform motion at leading order ([river-model-and-analog-gravity](../../studies/river-model-and-analog-gravity.md))",
+      "links": [
+        "../../studies/lorentz-violation-bounds.md",
+        "../../studies/river-model-and-analog-gravity.md"
+      ],
+      "in_doc_ledger": true,
+      "tags": [
+        "preferred-frame"
+      ],
+      "comparator": "Lorentz-violation bounds and analog-gravity hiding of uniform motion, not an O(1) aether wind."
+    },
+    {
+      "id": "retarded-wake-delayed-center-dipole",
+      "family": "retarded-scarcity-wake",
+      "kind": "derived",
+      "status": "untested",
+      "claim": "Under the delayed-center postulate, uniform translation produces a first-order potential dipole proportional to \\(v/c_g\\), with higher conventional potential on the leading edge and stronger attraction on the trailing edge",
+      "evidence": "The algebra is internally consistent, but \\(\\Phi_{\\rm lag}\\) is not the compact-source exterior solution of the standard Poisson equation: it has \\(\\nabla^2\\Phi\\neq0\\) outside the galaxy and a linearly divergent Poisson-equivalent dipole moment. The analytic check awaits a cataloged negative-control fixture — [moving-source-field-consistency](../moving-source-field-consistency/)",
+      "links": [
+        "../moving-source-field-consistency/"
+      ],
+      "in_doc_ledger": true,
+      "kill": "Cataloged negative-control fixture confirms Laplace-forbidden n≥1 terms and the linearly divergent dipole."
+    },
+    {
+      "id": "retarded-wake-4beta-contrast",
+      "family": "retarded-scarcity-wake",
+      "kind": "derived",
+      "status": "untested",
+      "claim": "The first-order acceleration contrast is \\((g_{\\rm trail}-g_{\\rm lead})/g_0\\simeq4\\beta_g\\)",
+      "evidence": "Analytically corrected to \\(2\\beta_g\\) in § Leading/trailing sign. \\(4\\beta_g\\) follows from a *different*, non-potential force rule than the declared \\(\\mathbf{a}=-\\nabla\\Phi\\); the fixture remains to be cataloged — [moving-source-field-consistency](../moving-source-field-consistency/)",
+      "links": [
+        "../moving-source-field-consistency/"
+      ],
+      "in_doc_ledger": true,
+      "kill": "Cataloged fixture: declared a=−∇Φ gives 2β_g, not 4β_g."
+    },
+    {
+      "id": "retarded-wake-retarded-direction-conservative",
+      "family": "retarded-scarcity-wake",
+      "kind": "derived",
+      "status": "untested",
+      "claim": "The alternative \"force points toward the retarded position\" rule is a legitimate conservative mechanic",
+      "evidence": "Analytically it has nonzero curl and admits loop-dependent work \\(\\sim\\beta_g GM/R\\); constant-\\(R\\) circles return zero, so the fixture must vary eccentricity and apsidal orientation — [moving-source-field-consistency](../moving-source-field-consistency/)",
+      "links": [
+        "../moving-source-field-consistency/"
+      ],
+      "in_doc_ledger": true,
+      "kill": "Cataloged fixture: nonzero curl and loop-dependent work."
+    },
+    {
+      "id": "retarded-wake-concentration",
+      "family": "retarded-scarcity-wake",
+      "kind": "nature",
+      "status": "untested",
+      "claim": "A centrally concentrated galaxy preserves a larger coherent wake than a diffuse distribution with the same total mass",
+      "evidence": "The delayed-center concentration law is moot once that shortcut is rejected. A concrete Branch C equation may have a different density response, which must be derived rather than inherited",
+      "links": [],
+      "in_doc_ledger": true,
+      "kill": "Moot for the rejected shortcut; a Branch C equation must derive its own density response."
+    },
+    {
+      "id": "retarded-wake-m1-asymmetry",
+      "family": "retarded-scarcity-wake",
+      "kind": "nature",
+      "status": "untested",
+      "claim": "The wake displaces the dynamical center behind the baryonic center and produces an \\(m=1\\) leading/trailing rotation asymmetry rather than an axisymmetric flat-curve boost",
+      "evidence": "A possible Branch C signature, but no amplitude law exists. \\(A_1\\sim2\\times10^{-3}\\) is only the delayed-center toy scale and is roughly 50–100× below representative observed lopsidedness scales; it is not a ceiling on Branch C — [moving-source-field-consistency](../moving-source-field-consistency/) § The delayed-center toy supplies a scale, not a ceiling",
+      "links": [
+        "../moving-source-field-consistency/"
+      ],
+      "in_doc_ledger": true,
+      "kill": "No Branch C amplitude law; delayed-center toy scale is not a ceiling."
+    },
+    {
+      "id": "retarded-wake-axis-velocity-correlation",
+      "family": "retarded-scarcity-wake",
+      "kind": "nature",
+      "status": "untested",
+      "claim": "A correlation between observed asymmetry axes and a common inferred substrate velocity would be evidence for the wake (§ Observable signatures, last bullet; rejection gate 6)",
+      "evidence": "A cosmological baseline is required. Peculiar velocity and environment share causes, but the leading tidal tensor is quadrupolar and does not by itself establish an \\(m=1\\) phase correlation. The null correlation must be measured, not assumed — [moving-source-field-consistency](../moving-source-field-consistency/) § A degeneracy to measure, not assume",
+      "links": [
+        "../moving-source-field-consistency/"
+      ],
+      "in_doc_ledger": true,
+      "kill": "Measure the null m=1 correlation; do not assume peculiar velocity supplies it."
+    },
+    {
+      "id": "retarded-wake-lopsidedness-warp-split",
+      "family": "retarded-scarcity-wake",
+      "kind": "nature",
+      "status": "untested",
+      "claim": "A boost-violating model may produce a lopsidedness-versus-vertical-distortion split set partly by the angle between \\(\\mathbf{w}\\) and the disk normal",
+      "evidence": "New candidate signature; the response is not parameter-free and may be bowl-like rather than an integral-sign warp — [moving-source-field-consistency](../moving-source-field-consistency/) § A candidate geometric discriminator",
+      "links": [
+        "../moving-source-field-consistency/"
+      ],
+      "in_doc_ledger": true,
+      "kill": "Disk response underived; may be bowl-like rather than an integral-sign warp."
+    },
+    {
+      "id": "retarded-wake-boost-invariant-cancel",
+      "family": "retarded-scarcity-wake",
+      "kind": "nature",
+      "status": "conjecture",
+      "claim": "A specified boost-invariant causal field can cancel the delayed-center model's first-order dipole while retaining finite propagation speed",
+      "evidence": "Established in electromagnetism and general relativity, pending the local study note; it is a calibration result for those specified equations, not a verdict on every preferred-medium equation — [moving-source-field-consistency](../moving-source-field-consistency/)",
+      "links": [
+        "../moving-source-field-consistency/"
+      ],
+      "in_doc_ledger": true
+    },
+    {
+      "id": "retarded-wake-gravitational-cone",
+      "family": "retarded-scarcity-wake",
+      "kind": "nature",
+      "status": "conjecture",
+      "claim": "A gravitational cone forms when \\(v>c_g\\)",
+      "evidence": "In a conventionally coupled gravity mode this regime is excluded: GW170817 pins the observed tensor speed near \\(c\\), while Moore & Nelson give conservative and extragalactic Cherenkov bounds of \\(2\\times10^{-15}\\) and ~\\(2\\times10^{-19}\\). Applying those bounds to an extra substrate mode requires its matter coupling and dispersion — [moving-source-field-consistency](../moving-source-field-consistency/)",
+      "links": [
+        "../moving-source-field-consistency/"
+      ],
+      "in_doc_ledger": true
+    },
+    {
+      "id": "retarded-wake-rescues-parent",
+      "family": "retarded-scarcity-wake",
+      "kind": "nature",
+      "status": "refuted",
+      "claim": "The new velocity-dependent branch rescues the parent scarcity theory's fixed-β galactic law, photon sector, or source-law debt",
+      "evidence": "It does not address those failures. The parent ledger remains controlling: [gravity-as-scarcity](../gravity-as-scarcity/)",
+      "links": [
+        "../gravity-as-scarcity/"
+      ],
+      "in_doc_ledger": true
+    }
+  ]
+}

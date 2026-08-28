@@ -16,7 +16,7 @@
   ],
   "properties": {
     "id": { "type": "string" },
-    "doc": { "type": "string", "description": "theory stem this front lives on (theory/<doc>.md or theory/<doc>/ during dual-read)" },
+    "doc": { "type": "string", "description": "theory/<doc>/ stem this front lives on" },
     "family": { "type": "string" },
     "kind": { "enum": ["existence", "control", "derivation", "phenomenology"] },
     "owed_object": { "type": "string" },

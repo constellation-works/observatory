@@ -10,7 +10,7 @@ updated: 2026-07-12
 The canonical lineage of "particles are vortices in a substrate" — who tried it, why, what
 killed each attempt, and which piece of it became real measured physics (quantized
 circulation). This is the family the two-substance vortex vacuum is placed against in
-[theory/two-substance-vortex-vacuum](../theory/two-substance-vortex-vacuum.md) (ORB-10160).
+[theory/two-substance-vortex-vacuum](../theory/two-substance-vortex-vacuum/) (ORB-10160).
 
 ## Kelvin's vortex atoms and the knot-theory origin
 
@@ -114,7 +114,7 @@ proton, with its own spin-½.
 ## What this binds in our corpus
 
 The two-substance vortex vacuum
-([theory/two-substance-vortex-vacuum](../theory/two-substance-vortex-vacuum.md)) leans on
+([theory/two-substance-vortex-vacuum](../theory/two-substance-vortex-vacuum/)) leans on
 this note four ways: Kelvin supplies the identity-of-particles motivation and its
 historical fate; Maxwell 1865 supplies the removability bar its EM sector must clear;
 Bjerknes supplies the sign risk its interaction rule must beat; and quantized circulation

@@ -11,7 +11,7 @@ The established-physics wall any scalar theory of gravity runs into: the photon 
 note carries the parametrized post-Newtonian (PPN) machinery, the measured values of γ, and
 the lineage of scalar gravity from Nordström to the screened scalar-tensor theories — the
 constraints the gravity-as-scarcity model is confronted with in
-[theory/gravity-as-scarcity](../theory/gravity-as-scarcity.md) (ORB-10156).
+[theory/gravity-as-scarcity](../theory/gravity-as-scarcity/) (ORB-10156).
 
 ## The two weak-field potentials and γ
 
@@ -105,4 +105,4 @@ either absent (Nordström's fate, zero deflection), half-strength (γ = 0), or w
 and all of those sit ≥ 4 orders of magnitude outside the Cassini band. The only known viable
 completions are screened scalar-tensor structures with γ ≈ 1 locally. The confrontation and
 the derived verdicts live in
-[theory/gravity-as-scarcity](../theory/gravity-as-scarcity.md) (ORB-10156 section and ledger).
+[theory/gravity-as-scarcity](../theory/gravity-as-scarcity/) (ORB-10156 section and ledger).

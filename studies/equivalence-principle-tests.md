@@ -13,7 +13,7 @@ the Eötvös parameter η(A,B) = 2|a_A − a_B|/(a_A + a_B) for two test bodies 
 composition. Companion fact-cluster: what the mass of ordinary matter is actually *made
 of* — because that decomposition is what a WEP violation would have to key into. These
 bind kill condition A of the two-substance vortex vacuum
-([theory/two-substance-vortex-vacuum](../theory/two-substance-vortex-vacuum.md), ORB-10160).
+([theory/two-substance-vortex-vacuum](../theory/two-substance-vortex-vacuum/), ORB-10160).
 
 ## The measured ladder
 
@@ -65,6 +65,6 @@ applies directly and the branch is dead at ~eleven orders; the surviving fork (g
 couples to substrate energy) satisfies WEP by construction but surrenders the literal-void
 ontology. The ALPHA-g row additionally kills any substance-asymmetric gravity in which
 antimatter defects (reversed windings) couple differently. Verdicts live in
-[theory/two-substance-vortex-vacuum](../theory/two-substance-vortex-vacuum.md); the
+[theory/two-substance-vortex-vacuum](../theory/two-substance-vortex-vacuum/); the
 equivalence-principle difficulty generic to superfluid-vacuum theories is noted in
 [superfluid-vacuum-and-emergent-gauge-fields](superfluid-vacuum-and-emergent-gauge-fields.md).

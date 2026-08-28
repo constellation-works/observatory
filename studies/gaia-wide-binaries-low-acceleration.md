@@ -55,6 +55,6 @@ recommended v2; not yet filed).
 
 ## Consumers
 
-- [gravity-as-scarcity](../theory/gravity-as-scarcity.md) § what remains live — the
+- [gravity-as-scarcity](../theory/gravity-as-scarcity/) § what remains live — the
   acceleration-organized-successor question now has a stellar-scale null to respect.
 - [ledger](../ledger.md) — supported row + standing debt #2.

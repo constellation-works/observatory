@@ -113,36 +113,24 @@ def doc_layout_and_stem(path: Path) -> tuple[str, str]:
 
 
 def iter_claim_files(theory: Path) -> list[Path]:
-    # Dual-read: flat theory/<slug>.claims.json and dir theory/<slug>/claims.json.
-    files = list(theory.glob("*.claims.json")) + list(theory.glob("*/claims.json"))
-    return sorted(set(files), key=lambda p: p.as_posix())
+    return sorted(theory.glob("*/claims.json"))
 
 
 def iter_theories(theory: Path, errors: list[str]) -> list[tuple[str, str]]:
-    """Return (stem, layout) where layout is 'flat' or 'dir'. Both layouts for one stem is an error."""
-    layouts: dict[str, set[str]] = {}
+    """Return (stem, layout). Directory layout is the only pairing."""
     if not theory.is_dir():
         return []
-    for path in theory.glob("*.md"):
-        if path.name == "README.md":
-            continue
-        layouts.setdefault(path.stem, set()).add("flat")
+    for path in sorted(theory.glob("*.md")):
+        if path.name != "README.md":
+            errors.append(f"theory/{path.name}: leftover flat essay; theories live in theory/<slug>/")
+    for path in sorted(theory.glob("*.claims.json")):
+        errors.append(f"theory/{path.name}: leftover flat registry; theories live in theory/<slug>/")
+    stems: set[str] = set()
     for path in theory.glob("*/README.md"):
-        layouts.setdefault(path.parent.name, set()).add("dir")
-    for path in theory.glob("*.claims.json"):
-        layouts.setdefault(path.name.removesuffix(".claims.json"), set()).add("flat")
+        stems.add(path.parent.name)
     for path in theory.glob("*/claims.json"):
-        layouts.setdefault(path.parent.name, set()).add("dir")
-    result: list[tuple[str, str]] = []
-    for stem in sorted(layouts):
-        found = layouts[stem]
-        if "flat" in found and "dir" in found:
-            errors.append(
-                f"theory/{stem}: both flat and directory layouts present; finish the move"
-            )
-            continue
-        result.append((stem, "dir" if "dir" in found else "flat"))
-    return result
+        stems.add(path.parent.name)
+    return [(stem, "dir") for stem in sorted(stems)]
 
 
 def parse_hub_frontmatter(text: str, loc: str, errors: list[str]) -> dict[str, object]:
@@ -686,7 +674,7 @@ def render_ledger(docs: list[dict], gates: list[dict], wall: dict) -> str:
         "One-page rollup of every claim in the `theory/` registries, regrouped **by verdict**"
     )
     lines.append(
-        "instead of by document. The **source of truth is `theory/<doc>.claims.json`**, not"
+        "instead of by document. The **source of truth is `theory/<doc>/claims.json`**, not"
     )
     lines.append(
         "this file and not the essay tables (the tables must match the registry)."
@@ -807,7 +795,7 @@ def run_checks(root: Path, today: dt.date | None = None) -> tuple[list[str], str
 def write_fixture_claim(
     directory: Path,
     stem: str,
-    layout: str = "flat",
+    layout: str = "dir",
     **overrides: object,
 ) -> None:
     doc = {
@@ -1117,7 +1105,7 @@ def selftest() -> int:
         expect_error("canonical-extra-h2", root, "extra H2 '## Notes'")
 
         write_fixture_claim(root, "demo", layout="flat")
-        expect_error("both-layouts", root, "both flat and directory layouts present")
+        expect_error("leftover-flat", root, "leftover flat")
 
     with tempfile.TemporaryDirectory() as tmp:
         root = Path(tmp)

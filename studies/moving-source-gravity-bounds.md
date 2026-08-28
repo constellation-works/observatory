@@ -13,10 +13,10 @@ the PPN preferred-frame parameters and their current bounds, what the one moving
 deflection experiment actually measured, frame dragging as measured, and the gravitational
 Cherenkov constraint on a subluminal gravity mode. This is the wall the wind-tunnel
 fixtures' measured wake gets confronted with
-([theory/moving-sources-in-the-closed-system](../theory/moving-sources-in-the-closed-system.md));
+([theory/moving-sources-in-the-closed-system](../theory/moving-sources-in-the-closed-system/));
 the note was demanded by
-[theory/moving-source-field-consistency](../theory/moving-source-field-consistency.md) and
-[theory/retarded-scarcity-wake](../theory/retarded-scarcity-wake.md) § open debts. Every
+[theory/moving-source-field-consistency](../theory/moving-source-field-consistency/) and
+[theory/retarded-scarcity-wake](../theory/retarded-scarcity-wake/) § open debts. Every
 citation below was checked against the actual source (arXiv/journal listing or the paper
 text) before being recorded.
 
@@ -162,7 +162,7 @@ Scope, from the paper's own assumptions: the bound applies to a **conventionally
 gravitational mode (graviton coupled to matter with ordinary gravitational strength) that
 is subluminal; it says nothing about c_g > c, and applying it to an *extra* substrate mode
 requires knowing that mode's matter coupling and dispersion — the scoping already recorded
-in [theory/moving-source-field-consistency](../theory/moving-source-field-consistency.md).
+in [theory/moving-source-field-consistency](../theory/moving-source-field-consistency/).
 The complementary superluminal/equal-speed anchor — GW170817/GRB 170817A's
 \|c_gw/c − 1\| ≲ 10⁻¹⁵ — is sourced in
 [scalar-gravity-ppn-constraints](scalar-gravity-ppn-constraints.md) (cross-link).
@@ -175,7 +175,7 @@ at 1 AU) — cross-link, not duplicated here.
 
 ## What this binds in our corpus
 
-- [theory/moving-sources-in-the-closed-system](../theory/moving-sources-in-the-closed-system.md)
+- [theory/moving-sources-in-the-closed-system](../theory/moving-sources-in-the-closed-system/)
   — the closed system provably sources no vector potential, and its measured wake
   (ORB-10935/ORB-10937/ORB-10938) is the moving-source prediction. This note is the
   external wall its Theorem 2 confrontation was waiting for: the preferred-frame table
@@ -184,13 +184,13 @@ at 1 AU) — cross-link, not duplicated here.
   measured. The doc's `conjecture — to verify` rows citing "the studies note" now have
   their sourced targets; upgrading them is kepler's reconciliation job in the change-set
   that ingests this note.
-- [theory/moving-source-field-consistency](../theory/moving-source-field-consistency.md)
+- [theory/moving-source-field-consistency](../theory/moving-source-field-consistency/)
   — its Carlip-cancellation row and Cherenkov row (both `conjecture — to verify`, "No
   studies/ note yet") are now sourced here: the cancellation is real, order-counted
   (uniform motion exactly canceled in EM, through (v/c)⁵-suppressed residuals in GR), and
   a property of the specific field equations — exactly the control case its Branch C
   analysis assumes.
-- [theory/retarded-scarcity-wake](../theory/retarded-scarcity-wake.md) — § open debts
+- [theory/retarded-scarcity-wake](../theory/retarded-scarcity-wake/) — § open debts
   explicitly demands this note before any observational fit; its Cherenkov-cone row and
   preferred-frame rows point at the Moore & Nelson and PPN sections above.
 

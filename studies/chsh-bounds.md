@@ -27,7 +27,7 @@ experimental lineage.
 
 ## What hangs on this
 
-- [theory/vortex-electron](../theory/vortex-electron.md) is refuted by the gap between rows 1
+- [theory/vortex-electron](../theory/vortex-electron/) is refuted by the gap between rows 1
   and 3: its best |S| is exactly 2.000 ([lab/sims/vortex-bell](../../orrery/lab/sims/vortex-bell/)), and nature
   measurably exceeds 2.
 - [lab/sims/pingpong-bell](../../orrery/lab/sims/pingpong-bell/) demonstrates row 1 with a tabletop mechanism

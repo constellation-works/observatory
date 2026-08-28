@@ -12,7 +12,7 @@ excitations": Volovik's superfluid-³He analog program. This note carries what t
 actually establishes — because it is the standard any new substrate ontology must be
 measured against — plus the generic wave content of a *two*-component medium. Both bind the
 two-substance vortex vacuum in
-[theory/two-substance-vortex-vacuum](../theory/two-substance-vortex-vacuum.md) (ORB-10160).
+[theory/two-substance-vortex-vacuum](../theory/two-substance-vortex-vacuum/) (ORB-10160).
 
 ## The Volovik program (³He-A as a vacuum analog)
 

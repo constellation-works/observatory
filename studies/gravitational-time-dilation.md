@@ -15,7 +15,7 @@ weak-field GR the fractional rate deficit of a clock at potential Φ = −GM/r i
 the spatial potential γΦ (see
 [scalar-gravity-ppn-constraints](scalar-gravity-ppn-constraints.md)). This note carries the
 measured ladder the gravity-as-scarcity clock sector is confronted with in
-[theory/gravity-as-scarcity](../theory/gravity-as-scarcity.md) (ORB-10159).
+[theory/gravity-as-scarcity](../theory/gravity-as-scarcity/) (ORB-10159).
 
 ## The measured ladder
 
@@ -65,7 +65,7 @@ theory that buys dilation from motion through a flowing medium (the river readin
 [river-model-and-analog-gravity](river-model-and-analog-gravity.md)) must produce the
 dilation factor √(1 − v²/c²) with v² = 2GM/r *exactly*, because rows 3–5 test the profile,
 not only the local gradient. The confrontation lives in
-[theory/gravity-as-scarcity](../theory/gravity-as-scarcity.md) (ORB-10159 section and
+[theory/gravity-as-scarcity](../theory/gravity-as-scarcity/) (ORB-10159 section and
 ledger). The redshift rungs beyond the solar neighborhood (solar disk, S2 at Sgr A*, galaxy
 clusters) are in
 [gravitational-redshift-astronomical](gravitational-redshift-astronomical.md).

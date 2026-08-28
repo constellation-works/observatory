@@ -12,7 +12,7 @@ rather than a picture: the Gullstrand–Painlevé (GP) form of the Schwarzschild
 its physical elaboration as the *river model*; and Unruh's acoustic metrics, the canonical
 demonstration that excitations of a flowing medium propagate on an effective Lorentzian
 geometry. These are the canonical families the dynamical reading of gravity-as-scarcity is
-placed against in [theory/gravity-as-scarcity](../theory/gravity-as-scarcity.md) (ORB-10159).
+placed against in [theory/gravity-as-scarcity](../theory/gravity-as-scarcity/) (ORB-10159).
 
 ## Gullstrand–Painlevé coordinates and the river model
 
@@ -87,5 +87,5 @@ The standard modern reference is Barceló, Liberati & Visser 2011, "Analogue Gra
 The dynamical ("river") reading of gravity-as-scarcity is a member of exactly this family:
 its clock sector works only if the lattice inflow has the free-fall profile (GP), and its
 matter coupling works only in the excitation (analog-gravity) reading. The derivation and
-verdicts live in [theory/gravity-as-scarcity](../theory/gravity-as-scarcity.md)
+verdicts live in [theory/gravity-as-scarcity](../theory/gravity-as-scarcity/)
 (ORB-10159 section and ledger).

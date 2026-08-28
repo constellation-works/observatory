@@ -17,7 +17,7 @@ with dimensionless strength α and range λ — the standard frame of the α–�
 Heckel & Nelson 2003, *Annu. Rev. Nucl. Part. Sci.* 53, 77). This note carries the measured
 limits, two structural facts about mediated forces, and the two canonical episodes (Fischbach
 1986; Sanders 1984) that the S2-disjunction derivation leans on in
-[theory/two-substance-vortex-vacuum](../theory/two-substance-vortex-vacuum.md) (ORB-10161).
+[theory/two-substance-vortex-vacuum](../theory/two-substance-vortex-vacuum/) (ORB-10161).
 
 ## The measured α–λ ladder
 
@@ -94,7 +94,7 @@ organization or be killed by it.
 ## What this binds in our corpus
 
 The S2-as-fifth-force branch of the two-substance vortex vacuum
-([theory/two-substance-vortex-vacuum](../theory/two-substance-vortex-vacuum.md), ORB-10161):
+([theory/two-substance-vortex-vacuum](../theory/two-substance-vortex-vacuum/), ORB-10161):
 its required (α ≈ −0.68, ξ₂ ≈ 5.25 kpc) sits in the open window of the direct ISL ladder but
 is closed by the composition row (if charge-coupled), the sign systematics (if α > 0), and
 the light/mass discriminator (any mediator) — the derivation and verdicts live in the theory

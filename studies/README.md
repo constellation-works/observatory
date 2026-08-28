@@ -86,7 +86,7 @@ one place to be wrong, one place to fix.
 ## Wanted (backlog)
 
 - Grangier–Roger–Aspect 1986 antibunching (needed by
-  [theory/swirl-photon](../theory/swirl-photon.md))
+  [theory/swirl-photon](../theory/swirl-photon/))
 - Neutrality of matter (electron–proton charge cancellation bound, ~10⁻²¹) and the Skyrme
   baryon-number-as-winding citation (needed by
-  [theory/two-substance-vortex-vacuum](../theory/two-substance-vortex-vacuum.md))
+  [theory/two-substance-vortex-vacuum](../theory/two-substance-vortex-vacuum/))

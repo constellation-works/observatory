@@ -93,7 +93,7 @@ So de Sitter behaves like rotation about every axis at once. The nonzero trace i
 \(\nabla^{2}\Phi=-\Lambda c^{2}\neq0\) everywhere — legitimate here, because vacuum energy genuinely
 is a source filling space, in contrast to the delayed-center postulate refuted on exactly this
 diagnostic in
-[theory/moving-source-field-consistency](../theory/moving-source-field-consistency.md).
+[theory/moving-source-field-consistency](../theory/moving-source-field-consistency/).
 
 **Do not import the fluid.** A common mental image for "expansion pushes things apart" is a stirred
 medium — a spinning object dragging particles, nearby ones carried along, distant ones flung off.
@@ -196,7 +196,7 @@ Hypothesis (1937), \(G\propto1/t\). Lunar laser ranging measures
 [gravitational-time-dilation](gravitational-time-dilation.md)) — consistent with zero and bounding
 any tracking at \(\sim10^{-3}\) of \(H_0\). Three orders of magnitude. The same bound already
 kills the accumulating variant of
-[theory/gravity-as-scarcity](../theory/gravity-as-scarcity.md).
+[theory/gravity-as-scarcity](../theory/gravity-as-scarcity/).
 
 So: the intuition survives as a *conclusion* (local potentials do not track expansion) and dies as
 a *mechanism* (the coupling does not track it either, and gravity has the wrong sign to drive
@@ -305,7 +305,7 @@ IC342/Maffei, NGC253/Sculptor, NGC4736/CVn zero-velocity radii, 2002–2018), Vi
 (Karachentsev et al. 2014, ApJ 782, 4), Fornax–Eridanus (Nasonova et al. 2011, A&A 532,
 A104), against two predictions: the shear-consumption budget radius
 \(R_{\rm sc}=(2GM/H_0^{2})^{1/3}\)
-([theory/shear-sourced-consumption](../theory/shear-sourced-consumption.md)) and the standard
+([theory/shear-sourced-consumption](../theory/shear-sourced-consumption/)) and the standard
 ΛCDM zero-velocity relation.
 
 **The circularity lesson comes first.** Nearly every published \(R_0\to M\) conversion in
@@ -399,7 +399,7 @@ stripping them.
   with the Hubble flow, motion through it is peculiar velocity only. If it does not, distant
   galaxies move through it at a large fraction of \(c\), and the model owes an account of why the
   resulting signatures are absent. See
-  [theory/moving-source-field-consistency](../theory/moving-source-field-consistency.md).
+  [theory/moving-source-field-consistency](../theory/moving-source-field-consistency/).
 - **Structure larger than \(R_{\rm ta,max}\) cannot be bound**, which is a real constraint on any
   proposed large-scale bound configuration, and a live test of ΛCDM in its own right.
 - **Two near-coincidences are traps** and should be named as such whenever they appear: lunar
@@ -437,6 +437,6 @@ stripping them.
   decade-scale unmodeled-dynamics bound this note's AU row complements
 - [lorentz-violation-bounds](lorentz-violation-bounds.md) — the preferred-frame wall, including the
   CMB dipole velocity that defines "peculiar" motion
-- [theory/moving-source-field-consistency](../theory/moving-source-field-consistency.md) — the
+- [theory/moving-source-field-consistency](../theory/moving-source-field-consistency/) — the
   substrate branch whose \(\mathbf{w}\) is undefined until the comoving question here is answered
-- [theory/retarded-scarcity-wake](../theory/retarded-scarcity-wake.md) — the parent branch
+- [theory/retarded-scarcity-wake](../theory/retarded-scarcity-wake/) — the parent branch

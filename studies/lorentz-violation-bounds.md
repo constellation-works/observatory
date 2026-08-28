@@ -11,7 +11,7 @@ The measured walls around any theory with a preferred frame or a spatial microst
 laboratory bounds on anisotropy of c (aether-style violations) and astrophysical bounds on
 energy-dependent photon dispersion (lattice-scale violations). These bound the rest-frame
 question for gravity-as-scarcity in
-[theory/gravity-as-scarcity](../theory/gravity-as-scarcity.md) (ORB-10159).
+[theory/gravity-as-scarcity](../theory/gravity-as-scarcity/) (ORB-10159).
 
 ## The velocity scales
 
@@ -103,9 +103,9 @@ For gravity-as-scarcity's rest-frame question: the lattice-as-substance (aether)
 excluded by the resonator bounds at 9–12 orders; the lattice-as-medium-of-excitations
 branch survives with two computed conditions — a parity-symmetric hop rule (no linear
 dispersion) and lattice spacing ≲ 10⁸ Planck lengths. The placement lives in
-[theory/gravity-as-scarcity](../theory/gravity-as-scarcity.md) (ORB-10159 section and
+[theory/gravity-as-scarcity](../theory/gravity-as-scarcity/) (ORB-10159 section and
 ledger). For the two-substance vortex vacuum
-([theory/two-substance-vortex-vacuum](../theory/two-substance-vortex-vacuum.md),
+([theory/two-substance-vortex-vacuum](../theory/two-substance-vortex-vacuum/),
 ORB-10160) every wall in this note binds *doubled*: two substrates supply two candidate
 rest frames (each facing the resonator exclusion) and a two-component photon sector facing
 the birefringence bound — kill condition B in that doc's ledger.

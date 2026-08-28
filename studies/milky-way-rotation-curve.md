@@ -73,6 +73,6 @@ derived and delivered in ORB-10075. Lineage, from the delivered sidecar
 
 ## What hangs on this
 
-- [theory/gravity-as-scarcity](../theory/gravity-as-scarcity.md) — the rotation-curve ledger row
+- [theory/gravity-as-scarcity](../theory/gravity-as-scarcity/) — the rotation-curve ledger row
   cites this note for (a) the measured slope the model is judged against, (b) the a₀ magnitude bar,
   and (c) the dataset provenance and its asymmetric-drift bias.

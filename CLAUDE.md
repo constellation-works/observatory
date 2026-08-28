@@ -15,8 +15,8 @@ every claim links across the gap. New theory work starts as a gate card; see
 ```
 policy.md   Research procedure (gate cards, kinds, family split, expiry). The lock is
             scripts/check-theory.py; this file is the English.
-theory/     Living essays plus theory/<doc>.claims.json — the claim registry is canonical.
-            Essay tables must match the registry. Contract in theory/README.md.
+theory/     One directory per theory: hub README.md, claims.json, evidence-ledger.md,
+            related.md, open-questions.md, optional chapters. Contract in theory/README.md.
 gates/      One JSON card per live front / owed object. New work starts here.
 schema/     Claim and gate field docs; wall.json is the immortal refuted-id list.
 studies/    Sourced notes on established physics. Contract in studies/README.md.
@@ -26,9 +26,9 @@ ledger.md   Generated rollup. Never hand-edit; --write-ledger regenerates it.
 
 ## The evidence-ledger contract
 
-Each `theory/` doc has a matching `theory/<doc>.claims.json` (canonical) and an essay
-**evidence ledger** table that must match it byte-for-byte in the `claim` column. Claim
-statuses:
+Each `theory/<slug>/` directory has a matching `claims.json` (canonical) and an
+**evidence ledger** table in `evidence-ledger.md` that must match it byte-for-byte in the
+`claim` column. Claim statuses:
 
 | Claim status | Meaning |
 |---|---|
@@ -75,10 +75,11 @@ Standing rules, machine-checked by `scripts/check-theory.py` on every theory cha
 
 ## Cross-links to orrery
 
-Sim references in ledgers point at the sibling checkout: from a `theory/` or `studies/` doc,
-`../../orrery/lab/sims/<slug>/`. These resolve in a standard constellation checkout (principia
-and orrery are siblings under `codebases/`). Intra-corpus links stay local: `../studies/…`
-from a theory doc, `../theory/…` from a study.
+Sim references in ledgers point at the sibling checkout. From a file in `theory/<slug>/`,
+sims are `../../../orrery/lab/sims/<sim>/` and studies are `../../studies/<note>.md`. From
+a `studies/` note, sims stay `../../orrery/lab/sims/<sim>/` and theories are
+`../theory/<slug>/`. These resolve in a standard constellation checkout (principia and
+orrery are siblings under `codebases/`). Open a theory hub at `theory/<slug>/README.md`.
 
 Provenance runs both ways: a `theory/` claim cites the sim that tests it; the sim's almanac
 note (via orrery `sim.json` `provenance.almanac`) records the discussion it was born in.
@@ -95,8 +96,9 @@ machine-checked. The checks below are the whole validation surface; they are por
   comparators, link resolution, and that `ledger.md` matches the generated rollup.
   `--write-ledger` regenerates `ledger.md`. `--selftest` runs the fixture checks.
 - **`git diff --check`** — trailing whitespace and leftover merge-conflict markers.
-- **Frontmatter stays intact.** A touched `theory/` doc keeps its `title, status, families,
-  almanac, created, updated` keys with a valid doc-level `status`; a touched `studies/` note
+- **Frontmatter stays intact.** A touched theory hub (`theory/<slug>/README.md`) keeps its
+  `title, status, families, almanac, created, updated` keys with a valid doc-level `status`,
+  matching `claims.json` on `title` / `status` / `families`; a touched `studies/` note
   keeps `title, status, created, updated`. Contracts: `theory/README.md`, `studies/README.md`.
 - **Ledger tracks the claim.** If a claim's backing changed, its registry status **and** the
   essay table status changed in the *same* commit. The checker will refuse a split.
