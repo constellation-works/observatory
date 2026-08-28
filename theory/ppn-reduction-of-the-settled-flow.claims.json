@@ -1,0 +1,115 @@
+{
+  "doc": "ppn-reduction-of-the-settled-flow",
+  "title": "PPN reduction of the settled flow: from the realized wake to effective preferred-frame coefficients",
+  "status": "growing",
+  "families": [
+    "gravity-as-scarcity"
+  ],
+  "updated": "2026-08-28",
+  "headline": "The named PPN obligation, executed as algebra: the moving metric is the PG metric of the disturbance field, the uniform wind is exactly flat, the physical g₀ᵢ sector is the wake's vorticity plus its Bernoulli anisotropy, and effective α₁/α₂ are far-field slot coefficients no cataloged measurement yet reaches. No phenomenology numbers — existence still gates.",
+  "live_fronts": [
+    "closed-system-moving-existence"
+  ],
+  "claims": [
+    {
+      "id": "ppn-reservoir-pg-form",
+      "family": "gravity-as-scarcity",
+      "kind": "derived",
+      "status": "untested",
+      "claim": "In the reservoir frame the analog metric of the moving closed system is exactly the PG-form metric of the disturbance field u = v + U, translating rigidly with the source; every metric-sector observable is a functional of u alone (Statement 0)",
+      "evidence": "Two-line coordinate substitution (§ Statement 0); decisive on paper, uncataloged — per policy stays untested until the symbolic fixture (§ the program) lands it. Downstream of the acoustic-metric family ([river-model-and-analog-gravity](../studies/river-model-and-analog-gravity.md))",
+      "links": [
+        "../studies/river-model-and-analog-gravity.md"
+      ],
+      "in_doc_ledger": true,
+      "kill": "The symbolic fixture finds the tensor transform of the mass-frame acoustic metric under x → x + Ut does not give the PG form in u, or exhibits a metric-sector observable that is not a functional of u"
+    },
+    {
+      "id": "ppn-uniform-wind-flat",
+      "family": "gravity-as-scarcity",
+      "kind": "derived",
+      "status": "untested",
+      "claim": "The pure-wind analog metric is exactly flat (Riemann = 0): a uniform wind is coordinate for metric-coupled excitations — the U²/2c² clock term is SR kinematics of the emergent metric, not an observable anomaly — and preferred-frame physics can enter the metric sector only through the disturbance field",
+      "evidence": "Immediate corollary of Statement 0 (u = 0 gives Minkowski exactly); answers the clock-sector relational question at metric level in the coordinate-like direction the 2026-08-21 arbitration held open. Lattice shadow already cataloged (pure-wind nulls: ORB-10935 G4, ORB-10937 G5, ORB-10938 G6, [level-core-dynamical-relaxation](../../orrery/lab/sims/level-core-dynamical-relaxation/)) but the geometric statement itself awaits the symbolic fixture. Scope: metric sector only — the medium sectors (consumption, cavitation, drag) keep their anchored frame",
+      "links": [
+        "../../orrery/lab/sims/level-core-dynamical-relaxation/"
+      ],
+      "in_doc_ledger": true,
+      "kill": "A nonzero curvature invariant of the pure-wind acoustic metric at any order in U, or a derived metric-sector observable of uniform U"
+    },
+    {
+      "id": "ppn-static-diagonal-schwarzschild",
+      "family": "gravity-as-scarcity",
+      "kind": "derived",
+      "status": "mixed",
+      "claim": "Wherever u/(c² − u²) is curl-free the analog metric diagonalizes exactly to lapse √(1 − u²/c²) with spatial stretch δ_ij + u_i u_j/(c² − u²); on static GP this is exactly Schwarzschild, so the U = 0 control of the reduction lands on γ = β = 1",
+      "evidence": "The identity is exact algebra (§ diagonalization) and its static endpoint is the sourced PG↔Schwarzschild map ([river-model-and-analog-gravity](../studies/river-model-and-analog-gravity.md)); the γ = 1 reading against Cassini is the excitation-completion row's, premises owed as postulates ([gravity-as-scarcity](gravity-as-scarcity.md) § scarcity-excitation-photon-gamma); the identity's own catalog entry awaits the symbolic fixture",
+      "links": [
+        "../studies/river-model-and-analog-gravity.md",
+        "gravity-as-scarcity.md"
+      ],
+      "in_doc_ledger": true
+    },
+    {
+      "id": "ppn-gauge-obstruction-two-pieces",
+      "family": "gravity-as-scarcity",
+      "kind": "derived",
+      "status": "untested",
+      "claim": "The exact obstruction to gauging away the g₀ᵢ sector is curl of u/(c² − u²), which splits into a vorticity term and a Bernoulli-anisotropy term (grad of the squared speed crossed with u); both source fields are measured nonzero in the settled flow, so the moving closed system has a physical gravitomagnetic-analog sector even though the counting mechanic sources no vector potential",
+      "evidence": "Exact algebra (§ gauge split), uncataloged. Its two source fields are cataloged: rung-stable vorticity RMS 0.0148 → 0.0150 (41³ → 61³) and rung-converged speed anisotropy at U/v_GP = 0.3 (ORB-10938 G3/G4, [level-core-dynamical-relaxation](../../orrery/lab/sims/level-core-dynamical-relaxation/)). Per-wind scaling of both is unconverged on the current ladder (low-wind vorticity rises under refinement), so O(U) linearity of the sector is unmeasured",
+      "links": [
+        "../../orrery/lab/sims/level-core-dynamical-relaxation/"
+      ],
+      "in_doc_ledger": true,
+      "kill": "The symbolic fixture refutes the two-piece decomposition, or the far-field fixture finds both obstruction fields vanishing identically on the converged ladder (an empty physical g₀ᵢ sector)"
+    },
+    {
+      "id": "ppn-slots-far-field",
+      "family": "gravity-as-scarcity",
+      "kind": "derived",
+      "status": "untested",
+      "claim": "Effective preferred-frame coefficients are far-field slot coefficients of the settled wake — the non-gauge g₀ᵢ dipole against the PPN Φw/c³ structure (α₁ slot) and the speed-field wind-axis anisotropy against the w-quadrupole structure (α₂ slot) — defined only at r much greater than the matching radius r_m = 2GM/U²; no cataloged measurement reaches that zone, and the near-zone anisotropies grow outward from r = 3 to r = 5, so current numbers extrapolate in neither direction",
+      "evidence": "§ slots and § far field: slot mapping schematic against the sourced PPN formalism ([moving-source-gravity-bounds](../studies/moving-source-gravity-bounds.md)); r_m arithmetic exact (r_m ≈ 56 at U/v_GP(5) = 0.3 vs box half-width 12); near-zone growth 0.043 → 0.199 (dipole, r = 3 → 5, U/v_GP = 0.3, ORB-10938 G3). The far-field fixture (§ the program) is the row's test",
+      "links": [
+        "../studies/moving-source-gravity-bounds.md",
+        "../../orrery/lab/sims/level-core-dynamical-relaxation/"
+      ],
+      "in_doc_ledger": true,
+      "kill": "The far-field fixture finds no scaling regime at all — anisotropies falling neither onto PPN-potential tails nor to zero — leaving the model with no PPN limit"
+    },
+    {
+      "id": "ppn-far-field-trans-critical",
+      "family": "gravity-as-scarcity",
+      "kind": "derived",
+      "status": "untested",
+      "claim": "The PPN-defining far field of any moving source is locally trans-critical (U over v_GP grows like √r), the regime where the lattice trough floors rather than cavitates; under the galactic-carried wind reading planetary orbits sit deep in that zone (solar r_m of a few solar radii), while under the local-orbital reading Earth sits near matching at the cavitation-prone ratio — the cavitation kill and the PPN far zone are radially separated strata of one flow",
+      "evidence": "Scaling arithmetic exact from the GP profile; trough behavior per stratum is ORB-10938 G1 (floor at U/v_GP = 1, cavitation kill at 0.3); real-body ratios from sourced velocity scales ([lorentz-violation-bounds](../studies/lorentz-violation-bounds.md) § velocity scales). Untested where it extrapolates: that the floor survives in a wind-dominated box with a small core is exactly the far-field fixture's control",
+      "links": [
+        "../studies/lorentz-violation-bounds.md",
+        "../../orrery/lab/sims/level-core-dynamical-relaxation/"
+      ],
+      "in_doc_ledger": true,
+      "kill": "Cavitation (cutoff-ward n_min ladder agreement) in the wind-dominated far-field box, or a trough that fails to floor at trans-critical local ratio with a small core"
+    },
+    {
+      "id": "ppn-alpha-contact",
+      "family": "gravity-as-scarcity",
+      "kind": "nature",
+      "status": "conjecture",
+      "claim": "The settled wake's far-field slot coefficients land under the measured preferred-frame walls (α₁ at 10⁻⁴ LLR and 7×10⁻⁵ pulsar, α₂ at about 10⁻⁷ solar spin axis and 1.6×10⁻⁹ pulsar) — equivalently the wake is a near-zone structure whose anisotropies carry no slot-matching far-field tails; a generic order-one surviving coefficient is excluded by four (α₁) to seven-plus (α₂) orders",
+      "evidence": "The confrontation this doc defines but cannot execute: walls sourced ([moving-source-gravity-bounds](../studies/moving-source-gravity-bounds.md)), coefficients unmeasured (far-field fixture unrun), physical normalization of lattice units an open family debt, and the existence card (`closed-system-moving-existence`) blocks phenomenology. The near-zone outward *growth* of anisotropy is the current evidence's worrying direction; a wake whose structure is confined inside r_m is the model's only survival shape",
+      "links": [
+        "../studies/moving-source-gravity-bounds.md"
+      ],
+      "in_doc_ledger": true,
+      "tags": [
+        "preferred-frame",
+        "phenomenology"
+      ],
+      "comparator": "PPN preferred-frame slots in the universe rest frame against mass-frame Schwarzschild GR (uniform U is gauge); walls per moving-source-gravity-bounds (α₁: LLR/PSR J1738+0333; α₂: solar spin axis/solitary pulsars). Not a raw U/c comparison.",
+      "blocked_by": [
+        "moving-cavitation-floor"
+      ]
+    }
+  ]
+}
