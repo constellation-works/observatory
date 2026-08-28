@@ -1,9 +1,9 @@
 {
-  "$comment": "Documentation for theory/<doc>.claims.json. Enforced by scripts/check-theory.py, not a JSON-Schema runtime.",
+  "$comment": "Documentation for theory/<doc>.claims.json or theory/<doc>/claims.json (dual-read). Enforced by scripts/check-theory.py, not a JSON-Schema runtime.",
   "type": "object",
   "required": ["doc", "title", "status", "families", "updated", "headline", "live_fronts", "claims"],
   "properties": {
-    "doc": { "type": "string", "description": "Stem of theory/<doc>.md" },
+    "doc": { "type": "string", "description": "Stem; path is theory/<doc>.md or theory/<doc>/ during dual-read" },
     "title": { "type": "string" },
     "status": { "enum": ["exploratory", "growing", "refuted", "resolved"] },
     "families": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
