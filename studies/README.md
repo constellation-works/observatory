@@ -67,11 +67,15 @@ one place to be wrong, one place to fix.
   non-expansion bound (≳70×);
   the \(\dot G/G\) wall on "gravity and expansion are one phenomenon"; and the two
   near-coincidence traps — lunar recession vs \(H_0r\), galaxy size growth vs the scale factor.
+- [moving-source-gravity-bounds](moving-source-gravity-bounds.md) — the moving-source walls:
+  Carlip's aberration cancellation (EM exact for uniform motion, GR through (v/c)⁵), the
+  preferred-frame PPN parameters α₁/α₂/α₃ and their bounds (LLR, solar spin axis, binary and
+  solitary pulsars), the 2002 Jupiter-VLBI moving-lens measurement and its interpretation
+  dispute, frame dragging as measured (GP-B, LAGEOS/LARES with the error-budget criticisms),
+  and the Moore–Nelson gravitational-Cherenkov bounds on subluminal gravity.
 
 ## Wanted (backlog)
 
-- Lense–Thirring frame-dragging magnitude/falloff (needed by
-  [theory/gravity-as-scarcity](../theory/gravity-as-scarcity.md))
 - Grangier–Roger–Aspect 1986 antibunching (needed by
   [theory/swirl-photon](../theory/swirl-photon.md))
 - Neutrality of matter (electron–proton charge cancellation bound, ~10⁻²¹) and the Skyrme
