@@ -209,9 +209,9 @@ The reduction maps the settled field onto those slots as follows:
 
 | PPN slot | GR value | closed-system source object | measured state |
 |---|---|---|---|
-| α₁ slot: non-gauge g₀ᵢ against Φw_i/c³ | 0 | far-field dipole coefficient of the two-piece obstruction (vorticity + Bernoulli anisotropy) | nonzero in the near zone at U/v_GP = 0.3; far field unmeasured |
-| α₂ slot: g₀₀ wind-axis anisotropy against the w-quadrupole structure | 0 | far-field limit of the settled speed field's ŵ-quadrupole (l = 2) | l2 ≈ 0.04–0.12 near-zone at 0.3, rung-converged at r = 3; far field unmeasured |
-| dipole-class g₀₀/g₀ᵢ mixing (the 2α₃−α₁ structure) | 0 | far-field limit of the speed field's ŵ-dipole (l = 1) | 0.043 (r = 3) / 0.199 (r = 5) at 0.3, rung-converged at r = 3; far field unmeasured |
+| α₁ slot: non-gauge g₀ᵢ against Φw_i/c³ | 0 | far-field dipole coefficient of the two-piece obstruction (vorticity + Bernoulli anisotropy) | unextractable: no converged far-field scaling regime at any wind (ORB-11041 G2/G3); the Bernoulli piece decays faster than the PPN tail, vorticity resolution-limited |
+| α₂ slot: g₀₀ wind-axis anisotropy against the w-quadrupole structure | 0 | far-field limit of the settled speed field's ŵ-quadrupole (l = 2) | lattice proxy 52.2 ± 13.2 at U/v_GP(5) = 0.8 only; shell-unstable (ORB-11041 G3) |
+| dipole-class g₀₀/g₀ᵢ mixing (the 2α₃−α₁ structure) | 0 | far-field limit of the speed field's ŵ-dipole (l = 1) | slot-matching tail at all three winds; lattice proxies 14.1 / 9.8 / 6.6, falling with wind, shell-unstable (ORB-11041 G3) |
 | γ-type wake correction in g_ij | Schwarzschild only | u_(i δv_j) cross terms after diagonalization | derivable from cataloged fields; not yet extracted |
 
 Two structural readings before any number exists:
@@ -233,10 +233,13 @@ Two structural readings before any number exists:
   theory constants multiplying w-dependent observables. Survival requires the wake to be
   a **near-zone structure**: anisotropies falling off faster than the PPN potentials,
   leaving no slot-matching tails. That is a measurable property of the settled field,
-  and nothing measured so far establishes it — the shells show anisotropy *growing*
-  from r = 3 to r = 5 (dipole 0.043 → 0.199 at U/v_GP = 0.3). Recorded as the current
-  evidence's worrying direction, with the caveat that r = 5 in a half-width-12 box with
-  open faces is nobody's far field.
+  and the far-field fixture (ORB-11041) has now measured it — against survival in the
+  speed sector: the ŵ-dipole carries a slot-matching tail at all three winds and the
+  ŵ-quadrupole at one, with nonzero lattice proxies, while the Bernoulli obstruction
+  *is* near-zone-confined and the α₁ slot yields no converged regime at all. The
+  worrying direction has hardened from near-zone growth into resolved tails — modulo
+  the shell-instability and one-cell-core caveats carried in the ledger, and the still
+  unpayable lattice-to-physical normalization.
 
 ## The far field is trans-critical — where the coefficients live
 
@@ -244,18 +247,20 @@ The slots are far-field objects, and the far field of a moving source has a defi
 character. The local wind ratio grows outward: U/v_GP(r) = (U/v_GP(r₀))·√(r/r₀), with
 matching radius r_m = 2GM/U² where the ratio crosses 1. Consequences:
 
-- **No cataloged measurement sits in the PPN-defining zone.** At U/v_GP(r=5) = 0.3 the
-  matching radius is r_m ≈ 56 — the entire half-width-12 box, shells included, is
-  gravity-dominated near zone. Even the trans-critical run (r_m = 5) only *touches*
-  matching at its measurement shell. The reduction is therefore well-posed but
-  numerically empty: the successor fixture must put a small core in a large
-  wind-dominated box and read the slot coefficients where they are defined (§ the
-  program).
-- **The far zone is the regime that floors.** ORB-10938's cavitation kill fired at
-  U/v_GP = 0.3 — the *sub*-critical stratum, r < r_m — while the trans-critical case is
-  the one that saturates at a finite density floor. Radially: the cavitation hazard and
-  the PPN far zone are **separated strata of the same flow**. The existence card and
-  this reduction are probing different radii, and both are needed: a model with healthy
+- **The PPN-defining zone is now measured.** At ORB-10938's winds it never was: at
+  U/v_GP(r=5) = 0.3 the matching radius is r_m ≈ 56 — the entire half-width-12 box,
+  shells included, is gravity-dominated near zone. The successor fixture
+  ([level-core-far-field-slot-coefficients](../../orrery/lab/sims/level-core-far-field-slot-coefficients/),
+  ORB-11041) put a one-unit core in a half-width-24 box at winds 0.65/0.8/1.0, placing
+  the matching transition at r ≈ 5–11 with wind-dominated shells out to r = 20 (outer
+  local ratios 2.2–3.5), and read the slots there (§ slots, ledger).
+- **The far zone is the regime that floors — confirmed.** ORB-10938's cavitation kill
+  fired at U/v_GP = 0.3 — the *sub*-critical stratum, r < r_m — while the
+  trans-critical case is the one that saturates at a finite density floor, and
+  ORB-11041 G1 realizes exactly that in the wind-dominated geometry (final n_min
+  0.186–0.25, no cavitation candidate). Radially: the cavitation hazard and the PPN
+  far zone are **separated strata of the same flow**. The existence card and this
+  reduction are probing different radii, and both are needed: a model with healthy
   far-field coefficients and a cavitated near zone is still dead on existence.
 - **Real bodies, both wind readings** (velocity scales sourced in
   [lorentz-violation-bounds](../studies/lorentz-violation-bounds.md) § velocity scales):
@@ -274,10 +279,10 @@ matching radius r_m = 2GM/U² where the ratio crosses 1. Consequences:
 | In the reservoir frame the analog metric of the moving closed system is exactly the PG-form metric of the disturbance field u = v + U, translating rigidly with the source; every metric-sector observable is a functional of u alone (Statement 0) | untested | Two-line coordinate substitution (§ Statement 0); decisive on paper, uncataloged — per policy stays untested until the symbolic fixture (§ the program) lands it. Downstream of the acoustic-metric family ([river-model-and-analog-gravity](../studies/river-model-and-analog-gravity.md)) |
 | The pure-wind analog metric is exactly flat (Riemann = 0): a uniform wind is coordinate for metric-coupled excitations — the U²/2c² clock term is SR kinematics of the emergent metric, not an observable anomaly — and preferred-frame physics can enter the metric sector only through the disturbance field | untested | Immediate corollary of Statement 0 (u = 0 gives Minkowski exactly); answers the clock-sector relational question at metric level in the coordinate-like direction the 2026-08-21 arbitration held open. Lattice shadow already cataloged (pure-wind nulls: ORB-10935 G4, ORB-10937 G5, ORB-10938 G6, [level-core-dynamical-relaxation](../../orrery/lab/sims/level-core-dynamical-relaxation/)) but the geometric statement itself awaits the symbolic fixture. Scope: metric sector only — the medium sectors (consumption, cavitation, drag) keep their anchored frame |
 | Wherever u/(c² − u²) is curl-free the analog metric diagonalizes exactly to lapse √(1 − u²/c²) with spatial stretch δ_ij + u_i u_j/(c² − u²); on static GP this is exactly Schwarzschild, so the U = 0 control of the reduction lands on γ = β = 1 | mixed | The identity is exact algebra (§ diagonalization) and its static endpoint is the sourced PG↔Schwarzschild map ([river-model-and-analog-gravity](../studies/river-model-and-analog-gravity.md)); the γ = 1 reading against Cassini is the excitation-completion row's, premises owed as postulates ([gravity-as-scarcity](gravity-as-scarcity.md) § scarcity-excitation-photon-gamma); the identity's own catalog entry awaits the symbolic fixture |
-| The exact obstruction to gauging away the g₀ᵢ sector is curl of u/(c² − u²), which splits into a vorticity term and a Bernoulli-anisotropy term (grad of the squared speed crossed with u); both source fields are measured nonzero in the settled flow, so the moving closed system has a physical gravitomagnetic-analog sector even though the counting mechanic sources no vector potential | untested | Exact algebra (§ gauge split), uncataloged. Its two source fields are cataloged: rung-stable vorticity RMS 0.0148 → 0.0150 (41³ → 61³) and rung-converged speed anisotropy at U/v_GP = 0.3 (ORB-10938 G3/G4, [level-core-dynamical-relaxation](../../orrery/lab/sims/level-core-dynamical-relaxation/)). Per-wind scaling of both is unconverged on the current ladder (low-wind vorticity rises under refinement), so O(U) linearity of the sector is unmeasured |
-| Effective preferred-frame coefficients are far-field slot coefficients of the settled wake — the non-gauge g₀ᵢ dipole against the PPN Φw/c³ structure (α₁ slot) and the speed-field wind-axis anisotropy against the w-quadrupole structure (α₂ slot) — defined only at r much greater than the matching radius r_m = 2GM/U²; no cataloged measurement reaches that zone, and the near-zone anisotropies grow outward from r = 3 to r = 5, so current numbers extrapolate in neither direction | untested | § slots and § far field: slot mapping schematic against the sourced PPN formalism ([moving-source-gravity-bounds](../studies/moving-source-gravity-bounds.md)); r_m arithmetic exact (r_m ≈ 56 at U/v_GP(5) = 0.3 vs box half-width 12); near-zone growth 0.043 → 0.199 (dipole, r = 3 → 5, U/v_GP = 0.3, ORB-10938 G3). The far-field fixture (§ the program) is the row's test |
-| The PPN-defining far field of any moving source is locally trans-critical (U over v_GP grows like √r), the regime where the lattice trough floors rather than cavitates; under the galactic-carried wind reading planetary orbits sit deep in that zone (solar r_m of a few solar radii), while under the local-orbital reading Earth sits near matching at the cavitation-prone ratio — the cavitation kill and the PPN far zone are radially separated strata of one flow | untested | Scaling arithmetic exact from the GP profile; trough behavior per stratum is ORB-10938 G1 (floor at U/v_GP = 1, cavitation kill at 0.3); real-body ratios from sourced velocity scales ([lorentz-violation-bounds](../studies/lorentz-violation-bounds.md) § velocity scales). Untested where it extrapolates: that the floor survives in a wind-dominated box with a small core is exactly the far-field fixture's control |
-| The settled wake's far-field slot coefficients land under the measured preferred-frame walls (α₁ at 10⁻⁴ LLR and 7×10⁻⁵ pulsar, α₂ at about 10⁻⁷ solar spin axis and 1.6×10⁻⁹ pulsar) — equivalently the wake is a near-zone structure whose anisotropies carry no slot-matching far-field tails; a generic order-one surviving coefficient is excluded by four (α₁) to seven-plus (α₂) orders | conjecture | The confrontation this doc defines but cannot execute: walls sourced ([moving-source-gravity-bounds](../studies/moving-source-gravity-bounds.md)), coefficients unmeasured (far-field fixture unrun), physical normalization of lattice units an open family debt, and the existence card (`closed-system-moving-existence`) blocks phenomenology. The near-zone outward *growth* of anisotropy is the current evidence's worrying direction; a wake whose structure is confined inside r_m is the model's only survival shape |
+| The exact obstruction to gauging away the g₀ᵢ sector is curl of u/(c² − u²), which splits into a vorticity term and a Bernoulli-anisotropy term (grad of the squared speed crossed with u); both source fields are measured nonzero in the settled flow, so the moving closed system has a physical gravitomagnetic-analog sector even though the counting mechanic sources no vector potential | untested | Exact algebra (§ gauge split), uncataloged. Its two source fields are cataloged: rung-stable vorticity RMS 0.0148 → 0.0150 (41³ → 61³) and rung-converged speed anisotropy at U/v_GP = 0.3 (ORB-10938 G3/G4, [level-core-dynamical-relaxation](../../orrery/lab/sims/level-core-dynamical-relaxation/)). Per-wind scaling is now measured (ORB-11041 G4, [level-core-far-field-slot-coefficients](../../orrery/lab/sims/level-core-far-field-slot-coefficients/)): the Bernoulli-anisotropy field is rung-converged but not O(U) — its outer-shell amplitude falls with wind and it decays faster than the PPN-equivalent tail at the two higher winds (near-zone-confined) — while vorticity stays unresolved under refinement (20–34% rung shifts, plausibly the one-cell core); the GEM-analog sector is measured nonlinear, not absent |
+| Effective preferred-frame coefficients are far-field slot coefficients of the settled wake — the non-gauge g₀ᵢ dipole against the PPN Φw/c³ structure (α₁ slot) and the speed-field wind-axis anisotropy against the w-quadrupole structure (α₂ slot) — defined only at r much greater than the matching radius r_m = 2GM/U²; the far-field fixture now reads that zone and finds the speed sector carrying slot-matching tails while the total non-gauge g₀ᵢ dipole has no converged scaling regime at any wind | mixed | § slots and § far field: slot mapping schematic against the sourced PPN formalism ([moving-source-gravity-bounds](../studies/moving-source-gravity-bounds.md)). Measured by ORB-11041 ([level-core-far-field-slot-coefficients](../../orrery/lab/sims/level-core-far-field-slot-coefficients/): half-width-24 box, one-unit core, shells to r = 20, 41³ → 57³, winds U/v_GP(5) = 0.65/0.8/1.0): the ŵ-dipole has a rung-converged slot-matching tail at all three winds (2α₃−α₁-class lattice proxies 14.1 ± 3.5 / 9.8 ± 2.1 / 6.6 ± 1.3, falling with wind); the ŵ-quadrupole resolves an α₂-slot proxy only at 0.8 (52.2 ± 13.2); the α₁ slot is unextractable — no converged scaling regime for the total non-gauge g₀ᵢ dipole at any wind. Caveats carried: the resolved proxies drift monotonically outward across shells 14 → 17 → 20 (α₂ shell values 37.5 → 49.6 → 69.5) with the outer shell four units from an open face — shell-unstable pending a larger box — and the one-unit core is resolved by about one cell |
+| The PPN-defining far field of any moving source is locally trans-critical (U over v_GP grows like √r), the regime where the lattice trough floors rather than cavitates; under the galactic-carried wind reading planetary orbits sit deep in that zone (solar r_m of a few solar radii), while under the local-orbital reading Earth sits near matching at the cavitation-prone ratio — the cavitation kill and the PPN far zone are radially separated strata of one flow | supported | Scaling arithmetic exact from the GP profile; trough behavior per stratum is ORB-10938 G1 (floor at U/v_GP = 1, cavitation kill at 0.3); real-body ratios from sourced velocity scales ([lorentz-violation-bounds](../studies/lorentz-violation-bounds.md) § velocity scales). The extrapolating part is now tested: the far-field fixture's control passed (ORB-11041 G1, [level-core-far-field-slot-coefficients](../../orrery/lab/sims/level-core-far-field-slot-coefficients/)) — all six runs settle jointly and the trough floors (final n_min 0.186–0.25, no cavitation candidate on adjacent rungs) in a wind-dominated box whose outer shells sit at local ratios 2.2–3.5. Real-body readings remain arithmetic on sourced scales, not lattice results |
+| The settled wake's far-field slot coefficients land under the measured preferred-frame walls (α₁ at 10⁻⁴ LLR and 7×10⁻⁵ pulsar, α₂ at about 10⁻⁷ solar spin axis and 1.6×10⁻⁹ pulsar) — equivalently the wake is a near-zone structure whose anisotropies carry no slot-matching far-field tails; a generic order-one surviving coefficient is excluded by four (α₁) to seven-plus (α₂) orders | conjecture | The confrontation this doc defines but cannot execute: walls sourced ([moving-source-gravity-bounds](../studies/moving-source-gravity-bounds.md)); the far-field fixture has now run (ORB-11041, [level-core-far-field-slot-coefficients](../../orrery/lab/sims/level-core-far-field-slot-coefficients/)) and its direction is adverse — nonzero slot-matching lattice tails in the speed sector (2α₃−α₁ class at all three winds, α₂ at U/v_GP(5) = 0.8) where the survival shape demanded none — but contact stays barred: the resolved proxies are shell-unstable (monotone outward drift toward an open face), the α₁ slot is unextractable, the Bernoulli obstruction is near-zone-confined (the survival direction), physical normalization of lattice units is an open family debt, and the existence card (`closed-system-moving-existence`) blocks phenomenology |
 
 ## The program — what this reduction demands next
 
@@ -290,15 +295,17 @@ filed as orrery Orbit tasks at this doc's landing.
    obstruction formula; and the order-by-order fate of every √ε·ε_w half-order term
    (gauge or observable — the predeclared hazard). Upgrades the four untested algebra
    rows above to model-property/supported or kills them.
-2. **Far-field slot-coefficient fixture (the real successor).** The settled-flow
-   apparatus with a small core in a large wind-dominated box (core region ≪ r_m ≪ box),
-   measuring: radial falloff of the speed-field ŵ-multipoles and of the two g₀ᵢ
-   obstruction fields, against the PPN-potential tails (Φ ~ 1/r ladder); the slot
-   coefficients in lattice units where a scaling regime exists; the trough floor
-   (cavitation control in the trans-critical stratum); and the per-wind scaling the
-   current ladder leaves unconverged (is the GEM-analog sector O(U)?). Its output is the
-   number the α walls bound — and it doubles as the direction-field input ORB-10939's
-   ray tracing should bracket against, one derivative up.
+2. **Far-field slot-coefficient fixture — executed** (ORB-11041,
+   [level-core-far-field-slot-coefficients](../../orrery/lab/sims/level-core-far-field-slot-coefficients/)):
+   the settled-flow apparatus (stencil byte-identical to ORB-10938) with a one-unit core
+   in a half-width-24 box, three winds, shells to r = 20. Outcome, folded into the
+   ledger above: trough floors (G1), speed-sector slot-matching tails with nonzero
+   lattice proxies but no converged α₁ regime (G2/G3), obstruction fields nonlinear in
+   U with the Bernoulli piece near-zone-confined (G4), Galilean null exact (G5). Its
+   direction field is the input ORB-10939's ray tracing should bracket against, one
+   derivative up. **Owed next:** a larger-box, better-resolved-core rung that tests
+   shell stability of the resolved proxies — the monotone outward drift and the
+   one-cell core are the two ways the current tails could be apparatus artifacts.
 3. **Out of scope, unchanged:** rotating sources (spin GEM: GP-B/LARES need their own
    apparatus); the two-body problem (levels superpose, wakes do not — the actual
    binary-pulsar setting is a new problem); the lattice-to-physical normalization (the
