@@ -4,7 +4,7 @@ status: exploratory
 families: [two-substance-vortex-vacuum]
 almanac: 15-discussions/26-07/from-same-as-curvature-to-the-two-substance-vacuum.md
 created: 2026-07-12
-updated: 2026-08-21
+updated: 2026-09-04
 ---
 
 # The two-substance vortex vacuum
@@ -29,10 +29,11 @@ floor to beat, the ORB-10159 clock-sector and rest-frame constraints — doubled
 substances offer two candidate rest frames).
 
 **Current verdict:** *founded; the EM sign bet measured and won in 2-D; the gravity bridge
-measured and refuted at the mechanic level; the fixed-length universality signature measured
-on the refuting side (ORB-10169) — the gravitational sector hangs on the source-law debt,
-and what any paid debt must deliver at kiloparsec scale is no longer a universal fixed-β/ξ₂
-boost.* The keep-worthy structural feature is the
+measured and refuted at the mechanic level; ORB-10941 confirms the packet common mode is a
+declared-λ trailing wake, not an attached nature result; the fixed-length universality
+signature measured on the refuting side (ORB-10169) — the gravitational sector hangs on the
+source-law debt, and what any paid debt must deliver at kiloparsec scale is no longer a
+universal fixed-β/ξ₂ boost.* The keep-worthy structural feature is the
 topological/dynamical split — charge as winding (exact by topology), mass as core energy
 (dynamical, unconstrained) — which is real, measured physics in superfluids and
 superconductors
@@ -53,6 +54,14 @@ bridge **negative at the mechanic level**: a substance-conserving lattice produc
 far-field scarcity from voids, so the derivation this family owes the parent cannot even
 start until it pays what is now one consolidated debt, the **source-law debt** (ORB-10162,
 ORB-10164, and §B2's obligation — three strikes, one owed law of non-conservation).
+The packet hook's causal control has also run: **ORB-10941**
+([two-substance-dynamical-packet](../../../orrery/lab/sims/two-substance-dynamical-packet/))
+measured the λ=0 common response below its numerical floor and the nonzero response linear
+in λ and packet energy. Its resolved common profile is a **trailing wake, not attached**
+(median late lag −0.84 packet widths; speed 0.673 versus 0.970 for the relative packet).
+This closes the packet-control gate without reopening the refuted gravity bridge: the
+declared coupling causes a converged wake, but supplies neither a derived coupling nor a
+gravity-source law.
 Kill condition B (one light from two substances) is stated below as the theorem the model
 owes; it is untested, and generic two-component media fail it. The S2 disjunction from the
 same discussion thread — S2 as a finite-range fifth force vs S2 as the metric medium — has

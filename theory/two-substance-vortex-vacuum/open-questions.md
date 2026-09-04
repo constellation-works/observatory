@@ -1,5 +1,14 @@
 ## Open questions
 
+- **Closed — does the packet's common response survive at λ=0, and is it attached?**
+  ORB-10941's control in
+  [two-substance-dynamical-packet](../../../orrery/lab/sims/two-substance-dynamical-packet/)
+  measured the largest λ=0 common magnitude at 2.42×10⁻¹², below the 2.62×10⁻¹⁰ floor,
+  while the nonzero response scales linearly with λ. The inserted coupling is therefore the
+  cause. The resolved structure is a trailing wake (median late lag −0.84 packet widths;
+  common speed 0.673 versus relative-packet speed 0.970), not an attached common component.
+  The control gate closes; the hook remains mixed and does not reopen the refuted far-field
+  claim or supply a gravity-source law.
 - **The source-law debt — where does substance go?** The family's one consolidated
   gravitational debt (§ three-strike convergence): ORB-10162 measured that no natural
   counting rule yields the r^(−3/2) volumetric sink, ORB-10164 measured that a conserving

@@ -37,11 +37,15 @@ catalog; data-acquisition tasks in ws_astrolabe (tycho), marked as such. Status 
   organizes by acceleration at a five-figure AIC advantage (universality row moved to
   refuted; parent § form and universality adjudication).
 
-- **ORB-10940 — Two-substance dynamical packet budget.** The radiation-sector fixture
+- **ORB-10940 / ORB-10941 — Two-substance dynamical packet budget and λ=0 control.** The radiation-sector fixture
   (2026-08-21, from the swirl-photon discussion): the family's first dynamical evolution —
   launches a localized relative-mode packet (direct initialization, plus defect emission
   where the apparatus supports it), tracks n₁/n₂/n₊/n₋ budgets, fluxes, and energy;
   adjudicates whether a propagating packet carries co-moving common-mode content scaling
   with its energy — the hook gravitating radiation requires. Explicitly scoped not to
   reopen the gravity-bridge row (the source-law debt is a separate object); a purely
-  relative-mode packet is the kill outcome. **Filed** — proposed, auto-ships.
+  relative-mode packet is the kill outcome. **Run:** ORB-10941 measured the λ=0 common
+  response below the numerical floor and the nonzero response linear in λ and energy. The
+  resolved common structure is a trailing wake, not attached; the control kill did not fire,
+  the packet-control gate closes, and the refuted gravity bridge stays closed
+  ([two-substance-dynamical-packet](../../../orrery/lab/sims/two-substance-dynamical-packet/)).
