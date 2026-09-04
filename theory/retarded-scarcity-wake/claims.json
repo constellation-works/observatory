@@ -1,15 +1,13 @@
 {
   "doc": "retarded-scarcity-wake",
   "title": "The retarded-scarcity wake: moving gravity through a substrate",
-  "status": "exploratory",
+  "status": "refuted",
   "families": [
     "retarded-scarcity-wake"
   ],
-  "updated": "2026-08-08",
-  "headline": "Delayed-center shortcut fails as a Poisson-vacuum field. Only live fork is an explicit boost-violating substrate equation (Branch C).",
-  "live_fronts": [
-    "retarded-wake-branch-c"
-  ],
+  "updated": "2026-09-04",
+  "headline": "Delayed-center shortcut fails as a Poisson-vacuum field; the explicit boost-violating equation (Branch C) was written and closed — its dissipative parameter drags the Sun at a rate the ephemeris floor excludes. No observable galactic wake survives in the minimal local class.",
+  "live_fronts": [],
   "claims": [
     {
       "id": "retarded-wake-potential-like-scalar",
@@ -31,10 +29,11 @@
       "kind": "nature",
       "status": "conjecture",
       "claim": "There exists a physical gravitational substrate with a locally meaningful velocity field **U**, distinct in principle from the CMB frame",
-      "evidence": "No source law, substrate equation, or direct evidence. An O(1) substance coupling to a preferred frame is already bounded by [lorentz-violation-bounds](../../studies/lorentz-violation-bounds.md); an excitation-medium reading can hide uniform motion at leading order ([river-model-and-analog-gravity](../../studies/river-model-and-analog-gravity.md))",
+      "evidence": "Moot: Branch C closed (ORB-11175). No source law or direct evidence; an O(1) substance coupling to a preferred frame is already bounded by [lorentz-violation-bounds](../../studies/lorentz-violation-bounds.md); an excitation-medium reading can hide uniform motion at leading order ([river-model-and-analog-gravity](../../studies/river-model-and-analog-gravity.md)). The minimal gravitational-sector coupling to such a U — an aether-frame dissipation — is now bounded to \\(\\ell_\\Gamma>10\\)–\\(100\\) kpc by the solar-system drag it implies ([Branch C](../moving-source-field-consistency/branch-c.md)); whether U exists with no gravitational coupling at all is a question this family no longer asks",
       "links": [
         "../../studies/lorentz-violation-bounds.md",
-        "../../studies/river-model-and-analog-gravity.md"
+        "../../studies/river-model-and-analog-gravity.md",
+        "../moving-source-field-consistency/branch-c.md"
       ],
       "in_doc_ledger": true,
       "tags": [
@@ -85,25 +84,28 @@
       "id": "retarded-wake-concentration",
       "family": "retarded-scarcity-wake",
       "kind": "nature",
-      "status": "untested",
+      "status": "refuted",
       "claim": "A centrally concentrated galaxy preserves a larger coherent wake than a diffuse distribution with the same total mass",
-      "evidence": "The delayed-center concentration law is moot once that shortcut is rejected. A concrete Branch C equation may have a different density response, which must be derived rather than inherited",
-      "links": [],
+      "evidence": "Moot for the rejected delayed-center shortcut, and false for the explicit Branch C equation: at first order the exterior dipole of the dissipative term is set by the far field of the Newtonian potential, i.e. by total mass alone, so \\(A_1(r)\\to\\beta_g r/2\\ell_\\Gamma\\) independent of central concentration up to \\(O(a/r)\\); the source-delay term is a rigid shift of the whole potential, likewise concentration-blind — [Branch C](../moving-source-field-consistency/branch-c.md) § The first-order moving-source solution (ORB-11175)",
+      "links": [
+        "../moving-source-field-consistency/branch-c.md"
+      ],
       "in_doc_ledger": true,
-      "kill": "Moot for the rejected shortcut; a Branch C equation must derive its own density response."
+      "kill": "Fired: the minimal Branch C amplitude is concentration-independent."
     },
     {
       "id": "retarded-wake-m1-asymmetry",
       "family": "retarded-scarcity-wake",
       "kind": "nature",
-      "status": "untested",
+      "status": "refuted",
       "claim": "The wake displaces the dynamical center behind the baryonic center and produces an \\(m=1\\) leading/trailing rotation asymmetry rather than an axisymmetric flat-curve boost",
-      "evidence": "A possible Branch C signature, but no amplitude law exists. \\(A_1\\sim2\\times10^{-3}\\) is only the delayed-center toy scale and is roughly 50–100× below representative observed lopsidedness scales; it is not a ceiling on Branch C — [moving-source-field-consistency](../moving-source-field-consistency/) § The delayed-center toy supplies a scale, not a ceiling",
+      "evidence": "Refuted on both counts by the explicit equation (ORB-11175, [Branch C](../moving-source-field-consistency/branch-c.md)): the dissipative solution's first-order leading/trailing *radial* contrast vanishes (the first-order force is tangential, \\(g_0A_1\\sin\\theta\\), zero on the leading/trailing axis), and the amplitude itself is capped by the solar-system self-acceleration wall at \\(A_1(10\\,{\\rm kpc})\\lesssim10^{-3}\\)–\\(3\\times10^{-5}\\), two to three orders below observed lopsidedness ([solar-system-ephemeris-precision-floor](../../studies/solar-system-ephemeris-precision-floor.md)). The source-delay term displaces the centre, but by a fixed \\(\\lvert\\tau_s\\rvert w<R_\\odot\\), unobservable at galactic radii",
       "links": [
-        "../moving-source-field-consistency/"
+        "../moving-source-field-consistency/branch-c.md",
+        "../../studies/solar-system-ephemeris-precision-floor.md"
       ],
       "in_doc_ledger": true,
-      "kill": "No Branch C amplitude law; delayed-center toy scale is not a ceiling."
+      "kill": "Fired: no first-order radial contrast in the minimal class, and the amplitude is bounded below observability."
     },
     {
       "id": "retarded-wake-axis-velocity-correlation",
@@ -111,12 +113,13 @@
       "kind": "nature",
       "status": "untested",
       "claim": "A correlation between observed asymmetry axes and a common inferred substrate velocity would be evidence for the wake (§ Observable signatures, last bullet; rejection gate 6)",
-      "evidence": "A cosmological baseline is required. Peculiar velocity and environment share causes, but the leading tidal tensor is quadrupolar and does not by itself establish an \\(m=1\\) phase correlation. The null correlation must be measured, not assumed — [moving-source-field-consistency](../moving-source-field-consistency/) § A degeneracy to measure, not assume",
+      "evidence": "Moot: Branch C closed (ORB-11175). The conditional stands as logic, but no surviving model predicts an amplitude above \\(10^{-3}\\), and the cosmological baseline it would have needed — the leading tidal tensor is quadrupolar and does not by itself establish an \\(m=1\\) phase correlation ([moving-source-field-consistency](../moving-source-field-consistency/) § A degeneracy to measure, not assume) — is no longer owed by this family",
       "links": [
-        "../moving-source-field-consistency/"
+        "../moving-source-field-consistency/",
+        "../moving-source-field-consistency/branch-c.md"
       ],
       "in_doc_ledger": true,
-      "kill": "Measure the null m=1 correlation; do not assume peculiar velocity supplies it."
+      "kill": "Moot: Branch C closed. Reopening needs daniel_reopen and an amplitude above the ephemeris ceiling."
     },
     {
       "id": "retarded-wake-lopsidedness-warp-split",
@@ -124,22 +127,23 @@
       "kind": "nature",
       "status": "untested",
       "claim": "A boost-violating model may produce a lopsidedness-versus-vertical-distortion split set partly by the angle between \\(\\mathbf{w}\\) and the disk normal",
-      "evidence": "New candidate signature; the response is not parameter-free and may be bowl-like rather than an integral-sign warp — [moving-source-field-consistency](../moving-source-field-consistency/) § A candidate geometric discriminator",
+      "evidence": "Moot: Branch C closed (ORB-11175). In the minimal equation the split exists in form — in-plane \\(\\mathbf{w}\\) gives the tangential \\(m=1\\) force, perpendicular \\(\\mathbf{w}\\) a \\(1/R\\) midplane vertical acceleration (bowl-like, not an integral-sign warp) — at amplitudes the ephemeris floor caps below \\(10^{-3}\\) ([Branch C](../moving-source-field-consistency/branch-c.md))",
       "links": [
-        "../moving-source-field-consistency/"
+        "../moving-source-field-consistency/branch-c.md"
       ],
       "in_doc_ledger": true,
-      "kill": "Disk response underived; may be bowl-like rather than an integral-sign warp."
+      "kill": "Moot: Branch C closed. Reopening needs daniel_reopen and an amplitude above the ephemeris ceiling."
     },
     {
       "id": "retarded-wake-boost-invariant-cancel",
       "family": "retarded-scarcity-wake",
       "kind": "nature",
-      "status": "conjecture",
+      "status": "supported",
       "claim": "A specified boost-invariant causal field can cancel the delayed-center model's first-order dipole while retaining finite propagation speed",
-      "evidence": "Established in electromagnetism and general relativity, pending the local study note; it is a calibration result for those specified equations, not a verdict on every preferred-medium equation — [moving-source-field-consistency](../moving-source-field-consistency/)",
+      "evidence": "Sourced 2026-08-28 in [moving-source-gravity-bounds](../../studies/moving-source-gravity-bounds.md) § aberration cancellation (Heaviside/Liénard–Wiechert exact for uniform motion; Carlip 2000 through radiation-reaction order in general relativity), and reproduced inside the Branch C equation with its time-odd sector off — the Heaviside form, even in \\(\\xi_\\parallel\\) at every order in \\(\\beta_g\\) for every \\(c_g\\) ([Branch C](../moving-source-field-consistency/branch-c.md) § The control). A calibration result for specified equations, not a verdict on every preferred-medium equation — which is why Branch C had to be written",
       "links": [
-        "../moving-source-field-consistency/"
+        "../../studies/moving-source-gravity-bounds.md",
+        "../moving-source-field-consistency/branch-c.md"
       ],
       "in_doc_ledger": true
     },
@@ -147,11 +151,13 @@
       "id": "retarded-wake-gravitational-cone",
       "family": "retarded-scarcity-wake",
       "kind": "nature",
-      "status": "conjecture",
+      "status": "refuted",
       "claim": "A gravitational cone forms when \\(v>c_g\\)",
-      "evidence": "In a conventionally coupled gravity mode this regime is excluded: GW170817 pins the observed tensor speed near \\(c\\), while Moore & Nelson give conservative and extragalactic Cherenkov bounds of \\(2\\times10^{-15}\\) and ~\\(2\\times10^{-19}\\). Applying those bounds to an extra substrate mode requires its matter coupling and dispersion — [moving-source-field-consistency](../moving-source-field-consistency/)",
+      "evidence": "The regime cannot occur for the wake's field: GW170817 pins the observed tensor speed near \\(c\\) ([scalar-gravity-ppn-constraints](../../studies/scalar-gravity-ppn-constraints.md)) and Moore & Nelson give Cherenkov bounds of \\(c-c_g<2\\times10^{-15}c\\) (Galactic) and ~\\(2\\times10^{-19}c\\) (extragalactic) for any conventionally coupled mode ([moving-source-gravity-bounds](../../studies/moving-source-gravity-bounds.md) § gravitational Cherenkov). The escape through an extra, differently coupled substrate mode closed with Branch C: its potential is the conventionally coupled one ([Branch C](../moving-source-field-consistency/branch-c.md) § Walls). Galaxies at \\(10^{-3}c\\) never outrun the field",
       "links": [
-        "../moving-source-field-consistency/"
+        "../../studies/scalar-gravity-ppn-constraints.md",
+        "../../studies/moving-source-gravity-bounds.md",
+        "../moving-source-field-consistency/branch-c.md"
       ],
       "in_doc_ledger": true
     },

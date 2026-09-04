@@ -1,10 +1,10 @@
 ---
 title: "Moving-source field consistency: what survives of the wake"
-status: growing
+status: resolved
 families: [retarded-scarcity-wake]
 almanac: 15-discussions/26-08/from-galactic-motion-to-the-moving-gravity-medium-problem.md
 created: 2026-08-07
-updated: 2026-08-21
+updated: 2026-09-04
 ---
 
 # Moving-source field consistency
@@ -23,7 +23,25 @@ negative control, define a precise boost-invariant calibration equation, derive 
 branch's amplitude law, and use observational work first to establish sensitivity and the
 structure-formation baseline rather than to claim a universal wake bound.
 
-**Current verdict:** the delayed-center construction fails as the source-free exterior solution
+**Current verdict (2026-09-04, ORB-11175): resolved — Branch C written and closed.** The one live
+front this document carried, the explicit boost-violating equation, now exists:
+[Branch C](branch-c.md) writes the most general linear, local, two-derivative scalar substrate
+equation with one preferred vector \(U^\mu\) — three breaking parameters, the gravity-sector
+speed \(c_g\), an aether-frame dissipation \(\Gamma\), and a source delay \(\tau_s\) — and
+derives its uniformly moving solution against the Heaviside/Carlip control, which the equation
+reproduces exactly with the time-odd sector off. The dissipative parameter does give the parent's
+dipole, with the parent's sign and a legitimate exterior profile, \(A_1=\beta_g r/2\ell_\Gamma\).
+But the same coefficient makes every gravitationally bound body self-accelerate along its
+substrate-relative velocity at \(\tfrac23\Gamma\,(\lvert W\rvert/Mc^2)\,w\), and the solar-system
+ephemeris floor caps the Sun's at \(3\times10^{-13}\)–\(3\times10^{-14}\) m/s², which puts the
+galactic dipole at \(A_1\lesssim10^{-3}\)–\(3\times10^{-5}\): two to three orders below observed
+lopsidedness on every reading. The source-delay parameter is a rigid offset the solar system
+excludes outright; the speed parameter makes no dipole. The four walls the gate card named do not
+do the killing; the equation's own conservation structure does. The document's program has
+therefore converged with the boost-invariant control — established physics — and is kept as the
+correspondence record. The parent is `refuted`.
+
+**Verdict as of 2026-08-21 (superseded above, kept for provenance):** the delayed-center construction fails as the source-free exterior solution
 of the standard Poisson equation for a compact moving mass. That is narrower than proving that no
 local substrate theory could produce the same shape: a different operator or a real distributed
 substrate response could do so, but would have to be written explicitly and would no longer be the
@@ -49,6 +67,7 @@ yet established for the \(m=1\) observable.
 - [Evidence ledger](evidence-ledger.md)
 - [Related](related.md)
 - [Open questions](open-questions.md)
+- [Branch C: the explicit equation and its closure](branch-c.md)
 
 
 ## The delayed-center potential is not a Poisson-vacuum field
@@ -350,6 +369,10 @@ catalogued as such.
 
 ### Stage 2′ — the only live mechanic question
 
+> **Executed 2026-09-04.** [Branch C](branch-c.md) is this stage: the explicit equation, the
+> amplitude relation, and the confrontation with the bounds *before* any solver. The relation
+> exists and the bounds crush it. The stage closed the front.
+
 Specify a substrate equation that breaks boost invariance *explicitly*, and compute what wake
 amplitude a given breaking parameter yields. Note the change in epistemic status: the wake is then
 a **free parameter bounded by Lorentz tests**, not a prediction of the theory. Stage 2′ is
@@ -391,11 +414,11 @@ What would overturn or materially narrow the argument above:
    the standard Poisson-vacuum exterior problem. A local conservative substrate equation with a
    different operator or a physical distributed response would evade that narrow result, while
    acquiring new source, boundary, and conservation obligations of its own.
-2. **Boost-violating recovery.** If the substrate equation is explicitly non-boost-invariant,
+2. **Boost-violating recovery.** *(Resolved 2026-09-04: the bounds do not permit it — [Branch C](branch-c.md).)* If the substrate equation is explicitly non-boost-invariant,
    Branch-A-like phenomenology can be recovered legitimately. That does not rescue Branch A — it
    relabels the result as Branch C and inherits the Lorentz bounds. If those bounds turn out to
    permit an \(O(\beta_g)\) galactic dipole, this document's scoping conclusion is too strong.
-3. **Amplitude relation.** If a concrete Branch C equation yields a bounded amplitude large enough
+3. **Amplitude relation.** *(Resolved 2026-09-04: derived, and bounded below the toy scale — [Branch C](branch-c.md).)* If a concrete Branch C equation yields a bounded amplitude large enough
    to account for observed lopsidedness, the toy-model scale in this document is irrelevant. The
    current 50–100× comparison is not a rejection criterion for that branch.
 4. **First-order aberration cancellation.** Stage 1′ relies on the absence of an \(O(\beta_g)\)

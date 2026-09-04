@@ -1,10 +1,10 @@
 ---
 title: "The retarded-scarcity wake: moving gravity through a substrate"
-status: exploratory
+status: refuted
 families: [retarded-scarcity-wake]
 almanac: 15-discussions/26-08/from-galactic-motion-to-the-moving-gravity-medium-problem.md
 created: 2026-08-07
-updated: 2026-08-08
+updated: 2026-09-04
 ---
 
 # The retarded-scarcity wake
@@ -19,7 +19,31 @@ making the scarcity potential greater on the leading edge and the gravitational 
 stronger on the trailing edge. A sufficiently fast source may form a wake or cone if it
 outruns disturbances supported by the substrate.
 
-**Current analytic verdict (revised 2026-08-08): the Branch A shortcut fails under its stated
+**Current verdict (2026-09-04, ORB-11175): refuted.** The last live fork, Branch C, has been
+written explicitly and closed. [Branch C](../moving-source-field-consistency/branch-c.md) states
+the most general linear, local, two-derivative substrate equation with a preferred frame \(U\)
+— three breaking parameters: the gravity-sector speed \(c_g\), an aether-frame dissipation
+\(\Gamma\), a source delay \(\tau_s\) — and solves it for a uniformly moving source. The speed
+parameter makes no dipole at any order (the Heaviside/Carlip cancellation is a theorem of the
+equation). The source delay makes a rigid offset of the whole potential, which the solar system
+excludes at \(A_1<4\times10^{-12}\). The dissipation makes exactly the wake proposed here —
+higher potential on the leading edge, a legitimate exterior profile, \(A_1=\beta_g R/2\ell_\Gamma\)
+— and, inseparably, a first-order drag on every gravitationally bound body along its
+substrate-relative velocity, \(\tfrac23\Gamma\,(\lvert W\rvert/Mc^2)\,w\). The Sun's version of that
+drag is a uniform anomalous acceleration of the planets in a fixed inertial direction, and the
+house ephemeris floor ([solar-system-ephemeris-precision-floor](../../studies/solar-system-ephemeris-precision-floor.md))
+caps it at \(3\times10^{-13}\)–\(3\times10^{-14}\) m/s², hence \(\ell_\Gamma>10\)–\(100\) kpc
+and a galactic \(A_1(10\,{\rm kpc})\lesssim10^{-3}\)–\(3\times10^{-5}\): two to three orders below
+the observed lopsidedness scale on every reading of the wall, and at or below the delayed-center
+toy scale this family already judged marginal. Rejection gate 7 (existing physics) fired. The
+central claim — a galaxy moving through the substrate carries an observable \(m=1\) wake — is
+dead for every local substrate equation of the minimal class, and the doc stays per the house
+rule: a refuted branch is a result. What killed it is not retardation, not the Lorentz walls,
+but the equation's own conservation structure: a wake needs a time-odd term, a time-odd term is
+a dissipation, and a dissipation drags the Sun. Reopening needs Daniel's say-so and a
+non-local, non-linear, or Sun-comoving escape the chapter names.
+
+**Earlier analytic verdict (2026-08-08, superseded above): the Branch A shortcut fails under its stated
 Poisson-vacuum interpretation; the fork survives only as an explicit substrate equation.** The
 leading/trailing effect follows from the delayed-center rule below; it does **not** follow from
 finite propagation speed or the word "medium" alone. [Moving-source field
@@ -32,17 +56,17 @@ control, the first-order lag cancels for uniform motion. Under Principia's evide
 these analytic claims remain `untested` until the negative-control calculations are cataloged in
 Orrery.
 
-The doc-level status stays `exploratory` rather than `refuted`: Branch C is unadjudicated. What
-died is the claim that the delayed-center mechanic is the ordinary compact-source field with a
-propagation delay added. See the successor for the reordered program: a specified calibration
-control, a derived Branch C amplitude law, and observational baseline work that does not yet claim
-to bound every wake model.
+The doc-level status was `exploratory` while Branch C was unadjudicated; it is `refuted` as of
+2026-09-04. What died on 2026-08-08 was the claim that the delayed-center mechanic is the ordinary
+compact-source field with a propagation delay added; what died on 2026-09-04 was the explicit
+boost-violating equation that was the only way left to have the wake at all.
 
 ## Contents
 
 - [Evidence ledger](evidence-ledger.md)
 - [Related](related.md)
 - [Open questions](open-questions.md)
+- [Branch C: the explicit equation and its closure](../moving-source-field-consistency/branch-c.md) — the chapter that closed this family (lives in the successor)
 
 
 ## Relationship to gravity as scarcity
@@ -209,7 +233,7 @@ which velocity-dependent terms remove the naïve first-order lag. Branch B becom
 target only after the control equation, source coupling, frame, and tracer observable are fixed. A
 generic causal hyperbolic substrate is not settled by naming those precedents.
 
-### Branch C — emergent metric — **the surviving branch**
+### Branch C — emergent metric — **written explicitly and closed (2026-09-04)**
 
 Matter and measuring devices are excitations of the same substrate, so uniform motion is
 hidden at leading order. The candidate rest frame is then observable only through
@@ -217,11 +241,14 @@ microstructure-scale dispersion or other Lorentz-breaking corrections. Existing 
 carried by [lorentz-violation-bounds](../../studies/lorentz-violation-bounds.md). This branch may
 erase the proposed galactic wake altogether.
 
-*Disposition:* untouched by the analytic pass, and now the whole of the live question. Note the
-change in epistemic status it forces: with A dead, a wake requires *explicit* boost-violation, so
-its amplitude is a free parameter **bounded** by Lorentz tests rather than **predicted** by
-retardation. The branch is worth pursuing only if some breaking parameter yields an \(A_1\) the
-existing bounds do not already crush.
+*Disposition:* untouched by the 2026-08-08 analytic pass, and then the whole of the live question:
+with A dead, a wake requires *explicit* boost-violation, so its amplitude is a free parameter
+**bounded** by experiment rather than **predicted** by retardation. **Closed 2026-09-04** by
+[Branch C](../moving-source-field-consistency/branch-c.md): the minimal explicit equation has three
+breaking parameters; the one that makes the wake (aether-frame dissipation) also drags every bound
+body, and the solar-system ephemeris floor bounds that drag far below any observable galactic
+amplitude. The Lorentz walls turned out not to be the killer — they bind the completion's photon
+and matter sectors, not the gravitational dissipation — the conservation structure was.
 
 ### Branch D — supercritical wake — **ordinary gravity excluded**
 
@@ -234,10 +261,11 @@ with [scalar-gravity-ppn-constraints](../../studies/scalar-gravity-ppn-constrain
 
 *Disposition:* for a conventionally coupled gravitational mode, the escape hatch is closed.
 Moore & Nelson 2001 give a conservative Cherenkov speed-deficit bound of \(2\times10^{-15}\) for
-Galactic cosmic-ray origins and ~\(2\times10^{-19}\) for extragalactic origins (`conjecture — to
-verify` pending the moving-source study note). Either keeps a galaxy moving at \(10^{-3}c\) far
-below the mode speed. Extending that conclusion to an extra substrate mode requires its coupling
-to matter and its dispersion to be specified.
+Galactic cosmic-ray origins and ~\(2\times10^{-19}\) for extragalactic origins (sourced 2026-08-28:
+[moving-source-gravity-bounds](../../studies/moving-source-gravity-bounds.md) § gravitational
+Cherenkov). Either keeps a galaxy moving at \(10^{-3}c\) far below the mode speed. The Branch C
+potential is a conventionally coupled mode, so the escape via an extra substrate mode is closed for
+the minimal class along with the branch.
 
 ## Observable signatures
 
@@ -341,3 +369,8 @@ The wake branch is refuted, not repaired, if any of these gates fires:
 7. **Existing-physics gate:** the coupling needed for a galactic signal exceeds the
    preferred-frame, photon-sector, gravitational-wave-speed, or local-dynamics bounds carried
    by the Principia studies.
+
+**Gate 7 fired (2026-09-04).** The coupling needed for a galactic signal exceeds the local-dynamics
+bound — the solar-system ephemeris floor — by two to three orders of magnitude, for every parameter
+of the minimal explicit equation that produces a signal at all
+([Branch C](../moving-source-field-consistency/branch-c.md) § Walls).

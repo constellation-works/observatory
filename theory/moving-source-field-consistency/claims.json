@@ -1,15 +1,13 @@
 {
   "doc": "moving-source-field-consistency",
   "title": "Moving-source field consistency: what survives of the wake",
-  "status": "growing",
+  "status": "resolved",
   "families": [
     "retarded-scarcity-wake"
   ],
-  "updated": "2026-08-21",
-  "headline": "Delayed-center construction is not a Poisson-vacuum exterior. Analytic rows stay untested until cataloged. Branch C still lacks an explicit equation.",
-  "live_fronts": [
-    "retarded-wake-branch-c"
-  ],
+  "updated": "2026-09-04",
+  "headline": "Delayed-center construction is not a Poisson-vacuum exterior. Branch C written explicitly (three breaking parameters) and closed: the dissipative parameter that makes the dipole makes a first-order self-acceleration the solar-system ephemeris floor excludes. Converged with the boost-invariant control.",
+  "live_fronts": [],
   "claims": [
     {
       "id": "moving-source-legendre-not-laplace",
@@ -59,11 +57,12 @@
       "id": "moving-source-em-gr-aberration-cancel",
       "family": "retarded-scarcity-wake",
       "kind": "nature",
-      "status": "conjecture",
+      "status": "supported",
       "claim": "Electromagnetism and general relativity cancel the naïve retarded-position aberration for a uniformly moving source, leaving no \\(O(\\beta_g)\\) dipole in the relevant physical interaction",
-      "evidence": "Heaviside/Liénard–Wiechert field for electromagnetism and [Carlip 2000](https://arxiv.org/abs/gr-qc/9909087) for general relativity. **No `studies/` note yet**; these examples define controls but do not settle every preferred-medium equation",
+      "evidence": "Sourced 2026-08-28 in [moving-source-gravity-bounds](../../studies/moving-source-gravity-bounds.md) § aberration cancellation: Heaviside/Liénard–Wiechert cancels uniform-motion aberration exactly in electromagnetism; Carlip 2000 shows the quadratic extrapolation in general relativity with residuals at radiation-reaction order. A property of the specific field equations — the control, not a verdict on every preferred-medium equation; [Branch C](branch-c.md) § The control reproduces it inside the model with the odd sector off",
       "links": [
-        "https://arxiv.org/abs/gr-qc/9909087"
+        "../../studies/moving-source-gravity-bounds.md",
+        "branch-c.md"
       ],
       "in_doc_ledger": true
     },
@@ -73,8 +72,10 @@
       "kind": "nature",
       "status": "conjecture",
       "claim": "In a specified boost-invariant control theory, uniform motion produces no first-order wake; acceleration or explicit boost violation is required for an \\(O(\\beta_g)\\) dipole",
-      "evidence": "§ Why uniform motion does not make a wake in the boost-invariant control; this does not settle an unspecified preferred-medium equation",
-      "links": [],
+      "evidence": "§ Why uniform motion does not make a wake in the boost-invariant control; for the minimal class this is now a theorem of the explicit equation ([Branch C](branch-c.md) § The control, eq. 2, even in \\(\\xi_\\parallel\\) at every order) — kept at conjecture as a statement about every control theory, which no single equation settles",
+      "links": [
+        "branch-c.md"
+      ],
       "in_doc_ledger": true
     },
     {
@@ -83,10 +84,11 @@
       "kind": "nature",
       "status": "conjecture",
       "claim": "The delayed-center toy scale \\(A_1\\sim2\\times10^{-3}\\) is roughly 50–100× below representative observed disk-lopsidedness scales",
-      "evidence": "\\(\\beta_g\\approx2\\times10^{-3}\\) from ~600 km/s; the cited review reports both a larger-sample characteristic scale near 0.1 and older thresholds near 0.2 ([Jog & Combes 2009 review](https://ned.ipac.caltech.edu/level5/Sept09/Jog/Jog2.html), [arXiv:0811.1101](https://arxiv.org/pdf/0811.1101)). This is not a ceiling on Branch C, whose amplitude law is unknown",
+      "evidence": "\\(\\beta_g\\approx2\\times10^{-3}\\) from ~600 km/s; the cited review reports both a larger-sample characteristic scale near 0.1 and older thresholds near 0.2 ([Jog & Combes 2009 review](https://ned.ipac.caltech.edu/level5/Sept09/Jog/Jog2.html), [arXiv:0811.1101](https://arxiv.org/pdf/0811.1101)). The Branch C ceiling is now known and sits at or below this toy scale ([Branch C](branch-c.md) § Walls)",
       "links": [
         "https://ned.ipac.caltech.edu/level5/Sept09/Jog/Jog2.html",
-        "https://arxiv.org/pdf/0811.1101"
+        "https://arxiv.org/pdf/0811.1101",
+        "branch-c.md"
       ],
       "in_doc_ledger": true
     },
@@ -96,10 +98,12 @@
       "kind": "nature",
       "status": "untested",
       "claim": "If \\(A_1=2\\times10^{-3}\\) and the foreground is independent zero-mean scatter, a large-\\(N\\) alignment statistic could measure it",
-      "evidence": "§ Idealized detectability of the toy amplitude — the arithmetic is straightforward, but catalog errors, correlated structure, velocity-direction uncertainty, and the applicability of the toy amplitude remain unvalidated",
-      "links": [],
+      "evidence": "Moot: Branch C closed (ORB-11175). The surviving Branch C ceiling is \\(A_1\\lesssim10^{-3}\\) to \\(3\\times10^{-5}\\) ([Branch C](branch-c.md) § Walls), so the toy amplitude has no surviving model and the required sample scales to \\(\\sim10^{7}\\) galaxies at the tight reading. § Idealized detectability arithmetic stands as arithmetic; the catalog-error, correlated-structure, and null-correlation debts are no longer owed by this family",
+      "links": [
+        "branch-c.md"
+      ],
       "in_doc_ledger": true,
-      "kill": "Noise model, catalog errors, and null correlation unvalidated."
+      "kill": "Moot: Branch C closed. Would need a reopened branch (daniel_reopen) supplying an amplitude above the ephemeris ceiling before any alignment statistic is owed."
     },
     {
       "id": "moving-source-structure-formation-confounder",
@@ -107,7 +111,7 @@
       "kind": "nature",
       "status": "conjecture",
       "claim": "Standard structure formation may correlate peculiar velocity with an \\(m=1\\) asymmetry axis, confounding an alignment test",
-      "evidence": "§ A degeneracy to measure, not assume — the common-cause intuition is plausible, but the leading tidal tensor is quadrupolar and does not by itself establish an \\(m=1\\) phase correlation",
+      "evidence": "§ A degeneracy to measure, not assume — the common-cause intuition is plausible, but the leading tidal tensor is quadrupolar and does not by itself establish an \\(m=1\\) phase correlation. Moot for this family: Branch C closed (ORB-11175)",
       "links": [],
       "in_doc_ledger": true
     },
@@ -117,20 +121,23 @@
       "kind": "nature",
       "status": "untested",
       "claim": "A boost-violating model may produce an orientation-dependent split between in-plane lopsidedness and vertical displacement or warping",
-      "evidence": "§ A candidate geometric discriminator — the disk response and its parameters are not derived, and the perpendicular forcing may produce a bowl-like displacement rather than an integral-sign warp",
-      "links": [],
+      "evidence": "Moot: Branch C closed (ORB-11175). For the minimal equation the split does exist in form — the in-plane component of \\(\\mathbf{w}\\) gives the tangential \\(m=1\\) force and the perpendicular component a midplane vertical acceleration falling as \\(1/R\\), a bowl-like differential forcing ([Branch C](branch-c.md) § The first-order moving-source solution) — but at amplitudes the ephemeris floor caps below \\(10^{-3}\\), so the disk-response derivation is no longer owed",
+      "links": [
+        "branch-c.md"
+      ],
       "in_doc_ledger": true,
-      "kill": "Disk response and parameters are not derived."
+      "kill": "Moot: Branch C closed. Reopening needs an amplitude above the ephemeris ceiling."
     },
     {
       "id": "moving-source-cherenkov-bound",
       "family": "retarded-scarcity-wake",
       "kind": "nature",
-      "status": "conjecture",
+      "status": "supported",
       "claim": "A conventionally coupled subluminal gravitational mode is tightly constrained by gravitational Cherenkov losses",
-      "evidence": "[Moore & Nelson 2001](https://arxiv.org/abs/hep-ph/0106220) give a conservative \\(2\\times10^{-15}\\) speed deficit for Galactic cosmic-ray origins and ~\\(2\\times10^{-19}\\) for extragalactic origins; applicability to an extra substrate mode depends on its coupling and dispersion",
+      "evidence": "Sourced 2026-08-28 in [moving-source-gravity-bounds](../../studies/moving-source-gravity-bounds.md) § gravitational Cherenkov: Moore & Nelson 2001 give \\(c-c_g<2\\times10^{-15}c\\) for Galactic cosmic-ray origins and ~\\(2\\times10^{-19}c\\) for extragalactic; scope is a conventionally coupled mode. The Branch C potential is exactly such a mode, so the bound pins its speed parameter ([Branch C](branch-c.md) § Walls; the scalar-mode extension of the graviton scaling is flagged there as conjecture)",
       "links": [
-        "https://arxiv.org/abs/hep-ph/0106220"
+        "../../studies/moving-source-gravity-bounds.md",
+        "branch-c.md"
       ],
       "in_doc_ledger": true
     },
@@ -140,25 +147,93 @@
       "kind": "nature",
       "status": "conjecture",
       "claim": "A tracer prediction is uninterpretable until the substrate model specifies all velocity-dependent couplings",
-      "evidence": "§ The gravitomagnetic gap — electromagnetism supplies a warning, not a proof that an unknown substrate has the same cancellation",
-      "links": [],
+      "evidence": "§ The gravitomagnetic gap — electromagnetism supplies a warning, not a proof that an unknown substrate has the same cancellation. The minimal Branch C equation has no velocity-dependent force at all; that is a debt of any completion ([moving-source-gravity-bounds](../../studies/moving-source-gravity-bounds.md) § frame dragging), not of the breaking parameters, and is moot with the branch closed",
+      "links": [
+        "../../studies/moving-source-gravity-bounds.md"
+      ],
       "in_doc_ledger": true
     },
     {
       "id": "moving-source-branch-c-not-adjudicated",
       "family": "retarded-scarcity-wake",
       "kind": "nature",
-      "status": "untested",
+      "status": "refuted",
       "claim": "Branch C is not adjudicated by the Poisson-vacuum calculation",
-      "evidence": "A specific boost-violating substrate equation and a map from its breaking parameters to observables are still absent",
-      "links": [],
+      "evidence": "True when written, refuted by adjudication (ORB-11175, 2026-09-04): [Branch C](branch-c.md) writes the explicit boost-violating equation — three breaking parameters at linear, local, two-derivative order — derives its first-order moving-source solution against the Heaviside/Carlip control, maps each parameter onto the sourced walls, and closes the branch: the speed parameter makes no dipole, the source-delay parameter is a rigid offset the solar system excludes, and the dissipative parameter's dipole is locked to a self-acceleration the ephemeris floor ([solar-system-ephemeris-precision-floor](../../studies/solar-system-ephemeris-precision-floor.md)) caps at \\(A_1\\lesssim10^{-3}\\)",
+      "links": [
+        "branch-c.md",
+        "../../studies/solar-system-ephemeris-precision-floor.md"
+      ],
       "in_doc_ledger": true,
       "tags": [
         "existence",
         "preferred-frame"
       ],
-      "kill": "Write an explicit boost-violating substrate equation with a map from breaking parameters to observables, or close Branch C.",
+      "kill": "Fired: the explicit equation was written and its parameters are already bounded once couplings are specified.",
       "comparator": "A specified boost-invariant control (Heaviside/Carlip cancellation), not the delayed-center shortcut."
+    },
+    {
+      "id": "branch-c-minimal-sector",
+      "family": "retarded-scarcity-wake",
+      "kind": "derived",
+      "status": "untested",
+      "claim": "At linear, local, two-derivative order with one preferred unit vector \\(U^\\mu\\), the boost-violating scalar substrate sector has exactly three breaking parameters — speed \\(c_g\\ne c\\), aether-frame dissipation \\(\\Gamma\\), and source delay \\(\\tau_s\\) — only the two time-odd ones can produce an \\(O(\\beta_g)\\) dipole, and with them off the equation gives the Heaviside form, even in \\(\\xi_\\parallel\\) at every order in \\(\\beta_g\\) for every \\(c_g\\)",
+      "evidence": "[Branch C](branch-c.md) § The minimal equation and § The control (eqs. 1–2); the Heaviside residual is symbolically zero but the check is uncataloged. The cancellation it reproduces is the sourced control of [moving-source-gravity-bounds](../../studies/moving-source-gravity-bounds.md)",
+      "links": [
+        "branch-c.md",
+        "../../studies/moving-source-gravity-bounds.md"
+      ],
+      "in_doc_ledger": true,
+      "kill": "Catalog the branch-c-first-order-solution fixture (gate i). A fourth linear local two-derivative structure built from U, or an O(β_g) dipole from the time-even sector, refutes the count."
+    },
+    {
+      "id": "branch-c-first-order-solution",
+      "family": "retarded-scarcity-wake",
+      "kind": "derived",
+      "status": "untested",
+      "claim": "For the dissipative parameter the uniformly moving point-source solution is \\(\\Phi=-(GM/r)\\exp[-A_1(r)(1+\\cos\\theta)]\\) with \\(A_1(r)=\\beta_g r/2\\ell_\\Gamma\\): a first-order potential dipole growing linearly with radius and independent of central concentration, a first-order tangential force \\(g_0A_1\\sin\\theta\\) toward the trailing side, and no first-order leading/trailing radial contrast; the source-delay parameter gives a rigid offset \\(\\tau_s\\mathbf{w}\\) with \\(A_1=\\lvert\\tau_s\\rvert w/r\\)",
+      "evidence": "[Branch C](branch-c.md) § The first-order moving-source solution (eqs. 3–5); PDE residual and both expansions symbolically checked, uncataloged. This is the \\(A_1=F(\\epsilon_{\\rm boost},\\beta_g,\\rho,\\text{tracer coupling})\\) map this document owed",
+      "links": [
+        "branch-c.md"
+      ],
+      "in_doc_ledger": true,
+      "kill": "Catalog the branch-c-first-order-solution fixture (gates ii–iii): A_1/(kr/2) → 1, radial contrast ∝ k², tangential force → g_0 A_1 sin θ, uniform and Plummer exteriors agree to O(a/r)."
+    },
+    {
+      "id": "branch-c-drag-lock",
+      "family": "retarded-scarcity-wake",
+      "kind": "derived",
+      "status": "untested",
+      "claim": "The dissipative parameter that sets the dipole also sets a first-order self-acceleration \\(\\mathbf{a}_{\\rm self}=-\\tfrac{2}{3}\\Gamma\\,(\\lvert W\\rvert/Mc^2)\\,\\mathbf{w}\\) of every gravitationally bound body along its substrate-relative velocity, so a galactic dipole \\(A_1\\) at radius \\(R\\) forces \\(a_{\\rm self}=\\tfrac{4A_1}{3R}(\\lvert W\\rvert/M)(\\beta_{\\rm b}/\\beta_{\\rm gal})\\) on every other body",
+      "evidence": "[Branch C](branch-c.md) § The drag lemma (eqs. 6–8): two integrations by parts from the first-order field equation, agreeing with the dissipated-power balance; the integration-by-parts identity verified on a periodic grid to \\(10^{-12}\\) for a uniform sphere, uncataloged",
+      "links": [
+        "branch-c.md"
+      ],
+      "in_doc_ledger": true,
+      "kill": "Catalog the branch-c-first-order-solution fixture (gate iv): self-force on the uniform sphere = −(2k/3)(3/5)GM²/a and on the Plummer sphere = −(2k/3)|W| within grid error."
+    },
+    {
+      "id": "branch-c-observable-dipole",
+      "family": "retarded-scarcity-wake",
+      "kind": "nature",
+      "status": "refuted",
+      "claim": "An explicitly boost-violating local substrate equation yields a galactic \\(m=1\\) dipole at an observable amplitude — at or above the delayed-center toy scale \\(2\\times10^{-3}\\), let alone the observed lopsidedness scale ~0.1 — with breaking parameters that survive the sourced walls",
+      "evidence": "**Closed (ORB-11175, [Branch C](branch-c.md) § Walls and § Closure):** of the three breaking parameters, the speed makes no dipole and is pinned by Cherenkov ([moving-source-gravity-bounds](../../studies/moving-source-gravity-bounds.md)); the source delay is a rigid offset the Sun's dynamical centre excludes at \\(A_1<4\\times10^{-12}\\); the dissipative parameter's dipole is locked to a first-order self-acceleration of the Sun of at least \\(0.31\\,\\Gamma\\) m/s² in a fixed inertial direction, which the house ephemeris floor ([solar-system-ephemeris-precision-floor](../../studies/solar-system-ephemeris-precision-floor.md), Saturn \\(3\\times10^{-13}\\) to Uranus \\(3\\times10^{-14}\\) m/s²) caps at \\(\\ell_\\Gamma>10\\)–\\(100\\) kpc and hence \\(A_1(10\\,{\\rm kpc})\\lesssim10^{-3}\\) to \\(3\\times10^{-5}\\) — \\(10^{2}\\)–\\(3\\times10^{3}\\) below the observed scale on every reading. The four walls named on the card ([lorentz-violation-bounds](../../studies/lorentz-violation-bounds.md), [scalar-gravity-ppn-constraints](../../studies/scalar-gravity-ppn-constraints.md)) bind the completion, not the dissipative parameter. Velocity scales: [lorentz-violation-bounds](../../studies/lorentz-violation-bounds.md), [milky-way-rotation-curve](../../studies/milky-way-rotation-curve.md); universality of the source equation: [source-side-universality-of-g](../../studies/source-side-universality-of-g.md)",
+      "links": [
+        "branch-c.md",
+        "../../studies/solar-system-ephemeris-precision-floor.md",
+        "../../studies/moving-source-gravity-bounds.md",
+        "../../studies/lorentz-violation-bounds.md",
+        "../../studies/scalar-gravity-ppn-constraints.md",
+        "../../studies/milky-way-rotation-curve.md",
+        "../../studies/source-side-universality-of-g.md"
+      ],
+      "in_doc_ledger": true,
+      "tags": [
+        "preferred-frame"
+      ],
+      "kill": "Fired 2026-09-04 on the solar-system self-acceleration wall.",
+      "comparator": "The specified boost-invariant control (Heaviside/Carlip, eq. 2 of the chapter) in the substrate frame; the solar-system confrontation is against the Newtonian-omission ephemeris floor, not a Galilean U+v picture."
     }
   ]
 }
