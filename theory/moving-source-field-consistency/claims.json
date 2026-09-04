@@ -59,7 +59,7 @@
       "kind": "nature",
       "status": "supported",
       "claim": "Electromagnetism and general relativity cancel the naïve retarded-position aberration for a uniformly moving source, leaving no \\(O(\\beta_g)\\) dipole in the relevant physical interaction",
-      "evidence": "Sourced 2026-08-28 in [moving-source-gravity-bounds](../../studies/moving-source-gravity-bounds.md) § aberration cancellation: Heaviside/Liénard–Wiechert cancels uniform-motion aberration exactly in electromagnetism; Carlip 2000 shows the quadratic extrapolation in general relativity with residuals at radiation-reaction order. A property of the specific field equations — the control, not a verdict on every preferred-medium equation; [Branch C](branch-c.md) § The control reproduces it inside the model with the odd sector off",
+      "evidence": "Previously conjecture pending a local study note; supported 2026-08-28 by [moving-source-gravity-bounds](../../studies/moving-source-gravity-bounds.md) § aberration cancellation: Heaviside/Liénard–Wiechert cancels uniform-motion aberration exactly in electromagnetism; Carlip 2000 shows the quadratic extrapolation in general relativity with residuals at radiation-reaction order, \\(O((v/c)^5)\\). A property of the specific field equations — the control, not a verdict on every preferred-medium equation; [Branch C](branch-c.md) § The control reproduces it inside the model with the odd sector off",
       "links": [
         "../../studies/moving-source-gravity-bounds.md",
         "branch-c.md"
@@ -72,8 +72,9 @@
       "kind": "nature",
       "status": "conjecture",
       "claim": "In a specified boost-invariant control theory, uniform motion produces no first-order wake; acceleration or explicit boost violation is required for an \\(O(\\beta_g)\\) dipole",
-      "evidence": "§ Why uniform motion does not make a wake in the boost-invariant control; for the minimal class this is now a theorem of the explicit equation ([Branch C](branch-c.md) § The control, eq. 2, even in \\(\\xi_\\parallel\\) at every order) — kept at conjecture as a statement about every control theory, which no single equation settles",
+      "evidence": "Sourced 2026-08-28 in [moving-source-gravity-bounds](../../studies/moving-source-gravity-bounds.md) § aberration cancellation: Heaviside/Liénard–Wiechert electromagnetism and Carlip's general-relativistic calculation calibrate the absence of a first-order uniform-motion wake in those specified equations. For the minimal class this is also a theorem of the explicit equation ([Branch C](branch-c.md) § The control, eq. 2, even in \\(\\xi_\\parallel\\) at every order). Kept at conjecture because the claim's general requirement that acceleration or explicit boost violation is necessary overreaches those examples: the sourced result is a calibration, not a verdict on every preferred-medium equation",
       "links": [
+        "../../studies/moving-source-gravity-bounds.md",
         "branch-c.md"
       ],
       "in_doc_ledger": true
@@ -134,7 +135,7 @@
       "kind": "nature",
       "status": "supported",
       "claim": "A conventionally coupled subluminal gravitational mode is tightly constrained by gravitational Cherenkov losses",
-      "evidence": "Sourced 2026-08-28 in [moving-source-gravity-bounds](../../studies/moving-source-gravity-bounds.md) § gravitational Cherenkov: Moore & Nelson 2001 give \\(c-c_g<2\\times10^{-15}c\\) for Galactic cosmic-ray origins and ~\\(2\\times10^{-19}c\\) for extragalactic; scope is a conventionally coupled mode. The Branch C potential is exactly such a mode, so the bound pins its speed parameter ([Branch C](branch-c.md) § Walls; the scalar-mode extension of the graviton scaling is flagged there as conjecture)",
+      "evidence": "Previously conjecture pending a local study note; supported 2026-08-28 by [moving-source-gravity-bounds](../../studies/moving-source-gravity-bounds.md) § gravitational Cherenkov: Moore & Nelson 2001 give \\(c-c_g<2\\times10^{-15}c\\) for Galactic cosmic-ray origins and ~\\(2\\times10^{-19}c\\) for extragalactic; scope is a conventionally coupled mode. The Branch C potential is exactly such a mode, so the bound pins its speed parameter ([Branch C](branch-c.md) § Walls; the scalar-mode extension of the graviton scaling is flagged there as conjecture)",
       "links": [
         "../../studies/moving-source-gravity-bounds.md",
         "branch-c.md"
@@ -147,7 +148,7 @@
       "kind": "nature",
       "status": "conjecture",
       "claim": "A tracer prediction is uninterpretable until the substrate model specifies all velocity-dependent couplings",
-      "evidence": "§ The gravitomagnetic gap — electromagnetism supplies a warning, not a proof that an unknown substrate has the same cancellation. The minimal Branch C equation has no velocity-dependent force at all; that is a debt of any completion ([moving-source-gravity-bounds](../../studies/moving-source-gravity-bounds.md) § frame dragging), not of the breaking parameters, and is moot with the branch closed",
+      "evidence": "§ The gravitomagnetic gap — electromagnetism supplies a warning, not a proof that an unknown substrate has the same cancellation. [Moving-source gravity bounds](../../studies/moving-source-gravity-bounds.md) now supplies the measured frame-dragging target, but not the model's missing tracer coupling, so this methodological claim remains conjecture. The minimal Branch C equation has no velocity-dependent force at all; that is a debt of any completion, not of the breaking parameters, and is moot with the branch closed",
       "links": [
         "../../studies/moving-source-gravity-bounds.md"
       ],

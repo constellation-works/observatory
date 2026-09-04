@@ -23,3 +23,7 @@ new moving-substrate question — a possible leading/trailing potential dipole �
 reopening or extending this document's fixed-β, photon-sector, or source-law verdicts.
 The elliptic-level counterpart — what the *measured closed system* says about a moving
 source, exactly — is [moving-sources-in-the-closed-system](../moving-sources-in-the-closed-system/).
+
+**Measured moving-source wall:** [moving-source gravity bounds](../../studies/moving-source-gravity-bounds.md)
+sources the aberration control, preferred-frame PPN bounds, moving-lens datum, frame-dragging
+ladder, and gravitational Cherenkov limits used by this family's moving-source rows.

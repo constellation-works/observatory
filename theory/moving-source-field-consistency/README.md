@@ -47,7 +47,9 @@ local substrate theory could produce the same shape: a different operator or a r
 substrate response could do so, but would have to be written explicitly and would no longer be the
 retarded-position shortcut. The established-physics claims this document leans on — gravitational
 aberration cancellation, gravitational Cherenkov bounds, and observed lopsidedness amplitudes —
-remain `conjecture — to verify` pending the moving-source study note.
+were then `conjecture — to verify`. The first two are now sourced in
+[moving-source-gravity-bounds](../../studies/moving-source-gravity-bounds.md); the separate
+disk-lopsidedness statistics remain conjectural here.
 
 Principia's ledger has no `derived` status and admits evidence only through a cataloged sim or a
 sourced study. The analytic rows below therefore remain `untested` until the proposed Orrery
@@ -217,7 +219,8 @@ Relative to the boost-invariant control, an \(O(\beta_g)\) dipole can therefore 
    symmetry actually broken rather than hidden, and its coupling is bounded — not predicted — by
    [lorentz-violation-bounds](../../studies/lorentz-violation-bounds.md).
 
-`conjecture — to verify`: for electromagnetism, the Heaviside field of a uniformly moving charge
+The sourced control ([moving-source-gravity-bounds](../../studies/moving-source-gravity-bounds.md)):
+for electromagnetism, the Heaviside field of a uniformly moving charge
 points at the instantaneous position exactly because the Liénard–Wiechert velocity term cancels
 the retarded-position aberration. [Carlip 2000](https://arxiv.org/abs/gr-qc/9909087) shows the
 analogous velocity-dependent cancellation in general relativity through the nonradiative orders

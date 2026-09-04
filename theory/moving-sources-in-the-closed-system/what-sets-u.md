@@ -10,8 +10,10 @@ scales in [lorentz-violation-bounds](../../studies/lorentz-violation-bounds.md) 
 scales: solar galactic orbit ~220 km/s; CMB motion 369.82 km/s; solar river at 1 AU
 ~42 km/s) puts U_⊙ at O(300 km/s) — U/c ~ 10⁻³ — and Theorem 2's O(U·v_GP) photon-sector
 wake effects land in the neighborhood of measured light-deflection precision. That is a
-**live kill test**, not yet executable: it needs the measured wake structure (the
-apparatus below) and the sourced bounds (the studies note). The escape routes are
+**live kill test**, now calibrated by the measured wake and
+[moving-source-gravity-bounds](../../studies/moving-source-gravity-bounds.md), but not yet
+decidable: the PPN reduction yields far-field coefficient slots whose fixture has not produced a
+converged wall comparison. The escape routes are
 themselves informative: either the local substrate comoves with local structure (needs a
 mechanism the rolling rule does not provide), or the galactic field is not river-carried
 (feeding the open carrier question on

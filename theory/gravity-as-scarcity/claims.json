@@ -120,9 +120,10 @@
       "kind": "nature",
       "status": "mixed",
       "claim": "Adding swirl to the scarcity field reproduces frame dragging",
-      "evidence": "[frame-drag-swirl](../../../orrery/lab/sims/frame-drag-swirl/) — right shape; real frame dragging (Lense–Thirring) has specific magnitude/falloff this toy hasn't been checked against (`conjecture — to verify`: study note needed)",
+      "evidence": "[frame-drag-swirl](../../../orrery/lab/sims/frame-drag-swirl/) supplies the prior positive verdict: the toy has the right qualitative swirl shape. [Moving-source gravity bounds](../../studies/moving-source-gravity-bounds.md) now sources the nature target — GP-B measured the frame-dragging drift at 19%, while LAGEOS/LARES agree with GR at claimed few-percent to disputed ~19% precision; a completion must reproduce the Lense–Thirring magnitude, 1/r³ falloff, and spin-source character. The row remains mixed because the toy has not been compared with those quantitative targets",
       "links": [
-        "../../../orrery/lab/sims/frame-drag-swirl/"
+        "../../../orrery/lab/sims/frame-drag-swirl/",
+        "../../studies/moving-source-gravity-bounds.md"
       ],
       "in_doc_ledger": true
     },
