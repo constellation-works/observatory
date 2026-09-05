@@ -58,3 +58,6 @@ recommended v2; not yet filed).
 - [gravity-as-scarcity](../theory/gravity-as-scarcity/) § what remains live — the
   acceleration-organized-successor question now has a stellar-scale null to respect.
 - [ledger](../ledger.md) — supported row + standing debt #2.
+- [wide-binary-selection-bias-preregistration](wide-binary-selection-bias-preregistration.md) —
+  the methodological control protocol auditing this footprint's own apparatus (geometry/
+  truncation coupling, chance-alignment calibration) before its null is leaned on further.

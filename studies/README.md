@@ -78,6 +78,12 @@ one place to be wrong, one place to fix.
   solitary pulsars), the 2002 Jupiter-VLBI moving-lens measurement and its interpretation
   dispute, frame dragging as measured (GP-B, LAGEOS/LARES with the error-budget criticisms),
   and the Moore–Nelson gravitational-Cherenkov bounds on subluminal gravity.
+- [wide-binary-selection-bias-preregistration](wide-binary-selection-bias-preregistration.md) —
+  preregistered protocol (hypothesis, null, decision rule, controls, run matrix) testing whether
+  Astrolabe's wide-binary selection pipeline's geometry/truncation cuts or shifted-field
+  chance-alignment estimator manufacture a spurious acceleration-dependent bias on a synthetic
+  Newtonian-only catalog; cites Chae 2023, Banik et al. 2024, Boufourou 2026, El-Badry, Rix &
+  Heintz 2021, and Pecaut & Mamajek 2013.
 - [source-side-universality-of-g](source-side-universality-of-g.md) — the wall on a
   source-strength that tracks the source's *density*: which channels discriminate (only the
   laboratory route, because every dynamical channel measures \(G_\text{eff}M\)), the
