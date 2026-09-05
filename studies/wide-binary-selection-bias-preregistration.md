@@ -354,3 +354,17 @@ resolved. It is a single new family (`wide-binary-selection-methodology`) with o
 ([wide-binary-selection-bias-control](../gates/wide-binary-selection-bias-control.json)), so the
 one-live-front-per-family rule is trivially satisfied and no existing family's live front is
 displaced.
+
+## Dated outcome — 2026-09-05 (not a protocol amendment)
+
+Orrery ORB-11222 ran the enumerated frozen matrix at merged commit
+`28dd5c72bb670517b93b556f1d2483402c8e8655` in
+[wide-binary-selection-bias](../../orrery/lab/sims/wide-binary-selection-bias/). The run records
+44 realizations: the protocol prose says 47, while its twelve frozen rows enumerate 44; no
+replacement seeds or rows were invented. The independent candidate oracle passed every
+realization. R0 sanity, cap isolation, shifted-field calibration, and R4 power failed: the
+0.05/0.10 injections were detected in 33.3% of seeds versus the frozen 80% requirement, and
+the shifted estimator under-recovered planted 10%/20% contamination. Per the decision rule,
+the methodological result is **unresolved**. These failures do not establish an astronomical
+anomaly, refute gravity, or justify post-result retuning. Orrery repair task ORB-11241 owns
+diagnosis while the protocol above remains unchanged.

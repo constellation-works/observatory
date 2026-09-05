@@ -198,11 +198,10 @@ gradient is a new postulate, out of scope here.
 No nature-level photon sector is claimed. Kill condition B stays the theorem
 the family owes.
 
-## Follow-on fixture (named, not built)
+## Cataloged verification fixture (ORB-11220)
 
-`two-substance-packet-linear-symbol` — an orrery fixture, to be filed as an
-orbit task in that workspace if the algebra above is to move from `untested`
-to `supported`. It is a verification fixture for (5)–(6) on the existing
+`two-substance-packet-linear-symbol` — Orrery ORB-11220, merged remote commit
+`73c9bd53e963e44bb365992c1df87a1077cc996f` — verified (5)–(6) on the existing
 packet discretization (periodic 2-D, centered derivatives), not a new
 interaction and not an observational fit. Dimensionless. Result-neutral: a
 failed gate is reported as a classification, never as a nonzero process exit.
@@ -255,3 +254,11 @@ sign without treating a positive patch as a cure.
 It is a demonstration fixture: the gate stays open on a Maxwell sector from a
 *different* object (order-parameter recast or a non-gradient interaction), not
 on this Hamiltonian.
+
+**Outcome.** All frozen U0/U1/U2/B0/T0, stability, and refinement controls passed.
+The independent symbol and actual time-evolution lanes agree to a maximum frequency relative
+error of 6.58×10⁻⁵; the B0 squared-speed comparison is 0.00319 against its 0.02 bound.
+The fixture found four longitudinal propagating roots, frozen transverse currents, and no
+Gauss constraint. Its `refuted` result is therefore scoped to the proposition that this packet
+Hamiltonian supplies a Maxwell sector; it supports the two corresponding model-property rows
+without moving Kill condition B's nature-level status.

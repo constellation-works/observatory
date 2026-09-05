@@ -28,7 +28,11 @@
   cones and leaves transverse flux frozen; it is not a Maxwell sector
   ([packet-hamiltonian-linearization](packet-hamiltonian-linearization.md)). The
   question remains open for a different interaction or the order-parameter recast.
-  Verification of the algebra is a named orrery fixture, not yet filed.
+  **Validated for that apparatus (ORB-11220, Orrery `73c9bd53e963e44bb365992c1df87a1077cc996f`):**
+  the named fixture passed its frozen symbol, evolution, λ, background, transverse, and
+  refinement controls, so this linear mode count is no longer an open verification item.
+  The open object is still a recast or different interaction, not a reinterpretation of scalar
+  degeneracy as Maxwell.
 - **What sets 1836?** The split explains why the mass ratio is *unconstrained* by charge;
   it says nothing about its value. A core-energy computation (composite of three confined
   sub-vortices vs one unit anti-polarity vortex) is the natural first target once a

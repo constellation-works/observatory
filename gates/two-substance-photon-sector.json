@@ -26,5 +26,5 @@
     "two-substance-packet-linear-modes",
     "two-substance-packet-linear-local-only"
   ],
-  "follow_on_fixture": "two-substance-packet-linear-symbol (orrery; named with predeclared dimensionless gates in theory/two-substance-vortex-vacuum/packet-hamiltonian-linearization.md; not filed, not built — verification-only, result-neutral tolerances)"
+  "follow_on_fixture": "two-substance-packet-linear-symbol (Orrery ORB-11220, merged remote commit 73c9bd53e963e44bb365992c1df87a1077cc996f; frozen U0/U1/U2/B0/T0 gates all validated). It supports the stated linear mode properties and refutes the Maxwell reading of this apparatus only: four longitudinal roots, frozen transverse currents, no Gauss constraint. The live gate remains owed by a recast or different interaction; no nature claim or gravity wall moved."
 }

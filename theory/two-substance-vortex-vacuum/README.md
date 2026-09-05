@@ -70,8 +70,13 @@ longitudinal acoustic branches plus frozen transverse currents; equal \(c_+=c_-\
 degenerates those cones without producing Maxwell polarizations. That apparatus is not
 a photon-sector candidate. The failure is local to this scalar-density, gradient-driven
 system — not a no-go for a two-component order-parameter recast — and does not reopen
-the gravity wall. The nature claim stays untested; the algebra awaits a named orrery
-fixture. The S2 disjunction from the
+the gravity wall. The nature claim stays untested. **ORB-11220** then validated that apparatus
+at merged Orrery commit `73c9bd53e963e44bb365992c1df87a1077cc996f`
+([two-substance-packet-linear-symbol](../../../orrery/lab/sims/two-substance-packet-linear-symbol/)):
+the independent symbol and time-evolution lanes pass the frozen U0/U1/U2/B0/T0/refinement
+controls and support the four-longitudinal-plus-frozen-transverse count. Its `refuted`
+verdict is only for treating this frozen apparatus as Maxwell; it is not a nature-level
+photon no-go. The S2 disjunction from the
 same discussion thread — S2 as a finite-range fifth force vs S2 as the metric medium — has
 since been derived and **resolved** (ORB-10161, § below): the fifth-force reading is refuted
 analytically on measured anchors (composition, sign/shape, and the solar-system light

@@ -1,9 +1,11 @@
 ## Open questions
 
-- Who builds the Orrery fixture, and under what task? This doc and its gate freeze the
-  protocol; the sim itself is explicitly out of scope here (principia judges theory and
-  literature, Orrery runs the apparatus) and is not yet filed.
-- If R1 fires (a populated bin exceeds the predeclared threshold), does the follow-up isolate
+- **Which failure is in the synthetic framework versus the apparatus?** ORB-11222 ran the
+  fixture, but R0 sanity, cap isolation, R3 calibration, and R4 power failed while the
+  candidate oracle passed every enumerated realization. ORB-11241 is the precise Orrery repair
+  task; it must preserve the frozen protocol and distinguish a fixture defect from a genuine
+  limitation before any of these mixed rows can become a conclusion.
+- If R1 fires after the failed controls are repaired (a populated bin exceeds the predeclared threshold), does the follow-up isolate
   *which* cut (theta/s window, PM-escape gate, magnitude truncation, or the photometric
   mass-luminosity scatter) is responsible, or only that the pipeline as a whole is miscalibrated
   under the tested footprint? The current protocol's run matrix (cap ladder, wrap/polar

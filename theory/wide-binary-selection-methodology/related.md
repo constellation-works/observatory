@@ -10,6 +10,10 @@
   *intentional* selection design (the cuts as specified) plus forward-model assumptions, not a
   reopening of the bug. The independent-oracle claim here (`wbsel-candidate-oracle-regression`)
   re-verifies that fix as a control, deliberately kept separate from the bias-statistic verdict.
+- [wide-binary-selection-bias](../../../orrery/lab/sims/wide-binary-selection-bias/) — ORB-11222's
+  frozen synthetic run at Orrery `28dd5c72bb670517b93b556f1d2483402c8e8655`: candidate oracle
+  passes, but sanity/calibration/power controls fail, so the methodological verdict remains
+  unresolved and ORB-11241 owns repair.
 - Boufourou 2026 (arXiv:2608.24556) — the literature precedent that estimator/selection
   artifacts, not new physics, can manufacture a pseudo-signal in exactly this class of test (the
   eccentricity-triple coupling mechanism there is different from the geometry/truncation

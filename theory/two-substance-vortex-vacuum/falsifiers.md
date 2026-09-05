@@ -49,3 +49,11 @@ catalog; data-acquisition tasks in ws_astrolabe (tycho), marked as such. Status 
   resolved common structure is a trailing wake, not attached; the control kill did not fire,
   the packet-control gate closes, and the refuted gravity bridge stays closed
   ([two-substance-dynamical-packet](../../../orrery/lab/sims/two-substance-dynamical-packet/)).
+
+- **ORB-11220 — Packet linear-symbol and polarization controls.** The named verification
+  fixture for ORB-11219's frozen packet Hamiltonian, merged at Orrery
+  `73c9bd53e963e44bb365992c1df87a1077cc996f`. **Run — the frozen apparatus fails the
+  Maxwell reading:** independent operator and actual-evolution lanes validate the numerical
+  controls and find four longitudinal acoustic roots, frozen transverse currents, and no
+  Gauss constraint; equal speeds are scalar degeneracy. This supports the corresponding
+  model-property rows, leaves Kill condition B's nature claim untested, and reopens no wall.

@@ -54,3 +54,13 @@ order; Hessian mixing on a small background is local and does not cure the cubic
 global unboundedness. That is a failure of this scalar-density apparatus, not a no-go
 for every two-component order-parameter theory. The gate remains open on a recast or a
 different interaction. No gravity-wall id is reopened.
+
+**Cataloged verification (ORB-11220, 2026-09-05).** The frozen apparatus was then run at
+Orrery commit `73c9bd53e963e44bb365992c1df87a1077cc996f` in
+[two-substance-packet-linear-symbol](../../../orrery/lab/sims/two-substance-packet-linear-symbol/).
+The independent matrix and actual evolution agree within the predeclared refinement controls
+(maximum matrix/time frequency disagreement 6.58×10⁻⁵; B0 squared-speed disagreement
+0.00319 against a 0.02 bound). U0/U1/U2/B0/T0 report four longitudinal propagating roots,
+two frozen transverse currents in 2-D, and no Gauss constraint. The fixture's `refuted`
+classification is therefore a result about calling this Hamiltonian Maxwell, not a refutation
+of Kill condition B's still-untested nature claim.
