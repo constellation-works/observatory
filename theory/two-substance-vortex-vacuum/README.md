@@ -94,6 +94,13 @@ the boost any surviving S2 metric medium would carry at kiloparsec scale is not 
 fixed-length law, and the family's gravitational sector owes two things: the source law, and
 a boost form the data will accept.
 
+**Analytic update (2026-09-04):** [The photon-mode calculation](photon-mode-obstruction.md)
+finds a conditional obstruction in the regular isotropic two-phase superfluid reading:
+equal sound speeds still give longitudinal scalar modes; Josephson locking gaps one mode
+but puts relative-winding charge on domain walls. The photon gate remains open and its
+nature claim remains `untested`; a recast must supply an explicit gauge mechanism, not
+just rename the substances as components.
+
 ## Contents
 
 - [Evidence ledger](evidence-ledger.md)
@@ -103,7 +110,11 @@ a boost form the data will accept.
 - [Topological/dynamical split](topological-dynamical-split.md)
 - [Kill condition A](kill-condition-a.md)
 - [Kill condition B](kill-condition-b.md)
+<<<<<<< Updated upstream
 - [Packet Hamiltonian linearization](packet-hamiltonian-linearization.md)
+=======
+- [Photon-mode obstruction and the cost of locking](photon-mode-obstruction.md)
+>>>>>>> Stashed changes
 - [Canon](canon.md)
 - [Relation to gravity-as-scarcity](relation-to-gravity-as-scarcity.md)
 - [S2 disjunction (ORB-10161)](s2-disjunction.md)

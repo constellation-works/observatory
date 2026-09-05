@@ -22,9 +22,21 @@
   ],
   "comparator": "Maxwell plane-wave content versus two-fluid acoustics (studies/maxwell-mode-content-and-two-fluid-acoustics). Binding walls: studies/lorentz-violation-bounds and scalar-gravity-ppn-constraints.",
   "claims": [
+<<<<<<< Updated upstream
     "two-substance-kill-condition-b",
     "two-substance-packet-linear-modes",
     "two-substance-packet-linear-local-only"
   ],
   "follow_on_fixture": "two-substance-packet-linear-symbol (Orrery ORB-11220, merged remote commit 73c9bd53e963e44bb365992c1df87a1077cc996f; frozen U0/U1/U2/B0/T0 gates all validated). It supports the stated linear mode properties and refutes the Maxwell reading of this apparatus only: four longitudinal roots, frozen transverse currents, no Gauss constraint. The live gate remains owed by a recast or different interaction; no nature claim or gravity wall moved."
+=======
+    "two-substance-kill-condition-b"
+  ],
+  "analytic_attempt": {
+    "date": "2026-09-04",
+    "chapter": "theory/two-substance-vortex-vacuum/photon-mode-obstruction.md",
+    "outcome": "Conditional phase-only obstruction; gate stays open. Equal speeds do not supply transverse modes; Josephson locking gaps relative sound but attaches walls to relative-winding charge.",
+    "next_object": "Explicit gauge-sector action and constraints with defect-charge mapping, beyond a regular isotropic two-phase action.",
+    "control": "Josephson J=0 restores two gapless scalar modes and removes the locking wall tension."
+  }
+>>>>>>> Stashed changes
 }

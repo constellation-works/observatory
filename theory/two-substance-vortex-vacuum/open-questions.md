@@ -19,6 +19,7 @@
   mooted, and the B2 clock requirement stands unmet. Routes, unchanged: named postulate,
   derivation from deeper S2 dynamics, or concession.
 - **Can the single-photon-sector theorem be proven — or must "two substances" be recast?**
+<<<<<<< Updated upstream
   The Volovik standard suggests the theorem may only be available for one vacuum with a
   two-component order parameter, not two genuinely independent substances. If so, the
   recasting changes the ontology's headline (two *components*, one substance) while
@@ -33,6 +34,14 @@
   refinement controls, so this linear mode count is no longer an open verification item.
   The open object is still a recast or different interaction, not a reinterpretation of scalar
   degeneracy as Maxwell.
+=======
+  [The phase-mode calculation](photon-mode-obstruction.md) rules out speed matching and
+  Josephson locking as sufficient repairs within a regular isotropic phase-only action.
+  Locking also puts the proposed charged windings on domain walls. The next owed object
+  is an explicit action with a transverse gauge sector and consistent defect charge;
+  renaming two substances as one two-component order parameter does not supply it.
+  The general existence claim remains untested.
+>>>>>>> Stashed changes
 - **What sets 1836?** The split explains why the mass ratio is *unconstrained* by charge;
   it says nothing about its value. A core-energy computation (composite of three confined
   sub-vortices vs one unit anti-polarity vortex) is the natural first target once a

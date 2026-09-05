@@ -94,6 +94,9 @@ one place to be wrong, one place to fix.
   null against the *bulk* variant), the GM/M degeneracy that makes ephemeris consistency
   non-discriminating, and the PPN-β superposition-nonlinearity comparator.
 
+- [two-component-phase-locking](two-component-phase-locking.md) — sourced binary-condensate
+  phase symmetries, the relative-mode gap, and vortex domain walls.
+
 ## Wanted (backlog)
 
 - Grangier–Roger–Aspect 1986 antibunching (needed by

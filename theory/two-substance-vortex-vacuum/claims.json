@@ -108,12 +108,21 @@
       "kind": "nature",
       "status": "untested",
       "claim": "**Kill condition B:** the coupled two-substance vacuum supports a single Maxwell photon sector (one speed, two transverse polarizations, no birefringence, no detectable frame, γ = 1 via flow drag)",
+<<<<<<< Updated upstream
       "evidence": "Stated as the theorem owed, with the Volovik Fermi-point theorem as the standard of proof ([studies/superfluid-vacuum-and-emergent-gauge-fields](../../studies/superfluid-vacuum-and-emergent-gauge-fields.md)). ORB-11219: the existing packet Hamiltonian is not a candidate — its linearized symbol is two longitudinal sounds plus frozen transverse currents; equal c₊=c₋ degenerates those cones without producing Maxwell polarizations ([packet-hamiltonian-linearization](packet-hamiltonian-linearization.md), [studies/maxwell-mode-content-and-two-fluid-acoustics](../../studies/maxwell-mode-content-and-two-fluid-acoustics.md)). That is a failure of this scalar-density apparatus, not a no-go for every two-component order-parameter theory. The nature claim stays untested. Binding measurements if a later sector fails: birefringence ξ < 1 × 10⁻¹⁶ (GRB 140206A), resonator anisotropy 10⁻¹⁷–10⁻¹⁸ per rest frame (×2 frames + relative flow), GRB dispersion, and the inherited ORB-10156 γ = 1 floor ([studies/lorentz-violation-bounds](../../studies/lorentz-violation-bounds.md))",
       "links": [
         "../../studies/superfluid-vacuum-and-emergent-gauge-fields.md",
         "../../studies/lorentz-violation-bounds.md",
         "../../studies/maxwell-mode-content-and-two-fluid-acoustics.md",
         "packet-hamiltonian-linearization.md"
+=======
+      "evidence": "Stated as the theorem owed (§ above), with the Volovik Fermi-point theorem as the standard of proof ([studies/superfluid-vacuum-and-emergent-gauge-fields](../../studies/superfluid-vacuum-and-emergent-gauge-fields.md)). Binding measurements if it fails: birefringence ξ < 1 × 10⁻¹⁶ (GRB 140206A), resonator anisotropy 10⁻¹⁷–10⁻¹⁸ per rest frame (×2 frames + relative flow), GRB dispersion, and the inherited ORB-10156 γ = 1 floor ([studies/lorentz-violation-bounds](../../studies/lorentz-violation-bounds.md)) **Analytic attempt (2026-09-04):** [phase-mode obstruction](photon-mode-obstruction.md) excludes speed matching and Josephson locking as sufficient Maxwell mechanisms in a regular isotropic phase-only action; locking also attaches walls to relative-winding charge. The binary-condensate precedent is sourced in [two-component phase locking](../../studies/two-component-phase-locking.md). The general nature claim remains untested; additional gauge structure is outside the calculation.",
+      "links": [
+        "../../studies/superfluid-vacuum-and-emergent-gauge-fields.md",
+        "../../studies/lorentz-violation-bounds.md",
+        "photon-mode-obstruction.md",
+        "../../studies/two-component-phase-locking.md"
+>>>>>>> Stashed changes
       ],
       "in_doc_ledger": true,
       "tags": [

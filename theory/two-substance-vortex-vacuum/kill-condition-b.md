@@ -41,6 +41,7 @@ Until that theorem exists (or a lattice computation stands in for it), the singl
 sector is an assumption sitting exactly where generic two-fluid media measurably fail —
 and where the unit-equality half of charge quantization (§(a) above) also lives.
 
+<<<<<<< Updated upstream
 **The existing packet Hamiltonian is not that theorem (ORB-11219).** Its continuum
 linearization — frozen in
 [packet-hamiltonian-linearization](packet-hamiltonian-linearization.md), compared
@@ -64,3 +65,9 @@ The independent matrix and actual evolution agree within the predeclared refinem
 two frozen transverse currents in 2-D, and no Gauss constraint. The fixture's `refuted`
 classification is therefore a result about calling this Hamiltonian Maxwell, not a refutation
 of Kill condition B's still-untested nature claim.
+=======
+**Bounded attempt (2026-09-04):** [Photon-mode obstruction](photon-mode-obstruction.md)
+derives the scalar-mode and relative-phase-locking obstruction under explicit assumptions.
+It does not assume the Volovik analogy supplies a universal cone. The gate stays open;
+neither a sound-speed split alone nor equal sound speeds identifies optical polarizations.
+>>>>>>> Stashed changes
