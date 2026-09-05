@@ -28,6 +28,25 @@ scripts/   check-theory.py — run before landing theory changes.
 - **orrery/lab/sims/** is where the experiments run. principia is prose; orrery is executable.
   Sim links in the ledgers are relative to the constellation checkout (`../../orrery/...`).
 
+## Checking an isolated worktree
+
+`scripts/check-theory.py` keeps links inside the candidate worktree local to that candidate.
+For established relative links into sibling `orrery`, it derives the standard sibling root from
+Git's common-worktree metadata. This lets an isolated Git worktree validate against the checkout
+that owns it without creating symlinks or modifying either repo.
+
+When that checkout is elsewhere (or deliberately needs a different root), pass an explicit
+mapping. Explicit mappings take precedence over Git metadata:
+
+```sh
+python3 scripts/check-theory.py --external-root orrery=/absolute/path/to/orrery
+```
+
+The mapping name must be a simple repository name. A missing configured checkout is an error
+labelled as unavailable; a missing path inside an available checkout remains a failing link with
+its resolved path reported. Links that escape the candidate without a configured repository root,
+or escape a mapped repository, are rejected.
+
 ## Stewardship
 
 principia is owned by **kepler / Fable (Claude)** (`agentbase/kepler/memory`), the constellation's

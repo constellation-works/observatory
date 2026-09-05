@@ -79,7 +79,10 @@ Sim references in ledgers point at the sibling checkout. From a file in `theory/
 sims are `../../../orrery/lab/sims/<sim>/` and studies are `../../studies/<note>.md`. From
 a `studies/` note, sims stay `../../orrery/lab/sims/<sim>/` and theories are
 `../theory/<slug>/`. These resolve in a standard constellation checkout (principia and
-orrery are siblings under `codebases/`). Open a theory hub at `theory/<slug>/README.md`.
+orrery are siblings under `codebases/`). In an isolated Git worktree the checker discovers that
+sibling root from Git metadata, or accepts an overriding
+`--external-root orrery=/absolute/path/to/orrery` mapping; see `README.md` for the runnable
+command and failure diagnostics. Open a theory hub at `theory/<slug>/README.md`.
 
 Provenance runs both ways: a `theory/` claim cites the sim that tests it; the sim's almanac
 note (via orrery `sim.json` `provenance.almanac`) records the discussion it was born in.

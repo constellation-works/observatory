@@ -17,8 +17,10 @@ import argparse
 import datetime as dt
 import json
 import re
+import subprocess
 import sys
 import tempfile
+from dataclasses import dataclass
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -224,13 +226,120 @@ def claim_index(docs: list[dict]) -> dict[str, dict]:
     return by_id
 
 
-def resolve_link(link: str, from_dir: Path, root: Path) -> Path | None:
+@dataclass(frozen=True)
+class ExternalRoot:
+    path: Path
+    source: str
+
+
+@dataclass(frozen=True)
+class LinkResolution:
+    path: Path | None
+    error: str | None = None
+
+
+def worktree_external_roots(root: Path) -> dict[str, ExternalRoot]:
+    """Find supported sibling research checkouts from Git's common-dir metadata."""
+    try:
+        common_dir = subprocess.run(
+            ["git", "-C", str(root), "rev-parse", "--git-common-dir"],
+            check=True,
+            capture_output=True,
+            text=True,
+        ).stdout.strip()
+    except (OSError, subprocess.CalledProcessError):
+        return {}
+    common_path = Path(common_dir)
+    if not common_path.is_absolute():
+        common_path = root / common_path
+    # <constellation>/principia/.git is Git's common directory, so its
+    # grandparent is the checkout collection containing sibling repositories.
+    collection = common_path.resolve().parent.parent
+    return {"orrery": ExternalRoot(collection / "orrery", "Git worktree metadata")}
+
+
+def parse_external_roots(specs: list[str]) -> dict[str, ExternalRoot]:
+    roots: dict[str, ExternalRoot] = {}
+    for spec in specs:
+        name, separator, raw_path = spec.partition("=")
+        if not separator or not name or not raw_path or "/" in name or "\\" in name or name in {".", ".."}:
+            raise ValueError(f"external root must be NAME=PATH with a simple NAME, got {spec!r}")
+        roots[name] = ExternalRoot(Path(raw_path).expanduser().resolve(), "--external-root")
+    return roots
+
+
+def external_roots(root: Path, configured: dict[str, ExternalRoot] | None = None) -> dict[str, ExternalRoot]:
+    """Return worktree roots overlaid by explicit mappings."""
+    roots = worktree_external_roots(root)
+    roots.update(configured or {})
+    return roots
+
+
+def resolve_link(
+    link: str,
+    from_dir: Path,
+    root: Path,
+    configured_external_roots: dict[str, ExternalRoot] | None = None,
+) -> LinkResolution | None:
     if link.startswith(("http://", "https://", "mailto:")):
         return None
     path_part = link.split("#", 1)[0]
     if not path_part:
         return None
-    return (from_dir / path_part).resolve()
+    raw_path = Path(path_part)
+    if raw_path.is_absolute():
+        return LinkResolution(None, "absolute filesystem links are not allowed")
+    try:
+        within_root = list(from_dir.relative_to(root).parts)
+    except ValueError:
+        return LinkResolution(None, f"link source is outside candidate root {root}")
+    escaped = 0
+    repository: str | None = None
+    external_parts: list[str] = []
+    for part in raw_path.parts:
+        if part in {"", "."}:
+            continue
+        if part == "..":
+            if repository is not None:
+                if not external_parts:
+                    return LinkResolution(None, "external link escapes its configured repository root")
+                external_parts.pop()
+            elif within_root:
+                within_root.pop()
+            else:
+                escaped += 1
+            continue
+        if escaped:
+            if repository is None:
+                if escaped != 1:
+                    return LinkResolution(
+                        None, f"link escapes candidate root by {escaped} levels before its repository name"
+                    )
+                repository = part
+            else:
+                external_parts.append(part)
+        else:
+            within_root.append(part)
+    if repository is None:
+        if escaped:
+            return LinkResolution(None, "link escapes candidate root without a repository name")
+        return LinkResolution(root.joinpath(*within_root))
+
+    roots = (
+        configured_external_roots
+        if configured_external_roots is not None
+        else external_roots(root)
+    )
+    mapped_root = roots.get(repository)
+    if mapped_root is None:
+        return LinkResolution(None, f"external repository {repository!r} is not configured")
+    target = mapped_root.path.joinpath(*external_parts)
+    if not mapped_root.path.is_dir():
+        return LinkResolution(
+            target,
+            f"external checkout {repository!r} is unavailable at {mapped_root.path} ({mapped_root.source})",
+        )
+    return LinkResolution(target)
 
 
 def heading_lines(path: Path) -> list[str]:
@@ -288,7 +397,9 @@ def check_dir_layout(root: Path, stem: str, doc: dict, errors: list[str]) -> Non
                     )
 
 
-def check_markdown_links(root: Path) -> list[str]:
+def check_markdown_links(
+    root: Path, configured_external_roots: dict[str, ExternalRoot] | None = None
+) -> list[str]:
     errors: list[str] = []
     files: list[Path] = []
     theory = root / "theory"
@@ -309,15 +420,22 @@ def check_markdown_links(root: Path) -> list[str]:
             url = match.group(1).strip()
             if url.startswith(("<", "{")):
                 continue
-            resolved = resolve_link(url, path.parent, root)
-            if resolved is None:
+            resolution = resolve_link(url, path.parent, root, configured_external_roots)
+            if resolution is None:
                 continue
-            if not resolved.exists():
-                errors.append(f"{rel}: link does not resolve: {url}")
+            if resolution.error:
+                errors.append(f"{rel}: {resolution.error}: {url}")
+            elif resolution.path is None or not resolution.path.exists():
+                errors.append(f"{rel}: link does not resolve: {url} (resolved to {resolution.path})")
     return errors
 
 
-def check_docs(root: Path, docs: list[dict], today: dt.date) -> list[str]:
+def check_docs(
+    root: Path,
+    docs: list[dict],
+    today: dt.date,
+    configured_external_roots: dict[str, ExternalRoot] | None = None,
+) -> list[str]:
     errors: list[str] = []
     theory = root / "theory"
     for stem, layout in iter_theories(theory, errors):
@@ -401,11 +519,16 @@ def check_docs(root: Path, docs: list[dict], today: dt.date) -> list[str]:
             # from_dir is the claims file's parent: theory/ when flat, theory/<slug>/ when dir.
             from_dir = doc["_path"].parent
             for link in links:
-                resolved = resolve_link(link, from_dir, root)
-                if resolved is None:
+                resolution = resolve_link(link, from_dir, root, configured_external_roots)
+                if resolution is None:
                     continue
-                if not resolved.exists():
-                    errors.append(f"{cloc} ({cid}): link does not resolve: {link}")
+                if resolution.error:
+                    errors.append(f"{cloc} ({cid}): {resolution.error}: {link}")
+                elif resolution.path is None or not resolution.path.exists():
+                    errors.append(
+                        f"{cloc} ({cid}): link does not resolve: {link} "
+                        f"(resolved to {resolution.path})"
+                    )
             if claim.get("kind") == "postulate":
                 if claim.get("status") == "supported":
                     errors.append(
@@ -782,12 +905,17 @@ def check_ledger(root: Path, expected: str) -> list[str]:
     return []
 
 
-def run_checks(root: Path, today: dt.date | None = None) -> tuple[list[str], str, list[dict], list[dict], dict]:
+def run_checks(
+    root: Path,
+    today: dt.date | None = None,
+    configured_external_roots: dict[str, ExternalRoot] | None = None,
+) -> tuple[list[str], str, list[dict], list[dict], dict]:
     today = today or dt.date.today()
     docs, gates, errors, wall = load_corpus(root)
-    errors.extend(check_docs(root, docs, today))
+    resolved_external_roots = external_roots(root, configured_external_roots)
+    errors.extend(check_docs(root, docs, today, resolved_external_roots))
     errors.extend(check_cross(docs, gates, wall, root))
-    errors.extend(check_markdown_links(root))
+    errors.extend(check_markdown_links(root, resolved_external_roots))
     expected = render_ledger(docs, gates, wall)
     return errors, expected, docs, gates, wall
 
@@ -867,6 +995,29 @@ def write_fixture_claim(
     )
     (directory / "theory" / f"{stem}.md").write_text(
         f"# demo\n\n{ledger}",
+        encoding="utf-8",
+    )
+
+
+def write_fixture_gate(directory: Path, stem: str = "demo") -> None:
+    (directory / "gates" / f"{stem}-front.json").write_text(
+        json.dumps(
+            {
+                "id": f"{stem}-front",
+                "doc": stem,
+                "family": "demo-family",
+                "kind": "existence",
+                "owed_object": "does it exist",
+                "inherited_postulates": ["demo-postulate"],
+                "new_postulates": [],
+                "control": "off",
+                "kill": "no",
+                "forbidden_reopens": [],
+                "comparator": "none",
+                "claims": ["demo-postulate"],
+            }
+        )
+        + "\n",
         encoding="utf-8",
     )
 
@@ -1167,6 +1318,92 @@ def selftest() -> int:
                 + "\n".join(errors)
             )
 
+    with tempfile.TemporaryDirectory() as tmp:
+        collection = Path(tmp)
+        primary = collection / "principia"
+        external = collection / "orrery"
+        primary.mkdir()
+        for name in ("theory", "gates", "schema"):
+            (primary / name).mkdir()
+        sim = external / "lab" / "sims" / "bare-sim"
+        sim.mkdir(parents=True)
+        (sim / "sim.json").write_text("{}\n", encoding="utf-8")
+        write_fixture_claim(
+            primary,
+            "demo",
+            claims=[
+                {
+                    "id": "demo-postulate",
+                    "family": "demo-family",
+                    "kind": "postulate",
+                    "status": "mixed",
+                    "claim": "A named rule.",
+                    "evidence": "",
+                    "links": ["../../../orrery/lab/sims/bare-sim/"],
+                    "in_doc_ledger": True,
+                    "tags": [],
+                    "kill": "it fails",
+                    "named": "2026-08-21",
+                    "expires": "2026-09-21",
+                    "derived": False,
+                }
+            ],
+        )
+        (primary / "schema" / "wall.json").write_text(
+            json.dumps({"refuted_ids": []}) + "\n", encoding="utf-8"
+        )
+        write_fixture_gate(primary)
+        for command in (
+            ["git", "-C", str(primary), "init", "-q"],
+            ["git", "-C", str(primary), "config", "user.email", "selftest@example.invalid"],
+            ["git", "-C", str(primary), "config", "user.name", "selftest"],
+            ["git", "-C", str(primary), "add", "."],
+            ["git", "-C", str(primary), "commit", "-qm", "fixture"],
+        ):
+            subprocess.run(command, check=True, capture_output=True, text=True)
+        isolated = collection / "isolated"
+        subprocess.run(
+            ["git", "-C", str(primary), "worktree", "add", "-q", str(isolated), "HEAD"],
+            check=True,
+            capture_output=True,
+            text=True,
+        )
+        errors, _, _, _, _ = run_checks(primary)
+        if errors:
+            failures.append("primary-external-pass: unexpected errors:\n" + "\n".join(errors))
+        errors, _, _, _, _ = run_checks(isolated)
+        if errors:
+            failures.append("worktree-external-pass: unexpected errors:\n" + "\n".join(errors))
+
+        override = collection / "override-orrery"
+        override_sim = override / "lab" / "sims" / "bare-sim"
+        override_sim.mkdir(parents=True)
+        (override_sim / "sim.json").write_text("{}\n", encoding="utf-8")
+        (sim / "sim.json").unlink()
+        sim.rmdir()
+        configured = {"orrery": ExternalRoot(override, "--external-root")}
+        errors, _, _, _, _ = run_checks(isolated, configured_external_roots=configured)
+        if errors:
+            failures.append("explicit-external-precedence: unexpected errors:\n" + "\n".join(errors))
+
+        claims_path = isolated / "theory" / "demo" / "claims.json"
+        claims = load_json(claims_path)
+        assert isinstance(claims, dict)
+        claims["claims"][0]["links"] = ["../../../orrery/lab/sims/missing-sim/"]
+        claims_path.write_text(json.dumps(claims, indent=2) + "\n", encoding="utf-8")
+        errors, _, _, _, _ = run_checks(isolated, configured_external_roots=configured)
+        blob = "\n".join(errors)
+        if "link does not resolve: ../../../orrery/lab/sims/missing-sim/" not in blob or str(
+            override / "lab" / "sims" / "missing-sim"
+        ) not in blob:
+            failures.append(f"external-target-missing: inaccurate error:\n{blob}")
+
+        unavailable = {"orrery": ExternalRoot(collection / "absent-orrery", "--external-root")}
+        errors, _, _, _, _ = run_checks(isolated, configured_external_roots=unavailable)
+        blob = "\n".join(errors)
+        if "external checkout 'orrery' is unavailable" not in blob:
+            failures.append(f"external-checkout-unavailable: expected distinct error, got:\n{blob}")
+
     if failures:
         for item in failures:
             print(f"selftest fail: {item}", file=sys.stderr)
@@ -1181,11 +1418,22 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--write-ledger", action="store_true")
     parser.add_argument("--selftest", action="store_true")
     parser.add_argument("--root", type=Path, default=ROOT)
+    parser.add_argument(
+        "--external-root",
+        action="append",
+        default=[],
+        metavar="NAME=PATH",
+        help="map a supported external repository name to its checkout; overrides worktree discovery",
+    )
     args = parser.parse_args(argv)
     if args.selftest:
         return selftest()
     root = args.root.resolve()
-    errors, expected, _, _, _ = run_checks(root)
+    try:
+        configured_external_roots = parse_external_roots(args.external_root)
+    except ValueError as exc:
+        parser.error(str(exc))
+    errors, expected, _, _, _ = run_checks(root, configured_external_roots=configured_external_roots)
     if args.write_ledger:
         (root / "ledger.md").write_text(expected, encoding="utf-8")
         print(f"wrote {root / 'ledger.md'}")
