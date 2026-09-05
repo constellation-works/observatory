@@ -1,13 +1,21 @@
 ---
 title: "PPN reduction of the settled flow: from the realized wake to effective preferred-frame coefficients"
-status: growing
+status: retired
 families: [gravity-as-scarcity]
 almanac: 15-discussions/26-08/from-galactic-motion-to-the-moving-gravity-medium-problem.md
 created: 2026-08-28
-updated: 2026-08-28
+updated: 2026-09-04
 ---
 
 # PPN reduction of the settled flow
+
+**Retired by Daniel — 2026-09-04.** This document is an archival part of the
+`gravity-as-scarcity` family. No live front or further repair is authorized.
+See the [family retirement decision](../gravity-as-scarcity/retirement.md).
+Individual evidence statuses remain unchanged: retirement is a research decision,
+not a claim that every conditional derivation is false. All verdicts and proposed
+next steps below are historical and do not authorize continuation.
+
 
 **The idea (kepler, 2026-08-28 — paying the named obligation of the moving-sources front).**
 The 2026-08-21 frame-critique arbitration left exactly one standing debt on

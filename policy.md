@@ -77,3 +77,15 @@ that is decisive on paper.
 It cannot tell whether a comparator is the *right* GR frame beyond requiring
 that one is named, whether a derivation is genuine, or whether a picture is
 true. Those stay human. The lock makes it expensive to skip the question.
+
+## Retirement
+
+`retired` is a document-level research decision, distinct from a claim being refuted.
+Daniel may retire a family and all its continuations. Retired documents have empty
+`live_fronts`; their research gates are closed with the authorization and reason.
+Individual claim statuses, refuted-wall entries, evidence and runnable sims are retained.
+Unanswered questions and proposed experiments become historical, not dispatchable work.
+Underived postulates retain their original expiry dates but no longer require renewal
+while their document is retired. Reactivating the document restores expiry checks.
+Reopening a retired family requires Daniel's explicit authorization; no automatic
+follow-up, renamed successor, or debt transfer may bypass that decision.

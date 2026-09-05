@@ -30,7 +30,7 @@ SCHEMA = ROOT / "schema"
 LEDGER = ROOT / "ledger.md"
 WALL = SCHEMA / "wall.json"
 
-DOC_STATUSES = {"exploratory", "growing", "refuted", "resolved"}
+DOC_STATUSES = {"exploratory", "growing", "refuted", "resolved", "retired"}
 CLAIM_STATUSES = {"supported", "mixed", "untested", "refuted", "conjecture"}
 KINDS = {"postulate", "derived", "model-property", "nature", "hook"}
 GATE_KINDS = {"existence", "control", "derivation", "phenomenology"}
@@ -479,8 +479,8 @@ def check_docs(
             live = []
         if doc.get("status") in {"growing", "exploratory"} and not live:
             errors.append(f"{loc}: growing/exploratory docs need a live_fronts gate id")
-        if doc.get("status") in {"refuted", "resolved"} and live:
-            errors.append(f"{loc}: refuted/resolved docs must have empty live_fronts")
+        if doc.get("status") in {"refuted", "resolved", "retired"} and live:
+            errors.append(f"{loc}: refuted/resolved/retired docs must have empty live_fronts")
         parse_date(str(doc.get("updated") or ""), f"{loc}.updated", errors)
         claims = doc.get("claims")
         if not isinstance(claims, list):
@@ -547,7 +547,7 @@ def check_docs(
                         errors.append(f"{cloc} ({cid}): underived postulate needs expires")
                     else:
                         exp = parse_date(str(expires), f"{cloc} ({cid}).expires", errors)
-                        if exp is not None and exp < today:
+                        if exp is not None and exp < today and doc.get("status") != "retired":
                             errors.append(
                                 f"{cloc} ({cid}): postulate expired {expires}; "
                                 "renew with a reason or derive it"
@@ -1060,6 +1060,17 @@ def selftest() -> int:
             + "\n",
             encoding="utf-8",
         )
+
+        # Retirement archives debts without changing their evidence status. Resuming
+        # research must reactivate expiry checks; retired docs cannot own live fronts.
+        write_fixture_claim(root, "demo", status="retired", live_fronts=[])
+        retirement_errors, _, _, _, _ = run_checks(root, today=dt.date(2026, 10, 1))
+        if retirement_errors:
+            failures.append(f"retired archive: {retirement_errors}")
+        write_fixture_claim(root, "demo", status="retired")
+        expect_error("retired-live-front", root, "must have empty live_fronts")
+        write_fixture_claim(root, "demo")
+        expect_error("resumed-expiry", root, "postulate expired", dt.date(2026, 10, 1))
 
         # postulate marked supported
         write_fixture_claim(

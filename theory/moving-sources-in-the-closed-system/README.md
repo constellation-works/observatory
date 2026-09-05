@@ -1,13 +1,21 @@
 ---
 title: "Moving sources in the closed system: the substrate wind, exactly"
-status: growing
+status: retired
 families: [gravity-as-scarcity]
 almanac: 15-discussions/26-08/from-galactic-motion-to-the-moving-gravity-medium-problem.md
 created: 2026-08-21
-updated: 2026-08-28
+updated: 2026-09-04
 ---
 
 # Moving sources in the closed system
+
+**Retired by Daniel — 2026-09-04.** This document is an archival part of the
+`gravity-as-scarcity` family. No live front or further repair is authorized.
+See the [family retirement decision](../gravity-as-scarcity/retirement.md).
+Individual evidence statuses remain unchanged: retirement is a research decision,
+not a claim that every conditional derivation is false. All verdicts and proposed
+next steps below are historical and do not authorize continuation.
+
 
 **The idea (kepler, 2026-08-21 — the front that opens once the closure is fully measured).**
 With ORB-10751, ORB-10932, ORB-10755, and ORB-10934 all adjudicated, the closed system

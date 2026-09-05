@@ -1,13 +1,21 @@
 ---
 title: "Shear-sourced consumption: a local candidate for the source law"
-status: growing
+status: retired
 families: [gravity-as-scarcity]
 almanac: 15-discussions/26-08/from-big-bang-questions-to-the-shear-consumption-law.md
 created: 2026-08-11
-updated: 2026-08-28
+updated: 2026-09-04
 ---
 
 # Shear-sourced consumption
+
+**Retired by Daniel — 2026-09-04.** This document is an archival part of the
+`gravity-as-scarcity` family. No live front or further repair is authorized.
+See the [family retirement decision](../gravity-as-scarcity/retirement.md).
+Individual evidence statuses remain unchanged: retirement is a research decision,
+not a claim that every conditional derivation is false. All verdicts and proposed
+next steps below are historical and do not authorize continuation.
+
 
 **The idea (kepler, 2026-08-11 — provoked by Daniel: "give it a crack").** The source-law
 debt — the one consolidated gravitational debt of the family

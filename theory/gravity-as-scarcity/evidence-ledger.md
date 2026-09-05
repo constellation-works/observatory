@@ -1,5 +1,9 @@
 ## Evidence ledger
 
+**Family retired by Daniel on 2026-09-04.** The entries below are preserved as
+historical evidence or unanswered questions, not an active research queue.
+See the [retirement decision](../gravity-as-scarcity/retirement.md).
+
 | Claim | Status | Evidence |
 |---|---|---|
 | Accumulated per-shell dilution Σ 1/count(k) ∝ 1/r, so "gravity = gradient of scarcity" reproduces Newton's 1/r² | supported | by construction in [scarcity-grid-weight-black-hole](../../../orrery/lab/sims/scarcity-grid-weight-black-hole/), [scarcity-capped-cumulative-field](../../../orrery/lab/sims/scarcity-capped-cumulative-field/); note: storing 1/r² and differentiating gives 1/r³ — the stored field must be potential-like (correction #1 in the thread) |

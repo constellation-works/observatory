@@ -1,5 +1,9 @@
 ## Evidence ledger
 
+**Family retired by Daniel on 2026-09-04.** The entries below are preserved as
+historical evidence or unanswered questions, not an active research queue.
+See the [retirement decision](../gravity-as-scarcity/retirement.md).
+
 | Claim | Status | Evidence |
 |---|---|---|
 | In the reservoir frame the analog metric of the moving closed system is exactly the PG-form metric of the disturbance field u = v + U, translating rigidly with the source; every metric-sector observable is a functional of u alone (Statement 0) | supported | Two-line coordinate substitution (§ Statement 0), now cataloged: the symbolic fixture (ORB-11040 G1, [ppn-reduction-symbolic-checks](../../../orrery/lab/sims/ppn-reduction-symbolic-checks/)) verifies the tensor transform lands exactly on the PG form of u = v + U and that the transformed metric depends on v and U only through u (explicit wind derivatives at fixed u vanish identically). Downstream of the acoustic-metric family ([river-model-and-analog-gravity](../../studies/river-model-and-analog-gravity.md)) |

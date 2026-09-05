@@ -40,7 +40,8 @@ Each `theory/<slug>/` directory has a matching `claims.json` (canonical) and an
 
 Doc-level `status`: `exploratory` (being built), `growing` (active work), `refuted` (central
 claim is dead — doc stays), `resolved` (converged with established physics; kept as a
-correspondence record).
+correspondence record), `retired` (research discontinued by Daniel; individual claim
+verdicts retained).
 
 ## Rules of the house
 

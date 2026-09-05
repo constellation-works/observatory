@@ -1,5 +1,9 @@
 ## Evidence ledger
 
+**Family retired by Daniel on 2026-09-04.** The entries below are preserved as
+historical evidence or unanswered questions, not an active research queue.
+See the [retirement decision](../gravity-as-scarcity/retirement.md).
+
 | Claim | Status | Evidence |
 |---|---|---|
 | The shear-consumption law + continuity uniquely select v ∝ r^(−1/2) (GP) among steady radial flows, with free amplitude | supported | Closed-form ODE derivation (§ above), now cataloged with its dynamical confirmation: **ORB-10751** measures steady exponent −0.5000149713 ± 2.9×10⁻⁷ (regression SE), ± 1.6×10⁻⁵ combined across seeds/resolution/timestep — −1/2 within one combined error |

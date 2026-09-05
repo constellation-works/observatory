@@ -1,5 +1,9 @@
 ## Evidence ledger
 
+**Family retired by Daniel on 2026-09-04.** The entries below are preserved as
+historical evidence or unanswered questions, not an active research queue.
+See the [retirement decision](../gravity-as-scarcity/retirement.md).
+
 | Claim | Status | Evidence |
 |---|---|---|
 | Steady irrotational flow of the closed system around a uniformly moving mass has exactly isotropic speed \|v\|² = U² + 2c²σ; the wake is confined to the direction field (Theorem 1) | refuted | The conditional algebra is exact (sympy) and its lattice realization on the *imposed* branch is machine-precision (ORB-10935 G1: dipoles ≤2.7×10⁻¹⁶, [level-core-wind-tunnel](../../../orrery/lab/sims/level-core-wind-tunnel/)). **The dynamics refute the closure as a description of the realized system** — ORB-10938 G3 (the inherited kill, delivered): at T = 600 the system settles, and on converged velocity-settled samples the squared residual \|v\|² − U² − 2c²σ has relative RMS 0.121 (r = 3) and 0.447 (r = 5) at 41³, U/v_GP = 0.3, both beyond combined temporal/resolution error, with the 61³ anchor (0.145 at r = 3) independently beyond error; normalized speed dipoles 0.04–0.24, rung-converged ([level-core-dynamical-relaxation](../../../orrery/lab/sims/level-core-dynamical-relaxation/)). The failing premise is irrotationality: the settled flow carries finite vorticity (RMS ~0.015 at U/v_GP = 0.3, stable 41³→61³), so Kelvin does not survive the realized dynamics. What survives: the theorem as conditional algebra, and the wind-cancellation *structure* it motivated — but the realized speed field is anisotropic |

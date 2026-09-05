@@ -1,15 +1,13 @@
 {
   "doc": "moving-sources-in-the-closed-system",
   "title": "Moving sources in the closed system: the substrate wind, exactly",
-  "status": "growing",
+  "status": "retired",
   "families": [
     "gravity-as-scarcity"
   ],
-  "updated": "2026-08-28",
-  "headline": "Theorem 1's Bernoulli closure is refuted as a description of the realized moving system. Cavitation fired at U/v_GP=0.3. Existence of a regular moving solution is the live front; PPN/drag phenomenology is blocked. The named PPN obligation is executed as algebra in ppn-reduction-of-the-settled-flow; the sourced moving-source walls landed (ORB-10936).",
-  "live_fronts": [
-    "closed-system-moving-existence"
-  ],
+  "updated": "2026-09-04",
+  "headline": "RETIRED by Daniel (2026-09-04). No active research or follow-up; historical results and claim verdicts preserved.",
+  "live_fronts": [],
   "claims": [
     {
       "id": "moving-theorem-1-bernoulli-realized",
@@ -150,5 +148,12 @@
       ],
       "comparator": "Sourced velocity scales in lorentz-violation-bounds; contingent on the galactic-carrier question."
     }
-  ]
+  ],
+  "retirement": {
+    "date": "2026-09-04",
+    "authorized_by": "Daniel",
+    "reason": "Retired by Daniel on 2026-09-04: discontinue the gravity-as-scarcity research family, including the shear-flow completion, moving-source repair, and PPN continuation. Preserve all evidence and individual claim verdicts; no follow-up or reopening without Daniel's explicit authorization.",
+    "previous_status": "growing",
+    "previous_headline": "Theorem 1's Bernoulli closure is refuted as a description of the realized moving system. Cavitation fired at U/v_GP=0.3. Existence of a regular moving solution is the live front; PPN/drag phenomenology is blocked. The named PPN obligation is executed as algebra in ppn-reduction-of-the-settled-flow; the sourced moving-source walls landed (ORB-10936)."
+  }
 }

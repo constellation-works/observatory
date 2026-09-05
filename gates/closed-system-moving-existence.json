@@ -32,5 +32,10 @@
     "ppn-slots-far-field",
     "ppn-half-order-hazard",
     "ppn-alpha-contact"
-  ]
+  ],
+  "status": "closed",
+  "closed_on": "2026-09-04",
+  "closed_by": "Daniel: explicit family retirement",
+  "closure": "Retired by Daniel on 2026-09-04: discontinue the gravity-as-scarcity research family, including the shear-flow completion, moving-source repair, and PPN continuation. Preserve all evidence and individual claim verdicts; no follow-up or reopening without Daniel's explicit authorization.",
+  "reopen_requires": "Explicit authorization from Daniel; this closure does not assert the existence claim was proven false in every possible completion."
 }

@@ -41,7 +41,8 @@ Claim statuses:
 
 Doc-level `status`: `exploratory` (being built), `growing` (active work), `refuted`
 (the central claim is dead — doc stays, see below), `resolved` (converged with established
-physics; kept as a correspondence record).
+physics; kept as a correspondence record), and `retired` (research discontinued by
+Daniel; individual claim verdicts preserved).
 
 ## Rules of the house
 
@@ -54,3 +55,5 @@ physics; kept as a correspondence record).
 - **Update a claim in both files.** `claims.json` and `evidence-ledger.md` change in the
   same commit. Add or close an open question in `open-questions.md`. Sibling and study
   pointers live in `related.md`.
+
+**Retired family (2026-09-04):** [gravity-as-scarcity and its flow continuations](gravity-as-scarcity/retirement.md). No active research remains in this family.

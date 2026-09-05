@@ -5,7 +5,7 @@
   "properties": {
     "doc": { "type": "string", "description": "Directory name of theory/<doc>/" },
     "title": { "type": "string" },
-    "status": { "enum": ["exploratory", "growing", "refuted", "resolved"] },
+    "status": { "enum": ["exploratory", "growing", "refuted", "resolved", "retired"] },
     "families": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
     "updated": { "type": "string", "description": "YYYY-MM-DD" },
     "headline": { "type": "string" },

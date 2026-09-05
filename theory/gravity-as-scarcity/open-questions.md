@@ -1,5 +1,9 @@
 ## Open questions
 
+**Family retired by Daniel on 2026-09-04.** The entries below are preserved as
+historical evidence or unanswered questions, not an active research queue.
+See the [retirement decision](../gravity-as-scarcity/retirement.md).
+
 *Consolidated 2026-07-12, after the universality verdict. The items this section used to
 carry are answered in the ledger and sections above: the standard-halo comparison and its
 drift gate (ORB-10082/ORB-10083) now grade a single-galaxy fit rather than a candidate

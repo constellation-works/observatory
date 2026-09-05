@@ -1,15 +1,13 @@
 {
   "doc": "gravity-as-scarcity",
   "title": "Gravity as the gradient of scarce space",
-  "status": "growing",
+  "status": "retired",
   "families": [
     "gravity-as-scarcity"
   ],
-  "updated": "2026-08-21",
-  "headline": "No universal-gravity branch is live. Fixed-β universality, static photon and clock sectors, and counting→GP are refuted. The closed system is measured statically; the moving sector is the live front.",
-  "live_fronts": [
-    "closed-system-moving-existence"
-  ],
+  "updated": "2026-09-04",
+  "headline": "RETIRED by Daniel (2026-09-04). No active research or follow-up; historical results and claim verdicts preserved.",
+  "live_fronts": [],
   "claims": [
     {
       "id": "scarcity-newton-from-budget",
@@ -274,5 +272,12 @@
       "claim": "The counting level σ = GM/c²r is elliptic (instantaneous draw), not retarded.",
       "kill": "Replace with finite level-propagation, or derive the elliptic draw from a local mechanism."
     }
-  ]
+  ],
+  "retirement": {
+    "date": "2026-09-04",
+    "authorized_by": "Daniel",
+    "reason": "Retired by Daniel on 2026-09-04: discontinue the gravity-as-scarcity research family, including the shear-flow completion, moving-source repair, and PPN continuation. Preserve all evidence and individual claim verdicts; no follow-up or reopening without Daniel's explicit authorization.",
+    "previous_status": "growing",
+    "previous_headline": "No universal-gravity branch is live. Fixed-β universality, static photon and clock sectors, and counting→GP are refuted. The closed system is measured statically; the moving sector is the live front."
+  }
 }

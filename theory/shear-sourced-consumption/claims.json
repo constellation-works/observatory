@@ -1,15 +1,13 @@
 {
   "doc": "shear-sourced-consumption",
   "title": "Shear-sourced consumption: a local candidate for the source law",
-  "status": "growing",
+  "status": "retired",
   "families": [
     "gravity-as-scarcity"
   ],
-  "updated": "2026-08-28",
-  "headline": "Named shear law survived static falsifiers; amplitude core paid by level matching. Still a postulate, not a derivation from counting. Family live front is the moving closed system.",
-  "live_fronts": [
-    "closed-system-moving-existence"
-  ],
+  "updated": "2026-09-04",
+  "headline": "RETIRED by Daniel (2026-09-04). No active research or follow-up; historical results and claim verdicts preserved.",
+  "live_fronts": [],
   "claims": [
     {
       "id": "shear-unique-gp-profile",
@@ -162,5 +160,12 @@
       "claim": "Substrate is consumed at s = n · √((3/2) e^dev:e^dev) (coefficient-one von Mises shear).",
       "kill": "A regular non-cavitating moving solution fails, extra binary dissipation exceeds Hulse–Taylor, or the law is derived from counting (ORB-10162 already forbids the last as a natural rule)."
     }
-  ]
+  ],
+  "retirement": {
+    "date": "2026-09-04",
+    "authorized_by": "Daniel",
+    "reason": "Retired by Daniel on 2026-09-04: discontinue the gravity-as-scarcity research family, including the shear-flow completion, moving-source repair, and PPN continuation. Preserve all evidence and individual claim verdicts; no follow-up or reopening without Daniel's explicit authorization.",
+    "previous_status": "growing",
+    "previous_headline": "Named shear law survived static falsifiers; amplitude core paid by level matching. Still a postulate, not a derivation from counting. Family live front is the moving closed system."
+  }
 }

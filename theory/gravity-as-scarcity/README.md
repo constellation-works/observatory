@@ -1,13 +1,21 @@
 ---
 title: "Gravity as the gradient of scarce space"
-status: growing
+status: retired
 families: [gravity-as-scarcity]
 almanac: 15-discussions/26-07/gravity-as-scarcity-of-space.md
 created: 2026-07-09
-updated: 2026-08-21
+updated: 2026-09-04
 ---
 
 # Gravity as the gradient of scarce space
+
+**Retired by Daniel — 2026-09-04.** This document is an archival part of the
+`gravity-as-scarcity` family. No live front or further repair is authorized.
+See the [family retirement decision](../gravity-as-scarcity/retirement.md).
+Individual evidence statuses remain unchanged: retirement is a research decision,
+not a claim that every conditional derivation is false. All verdicts and proposed
+next steps below are historical and do not authorize continuation.
+
 
 **The idea.** Gravity is not a force law but the gradient of a stored scalar — "scarcity of
 space" — computed on a lattice by counting points in spherical shells around masses. A mass

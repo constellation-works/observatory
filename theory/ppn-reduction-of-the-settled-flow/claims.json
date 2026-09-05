@@ -1,15 +1,13 @@
 {
   "doc": "ppn-reduction-of-the-settled-flow",
   "title": "PPN reduction of the settled flow: from the realized wake to effective preferred-frame coefficients",
-  "status": "growing",
+  "status": "retired",
   "families": [
     "gravity-as-scarcity"
   ],
-  "updated": "2026-08-28",
-  "headline": "The named PPN obligation, executed as algebra and now verified exactly (ORB-11040): the moving metric is the PG metric of the disturbance field, the uniform wind is exactly flat (Riemann ≡ 0, all orders), the physical g₀ᵢ sector is the wake's vorticity plus its Bernoulli anisotropy, and effective α₁/α₂ are far-field slot coefficients — measured where they are defined (ORB-11041): speed-sector slot-matching tails with nonzero lattice proxies, no converged α₁ regime, a near-zone-confined Bernoulli obstruction, and a flooring trough. The predeclared half-order hazard fired: a generic wake carries an observable √ε·ε_w curvature term, so survival now rests on realized-wake cancellations. Lattice units only — existence still gates phenomenology.",
-  "live_fronts": [
-    "closed-system-moving-existence"
-  ],
+  "updated": "2026-09-04",
+  "headline": "RETIRED by Daniel (2026-09-04). No active research or follow-up; historical results and claim verdicts preserved.",
+  "live_fronts": [],
   "claims": [
     {
       "id": "ppn-reservoir-pg-form",
@@ -137,5 +135,12 @@
         "moving-cavitation-floor"
       ]
     }
-  ]
+  ],
+  "retirement": {
+    "date": "2026-09-04",
+    "authorized_by": "Daniel",
+    "reason": "Retired by Daniel on 2026-09-04: discontinue the gravity-as-scarcity research family, including the shear-flow completion, moving-source repair, and PPN continuation. Preserve all evidence and individual claim verdicts; no follow-up or reopening without Daniel's explicit authorization.",
+    "previous_status": "growing",
+    "previous_headline": "The named PPN obligation, executed as algebra and now verified exactly (ORB-11040): the moving metric is the PG metric of the disturbance field, the uniform wind is exactly flat (Riemann ≡ 0, all orders), the physical g₀ᵢ sector is the wake's vorticity plus its Bernoulli anisotropy, and effective α₁/α₂ are far-field slot coefficients — measured where they are defined (ORB-11041): speed-sector slot-matching tails with nonzero lattice proxies, no converged α₁ regime, a near-zone-confined Bernoulli obstruction, and a flooring trough. The predeclared half-order hazard fired: a generic wake carries an observable √ε·ε_w curvature term, so survival now rests on realized-wake cancellations. Lattice units only — existence still gates phenomenology."
+  }
 }
