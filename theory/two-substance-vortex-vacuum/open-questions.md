@@ -23,6 +23,12 @@
   two-component order parameter, not two genuinely independent substances. If so, the
   recasting changes the ontology's headline (two *components*, one substance) while
   keeping the winding/void structure — worth doing carefully rather than by fiat.
+  **Closed for the existing packet Hamiltonian (ORB-11219):** equalizing \(c_+\) and
+  \(c_-\) on that two-density, gradient-driven apparatus degenerates two longitudinal
+  cones and leaves transverse flux frozen; it is not a Maxwell sector
+  ([packet-hamiltonian-linearization](packet-hamiltonian-linearization.md)). The
+  question remains open for a different interaction or the order-parameter recast.
+  Verification of the algebra is a named orrery fixture, not yet filed.
 - **What sets 1836?** The split explains why the mass ratio is *unconstrained* by charge;
   it says nothing about its value. A core-energy computation (composite of three confined
   sub-vortices vs one unit anti-polarity vortex) is the natural first target once a

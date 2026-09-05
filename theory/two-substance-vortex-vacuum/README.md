@@ -4,7 +4,7 @@ status: exploratory
 families: [two-substance-vortex-vacuum]
 almanac: 15-discussions/26-07/from-same-as-curvature-to-the-two-substance-vacuum.md
 created: 2026-07-12
-updated: 2026-09-04
+updated: 2026-09-05
 ---
 
 # The two-substance vortex vacuum
@@ -63,7 +63,15 @@ This closes the packet-control gate without reopening the refuted gravity bridge
 declared coupling causes a converged wake, but supplies neither a derived coupling nor a
 gravity-source law.
 Kill condition B (one light from two substances) is stated below as the theorem the model
-owes; it is untested, and generic two-component media fail it. The S2 disjunction from the
+owes; it is untested, and generic two-component media fail it.
+**ORB-11219** linearized the existing packet Hamiltonian
+([packet-hamiltonian-linearization](packet-hamiltonian-linearization.md)): two
+longitudinal acoustic branches plus frozen transverse currents; equal \(c_+=c_-\)
+degenerates those cones without producing Maxwell polarizations. That apparatus is not
+a photon-sector candidate. The failure is local to this scalar-density, gradient-driven
+system — not a no-go for a two-component order-parameter recast — and does not reopen
+the gravity wall. The nature claim stays untested; the algebra awaits a named orrery
+fixture. The S2 disjunction from the
 same discussion thread — S2 as a finite-range fifth force vs S2 as the metric medium — has
 since been derived and **resolved** (ORB-10161, § below): the fifth-force reading is refuted
 analytically on measured anchors (composition, sign/shape, and the solar-system light
@@ -90,6 +98,7 @@ a boost form the data will accept.
 - [Topological/dynamical split](topological-dynamical-split.md)
 - [Kill condition A](kill-condition-a.md)
 - [Kill condition B](kill-condition-b.md)
+- [Packet Hamiltonian linearization](packet-hamiltonian-linearization.md)
 - [Canon](canon.md)
 - [Relation to gravity-as-scarcity](relation-to-gravity-as-scarcity.md)
 - [S2 disjunction (ORB-10161)](s2-disjunction.md)

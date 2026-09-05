@@ -44,6 +44,11 @@ one place to be wrong, one place to fix.
   — Volovik's ³He program (emergent Weyl fermions, gauge fields, metric; Fermi-point
   topological protection), what it does and doesn't deliver, and the two-fluid two-sound
   fact (Landau/Peshkov).
+- [maxwell-mode-content-and-two-fluid-acoustics](maxwell-mode-content-and-two-fluid-acoustics.md)
+  — Maxwell vacuum plane-wave content (two transverse polarizations, two Gauss
+  constraints; Jackson §7.1–7.2, Maxwell 1865) versus two-fluid longitudinal sounds
+  (Landau/Peshkov) and Helmholtz frozen vorticity; equal characteristic speeds are not
+  polarizations. Comparator for the packet-Hamiltonian linearization (ORB-11219).
 - [equivalence-principle-tests](equivalence-principle-tests.md) — the measured η ladder
   (Eötvös → Eöt-Wash → MICROSCOPE at 10⁻¹⁵, plus ALPHA-g antimatter free fall) and the
   composition of mass (QCD mass budget, nuclear binding energies) that makes

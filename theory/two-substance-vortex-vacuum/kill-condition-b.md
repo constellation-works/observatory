@@ -40,3 +40,17 @@ defects, coupling to defects proportionally to net winding with one universal un
 Until that theorem exists (or a lattice computation stands in for it), the single photon
 sector is an assumption sitting exactly where generic two-fluid media measurably fail —
 and where the unit-equality half of charge quantization (§(a) above) also lives.
+
+**The existing packet Hamiltonian is not that theorem (ORB-11219).** Its continuum
+linearization — frozen in
+[packet-hamiltonian-linearization](packet-hamiltonian-linearization.md), compared
+against
+[studies/maxwell-mode-content-and-two-fluid-acoustics](../../studies/maxwell-mode-content-and-two-fluid-acoustics.md)
+— is two longitudinal acoustic branches plus frozen transverse currents. Setting
+\(c_+=c_-\) degenerates the two scalar cones; it does not produce two propagating
+transverse Maxwell polarizations, a Gauss constraint, or Faraday's curl. The
+\(\lambda=0\) control agrees with \(\lambda\neq0\) on the vacuum background at linear
+order; Hessian mixing on a small background is local and does not cure the cubic's
+global unboundedness. That is a failure of this scalar-density apparatus, not a no-go
+for every two-component order-parameter theory. The gate remains open on a recast or a
+different interaction. No gravity-wall id is reopened.

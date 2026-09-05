@@ -5,8 +5,8 @@
   "families": [
     "two-substance-vortex-vacuum"
   ],
-  "updated": "2026-09-04",
-  "headline": "No gravitational sector pending a source law derived from S2. EM sign won in 2-D. ORB-10941 confirms the packet common mode is a declared-λ trailing wake, not a nature result. Live front: one photon sector.",
+  "updated": "2026-09-05",
+  "headline": "No gravitational sector pending a source law derived from S2. EM sign won in 2-D. Packet Hamiltonian linearized: two longitudinal sounds, not Maxwell; equal speeds degenerate cones without polarizations. Live front: one photon sector (recast or a different interaction).",
   "live_fronts": [
     "two-substance-photon-sector"
   ],
@@ -108,16 +108,50 @@
       "kind": "nature",
       "status": "untested",
       "claim": "**Kill condition B:** the coupled two-substance vacuum supports a single Maxwell photon sector (one speed, two transverse polarizations, no birefringence, no detectable frame, γ = 1 via flow drag)",
-      "evidence": "Stated as the theorem owed (§ above), with the Volovik Fermi-point theorem as the standard of proof ([studies/superfluid-vacuum-and-emergent-gauge-fields](../../studies/superfluid-vacuum-and-emergent-gauge-fields.md)). Binding measurements if it fails: birefringence ξ < 1 × 10⁻¹⁶ (GRB 140206A), resonator anisotropy 10⁻¹⁷–10⁻¹⁸ per rest frame (×2 frames + relative flow), GRB dispersion, and the inherited ORB-10156 γ = 1 floor ([studies/lorentz-violation-bounds](../../studies/lorentz-violation-bounds.md))",
+      "evidence": "Stated as the theorem owed, with the Volovik Fermi-point theorem as the standard of proof ([studies/superfluid-vacuum-and-emergent-gauge-fields](../../studies/superfluid-vacuum-and-emergent-gauge-fields.md)). ORB-11219: the existing packet Hamiltonian is not a candidate — its linearized symbol is two longitudinal sounds plus frozen transverse currents; equal c₊=c₋ degenerates those cones without producing Maxwell polarizations ([packet-hamiltonian-linearization](packet-hamiltonian-linearization.md), [studies/maxwell-mode-content-and-two-fluid-acoustics](../../studies/maxwell-mode-content-and-two-fluid-acoustics.md)). That is a failure of this scalar-density apparatus, not a no-go for every two-component order-parameter theory. The nature claim stays untested. Binding measurements if a later sector fails: birefringence ξ < 1 × 10⁻¹⁶ (GRB 140206A), resonator anisotropy 10⁻¹⁷–10⁻¹⁸ per rest frame (×2 frames + relative flow), GRB dispersion, and the inherited ORB-10156 γ = 1 floor ([studies/lorentz-violation-bounds](../../studies/lorentz-violation-bounds.md))",
       "links": [
         "../../studies/superfluid-vacuum-and-emergent-gauge-fields.md",
-        "../../studies/lorentz-violation-bounds.md"
+        "../../studies/lorentz-violation-bounds.md",
+        "../../studies/maxwell-mode-content-and-two-fluid-acoustics.md",
+        "packet-hamiltonian-linearization.md"
       ],
       "in_doc_ledger": true,
       "tags": [
         "existence"
       ],
       "kill": "Birefringence, two sound speeds, resonator anisotropy, or γ ≠ 1. Binding walls already measured if it fails."
+    },
+    {
+      "id": "two-substance-packet-linear-modes",
+      "family": "two-substance-vortex-vacuum",
+      "kind": "model-property",
+      "status": "untested",
+      "claim": "Linearized about a uniform rest background, the existing packet Hamiltonian and continuity/flux system has 2+2d first-order fields, four propagating longitudinal acoustic branches, and 2(d−1) transverse zero-frequency current modes; there is no Gauss constraint and no propagating transverse polarization. Equal c₊=c₋ degenerates the two longitudinal cones without converting either into a Maxwell polarization.",
+      "evidence": "Continuum principal-symbol algebra of the packet Hamiltonian (ORB-11219, [packet-hamiltonian-linearization](packet-hamiltonian-linearization.md)). Comparator: Maxwell two transverse polarizations plus two Gauss constraints, versus two-fluid longitudinal sounds ([studies/maxwell-mode-content-and-two-fluid-acoustics](../../studies/maxwell-mode-content-and-two-fluid-acoustics.md)). Analytic rows stay untested until the named orrery fixture `two-substance-packet-linear-symbol` is cataloged. Failure of this scalar-density apparatus is not a no-go for a two-component order-parameter recast, and does not reopen the gravity wall.",
+      "links": [
+        "packet-hamiltonian-linearization.md",
+        "../../studies/maxwell-mode-content-and-two-fluid-acoustics.md",
+        "../../../orrery/lab/sims/two-substance-dynamical-packet/"
+      ],
+      "in_doc_ledger": true,
+      "tags": [
+        "existence"
+      ],
+      "kill": "Cataloged orrery fixture two-substance-packet-linear-symbol finds two propagating transverse polarizations with ω=±c|k|, or a Gauss-type constraint that removes the longitudinal branches."
+    },
+    {
+      "id": "two-substance-packet-linear-local-only",
+      "family": "two-substance-vortex-vacuum",
+      "kind": "model-property",
+      "status": "untested",
+      "claim": "On the vacuum background the cubic λ n₊ n₋²/4 term is absent from the linearized principal symbol (λ=0 and λ≠0 agree). A small uniform background mixes the two scalar Hessian speeds. Those spectral conclusions are local; completing the square in n₊ leaves a negative quartic −λ² n₋⁴/(16 c₊²), so global Hamiltonian unboundedness is uncured for every λ≠0.",
+      "evidence": "Vacuum linearization of the packet chemical potentials drops the cubic term; the Hessian on a small uniform background is the 2×2 acoustic tensor in the chapter (ORB-11219, [packet-hamiltonian-linearization](packet-hamiltonian-linearization.md)). Completing the square is exact algebra on the declared potential. The packet fixture already recorded global unboundedness on a locally positive sample; that local patch is not a cure. Awaits the named fixture's λ=0/λ≠0 and small-background arms.",
+      "links": [
+        "packet-hamiltonian-linearization.md",
+        "../../../orrery/lab/sims/two-substance-dynamical-packet/"
+      ],
+      "in_doc_ledger": true,
+      "kill": "Cataloged fixture finds vacuum λ≠0 linear spectrum differing from λ=0, a propagating transverse restoring force, or a globally bounded energy density for the declared cubic Hamiltonian at λ≠0."
     },
     {
       "id": "two-substance-packet-energy-hook",
