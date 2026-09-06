@@ -916,6 +916,17 @@ def run_checks(
     errors.extend(check_docs(root, docs, today, resolved_external_roots))
     errors.extend(check_cross(docs, gates, wall, root))
     errors.extend(check_markdown_links(root, resolved_external_roots))
+    # Only this migrated pilot uses the v1 owner records. All existing research
+    # policy checks above still apply to its byte-identical compatibility views.
+    if (root / "theory/wide-binary-selection-methodology").exists() or (root / "research/wide-binary").exists():
+        try:
+            from wide_binary_records import inspect, package_check
+            package_check()
+            inspect(root)
+        except ImportError:
+            errors.append("wide-binary records require the environment from requirements-research.txt; see research/wide-binary/README.md")
+        except (ValueError, OSError, KeyError) as exc:
+            errors.append(f"wide-binary records: {exc}")
     expected = render_ledger(docs, gates, wall)
     return errors, expected, docs, gates, wall
 

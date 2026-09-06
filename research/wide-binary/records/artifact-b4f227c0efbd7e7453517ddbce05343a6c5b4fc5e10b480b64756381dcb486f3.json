@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:principia:artifact:source%3Aprincipia%3A13866b2848fbcce9a1f1ef2d4b97051a65f7e626%3Atheory%2Fwide-binary-selection-methodology%2Fclaims.json",
+  "aliases": [
+    "source:principia:13866b2848fbcce9a1f1ef2d4b97051a65f7e626:theory/wide-binary-selection-methodology/claims.json"
+  ],
+  "activity": "active",
+  "scope": "synthetic-calibration",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "13866b2848fbcce9a1f1ef2d4b97051a65f7e626",
+    "blob_oid": "d349179f3b08155105b5dda896541c56bf94878a",
+    "sha256": "sha256:2c01eac561be3f15e21fae5168f617c0552f6306bd33efc40283ad494b8e8d59",
+    "path": "theory/wide-binary-selection-methodology/claims.json",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Immutable archival source copy; upstream scientific ownership is unchanged."
+  ],
+  "missingness": [],
+  "legacy": {
+    "source_pin": {
+      "repository": "principia",
+      "git_revision": "13866b2848fbcce9a1f1ef2d4b97051a65f7e626",
+      "path": "theory/wide-binary-selection-methodology/claims.json",
+      "blob_oid": "d349179f3b08155105b5dda896541c56bf94878a",
+      "sha256": "sha256:2c01eac561be3f15e21fae5168f617c0552f6306bd33efc40283ad494b8e8d59",
+      "bytes": 6567,
+      "commit_metadata": "13866b2848fbcce9a1f1ef2d4b97051a65f7e626\n2026-09-06T01:07:41+00:00\n2026-09-06T01:07:41+00:00\nfix: Restore valid photon claim and gate registries without changing sc… [ORB-11352]\n"
+    },
+    "text": "{\n  \"doc\": \"wide-binary-selection-methodology\",\n  \"title\": \"Wide-binary selection methodology: does geometry/truncation manufacture an acceleration-dependent artifact?\",\n  \"status\": \"exploratory\",\n  \"families\": [\n    \"wide-binary-selection-methodology\"\n  ],\n  \"updated\": \"2026-09-05\",\n  \"headline\": \"Preregistered control protocol (not yet run) testing whether Astrolabe's wide-binary selection pipeline manufactures a spurious acceleration-dependent bias, or a miscalibrated chance-alignment rate, on a purely Newtonian synthetic catalog with a realistic nonuniform footprint.\",\n  \"live_fronts\": [\n    \"wide-binary-selection-bias-control\"\n  ],\n  \"claims\": [\n    {\n      \"id\": \"wbsel-geometry-truncation-null\",\n      \"family\": \"wide-binary-selection-methodology\",\n      \"kind\": \"model-property\",\n      \"status\": \"mixed\",\n      \"claim\": \"On a synthetic, purely Newtonian wide-binary population with a realistic nonuniform sky footprint (declination-dependent quality/completeness gradient, anisotropic density) and zero injected acceleration-dependent kinematics, Astrolabe's baseline selection pipeline (quality cuts, theta/s window, escape-speed PM gate) recovers a v-tilde(g_N) profile whose deviation from its own Newtonian-mock comparator stays below the predeclared threshold (abs(B_i) < 0.04 in median v-tilde) in every populated g_N bin.\",\n      \"kill\": \"Any populated bin (n >= 5 pairs) shows abs(B_i) >= 0.04 in median v-tilde, reproducibly across the seed ladder (median seed-to-seed abs(B_i) at or above threshold), under the baseline nonuniform-footprint arm (R1) at the operational max_stars=8000 cap.\",\n      \"evidence\": \"ORB-11222's cataloged frozen run at Orrery 28dd5c72: R1-baseline has no reproducible primary excursion, but R0 sanity fails and R2 wrap/polar do reproduce excursions. The frozen decision rule therefore leaves this unresolved; ORB-11241 owns diagnosis.\",\n      \"links\": [\n        \"../../studies/wide-binary-selection-bias-preregistration.md\",\n        \"../../studies/gaia-wide-binaries-low-acceleration.md\"\n      ],\n      \"in_doc_ledger\": true\n    },\n    {\n      \"id\": \"wbsel-cap-truncation-isolation\",\n      \"family\": \"wide-binary-selection-methodology\",\n      \"kind\": \"model-property\",\n      \"status\": \"mixed\",\n      \"claim\": \"The operational max_stars=8000 brightness cap is not itself the source of any geometry-coupled v-tilde(g_N) bias: the uncapped (R1-uncapped) and heavily-capped (R1-heavycap, max_stars=2000) arms of the same nonuniform-footprint population agree with the baseline-cap arm (R1-baseline) within the seed-to-seed bootstrap uncertainty in every populated bin.\",\n      \"kill\": \"R1-uncapped or R1-heavycap median B_i differs from R1-baseline by more than the combined seed-to-seed uncertainty in any populated bin.\",\n      \"evidence\": \"ORB-11222's cataloged frozen run at Orrery 28dd5c72 finds a heavy-cap deviation beyond combined uncertainty, but failed R0 prevents isolation of an apparatus effect. The unresolved result is retained without retuning; ORB-11241 owns diagnosis.\",\n      \"links\": [\n        \"../../studies/wide-binary-selection-bias-preregistration.md\"\n      ],\n      \"in_doc_ledger\": true\n    },\n    {\n      \"id\": \"wbsel-shifted-field-calibration\",\n      \"family\": \"wide-binary-selection-methodology\",\n      \"kind\": \"model-property\",\n      \"status\": \"mixed\",\n      \"claim\": \"The shifted-field chance-alignment estimator R = N_shift/N_real, evaluated on the nonuniform-footprint synthetic population with known injected field-star contamination fractions (5%, 10%, 20%) and RA-wrap/polar field placements, recovers each injected fraction within the predeclared tolerance (+/-0.05 absolute at 5%, +/-25% relative at 10% and 20%).\",\n      \"kill\": \"R_chance falls outside the predeclared tolerance band for any injected-contamination arm or any field placement (equatorial baseline, RA-wrap, polar).\",\n      \"evidence\": \"ORB-11222's cataloged frozen run at Orrery 28dd5c72 passes the 5% arms but under-recovers every planted 10%/20% rate; this failed control is unresolved calibration evidence, not a gravity claim. ORB-11241 owns diagnosis.\",\n      \"links\": [\n        \"../../studies/wide-binary-selection-bias-preregistration.md\"\n      ],\n      \"in_doc_ledger\": true\n    },\n    {\n      \"id\": \"wbsel-injected-effect-power\",\n      \"family\": \"wide-binary-selection-methodology\",\n      \"kind\": \"model-property\",\n      \"status\": \"mixed\",\n      \"claim\": \"At the R1 baseline sample size and cap, the predeclared primary bias statistic B_i detects an injected acceleration-dependent v-tilde offset of amplitude 0.05 or 0.10 (restricted to the two lowest g_N bins) with power >= 80% across the seed ladder, establishing the protocol's minimum-detectable-effect floor at or below the literature-contested anomaly scale.\",\n      \"kill\": \"Power below 80% at injected amplitude 0.10 (the larger arm) — the protocol's decision rule cannot reliably detect an effect at the scale of the literature disagreement, so a clean R1 null would not be informative.\",\n      \"evidence\": \"ORB-11222's cataloged frozen run at Orrery 28dd5c72 detects both 0.05 and 0.10 injections in 33.3% of seeds, below the 80% rule. The result makes a null uninformative; ORB-11241 owns diagnosis.\",\n      \"links\": [\n        \"../../studies/wide-binary-selection-bias-preregistration.md\"\n      ],\n      \"in_doc_ledger\": true\n    },\n    {\n      \"id\": \"wbsel-candidate-oracle-regression\",\n      \"family\": \"wide-binary-selection-methodology\",\n      \"kind\": \"model-property\",\n      \"status\": \"supported\",\n      \"claim\": \"An independent exhaustive great-circle candidate oracle (astropy SkyCoord.search_around_sky), run on every synthetic realization in this protocol, reproduces Astrolabe's cKDTree-based candidate/pair set exactly, confirming the ORB-11217 completeness fix continues to hold on the nonuniform, RA-wrap, and polar footprints used here.\",\n      \"kill\": \"Any realization where the independent oracle's candidate or final pair set disagrees with Astrolabe's, on any footprint (equatorial, wrap, or polar) — this reopens a candidate-completeness question against Astrolabe directly and is not folded into this protocol's own bias-statistic verdict.\",\n      \"evidence\": \"ORB-11222's cataloged frozen run at Orrery 28dd5c72 finds exact independent-oracle agreement in all 44 enumerated realizations across equatorial, RA-wrap, and polar footprints. It supports this regression control only.\",\n      \"links\": [\n        \"../../studies/wide-binary-selection-bias-preregistration.md\"\n      ],\n      \"in_doc_ledger\": true\n    }\n  ]\n}\n"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "source",
+    "availability": "available",
+    "snapshot_digest": "sha256:2c01eac561be3f15e21fae5168f617c0552f6306bd33efc40283ad494b8e8d59",
+    "locator": null,
+    "media_type": "application/json"
+  },
+  "revision_id": "sha256:b4f227c0efbd7e7453517ddbce05343a6c5b4fc5e10b480b64756381dcb486f3"
+}

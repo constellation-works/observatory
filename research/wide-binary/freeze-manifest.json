@@ -1,0 +1,117 @@
+{
+  "schema_version": 1,
+  "kind": "manifest",
+  "repositories": [
+    {
+      "id": "principia",
+      "git_revision": "c04f2ed1ae91d6c126bc60863b5e48f46abe4576"
+    }
+  ],
+  "references": [
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aprincipia%3Ac04f2ed1ae91d6c126bc60863b5e48f46abe4576%3Atheory%2Fwide-binary-selection-methodology%2Fclaims.json",
+      "revision_id": "sha256:11b9bf36d1d0ec3b5efa173fe43d454520e4515d1e5197255e9fa9c09936a018",
+      "source_revision": "c04f2ed1ae91d6c126bc60863b5e48f46abe4576",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aprincipia%3Ac04f2ed1ae91d6c126bc60863b5e48f46abe4576%3Agates%2Fwide-binary-selection-bias-control.json",
+      "revision_id": "sha256:6afd3fd29f30041b1b4c2cfd647fdc2cc720eabe061f84e46056d76deb8dc2f9",
+      "source_revision": "c04f2ed1ae91d6c126bc60863b5e48f46abe4576",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aprincipia%3Ac04f2ed1ae91d6c126bc60863b5e48f46abe4576%3Astudies%2Fwide-binary-selection-bias-preregistration.md",
+      "revision_id": "sha256:b73b8ce6afc03b81d0461c81f17de2f1f3add64724d540d5486f108b724e1393",
+      "source_revision": "c04f2ed1ae91d6c126bc60863b5e48f46abe4576",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:protocol:wide-binary-selection-bias-control",
+      "revision_id": "sha256:90b62ef438d73d1a9ceb25c4d7753c0d4fce49dbacbcc207c7febc17f7c70842",
+      "source_revision": "c04f2ed1ae91d6c126bc60863b5e48f46abe4576",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:program:wide-binary-selection-methodology",
+      "revision_id": "sha256:8984ee8cdbd455526503d40ce5f867b42d33e5a27428c4a630892d1bd22552df",
+      "source_revision": "c04f2ed1ae91d6c126bc60863b5e48f46abe4576",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:wbsel-geometry-truncation-null",
+      "revision_id": "sha256:f5167b4f269e3e26112feea3ef2a28347616840c5d4df61830a7f330c067c883",
+      "source_revision": "c04f2ed1ae91d6c126bc60863b5e48f46abe4576",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:assessment:wbsel-geometry-truncation-null%3Afreeze",
+      "revision_id": "sha256:dbac6d2d95bee283c250cf9057aa8cb71a30e21be1a4780aa790bed8592dc683",
+      "source_revision": "c04f2ed1ae91d6c126bc60863b5e48f46abe4576",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:wbsel-cap-truncation-isolation",
+      "revision_id": "sha256:8594391102bfe1d6889dea1b870cb882ade3bc2e10cb65db19f1dad79c3e3e52",
+      "source_revision": "c04f2ed1ae91d6c126bc60863b5e48f46abe4576",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:assessment:wbsel-cap-truncation-isolation%3Afreeze",
+      "revision_id": "sha256:d6dd59b43095dcd131ad90224e48d6cc845a48a5a67d14ba93e2f78898dc6dd2",
+      "source_revision": "c04f2ed1ae91d6c126bc60863b5e48f46abe4576",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:wbsel-shifted-field-calibration",
+      "revision_id": "sha256:c913a7c4d4029c5cb9ca40b11ccd4c88b5d120224e883afdd25555e716190d0c",
+      "source_revision": "c04f2ed1ae91d6c126bc60863b5e48f46abe4576",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:assessment:wbsel-shifted-field-calibration%3Afreeze",
+      "revision_id": "sha256:a4f0c537a6da1f324aaba654eb011d03a236e8646a8a08379b3cc40c8717a815",
+      "source_revision": "c04f2ed1ae91d6c126bc60863b5e48f46abe4576",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:wbsel-injected-effect-power",
+      "revision_id": "sha256:3e712cdc7796c3aa552e3d78a8890309d29445b944e5de8cbfd01038eb782d37",
+      "source_revision": "c04f2ed1ae91d6c126bc60863b5e48f46abe4576",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:assessment:wbsel-injected-effect-power%3Afreeze",
+      "revision_id": "sha256:3e4626ac8c79721a3a09c5e4dc07770f44e9053f4da0f0d3a2942085a2cf4815",
+      "source_revision": "c04f2ed1ae91d6c126bc60863b5e48f46abe4576",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:wbsel-candidate-oracle-regression",
+      "revision_id": "sha256:79ac5b0fc943fa6ab255f10439710546b578fb36e8770a177ba565c7fc3b92f4",
+      "source_revision": "c04f2ed1ae91d6c126bc60863b5e48f46abe4576",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:assessment:wbsel-candidate-oracle-regression%3Afreeze",
+      "revision_id": "sha256:e48191e96682722eb26694ae03f004808feb29fa613c4663cf99a70e8999f2c5",
+      "source_revision": "c04f2ed1ae91d6c126bc60863b5e48f46abe4576",
+      "status": "pending"
+    }
+  ]
+}

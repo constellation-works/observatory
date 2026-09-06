@@ -30,6 +30,12 @@ scripts/   check-theory.py — run before landing theory changes.
 
 ## Checking an isolated worktree
 
+The [wide-binary migration pilot](research/wide-binary/README.md) uses immutable
+orbit-research v1 records with checked compatibility views. Install the exact
+environment from `requirements-research.txt` before running the whole-corpus checker;
+the linked guide includes record validation, migration reproduction and rollback.
+Only this pilot changes authority; all other families keep their existing contract.
+
 `scripts/check-theory.py` keeps links inside the candidate worktree local to that candidate.
 For established relative links into sibling `orrery`, it derives the standard sibling root from
 Git's common-worktree metadata. This lets an isolated Git worktree validate against the checkout

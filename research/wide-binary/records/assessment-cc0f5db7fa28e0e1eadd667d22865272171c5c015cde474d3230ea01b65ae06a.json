@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "kind": "assessment",
+  "id": "urn:research:principia:assessment:wbsel-candidate-oracle-regression%3Adiagnostic-ORB-11241",
+  "aliases": [
+    "wbsel-candidate-oracle-regression:diagnostic-ORB-11241"
+  ],
+  "activity": "active",
+  "scope": "synthetic-calibration",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "13866b2848fbcce9a1f1ef2d4b97051a65f7e626",
+    "blob_oid": "d349179f3b08155105b5dda896541c56bf94878a",
+    "sha256": "sha256:2c01eac561be3f15e21fae5168f617c0552f6306bd33efc40283ad494b8e8d59",
+    "path": "theory/wide-binary-selection-methodology/claims.json",
+    "selector": "/claims/4",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Historical synthetic/model calibration only; no new scientific adjudication or nature-level inference."
+  ],
+  "missingness": [
+    "upstream-canonical-assessment"
+  ],
+  "legacy": {
+    "status": "supported",
+    "original_claim": {
+      "id": "wbsel-candidate-oracle-regression",
+      "family": "wide-binary-selection-methodology",
+      "kind": "model-property",
+      "status": "supported",
+      "claim": "An independent exhaustive great-circle candidate oracle (astropy SkyCoord.search_around_sky), run on every synthetic realization in this protocol, reproduces Astrolabe's cKDTree-based candidate/pair set exactly, confirming the ORB-11217 completeness fix continues to hold on the nonuniform, RA-wrap, and polar footprints used here.",
+      "kill": "Any realization where the independent oracle's candidate or final pair set disagrees with Astrolabe's, on any footprint (equatorial, wrap, or polar) — this reopens a candidate-completeness question against Astrolabe directly and is not folded into this protocol's own bias-statistic verdict.",
+      "evidence": "ORB-11222's cataloged frozen run at Orrery 28dd5c72 finds exact independent-oracle agreement in all 44 enumerated realizations across equatorial, RA-wrap, and polar footprints. It supports this regression control only.",
+      "links": [
+        "../../studies/wide-binary-selection-bias-preregistration.md"
+      ],
+      "in_doc_ledger": true
+    },
+    "diagnostic_control": {
+      "classification": "apparatus-behaved-as-specified",
+      "control": "Independent candidate oracle",
+      "evidence": "unchanged: ORB-11217's spherical selector reproduced the SkyCoord oracle exactly in all 44 enumerated realizations. Nothing in this diagnosis disturbs that result.",
+      "frozen_outcome": "PASS",
+      "locus": "Astrolabe apparatus"
+    }
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "claim": {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:wbsel-candidate-oracle-regression",
+      "revision_id": "sha256:30d42fa0c82a282b7bfa84b8629a50afaeb68c57f5a286f4dcf27862b1bf66b2",
+      "source_revision": "13866b2848fbcce9a1f1ef2d4b97051a65f7e626",
+      "status": "pending"
+    },
+    "verdict": "supported",
+    "legacy_verdict": "supported",
+    "inference": "historical",
+    "basis": "legacy-report",
+    "controls": "passed",
+    "rationale": "ORB-11241 diagnostic annotation; original verdict unchanged.\n{\n  \"classification\": \"apparatus-behaved-as-specified\",\n  \"control\": \"Independent candidate oracle\",\n  \"evidence\": \"unchanged: ORB-11217's spherical selector reproduced the SkyCoord oracle exactly in all 44 enumerated realizations. Nothing in this diagnosis disturbs that result.\",\n  \"frozen_outcome\": \"PASS\",\n  \"locus\": \"Astrolabe apparatus\"\n}",
+    "evidence": [
+      {
+        "repository": "principia",
+        "id": "urn:research:principia:artifact:source%3Aorrery%3A2e097e606bc751ba1a8b29ebdc5aab6bbd961c43%3Alab%2Fsims%2Fwide-binary-control-diagnosis%2Fassets%2Fresults.json",
+        "revision_id": "sha256:fd085edebbe99083ca8343a69c43125c71517c0f8df38566eaca5eb3350be5d2",
+        "source_revision": null,
+        "status": "pending"
+      }
+    ]
+  },
+  "revision_id": "sha256:cc0f5db7fa28e0e1eadd667d22865272171c5c015cde474d3230ea01b65ae06a"
+}

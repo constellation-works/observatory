@@ -1,0 +1,173 @@
+{
+  "schema_version": 1,
+  "kind": "manifest",
+  "repositories": [
+    {
+      "id": "principia",
+      "git_revision": "13866b2848fbcce9a1f1ef2d4b97051a65f7e626"
+    }
+  ],
+  "references": [
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aprincipia%3A13866b2848fbcce9a1f1ef2d4b97051a65f7e626%3Atheory%2Fwide-binary-selection-methodology%2FREADME.md",
+      "revision_id": "sha256:552f1e7d2a3f8538edd013b131bf780b45b4cc3c8c365b8a4c02a5260bfbc173",
+      "source_revision": "13866b2848fbcce9a1f1ef2d4b97051a65f7e626",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aprincipia%3A13866b2848fbcce9a1f1ef2d4b97051a65f7e626%3Atheory%2Fwide-binary-selection-methodology%2Fclaims.json",
+      "revision_id": "sha256:b4f227c0efbd7e7453517ddbce05343a6c5b4fc5e10b480b64756381dcb486f3",
+      "source_revision": "13866b2848fbcce9a1f1ef2d4b97051a65f7e626",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aprincipia%3A13866b2848fbcce9a1f1ef2d4b97051a65f7e626%3Atheory%2Fwide-binary-selection-methodology%2Fevidence-ledger.md",
+      "revision_id": "sha256:32b0528aba789c8d01aa19404b0becaa2bce99f3222b33cea8cb8bf6936606ea",
+      "source_revision": "13866b2848fbcce9a1f1ef2d4b97051a65f7e626",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aprincipia%3A13866b2848fbcce9a1f1ef2d4b97051a65f7e626%3Atheory%2Fwide-binary-selection-methodology%2Fopen-questions.md",
+      "revision_id": "sha256:5a5d05e7b3e53d0a16820972b9bc46b5c8338406cec32ecc645e136fd21ef3ac",
+      "source_revision": "13866b2848fbcce9a1f1ef2d4b97051a65f7e626",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aprincipia%3A13866b2848fbcce9a1f1ef2d4b97051a65f7e626%3Atheory%2Fwide-binary-selection-methodology%2Frelated.md",
+      "revision_id": "sha256:8475a98b3c7e9f7cc032611c27dda0a15ee215174fe955c9b361e7e962357539",
+      "source_revision": "13866b2848fbcce9a1f1ef2d4b97051a65f7e626",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aprincipia%3A13866b2848fbcce9a1f1ef2d4b97051a65f7e626%3Agates%2Fwide-binary-selection-bias-control.json",
+      "revision_id": "sha256:b509d7954c49d763326fcaab8e37aba6ba8c680136688edb33b139f05bd91c11",
+      "source_revision": "13866b2848fbcce9a1f1ef2d4b97051a65f7e626",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aprincipia%3A13866b2848fbcce9a1f1ef2d4b97051a65f7e626%3Astudies%2Fwide-binary-selection-bias-preregistration.md",
+      "revision_id": "sha256:6ec3fb732eb3121773fc378258b95bc17c688f9108de10dc10fe5f2fe6a7f917",
+      "source_revision": "13866b2848fbcce9a1f1ef2d4b97051a65f7e626",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aprincipia%3A13866b2848fbcce9a1f1ef2d4b97051a65f7e626%3Astudies%2Fgaia-wide-binaries-low-acceleration.md",
+      "revision_id": "sha256:2e159328f9a94318a7bfcb167ba7b32828bd1b4f8e62b07a1b80826bbc3bdfe7",
+      "source_revision": "13866b2848fbcce9a1f1ef2d4b97051a65f7e626",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:wbsel-geometry-truncation-null",
+      "revision_id": "sha256:7b9382d1156ce3c1a3d5ff4b86edc6eec4a9a52ec5c8d707acca66c4fe27c73e",
+      "source_revision": "13866b2848fbcce9a1f1ef2d4b97051a65f7e626",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:assessment:wbsel-geometry-truncation-null%3Aoriginal-outcome",
+      "revision_id": "sha256:13870e86cf2dbab4280a8dd573f99ad4694a8e4e18812f5a32a10832c3506d29",
+      "source_revision": "13866b2848fbcce9a1f1ef2d4b97051a65f7e626",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:wbsel-cap-truncation-isolation",
+      "revision_id": "sha256:3d205cb5bf4882084a7b7b7ecb8a2781ef468ccb1b16ae6a8070a2f50b6c15d9",
+      "source_revision": "13866b2848fbcce9a1f1ef2d4b97051a65f7e626",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:assessment:wbsel-cap-truncation-isolation%3Aoriginal-outcome",
+      "revision_id": "sha256:9dc429a8c8acf9b9b3d0e0b487bfe0927a9fee44ed1f18146bd11a377c2f4474",
+      "source_revision": "13866b2848fbcce9a1f1ef2d4b97051a65f7e626",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:wbsel-shifted-field-calibration",
+      "revision_id": "sha256:99942cc7fdcc7ade9c4c365e5923f6ec5dd3aac0cd600c538d9a84bdc9782e4b",
+      "source_revision": "13866b2848fbcce9a1f1ef2d4b97051a65f7e626",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:assessment:wbsel-shifted-field-calibration%3Aoriginal-outcome",
+      "revision_id": "sha256:84d80d0fbe3b0d744914bd2da1a39d967b84d5b6e336b13966d2110f34972a90",
+      "source_revision": "13866b2848fbcce9a1f1ef2d4b97051a65f7e626",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:wbsel-injected-effect-power",
+      "revision_id": "sha256:87e4b474f9d60eac7266545e12b50a3c7bb7af1be48467df1b3f89ef0f5ae61f",
+      "source_revision": "13866b2848fbcce9a1f1ef2d4b97051a65f7e626",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:assessment:wbsel-injected-effect-power%3Aoriginal-outcome",
+      "revision_id": "sha256:b0e09a0ccfd65d617b5a8659137051c61a6591429e24a36ed269b27e7d3c542d",
+      "source_revision": "13866b2848fbcce9a1f1ef2d4b97051a65f7e626",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:wbsel-candidate-oracle-regression",
+      "revision_id": "sha256:30d42fa0c82a282b7bfa84b8629a50afaeb68c57f5a286f4dcf27862b1bf66b2",
+      "source_revision": "13866b2848fbcce9a1f1ef2d4b97051a65f7e626",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:assessment:wbsel-candidate-oracle-regression%3Aoriginal-outcome",
+      "revision_id": "sha256:eb5771348c82f17fb8d294be962a82452d530b73d92d6ea75093ba52bdfb2b86",
+      "source_revision": "13866b2848fbcce9a1f1ef2d4b97051a65f7e626",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:assessment:wbsel-geometry-truncation-null%3Adiagnostic-ORB-11241",
+      "revision_id": "sha256:b80542c0c5a8b02966db7210e164a135c6b7572c726cadc4d8f555b99eef5b42",
+      "source_revision": "13866b2848fbcce9a1f1ef2d4b97051a65f7e626",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:assessment:wbsel-cap-truncation-isolation%3Adiagnostic-ORB-11241",
+      "revision_id": "sha256:fa636699da263ae161258ec067ae73d8270f92d9c141d92cec4d770f7ca1c82f",
+      "source_revision": "13866b2848fbcce9a1f1ef2d4b97051a65f7e626",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:assessment:wbsel-shifted-field-calibration%3Adiagnostic-ORB-11241",
+      "revision_id": "sha256:b22104146bea8930e76a9b2c99e8386a4f568e4300962207c80be9a81fb255b8",
+      "source_revision": "13866b2848fbcce9a1f1ef2d4b97051a65f7e626",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:assessment:wbsel-injected-effect-power%3Adiagnostic-ORB-11241",
+      "revision_id": "sha256:5dd636e8b151fa22d69a7de7d385a0a0192235e5ee7d6ca1e9b59f6c3bcdcfff",
+      "source_revision": "13866b2848fbcce9a1f1ef2d4b97051a65f7e626",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:assessment:wbsel-candidate-oracle-regression%3Adiagnostic-ORB-11241",
+      "revision_id": "sha256:cc0f5db7fa28e0e1eadd667d22865272171c5c015cde474d3230ea01b65ae06a",
+      "source_revision": "13866b2848fbcce9a1f1ef2d4b97051a65f7e626",
+      "status": "pending"
+    }
+  ]
+}

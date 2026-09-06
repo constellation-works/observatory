@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:principia:artifact:source%3Aorrery%3A28dd5c72bb670517b93b556f1d2483402c8e8655%3Alab%2Fsims%2Fwide-binary-selection-bias%2Fsim.json",
+  "aliases": [
+    "source:orrery:28dd5c72bb670517b93b556f1d2483402c8e8655:lab/sims/wide-binary-selection-bias/sim.json"
+  ],
+  "activity": "active",
+  "scope": "synthetic-calibration",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": null,
+    "blob_oid": null,
+    "sha256": "sha256:d9a5c8f63ac62acf061fe6ef3e2d89ee8fd3b5976c83ce2dabc45159cda19ec5",
+    "path": "upstream-snapshot/orrery/28dd5c72bb670517b93b556f1d2483402c8e8655/lab/sims/wide-binary-selection-bias/sim.json",
+    "selector": "$",
+    "historical": true,
+    "working_tree": true
+  },
+  "limitations": [
+    "Immutable archival source copy; upstream scientific ownership is unchanged."
+  ],
+  "missingness": [
+    "owner-ingestion-git-pin",
+    "upstream-canonical-record",
+    "git-revision"
+  ],
+  "legacy": {
+    "source_pin": {
+      "repository": "orrery",
+      "git_revision": "28dd5c72bb670517b93b556f1d2483402c8e8655",
+      "path": "lab/sims/wide-binary-selection-bias/sim.json",
+      "blob_oid": "b295015be42f93f5cbd5e59f8e181035a5efce52",
+      "sha256": "sha256:d9a5c8f63ac62acf061fe6ef3e2d89ee8fd3b5976c83ce2dabc45159cda19ec5",
+      "bytes": 1473,
+      "commit_metadata": "28dd5c72bb670517b93b556f1d2483402c8e8655\n2026-09-05T04:14:50+00:00\n2026-09-05T04:14:50+00:00\nfeat: Measure wide-binary selection bias with preregistered injection-r… [ORB-11222]\n"
+    },
+    "text": "{\n  \"slug\": \"wide-binary-selection-bias\",\n  \"title\": \"Wide-binary selection-bias injection/recovery control\",\n  \"kind\": \"py\",\n  \"entry\": \"main.py\",\n  \"status\": \"active\",\n  \"created\": \"2026-09-05\",\n  \"topics\": [\"wide-binaries\", \"selection-bias\", \"injection-recovery\", \"synthetic-control\", \"candidate-oracle\", \"chance-alignment\"],\n  \"family\": \"wide-binary-selection-methodology\",\n  \"summary\": \"A preregistered 12-arm Newtonian injection/recovery matrix directly tests Astrolabe's repaired spherical selector, scaled-velocity statistic, cap ladder, sky rotations, shifted-field calibration, and known-effect power without making a nature-level claim.\",\n  \"provenance\": {\n    \"orbit_tasks\": [\"ORB-11217\", \"ORB-11221\", \"ORB-11222\"],\n    \"orrery_base_revision\": \"73c9bd53e963e44bb365992c1df87a1077cc996f\",\n    \"astrolabe\": {\n      \"revision\": \"90f5b58890da36c44286a4edbde7eead879410a8\",\n      \"version\": \"0.1.0\",\n      \"apparatus\": \"src/astrolabe/analysis/wide_binaries.py\",\n      \"apparatus_sha256\": \"6e39198e6babf452ec94f34ccd1eec49e3ca885964f4d6742937b33b5f9269f1\"\n    },\n    \"principia\": {\n      \"revision\": \"c04f2ed1ae91d6c126bc60863b5e48f46abe4576\",\n      \"protocol\": \"studies/wide-binary-selection-bias-preregistration.md\",\n      \"protocol_sha256\": \"50fc37ac41bdbdc0e14ae3c079de3d8ed582d0fb4bf2e740270dc0fd5dfb9443\",\n      \"gate_id\": \"wide-binary-selection-bias-control\",\n      \"gate_sha256\": \"88609aed585cdbbd18586d5dcbeaf59f691965bbce2536152eabdb1bd51d7a89\"\n    }\n  }\n}\n"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "source",
+    "availability": "available",
+    "snapshot_digest": "sha256:d9a5c8f63ac62acf061fe6ef3e2d89ee8fd3b5976c83ce2dabc45159cda19ec5",
+    "locator": null,
+    "media_type": "application/json"
+  },
+  "revision_id": "sha256:4f0628e1fcf79b27aab84c881bbeacdb1882b6ffb260b71d0a917d59456ba73a"
+}

@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:principia:artifact:source%3Aorrery%3A28dd5c72bb670517b93b556f1d2483402c8e8655%3Alab%2Fsims%2Fwide-binary-selection-bias%2FREADME.md",
+  "aliases": [
+    "source:orrery:28dd5c72bb670517b93b556f1d2483402c8e8655:lab/sims/wide-binary-selection-bias/README.md"
+  ],
+  "activity": "active",
+  "scope": "synthetic-calibration",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": null,
+    "blob_oid": null,
+    "sha256": "sha256:f8a13f58ca8a38fb91fe159c2aa4a9527893b90cc366b56a678c89b7cc6c981f",
+    "path": "upstream-snapshot/orrery/28dd5c72bb670517b93b556f1d2483402c8e8655/lab/sims/wide-binary-selection-bias/README.md",
+    "selector": "$",
+    "historical": true,
+    "working_tree": true
+  },
+  "limitations": [
+    "Immutable archival source copy; upstream scientific ownership is unchanged."
+  ],
+  "missingness": [
+    "owner-ingestion-git-pin",
+    "upstream-canonical-record",
+    "git-revision"
+  ],
+  "legacy": {
+    "source_pin": {
+      "repository": "orrery",
+      "git_revision": "28dd5c72bb670517b93b556f1d2483402c8e8655",
+      "path": "lab/sims/wide-binary-selection-bias/README.md",
+      "blob_oid": "5e277a11b9ab717b3cafba8441dd26db1a065a74",
+      "sha256": "sha256:f8a13f58ca8a38fb91fe159c2aa4a9527893b90cc366b56a678c89b7cc6c981f",
+      "bytes": 1752,
+      "commit_metadata": "28dd5c72bb670517b93b556f1d2483402c8e8655\n2026-09-05T04:14:50+00:00\n2026-09-05T04:14:50+00:00\nfeat: Measure wide-binary selection bias with preregistered injection-r… [ORB-11222]\n"
+    },
+    "text": "# Wide-binary selection-bias injection/recovery control\n\nThis offline fixture executes Principia's frozen ORB-11221 protocol against the\nactual Astrolabe ORB-11217 implementation. It imports Astrolabe's repaired\nspherical selector and its binned scaled-velocity, shifted-field, comparator,\nand sensitivity functions; the independent Astropy candidate oracle is used\nonly as a regression control. The population is Newtonian by construction.\n\nThe committed `assets/results.json` contains one row per populated\nrun/seed/acceleration bin plus known-label recovery, chance-rate, candidate\noracle, uncertainty, cap, and power evidence. `RUN-2026-09-05.md` gives the\nreadable verdict. Exploratory sensitivity rows are excluded from the frozen\nprimary decision. Nothing here is an observational or nature-level claim.\n\nRun from clean sibling checkouts:\n\n```sh\nPYTHONDONTWRITEBYTECODE=1 UV_CACHE_DIR=/tmp/orbit-uv-cache-11222 \\\n  uv run --with ../astrolabe lab/sims/wide-binary-selection-bias/main.py \\\n  --astrolabe-root ../astrolabe --principia-root ../principia\n```\n\nThe script refuses checkouts that do not contain the merged prerequisite\ncommits or whose apparatus, protocol, or gate hashes differ from frozen inputs.\nUse `--self-test` for a focused apparatus check or `--profile pilot --output\n/tmp/wbsel-pilot.json` for the six-realization smoke matrix.\n\nThe nonuniform quality and density gradients are preregistered stress shapes,\nnot measured Gaia completeness laws. A failed control is reported, never tuned\naway.\n\nThe protocol prose declares 47 realizations, but the seeds in its 12 frozen\nmatrix rows sum to 44. The fixture executes those 44 enumerated realizations\nexactly and records the discrepancy; it does not invent three unregistered\nruns.\n"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "source",
+    "availability": "available",
+    "snapshot_digest": "sha256:f8a13f58ca8a38fb91fe159c2aa4a9527893b90cc366b56a678c89b7cc6c981f",
+    "locator": null,
+    "media_type": "text/plain"
+  },
+  "revision_id": "sha256:de49a81c56318aed67ac11a3a8121ca4d2f0d5d29506dced670b1be815780a76"
+}

@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "kind": "claim",
+  "id": "urn:research:principia:claim:wbsel-cap-truncation-isolation",
+  "aliases": [
+    "wbsel-cap-truncation-isolation"
+  ],
+  "activity": "active",
+  "scope": "synthetic-calibration",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "13866b2848fbcce9a1f1ef2d4b97051a65f7e626",
+    "blob_oid": "d349179f3b08155105b5dda896541c56bf94878a",
+    "sha256": "sha256:2c01eac561be3f15e21fae5168f617c0552f6306bd33efc40283ad494b8e8d59",
+    "path": "theory/wide-binary-selection-methodology/claims.json",
+    "selector": "/claims/1",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Historical synthetic/model calibration only; no new scientific adjudication or nature-level inference."
+  ],
+  "missingness": [],
+  "legacy": {
+    "id": "wbsel-cap-truncation-isolation",
+    "family": "wide-binary-selection-methodology",
+    "kind": "model-property",
+    "status": "mixed",
+    "claim": "The operational max_stars=8000 brightness cap is not itself the source of any geometry-coupled v-tilde(g_N) bias: the uncapped (R1-uncapped) and heavily-capped (R1-heavycap, max_stars=2000) arms of the same nonuniform-footprint population agree with the baseline-cap arm (R1-baseline) within the seed-to-seed bootstrap uncertainty in every populated bin.",
+    "kill": "R1-uncapped or R1-heavycap median B_i differs from R1-baseline by more than the combined seed-to-seed uncertainty in any populated bin.",
+    "evidence": "ORB-11222's cataloged frozen run at Orrery 28dd5c72 finds a heavy-cap deviation beyond combined uncertainty, but failed R0 prevents isolation of an apparatus effect. The unresolved result is retained without retuning; ORB-11241 owns diagnosis.",
+    "links": [
+      "../../studies/wide-binary-selection-bias-preregistration.md"
+    ],
+    "in_doc_ledger": true
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "claim",
+    "domain": "model",
+    "statement": "The operational max_stars=8000 brightness cap is not itself the source of any geometry-coupled v-tilde(g_N) bias: the uncapped (R1-uncapped) and heavily-capped (R1-heavycap, max_stars=2000) arms of the same nonuniform-footprint population agree with the baseline-cap arm (R1-baseline) within the seed-to-seed bootstrap uncertainty in every populated bin."
+  },
+  "revision_id": "sha256:3d205cb5bf4882084a7b7b7ecb8a2781ef468ccb1b16ae6a8070a2f50b6c15d9"
+}

@@ -25,6 +25,13 @@ for a phenomenology card.
 Canonical files: `theory/<doc>/claims.json`. Every `## Evidence ledger` row in
 `theory/<doc>/evidence-ledger.md` must appear there, byte-for-byte in `claim`.
 
+The single migrated exception is `wide-binary-selection-methodology`:
+[its immutable records](research/wide-binary/README.md) own the pilot, and its
+original theory files, gate and protocol study are checked compatibility views.
+The checker enforces their exact projection as well as every existing rule below.
+Append a new owner record revision for future changes; do not edit those views
+independently. No other family's authority changes.
+
 | kind | what it is |
 |---|---|
 | `postulate` | we put this in. Not a discovery. Needs `named`, `expires`, `kill`. Cannot be `supported` (use `model-property` for lattice theorems of a postulate). |

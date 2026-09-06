@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:principia:artifact:source%3Aorrery%3A2e097e606bc751ba1a8b29ebdc5aab6bbd961c43%3Alab%2Fsims%2Fwide-binary-control-diagnosis%2FREADME.md",
+  "aliases": [
+    "source:orrery:2e097e606bc751ba1a8b29ebdc5aab6bbd961c43:lab/sims/wide-binary-control-diagnosis/README.md"
+  ],
+  "activity": "active",
+  "scope": "synthetic-calibration",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": null,
+    "blob_oid": null,
+    "sha256": "sha256:afe5d680469673f61e7f526ac13819c9521807252ffdcf32ddd078addc1a6163",
+    "path": "upstream-snapshot/orrery/2e097e606bc751ba1a8b29ebdc5aab6bbd961c43/lab/sims/wide-binary-control-diagnosis/README.md",
+    "selector": "$",
+    "historical": true,
+    "working_tree": true
+  },
+  "limitations": [
+    "Immutable archival source copy; upstream scientific ownership is unchanged."
+  ],
+  "missingness": [
+    "owner-ingestion-git-pin",
+    "upstream-canonical-record",
+    "git-revision"
+  ],
+  "legacy": {
+    "source_pin": {
+      "repository": "orrery",
+      "git_revision": "2e097e606bc751ba1a8b29ebdc5aab6bbd961c43",
+      "path": "lab/sims/wide-binary-control-diagnosis/README.md",
+      "blob_oid": "adab7379242baae928b0f77a80a7920f7e823331",
+      "sha256": "sha256:afe5d680469673f61e7f526ac13819c9521807252ffdcf32ddd078addc1a6163",
+      "bytes": 3830,
+      "commit_metadata": "2e097e606bc751ba1a8b29ebdc5aab6bbd961c43\n2026-09-05T06:56:59+00:00\n2026-09-05T06:56:59+00:00\nchore: Repair unresolved wide-binary selection-bias calibration controls [ORB-11241]\n"
+    },
+    "text": "# Wide-binary control-failure diagnosis\n\nORB-11222 ran Principia's frozen ORB-11221 matrix against Astrolabe's ORB-11217\nselector in the sibling sim [`wide-binary-selection-bias`](../wide-binary-selection-bias/)\nand returned `unresolved`: R0 sanity, cap isolation, R3 shifted-field\ncalibration and R4 power all failed, while the independent candidate oracle\npassed all 44 enumerated realizations. This sim asks one question per failed\ncontrol — **is the failure a defect of the synthetic fixture and its decision\nlayer, or a faithful limitation of the apparatus and the method?**\n\nIt does not retune anything. The frozen thresholds, seed matrix, shift ladder\nand run rows are read from the ORB-11221 git blob and left as they are; the\nORB-11222 fixture and its `assets/results.json` are pinned by SHA-256 and\nreanalysed rather than edited. That sim stays the frozen record of its run.\nNo sibling repository is written. This is apparatus diagnosis only: no\nobservational claim, no claim about gravity.\n\n## What it does\n\nTwo kinds of evidence, kept separate in the output:\n\n- **Reanalysis** of ORB-11222's committed per-seed evidence (D2, D4, and the\n  committed half of D3 and D5). No rerun needed; the numbers are the ones the\n  frozen run already published.\n- **Live probes** (D1, and the live half of D3 and D5) that import the frozen\n  fixture's own `generate()` and call the pinned Astrolabe functions, so the\n  populations are identical to the frozen run by construction. Probe ladders\n  are diagnostic instruments — they are never compared to a frozen threshold\n  and never enter the frozen verdict.\n\n| | question |\n|---|---|\n| D1 | what do the frozen gates do at n=3–5 seeds when there is genuinely nothing to detect? |\n| D2 | how big is the zero-injection B_i floor, and what is it made of? |\n| D3 | was the shifted-field estimator fed the contamination the protocol specified? |\n| D4 | did the apparatus fail to recover the injection, or did the gate? |\n| D5 | is the heavy-cap excursion the documented cap behaving as documented? |\n\n`assets/results.json` carries the machine-readable evidence and a per-control\nclassification (`fixture-defect`, `protocol-arithmetic-defect`,\n`faithful-apparatus-limitation`, `undetermined`). `RUN-2026-09-05.md` is the\nreadable verdict with exact revisions and hashes.\n\n## Running it\n\n```sh\nPYTHONDONTWRITEBYTECODE=1 UV_CACHE_DIR=/tmp/orbit-uv-cache-11241 \\\n  uv run --with ../astrolabe lab/sims/wide-binary-control-diagnosis/main.py \\\n  --astrolabe-root ../astrolabe --principia-root ../principia\n```\n\n`--self-test` runs a focused check; `--profile pilot --output /tmp/wbdiag.json`\nruns the short matrix.\n\nThe script refuses checkouts whose apparatus, frozen protocol blob, frozen gate\nblob, ORB-11222 fixture or ORB-11222 evidence hashes differ from the pins.\n\n## A note on pinning\n\nThe ORB-11222 fixture pins the protocol and gate by *worktree file* hash. That\nsim no longer runs against Principia's worktree: ORB-11234 appended a dated\noutcome section to both files, so its `protocol_exact` and `gate_exact` checks\nnow refuse. This sim pins the same frozen terms by **git blob** at the frozen\nORB-11221 commit instead, so the diagnosis stays exactly reproducible without\nasking Principia to revert prose. The frozen thresholds, seeds and matrix rows\nare byte-identical across that revision; only narrative was added.\n\n## Ownership\n\nPrincipia owns whether the `wide-binary-selection-bias-control` gate's decision\nlayer should be revised — this repository does not amend a frozen protocol from\nthe outside. The one open question this diagnosis raises about Astrolabe's\nshifted-field estimator calibration is routed to Astrolabe's own Orbit task and\nis recorded as reproducible in magnitude but not diagnosed to a mechanism here.\nA failed control is reported, never tuned away.\n"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "source",
+    "availability": "available",
+    "snapshot_digest": "sha256:afe5d680469673f61e7f526ac13819c9521807252ffdcf32ddd078addc1a6163",
+    "locator": null,
+    "media_type": "text/plain"
+  },
+  "revision_id": "sha256:f628e448c68cc1b3555689659c079ad58f14298e447c1e077f6c527e8fd7960f"
+}

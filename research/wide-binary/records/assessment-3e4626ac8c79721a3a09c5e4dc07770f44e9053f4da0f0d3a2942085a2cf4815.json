@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "kind": "assessment",
+  "id": "urn:research:principia:assessment:wbsel-injected-effect-power%3Afreeze",
+  "aliases": [
+    "wbsel-injected-effect-power:freeze"
+  ],
+  "activity": "active",
+  "scope": "synthetic-calibration",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "c04f2ed1ae91d6c126bc60863b5e48f46abe4576",
+    "blob_oid": "b2c91ed074ed6042133cd945180985b3550156d8",
+    "sha256": "sha256:58a4d01fa8c9fee5b97d8cbfb6fee1fe57adf6aa44fb468e9b19680cc5d57bbb",
+    "path": "theory/wide-binary-selection-methodology/claims.json",
+    "selector": "/claims/3",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Historical synthetic/model calibration only; no new scientific adjudication or nature-level inference."
+  ],
+  "missingness": [],
+  "legacy": {
+    "id": "wbsel-injected-effect-power",
+    "family": "wide-binary-selection-methodology",
+    "kind": "model-property",
+    "status": "untested",
+    "claim": "At the R1 baseline sample size and cap, the predeclared primary bias statistic B_i detects an injected acceleration-dependent v-tilde offset of amplitude 0.05 or 0.10 (restricted to the two lowest g_N bins) with power >= 80% across the seed ladder, establishing the protocol's minimum-detectable-effect floor at or below the literature-contested anomaly scale.",
+    "kill": "Power below 80% at injected amplitude 0.10 (the larger arm) — the protocol's decision rule cannot reliably detect an effect at the scale of the literature disagreement, so a clean R1 null would not be informative.",
+    "links": [
+      "../../studies/wide-binary-selection-bias-preregistration.md"
+    ],
+    "in_doc_ledger": true
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "claim": {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:wbsel-injected-effect-power",
+      "revision_id": "sha256:3e712cdc7796c3aa552e3d78a8890309d29445b944e5de8cbfd01038eb782d37",
+      "source_revision": "c04f2ed1ae91d6c126bc60863b5e48f46abe4576",
+      "status": "pending"
+    },
+    "verdict": "untested",
+    "legacy_verdict": "untested",
+    "inference": "historical",
+    "basis": "legacy-report",
+    "controls": "not-run",
+    "rationale": "Untested in the original ORB-11221 registry.",
+    "evidence": []
+  },
+  "revision_id": "sha256:3e4626ac8c79721a3a09c5e4dc07770f44e9053f4da0f0d3a2942085a2cf4815"
+}

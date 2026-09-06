@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:principia:artifact:source%3Aprincipia%3Ac04f2ed1ae91d6c126bc60863b5e48f46abe4576%3Agates%2Fwide-binary-selection-bias-control.json",
+  "aliases": [
+    "source:principia:c04f2ed1ae91d6c126bc60863b5e48f46abe4576:gates/wide-binary-selection-bias-control.json"
+  ],
+  "activity": "active",
+  "scope": "synthetic-calibration",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "c04f2ed1ae91d6c126bc60863b5e48f46abe4576",
+    "blob_oid": "351510c7f05af85a3c3c922ce5532cd701234636",
+    "sha256": "sha256:88609aed585cdbbd18586d5dcbeaf59f691965bbce2536152eabdb1bd51d7a89",
+    "path": "gates/wide-binary-selection-bias-control.json",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Immutable archival source copy; upstream scientific ownership is unchanged."
+  ],
+  "missingness": [],
+  "legacy": {
+    "source_pin": {
+      "repository": "principia",
+      "git_revision": "c04f2ed1ae91d6c126bc60863b5e48f46abe4576",
+      "path": "gates/wide-binary-selection-bias-control.json",
+      "blob_oid": "351510c7f05af85a3c3c922ce5532cd701234636",
+      "sha256": "sha256:88609aed585cdbbd18586d5dcbeaf59f691965bbce2536152eabdb1bd51d7a89",
+      "bytes": 3186,
+      "commit_metadata": "c04f2ed1ae91d6c126bc60863b5e48f46abe4576\n2026-09-05T03:48:46+00:00\n2026-09-05T03:48:46+00:00\nfeat: Preregister a wide-binary selection-bias hypothesis and falsifica… [ORB-11221]\n"
+    },
+    "text": "{\n  \"id\": \"wide-binary-selection-bias-control\",\n  \"doc\": \"wide-binary-selection-methodology\",\n  \"family\": \"wide-binary-selection-methodology\",\n  \"kind\": \"control\",\n  \"owed_object\": \"Whether Astrolabe's predeclared wide-binary selection pipeline (sky geometry, brightness truncation, escape-speed PM gate, shifted-field chance-alignment estimator) is calibrated: run on a purely Newtonian synthetic catalog with a realistic nonuniform sky footprint and zero injected acceleration-dependent physics, does it return a bias statistic consistent with zero in every g_N bin, does its brightness cap contribute independently, does its shifted-field estimator recover a known injected contamination fraction without an assumed sign, and can the same protocol detect a known injected effect at the literature-contested scale (power)?\",\n  \"inherited_postulates\": [],\n  \"new_postulates\": [],\n  \"control\": \"The coupling-off analog here is the zero-injected-effect arms: R0 (isotropic sky, uniform quality, no cap, no contamination) is the fully-null negative control; R1-baseline (nonuniform footprint, operational max_stars=8000 cap, still zero injected effect) is the primary test arm the geometry/truncation hypothesis lives or dies on. Both must be evaluated before any injected-contamination (R3) or injected-effect (R4) arm is interpretable, exactly as a coupling-off run must pass before a coupling-on run is read.\",\n  \"kill\": \"FIRES if: (a) R1-baseline's per-bin bias statistic |B_i| >= 0.04 in median v-tilde reproducibly across the seed ladder in any populated bin (wbsel-geometry-truncation-null); (b) the cap arms (R1-uncapped, R1-heavycap) disagree with R1-baseline beyond seed-to-seed uncertainty, implicating the max_stars truncation itself (wbsel-cap-truncation-isolation); (c) the shifted-field estimator R_chance falls outside its predeclared tolerance band on any injected-contamination or field-placement arm (wbsel-shifted-field-calibration); or (d) the independent great-circle oracle disagrees with Astrolabe's candidate/pair set on any footprint, which reopens a completeness question against Astrolabe directly rather than this family (wbsel-candidate-oracle-regression). Passing all four together is a null result for this family, not evidence against the literature's contested low-acceleration anomaly at galactic scale, which this protocol does not address.\",\n  \"forbidden_reopens\": [],\n  \"comparator\": \"Astrolabe's own forward-modeled Newtonian Monte Carlo mock (newtonian_mock_pairs + binned_vtilde) — the operational comparator ORB-10753's real analysis already uses — plus each synthetic realization's own no-selection truth catalog, which isolates selection-induced distortion from comparator mismatch. No principia theory (gravity-as-scarcity, two-substance-vortex-vacuum, or any other family) is invoked as a comparator; this gate tests apparatus calibration against established Newtonian two-body dynamics only, and is not a phenomenology card.\",\n  \"claims\": [\n    \"wbsel-geometry-truncation-null\",\n    \"wbsel-cap-truncation-isolation\",\n    \"wbsel-shifted-field-calibration\",\n    \"wbsel-injected-effect-power\",\n    \"wbsel-candidate-oracle-regression\"\n  ]\n}\n"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "source",
+    "availability": "available",
+    "snapshot_digest": "sha256:88609aed585cdbbd18586d5dcbeaf59f691965bbce2536152eabdb1bd51d7a89",
+    "locator": null,
+    "media_type": "application/json"
+  },
+  "revision_id": "sha256:6afd3fd29f30041b1b4c2cfd647fdc2cc720eabe061f84e46056d76deb8dc2f9"
+}

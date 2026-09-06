@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:principia:artifact:source%3Aorrery%3A2e097e606bc751ba1a8b29ebdc5aab6bbd961c43%3Alab%2Fsims%2Fwide-binary-control-diagnosis%2Fsim.json",
+  "aliases": [
+    "source:orrery:2e097e606bc751ba1a8b29ebdc5aab6bbd961c43:lab/sims/wide-binary-control-diagnosis/sim.json"
+  ],
+  "activity": "active",
+  "scope": "synthetic-calibration",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": null,
+    "blob_oid": null,
+    "sha256": "sha256:199b71846af45dc811c84aa22f49c61e43ae896a51dee86fc92b095ac39cf852",
+    "path": "upstream-snapshot/orrery/2e097e606bc751ba1a8b29ebdc5aab6bbd961c43/lab/sims/wide-binary-control-diagnosis/sim.json",
+    "selector": "$",
+    "historical": true,
+    "working_tree": true
+  },
+  "limitations": [
+    "Immutable archival source copy; upstream scientific ownership is unchanged."
+  ],
+  "missingness": [
+    "owner-ingestion-git-pin",
+    "upstream-canonical-record",
+    "git-revision"
+  ],
+  "legacy": {
+    "source_pin": {
+      "repository": "orrery",
+      "git_revision": "2e097e606bc751ba1a8b29ebdc5aab6bbd961c43",
+      "path": "lab/sims/wide-binary-control-diagnosis/sim.json",
+      "blob_oid": "af114f363b8b9f92604663677c58ceec2d9fc314",
+      "sha256": "sha256:199b71846af45dc811c84aa22f49c61e43ae896a51dee86fc92b095ac39cf852",
+      "bytes": 1719,
+      "commit_metadata": "2e097e606bc751ba1a8b29ebdc5aab6bbd961c43\n2026-09-05T06:56:59+00:00\n2026-09-05T06:56:59+00:00\nchore: Repair unresolved wide-binary selection-bias calibration controls [ORB-11241]\n"
+    },
+    "text": "{\n  \"slug\": \"wide-binary-control-diagnosis\",\n  \"title\": \"Wide-binary control-failure diagnosis\",\n  \"kind\": \"py\",\n  \"entry\": \"main.py\",\n  \"status\": \"active\",\n  \"created\": \"2026-09-05\",\n  \"topics\": [\"wide-binaries\", \"selection-bias\", \"injection-recovery\", \"synthetic-control\", \"estimator-calibration\", \"small-sample-statistics\", \"diagnosis\"],\n  \"family\": \"wide-binary-selection-methodology\",\n  \"summary\": \"Diagnoses the four controls that failed in ORB-11222 without retuning the frozen ORB-11221 protocol: reanalyses that run's hash-pinned evidence and adds live probes on its own generator to separate fixture and decision-layer defects from faithful limitations of the Astrolabe apparatus.\",\n  \"provenance\": {\n    \"orbit_tasks\": [\"ORB-11217\", \"ORB-11221\", \"ORB-11222\", \"ORB-11234\", \"ORB-11241\"],\n    \"diagnoses\": \"wide-binary-selection-bias\",\n    \"orrery_base_revision\": \"28dd5c72bb670517b93b556f1d2483402c8e8655\",\n    \"astrolabe\": {\n      \"revision\": \"90f5b58890da36c44286a4edbde7eead879410a8\",\n      \"version\": \"0.1.0\",\n      \"apparatus\": \"src/astrolabe/analysis/wide_binaries.py\",\n      \"apparatus_sha256\": \"6e39198e6babf452ec94f34ccd1eec49e3ca885964f4d6742937b33b5f9269f1\"\n    },\n    \"principia\": {\n      \"frozen_revision\": \"c04f2ed1ae91d6c126bc60863b5e48f46abe4576\",\n      \"protocol\": \"studies/wide-binary-selection-bias-preregistration.md\",\n      \"protocol_sha256\": \"50fc37ac41bdbdc0e14ae3c079de3d8ed582d0fb4bf2e740270dc0fd5dfb9443\",\n      \"gate_id\": \"wide-binary-selection-bias-control\",\n      \"gate_sha256\": \"88609aed585cdbbd18586d5dcbeaf59f691965bbce2536152eabdb1bd51d7a89\",\n      \"pin_method\": \"git blob at the frozen ORB-11221 commit; Principia HEAD has since revised the prose under ORB-11234\"\n    }\n  }\n}\n"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "source",
+    "availability": "available",
+    "snapshot_digest": "sha256:199b71846af45dc811c84aa22f49c61e43ae896a51dee86fc92b095ac39cf852",
+    "locator": null,
+    "media_type": "application/json"
+  },
+  "revision_id": "sha256:e638a3d8079ea02f2d3e202bd4a624eeb8e044e6bed6600e7d558b891d717b6a"
+}
