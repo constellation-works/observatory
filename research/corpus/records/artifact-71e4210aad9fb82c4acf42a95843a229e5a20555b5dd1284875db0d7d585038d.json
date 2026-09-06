@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:principia:artifact:source%3Aorrery%3Aa1c430db54d585048ec85c4e7c47141db634f398%3Alab%2Fsims%2Fpingpong-bell%2Fsim.json",
+  "aliases": [
+    "source:orrery:a1c430db54d585048ec85c4e7c47141db634f398:lab/sims/pingpong-bell/sim.json"
+  ],
+  "activity": "active",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": null,
+    "blob_oid": null,
+    "sha256": "sha256:f6b32f02e01a2cb71a972645a9242b1b177cebf5e1f2c41c047f0969a1e104f1",
+    "path": "upstream-snapshot/orrery/a1c430db54d585048ec85c4e7c47141db634f398/lab/sims/pingpong-bell/sim.json",
+    "selector": "$",
+    "historical": true,
+    "working_tree": true
+  },
+  "limitations": [
+    "Immutable archival source copy; upstream scientific ownership is unchanged."
+  ],
+  "missingness": [
+    "git-revision",
+    "owner-ingestion-git-pin",
+    "scope",
+    "upstream-canonical-record"
+  ],
+  "legacy": {
+    "source_pin": {
+      "repository": "orrery",
+      "git_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "path": "lab/sims/pingpong-bell/sim.json",
+      "blob_oid": "a6e89006c4309ac6a76ffe53076621c1056a7528",
+      "sha256": "sha256:f6b32f02e01a2cb71a972645a9242b1b177cebf5e1f2c41c047f0969a1e104f1",
+      "bytes": 595,
+      "commit_metadata": "a1c430db54d585048ec85c4e7c47141db634f398\n2026-09-06T02:28:14+00:00\n2026-09-06T02:28:14+00:00\nfeat: Preserve the original electron animation's continuous fold in a c… [ORB-11374]\n"
+    },
+    "text": "{\n  \"slug\": \"pingpong-bell\",\n  \"title\": \"Ping-pong Bell tally analysis\",\n  \"kind\": \"py\",\n  \"entry\": \"analyze_bell.py\",\n  \"status\": \"imported\",\n  \"created\": \"2026-07-06\",\n  \"topics\": [\n    \"quantum\",\n    \"bell-inequality\",\n    \"tabletop-experiment\"\n  ],\n  \"family\": \"bell-tests\",\n  \"summary\": \"Analysis pipeline for the tabletop ping-pong Bell experiment: reads tally CSVs, computes correlations and the CHSH statistic. Sample data included.\",\n  \"provenance\": {\n    \"almanac\": \"20-projects/pingpong-bell/protocol-and-analysis.md\",\n    \"imported_from\": \"almanac/_attachments/pingpong-bell/\"\n  }\n}\n",
+    "commit_object": "tree 8d851030602405b11b7166108b09cf9cd5664329\nparent 148b668391f575466282eaa81aab0dc943846a87\nauthor orbit[gpt-6-astra] <agent@orbit.invalid> 1788661694 +0000\ncommitter orbit <orbit@orbit.local> 1788661694 +0000\n\nfeat: Preserve the original electron animation's continuous fold in a c… [ORB-11374]\n\nPreserve the original electron animation's continuous fold in a computed-field view\n\nPlanned-By: codex\n"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "source",
+    "availability": "available",
+    "snapshot_digest": "sha256:f6b32f02e01a2cb71a972645a9242b1b177cebf5e1f2c41c047f0969a1e104f1",
+    "locator": null,
+    "media_type": "application/json"
+  },
+  "revision_id": "sha256:71e4210aad9fb82c4acf42a95843a229e5a20555b5dd1284875db0d7d585038d"
+}

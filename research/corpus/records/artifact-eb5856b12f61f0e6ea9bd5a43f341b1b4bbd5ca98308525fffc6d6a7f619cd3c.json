@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Atheory%2Fshear-sourced-consumption%2Fderivation.md",
+  "aliases": [
+    "source:principia:4e3b02c59b694d85016915177ef1ae157895ed7b:theory/shear-sourced-consumption/derivation.md"
+  ],
+  "activity": "active",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "26957a72efe4015be836425f78dd070631848ec9",
+    "sha256": "sha256:48bf8bd12c3c7e833d04c55e57f1c4e8a70861e82053ce52e92ec6aa9a34de40",
+    "path": "theory/shear-sourced-consumption/derivation.md",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Immutable archival source copy; upstream scientific ownership is unchanged."
+  ],
+  "missingness": [
+    "scope"
+  ],
+  "legacy": {
+    "source_pin": {
+      "repository": "principia",
+      "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "path": "theory/shear-sourced-consumption/derivation.md",
+      "blob_oid": "26957a72efe4015be836425f78dd070631848ec9",
+      "sha256": "sha256:48bf8bd12c3c7e833d04c55e57f1c4e8a70861e82053ce52e92ec6aa9a34de40",
+      "bytes": 1585,
+      "commit_metadata": "4e3b02c59b694d85016915177ef1ae157895ed7b\n2026-09-06T02:49:35+00:00\n2026-09-06T02:49:35+00:00\nfeat: Migrate the wide-binary control pilot into versioned scientific r… [ORB-11378]\n"
+    },
+    "text": "## The derivation — uniqueness with free amplitude\n\nSteady state, uniform n (the incompressible fork of the debt), radial flow v_r(r):\n\n- Continuity: s = −n ∇·**v** = −n (e_rr + 2e_θθ).\n- The law: s = n (e_rr − e_θθ).\n\nEquating: e_rr − e_θθ = −e_rr − 2e_θθ ⟹ **e_θθ = −2 e_rr**, i.e. dv_r/dr = −v_r/2r, whose\ngeneral solution is\n\n**v_r = −A r^(−1/2)** for any A ≥ 0.\n\nNo power-law ansatz — this is the full solution of the ODE. Three properties, each of which\nkilled previous candidates and is delivered here:\n\n1. **The profile is unique** — v ∝ r^(−1/2) is the *only* steady radial flow the law\n   admits. This is the GP profile; with A = √(2GM) it gives σ = v²/2c² = GM/c²r, the 1/r\n   scarcity field, and Schwarzschild clock rates exactly, per the ORB-10159 analytic branch.\n2. **The amplitude is free.** A scale-free local law of the form s ∝ n v³ also reproduces\n   the r^(−3/2) sink, but fixes *one* amplitude for all masses (its coupling would have to\n   run as 1/GM) — no mass scaling. The shear law leaves A as an integration constant, so\n   different masses can carry different field strengths under one universal rule. This was\n   the structural obstruction to any local source law; the shear law dissolves it.\n3. **The sink comes out right by identity.** For the GP flow, e_rr = +v/2r (inner shells\n   fall faster — radial stretch) and e_θθ = −v/r (transverse squeeze), so\n   n(e_rr − e_θθ) = (3/2)nv/r — exactly the volumetric consumption continuity demands,\n   at coefficient one. Nothing is tuned.\n",
+    "commit_object": "tree 682cccb1cf19c89c2c5f4371c14ed2b384d2ae8c\nparent 13866b2848fbcce9a1f1ef2d4b97051a65f7e626\nauthor orbit[gpt-6-astra] <agent@orbit.invalid> 1788662975 +0000\ncommitter orbit <orbit@orbit.local> 1788662975 +0000\n\nfeat: Migrate the wide-binary control pilot into versioned scientific r… [ORB-11378]\n\nMigrate the wide-binary control pilot into versioned scientific records\n\nPlanned-By: codex\n"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "source",
+    "availability": "available",
+    "snapshot_digest": "sha256:48bf8bd12c3c7e833d04c55e57f1c4e8a70861e82053ce52e92ec6aa9a34de40",
+    "locator": null,
+    "media_type": "text/plain"
+  },
+  "revision_id": "sha256:eb5856b12f61f0e6ea9bd5a43f341b1b4bbd5ca98308525fffc6d6a7f619cd3c"
+}

@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "kind": "claim",
+  "id": "urn:research:principia:claim:two-substance-s2-yukawa-solar-g",
+  "aliases": [
+    "two-substance-s2-yukawa-solar-g"
+  ],
+  "activity": "active",
+  "scope": "derivation",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "94e76368a84e00ed742153d77b3d25dd5962c664",
+    "sha256": "sha256:c95d48cf673efa43d6d77005c73cadea42fac1ff00da556a7b7fd260df14f9a6",
+    "path": "theory/two-substance-vortex-vacuum/claims.json",
+    "selector": "/claims/17",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Exact historical verdict and stated assumptions only; migration makes no new scientific inference."
+  ],
+  "missingness": [],
+  "legacy": {
+    "id": "two-substance-s2-yukawa-solar-g",
+    "family": "two-substance-vortex-vacuum",
+    "kind": "derived",
+    "status": "supported",
+    "claim": "Branch A solar system: a kpc Yukawa is locally an exact G rescaling — the ORB-10097 Uranus tension dissolves on this branch",
+    "evidence": "**Computed (§A3):** fractional deviation from rescaled-G ≈ 3.3 × 10⁻¹⁶ at Uranus, ~10⁻⁷ of the multiplicative reading's near-floor signature; the discriminating observable is ORB-10097's own channel — a galactocentric-oriented Uranus residual present (multiplicative — since ORB-10157, conditioned on the fitted-boost identification; parent § superposition adjudication) vs absent (Yukawa)",
+    "links": [],
+    "in_doc_ledger": true
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "claim",
+    "statement": "Branch A solar system: a kpc Yukawa is locally an exact G rescaling — the ORB-10097 Uranus tension dissolves on this branch",
+    "domain": "model"
+  },
+  "revision_id": "sha256:b7cb599234c9594210cbb538e0d530e3580ef8c55740e0f39afd800ca25bd75a"
+}

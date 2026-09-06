@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Astudies%2Fscalar-gravity-ppn-constraints.md",
+  "aliases": [
+    "source:principia:4e3b02c59b694d85016915177ef1ae157895ed7b:studies/scalar-gravity-ppn-constraints.md"
+  ],
+  "activity": "active",
+  "scope": "literature",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "c75f899d3d6a592f9b2319f346c47dab9a8dad6c",
+    "sha256": "sha256:94341e8afacfac599a5c4d03abc9f30d186fd1455befe2ced7c9422c4b2ae208",
+    "path": "studies/scalar-gravity-ppn-constraints.md",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Immutable archival source copy; upstream scientific ownership is unchanged."
+  ],
+  "missingness": [],
+  "legacy": {
+    "source_pin": {
+      "repository": "principia",
+      "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "path": "studies/scalar-gravity-ppn-constraints.md",
+      "blob_oid": "c75f899d3d6a592f9b2319f346c47dab9a8dad6c",
+      "sha256": "sha256:94341e8afacfac599a5c4d03abc9f30d186fd1455befe2ced7c9422c4b2ae208",
+      "bytes": 7132,
+      "commit_metadata": "4e3b02c59b694d85016915177ef1ae157895ed7b\n2026-09-06T02:49:35+00:00\n2026-09-06T02:49:35+00:00\nfeat: Migrate the wide-binary control pilot into versioned scientific r… [ORB-11378]\n"
+    },
+    "text": "---\ntitle: \"Scalar gravity, the PPN photon sector, and the Cassini bound\"\nstatus: active\ncreated: 2026-07-12\nupdated: 2026-07-12\n---\n\n# Scalar gravity, the PPN photon sector, and the Cassini bound\n\nThe established-physics wall any scalar theory of gravity runs into: the photon sector. This\nnote carries the parametrized post-Newtonian (PPN) machinery, the measured values of γ, and\nthe lineage of scalar gravity from Nordström to the screened scalar-tensor theories — the\nconstraints the gravity-as-scarcity model is confronted with in\n[theory/gravity-as-scarcity](../theory/gravity-as-scarcity/) (ORB-10156).\n\n## The two weak-field potentials and γ\n\nThe static weak-field metric of *any* metric theory can be written (isotropic coordinates)\n\n> ds² = −(1 + 2Φ/c²) c²dt² + (1 − 2γΦ/c²) δᵢⱼ dxⁱdxʲ,  Φ = −GM/r\n\nTwo distinct potentials: Φ in g₀₀ (the \"time-time\" potential — clock rates, and the *entire*\ndriver of slow-motion massive-particle dynamics, ẍ = −∇Φ independent of γ) and the spatial\npotential γΦ in gᵢⱼ (the \"space-space\" potential — how much proper space a mass adds around\nitself). The PPN parameter **γ measures how much space curvature a unit rest mass produces**;\nGR predicts γ = 1 exactly. (Will 2014, *Living Reviews in Relativity* 17:4, \"The\nConfrontation between General Relativity and Experiment\", §3.2 — the standard PPN reference\nthroughout this note.)\n\nSlow massive particles never probe γ (their dynamics is Φ-only, suppressed by v²/c²).\n**Photons probe Φ and γΦ equally** — every light-sector observable carries the factor\n(1 + γ)/2:\n\n- **Light deflection** by a mass M at impact parameter b:\n  α = (1 + γ)/2 · 4GM/(c²b) — at the solar limb, (1 + γ)/2 × 1.75″.\n  The γ = 0 value, 2GM/(c²b) = 0.875″, is the historical \"Newtonian\"/Soldner half-deflection\n  (a corpuscle falling in the potential alone).\n- **Shapiro time delay** (radar echoes passing near the Sun run late; proposed as the \"fourth\n  test\" by Shapiro 1964, *Phys. Rev. Lett.* 13, 789): Δt = (1 + γ)/2 × the GR value,\n  logarithmically peaked at superior conjunction.\n\nA note on sign conventions used here and in the theory doc: with Φ = −GM/r < 0, weak-field GR\n(γ = 1) makes clocks near a mass tick *slow* by GM/c²r and puts *more* proper space near a\nmass — the radial proper distance between r₁ and r₂ exceeds r₂ − r₁ by ∫(GM/c²r)dr (the\nembedding-funnel excess). Both effects have the same magnitude and the photon sector needs\nboth, at that ratio, to give γ = 1.\n\n## Measured values of γ\n\n| Observable | Result | Source |\n|---|---|---|\n| 1919 eclipse deflection | 1.98″ (Sobral) and 1.61″ (Príncipe) — consistent with 1.75″, excluding 0 and the 0.875″ half-value | Dyson, Eddington & Davidson 1920, *Phil. Trans. R. Soc. A* 220, 291 |\n| VLBI deflection (radio, ~10⁵ quasar observations) | γ − 1 = (−0.8 ± 1.2) × 10⁻⁴ | Lambert & Le Poncin-Lafitte 2011, *Astron. & Astrophys.* 529, A70; summarized in Will 2014 §3.4.1 |\n| **Cassini Shapiro delay** (Doppler tracking through 2002 solar conjunction) | **γ − 1 = (2.1 ± 2.3) × 10⁻⁵** | Bertotti, Iess & Tortora 2003, *Nature* 425, 374 |\n\nThe Cassini bound is the binding one: any theory whose photon sector departs from γ = 1 at\nmore than a few × 10⁻⁵ is refuted. A theory predicting γ = 0 (half deflection, half delay) or\nno coupling at all (zero deflection, zero delay) is off by |γ − 1| ≥ 1 — four to five orders\nof magnitude outside the allowed band.\n\n## Scalar gravity: the canonical lineage and how it died\n\n- **Nordström 1913** (*Ann. Phys.* 42, 533) — the canonical Lorentz-invariant scalar theory\n  of gravity, the best pre-GR competitor. Einstein & Fokker 1914 (*Ann. Phys.* 44, 321)\n  showed it is equivalent to a **conformally flat** metric theory, g = φ²η. Conformal\n  rescalings preserve null geodesics, so light in Nordström's theory travels the straight\n  lines of flat space: **zero light deflection** (effectively γ = −1 in the deflection\n  factor). It also predicts a perihelion *retreat* at −1/6 the GR rate (about −7″/century\n  for Mercury; Deruelle 2011, *Gen. Rel. Grav.* 43, 3337). The 1919 eclipse measurement\n  killed it. The general lesson (Will 2014 §2): a pure scalar cannot feed the spatial metric\n  with the right sign and ratio; only a tensor field does.\n- **Scalar-tensor (Brans & Dicke 1961**, *Phys. Rev.* 124, 925**)** — gravity = tensor +\n  scalar with coupling ω; the scalar's share dilutes the spatial potential:\n  γ = (1 + ω)/(2 + ω). The Cassini bound forces **ω ≳ 40,000** (Will 2014 §3.4.2) — the\n  scalar's fraction of gravity is < ~2.5 × 10⁻⁵ in the solar system. Unscreened\n  scalar-tensor theories are cornered to be observationally indistinguishable from GR.\n- **Screened scalar-tensor** — the modern escape: keep an O(1) scalar at large\n  scales/low densities while hiding it locally, so γ → 1 where Cassini looks.\n  Two mechanism families:\n  - **Chameleon** (Khoury & Weltman 2004, *Phys. Rev. Lett.* 93, 171104; symmetron variant:\n    Hinterbichler & Khoury 2010, *Phys. Rev. Lett.* 104, 231301) — the scalar's effective\n    mass (or coupling) depends on the ambient matter density/potential; dense environments\n    give it a short range (\"thin shell\"), suppressing the scalar force locally.\n  - **Vainshtein** (Vainshtein 1972, *Phys. Lett. B* 39, 393) — derivative self-interactions\n    of the scalar dominate near sources, suppressing the scalar's gradient inside a large\n    \"Vainshtein radius\".\n- **Family-level constraints beyond PPN.** A pure scalar carries only a \"breathing\"\n  polarization, no transverse tensor modes — the GW170814 three-detector polarization\n  analysis strongly favors pure tensor over pure scalar or pure vector (Abbott et al. 2017,\n  *Phys. Rev. Lett.* 119, 141101). And the relativistic-MOND precedent TeVeS (Bekenstein\n  2004, *Phys. Rev. D* 70, 083509) — the existence proof that a scalar-driven galactic\n  modification *can* be dressed with a tensor sector to get light bending right — is itself\n  severely constrained by the GW170817/GRB 170817A speed bound |c_gw/c − 1| ≲ 10⁻¹⁵\n  (Abbott et al. 2017, *Astrophys. J. Lett.* 848, L13).\n\nOne more measured anchor used by the theory doc's time-flow correspondence: gravitational\nredshift between heights, z = gΔh/c² — clocks genuinely run slow deeper in a potential\n(Pound & Rebka 1960, *Phys. Rev. Lett.* 4, 337).\n\n## What this binds in our corpus\n\nAny theory in `theory/` whose weak-field content is a single scalar potential on flat space —\ngravity-as-scarcity as currently stated is one — inherits this wall: its photon sector is\neither absent (Nordström's fate, zero deflection), half-strength (γ = 0), or wrong-signed,\nand all of those sit ≥ 4 orders of magnitude outside the Cassini band. The only known viable\ncompletions are screened scalar-tensor structures with γ ≈ 1 locally. The confrontation and\nthe derived verdicts live in\n[theory/gravity-as-scarcity](../theory/gravity-as-scarcity/) (ORB-10156 section and ledger).\n",
+    "commit_object": "tree 682cccb1cf19c89c2c5f4371c14ed2b384d2ae8c\nparent 13866b2848fbcce9a1f1ef2d4b97051a65f7e626\nauthor orbit[gpt-6-astra] <agent@orbit.invalid> 1788662975 +0000\ncommitter orbit <orbit@orbit.local> 1788662975 +0000\n\nfeat: Migrate the wide-binary control pilot into versioned scientific r… [ORB-11378]\n\nMigrate the wide-binary control pilot into versioned scientific records\n\nPlanned-By: codex\n"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "source",
+    "availability": "available",
+    "snapshot_digest": "sha256:94341e8afacfac599a5c4d03abc9f30d186fd1455befe2ced7c9422c4b2ae208",
+    "locator": null,
+    "media_type": "text/plain"
+  },
+  "revision_id": "sha256:832d3770f8f223f36eae8f28c67147a29ccedf0e65246d32f4a7cb7893780489"
+}

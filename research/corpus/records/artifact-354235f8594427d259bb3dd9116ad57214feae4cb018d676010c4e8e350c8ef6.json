@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Atheory%2Ftwo-substance-vortex-vacuum%2Fkill-condition-a.md",
+  "aliases": [
+    "source:principia:4e3b02c59b694d85016915177ef1ae157895ed7b:theory/two-substance-vortex-vacuum/kill-condition-a.md"
+  ],
+  "activity": "active",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "f56dd393ae6f197e54ac2686c8cf5c4b1a66ef15",
+    "sha256": "sha256:02ab71f9f3a2e609f7079a415d2b597289a5fa4645e50dadb28d59b58ec53005",
+    "path": "theory/two-substance-vortex-vacuum/kill-condition-a.md",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Immutable archival source copy; upstream scientific ownership is unchanged."
+  ],
+  "missingness": [
+    "scope"
+  ],
+  "legacy": {
+    "source_pin": {
+      "repository": "principia",
+      "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "path": "theory/two-substance-vortex-vacuum/kill-condition-a.md",
+      "blob_oid": "f56dd393ae6f197e54ac2686c8cf5c4b1a66ef15",
+      "sha256": "sha256:02ab71f9f3a2e609f7079a415d2b597289a5fa4645e50dadb28d59b58ec53005",
+      "bytes": 3864,
+      "commit_metadata": "4e3b02c59b694d85016915177ef1ae157895ed7b\n2026-09-06T02:49:35+00:00\n2026-09-06T02:49:35+00:00\nfeat: Migrate the wide-binary control pilot into versioned scientific r… [ORB-11378]\n"
+    },
+    "text": "## Kill condition A — the equivalence principle, computed\n\n**The fork.** \"A moving electron is a moving clump of void — literally creating scarcity\"\nreads gravity as sourced by **void volume**: an inventory-like quantity, fixed per defect\nspecies, insensitive to how much energy the configuration stores. The alternative is that\ngravity is sourced by **substrate energy** (core + flow). These forks are exhaustive up to\nfine-tuning: a void volume that tracked energy universally — shrinking per joule of\nbinding at one fixed rate — would just *be* an energy bookkeeping in different units, i.e.\nthe second fork wearing the first's clothes.\n\n**The void-volume fork, against measurement.** If each nucleon contributes a\nspecies-fixed core void, a nucleus's gravitational charge goes as nucleon count A while\nits inertial mass goes as total energy: A·m̄_N *minus binding energy*. The two part\ncompany at the 10⁻³ level between real materials — binding energy per nucleon is\n≈ 8.72 MeV for ⁴⁸Ti vs ≈ 7.92 MeV for ¹⁹⁵Pt, a fractional inertial-mass difference of\nΔ(BE/A)/u ≈ **8.6 × 10⁻⁴** that the void inventory cannot see. Predicted Eötvös parameter\nbetween exactly the materials MICROSCOPE flew: η(Ti, Pt) ~ 9 × 10⁻⁴. Measured:\nη(Ti, Pt) = [−1.5 ± 2.3 (stat) ± 1.5 (syst)] × 10⁻¹⁵. **Refuted by roughly eleven orders\nof magnitude** — and by five orders against the 1922 Eötvös bound alone; the n–p mass\ndifference and the electron fraction open independent channels of the same size\n([studies/equivalence-principle-tests](../../studies/equivalence-principle-tests.md)). The\nQCD mass budget closes the last escape (a \"smarter\" per-species void): more than 90% of\nthe proton's own mass is field dynamics — quark kinetic energy, gluon field energy, trace\nanomaly — not constituent property (Yang et al. 2018; studies note). There is no\ninventory-shaped quantity that tracks mass; energy is not stored where counting can see\nit.\n\n**The energy fork, and its price.** If the gravitating charge is total substrate energy,\nthe equivalence principle is satisfied identically — inertia *is* excitation energy on\nthis ontology (the excitation reading of matter), so m_g = m_i by construction. But then\n\"scarcity of space\" reduces to \"energy density,\" which is the GR source term, and the\nliteral-void ontology is surrendered: the void core remains as EM/structural anatomy, but\ngravity no longer knows about it. **The verdict for the ontology, stated plainly: the\nvoid-as-gravitational-source reading is dead; what survives is void-as-anatomy plus\nenergy-as-source.**\n\n**What this does to the bridge.** The derivation this family owes the parent — moving\ndefects source the scarcity field — survives only in energy form: moving *energy*\n(defect cores and their flows) sources the scarcity flow. That is precisely the branch\ngravity-as-scarcity was already forced onto by its own clock sector (ORB-10159: σ =\n½v²/c², scarcity as the flow's kinetic energy, matter as excitations riding it). The two\nadjudications — the parent's clock ladder and this model's equivalence-principle fork —\nland on the *same* completion from independent directions, which is the discussion\nthread's \"universality blade\": anything in gravity that knows particle type, substance, or\ncomposition dies; only total energy survives as a source. Lattice-level check of which\nquantity actually controls a defect's far field: **ORB-10164 — returned underdetermined\nby nullity**: on a conserving lattice *no* configuration has a far field, so nothing\nselects the gravitating quantity; the fork is **mooted pending the source law**\n(§ lattice adjudications). The analytic verdict above is untouched — MICROSCOPE kills the\nvoid-volume fork and energy survives by construction regardless of what the lattice\ncannot yet express.\n",
+    "commit_object": "tree 682cccb1cf19c89c2c5f4371c14ed2b384d2ae8c\nparent 13866b2848fbcce9a1f1ef2d4b97051a65f7e626\nauthor orbit[gpt-6-astra] <agent@orbit.invalid> 1788662975 +0000\ncommitter orbit <orbit@orbit.local> 1788662975 +0000\n\nfeat: Migrate the wide-binary control pilot into versioned scientific r… [ORB-11378]\n\nMigrate the wide-binary control pilot into versioned scientific records\n\nPlanned-By: codex\n"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "source",
+    "availability": "available",
+    "snapshot_digest": "sha256:02ab71f9f3a2e609f7079a415d2b597289a5fa4645e50dadb28d59b58ec53005",
+    "locator": null,
+    "media_type": "text/plain"
+  },
+  "revision_id": "sha256:354235f8594427d259bb3dd9116ad57214feae4cb018d676010c4e8e350c8ef6"
+}

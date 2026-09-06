@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "kind": "assessment",
+  "id": "urn:research:principia:assessment:moving-source-large-n-alignment%3Alegacy-verdict",
+  "aliases": [
+    "moving-source-large-n-alignment:legacy-verdict"
+  ],
+  "activity": "unknown",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "f55e1dace027658053ccc8f5b740363237c0eda4",
+    "sha256": "sha256:34d8fd1300c47a5df5ea2300abe6ba3ac4e6c29d546f03686710d88e1297d681",
+    "path": "theory/moving-source-field-consistency/claims.json",
+    "selector": "/claims/7",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Exact historical verdict and stated assumptions only; migration makes no new scientific inference."
+  ],
+  "missingness": [
+    "exact-evidence-owner-references",
+    "independently-verified-controls",
+    "activity",
+    "scope"
+  ],
+  "legacy": {
+    "id": "moving-source-large-n-alignment",
+    "family": "retarded-scarcity-wake",
+    "kind": "nature",
+    "status": "untested",
+    "claim": "If \\(A_1=2\\times10^{-3}\\) and the foreground is independent zero-mean scatter, a large-\\(N\\) alignment statistic could measure it",
+    "evidence": "Moot: Branch C closed (ORB-11175). The surviving Branch C ceiling is \\(A_1\\lesssim10^{-3}\\) to \\(3\\times10^{-5}\\) ([Branch C](branch-c.md) § Walls), so the toy amplitude has no surviving model and the required sample scales to \\(\\sim10^{7}\\) galaxies at the tight reading. § Idealized detectability arithmetic stands as arithmetic; the catalog-error, correlated-structure, and null-correlation debts are no longer owed by this family",
+    "links": [
+      "branch-c.md"
+    ],
+    "in_doc_ledger": true,
+    "kill": "Moot: Branch C closed. Would need a reopened branch (daniel_reopen) supplying an amplitude above the ephemeris ceiling before any alignment statistic is owed."
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "claim": {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:moving-source-large-n-alignment",
+      "revision_id": "sha256:14f403f61299384bde935d3ffb5f643a8fb3cb7b209e05d339bf15bcff3353aa",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    "verdict": "untested",
+    "legacy_verdict": "untested",
+    "inference": "historical",
+    "basis": "legacy-report",
+    "controls": "unknown",
+    "rationale": "Moot: Branch C closed (ORB-11175). The surviving Branch C ceiling is \\(A_1\\lesssim10^{-3}\\) to \\(3\\times10^{-5}\\) ([Branch C](branch-c.md) § Walls), so the toy amplitude has no surviving model and the required sample scales to \\(\\sim10^{7}\\) galaxies at the tight reading. § Idealized detectability arithmetic stands as arithmetic; the catalog-error, correlated-structure, and null-correlation debts are no longer owed by this family",
+    "evidence": []
+  },
+  "revision_id": "sha256:6e2d5a8110d079eba60b2ee95ff9a16b9deccb9701131c1146d18fa199bfff44"
+}

@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "kind": "assessment",
+  "id": "urn:research:principia:assessment:scarcity-frame-dragging%3Alegacy-verdict",
+  "aliases": [
+    "scarcity-frame-dragging:legacy-verdict"
+  ],
+  "activity": "unknown",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "b5f58c64f4c6bf9d7d7f67c826f5d2dd7c9cb64f",
+    "sha256": "sha256:996b059ca4b45cee6dd42a503594508ebb8d6d13211ad1104df3754b116d5976",
+    "path": "theory/gravity-as-scarcity/claims.json",
+    "selector": "/claims/8",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Exact historical verdict and stated assumptions only; migration makes no new scientific inference."
+  ],
+  "missingness": [
+    "exact-evidence-owner-references",
+    "independently-verified-controls",
+    "activity",
+    "scope"
+  ],
+  "legacy": {
+    "id": "scarcity-frame-dragging",
+    "family": "gravity-as-scarcity",
+    "kind": "nature",
+    "status": "mixed",
+    "claim": "Adding swirl to the scarcity field reproduces frame dragging",
+    "evidence": "[frame-drag-swirl](../../../orrery/lab/sims/frame-drag-swirl/) supplies the prior positive verdict: the toy has the right qualitative swirl shape. [Moving-source gravity bounds](../../studies/moving-source-gravity-bounds.md) now sources the nature target — GP-B measured the frame-dragging drift at 19%, while LAGEOS/LARES agree with GR at claimed few-percent to disputed ~19% precision; a completion must reproduce the Lense–Thirring magnitude, 1/r³ falloff, and spin-source character. The row remains mixed because the toy has not been compared with those quantitative targets",
+    "links": [
+      "../../../orrery/lab/sims/frame-drag-swirl/",
+      "../../studies/moving-source-gravity-bounds.md"
+    ],
+    "in_doc_ledger": true
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "claim": {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:scarcity-frame-dragging",
+      "revision_id": "sha256:e2c4e36c404ca470872fbe83684833d66a0e939b3be4d7c719b1a01e40746cbb",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    "verdict": "inconclusive",
+    "legacy_verdict": "mixed",
+    "inference": "historical",
+    "basis": "legacy-report",
+    "controls": "unknown",
+    "rationale": "[frame-drag-swirl](../../../orrery/lab/sims/frame-drag-swirl/) supplies the prior positive verdict: the toy has the right qualitative swirl shape. [Moving-source gravity bounds](../../studies/moving-source-gravity-bounds.md) now sources the nature target — GP-B measured the frame-dragging drift at 19%, while LAGEOS/LARES agree with GR at claimed few-percent to disputed ~19% precision; a completion must reproduce the Lense–Thirring magnitude, 1/r³ falloff, and spin-source character. The row remains mixed because the toy has not been compared with those quantitative targets",
+    "evidence": []
+  },
+  "revision_id": "sha256:1e9fd382ca23389f1182436dd9536284e5efe68b800a68d0eee7fbf11a301c24"
+}

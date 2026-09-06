@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:principia:artifact:source%3Aorrery%3Aa1c430db54d585048ec85c4e7c47141db634f398%3Alab%2Fsims%2Ftwo-substance-packet-linear-symbol%2FRUN-2026-09-05.md",
+  "aliases": [
+    "source:orrery:a1c430db54d585048ec85c4e7c47141db634f398:lab/sims/two-substance-packet-linear-symbol/RUN-2026-09-05.md"
+  ],
+  "activity": "active",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": null,
+    "blob_oid": null,
+    "sha256": "sha256:49559693e8655c8fe4471f2f5b91d74b0884846104787d59cf377c124534a45c",
+    "path": "upstream-snapshot/orrery/a1c430db54d585048ec85c4e7c47141db634f398/lab/sims/two-substance-packet-linear-symbol/RUN-2026-09-05.md",
+    "selector": "$",
+    "historical": true,
+    "working_tree": true
+  },
+  "limitations": [
+    "Immutable archival source copy; upstream scientific ownership is unchanged."
+  ],
+  "missingness": [
+    "git-revision",
+    "owner-ingestion-git-pin",
+    "scope",
+    "upstream-canonical-record"
+  ],
+  "legacy": {
+    "source_pin": {
+      "repository": "orrery",
+      "git_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "path": "lab/sims/two-substance-packet-linear-symbol/RUN-2026-09-05.md",
+      "blob_oid": "cece7aeee4fbfb81ac533b6de6b2824ba7edf629",
+      "sha256": "sha256:49559693e8655c8fe4471f2f5b91d74b0884846104787d59cf377c124534a45c",
+      "bytes": 3072,
+      "commit_metadata": "a1c430db54d585048ec85c4e7c47141db634f398\n2026-09-06T02:28:14+00:00\n2026-09-06T02:28:14+00:00\nfeat: Preserve the original electron animation's continuous fold in a c… [ORB-11374]\n"
+    },
+    "text": "# Validated run — 2026-09-05\n\n## Outcome\n\nThe deterministic fixture passed all predeclared source, operator,\nevolution, control, refinement, and stability gates. Its result-neutral verdict\nis **refuted** for the scoped apparatus hypothesis: equal-speed tuning of the\nexisting two-density/gradient-flux Hamiltonian does not produce a Maxwell-like\npropagating transverse sector.\n\nThis is evidence about the frozen apparatus, not a nature claim and not a\nno-go theorem for a different emergent-gauge object. Principia should reconcile\nits verification-only model-property rows against this report and\n`assets/results.json`; this run does not edit that repository.\n\n## Source and method\n\n- Orrery source before this fixture: `35a3d47ebc650212e8e7eb59b13752db093f1c28`.\n- Frozen packet apparatus SHA-256: `bd3d02d5182446b94159e5eaf5d777da575f476d2c1d3e88a552517a5b881fe4`.\n- Merged Principia ORB-11219 specification: `38cd4a77d8f230f1fbe8a036c180f24919cacc0d`.\n- Independent lane 1: a six-field species-basis Fourier matrix using the exact\n  centered-difference symbol.\n- Independent lane 2: isolated perturbations evolved with the actual nonlinear\n  chemical potentials and kick-drift-kick discretization.\n- No RNG was used. The seeds are exact named cosine modes.\n\n## Results for reconciliation\n\n- Six fields in two dimensions yield four propagating roots, grouped into two\n  positive-frequency acoustic branches, and two zero-frequency modes. There is\n  no algebraic or Gauss constraint.\n- Every propagating eigenvector and evolved sound seed is longitudinal relative\n  to the wavevector. The minimum measured longitudinal projector was\n  `0.9999999999999997`.\n- Equal `c_plus = c_minus = 1` makes the two vacuum sound eigenvalues\n  degenerate but leaves their current parallel to the wavevector. It is scalar\n  branch degeneracy, not Maxwell polarization evidence.\n- All T0 arms remained `transverse-frozen`: normalized frequency bound `0.0`\n  and relative discrete-curl drift `0.0` for each species.\n- Vacuum `lambda=0.8` and `lambda=0` operator eigenvalues agreed exactly. The\n  B0 mixed-background squared speeds agreed with time evolution to\n  `0.003194733854391602` relative, within the declared `0.02` bound.\n- Matrix/time frequency disagreement was at most\n  `6.582604017773124e-05` in the primary evolution set. Three spatial and three\n  temporal rungs show decreasing continuum and time-integration errors.\n- The equal-magnitude `(5,0)` versus `(3,4)` anisotropy fell from\n  `0.018187867168147243` at size 64 to `0.0046064205071892905` at size 128.\n  This is lattice dispersion, not a new continuum mode.\n- The explicit X0 indefinite-Hessian witness was classified\n  `rejected-local-instability` and was not evolved. The admissible B0 runs only\n  establish local stability; they do not cure the cubic Hamiltonian's global\n  unboundedness.\n\n## Exact rerun\n\n```sh\nPYTHONDONTWRITEBYTECODE=1 UV_CACHE_DIR=/tmp/orbit-uv-cache-11220 uv run lab/sims/two-substance-packet-linear-symbol/main.py --check-determinism\npython3 lab/tools/build-gallery.py\ngit diff --check\n```\n",
+    "commit_object": "tree 8d851030602405b11b7166108b09cf9cd5664329\nparent 148b668391f575466282eaa81aab0dc943846a87\nauthor orbit[gpt-6-astra] <agent@orbit.invalid> 1788661694 +0000\ncommitter orbit <orbit@orbit.local> 1788661694 +0000\n\nfeat: Preserve the original electron animation's continuous fold in a c… [ORB-11374]\n\nPreserve the original electron animation's continuous fold in a computed-field view\n\nPlanned-By: codex\n"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "source",
+    "availability": "available",
+    "snapshot_digest": "sha256:49559693e8655c8fe4471f2f5b91d74b0884846104787d59cf377c124534a45c",
+    "locator": null,
+    "media_type": "text/plain"
+  },
+  "revision_id": "sha256:89b9b6da4a546d258775503f12c3ff339b805a59f729ce769eebce3934b024a2"
+}

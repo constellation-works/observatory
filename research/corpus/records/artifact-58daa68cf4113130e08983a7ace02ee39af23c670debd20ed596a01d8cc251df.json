@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:principia:artifact:source%3Aorrery%3Aa1c430db54d585048ec85c4e7c47141db634f398%3Alab%2Fsims%2Fwide-binary-selection-bias%2FRUN-2026-09-05.md",
+  "aliases": [
+    "source:orrery:a1c430db54d585048ec85c4e7c47141db634f398:lab/sims/wide-binary-selection-bias/RUN-2026-09-05.md"
+  ],
+  "activity": "active",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": null,
+    "blob_oid": null,
+    "sha256": "sha256:bae04eb0556dd1c983524d911cc756641f9f89813566ee03d7de90aadfc1ac53",
+    "path": "upstream-snapshot/orrery/a1c430db54d585048ec85c4e7c47141db634f398/lab/sims/wide-binary-selection-bias/RUN-2026-09-05.md",
+    "selector": "$",
+    "historical": true,
+    "working_tree": true
+  },
+  "limitations": [
+    "Immutable archival source copy; upstream scientific ownership is unchanged."
+  ],
+  "missingness": [
+    "git-revision",
+    "owner-ingestion-git-pin",
+    "scope",
+    "upstream-canonical-record"
+  ],
+  "legacy": {
+    "source_pin": {
+      "repository": "orrery",
+      "git_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "path": "lab/sims/wide-binary-selection-bias/RUN-2026-09-05.md",
+      "blob_oid": "6fe425ea2aede9e2fca0cf9919b31f1efd8db11e",
+      "sha256": "sha256:bae04eb0556dd1c983524d911cc756641f9f89813566ee03d7de90aadfc1ac53",
+      "bytes": 4101,
+      "commit_metadata": "a1c430db54d585048ec85c4e7c47141db634f398\n2026-09-06T02:28:14+00:00\n2026-09-06T02:28:14+00:00\nfeat: Preserve the original electron animation's continuous fold in a c… [ORB-11374]\n"
+    },
+    "text": "# Validated run — 2026-09-05\n\n## Verdict\n\n**unresolved** under the frozen `wide-binary-selection-bias-control` decision rule.\nThis is a synthetic calibration of Astrolabe's apparatus, not a claim about nature.\n\n## Prerequisites and exact apparatus\n\n- Astrolabe ORB-11217 merged source: `90f5b58890da36c44286a4edbde7eead879410a8`.\n- Astrolabe apparatus SHA-256: `6e39198e6babf452ec94f34ccd1eec49e3ca885964f4d6742937b33b5f9269f1`.\n- Principia ORB-11221 merged protocol: `c04f2ed1ae91d6c126bc60863b5e48f46abe4576`.\n- Orrery implementation base: `73c9bd53e963e44bb365992c1df87a1077cc996f`.\n- Protocol SHA-256: `50fc37ac41bdbdc0e14ae3c079de3d8ed582d0fb4bf2e740270dc0fd5dfb9443`.\n- Gate: `wide-binary-selection-bias-control`; gate SHA-256: `88609aed585cdbbd18586d5dcbeaf59f691965bbce2536152eabdb1bd51d7a89`.\n\n## Frozen controls\n\n- R0 sanity: **FAIL**.\n- R1 geometry/truncation: **FAIL**.\n- Cap isolation: **FAIL**.\n- Shifted-field calibration: **FAIL**.\n- Known-effect power: **FAIL**.\n- Independent candidate oracle: **PASS**.\n\nFailed controls are not hidden: a failed sanity or power control forces the\nverdict to remain unresolved. Machine-readable per-seed truth/recovery, B_i,\nS_i, chance-rate, uncertainty, cap, oracle, and power evidence is in\n`assets/results.json`.\n\n### Reproducible R1 excursions\n\n- `R1-heavycap` [3.162e-10, 1.000e-09): B_i = +0.0726 +/- 0.0693.\n- `R1-heavycap` [3.162e-09, 1.000e-08): B_i = -0.0534 +/- 0.0432.\n- `R1-heavycap` [1.000e-08, 3.162e-08): B_i = +0.0924 +/- 0.0690.\n- `R2-wrap` [1.000e-10, 3.162e-10): B_i = +0.0477 +/- 0.0130.\n- `R2-polar` [1.000e-10, 3.162e-10): B_i = +0.0478 +/- 0.0111.\n\n### Shifted-field calibration\n\n- `R3-5`, shift 0.5 deg: R_chance = 0.0020 +/- 0.0015 for truth 0.05 (PASS).\n- `R3-5`, shift 2.0 deg: R_chance = 0.0010 +/- 0.0000 for truth 0.05 (PASS).\n- `R3-5`, shift 5.0 deg: R_chance = 0.0000 +/- 0.0000 for truth 0.05 (PASS).\n- `R3-10`, shift 0.5 deg: R_chance = 0.0000 +/- 0.0000 for truth 0.10 (FAIL).\n- `R3-10`, shift 2.0 deg: R_chance = 0.0000 +/- 0.0000 for truth 0.10 (FAIL).\n- `R3-10`, shift 5.0 deg: R_chance = 0.0010 +/- 0.0014 for truth 0.10 (FAIL).\n- `R3-20`, shift 0.5 deg: R_chance = 0.0000 +/- 0.0000 for truth 0.20 (FAIL).\n- `R3-20`, shift 2.0 deg: R_chance = 0.0019 +/- 0.0028 for truth 0.20 (FAIL).\n- `R3-20`, shift 5.0 deg: R_chance = 0.0009 +/- 0.0014 for truth 0.20 (FAIL).\n\n### Positive-control power\n\n- `R4-0.02` detection rate 33.3% (diagnostic).\n- `R4-0.05` detection rate 33.3% (FAIL).\n- `R4-0.10` detection rate 33.3% (FAIL).\n\nAcross all realizations, true-pair completeness ranged from 0.060\nto 0.996, and selected-pair purity from 0.826 to\n1.000. The 2,000-star heavy cap produces the low-completeness end;\nknown labels, rather than the shifted estimator, define these recovery metrics.\n\n## Runtime and environment\n\n- Realizations: 44. The protocol prose says 47, but its\n  12 frozen rows enumerate 44; every row/seed was run and no three runs were invented.\n- Wall time: 304.830 s.\n- Python: `3.12.3` on `Linux-6.8.0-138-generic-x86_64-with-glibc2.39`.\n- Packages: `{\"astrolabe\": \"0.1.0\", \"astropy\": \"8.0.1\", \"numpy\": \"2.5.2\", \"orrery\": \"0.1.0\", \"scipy\": \"1.18.1\"}`.\n- Frozen parameters and seeds: `{\"density_edge_ratio\": 3.0, \"distance_pc_range\": [70.0, 175.0], \"n_comparator_pairs\": 5000, \"n_field_stars\": 6200, \"n_true_pairs\": 1050, \"oracle_sample_stars\": 192, \"parallax_fractional_error\": 0.015, \"pm_error_masyr\": 0.05, \"quality_gradient\": \"1 + 0.5*abs(sin(dec-dec_center))\", \"ruwe_center\": 1.05, \"ruwe_scatter\": 0.08, \"seeds\": [7, 11, 23, 42, 101], \"shift_ladder_deg\": [0.5, 2.0, 5.0]}`.\n\n## Exact rerun\n\n```sh\nPYTHONDONTWRITEBYTECODE=1 UV_CACHE_DIR=/tmp/orbit-uv-cache-11222 uv run --with ../astrolabe lab/sims/wide-binary-selection-bias/main.py --astrolabe-root ../astrolabe --principia-root ../principia\npython3 lab/tools/build-gallery.py\ngit diff --check\n```\n\n## Reconciliation handoff\n\nPrincipia should judge only the methodological gate from these results.\nExploratory sensitivity rows are segregated in the JSON and do not alter the\nfrozen verdict. No sibling repository was modified by this run.\n",
+    "commit_object": "tree 8d851030602405b11b7166108b09cf9cd5664329\nparent 148b668391f575466282eaa81aab0dc943846a87\nauthor orbit[gpt-6-astra] <agent@orbit.invalid> 1788661694 +0000\ncommitter orbit <orbit@orbit.local> 1788661694 +0000\n\nfeat: Preserve the original electron animation's continuous fold in a c… [ORB-11374]\n\nPreserve the original electron animation's continuous fold in a computed-field view\n\nPlanned-By: codex\n"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "source",
+    "availability": "available",
+    "snapshot_digest": "sha256:bae04eb0556dd1c983524d911cc756641f9f89813566ee03d7de90aadfc1ac53",
+    "locator": null,
+    "media_type": "text/plain"
+  },
+  "revision_id": "sha256:58daa68cf4113130e08983a7ace02ee39af23c670debd20ed596a01d8cc251df"
+}

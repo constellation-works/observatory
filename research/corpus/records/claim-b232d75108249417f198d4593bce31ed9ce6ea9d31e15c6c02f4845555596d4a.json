@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "kind": "claim",
+  "id": "urn:research:principia:claim:scarcity-excitation-hides-rest-frame",
+  "aliases": [
+    "scarcity-excitation-hides-rest-frame"
+  ],
+  "activity": "retired",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "b5f58c64f4c6bf9d7d7f67c826f5d2dd7c9cb64f",
+    "sha256": "sha256:996b059ca4b45cee6dd42a503594508ebb8d6d13211ad1104df3754b116d5976",
+    "path": "theory/gravity-as-scarcity/claims.json",
+    "selector": "/claims/16",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Exact historical verdict and stated assumptions only; migration makes no new scientific inference."
+  ],
+  "missingness": [
+    "scope"
+  ],
+  "legacy": {
+    "id": "scarcity-excitation-hides-rest-frame",
+    "family": "gravity-as-scarcity",
+    "kind": "nature",
+    "status": "supported",
+    "claim": "On the excitation branch the lattice rest frame is undetectable at current bounds (emergent Lorentz invariance); the substance/aether branch is excluded",
+    "evidence": "**Computed (ORB-10159, §(d)):** substance coupling at O(1) predicts resonator anisotropy ~β²: 1.5×10⁻⁶ (370 km/s CMB-frame motion) down to 2×10⁻⁸ (fully entrained, 42 km/s local solar inflow) vs measured 10⁻¹⁷–10⁻¹⁸ — **excluded by 9–12 orders**. Excitation branch: one medium, one limiting speed → MM null by construction; residual lattice-scale dispersion is bounded, not excluded — parity-symmetric hop rules give a quadratic subluminal term, and GRB 090510 (E_QG,2 > 1.3×10¹¹ GeV) bounds the spacing to a ≲ 1.5×10⁻²⁷ m ≈ 10⁸ ℓ_Pl; parity-asymmetric rules (linear term) are already excluded past the Planck scale (E_QG,1 > 7.6 E_Pl). **Placement: emergent-metric, analog-gravity family** — not an aether, not relabeled GR ([studies/lorentz-violation-bounds](../../studies/lorentz-violation-bounds.md))",
+    "links": [
+      "../../studies/lorentz-violation-bounds.md"
+    ],
+    "in_doc_ledger": true
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "claim",
+    "statement": "On the excitation branch the lattice rest frame is undetectable at current bounds (emergent Lorentz invariance); the substance/aether branch is excluded",
+    "domain": "nature"
+  },
+  "revision_id": "sha256:b232d75108249417f198d4593bce31ed9ce6ea9d31e15c6c02f4845555596d4a"
+}

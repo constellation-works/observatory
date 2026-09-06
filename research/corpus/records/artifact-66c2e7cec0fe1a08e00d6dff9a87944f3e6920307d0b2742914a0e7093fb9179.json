@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Atheory%2Fshear-sourced-consumption%2Fopen-questions.md",
+  "aliases": [
+    "source:principia:4e3b02c59b694d85016915177ef1ae157895ed7b:theory/shear-sourced-consumption/open-questions.md"
+  ],
+  "activity": "active",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "a15bfedec39b840d02c6ce56ed10d24a929f3d25",
+    "sha256": "sha256:f1a6f0b7d8051522fd1d4f4fc43ffa9332d6d52a78076812c002b6a746d10dc7",
+    "path": "theory/shear-sourced-consumption/open-questions.md",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Immutable archival source copy; upstream scientific ownership is unchanged."
+  ],
+  "missingness": [
+    "scope"
+  ],
+  "legacy": {
+    "source_pin": {
+      "repository": "principia",
+      "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "path": "theory/shear-sourced-consumption/open-questions.md",
+      "blob_oid": "a15bfedec39b840d02c6ce56ed10d24a929f3d25",
+      "sha256": "sha256:f1a6f0b7d8051522fd1d4f4fc43ffa9332d6d52a78076812c002b6a746d10dc7",
+      "bytes": 696,
+      "commit_metadata": "4e3b02c59b694d85016915177ef1ae157895ed7b\n2026-09-06T02:49:35+00:00\n2026-09-06T02:49:35+00:00\nfeat: Migrate the wide-binary control pilot into versioned scientific r… [ORB-11378]\n"
+    },
+    "text": "## Open questions\n\n**Family retired by Daniel on 2026-09-04.** The entries below are preserved as\nhistorical evidence or unanswered questions, not an active research queue.\nSee the [retirement decision](../gravity-as-scarcity/retirement.md).\n\nRemaining unpaid from “What this does not deliver.” That section keeps the paid narrative (items 1–4) and is not cut.\n\n- **Non-radial flows** — rotation and waves remain open. The translating case moved to [moving-sources-in-the-closed-system](../moving-sources-in-the-closed-system/).\n- **Galactic question** — the acceleration-organization problem (ORB-10169) is untouched; this law addresses the clock/photon-sector debt, not the MW boost.\n",
+    "commit_object": "tree 682cccb1cf19c89c2c5f4371c14ed2b384d2ae8c\nparent 13866b2848fbcce9a1f1ef2d4b97051a65f7e626\nauthor orbit[gpt-6-astra] <agent@orbit.invalid> 1788662975 +0000\ncommitter orbit <orbit@orbit.local> 1788662975 +0000\n\nfeat: Migrate the wide-binary control pilot into versioned scientific r… [ORB-11378]\n\nMigrate the wide-binary control pilot into versioned scientific records\n\nPlanned-By: codex\n"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "source",
+    "availability": "available",
+    "snapshot_digest": "sha256:f1a6f0b7d8051522fd1d4f4fc43ffa9332d6d52a78076812c002b6a746d10dc7",
+    "locator": null,
+    "media_type": "text/plain"
+  },
+  "revision_id": "sha256:66c2e7cec0fe1a08e00d6dff9a87944f3e6920307d0b2742914a0e7093fb9179"
+}

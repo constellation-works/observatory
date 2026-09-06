@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Atheory%2Fgravity-as-scarcity%2Fconfronting-rotation-curve.md",
+  "aliases": [
+    "source:principia:4e3b02c59b694d85016915177ef1ae157895ed7b:theory/gravity-as-scarcity/confronting-rotation-curve.md"
+  ],
+  "activity": "active",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "29a2efa4ea9fbf08fbb8e5eed9a26e0da2793efa",
+    "sha256": "sha256:287a7b65d0379c8ffc2e1485399da09b98eda09ae8fae7f6b79779ca08c5adaa",
+    "path": "theory/gravity-as-scarcity/confronting-rotation-curve.md",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Immutable archival source copy; upstream scientific ownership is unchanged."
+  ],
+  "missingness": [
+    "scope"
+  ],
+  "legacy": {
+    "source_pin": {
+      "repository": "principia",
+      "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "path": "theory/gravity-as-scarcity/confronting-rotation-curve.md",
+      "blob_oid": "29a2efa4ea9fbf08fbb8e5eed9a26e0da2793efa",
+      "sha256": "sha256:287a7b65d0379c8ffc2e1485399da09b98eda09ae8fae7f6b79779ca08c5adaa",
+      "bytes": 4196,
+      "commit_metadata": "4e3b02c59b694d85016915177ef1ae157895ed7b\n2026-09-06T02:49:35+00:00\n2026-09-06T02:49:35+00:00\nfeat: Migrate the wide-binary control pilot into versioned scientific r… [ORB-11378]\n"
+    },
+    "text": "## Confronting real data — the ORB-10077 rotation-curve fit\n\nThe first time the model met measured data. Faraday (Sol, ORB-10077) took turn 9's headroom idea\nin continuum form — v_S² = v_N² · q(r)/q(R₀) with q(r) = exp[−β ∫ F(u)/u² du], β the one free\nshape parameter — and fit it in real units to Tycho's Gaia DR3 median-`v_φ` curve (ORB-10075\nlineage), under a **predeclared** protocol: fit 5–15 kpc, hold out 15–18.75 kpc, same bounded\nasymmetric-drift nuisance for model and control, decisive only if |ΔAIC| ≥ 10 with consistent\nsign across all 27 mass-profile variants. Apparatus: [scarcity-rotation-curve-fit](../../../orrery/lab/sims/scarcity-rotation-curve-fit/)\n(commit `9008d5b`); Faraday run record `agentbase/faraday/memory/runs/26-07/run-20260710T001006.md`.\n**I did not modify the apparatus; questions about it became Faraday tasks (below).**\n\n| Metric (5–15 kpc fit) | Scarcity | Newtonian baryons (nested control) |\n|---|---:|---:|\n| Baryonic mass | 1.204 × 10¹¹ M☉ | 1.224 × 10¹¹ M☉ |\n| Scarcity β | 5.25 kpc | 0 (control) |\n| Drift nuisance | 3.0 km/s (pinned at lower bound) | 3.0 km/s |\n| RMSE | 2.70 km/s | 18.40 km/s |\n| χ²/dof | 2458.8 / 17 | 102877 / 18 |\n\nΔAIC = AIC_scarcity − AIC_Newtonian = **−100416** (bootstrap [−134303, −59098]; profile-variant\nrange −158602 to −51749). Held-out 15–18.75 kpc: scarcity RMSE 5.26 km/s (mean underprediction\n4.86 km/s) vs 31.16 km/s for the control. Lattice-convergence and outer-boundary changes move\npredictions by ≤ 0.00014 km/s.\n\n**How the evidence moves the theory (per the standing rules):**\n\n1. **Gate on an equal-dof competitor, not the nested control.** The ΔAIC ≈ −10⁵ is against\n   baryons-alone — table stakes; the whole point of the dark-matter problem is that *everything*\n   beats baryons-alone. The claim \"scarcity matches/beats a standard dark halo\" is the one that\n   would matter. Falsifier filed as **ORB-10082** — since run, reframed to a 3-parameter NFW;\n   verdict **inconclusive** (next section).\n2. **The held-out misfit is coherent, not noise.** A one-signed ~4.9 km/s underprediction where\n   the real curve flattens (13–16 kpc) and the model keeps declining. The shape term is\n   *sufficient relative to the control, not complete*. (The measured MW curve is itself gently\n   declining, −1.7 km/s/kpc — see [studies/milky-way-rotation-curve](../../studies/milky-way-rotation-curve.md)\n   — so \"flat\" is shorthand, and the residual is a real shape mismatch, not a flat-vs-declining\n   artifact.)\n3. **The drift nuisance is an apparatus limitation.** A single constant drift term, pinned at its\n   3 km/s lower bound and weakly identified by bootstrap, cannot represent the *radially varying*\n   asymmetric-drift bias in an uncorrected median-`v_φ` curve. A radially-varying drift model is\n   prerequisite to stronger claims: filed as **ORB-10083**.\n4. **Calibrate the absolute-fit language.** Reduced χ² ≈ 145 is a formal failure against the\n   quoted statistical errors — but those errors omit dominant distance/selection/drift\n   systematics, so even the true law would fail them. This is *not* a refutation; equally, the\n   2.70 km/s RMSE does not hide it. Both facts stand in the ledger.\n\n**The 20–25 kpc follow-up decision.** Faraday's declared rule was to request Tycho's proposed\n20–25 kpc/APOGEE extension only if the existing band failed to discriminate the apparatus from its\ncontrol. It did discriminate (comfortably), so **no APOGEE request was sent** — the more immediate\nfalsifiers were the standard-halo comparison (ORB-10082, since run — next section) and the drift\nmodel (ORB-10083), not a longer baseline. Reconciled: the follow-up baseline is deferred, not\npending.\n\n**Form postscript (ORB-10167, 2026-07-12).** The same band has since been measured\n**shape-degenerate**: a canonical Sanders-form Yukawa under the identical protocol fits within\n0.22 km/s of scarcity's RMSE and the bootstrap cannot separate the two forms (§ form and\nuniversality adjudication below). The ΔAIC ≈ −10⁵ against baryons stands; what it certifies is\nthe boost's existence and scale, not its functional form.\n",
+    "commit_object": "tree 682cccb1cf19c89c2c5f4371c14ed2b384d2ae8c\nparent 13866b2848fbcce9a1f1ef2d4b97051a65f7e626\nauthor orbit[gpt-6-astra] <agent@orbit.invalid> 1788662975 +0000\ncommitter orbit <orbit@orbit.local> 1788662975 +0000\n\nfeat: Migrate the wide-binary control pilot into versioned scientific r… [ORB-11378]\n\nMigrate the wide-binary control pilot into versioned scientific records\n\nPlanned-By: codex\n"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "source",
+    "availability": "available",
+    "snapshot_digest": "sha256:287a7b65d0379c8ffc2e1485399da09b98eda09ae8fae7f6b79779ca08c5adaa",
+    "locator": null,
+    "media_type": "text/plain"
+  },
+  "revision_id": "sha256:63083e8b95809fb4a7c059d731885e1cd1f2a7cbb703235465875ca5f6c9a1de"
+}

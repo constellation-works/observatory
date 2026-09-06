@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Atheory%2Fmoving-sources-in-the-closed-system%2Ftheorem-1.md",
+  "aliases": [
+    "source:principia:4e3b02c59b694d85016915177ef1ae157895ed7b:theory/moving-sources-in-the-closed-system/theorem-1.md"
+  ],
+  "activity": "active",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "4523040782b3ce1d5ece6a4917dcfa48b1ef85f7",
+    "sha256": "sha256:83463cad82c20a3ed73a114ba5b7de825037731f79a28d9f6de1fd37e19fc401",
+    "path": "theory/moving-sources-in-the-closed-system/theorem-1.md",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Immutable archival source copy; upstream scientific ownership is unchanged."
+  ],
+  "missingness": [
+    "scope"
+  ],
+  "legacy": {
+    "source_pin": {
+      "repository": "principia",
+      "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "path": "theory/moving-sources-in-the-closed-system/theorem-1.md",
+      "blob_oid": "4523040782b3ce1d5ece6a4917dcfa48b1ef85f7",
+      "sha256": "sha256:83463cad82c20a3ed73a114ba5b7de825037731f79a28d9f6de1fd37e19fc401",
+      "bytes": 3939,
+      "commit_metadata": "4e3b02c59b694d85016915177ef1ae157895ed7b\n2026-09-06T02:49:35+00:00\n2026-09-06T02:49:35+00:00\nfeat: Migrate the wide-binary control pilot into versioned scientific r… [ORB-11378]\n"
+    },
+    "text": "## Theorem 1 — the wind is invisible in the speed field\n\nFor steady irrotational flow the momentum equation integrates globally:\n\n> ∇(|**v**|²/2) = c²∇σ  ⟹  **|v|² = U² + 2c²σ(x)  everywhere.**\n\nThe constant is fixed at infinity. Consequences, each exact at this order:\n\n1. **Speed isotropy.** At fixed distance from the source, the river's *speed* is exactly\n   isotropic — √(U² + 2GM/r) — for every wind strength. The wake lives entirely in the\n   **direction field**; the speed field carries no dipole, no fore-aft asymmetry, nothing\n   at any order in U. Note the consumption law never entered: this holds for *any*\n   consumption rule, being a property of {comoving elliptic level + rolling rule +\n   irrotational inflow} alone. The shear law's role is downstream: with continuity it\n   selects the direction field (and decides whether a steady wake exists at all — an\n   existence question only the lattice can answer; first answer 2026-08-21, § adjudication:\n   no globally smooth single-valued branch at any swept wind; second answer the same day,\n   dynamical: the velocity sector settles but the density trough is still relaxing at the\n   feasible horizon; third answer, extended horizon (ORB-10938): the system *does* settle\n   by T = 600 — but into a rotational flow that violates this theorem's closure, so the\n   irrotationality premise, not existence, is what fails).\n2. **The clock sector: what is settled and what is not.** In the excitation reading\n   (the only surviving one — [lorentz-violation-bounds](../../studies/lorentz-violation-bounds.md)),\n   a clock at rest in the mass frame dilates by its speed relative to the local river:\n   1 − |**v**|²/2c² = **1 − U²/2c² − GM/c²r** against reservoir time (the GP-dilation\n   identity is the river model's own,\n   [river-model-and-analog-gravity](../../studies/river-model-and-analog-gravity.md)).\n   What is settled: relative to a reservoir-rest clock the wind term is exactly SR's\n   dilation for motion at U, and a *uniform* U is common-mode — no local differential\n   experiment (Pound–Rebka, GPS height, spectroscopy) sees it. What is *not* settled, in\n   either direction (critique + arbitration, 2026-08-21): general relativity in the same\n   frame reads √(1 − 2GM/c²r) with no U term — a uniformly moving mass's rest frame is\n   Schwarzschild — so the U²/2c² piece *referenced to absolute reservoir time* looks\n   like a gravitational preferred-frame term; but a uniform flow can equally be\n   coordinate-like for the medium's excitations, in which case nothing local ever\n   measures it. An earlier claim here that the ether-drift clock anomaly \"cancels by\n   structure\" was too strong and is retracted; the opposite claim — that the term\n   becomes observable as soon as U modulates — is not established either. Only\n   *relational* predictions (clock pairs, orbital cross terms) decide it, and those\n   require reducing the effective metric to observable PPN coefficients — a named\n   obligation of this front. Second-order cross terms (O(U²·GM/c⁴r)) are not examined\n   here and belong to the same PPN territory.\n3. **Multi-source form.** Levels superpose by the counting family (measured through\n   superposition order: ORB-10157, ORB-10934), so in the dilute regime\n   |**v**|² = U² + 2c²Σᵢσᵢ. The theorem survives source multiplicity — with one caveat\n   recorded at the 2026-08-21 critique: the constant is one Bernoulli constant fixed at\n   one shared infinity. Levels superpose linearly; **wakes do not** — the two-body\n   problem, which is the actual PPN and binary-pulsar setting, is a new problem, not a\n   corollary.\n4. **The pure-wind state is exactly steady and exactly silent.** Uniform **v** = −**U**\n   with no source has zero strain (checked), zero consumption, and satisfies all three\n   equations — the Galilean null the apparatus must reproduce identically.\n",
+    "commit_object": "tree 682cccb1cf19c89c2c5f4371c14ed2b384d2ae8c\nparent 13866b2848fbcce9a1f1ef2d4b97051a65f7e626\nauthor orbit[gpt-6-astra] <agent@orbit.invalid> 1788662975 +0000\ncommitter orbit <orbit@orbit.local> 1788662975 +0000\n\nfeat: Migrate the wide-binary control pilot into versioned scientific r… [ORB-11378]\n\nMigrate the wide-binary control pilot into versioned scientific records\n\nPlanned-By: codex\n"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "source",
+    "availability": "available",
+    "snapshot_digest": "sha256:83463cad82c20a3ed73a114ba5b7de825037731f79a28d9f6de1fd37e19fc401",
+    "locator": null,
+    "media_type": "text/plain"
+  },
+  "revision_id": "sha256:535b2122e2f42571732611d232b053aa638b4e8614dc2350b7bde80ddada5088"
+}

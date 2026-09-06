@@ -14,6 +14,7 @@ theory/    One directory per theory (hub README, claims.json, evidence ledger, r
 gates/     Live fronts / owed objects. New work starts with a gate card.
 schema/    Field docs and the refuted wall.
 studies/   Sourced notes on established physics. Contract in studies/README.md.
+research/  Immutable scientific records, source pins and explicit active selections.
 scripts/   check-theory.py — run before landing theory changes.
 ```
 
@@ -30,11 +31,11 @@ scripts/   check-theory.py — run before landing theory changes.
 
 ## Checking an isolated worktree
 
-The [wide-binary migration pilot](research/wide-binary/README.md) uses immutable
-orbit-research v1 records with checked compatibility views. Install the exact
-environment from `requirements-research.txt` before running the whole-corpus checker;
-the linked guide includes record validation, migration reproduction and rollback.
-Only this pilot changes authority; all other families keep their existing contract.
+The [scientific record owner workflow](research/README.md) covers all ten programs,
+121 claims, four gates and 19 studies. Original scientific files remain exact checked
+views; immutable v1 history and explicitly selected native v2 appends own edits. Install
+`requirements-research.txt` before validation. The guide includes native authoring,
+exact-source verification, projection, incremental activation and rollback.
 
 `scripts/check-theory.py` keeps links inside the candidate worktree local to that candidate.
 For established relative links into sibling `orrery`, it derives the standard sibling root from

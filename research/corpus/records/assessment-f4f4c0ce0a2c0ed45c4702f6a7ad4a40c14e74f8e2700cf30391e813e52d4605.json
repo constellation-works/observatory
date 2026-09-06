@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "kind": "assessment",
+  "id": "urn:research:principia:assessment:two-substance-source-law-from-s2%3Alegacy-verdict",
+  "aliases": [
+    "two-substance-source-law-from-s2:legacy-verdict"
+  ],
+  "activity": "unknown",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "94e76368a84e00ed742153d77b3d25dd5962c664",
+    "sha256": "sha256:c95d48cf673efa43d6d77005c73cadea42fac1ff00da556a7b7fd260df14f9a6",
+    "path": "theory/two-substance-vortex-vacuum/claims.json",
+    "selector": "/claims/25",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Exact historical verdict and stated assumptions only; migration makes no new scientific inference."
+  ],
+  "missingness": [
+    "exact-evidence-owner-references",
+    "independently-verified-controls",
+    "activity",
+    "scope"
+  ],
+  "legacy": {
+    "id": "two-substance-source-law-from-s2",
+    "family": "two-substance-vortex-vacuum",
+    "kind": "nature",
+    "status": "untested",
+    "claim": "Non-conservation of substance is derived from S2 dynamics, not inherited from the parent shear law.",
+    "evidence": "Source-law debt of this family. The parent's named shear law does not pay it (family split).",
+    "links": [],
+    "in_doc_ledger": false,
+    "kill": "Derive a law of non-conservation from S2, recast to one substance with a two-component order parameter, or concede the gravitational sector."
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "claim": {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:two-substance-source-law-from-s2",
+      "revision_id": "sha256:1ad4c8988b98e2fa7c5d9a99bfd755e91d0ea89863f428a0be2cdb615b912b90",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    "verdict": "untested",
+    "legacy_verdict": "untested",
+    "inference": "historical",
+    "basis": "legacy-report",
+    "controls": "unknown",
+    "rationale": "Source-law debt of this family. The parent's named shear law does not pay it (family split).",
+    "evidence": []
+  },
+  "revision_id": "sha256:f4f4c0ce0a2c0ed45c4702f6a7ad4a40c14e74f8e2700cf30391e813e52d4605"
+}

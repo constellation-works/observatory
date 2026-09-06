@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:principia:artifact:source%3Aorrery%3Aa1c430db54d585048ec85c4e7c47141db634f398%3Alab%2Fsims%2Fscarcity-shell-depletion-field%2Fsim.json",
+  "aliases": [
+    "source:orrery:a1c430db54d585048ec85c4e7c47141db634f398:lab/sims/scarcity-shell-depletion-field/sim.json"
+  ],
+  "activity": "active",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": null,
+    "blob_oid": null,
+    "sha256": "sha256:98942a7bd097e23e9bf1ddd0160e26219e31e740533be9384ebff13af79ed64e",
+    "path": "upstream-snapshot/orrery/a1c430db54d585048ec85c4e7c47141db634f398/lab/sims/scarcity-shell-depletion-field/sim.json",
+    "selector": "$",
+    "historical": true,
+    "working_tree": true
+  },
+  "limitations": [
+    "Immutable archival source copy; upstream scientific ownership is unchanged."
+  ],
+  "missingness": [
+    "git-revision",
+    "owner-ingestion-git-pin",
+    "scope",
+    "upstream-canonical-record"
+  ],
+  "legacy": {
+    "source_pin": {
+      "repository": "orrery",
+      "git_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "path": "lab/sims/scarcity-shell-depletion-field/sim.json",
+      "blob_oid": "33c2212e6061c0ad2412271f5dca68aee75b34e3",
+      "sha256": "sha256:98942a7bd097e23e9bf1ddd0160e26219e31e740533be9384ebff13af79ed64e",
+      "bytes": 592,
+      "commit_metadata": "a1c430db54d585048ec85c4e7c47141db634f398\n2026-09-06T02:28:14+00:00\n2026-09-06T02:28:14+00:00\nfeat: Preserve the original electron animation's continuous fold in a c… [ORB-11374]\n"
+    },
+    "text": "{\n  \"slug\": \"scarcity-shell-depletion-field\",\n  \"title\": \"Gravity-budget shell depletion field\",\n  \"kind\": \"web\",\n  \"entry\": \"index.html\",\n  \"status\": \"imported\",\n  \"created\": \"2026-07-05\",\n  \"topics\": [\n    \"gravity\",\n    \"field-visualization\"\n  ],\n  \"family\": \"gravity-as-scarcity\",\n  \"summary\": \"3D shells around a mass showing how a finite gravity budget depletes with radius in the scarcity model.\",\n  \"provenance\": {\n    \"almanac\": \"15-discussions/26-07/gravity-as-scarcity-of-space.md\",\n    \"imported_from\": \"almanac/40-outputs/gravity/gravity_budget_shell_depletion_field.html\"\n  }\n}\n",
+    "commit_object": "tree 8d851030602405b11b7166108b09cf9cd5664329\nparent 148b668391f575466282eaa81aab0dc943846a87\nauthor orbit[gpt-6-astra] <agent@orbit.invalid> 1788661694 +0000\ncommitter orbit <orbit@orbit.local> 1788661694 +0000\n\nfeat: Preserve the original electron animation's continuous fold in a c… [ORB-11374]\n\nPreserve the original electron animation's continuous fold in a computed-field view\n\nPlanned-By: codex\n"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "source",
+    "availability": "available",
+    "snapshot_digest": "sha256:98942a7bd097e23e9bf1ddd0160e26219e31e740533be9384ebff13af79ed64e",
+    "locator": null,
+    "media_type": "application/json"
+  },
+  "revision_id": "sha256:be2f5414878546e4412e8a9ed1554d7963a47b712e485a5b3f954d09282a340c"
+}

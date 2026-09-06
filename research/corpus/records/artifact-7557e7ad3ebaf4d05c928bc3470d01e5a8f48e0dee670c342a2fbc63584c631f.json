@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Atheory%2Fppn-reduction-of-the-settled-flow%2Frelated.md",
+  "aliases": [
+    "source:principia:4e3b02c59b694d85016915177ef1ae157895ed7b:theory/ppn-reduction-of-the-settled-flow/related.md"
+  ],
+  "activity": "active",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "def17fe25eed7733da496a0135e20ac016bd2561",
+    "sha256": "sha256:372efe0d391be3669f98f8498f5b204b4b05211848442ff5b47cb407b909ba3d",
+    "path": "theory/ppn-reduction-of-the-settled-flow/related.md",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Immutable archival source copy; upstream scientific ownership is unchanged."
+  ],
+  "missingness": [
+    "scope"
+  ],
+  "legacy": {
+    "source_pin": {
+      "repository": "principia",
+      "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "path": "theory/ppn-reduction-of-the-settled-flow/related.md",
+      "blob_oid": "def17fe25eed7733da496a0135e20ac016bd2561",
+      "sha256": "sha256:372efe0d391be3669f98f8498f5b204b4b05211848442ff5b47cb407b909ba3d",
+      "bytes": 1130,
+      "commit_metadata": "4e3b02c59b694d85016915177ef1ae157895ed7b\n2026-09-06T02:49:35+00:00\n2026-09-06T02:49:35+00:00\nfeat: Migrate the wide-binary control pilot into versioned scientific r… [ORB-11378]\n"
+    },
+    "text": "## Related\n\n- [moving-sources-in-the-closed-system](../moving-sources-in-the-closed-system/) — the\n  front that owed this reduction; its Theorem 2 restatement, realized-wake evidence, and\n  cavitation kill are this doc's inputs.\n- [moving-source-gravity-bounds](../../studies/moving-source-gravity-bounds.md) — the\n  sourced walls the slotted coefficients must land under (α₁/α₂ tables, moving-lens\n  reading, frame-dragging ladder).\n- [river-model-and-analog-gravity](../../studies/river-model-and-analog-gravity.md) — the\n  acoustic-metric family and the PG↔Schwarzschild map the reduction generalizes.\n- [scalar-gravity-ppn-constraints](../../studies/scalar-gravity-ppn-constraints.md) — the\n  static γ/β walls the U = 0 control answers to.\n- [lorentz-violation-bounds](../../studies/lorentz-violation-bounds.md) — emergent Lorentz\n  invariance (why flatness of the pure-wind metric is the right notion of \"invisible\")\n  and the sourced velocity scales.\n- [gravity-as-scarcity](../gravity-as-scarcity/) — the family; the excitation reading and\n  its owed postulates are the reduction's standing premises.\n",
+    "commit_object": "tree 682cccb1cf19c89c2c5f4371c14ed2b384d2ae8c\nparent 13866b2848fbcce9a1f1ef2d4b97051a65f7e626\nauthor orbit[gpt-6-astra] <agent@orbit.invalid> 1788662975 +0000\ncommitter orbit <orbit@orbit.local> 1788662975 +0000\n\nfeat: Migrate the wide-binary control pilot into versioned scientific r… [ORB-11378]\n\nMigrate the wide-binary control pilot into versioned scientific records\n\nPlanned-By: codex\n"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "source",
+    "availability": "available",
+    "snapshot_digest": "sha256:372efe0d391be3669f98f8498f5b204b4b05211848442ff5b47cb407b909ba3d",
+    "locator": null,
+    "media_type": "text/plain"
+  },
+  "revision_id": "sha256:7557e7ad3ebaf4d05c928bc3470d01e5a8f48e0dee670c342a2fbc63584c631f"
+}

@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "kind": "claim",
+  "id": "urn:research:principia:claim:ppn-static-diagonal-schwarzschild",
+  "aliases": [
+    "ppn-static-diagonal-schwarzschild"
+  ],
+  "activity": "retired",
+  "scope": "derivation",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "cf1add5f518795b48696ace5aae1ea01f6b094fe",
+    "sha256": "sha256:b258d05cb8d485f7930cd4898e3b3f45abd7485187030cf02e2752174d451291",
+    "path": "theory/ppn-reduction-of-the-settled-flow/claims.json",
+    "selector": "/claims/2",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Exact historical verdict and stated assumptions only; migration makes no new scientific inference."
+  ],
+  "missingness": [],
+  "legacy": {
+    "id": "ppn-static-diagonal-schwarzschild",
+    "family": "gravity-as-scarcity",
+    "kind": "derived",
+    "status": "supported",
+    "claim": "Wherever u/(c² − u²) is curl-free the analog metric diagonalizes exactly to lapse √(1 − u²/c²) with spatial stretch δ_ij + u_i u_j/(c² − u²); on static GP this is exactly Schwarzschild, so the U = 0 control of the reduction lands on γ = β = 1",
+    "evidence": "The identity is exact algebra (§ diagonalization), now cataloged: the symbolic fixture (ORB-11040 G3, [ppn-reduction-symbolic-checks](../../../orrery/lab/sims/ppn-reduction-symbolic-checks/)) verifies the diagonalization exactly for general steady u (cross terms vanish, lapse and spatial stretch exact) and lands the static GP endpoint on Schwarzschild exactly (lapse² = 1 − ε, g_rr = 1/(1 − ε)) — the sourced PG↔Schwarzschild map ([river-model-and-analog-gravity](../../studies/river-model-and-analog-gravity.md)) rederived. Standing caveat: the γ = 1 reading against Cassini is the excitation-completion row's, premises owed as postulates ([gravity-as-scarcity](../gravity-as-scarcity/) § scarcity-excitation-photon-gamma)",
+    "links": [
+      "../../studies/river-model-and-analog-gravity.md",
+      "../gravity-as-scarcity/",
+      "../../../orrery/lab/sims/ppn-reduction-symbolic-checks/"
+    ],
+    "in_doc_ledger": true
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "claim",
+    "statement": "Wherever u/(c² − u²) is curl-free the analog metric diagonalizes exactly to lapse √(1 − u²/c²) with spatial stretch δ_ij + u_i u_j/(c² − u²); on static GP this is exactly Schwarzschild, so the U = 0 control of the reduction lands on γ = β = 1",
+    "domain": "model"
+  },
+  "revision_id": "sha256:1eceb8aef05df43ee2a0b0ed6f9c2d5b59dd47a144c23533491020dc1606b9aa"
+}

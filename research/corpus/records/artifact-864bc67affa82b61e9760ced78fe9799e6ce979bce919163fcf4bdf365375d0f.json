@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:principia:artifact:source%3Aorrery%3Aa1c430db54d585048ec85c4e7c47141db634f398%3Alab%2Fsims%2Fscarcity-grid-weight-black-hole%2Fsim.json",
+  "aliases": [
+    "source:orrery:a1c430db54d585048ec85c4e7c47141db634f398:lab/sims/scarcity-grid-weight-black-hole/sim.json"
+  ],
+  "activity": "active",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": null,
+    "blob_oid": null,
+    "sha256": "sha256:33d102a7efbaad408c4e50e11655d872859c7542be10e7be060af024c2d6e890",
+    "path": "upstream-snapshot/orrery/a1c430db54d585048ec85c4e7c47141db634f398/lab/sims/scarcity-grid-weight-black-hole/sim.json",
+    "selector": "$",
+    "historical": true,
+    "working_tree": true
+  },
+  "limitations": [
+    "Immutable archival source copy; upstream scientific ownership is unchanged."
+  ],
+  "missingness": [
+    "git-revision",
+    "owner-ingestion-git-pin",
+    "scope",
+    "upstream-canonical-record"
+  ],
+  "legacy": {
+    "source_pin": {
+      "repository": "orrery",
+      "git_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "path": "lab/sims/scarcity-grid-weight-black-hole/sim.json",
+      "blob_oid": "847618c4716f7ce89095f20168a10958f5dc8cbc",
+      "sha256": "sha256:33d102a7efbaad408c4e50e11655d872859c7542be10e7be060af024c2d6e890",
+      "bytes": 611,
+      "commit_metadata": "a1c430db54d585048ec85c4e7c47141db634f398\n2026-09-06T02:28:14+00:00\n2026-09-06T02:28:14+00:00\nfeat: Preserve the original electron animation's continuous fold in a c… [ORB-11374]\n"
+    },
+    "text": "{\n  \"slug\": \"scarcity-grid-weight-black-hole\",\n  \"title\": \"Grid weight field around a black-hole sphere\",\n  \"kind\": \"web\",\n  \"entry\": \"index.html\",\n  \"status\": \"imported\",\n  \"created\": \"2026-07-05\",\n  \"topics\": [\n    \"gravity\",\n    \"black-holes\",\n    \"field-visualization\"\n  ],\n  \"family\": \"gravity-as-scarcity\",\n  \"summary\": \"3D grid whose node weights render the scarcity field around a compact (black-hole-like) sphere.\",\n  \"provenance\": {\n    \"almanac\": \"15-discussions/26-07/gravity-as-scarcity-of-space.md\",\n    \"imported_from\": \"almanac/40-outputs/gravity/grid_weight_field_black_hole_sphere.html\"\n  }\n}\n",
+    "commit_object": "tree 8d851030602405b11b7166108b09cf9cd5664329\nparent 148b668391f575466282eaa81aab0dc943846a87\nauthor orbit[gpt-6-astra] <agent@orbit.invalid> 1788661694 +0000\ncommitter orbit <orbit@orbit.local> 1788661694 +0000\n\nfeat: Preserve the original electron animation's continuous fold in a c… [ORB-11374]\n\nPreserve the original electron animation's continuous fold in a computed-field view\n\nPlanned-By: codex\n"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "source",
+    "availability": "available",
+    "snapshot_digest": "sha256:33d102a7efbaad408c4e50e11655d872859c7542be10e7be060af024c2d6e890",
+    "locator": null,
+    "media_type": "application/json"
+  },
+  "revision_id": "sha256:864bc67affa82b61e9760ced78fe9799e6ce979bce919163fcf4bdf365375d0f"
+}

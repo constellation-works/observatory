@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:principia:artifact:source%3Aorrery%3Aa1c430db54d585048ec85c4e7c47141db634f398%3Alab%2Fsims%2Fsolar-system-nbody%2Fsim.json",
+  "aliases": [
+    "source:orrery:a1c430db54d585048ec85c4e7c47141db634f398:lab/sims/solar-system-nbody/sim.json"
+  ],
+  "activity": "active",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": null,
+    "blob_oid": null,
+    "sha256": "sha256:72e653b5ebe7ac8ef293f8e9d3b6df4c039405500019e8da59e70c83a6cc8d5f",
+    "path": "upstream-snapshot/orrery/a1c430db54d585048ec85c4e7c47141db634f398/lab/sims/solar-system-nbody/sim.json",
+    "selector": "$",
+    "historical": true,
+    "working_tree": true
+  },
+  "limitations": [
+    "Immutable archival source copy; upstream scientific ownership is unchanged."
+  ],
+  "missingness": [
+    "git-revision",
+    "owner-ingestion-git-pin",
+    "scope",
+    "upstream-canonical-record"
+  ],
+  "legacy": {
+    "source_pin": {
+      "repository": "orrery",
+      "git_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "path": "lab/sims/solar-system-nbody/sim.json",
+      "blob_oid": "d1e35e4848dd6c389229588b450ed95a2ee8e514",
+      "sha256": "sha256:72e653b5ebe7ac8ef293f8e9d3b6df4c039405500019e8da59e70c83a6cc8d5f",
+      "bytes": 1019,
+      "commit_metadata": "a1c430db54d585048ec85c4e7c47141db634f398\n2026-09-06T02:28:14+00:00\n2026-09-06T02:28:14+00:00\nfeat: Preserve the original electron animation's continuous fold in a c… [ORB-11374]\n"
+    },
+    "text": "{\n  \"slug\": \"solar-system-nbody\",\n  \"title\": \"Solar system n-body simulator\",\n  \"kind\": \"web\",\n  \"entry\": \"index.html\",\n  \"status\": \"imported\",\n  \"created\": \"2026-07-05\",\n  \"topics\": [\n    \"gravity\",\n    \"n-body\",\n    \"orbital-mechanics\"\n  ],\n  \"summary\": \"Interactive nine-body gravity, the ORB-10093 Newtonian export, and an untuned multiplicative-scarcity falsifier whose primary orientation exceeds the measured omission floor only for Uranus.\",\n  \"family\": \"gravity-as-scarcity\",\n  \"baseline\": {\n    \"entry\": \"export_baseline.py\",\n    \"output\": \"baseline/newtonian_2016_2026.parquet\",\n    \"frame\": \"heliocentric ICRF\",\n    \"epochs\": \"JD 2457388.5 + 10*k TDB, k=0..365\"\n  },\n  \"scarcity_test\": {\n    \"entry\": \"integrate_scarcity.py\",\n    \"output\": \"scarcity/summary.json\",\n    \"control\": \"screened reading: identically zero signature\"\n  },\n  \"provenance\": {\n    \"imported_from\": \"almanac/40-outputs/gravity/solar-system-simulator.html\",\n    \"orbit_tasks\": [\"ORB-10093\", \"ORB-10097\", \"ORB-10096\", \"ORB-10076\"]\n  }\n}\n",
+    "commit_object": "tree 8d851030602405b11b7166108b09cf9cd5664329\nparent 148b668391f575466282eaa81aab0dc943846a87\nauthor orbit[gpt-6-astra] <agent@orbit.invalid> 1788661694 +0000\ncommitter orbit <orbit@orbit.local> 1788661694 +0000\n\nfeat: Preserve the original electron animation's continuous fold in a c… [ORB-11374]\n\nPreserve the original electron animation's continuous fold in a computed-field view\n\nPlanned-By: codex\n"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "source",
+    "availability": "available",
+    "snapshot_digest": "sha256:72e653b5ebe7ac8ef293f8e9d3b6df4c039405500019e8da59e70c83a6cc8d5f",
+    "locator": null,
+    "media_type": "application/json"
+  },
+  "revision_id": "sha256:233dab98a8ef5260e359ba71b503187a64bb145a866fe1234f2dca42c261a328"
+}

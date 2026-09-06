@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "kind": "assessment",
+  "id": "urn:research:principia:assessment:shear-weyl-ricci-resonance%3Alegacy-verdict",
+  "aliases": [
+    "shear-weyl-ricci-resonance:legacy-verdict"
+  ],
+  "activity": "unknown",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "c9b26b67f260c4002319c1d9268872f2339ab69b",
+    "sha256": "sha256:e1bd24b05676d65097d91c786c4fb02d28dba5293720deb7bc96898a88e268d0",
+    "path": "theory/shear-sourced-consumption/claims.json",
+    "selector": "/claims/12",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Exact historical verdict and stated assumptions only; migration makes no new scientific inference."
+  ],
+  "missingness": [
+    "exact-evidence-owner-references",
+    "independently-verified-controls",
+    "activity",
+    "scope"
+  ],
+  "legacy": {
+    "id": "shear-weyl-ricci-resonance",
+    "family": "gravity-as-scarcity",
+    "kind": "nature",
+    "status": "conjecture",
+    "claim": "\"Shear consumes, isotropic strain doesn't\" corresponds to GR's Weyl/Ricci split",
+    "evidence": "Resonance only; no derivation, no citation yet",
+    "links": [],
+    "in_doc_ledger": true
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "claim": {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:shear-weyl-ricci-resonance",
+      "revision_id": "sha256:781fe5b9720195b417961d551abcca6b57a798b632bc9a8f40bbaaa1747d07bc",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    "verdict": "untested",
+    "legacy_verdict": "conjecture",
+    "inference": "historical",
+    "basis": "legacy-report",
+    "controls": "unknown",
+    "rationale": "Resonance only; no derivation, no citation yet",
+    "evidence": []
+  },
+  "revision_id": "sha256:d9fe1891caf513de0d62cdaf33cd1ff3228166a183a7de61cda4b46253d2a0ec"
+}

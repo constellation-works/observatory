@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "kind": "claim",
+  "id": "urn:research:principia:claim:shear-flux-superposition-artifact",
+  "aliases": [
+    "shear-flux-superposition-artifact"
+  ],
+  "activity": "retired",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "c9b26b67f260c4002319c1d9268872f2339ab69b",
+    "sha256": "sha256:e1bd24b05676d65097d91c786c4fb02d28dba5293720deb7bc96898a88e268d0",
+    "path": "theory/shear-sourced-consumption/claims.json",
+    "selector": "/claims/9",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Exact historical verdict and stated assumptions only; migration makes no new scientific inference."
+  ],
+  "missingness": [
+    "scope"
+  ],
+  "legacy": {
+    "id": "shear-flux-superposition-artifact",
+    "family": "gravity-as-scarcity",
+    "kind": "model-property",
+    "status": "supported",
+    "claim": "The ORB-10751 two-core superposition divergence is a flux-boundary artifact; level-type cores restore the counting mechanic's ORB-10157 headroom family",
+    "evidence": "Predicted by the closure (§ closure (d)); **measured both ways, 2026-08-21.** Flux arm: **ORB-10755** converged the divergent family under flux cores (c = 4.63 ± 0.18, β = 0.606 ± 0.027 at 65³) — real physics of that boundary condition. Level arm: **ORB-10934 family gate confirmed** — full 3-D draw-sourced level cores, same frozen stencil, revert to (1−D)^p with continuum p = 1.0717 ± 0.0036 (consistent with 1.071); free flux family loses ~14× in log-RMSE (0.0949 vs 0.0066) with β driven to the analytic bound 2 — no non-analytic revival ([level-core-two-core-superposition](../../../orrery/lab/sims/level-core-two-core-superposition/), orrery `9e273e2`)",
+    "links": [
+      "../../../orrery/lab/sims/level-core-two-core-superposition/"
+    ],
+    "in_doc_ledger": true
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "claim",
+    "statement": "The ORB-10751 two-core superposition divergence is a flux-boundary artifact; level-type cores restore the counting mechanic's ORB-10157 headroom family",
+    "domain": "model"
+  },
+  "revision_id": "sha256:0adbf67d7e3992af1bebcbb740613ee465a6ffddd772d909e747dc28a0e366ca"
+}

@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "kind": "assessment",
+  "id": "urn:research:principia:assessment:moving-theorem-2-wake-not-gauge%3Alegacy-verdict",
+  "aliases": [
+    "moving-theorem-2-wake-not-gauge:legacy-verdict"
+  ],
+  "activity": "unknown",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "d9f73691ac539f5935cd6dbedcabdb6f722777a3",
+    "sha256": "sha256:0ec4339ac8934344ada2473abd7941e08d9c413b12e2636c275ab4f9a35a70a5",
+    "path": "theory/moving-sources-in-the-closed-system/claims.json",
+    "selector": "/claims/3",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Exact historical verdict and stated assumptions only; migration makes no new scientific inference."
+  ],
+  "missingness": [
+    "exact-evidence-owner-references",
+    "independently-verified-controls",
+    "activity",
+    "scope"
+  ],
+  "legacy": {
+    "id": "moving-theorem-2-wake-not-gauge",
+    "family": "gravity-as-scarcity",
+    "kind": "nature",
+    "status": "mixed",
+    "claim": "The Galilean field U + v_GP is not a solution of the closed system (exact residual (U·∇)v_GP); the physical discriminator against GR is mass-frame: GR there is exactly Schwarzschild (U is gauge) while the closed system's wake distorts the direction field at O(U) and the speed field at O(U²) (Theorem 2, restated 2026-08-21)",
+    "evidence": "Boost-failure is exact (symbolic residual). ORB-10935 G2's 0.456–0.732 rad weighted RMS direction departures, fore-aft n_x asymmetry −0.86…−0.92, and the no-stagnation corollary (q ≥ U > 0 vs axis speed zeros) are measurements against the *Galilean river picture* — informative about the wake, silent about GR proper (frame critique, 2026-08-21). **The realized settled wake is now in hand** (ORB-10938 G4): direction-field multipoles sit near ORB-10935's marched branch (differences 0.02–0.18) and far from boosted GP (0.30–0.37) at U/v_GP = 0.3 on 41³/61³, with no stagnation point anywhere — the wake exists, is structured, and is not the Galilean picture. [Moving-source gravity bounds](../../studies/moving-source-gravity-bounds.md) now supplies the external calibration: α₁/α₂ preferred-frame walls and the moving-lens result, 0.98 ± 0.19 of GR's 51 μas velocity term, whose sharpest reading is a noncompetitive α₁ bound. The row remains mixed because those targets do not test the mechanic until its executed PPN reduction ([ppn-reduction-of-the-settled-flow](../ppn-reduction-of-the-settled-flow/)) yields converged far-field coefficients; ORB-10939 brackets the photon-sector modulation scale meanwhile",
+    "links": [
+      "../../studies/moving-source-gravity-bounds.md",
+      "../ppn-reduction-of-the-settled-flow/"
+    ],
+    "in_doc_ledger": true,
+    "tags": [
+      "preferred-frame"
+    ],
+    "comparator": "GR mass-frame Schwarzschild (uniform U is gauge). Not the Galilean river picture U+v_GP."
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "claim": {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:moving-theorem-2-wake-not-gauge",
+      "revision_id": "sha256:b48bdee70978926e02e945b78746f5ccd475e5f8149af47e654213192b202872",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    "verdict": "inconclusive",
+    "legacy_verdict": "mixed",
+    "inference": "historical",
+    "basis": "legacy-report",
+    "controls": "unknown",
+    "rationale": "Boost-failure is exact (symbolic residual). ORB-10935 G2's 0.456–0.732 rad weighted RMS direction departures, fore-aft n_x asymmetry −0.86…−0.92, and the no-stagnation corollary (q ≥ U > 0 vs axis speed zeros) are measurements against the *Galilean river picture* — informative about the wake, silent about GR proper (frame critique, 2026-08-21). **The realized settled wake is now in hand** (ORB-10938 G4): direction-field multipoles sit near ORB-10935's marched branch (differences 0.02–0.18) and far from boosted GP (0.30–0.37) at U/v_GP = 0.3 on 41³/61³, with no stagnation point anywhere — the wake exists, is structured, and is not the Galilean picture. [Moving-source gravity bounds](../../studies/moving-source-gravity-bounds.md) now supplies the external calibration: α₁/α₂ preferred-frame walls and the moving-lens result, 0.98 ± 0.19 of GR's 51 μas velocity term, whose sharpest reading is a noncompetitive α₁ bound. The row remains mixed because those targets do not test the mechanic until its executed PPN reduction ([ppn-reduction-of-the-settled-flow](../ppn-reduction-of-the-settled-flow/)) yields converged far-field coefficients; ORB-10939 brackets the photon-sector modulation scale meanwhile",
+    "evidence": []
+  },
+  "revision_id": "sha256:70a7570a5ee06682c011221cb427700841c220d793687849ee3a4fb29c919d00"
+}

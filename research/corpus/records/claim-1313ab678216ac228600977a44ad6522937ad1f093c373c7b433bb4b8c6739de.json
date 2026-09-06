@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "kind": "claim",
+  "id": "urn:research:principia:claim:scarcity-static-photon-gamma",
+  "aliases": [
+    "scarcity-static-photon-gamma"
+  ],
+  "activity": "retired",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "b5f58c64f4c6bf9d7d7f67c826f5d2dd7c9cb64f",
+    "sha256": "sha256:996b059ca4b45cee6dd42a503594508ebb8d6d13211ad1104df3754b116d5976",
+    "path": "theory/gravity-as-scarcity/claims.json",
+    "selector": "/claims/10",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Exact historical verdict and stated assumptions only; migration makes no new scientific inference."
+  ],
+  "missingness": [
+    "scope"
+  ],
+  "legacy": {
+    "id": "scarcity-static-photon-gamma",
+    "family": "gravity-as-scarcity",
+    "kind": "nature",
+    "status": "refuted",
+    "claim": "Light couples to scarcity so as to reproduce measured deflection and Shapiro delay (the photon sector; PPN γ)",
+    "evidence": "**Derived, not assumed (ORB-10156, § below):** every photon coupling the lattice supports fails — photons blind to the field give zero deflection/delay (Nordström's fate); photons coupled to the stored time-potential give γ = 0 (half-GR: 0.875″ limb deflection, half Shapiro); the literal hop-on-depleted-lattice reading gives the wrong *sign* (light speeds up where points are sparse → bends away, Shapiro advance) with a non-PPN 1/r² profile. Best case \\|γ − 1\\| = 1 vs Cassini's (2.1 ± 2.3)×10⁻⁵ and VLBI's ~10⁻⁴ ([studies/scalar-gravity-ppn-constraints](../../studies/scalar-gravity-ppn-constraints.md)). The hoped-for outcome — the lattice yielding time- and space-facing effects at the γ = 1 ratio — is **negative**: it would need a tick-rate deficit *and* a proper-space *excess* of GM/c²r each, and the mechanic supplies neither (depletion has the wrong sign for Ψ). Kills the model **as a complete theory of gravity as stated**; the galactic massive-sector result is untouched. Lattice-level check of the sign claim: proposed faraday task **ORB-10158**. **ORB-10159 update:** stands as stated (static lattice); the dynamical excitation completion conditionally reopens the sector with the *right* sign — flow drag supplies the γΦ half exactly (γ = 1) — see the excitation-completion row below and § clock sector (e); ORB-10158's scope extended with a flowing-lattice arm",
+    "links": [
+      "../../studies/scalar-gravity-ppn-constraints.md"
+    ],
+    "in_doc_ledger": true
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "claim",
+    "statement": "Light couples to scarcity so as to reproduce measured deflection and Shapiro delay (the photon sector; PPN γ)",
+    "domain": "nature"
+  },
+  "revision_id": "sha256:1313ab678216ac228600977a44ad6522937ad1f093c373c7b433bb4b8c6739de"
+}

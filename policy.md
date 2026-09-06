@@ -22,15 +22,15 @@ for a phenomenology card.
 
 ## Kinds of claim
 
-Canonical files: `theory/<doc>/claims.json`. Every `## Evidence ledger` row in
+Compatibility registries: `theory/<doc>/claims.json`. Every `## Evidence ledger` row in
 `theory/<doc>/evidence-ledger.md` must appear there, byte-for-byte in `claim`.
 
-The single migrated exception is `wide-binary-selection-methodology`:
-[its immutable records](research/wide-binary/README.md) own the pilot, and its
-original theory files, gate and protocol study are checked compatibility views.
-The checker enforces their exact projection as well as every existing rule below.
-Append a new owner record revision for future changes; do not edit those views
-independently. No other family's authority changes.
+The [owner records](research/README.md) now own all ten programs, their claims, gates,
+studies and scientific prose. `research/active.json` selects exact immutable records;
+registries, tables, hubs and rollup are generated/checked compatibility views. The original
+wide-binary v1 records remain intact. Native changes append revisions with the shared
+framework and project these views in the same change. All rules below still apply; a
+migration or native registration is never authorization to reopen work or run an experiment.
 
 | kind | what it is |
 |---|---|

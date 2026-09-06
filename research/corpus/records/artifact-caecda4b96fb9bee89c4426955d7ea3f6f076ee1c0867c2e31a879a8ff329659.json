@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Agates%2FREADME.md",
+  "aliases": [
+    "source:principia:4e3b02c59b694d85016915177ef1ae157895ed7b:gates/README.md"
+  ],
+  "activity": "active",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "4ec3f4d474260ad7aec73da3b2cfee193822364e",
+    "sha256": "sha256:6e7e000b7725f8e1768720506e7b5d5bf252fa6118c4f5a5db3a902a3c176433",
+    "path": "gates/README.md",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Immutable archival source copy; upstream scientific ownership is unchanged."
+  ],
+  "missingness": [
+    "scope"
+  ],
+  "legacy": {
+    "source_pin": {
+      "repository": "principia",
+      "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "path": "gates/README.md",
+      "blob_oid": "4ec3f4d474260ad7aec73da3b2cfee193822364e",
+      "sha256": "sha256:6e7e000b7725f8e1768720506e7b5d5bf252fa6118c4f5a5db3a902a3c176433",
+      "bytes": 400,
+      "commit_metadata": "4e3b02c59b694d85016915177ef1ae157895ed7b\n2026-09-06T02:49:35+00:00\n2026-09-06T02:49:35+00:00\nfeat: Migrate the wide-binary control pilot into versioned scientific r… [ORB-11378]\n"
+    },
+    "text": "# gates/\n\nOne JSON card per owed object. New theory work starts here, not as a new\nparagraph and not as a new sim.\n\nSchema: [../schema/gate.schema.json](../schema/gate.schema.json). Procedure:\n[../policy.md](../policy.md). The lock is `python3 scripts/check-theory.py`.\n\nKinds: `existence`, `control`, `derivation`. Phenomenology cards are rejected\nuntil the family's existence claim is `supported`.\n",
+    "commit_object": "tree 682cccb1cf19c89c2c5f4371c14ed2b384d2ae8c\nparent 13866b2848fbcce9a1f1ef2d4b97051a65f7e626\nauthor orbit[gpt-6-astra] <agent@orbit.invalid> 1788662975 +0000\ncommitter orbit <orbit@orbit.local> 1788662975 +0000\n\nfeat: Migrate the wide-binary control pilot into versioned scientific r… [ORB-11378]\n\nMigrate the wide-binary control pilot into versioned scientific records\n\nPlanned-By: codex\n"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "source",
+    "availability": "available",
+    "snapshot_digest": "sha256:6e7e000b7725f8e1768720506e7b5d5bf252fa6118c4f5a5db3a902a3c176433",
+    "locator": null,
+    "media_type": "text/plain"
+  },
+  "revision_id": "sha256:caecda4b96fb9bee89c4426955d7ea3f6f076ee1c0867c2e31a879a8ff329659"
+}

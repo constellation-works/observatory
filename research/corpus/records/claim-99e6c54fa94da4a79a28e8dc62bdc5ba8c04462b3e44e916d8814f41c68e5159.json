@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "kind": "claim",
+  "id": "urn:research:principia:claim:branch-c-observable-dipole",
+  "aliases": [
+    "branch-c-observable-dipole"
+  ],
+  "activity": "resolved",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "f55e1dace027658053ccc8f5b740363237c0eda4",
+    "sha256": "sha256:34d8fd1300c47a5df5ea2300abe6ba3ac4e6c29d546f03686710d88e1297d681",
+    "path": "theory/moving-source-field-consistency/claims.json",
+    "selector": "/claims/16",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Exact historical verdict and stated assumptions only; migration makes no new scientific inference."
+  ],
+  "missingness": [
+    "scope"
+  ],
+  "legacy": {
+    "id": "branch-c-observable-dipole",
+    "family": "retarded-scarcity-wake",
+    "kind": "nature",
+    "status": "refuted",
+    "claim": "An explicitly boost-violating local substrate equation yields a galactic \\(m=1\\) dipole at an observable amplitude — at or above the delayed-center toy scale \\(2\\times10^{-3}\\), let alone the observed lopsidedness scale ~0.1 — with breaking parameters that survive the sourced walls",
+    "evidence": "**Closed (ORB-11175, [Branch C](branch-c.md) § Walls and § Closure):** of the three breaking parameters, the speed makes no dipole and is pinned by Cherenkov ([moving-source-gravity-bounds](../../studies/moving-source-gravity-bounds.md)); the source delay is a rigid offset the Sun's dynamical centre excludes at \\(A_1<4\\times10^{-12}\\); the dissipative parameter's dipole is locked to a first-order self-acceleration of the Sun of at least \\(0.31\\,\\Gamma\\) m/s² in a fixed inertial direction, which the house ephemeris floor ([solar-system-ephemeris-precision-floor](../../studies/solar-system-ephemeris-precision-floor.md), Saturn \\(3\\times10^{-13}\\) to Uranus \\(3\\times10^{-14}\\) m/s²) caps at \\(\\ell_\\Gamma>10\\)–\\(100\\) kpc and hence \\(A_1(10\\,{\\rm kpc})\\lesssim10^{-3}\\) to \\(3\\times10^{-5}\\) — \\(10^{2}\\)–\\(3\\times10^{3}\\) below the observed scale on every reading. The four walls named on the card ([lorentz-violation-bounds](../../studies/lorentz-violation-bounds.md), [scalar-gravity-ppn-constraints](../../studies/scalar-gravity-ppn-constraints.md)) bind the completion, not the dissipative parameter. Velocity scales: [lorentz-violation-bounds](../../studies/lorentz-violation-bounds.md), [milky-way-rotation-curve](../../studies/milky-way-rotation-curve.md); universality of the source equation: [source-side-universality-of-g](../../studies/source-side-universality-of-g.md)",
+    "links": [
+      "branch-c.md",
+      "../../studies/solar-system-ephemeris-precision-floor.md",
+      "../../studies/moving-source-gravity-bounds.md",
+      "../../studies/lorentz-violation-bounds.md",
+      "../../studies/scalar-gravity-ppn-constraints.md",
+      "../../studies/milky-way-rotation-curve.md",
+      "../../studies/source-side-universality-of-g.md"
+    ],
+    "in_doc_ledger": true,
+    "tags": [
+      "preferred-frame"
+    ],
+    "kill": "Fired 2026-09-04 on the solar-system self-acceleration wall.",
+    "comparator": "The specified boost-invariant control (Heaviside/Carlip, eq. 2 of the chapter) in the substrate frame; the solar-system confrontation is against the Newtonian-omission ephemeris floor, not a Galilean U+v picture."
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "claim",
+    "statement": "An explicitly boost-violating local substrate equation yields a galactic \\(m=1\\) dipole at an observable amplitude — at or above the delayed-center toy scale \\(2\\times10^{-3}\\), let alone the observed lopsidedness scale ~0.1 — with breaking parameters that survive the sourced walls",
+    "domain": "nature"
+  },
+  "revision_id": "sha256:99e6c54fa94da4a79a28e8dc62bdc5ba8c04462b3e44e916d8814f41c68e5159"
+}

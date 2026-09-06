@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:principia:artifact:source%3Aorrery%3Aa1c430db54d585048ec85c4e7c47141db634f398%3Alab%2Fsims%2Ftwo-substance-dynamical-packet%2FRUN-2026-08-21.md",
+  "aliases": [
+    "source:orrery:a1c430db54d585048ec85c4e7c47141db634f398:lab/sims/two-substance-dynamical-packet/RUN-2026-08-21.md"
+  ],
+  "activity": "active",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": null,
+    "blob_oid": null,
+    "sha256": "sha256:fb707b48233d5d9d0529ac0f80c6e8185bdf314e00f2798c0c5d88aba2042a79",
+    "path": "upstream-snapshot/orrery/a1c430db54d585048ec85c4e7c47141db634f398/lab/sims/two-substance-dynamical-packet/RUN-2026-08-21.md",
+    "selector": "$",
+    "historical": true,
+    "working_tree": true
+  },
+  "limitations": [
+    "Immutable archival source copy; upstream scientific ownership is unchanged."
+  ],
+  "missingness": [
+    "git-revision",
+    "owner-ingestion-git-pin",
+    "scope",
+    "upstream-canonical-record"
+  ],
+  "legacy": {
+    "source_pin": {
+      "repository": "orrery",
+      "git_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "path": "lab/sims/two-substance-dynamical-packet/RUN-2026-08-21.md",
+      "blob_oid": "4da69eb9be029653f8dec0861bf125cf01fdb06e",
+      "sha256": "sha256:fb707b48233d5d9d0529ac0f80c6e8185bdf314e00f2798c0c5d88aba2042a79",
+      "bytes": 5822,
+      "commit_metadata": "a1c430db54d585048ec85c4e7c47141db634f398\n2026-09-06T02:28:14+00:00\n2026-09-06T02:28:14+00:00\nfeat: Preserve the original electron animation's continuous fold in a c… [ORB-11374]\n"
+    },
+    "text": "# Run record — 2026-08-21\n\nTask: ORB-10941\n\nStatus: complete. The controls and thresholds below were fixed before the\nvalidated tracked run. Measured classifications are reported without changing\nthe gates.\n\n## Predeclaration\n\n- Coupling/amplitude matrix: `lambda = 0, 0.2, 0.5, 0.8` crossed with packet\n  amplitudes `0.02, 0.04, 0.06, 0.08`; direct zero-common packet\n  initialization is identical across arms.\n- Time profiles: sample signed, absolute, positive, and negative y-integrated\n  common/relative profiles; their centroids, widths, correlations, speeds, and\n  common-minus-relative lag normalized by relative width.\n- Attachment/wake gate: evaluate samples at `t >= 0.40 duration`. Attachment\n  requires at least 80% resolved samples inside `0.75` widths with correlation\n  at least `0.50` and fitted speeds within 10%. Wake requires at least 80%\n  resolved late samples, median lag below `-0.75` widths, median correlation at\n  least `0.50`, and common speed more than 10% below relative speed. Otherwise\n  report mixed/detached; no outcome is forced.\n- Primary convergence: rerun all four amplitudes at `lambda=0.8` on grids\n  `128, 192, 256` and timesteps `0.09, 0.06, 0.03`. Converged means finest\n  exponent shift `<=0.02`, prefactor change `<=5%`, normalized-lag shift\n  `<=0.10`, and unchanged profile classification.\n- Emission gate: run a defect-emission arm only if the declared fixture family\n  contains an autonomous defect-to-relative-mode emission operator with a\n  conservative defect-plus-field budget. Do not substitute direct packet\n  initialization or forced target relaxation.\n- Stability: audit the original Hamiltonian analytically on unrestricted mode\n  fields and numerically over every sampled base-run state. Record density\n  positivity, energy-density range, and finiteness. Add no stabilizer.\n- Budgets: retain separate `n1`, `n2`, global `n_plus`, global `n_minus`, total\n  energy, and fixed initialization-region records with numerical floors.\n\n## Measured coupling controls\n\nThe zero-coupling maximum `integral |n_plus|` is `2.4221e-12`, below the\npredicted/declared null floor `2.6193e-10`. The nonzero energy fits are:\n\n| lambda | exponent | prefactor | max-amplitude common magnitude |\n| ---: | ---: | ---: | ---: |\n| 0.2 | 0.9999182 | 0.6145802 | 0.3336381 |\n| 0.5 | 0.9994946 | 1.5343181 | 0.8329827 |\n| 0.8 | 0.9987172 | 2.4486585 | 1.3295052 |\n\nAt fixed amplitude, the fitted response exponents versus nonzero lambda range\nfrom `0.9974417` to `0.9998368`. The resolved common magnitude is therefore\nlinear in the inserted coupling and approximately linear in packet energy.\n\n## Measured attachment/wake result\n\nFor the representative `lambda=0.8`, amplitude `0.08` run, all 39 late samples\nresolve common content. The median lag is `-0.841291` packet widths and median\nabsolute-profile correlation is `0.701788`. Fitted common and relative profile\nspeeds are `0.672648` and `0.969589`. Verdict: **trailing wake**. The common\nstructure trails and propagates substantially more slowly than the relative\npacket; it is not packet-attached under the declared gate.\n\n## Measured convergence\n\n| grid size | dx | exponent | prefactor | normalized lag | verdict |\n| ---: | ---: | ---: | ---: | ---: | --- |\n| 128 | 0.750 | 0.9987172 | 2.4486585 | -0.841291 | trailing wake |\n| 192 | 0.500 | 0.9984560 | 2.4389633 | -0.813310 | trailing wake |\n| 256 | 0.375 | 0.9983694 | 2.4606385 | -0.801455 | trailing wake |\n\nThe finest grid shifts are `8.6555e-5` in exponent, `0.0088088` relative in\nprefactor, and `0.0118548` widths in lag: **converged**.\n\n| dt | exponent | prefactor | normalized lag | verdict |\n| ---: | ---: | ---: | ---: | --- |\n| 0.09 | 0.9987153 | 2.4459387 | -0.848339 | trailing wake |\n| 0.06 | 0.9987172 | 2.4486585 | -0.841291 | trailing wake |\n| 0.03 | 0.9987177 | 2.4485986 | -0.844157 | trailing wake |\n\nThe finest timestep shifts are `4.3126e-7`, `2.4439e-5`, and `0.0028659`,\nrespectively: **converged**. Speed is reported on every rung but is not used as\na substitute for convergence of the primary observables.\n\n## Emission and stability verdicts\n\nEndogenous defect emission is **unsupported**. The missing operator is an\nequation coupling an autonomous defect/core degree of freedom and its energy\nto an outgoing relative current `J_minus` (or `n_minus` boundary flux), with a\nclosed defect-plus-field energy/refill budget. The existing defect fixture's\npinned analytic core and externally translated relaxation target do not supply\nthat operator. No source was added.\n\nFor nonzero lambda, minimizing the potential at fixed `n_minus=m` gives\n`n_plus=-lambda m^2/(2 c_plus^2)` and\n`V_min=c_minus^2 m^2/4-lambda^2 m^4/(16 c_plus^2)`, which is unbounded below.\nThe sampled base domain remained positive and finite: minimum `n1=0.975239`,\nminimum `n2=0.960001`, and sampled Hamiltonian density\n`1.0104e-19–0.00319987`. This does not stabilize the global Hamiltonian. No\nbounded variant was tested or silently substituted.\n\n## Budgets and reproducibility\n\nAcross the coupling/amplitude matrix, maximum `n1` and `n2` total drifts are\n`1.8190e-12` against the `6.5484e-11` floor. The global common monopole is at\nmost `5.7854e-13`, the relative total at most `8.9528e-13`, and maximum\nrelative energy drift is `1.3194e-6`. Local absolute common content is not\ninterpreted as net gravitational mass.\n\nTwo independent output directories were generated with:\n\n```sh\nMPLCONFIGDIR=<fresh-dir> XDG_CACHE_HOME=<fresh-dir> UV_CACHE_DIR=<fresh-dir> \\\n  uv run lab/sims/two-substance-dynamical-packet/main.py --output-dir <fresh-dir>\n```\n\nBoth `cmp` checks returned zero. Final artifact hashes:\n\n- `results.json`: `2cb7616ad2abc6dc21f9f648c80a01c8684d0831f72c3805fbd9af703491a84b`\n- `packet-budget.png`: `8c340e0e11dfae85027ef0400e4269e016aa38691f249639661896772dc5aed6`\n",
+    "commit_object": "tree 8d851030602405b11b7166108b09cf9cd5664329\nparent 148b668391f575466282eaa81aab0dc943846a87\nauthor orbit[gpt-6-astra] <agent@orbit.invalid> 1788661694 +0000\ncommitter orbit <orbit@orbit.local> 1788661694 +0000\n\nfeat: Preserve the original electron animation's continuous fold in a c… [ORB-11374]\n\nPreserve the original electron animation's continuous fold in a computed-field view\n\nPlanned-By: codex\n"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "source",
+    "availability": "available",
+    "snapshot_digest": "sha256:fb707b48233d5d9d0529ac0f80c6e8185bdf314e00f2798c0c5d88aba2042a79",
+    "locator": null,
+    "media_type": "text/plain"
+  },
+  "revision_id": "sha256:7eb358e2f6eeeef759c82d2708b76432262c7d8a54bc1f2a2bc93d0cddaaac42"
+}

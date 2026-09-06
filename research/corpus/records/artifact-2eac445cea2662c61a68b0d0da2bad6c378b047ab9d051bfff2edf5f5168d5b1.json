@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Atheory%2Fswirl-photon%2Fevidence-ledger.md",
+  "aliases": [
+    "source:principia:4e3b02c59b694d85016915177ef1ae157895ed7b:theory/swirl-photon/evidence-ledger.md"
+  ],
+  "activity": "active",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "b6fe2e9da1e7ee90cade89ba1ce8e48f2f0c7b54",
+    "sha256": "sha256:5013c0fee5544bd7f8b4ffb9b5b9390531ee0df6ca03e4e3c7b7f7cb6de6ff34",
+    "path": "theory/swirl-photon/evidence-ledger.md",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Immutable archival source copy; upstream scientific ownership is unchanged."
+  ],
+  "missingness": [
+    "scope"
+  ],
+  "legacy": {
+    "source_pin": {
+      "repository": "principia",
+      "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "path": "theory/swirl-photon/evidence-ledger.md",
+      "blob_oid": "b6fe2e9da1e7ee90cade89ba1ce8e48f2f0c7b54",
+      "sha256": "sha256:5013c0fee5544bd7f8b4ffb9b5b9390531ee0df6ca03e4e3c7b7f7cb6de6ff34",
+      "bytes": 1672,
+      "commit_metadata": "4e3b02c59b694d85016915177ef1ae157895ed7b\n2026-09-06T02:49:35+00:00\n2026-09-06T02:49:35+00:00\nfeat: Migrate the wide-binary control pilot into versioned scientific r… [ORB-11378]\n"
+    },
+    "text": "## Evidence ledger\n\n| Claim | Status | Evidence |\n|---|---|---|\n| The turn sheds a genuinely detaching 1/r field (radiation) distinct from the bound 1/r² velocity field | supported | [swirl-ball](../../../orrery/lab/sims/swirl-ball/) (v6 renders both: gold bound field, cyan radiation kink); standard Liénard–Wiechert / Purcell kink construction |\n| The detached swirl is self-sustaining in the far zone (E and B regenerating each other, carrying energy, momentum, angular momentum) | supported | the standard source-free Maxwell radiation solution — concretely, the 1/r acceleration term [swirl-ball](../../../orrery/lab/sims/swirl-ball/) computes exactly and renders detaching from the bound field. **Audit 2026-08-20:** [swirl-ball-far-field](../../../orrery/lab/sims/swirl-ball-far-field/) is illustration only, not the previously claimed \"free wave-equation solution\" — its rings are spawned at the emitter and expanded kinematically, with their count set by the emission-density slider, so any apparent discreteness or pocket structure is put in by the renderer, not emergent. The source-free-solution citation belongs in the same `../studies/` note as the antibunching row |\n| The swirl *is* a photon, classically | refuted | a one-photon state has ⟨E⟩ = 0 everywhere, and Grangier–Roger–Aspect antibunching (1986) shows a single photon never triggers both beamsplitter outputs while self-interfering — needs a `../studies/` note to carry the citation properly |\n| The swirl is the classical field mode whose quantized excitations are photons | supported | the resolution of the thread; consistent with both sims and the antibunching constraint |\n",
+    "commit_object": "tree 682cccb1cf19c89c2c5f4371c14ed2b384d2ae8c\nparent 13866b2848fbcce9a1f1ef2d4b97051a65f7e626\nauthor orbit[gpt-6-astra] <agent@orbit.invalid> 1788662975 +0000\ncommitter orbit <orbit@orbit.local> 1788662975 +0000\n\nfeat: Migrate the wide-binary control pilot into versioned scientific r… [ORB-11378]\n\nMigrate the wide-binary control pilot into versioned scientific records\n\nPlanned-By: codex\n"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "source",
+    "availability": "available",
+    "snapshot_digest": "sha256:5013c0fee5544bd7f8b4ffb9b5b9390531ee0df6ca03e4e3c7b7f7cb6de6ff34",
+    "locator": null,
+    "media_type": "text/plain"
+  },
+  "revision_id": "sha256:2eac445cea2662c61a68b0d0da2bad6c378b047ab9d051bfff2edf5f5168d5b1"
+}

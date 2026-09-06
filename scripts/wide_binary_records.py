@@ -24,6 +24,7 @@ FREEZE = "c04f2ed1ae91d6c126bc60863b5e48f46abe4576"
 ORIGINAL = "28dd5c72bb670517b93b556f1d2483402c8e8655"
 DIAGNOSIS = "2e097e606bc751ba1a8b29ebdc5aab6bbd961c43"
 FRAMEWORK = "7b6c1b2380bc915d6ff7cca50f288ed716a99c74"
+INSTALLED_FRAMEWORK = "0a9cf756e1c2522b9d5ee71c1cf462b8676f4281"
 FAMILY = "wide-binary-selection-methodology"
 THEORY = f"theory/{FAMILY}"
 CLAIMS = f"{THEORY}/claims.json"
@@ -53,8 +54,8 @@ def require(condition, message):
 def package_check():
     dist = distribution("orbit-research")
     direct = json.loads(dist.read_text("direct_url.json") or "{}")
-    require(dist.version == "0.1.0" and
-            direct.get("vcs_info", {}).get("commit_id") == FRAMEWORK,
+    require(dist.version == "0.2.0" and
+            direct.get("vcs_info", {}).get("commit_id") == INSTALLED_FRAMEWORK,
             "Install requirements-research.txt: exact orbit-research Git revision required")
 
 
@@ -78,12 +79,36 @@ def source_spec():
     return specs
 
 
+def canonical_commit_metadata(text):
+    """Normalize only Git's two ISO UTC fields; never subjects or other offsets."""
+    lines = text.splitlines(keepends=True)
+    for i in (1, 2):
+        if i < len(lines) and re.fullmatch(r"\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}Z\n", lines[i]):
+            lines[i] = lines[i][:-2] + "+00:00\n"
+    return "".join(lines)
+
+
+def historical_equal(current, archived):
+    # Validate both derived identities first. Normalize copies only; archived bytes
+    # and revision IDs stay unchanged, including an archive originally made on Mac.
+    from orbit_research.contract import revision_digest
+    normalized = []
+    for original in (current, archived):
+        require(not validate(original), "invalid historical source record")
+        record = deepcopy(original)
+        pin = record["legacy"]["source_pin"]
+        pin["commit_metadata"] = canonical_commit_metadata(pin["commit_metadata"])
+        record["revision_id"] = revision_digest(record)
+        normalized.append(record)
+    return normalized[0] == normalized[1]
+
+
 def snapshot(repository, revision, path, root):
     data = git(root, "show", f"{revision}:{path}")
     pin = dict(repository=repository, git_revision=revision, path=path,
                blob_oid=git(root, "rev-parse", f"{revision}:{path}").decode().strip(),
                sha256=digest(data), bytes=len(data),
-               commit_metadata=git(root, "show", "-s", "--format=%H%n%aI%n%cI%n%s", revision).decode())
+               commit_metadata=canonical_commit_metadata(git(root, "show", "-s", "--format=%H%n%aI%n%cI%n%s", revision).decode()))
     # These are Principia-owned copies of sources, not invented Orrery records.
     local = repository == "principia"
     provenance = dict(repository="principia", git_revision=revision if local else None,
@@ -381,7 +406,7 @@ def main(argv=None):
             for item in manifest["sources"]:
                 repo = root if item["repository"] == "principia" else args.orrery_root
                 current = snapshot(item["repository"], item["git_revision"], item["path"], repo)
-                require(encoded(current) == (root / AUTHORITY / item["record"]).read_bytes(), "historical source differs")
+                require(historical_equal(current, json.loads((root / AUTHORITY / item["record"]).read_bytes())), "historical source differs")
         elif args.command in {"project", "rollback"}:
             require(args.output is not None, "export requires --output")
             export(root, args.output, views)

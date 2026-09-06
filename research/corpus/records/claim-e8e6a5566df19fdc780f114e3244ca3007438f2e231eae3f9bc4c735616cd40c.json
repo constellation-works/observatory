@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "kind": "claim",
+  "id": "urn:research:principia:claim:two-substance-s2-yukawa-shape",
+  "aliases": [
+    "two-substance-s2-yukawa-shape"
+  ],
+  "activity": "active",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "94e76368a84e00ed742153d77b3d25dd5962c664",
+    "sha256": "sha256:c95d48cf673efa43d6d77005c73cadea42fac1ff00da556a7b7fd260df14f9a6",
+    "path": "theory/two-substance-vortex-vacuum/claims.json",
+    "selector": "/claims/16",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Exact historical verdict and stated assumptions only; migration makes no new scientific inference."
+  ],
+  "missingness": [
+    "scope"
+  ],
+  "legacy": {
+    "id": "two-substance-s2-yukawa-shape",
+    "family": "two-substance-vortex-vacuum",
+    "kind": "nature",
+    "status": "mixed",
+    "claim": "Branch A β identification: a kpc Yukawa reproduces the fitted q(r) boost shape",
+    "evidence": "**Analytic (§A2):** rise-and-saturate matches only for α < 0 (Sanders form — a vector, in tension with the Eötvös-forced scalar/energy sourcing); matched in value and slope at R₀ (α ≈ −0.68, point-mass kernel), the shapes diverge 2–9% in v² across the band with asymptotes 1.57 vs 1.73 — decidable in principle. **Apparatus adjudication run (ORB-10167, [scarcity-rotation-curve-fit](../../../orrery/lab/sims/scarcity-rotation-curve-fit/), orrery `8990fd3`; parent § form and universality adjudication): not decidable on this band** — the free fit landed on the matched parameters (α = −0.679, ξ = 4.642 kpc), ΔAIC(scarcity − Yukawa) = −369.6 with all 27 profile variants preferring scarcity, but the bootstrap 95% [−503.9, +1051.9] spans zero: **shape-degenerate** per the predeclared rule. Moot for Branch A (dead); as a shape control on the parent it reports that the MW band never identified the boost's functional form",
+    "links": [
+      "../../../orrery/lab/sims/scarcity-rotation-curve-fit/"
+    ],
+    "in_doc_ledger": true
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "claim",
+    "statement": "Branch A β identification: a kpc Yukawa reproduces the fitted q(r) boost shape",
+    "domain": "nature"
+  },
+  "revision_id": "sha256:e8e6a5566df19fdc780f114e3244ca3007438f2e231eae3f9bc4c735616cd40c"
+}

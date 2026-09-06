@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "kind": "claim",
+  "id": "urn:research:principia:claim:shear-hubble-silence",
+  "aliases": [
+    "shear-hubble-silence"
+  ],
+  "activity": "retired",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "c9b26b67f260c4002319c1d9268872f2339ab69b",
+    "sha256": "sha256:e1bd24b05676d65097d91c786c4fb02d28dba5293720deb7bc96898a88e268d0",
+    "path": "theory/shear-sourced-consumption/claims.json",
+    "selector": "/claims/2",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Exact historical verdict and stated assumptions only; migration makes no new scientific inference."
+  ],
+  "missingness": [
+    "scope"
+  ],
+  "legacy": {
+    "id": "shear-hubble-silence",
+    "family": "gravity-as-scarcity",
+    "kind": "model-property",
+    "status": "supported",
+    "claim": "The law consumes nothing in homogeneous Hubble flow (cosmological silence)",
+    "evidence": "ORB-10751 silence gate: uniformly expanding lattice shows max consumption density 7.4×10⁻¹⁸ = 3.7×10⁻¹⁶ of n\\|H\\| — consistent with zero",
+    "links": [],
+    "in_doc_ledger": true
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "claim",
+    "statement": "The law consumes nothing in homogeneous Hubble flow (cosmological silence)",
+    "domain": "model"
+  },
+  "revision_id": "sha256:180c9916dc5e0c74c864bfc94c025d77b3326e95d87478c80b2d6d78b4e1fd56"
+}

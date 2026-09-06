@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "kind": "program",
+  "id": "urn:research:principia:program:ppn-reduction-of-the-settled-flow",
+  "aliases": [
+    "ppn-reduction-of-the-settled-flow"
+  ],
+  "activity": "retired",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "cf1add5f518795b48696ace5aae1ea01f6b094fe",
+    "sha256": "sha256:b258d05cb8d485f7930cd4898e3b3f45abd7485187030cf02e2752174d451291",
+    "path": "theory/ppn-reduction-of-the-settled-flow/claims.json",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Exact historical verdict and stated assumptions only; migration makes no new scientific inference."
+  ],
+  "missingness": [
+    "scope"
+  ],
+  "legacy": {
+    "doc": "ppn-reduction-of-the-settled-flow",
+    "title": "PPN reduction of the settled flow: from the realized wake to effective preferred-frame coefficients",
+    "status": "retired",
+    "families": [
+      "gravity-as-scarcity"
+    ],
+    "updated": "2026-09-04",
+    "headline": "RETIRED by Daniel (2026-09-04). No active research or follow-up; historical results and claim verdicts preserved.",
+    "live_fronts": [],
+    "retirement": {
+      "date": "2026-09-04",
+      "authorized_by": "Daniel",
+      "reason": "Retired by Daniel on 2026-09-04: discontinue the gravity-as-scarcity research family, including the shear-flow completion, moving-source repair, and PPN continuation. Preserve all evidence and individual claim verdicts; no follow-up or reopening without Daniel's explicit authorization.",
+      "previous_status": "growing",
+      "previous_headline": "The named PPN obligation, executed as algebra and now verified exactly (ORB-11040): the moving metric is the PG metric of the disturbance field, the uniform wind is exactly flat (Riemann ≡ 0, all orders), the physical g₀ᵢ sector is the wake's vorticity plus its Bernoulli anisotropy, and effective α₁/α₂ are far-field slot coefficients — measured where they are defined (ORB-11041): speed-sector slot-matching tails with nonzero lattice proxies, no converged α₁ regime, a near-zone-confined Bernoulli obstruction, and a flooring trough. The predeclared half-order hazard fired: a generic wake carries an observable √ε·ε_w curvature term, so survival now rests on realized-wake cancellations. Lattice units only — existence still gates phenomenology."
+    }
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "theory",
+    "title": "PPN reduction of the settled flow: from the realized wake to effective preferred-frame coefficients"
+  },
+  "revision_id": "sha256:677ce613590e50af44ff3a0ca9825a72766b094167f2e6106ea743ed7fd7266a"
+}

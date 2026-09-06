@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "kind": "claim",
+  "id": "urn:research:principia:claim:retarded-wake-lopsidedness-warp-split",
+  "aliases": [
+    "retarded-wake-lopsidedness-warp-split"
+  ],
+  "activity": "paused",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "5a0334520045b6866e96fd14cbe0f87a1feee659",
+    "sha256": "sha256:4c18601b8818d5bb0724f512c671a9a618cf27a59fdf02401c19ab1b07413d59",
+    "path": "theory/retarded-scarcity-wake/claims.json",
+    "selector": "/claims/8",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Exact historical verdict and stated assumptions only; migration makes no new scientific inference."
+  ],
+  "missingness": [
+    "scope"
+  ],
+  "legacy": {
+    "id": "retarded-wake-lopsidedness-warp-split",
+    "family": "retarded-scarcity-wake",
+    "kind": "nature",
+    "status": "untested",
+    "claim": "A boost-violating model may produce a lopsidedness-versus-vertical-distortion split set partly by the angle between \\(\\mathbf{w}\\) and the disk normal",
+    "evidence": "Moot: Branch C closed (ORB-11175). In the minimal equation the split exists in form — in-plane \\(\\mathbf{w}\\) gives the tangential \\(m=1\\) force, perpendicular \\(\\mathbf{w}\\) a \\(1/R\\) midplane vertical acceleration (bowl-like, not an integral-sign warp) — at amplitudes the ephemeris floor caps below \\(10^{-3}\\) ([Branch C](../moving-source-field-consistency/branch-c.md))",
+    "links": [
+      "../moving-source-field-consistency/branch-c.md"
+    ],
+    "in_doc_ledger": true,
+    "kill": "Moot: Branch C closed. Reopening needs daniel_reopen and an amplitude above the ephemeris ceiling."
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "claim",
+    "statement": "A boost-violating model may produce a lopsidedness-versus-vertical-distortion split set partly by the angle between \\(\\mathbf{w}\\) and the disk normal",
+    "domain": "nature"
+  },
+  "revision_id": "sha256:adbd7a49934703e4879a126204f5e38b64f8d7dd48711d79dc9e5772a01f43f6"
+}

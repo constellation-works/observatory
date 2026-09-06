@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "kind": "claim",
+  "id": "urn:research:principia:claim:two-substance-fixed-length-universality",
+  "aliases": [
+    "two-substance-fixed-length-universality"
+  ],
+  "activity": "active",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "94e76368a84e00ed742153d77b3d25dd5962c664",
+    "sha256": "sha256:c95d48cf673efa43d6d77005c73cadea42fac1ff00da556a7b7fd260df14f9a6",
+    "path": "theory/two-substance-vortex-vacuum/claims.json",
+    "selector": "/claims/23",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Exact historical verdict and stated assumptions only; migration makes no new scientific inference."
+  ],
+  "missingness": [
+    "scope"
+  ],
+  "legacy": {
+    "id": "two-substance-fixed-length-universality",
+    "family": "two-substance-vortex-vacuum",
+    "kind": "nature",
+    "status": "refuted",
+    "claim": "Fixed-length-scale universality across external galaxies (β for the parent's boost, ξ₂ for any Yukawa reading)",
+    "evidence": "**Measured (ORB-10169, [sparc-scarcity-universality](../../../orrery/lab/sims/sparc-scarcity-universality/), orrery `1ab8085`; adjudicated in the parent's § form and universality adjudication):** 149 SPARC galaxies / 3,150 points (Q ≤ 2, inclination ≥ 30°, uniform no-drift policy; tycho ORB-10168 lineage). Per-galaxy β_i beats global β = 5.526 kpc by **ΔAIC 51,723**; β_i tracks disk scale length (Spearman ρ = 0.343, p = 1.86×10⁻⁵); constant-β heterogeneity p underflows to zero; the same-policy global-a₀ MOND control reaches AIC 29,198 vs global scarcity's 106,619 — the discrepancy organizes by acceleration, the RAR exposure §A5 named ([studies/fifth-force-searches](../../studies/fifth-force-searches.md)). **The predeclared kill condition fired — the same verdict Sanders' fixed r₀ received.** Recorded beside it, unlaundered: global β sits 5% from the MW's 5.25 kpc. Caveats (spherical enclosed-mass surrogate over thin-disk curves; statistical-only errors — absolute χ² unacceptable for all models, MOND control included; no-drift policy differs from the MW apparatus; validation parquets reconstructed from the published tables) gate decisiveness, not the verdict",
+    "links": [
+      "../../../orrery/lab/sims/sparc-scarcity-universality/",
+      "../../studies/fifth-force-searches.md"
+    ],
+    "in_doc_ledger": true
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "claim",
+    "statement": "Fixed-length-scale universality across external galaxies (β for the parent's boost, ξ₂ for any Yukawa reading)",
+    "domain": "nature"
+  },
+  "revision_id": "sha256:66f6d5c3c01741f9a7b0326e87d48dbe147933428bc5aa2981e2e449f7bad550"
+}

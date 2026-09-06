@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "kind": "claim",
+  "id": "urn:research:principia:claim:retarded-wake-m1-asymmetry",
+  "aliases": [
+    "retarded-wake-m1-asymmetry"
+  ],
+  "activity": "paused",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "5a0334520045b6866e96fd14cbe0f87a1feee659",
+    "sha256": "sha256:4c18601b8818d5bb0724f512c671a9a618cf27a59fdf02401c19ab1b07413d59",
+    "path": "theory/retarded-scarcity-wake/claims.json",
+    "selector": "/claims/6",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Exact historical verdict and stated assumptions only; migration makes no new scientific inference."
+  ],
+  "missingness": [
+    "scope"
+  ],
+  "legacy": {
+    "id": "retarded-wake-m1-asymmetry",
+    "family": "retarded-scarcity-wake",
+    "kind": "nature",
+    "status": "refuted",
+    "claim": "The wake displaces the dynamical center behind the baryonic center and produces an \\(m=1\\) leading/trailing rotation asymmetry rather than an axisymmetric flat-curve boost",
+    "evidence": "Refuted on both counts by the explicit equation (ORB-11175, [Branch C](../moving-source-field-consistency/branch-c.md)): the dissipative solution's first-order leading/trailing *radial* contrast vanishes (the first-order force is tangential, \\(g_0A_1\\sin\\theta\\), zero on the leading/trailing axis), and the amplitude itself is capped by the solar-system self-acceleration wall at \\(A_1(10\\,{\\rm kpc})\\lesssim10^{-3}\\)–\\(3\\times10^{-5}\\), two to three orders below observed lopsidedness ([solar-system-ephemeris-precision-floor](../../studies/solar-system-ephemeris-precision-floor.md)). The source-delay term displaces the centre, but by a fixed \\(\\lvert\\tau_s\\rvert w<R_\\odot\\), unobservable at galactic radii",
+    "links": [
+      "../moving-source-field-consistency/branch-c.md",
+      "../../studies/solar-system-ephemeris-precision-floor.md"
+    ],
+    "in_doc_ledger": true,
+    "kill": "Fired: no first-order radial contrast in the minimal class, and the amplitude is bounded below observability."
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "claim",
+    "statement": "The wake displaces the dynamical center behind the baryonic center and produces an \\(m=1\\) leading/trailing rotation asymmetry rather than an axisymmetric flat-curve boost",
+    "domain": "nature"
+  },
+  "revision_id": "sha256:f6bceffb43b7bee54e62dbd4b4719eeb5bd2669836dc139d4ee65a5334eaf5dd"
+}

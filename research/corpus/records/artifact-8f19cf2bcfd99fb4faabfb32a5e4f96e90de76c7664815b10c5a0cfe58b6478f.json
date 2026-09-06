@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Atheory%2Fmoving-sources-in-the-closed-system%2Fconsumed-momentum.md",
+  "aliases": [
+    "source:principia:4e3b02c59b694d85016915177ef1ae157895ed7b:theory/moving-sources-in-the-closed-system/consumed-momentum.md"
+  ],
+  "activity": "active",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "6e2471b925a55c961c7db09e5e4ee757e38edda1",
+    "sha256": "sha256:d34d942f4e4c8ea6f20cc0147ae0ad0101933a6d880c5bf31f5b8380fa950a46",
+    "path": "theory/moving-sources-in-the-closed-system/consumed-momentum.md",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Immutable archival source copy; upstream scientific ownership is unchanged."
+  ],
+  "missingness": [
+    "scope"
+  ],
+  "legacy": {
+    "source_pin": {
+      "repository": "principia",
+      "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "path": "theory/moving-sources-in-the-closed-system/consumed-momentum.md",
+      "blob_oid": "6e2471b925a55c961c7db09e5e4ee757e38edda1",
+      "sha256": "sha256:d34d942f4e4c8ea6f20cc0147ae0ad0101933a6d880c5bf31f5b8380fa950a46",
+      "bytes": 3278,
+      "commit_metadata": "4e3b02c59b694d85016915177ef1ae157895ed7b\n2026-09-06T02:49:35+00:00\n2026-09-06T02:49:35+00:00\nfeat: Migrate the wide-binary control pilot into versioned scientific r… [ORB-11378]\n"
+    },
+    "text": "## The new debt the wake exposes: consumed momentum\n\nThe shear law destroys substrate volume; the destroyed parcels carry momentum n**v**. For\nevery static configuration this bookkeeping was invisible — spherical symmetry integrates\nthe consumed momentum to zero. The wake breaks the symmetry: consumption is fore-aft\nasymmetric at O(U), so the consumed-momentum integral ∫s**v** dV has a net component along\n**U**. The theory has never said where it goes. Three postures, now distinguishable:\n\n1. **It vanishes with the volume** (the law already breaks volume conservation by design):\n   no force on anything, but momentum non-conservation acquires a *directional*,\n   in-principle-observable signature.\n2. **The substrate absorbs it**: the wake carries a momentum flux; the reservoir\n   recoils — cosmology's books again.\n3. **The source absorbs it**: a moving mass feels secular drag (or thrust — the sign is\n   not obvious and must be measured), decelerating it toward the substrate frame over\n   secular timescales — ephemeris- and pulsar-constrainable, once normalized.\n\nThe lattice can measure the wake's momentum budget in lattice units (gate G3). Converting\nany of it to a physical drag requires the substrate-inertia normalization nothing in the\nfamily has fixed — the same class of gap as the D ↔ σ normalization on the carrier\nquestion. Recorded as a **named debt**, not resolved here.\n\n**The realized scaling and its reading (ORB-10937; slogan corrected at the 2026-08-21\ncritique).** The dynamics returned drag *linear* in the wind: rate ≈ n·Q·U with Q a\nwind-independent volume-consumption rate. Linear-in-U is the signature of a\n**fixed-strength sink** — consumption set by the gravity-dominated trough, the wind only\nsupplying the momentum each consumed parcel carries — *not* of momentum-flux capture (a\ncapture cross-section times wind, ram-pressure ρU²A, is quadratic; the earlier \"flux\ncapture\" slogan here was wrong). And the stakes are boundable, order-of-magnitude, under\nexplicit hypotheses: Q physically truncates where the wind takes over — the matching\nradius r_m = 2GM/U², a few solar radii for the Sun at U ~ 300 km/s — so Q ≲ πr_m²U and\nthe posture-3 drag time is τ = MU/F ~ U³/(4πG²M·n_s): the Bondi–Hoyle–Lyttleton form\nwith the substrate's inertia density n_s in place of gas density. For the Sun at\nU = 300 km/s, τ ~ 2×10⁵/n_s seconds (n_s in kg/m³); age-of-solar-system safety\n(τ > 1.4×10¹⁷ s) needs only n_s ≲ 2×10⁻¹² kg/m³ — nine orders of magnitude above the\nlocal dark-matter density and fourteen above the cosmological critical density. **The\nfork this exposes:** for any cosmologically-motivated substrate inertia, posture 3 is\nphenomenologically silent (drag times ≥ 10⁹ Gyr) and ephemerides cannot see it; only a\ndense substrate (≳ 10⁻¹² kg/m³, let alone a Planckian medium) dies on contact. The\nthree postures remain three different theories — posture 1 is directional momentum\nnon-conservation (theoretically worse, phenomenologically quieter), posture 2 moves the\nbooks to cosmology — and which one the model owes stays open with the normalization\ndebt; but the estimate relocates the fast kills: they sit in the photon and clock\nsectors, not the drag.\n",
+    "commit_object": "tree 682cccb1cf19c89c2c5f4371c14ed2b384d2ae8c\nparent 13866b2848fbcce9a1f1ef2d4b97051a65f7e626\nauthor orbit[gpt-6-astra] <agent@orbit.invalid> 1788662975 +0000\ncommitter orbit <orbit@orbit.local> 1788662975 +0000\n\nfeat: Migrate the wide-binary control pilot into versioned scientific r… [ORB-11378]\n\nMigrate the wide-binary control pilot into versioned scientific records\n\nPlanned-By: codex\n"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "source",
+    "availability": "available",
+    "snapshot_digest": "sha256:d34d942f4e4c8ea6f20cc0147ae0ad0101933a6d880c5bf31f5b8380fa950a46",
+    "locator": null,
+    "media_type": "text/plain"
+  },
+  "revision_id": "sha256:8f19cf2bcfd99fb4faabfb32a5e4f96e90de76c7664815b10c5a0cfe58b6478f"
+}

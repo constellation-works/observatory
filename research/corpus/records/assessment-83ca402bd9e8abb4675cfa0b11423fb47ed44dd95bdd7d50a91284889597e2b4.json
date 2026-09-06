@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "kind": "assessment",
+  "id": "urn:research:principia:assessment:two-substance-proton-confined-triple%3Alegacy-verdict",
+  "aliases": [
+    "two-substance-proton-confined-triple:legacy-verdict"
+  ],
+  "activity": "unknown",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "94e76368a84e00ed742153d77b3d25dd5962c664",
+    "sha256": "sha256:c95d48cf673efa43d6d77005c73cadea42fac1ff00da556a7b7fd260df14f9a6",
+    "path": "theory/two-substance-vortex-vacuum/claims.json",
+    "selector": "/claims/13",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Exact historical verdict and stated assumptions only; migration makes no new scientific inference."
+  ],
+  "missingness": [
+    "exact-evidence-owner-references",
+    "independently-verified-controls",
+    "activity",
+    "scope"
+  ],
+  "legacy": {
+    "id": "two-substance-proton-confined-triple",
+    "family": "two-substance-vortex-vacuum",
+    "kind": "nature",
+    "status": "conjecture",
+    "claim": "The proton as a confined composite of sub-integer vortices (fractional constituents, three to a proton — the confinement correspondence)",
+    "evidence": "Precedent exists (Babaev 2002 fractional-vortex confinement; BEC splitting of multiply-wound vortices — studies note), but why one polarity confines in triples while the other stays single is underived, and no quantitative correspondence to QCD is claimed",
+    "links": [],
+    "in_doc_ledger": true
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "claim": {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:two-substance-proton-confined-triple",
+      "revision_id": "sha256:a7893390dbb3f5fde8c1a9c2e88b695ed8babf91c3d423cd6635369dd90f9977",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    "verdict": "untested",
+    "legacy_verdict": "conjecture",
+    "inference": "historical",
+    "basis": "legacy-report",
+    "controls": "unknown",
+    "rationale": "Precedent exists (Babaev 2002 fractional-vortex confinement; BEC splitting of multiply-wound vortices — studies note), but why one polarity confines in triples while the other stays single is underived, and no quantitative correspondence to QCD is claimed",
+    "evidence": []
+  },
+  "revision_id": "sha256:83ca402bd9e8abb4675cfa0b11423fb47ed44dd95bdd7d50a91284889597e2b4"
+}

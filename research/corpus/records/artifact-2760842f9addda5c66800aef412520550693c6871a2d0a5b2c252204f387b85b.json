@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Atheory%2Fmoving-sources-in-the-closed-system%2Fwhat-sets-u.md",
+  "aliases": [
+    "source:principia:4e3b02c59b694d85016915177ef1ae157895ed7b:theory/moving-sources-in-the-closed-system/what-sets-u.md"
+  ],
+  "activity": "active",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "fc4a0e44f6ef374799629f540804645b4d9d763e",
+    "sha256": "sha256:08dd7677214d20fe77a6548712319cec8e4a6be335af65426f20c1e3d9bd2b08",
+    "path": "theory/moving-sources-in-the-closed-system/what-sets-u.md",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Immutable archival source copy; upstream scientific ownership is unchanged."
+  ],
+  "missingness": [
+    "scope"
+  ],
+  "legacy": {
+    "source_pin": {
+      "repository": "principia",
+      "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "path": "theory/moving-sources-in-the-closed-system/what-sets-u.md",
+      "blob_oid": "fc4a0e44f6ef374799629f540804645b4d9d763e",
+      "sha256": "sha256:08dd7677214d20fe77a6548712319cec8e4a6be335af65426f20c1e3d9bd2b08",
+      "bytes": 2769,
+      "commit_metadata": "4e3b02c59b694d85016915177ef1ae157895ed7b\n2026-09-06T02:49:35+00:00\n2026-09-06T02:49:35+00:00\nfeat: Migrate the wide-binary control pilot into versioned scientific r… [ORB-11378]\n"
+    },
+    "text": "## What sets U — the inherited question, sharpened\n\n[retarded-scarcity-wake](../retarded-scarcity-wake/) § open debts already asks what defines\nthe substrate velocity at a real body. The closed system sharpens it uncomfortably:\nsubstrate parcels obey the rolling rule — they free-fall — while matter virializes into\norbits. A parcel and a star that once comoved do not stay comoving; around any orbiting\nbody the model *generically* predicts a wind of order the local orbital/infall speeds. If\nthe galactic Newtonian field is river-carried, the arithmetic (from the sourced velocity\nscales in [lorentz-violation-bounds](../../studies/lorentz-violation-bounds.md) § velocity\nscales: solar galactic orbit ~220 km/s; CMB motion 369.82 km/s; solar river at 1 AU\n~42 km/s) puts U_⊙ at O(300 km/s) — U/c ~ 10⁻³ — and Theorem 2's O(U·v_GP) photon-sector\nwake effects land in the neighborhood of measured light-deflection precision. That is a\n**live kill test**, now calibrated by the measured wake and\n[moving-source-gravity-bounds](../../studies/moving-source-gravity-bounds.md), but not yet\ndecidable: the PPN reduction yields far-field coefficient slots whose fixture has not produced a\nconverged wall comparison. The escape routes are\nthemselves informative: either the local substrate comoves with local structure (needs a\nmechanism the rolling rule does not provide), or the galactic field is not river-carried\n(feeding the open carrier question on\n[gravity-as-scarcity](../gravity-as-scarcity/) § what remains live), or the model eats a\npreferred-frame contradiction at O(10⁻³).\n\nTwo sharpenings from the 2026-08-21 critique stand under arbitration: (i) the\nwind/gravity matching radius r_m = 2GM/U² is a few solar radii at U ~ 300 km/s, so\ngrazing-limb deflection measurements live *in the matching region*, not in a clean\nwind-dominated far field — far-field wake multipoles from a half-width-12 box are not\nyet the right observable objects; (ii) even if the galactic field is not river-carried,\nthe *local* orbital winds remain — Earth moves at ~30 km/s through the Sun's river\n(~42 km/s at 1 AU), binary components through each other's wells — so the moving-source\nproblem stands at U/c ~ 10⁻⁴ in every bound system, independent of the galactic-carrier\nquestion. Whether those winds are in tension with preferred-frame bounds is *not* a raw\nU/c comparison: the sourced walls now exist\n([moving-source-gravity-bounds](../../studies/moving-source-gravity-bounds.md)) and the PPN\nreduction is executed\n([ppn-reduction-of-the-settled-flow](../ppn-reduction-of-the-settled-flow/)) — what the\ncomparison still awaits is that doc's far-field slot-coefficient fixture.\n\nOpen questions extracted to [open-questions.md](open-questions.md).\n",
+    "commit_object": "tree 682cccb1cf19c89c2c5f4371c14ed2b384d2ae8c\nparent 13866b2848fbcce9a1f1ef2d4b97051a65f7e626\nauthor orbit[gpt-6-astra] <agent@orbit.invalid> 1788662975 +0000\ncommitter orbit <orbit@orbit.local> 1788662975 +0000\n\nfeat: Migrate the wide-binary control pilot into versioned scientific r… [ORB-11378]\n\nMigrate the wide-binary control pilot into versioned scientific records\n\nPlanned-By: codex\n"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "source",
+    "availability": "available",
+    "snapshot_digest": "sha256:08dd7677214d20fe77a6548712319cec8e4a6be335af65426f20c1e3d9bd2b08",
+    "locator": null,
+    "media_type": "text/plain"
+  },
+  "revision_id": "sha256:2760842f9addda5c66800aef412520550693c6871a2d0a5b2c252204f387b85b"
+}

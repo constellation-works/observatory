@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "kind": "assessment",
+  "id": "urn:research:principia:assessment:moving-source-gravitomagnetic-gap%3Alegacy-verdict",
+  "aliases": [
+    "moving-source-gravitomagnetic-gap:legacy-verdict"
+  ],
+  "activity": "unknown",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "f55e1dace027658053ccc8f5b740363237c0eda4",
+    "sha256": "sha256:34d8fd1300c47a5df5ea2300abe6ba3ac4e6c29d546f03686710d88e1297d681",
+    "path": "theory/moving-source-field-consistency/claims.json",
+    "selector": "/claims/11",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Exact historical verdict and stated assumptions only; migration makes no new scientific inference."
+  ],
+  "missingness": [
+    "exact-evidence-owner-references",
+    "independently-verified-controls",
+    "activity",
+    "scope"
+  ],
+  "legacy": {
+    "id": "moving-source-gravitomagnetic-gap",
+    "family": "retarded-scarcity-wake",
+    "kind": "nature",
+    "status": "conjecture",
+    "claim": "A tracer prediction is uninterpretable until the substrate model specifies all velocity-dependent couplings",
+    "evidence": "§ The gravitomagnetic gap — electromagnetism supplies a warning, not a proof that an unknown substrate has the same cancellation. [Moving-source gravity bounds](../../studies/moving-source-gravity-bounds.md) now supplies the measured frame-dragging target, but not the model's missing tracer coupling, so this methodological claim remains conjecture. The minimal Branch C equation has no velocity-dependent force at all; that is a debt of any completion, not of the breaking parameters, and is moot with the branch closed",
+    "links": [
+      "../../studies/moving-source-gravity-bounds.md"
+    ],
+    "in_doc_ledger": true
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "claim": {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:moving-source-gravitomagnetic-gap",
+      "revision_id": "sha256:70eed1e460def1ca43cf6e1f03eb3a44e89e59c33ba075b5e010d7f82dfe7936",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    "verdict": "untested",
+    "legacy_verdict": "conjecture",
+    "inference": "historical",
+    "basis": "legacy-report",
+    "controls": "unknown",
+    "rationale": "§ The gravitomagnetic gap — electromagnetism supplies a warning, not a proof that an unknown substrate has the same cancellation. [Moving-source gravity bounds](../../studies/moving-source-gravity-bounds.md) now supplies the measured frame-dragging target, but not the model's missing tracer coupling, so this methodological claim remains conjecture. The minimal Branch C equation has no velocity-dependent force at all; that is a debt of any completion, not of the breaking parameters, and is moot with the branch closed",
+    "evidence": []
+  },
+  "revision_id": "sha256:ceeb6714a776780be1db44c0b7efed18af0c117a17154a09c00e3a279904e3ef"
+}

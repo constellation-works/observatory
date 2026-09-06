@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "kind": "claim",
+  "id": "urn:research:principia:claim:postulate-lambda-coupling",
+  "aliases": [
+    "postulate-lambda-coupling"
+  ],
+  "activity": "active",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "94e76368a84e00ed742153d77b3d25dd5962c664",
+    "sha256": "sha256:c95d48cf673efa43d6d77005c73cadea42fac1ff00da556a7b7fd260df14f9a6",
+    "path": "theory/two-substance-vortex-vacuum/claims.json",
+    "selector": "/claims/24",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Exact historical verdict and stated assumptions only; migration makes no new scientific inference."
+  ],
+  "missingness": [
+    "scope"
+  ],
+  "legacy": {
+    "kind": "postulate",
+    "status": "mixed",
+    "in_doc_ledger": false,
+    "evidence": "Named postulate; lattice consistency is not a derivation.",
+    "links": [],
+    "named": "2026-08-21",
+    "expires": "2026-09-21",
+    "id": "postulate-lambda-coupling",
+    "family": "two-substance-vortex-vacuum",
+    "claim": "Relative and common modes couple by λ n₊ n₋²/4 in the Hamiltonian.",
+    "kill": "Run λ = 0 as control, or derive λ from two-substance mechanics."
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "postulate",
+    "statement": "Relative and common modes couple by λ n₊ n₋²/4 in the Hamiltonian.",
+    "domain": "model"
+  },
+  "revision_id": "sha256:071cc8fe6ec2446b81bcf6ec6ee6cd42e630d285f7251ba0f17bde032f47e1d4"
+}

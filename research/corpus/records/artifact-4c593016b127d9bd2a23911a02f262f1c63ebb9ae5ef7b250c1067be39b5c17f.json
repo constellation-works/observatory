@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:principia:artifact:source%3Aorrery%3Aa1c430db54d585048ec85c4e7c47141db634f398%3Alab%2Fsims%2Flevel-core-wind-tunnel%2FREADME.md",
+  "aliases": [
+    "source:orrery:a1c430db54d585048ec85c4e7c47141db634f398:lab/sims/level-core-wind-tunnel/README.md"
+  ],
+  "activity": "active",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": null,
+    "blob_oid": null,
+    "sha256": "sha256:8207ea3e4d979b5249f5d4978f72e030da74f9ba844559438167131ab2fa8a50",
+    "path": "upstream-snapshot/orrery/a1c430db54d585048ec85c4e7c47141db634f398/lab/sims/level-core-wind-tunnel/README.md",
+    "selector": "$",
+    "historical": true,
+    "working_tree": true
+  },
+  "limitations": [
+    "Immutable archival source copy; upstream scientific ownership is unchanged."
+  ],
+  "missingness": [
+    "git-revision",
+    "owner-ingestion-git-pin",
+    "scope",
+    "upstream-canonical-record"
+  ],
+  "legacy": {
+    "source_pin": {
+      "repository": "orrery",
+      "git_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "path": "lab/sims/level-core-wind-tunnel/README.md",
+      "blob_oid": "67439f98c2228db77c225ff49d3435dd7234fcde",
+      "sha256": "sha256:8207ea3e4d979b5249f5d4978f72e030da74f9ba844559438167131ab2fa8a50",
+      "bytes": 2757,
+      "commit_metadata": "a1c430db54d585048ec85c4e7c47141db634f398\n2026-09-06T02:28:14+00:00\n2026-09-06T02:28:14+00:00\nfeat: Preserve the original electron animation's continuous fold in a c… [ORB-11374]\n"
+    },
+    "text": "# Level-core wind tunnel\n\nThis deterministic 3-D apparatus puts the draw-sourced level closure in a\nuniform wind. A fixed-width Gaussian cell draw sources the instantaneous\ncomoving level with the seven-point Poisson operator. There is no velocity or\nfixed-flux condition at the core. In the core frame, wind enters only through\nthe upstream outer face.\n\nRun:\n\n```sh\nUV_CACHE_DIR=/tmp/orbit-uv-cache-10935 uv run lab/sims/level-core-wind-tunnel/main.py --check-determinism\n```\n\nThe command writes `assets/results.json` and\n`runs/2026-08-21-seed-42.json`. The determinism option executes the entire\nthree-rung, four-wind experiment twice in memory and requires byte-identical\nJSON encodings.\n\n## Apparatus decision\n\nThe comoving-frame formulation keeps the elliptic draw level exactly centered\nand supplies `+x` wind at the upstream outer face. For each rung, a\npredictor-corrector Hamilton-Jacobi march follows the positive-`x` potential\nbranch satisfying\n\n`|grad Phi|^2 = U^2 + 2 sigma`.\n\nThis choice isolates the theorem's Bernoulli speed from the direction field.\nIts tradeoff is explicit: it can represent only a single-valued downstream\ngraph. When transverse characteristics form a caustic, the march limits them\nat `0.999 q` and records the affected fraction. A failed steady-existence\ndiagnostic is therefore a measured result, not silently smoothed away.\n\nThe `41^3 -> 61^3 -> 81^3` ladder holds the 24-unit box, 0.75-unit Gaussian\ncore width, physical shell radii, probe radius, and control volume fixed. Wind\nratios `{0.03, 0.1, 0.3, 1}` use the finest-rung static river speed at radius 5\nas their common reference.\n\n## Predeclared gates\n\nThe machine-readable artifacts are authoritative and contain every case,\nfinest-rung shift, criterion, and verdict.\n\n- G1 reports the speed monopole, normalized dipole vector, and axisymmetric\n  `l=1..3` coefficients on radii 3 and 5 for all four winds, together with\n  discretization errors and pointwise Bernoulli residuals.\n- G2 reports unit-direction multipoles, fore-aft asymmetry, angular distance\n  from `U + v_GP`, stagnation geometry, and the steady-branch diagnostic.\n- G3 reports `integral s v_x dV`, advective momentum flux through the fixed far\n  cube, their signed residual, convergence, and a four-wind drag power law.\n- G4 executes uniform no-core wind at every rung and wind strength.\n\nThe copied coefficient-one `strain_consumption_3d` function must hash to\n`aa1155e07536c3318c0afb0baabbbf472d66658046be4d21d816f135632c8461`,\nbyte-identical to ORB-10751, ORB-10932, and ORB-10934. The momentum surface\nledger intentionally reports only advective flux; it does not invent an\nunprovided pressure/level stress. Theory reconciliation is deferred to Kepler,\nand no principia files are changed.\n",
+    "commit_object": "tree 8d851030602405b11b7166108b09cf9cd5664329\nparent 148b668391f575466282eaa81aab0dc943846a87\nauthor orbit[gpt-6-astra] <agent@orbit.invalid> 1788661694 +0000\ncommitter orbit <orbit@orbit.local> 1788661694 +0000\n\nfeat: Preserve the original electron animation's continuous fold in a c… [ORB-11374]\n\nPreserve the original electron animation's continuous fold in a computed-field view\n\nPlanned-By: codex\n"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "source",
+    "availability": "available",
+    "snapshot_digest": "sha256:8207ea3e4d979b5249f5d4978f72e030da74f9ba844559438167131ab2fa8a50",
+    "locator": null,
+    "media_type": "text/plain"
+  },
+  "revision_id": "sha256:4c593016b127d9bd2a23911a02f262f1c63ebb9ae5ef7b250c1067be39b5c17f"
+}

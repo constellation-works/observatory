@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "kind": "assessment",
+  "id": "urn:research:principia:assessment:postulate-rolling-rule%3Alegacy-verdict",
+  "aliases": [
+    "postulate-rolling-rule:legacy-verdict"
+  ],
+  "activity": "unknown",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "b5f58c64f4c6bf9d7d7f67c826f5d2dd7c9cb64f",
+    "sha256": "sha256:996b059ca4b45cee6dd42a503594508ebb8d6d13211ad1104df3754b116d5976",
+    "path": "theory/gravity-as-scarcity/claims.json",
+    "selector": "/claims/19",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Exact historical verdict and stated assumptions only; migration makes no new scientific inference."
+  ],
+  "missingness": [
+    "exact-evidence-owner-references",
+    "independently-verified-controls",
+    "activity",
+    "scope"
+  ],
+  "legacy": {
+    "kind": "postulate",
+    "status": "mixed",
+    "in_doc_ledger": false,
+    "evidence": "Named postulate; lattice consistency is not a derivation.",
+    "links": [],
+    "named": "2026-07-12",
+    "expires": "2026-09-21",
+    "id": "postulate-rolling-rule",
+    "family": "gravity-as-scarcity",
+    "claim": "Space obeys the inertial rolling rule a = c²∇σ.",
+    "kill": "Derive the rolling rule from a local mechanism, or concede the ontology is idle (Hamilton–Lisle)."
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "claim": {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:postulate-rolling-rule",
+      "revision_id": "sha256:5b1455efb96fd2c523b6547f6b979a9735a31c8745064694eb9d44eebde5e445",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    "verdict": "inconclusive",
+    "legacy_verdict": "mixed",
+    "inference": "historical",
+    "basis": "legacy-report",
+    "controls": "unknown",
+    "rationale": "Named postulate; lattice consistency is not a derivation.",
+    "evidence": []
+  },
+  "revision_id": "sha256:6481287e8428817b8f49896cbce1f28d354d64cf24333260ff8d12d466b6a26f"
+}

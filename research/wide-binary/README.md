@@ -1,5 +1,14 @@
 # Wide-binary record authority — ORB-11378
 
+ORB-11394 extends authority to the [whole corpus](../README.md) and upgrades the installed
+framework to 0.2.0 at `0a9cf756e1c2522b9d5ee71c1cf462b8676f4281`. The historical version
+and migration manifests below remain exact v1 history. Use the whole-owner activation and
+projection workflow for new revisions; this adapter remains the original-source verifier.
+Git UTC `Z` and `+00:00` spellings compare equivalently without rewriting any archived
+record or revision ID. All other metadata and source bytes still compare exactly.
+The sections below describe the original pilot boundary; the whole-owner guide supersedes
+its future-looking authority instructions. Original-source reproduction commands remain usable.
+
 This is the first owning-repository pilot, using **orbit-research 0.1.0 / contract v1**
 at `7b6c1b2380bc915d6ff7cca50f288ed716a99c74` (foundation code
 `51b117d18f32550dbfca49ce96d2d72474a78b47`; the later revision adds recovery hygiene).
@@ -10,8 +19,8 @@ It is not completion of the four-repository migration.
 The immutable `records/` corpus is the pilot's sole scientific editing authority.
 Historical records are append-only: use the framework to create a new revision and
 explicitly update the owner mapping in a scoped follow-up; never overwrite an old
-record or alter historical source bytes. Native authoring commands are a later framework
-milestone. `scripts/wide_binary_records.py` supplies this pilot's mapping; identity,
+record or alter historical source bytes. Native authoring was deferred at pilot delivery;
+it is now available through the whole-owner workflow. `scripts/wide_binary_records.py` supplies this pilot's mapping; identity,
 semantic hashing, validation and reconciliation use the installed framework.
 
 The seven files listed in `migration.json` → `compatibility` remain byte-identical
@@ -109,7 +118,7 @@ git diff --check
 ```
 
 A standard venv and `python -m pip install -r requirements-research.txt` also work.
-Installed VCS identity is checked: an unrelated 0.1.0 package or unpinned editable sibling
+Installed VCS identity is checked against the owner's exact 0.2.0 pin: an unrelated package or unpinned editable sibling
 import is refused. Pilot check/tests need no siblings or historical Git objects; all source
 bytes are archived. The whole-corpus checker still needs Orrery for existing link resolution,
 using Git worktree discovery or the explicit mapping. No test reruns an experiment.
@@ -148,10 +157,10 @@ The reversible data migration has an exact inverse:
 python3 scripts/wide_binary_records.py rollback --output /tmp/wide-binary-legacy
 ```
 
-This validates the authority and exports the seven original files byte-for-byte. Tests
-check the complete file set, bytes and overwrite guard. To undo the **authority cutover**
-after delivery, run `git revert <ORB-11378-delivery-commit>` on a clean checkout: this
-removes the records, dependency and checker/guide additions while preserving original
-science files. Run the restored stdlib checker and selftest. Resolve overlap with any
-later tasks explicitly. Git history remains intact in either direction. The export
-command itself never removes records or silently switches authority.
+This validates the original authority and exports the seven original files byte-for-byte.
+Tests check the complete file set, bytes and overwrite guard. For an authority rollback
+after ORB-11394, follow [the whole-owner rollback workflow](../README.md#reproduction-and-rollback):
+restore a prior explicit selection and its views while retaining every subsequent record,
+content artifact and assessment. The export command never removes records or switches
+authority. The original source-only checker remains available at the foundation Git pin
+and is exercised against the full rollback export as documented there.

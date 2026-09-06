@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:principia:artifact:source%3Aorrery%3Aa1c430db54d585048ec85c4e7c47141db634f398%3Alab%2Fsims%2Ftwo-substance-dynamical-packet%2Fsim.json",
+  "aliases": [
+    "source:orrery:a1c430db54d585048ec85c4e7c47141db634f398:lab/sims/two-substance-dynamical-packet/sim.json"
+  ],
+  "activity": "active",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": null,
+    "blob_oid": null,
+    "sha256": "sha256:8457636175dc44e082b4631bc84205d04ead7ea5e4e5931db748c8306f9066ee",
+    "path": "upstream-snapshot/orrery/a1c430db54d585048ec85c4e7c47141db634f398/lab/sims/two-substance-dynamical-packet/sim.json",
+    "selector": "$",
+    "historical": true,
+    "working_tree": true
+  },
+  "limitations": [
+    "Immutable archival source copy; upstream scientific ownership is unchanged."
+  ],
+  "missingness": [
+    "git-revision",
+    "owner-ingestion-git-pin",
+    "scope",
+    "upstream-canonical-record"
+  ],
+  "legacy": {
+    "source_pin": {
+      "repository": "orrery",
+      "git_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "path": "lab/sims/two-substance-dynamical-packet/sim.json",
+      "blob_oid": "6c5d3780ea05a03d484d2b64436691613f0851bd",
+      "sha256": "sha256:8457636175dc44e082b4631bc84205d04ead7ea5e4e5931db748c8306f9066ee",
+      "bytes": 972,
+      "commit_metadata": "a1c430db54d585048ec85c4e7c47141db634f398\n2026-09-06T02:28:14+00:00\n2026-09-06T02:28:14+00:00\nfeat: Preserve the original electron animation's continuous fold in a c… [ORB-11374]\n"
+    },
+    "text": "{\n  \"slug\": \"two-substance-dynamical-packet\",\n  \"title\": \"Two-substance packet coupling and wake test\",\n  \"kind\": \"py\",\n  \"entry\": \"main.py\",\n  \"status\": \"active\",\n  \"created\": \"2026-08-21\",\n  \"topics\": [\n    \"two-substance-vacuum\",\n    \"radiation\",\n    \"relative-mode\",\n    \"common-mode\",\n    \"conserved-dynamics\",\n    \"wave-packets\"\n  ],\n  \"family\": \"two-substance-vortex-vacuum\",\n  \"summary\": \"Coupling controls, time-resolved profile lags, primary-observable refinement, an emission gate, and a Hamiltonian audit distinguish a packet-bound common mode from an imposed wake.\",\n  \"provenance\": {\n    \"almanac\": \"15-discussions/26-06/swirl-photon-correspondence.md\",\n    \"orbit_tasks\": [\n      \"ORB-10940\",\n      \"ORB-10941\"\n    ],\n    \"theory_context\": \"../../principia/theory/swirl-photon/\",\n    \"companion_sims\": [\n      \"../two-substance-vortex-lattice/\",\n      \"../two-substance-defect-gravity/\",\n      \"../swirl-ball/\",\n      \"../swirl-ball-far-field/\"\n    ]\n  }\n}\n",
+    "commit_object": "tree 8d851030602405b11b7166108b09cf9cd5664329\nparent 148b668391f575466282eaa81aab0dc943846a87\nauthor orbit[gpt-6-astra] <agent@orbit.invalid> 1788661694 +0000\ncommitter orbit <orbit@orbit.local> 1788661694 +0000\n\nfeat: Preserve the original electron animation's continuous fold in a c… [ORB-11374]\n\nPreserve the original electron animation's continuous fold in a computed-field view\n\nPlanned-By: codex\n"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "source",
+    "availability": "available",
+    "snapshot_digest": "sha256:8457636175dc44e082b4631bc84205d04ead7ea5e4e5931db748c8306f9066ee",
+    "locator": null,
+    "media_type": "application/json"
+  },
+  "revision_id": "sha256:6b4856f1d6eb61e6801af0efcc1b50cfacf3f72dab83a4b8caf14b59144fe942"
+}

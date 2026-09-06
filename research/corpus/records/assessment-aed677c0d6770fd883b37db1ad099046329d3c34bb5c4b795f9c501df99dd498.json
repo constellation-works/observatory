@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "kind": "assessment",
+  "id": "urn:research:principia:assessment:vortex-nature-chsh-ceiling%3Alegacy-verdict",
+  "aliases": [
+    "vortex-nature-chsh-ceiling:legacy-verdict"
+  ],
+  "activity": "unknown",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "2e8feac21c854c16c2864f0eb2b2a7eb5203e3e5",
+    "sha256": "sha256:9f8fda587770546752fa01279d86679cfc24f87e7eb6a93cb893da243664f5a1",
+    "path": "theory/vortex-electron/claims.json",
+    "selector": "/claims/2",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Exact historical verdict and stated assumptions only; migration makes no new scientific inference."
+  ],
+  "missingness": [
+    "exact-evidence-owner-references",
+    "independently-verified-controls",
+    "activity",
+    "scope"
+  ],
+  "legacy": {
+    "id": "vortex-nature-chsh-ceiling",
+    "family": "bell-tests",
+    "kind": "nature",
+    "status": "refuted",
+    "claim": "Nature itself respects the \\|S\\| ≤ 2 ceiling (so the model could still be right)",
+    "evidence": "loophole-free experiments measure \\|S\\| ≈ 2.4–2.7 — [studies/chsh-bounds](../../studies/chsh-bounds.md)",
+    "links": [
+      "../../studies/chsh-bounds.md"
+    ],
+    "in_doc_ledger": true
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "claim": {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:vortex-nature-chsh-ceiling",
+      "revision_id": "sha256:19c194adaa49e9db753899cc5cfaee31422c64febc1e88ddf21c32da676fb244",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    "verdict": "refuted",
+    "legacy_verdict": "refuted",
+    "inference": "historical",
+    "basis": "legacy-report",
+    "controls": "unknown",
+    "rationale": "loophole-free experiments measure \\|S\\| ≈ 2.4–2.7 — [studies/chsh-bounds](../../studies/chsh-bounds.md)",
+    "evidence": []
+  },
+  "revision_id": "sha256:aed677c0d6770fd883b37db1ad099046329d3c34bb5c4b795f9c501df99dd498"
+}

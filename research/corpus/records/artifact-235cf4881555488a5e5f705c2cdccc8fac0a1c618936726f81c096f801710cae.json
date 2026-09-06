@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Atheory%2Fvortex-electron%2Fevidence-ledger.md",
+  "aliases": [
+    "source:principia:4e3b02c59b694d85016915177ef1ae157895ed7b:theory/vortex-electron/evidence-ledger.md"
+  ],
+  "activity": "active",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "8e907dc9ae4f7150082535256369d7637d2acba1",
+    "sha256": "sha256:3e81a3b3a2733c70e7390b3e478d23770e7ea4e28f6d581e8115f9d6fd8efe1e",
+    "path": "theory/vortex-electron/evidence-ledger.md",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Immutable archival source copy; upstream scientific ownership is unchanged."
+  ],
+  "missingness": [
+    "scope"
+  ],
+  "legacy": {
+    "source_pin": {
+      "repository": "principia",
+      "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "path": "theory/vortex-electron/evidence-ledger.md",
+      "blob_oid": "8e907dc9ae4f7150082535256369d7637d2acba1",
+      "sha256": "sha256:3e81a3b3a2733c70e7390b3e478d23770e7ea4e28f6d581e8115f9d6fd8efe1e",
+      "bytes": 1282,
+      "commit_metadata": "4e3b02c59b694d85016915177ef1ae157895ed7b\n2026-09-06T02:49:35+00:00\n2026-09-06T02:49:35+00:00\nfeat: Migrate the wide-binary control pilot into versioned scientific r… [ORB-11378]\n"
+    },
+    "text": "## Evidence ledger\n\n| Claim | Status | Evidence |\n|---|---|---|\n| The friction-vortex response rule (outcome = sign(axis · current), deterministic or stochastic) reproduces single-particle spin statistics | supported | [vortex-bell](../../../orrery/lab/sims/vortex-bell/) `vortex_bell.py` — contextual single-spin behavior works, echoing Bell's own 1964 single-spin model |\n| The same rule reproduces two-particle Bell correlations | refuted | [vortex-bell](../../../orrery/lab/sims/vortex-bell/): optimized over all detector settings, \\|S\\| saturates at exactly 2.000; E(22.5°) = −0.75 vs QM's −0.924; corkscrew and tilt-enumeration variants (`corkscrew_bell.py`, `tilt_enumeration.py`) hit the same ceiling |\n| Nature itself respects the \\|S\\| ≤ 2 ceiling (so the model could still be right) | refuted | loophole-free experiments measure \\|S\\| ≈ 2.4–2.7 — [studies/chsh-bounds](../../studies/chsh-bounds.md) |\n| A tabletop analog (ping-pong balls with hidden tilt axes) demonstrates the classical ceiling empirically | supported | [pingpong-bell](../../../orrery/lab/sims/pingpong-bell/): protocol + analysis give \\|S\\| = 1.49 ± 0.17 on sample data — within the classical bound, as any local mechanism must be (protocol: almanac `20-projects/pingpong-bell/`) |\n",
+    "commit_object": "tree 682cccb1cf19c89c2c5f4371c14ed2b384d2ae8c\nparent 13866b2848fbcce9a1f1ef2d4b97051a65f7e626\nauthor orbit[gpt-6-astra] <agent@orbit.invalid> 1788662975 +0000\ncommitter orbit <orbit@orbit.local> 1788662975 +0000\n\nfeat: Migrate the wide-binary control pilot into versioned scientific r… [ORB-11378]\n\nMigrate the wide-binary control pilot into versioned scientific records\n\nPlanned-By: codex\n"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "source",
+    "availability": "available",
+    "snapshot_digest": "sha256:3e81a3b3a2733c70e7390b3e478d23770e7ea4e28f6d581e8115f9d6fd8efe1e",
+    "locator": null,
+    "media_type": "text/plain"
+  },
+  "revision_id": "sha256:235cf4881555488a5e5f705c2cdccc8fac0a1c618936726f81c096f801710cae"
+}

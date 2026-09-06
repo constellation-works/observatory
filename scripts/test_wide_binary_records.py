@@ -6,6 +6,7 @@ import re
 import shutil
 import tempfile
 import unittest
+from unittest.mock import patch
 
 import wide_binary_records as pilot
 from orbit_research import protocol_digest, reconcile, validate
@@ -163,6 +164,57 @@ class MigrationTests(unittest.TestCase):
             file.write_bytes(pilot.encoded(record))
             with self.assertRaisesRegex(ValueError, "immutable record/mapping drift"):
                 pilot.inspect(root)
+
+    def test_git_utc_spellings_preserve_archived_identities(self):
+        for source in self.sources:
+            linux = deepcopy(source)
+            apple = deepcopy(source)
+            pin = apple["legacy"]["source_pin"]
+            lines = pin["commit_metadata"].splitlines(keepends=True)
+            for i in (1, 2):
+                lines[i] = lines[i].replace("+00:00\n", "Z\n")
+            pin["commit_metadata"] = "".join(lines)
+            apple["revision_id"] = revision_digest(apple)
+            archived = pilot.encoded(apple)
+            self.assertTrue(pilot.historical_equal(linux, apple))
+            self.assertTrue(pilot.historical_equal(apple, linux))
+            self.assertEqual(pilot.encoded(apple), archived)
+            self.assertEqual(pilot.encoded(source), pilot.encoded(linux))
+
+    def test_real_metadata_and_source_changes_still_fail(self):
+        original = self.sources[0]
+        for field, change in [("commit_metadata", lambda s: s.replace("2026-", "2025-", 1)),
+                              ("commit_metadata", lambda s: s + "different subject\n"),
+                              ("commit_metadata", lambda s: s.replace("+00:00", "+01:00", 1)),
+                              ("blob_oid", lambda s: "0" * 40),
+                              ("git_revision", lambda s: "0" * 40)]:
+            changed = deepcopy(original)
+            changed["legacy"]["source_pin"][field] = change(changed["legacy"]["source_pin"][field])
+            changed["revision_id"] = revision_digest(changed)
+            self.assertFalse(pilot.historical_equal(original, changed))
+        changed = deepcopy(original)
+        changed["legacy"]["text"] += "changed source bytes"
+        changed["revision_id"] = revision_digest(changed)
+        self.assertFalse(pilot.historical_equal(original, changed))
+        changed["revision_id"] = original["revision_id"]
+        with self.assertRaisesRegex(ValueError, "invalid historical"):
+            pilot.historical_equal(original, changed)
+
+    def test_snapshot_normalizes_git_output_before_hashing(self):
+        original = self.sources[0]
+        pin = original["legacy"]["source_pin"]
+        def fake_git(root, *args):
+            if args[0] == "rev-parse":
+                return (pin["blob_oid"] + "\n").encode()
+            if "-s" in args:
+                return pin["commit_metadata"].replace("+00:00\n", "Z\n").encode()
+            return original["legacy"]["text"].encode()
+        with patch.object(pilot, "git", side_effect=fake_git):
+            actual = pilot.snapshot(pin["repository"], pin["git_revision"], pin["path"], Path("/unused"))
+        self.assertEqual(actual, original)
+        # An accidental Z in the subject is never normalized.
+        text = "hash\n2026-09-05T03:00:00Z\n2026-09-05T03:00:00Z\n2026-09-05T03:00:00Z\n"
+        self.assertTrue(pilot.canonical_commit_metadata(text).endswith("\n2026-09-05T03:00:00Z\n"))
 
 
 if __name__ == "__main__":

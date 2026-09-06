@@ -1,5 +1,8 @@
 # studies/
 
+The [owner records](../research/README.md) generate/check these scientific views.
+Append native owner revisions and project them; do not edit the views independently.
+
 Sourced notes on **established physics** — the facts our theories and sims lean on. Maintained
 by **kepler** (`agentbase/kepler/memory`).
 

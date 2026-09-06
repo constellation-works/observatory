@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Agates%2Ftwo-substance-photon-sector.json",
+  "aliases": [
+    "source:principia:4e3b02c59b694d85016915177ef1ae157895ed7b:gates/two-substance-photon-sector.json"
+  ],
+  "activity": "active",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "c8d04c0c2da775ab76636f8b56e1a008619b339c",
+    "sha256": "sha256:c3bf8a263e5c5a4ca92fc13a2832ce4d6ff4f5f917436670b15f7f649ef210a0",
+    "path": "gates/two-substance-photon-sector.json",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Immutable archival source copy; upstream scientific ownership is unchanged."
+  ],
+  "missingness": [
+    "scope"
+  ],
+  "legacy": {
+    "source_pin": {
+      "repository": "principia",
+      "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "path": "gates/two-substance-photon-sector.json",
+      "blob_oid": "c8d04c0c2da775ab76636f8b56e1a008619b339c",
+      "sha256": "sha256:c3bf8a263e5c5a4ca92fc13a2832ce4d6ff4f5f917436670b15f7f649ef210a0",
+      "bytes": 3065,
+      "commit_metadata": "4e3b02c59b694d85016915177ef1ae157895ed7b\n2026-09-06T02:49:35+00:00\n2026-09-06T02:49:35+00:00\nfeat: Migrate the wide-binary control pilot into versioned scientific r… [ORB-11378]\n"
+    },
+    "text": "{\n  \"id\": \"two-substance-photon-sector\",\n  \"doc\": \"two-substance-vortex-vacuum\",\n  \"family\": \"two-substance-vortex-vacuum\",\n  \"kind\": \"existence\",\n  \"owed_object\": \"A single Maxwell photon sector (one cone, two polarizations, no birefringence, no detectable frame, γ=1), or a recast to one substance with a two-component order parameter. SUB-OBJECT (ORB-11219, algebra delivered): continuum linearized principal symbol and mode/constraint count of the existing packet Hamiltonian (two conserved densities, gradient-driven fluxes). That apparatus does not deliver the Maxwell sector — equal c₊=c₋ degenerates two longitudinal cones and leaves transverse flux frozen.\",\n  \"inherited_postulates\": [\n    \"postulate-lambda-coupling\"\n  ],\n  \"new_postulates\": [],\n  \"control\": \"Coupling-off λ=0 on a uniform rest background: the cubic term is absent from the linearized principal symbol. Unequal speeds c₊=0.65, c₋=1.0 (the existing packet fixture) are two distinct longitudinal cones. Equal-speed c₊=c₋ is the degeneracy the photon-sector conjecture proposed, not a Maxwell control.\",\n  \"kill\": \"The linearized packet symbol has two propagating transverse polarizations (Maxwell count) rather than four longitudinal acoustic branches plus frozen transverse currents. If a later sector exists, binding walls remain birefringence, two speeds, resonator anisotropy, or γ≠1.\",\n  \"forbidden_reopens\": [\n    \"two-substance-void-volume-ep\",\n    \"two-substance-conserving-far-field\",\n    \"two-substance-s2-fifth-force-charge\",\n    \"two-substance-fixed-length-universality\"\n  ],\n  \"blocked_phenomenology\": [\n    \"gravitating-radiation\",\n    \"s2-clocks\"\n  ],\n  \"comparator\": \"Maxwell plane-wave content versus two-fluid acoustics (studies/maxwell-mode-content-and-two-fluid-acoustics). Binding walls: studies/lorentz-violation-bounds and scalar-gravity-ppn-constraints.\",\n  \"claims\": [\n    \"two-substance-kill-condition-b\",\n    \"two-substance-packet-linear-modes\",\n    \"two-substance-packet-linear-local-only\"\n  ],\n  \"follow_on_fixture\": \"two-substance-packet-linear-symbol (Orrery ORB-11220, merged remote commit 73c9bd53e963e44bb365992c1df87a1077cc996f; frozen U0/U1/U2/B0/T0 gates all validated). It supports the stated linear mode properties and refutes the Maxwell reading of this apparatus only: four longitudinal roots, frozen transverse currents, no Gauss constraint. The live gate remains owed by a recast or different interaction; no nature claim or gravity wall moved.\",\n  \"analytic_attempt\": {\n    \"date\": \"2026-09-04\",\n    \"chapter\": \"theory/two-substance-vortex-vacuum/photon-mode-obstruction.md\",\n    \"outcome\": \"Conditional phase-only obstruction; gate stays open. Equal speeds do not supply transverse modes; Josephson locking gaps relative sound but attaches walls to relative-winding charge.\",\n    \"next_object\": \"Explicit gauge-sector action and constraints with defect-charge mapping, beyond a regular isotropic two-phase action.\",\n    \"control\": \"Josephson J=0 restores two gapless scalar modes and removes the locking wall tension.\"\n  }\n}\n",
+    "commit_object": "tree 682cccb1cf19c89c2c5f4371c14ed2b384d2ae8c\nparent 13866b2848fbcce9a1f1ef2d4b97051a65f7e626\nauthor orbit[gpt-6-astra] <agent@orbit.invalid> 1788662975 +0000\ncommitter orbit <orbit@orbit.local> 1788662975 +0000\n\nfeat: Migrate the wide-binary control pilot into versioned scientific r… [ORB-11378]\n\nMigrate the wide-binary control pilot into versioned scientific records\n\nPlanned-By: codex\n"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "source",
+    "availability": "available",
+    "snapshot_digest": "sha256:c3bf8a263e5c5a4ca92fc13a2832ce4d6ff4f5f917436670b15f7f649ef210a0",
+    "locator": null,
+    "media_type": "application/json"
+  },
+  "revision_id": "sha256:2902946b35a6356f95a5c4d1e02ad767b8bcdb8ef8e112724f065ed9bcc2ad69"
+}

@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Atheory%2Fretarded-scarcity-wake%2Frelated.md",
+  "aliases": [
+    "source:principia:4e3b02c59b694d85016915177ef1ae157895ed7b:theory/retarded-scarcity-wake/related.md"
+  ],
+  "activity": "active",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "6cd2f982ed179c23a3da25626586e8e04782e55f",
+    "sha256": "sha256:75d301565883836d849343072a40e87409341130cf479c54661f79c8ccdc2b66",
+    "path": "theory/retarded-scarcity-wake/related.md",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Immutable archival source copy; upstream scientific ownership is unchanged."
+  ],
+  "missingness": [
+    "scope"
+  ],
+  "legacy": {
+    "source_pin": {
+      "repository": "principia",
+      "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "path": "theory/retarded-scarcity-wake/related.md",
+      "blob_oid": "6cd2f982ed179c23a3da25626586e8e04782e55f",
+      "sha256": "sha256:75d301565883836d849343072a40e87409341130cf479c54661f79c8ccdc2b66",
+      "bytes": 1629,
+      "commit_metadata": "4e3b02c59b694d85016915177ef1ae157895ed7b\n2026-09-06T02:49:35+00:00\n2026-09-06T02:49:35+00:00\nfeat: Migrate the wide-binary control pilot into versioned scientific r… [ORB-11378]\n"
+    },
+    "text": "## Related\n\n- [Moving-source field consistency](../moving-source-field-consistency/) — the successor that\n  adjudicated this fork analytically, and whose [Branch C](../moving-source-field-consistency/branch-c.md)\n  chapter wrote the explicit boost-violating equation and closed the family (2026-09-04)\n- [Gravity as the gradient of scarce space](../gravity-as-scarcity/) — parent mechanics and\n  its unchanged empirical verdicts\n- [Moving sources in the closed system](../moving-sources-in-the-closed-system/) — the\n  gravity-as-scarcity family's own moving-source front; a different family with its own debts,\n  which this closure neither pays nor inherits\n- [The two-substance vortex vacuum](../two-substance-vortex-vacuum/) — candidate substrate\n  ontology with its own source-law and conservation debts\n- [Moving-source gravity bounds](../../studies/moving-source-gravity-bounds.md) — aberration\n  cancellation (the control), preferred-frame PPN parameters, and the gravitational Cherenkov wall\n- [Solar-system ephemeris precision floor](../../studies/solar-system-ephemeris-precision-floor.md)\n  — the wall that closed Branch C\n- [Lorentz-violation bounds](../../studies/lorentz-violation-bounds.md) — existing wall around\n  observable rest-frame coupling, and the sourced velocity scales\n- [River model and analog gravity](../../studies/river-model-and-analog-gravity.md) — precedent\n  for a medium whose excitations hide uniform motion\n- [Scalar gravity and PPN constraints](../../studies/scalar-gravity-ppn-constraints.md) — light\n  and gravitational-wave constraints inherited by any scalar completion\n",
+    "commit_object": "tree 682cccb1cf19c89c2c5f4371c14ed2b384d2ae8c\nparent 13866b2848fbcce9a1f1ef2d4b97051a65f7e626\nauthor orbit[gpt-6-astra] <agent@orbit.invalid> 1788662975 +0000\ncommitter orbit <orbit@orbit.local> 1788662975 +0000\n\nfeat: Migrate the wide-binary control pilot into versioned scientific r… [ORB-11378]\n\nMigrate the wide-binary control pilot into versioned scientific records\n\nPlanned-By: codex\n"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "source",
+    "availability": "available",
+    "snapshot_digest": "sha256:75d301565883836d849343072a40e87409341130cf479c54661f79c8ccdc2b66",
+    "locator": null,
+    "media_type": "text/plain"
+  },
+  "revision_id": "sha256:06924972a158c0910a31c163ba2235e53bb7391de44b0f0bc3e51d47bd884b05"
+}

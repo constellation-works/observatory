@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "kind": "claim",
+  "id": "urn:research:principia:claim:retarded-wake-gravitational-cone",
+  "aliases": [
+    "retarded-wake-gravitational-cone"
+  ],
+  "activity": "paused",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "5a0334520045b6866e96fd14cbe0f87a1feee659",
+    "sha256": "sha256:4c18601b8818d5bb0724f512c671a9a618cf27a59fdf02401c19ab1b07413d59",
+    "path": "theory/retarded-scarcity-wake/claims.json",
+    "selector": "/claims/10",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Exact historical verdict and stated assumptions only; migration makes no new scientific inference."
+  ],
+  "missingness": [
+    "scope"
+  ],
+  "legacy": {
+    "id": "retarded-wake-gravitational-cone",
+    "family": "retarded-scarcity-wake",
+    "kind": "nature",
+    "status": "refuted",
+    "claim": "A gravitational cone forms when \\(v>c_g\\)",
+    "evidence": "Previously conjecture while an extra substrate mode's coupling was unspecified; refuted for this wake's field once the sourced wall and Branch C fixed that scope. GW170817 pins the observed tensor speed near \\(c\\) ([scalar-gravity-ppn-constraints](../../studies/scalar-gravity-ppn-constraints.md)) and Moore & Nelson give Cherenkov bounds of \\(c-c_g<2\\times10^{-15}c\\) (Galactic) and ~\\(2\\times10^{-19}c\\) (extragalactic) for any conventionally coupled mode ([moving-source-gravity-bounds](../../studies/moving-source-gravity-bounds.md) § gravitational Cherenkov). The escape through an extra, differently coupled substrate mode closed with Branch C: its potential is the conventionally coupled one ([Branch C](../moving-source-field-consistency/branch-c.md) § Walls). Galaxies at \\(10^{-3}c\\) never outrun the field",
+    "links": [
+      "../../studies/scalar-gravity-ppn-constraints.md",
+      "../../studies/moving-source-gravity-bounds.md",
+      "../moving-source-field-consistency/branch-c.md"
+    ],
+    "in_doc_ledger": true
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "claim",
+    "statement": "A gravitational cone forms when \\(v>c_g\\)",
+    "domain": "nature"
+  },
+  "revision_id": "sha256:3412de9cb812c20435ab46266f8b8312db22f072514a0fda94352f5ebaf7f892"
+}

@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "kind": "claim",
+  "id": "urn:research:principia:claim:two-substance-mass-core-energy",
+  "aliases": [
+    "two-substance-mass-core-energy"
+  ],
+  "activity": "active",
+  "scope": "derivation",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "94e76368a84e00ed742153d77b3d25dd5962c664",
+    "sha256": "sha256:c95d48cf673efa43d6d77005c73cadea42fac1ff00da556a7b7fd260df14f9a6",
+    "path": "theory/two-substance-vortex-vacuum/claims.json",
+    "selector": "/claims/2",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Exact historical verdict and stated assumptions only; migration makes no new scientific inference."
+  ],
+  "missingness": [],
+  "legacy": {
+    "id": "two-substance-mass-core-energy",
+    "family": "two-substance-vortex-vacuum",
+    "kind": "derived",
+    "status": "supported",
+    "claim": "Mass = core energy is unconstrained by charge — the 1836× ratio puts no strain on exact charge cancellation",
+    "evidence": "Structural consequence of the split; the superfluid precedent shows winding exact while core energy varies freely (studies note). What sets *1836 specifically* is entirely open (untested, below)",
+    "links": [],
+    "in_doc_ledger": true
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "claim",
+    "statement": "Mass = core energy is unconstrained by charge — the 1836× ratio puts no strain on exact charge cancellation",
+    "domain": "model"
+  },
+  "revision_id": "sha256:6e6df8bf4c75804cd75db3f5f4b3cd693819695f925c54db64e6684a380a6532"
+}

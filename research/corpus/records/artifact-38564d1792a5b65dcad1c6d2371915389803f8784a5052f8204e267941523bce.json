@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:principia:artifact:source%3Aorrery%3Aa1c430db54d585048ec85c4e7c47141db634f398%3Alab%2Fsims%2Fscarcity-capped-cumulative-field%2Fsim.json",
+  "aliases": [
+    "source:orrery:a1c430db54d585048ec85c4e7c47141db634f398:lab/sims/scarcity-capped-cumulative-field/sim.json"
+  ],
+  "activity": "active",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": null,
+    "blob_oid": null,
+    "sha256": "sha256:0bf3f14a53b5dac06107785680d9f9c4ee4699ed3943fc688f0f5c570e38d41b",
+    "path": "upstream-snapshot/orrery/a1c430db54d585048ec85c4e7c47141db634f398/lab/sims/scarcity-capped-cumulative-field/sim.json",
+    "selector": "$",
+    "historical": true,
+    "working_tree": true
+  },
+  "limitations": [
+    "Immutable archival source copy; upstream scientific ownership is unchanged."
+  ],
+  "missingness": [
+    "git-revision",
+    "owner-ingestion-git-pin",
+    "scope",
+    "upstream-canonical-record"
+  ],
+  "legacy": {
+    "source_pin": {
+      "repository": "orrery",
+      "git_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "path": "lab/sims/scarcity-capped-cumulative-field/sim.json",
+      "blob_oid": "9b83e58149e98170dafca60431016d839972372f",
+      "sha256": "sha256:0bf3f14a53b5dac06107785680d9f9c4ee4699ed3943fc688f0f5c570e38d41b",
+      "bytes": 599,
+      "commit_metadata": "a1c430db54d585048ec85c4e7c47141db634f398\n2026-09-06T02:28:14+00:00\n2026-09-06T02:28:14+00:00\nfeat: Preserve the original electron animation's continuous fold in a c… [ORB-11374]\n"
+    },
+    "text": "{\n  \"slug\": \"scarcity-capped-cumulative-field\",\n  \"title\": \"Capped cumulative scarcity field\",\n  \"kind\": \"web\",\n  \"entry\": \"index.html\",\n  \"status\": \"imported\",\n  \"created\": \"2026-07-05\",\n  \"topics\": [\n    \"gravity\",\n    \"field-visualization\"\n  ],\n  \"family\": \"gravity-as-scarcity\",\n  \"summary\": \"3D visualization of the gravity-as-scarcity model: cumulative space-budget depletion around masses, with a hard cap.\",\n  \"provenance\": {\n    \"almanac\": \"15-discussions/26-07/gravity-as-scarcity-of-space.md\",\n    \"imported_from\": \"almanac/40-outputs/gravity/capped_cumulative_scarcity_field.html\"\n  }\n}\n",
+    "commit_object": "tree 8d851030602405b11b7166108b09cf9cd5664329\nparent 148b668391f575466282eaa81aab0dc943846a87\nauthor orbit[gpt-6-astra] <agent@orbit.invalid> 1788661694 +0000\ncommitter orbit <orbit@orbit.local> 1788661694 +0000\n\nfeat: Preserve the original electron animation's continuous fold in a c… [ORB-11374]\n\nPreserve the original electron animation's continuous fold in a computed-field view\n\nPlanned-By: codex\n"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "source",
+    "availability": "available",
+    "snapshot_digest": "sha256:0bf3f14a53b5dac06107785680d9f9c4ee4699ed3943fc688f0f5c570e38d41b",
+    "locator": null,
+    "media_type": "application/json"
+  },
+  "revision_id": "sha256:38564d1792a5b65dcad1c6d2371915389803f8784a5052f8204e267941523bce"
+}

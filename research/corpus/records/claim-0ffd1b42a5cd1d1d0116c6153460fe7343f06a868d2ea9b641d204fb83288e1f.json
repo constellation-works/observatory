@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "kind": "claim",
+  "id": "urn:research:principia:claim:moving-source-orientation-split",
+  "aliases": [
+    "moving-source-orientation-split"
+  ],
+  "activity": "resolved",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "f55e1dace027658053ccc8f5b740363237c0eda4",
+    "sha256": "sha256:34d8fd1300c47a5df5ea2300abe6ba3ac4e6c29d546f03686710d88e1297d681",
+    "path": "theory/moving-source-field-consistency/claims.json",
+    "selector": "/claims/9",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Exact historical verdict and stated assumptions only; migration makes no new scientific inference."
+  ],
+  "missingness": [
+    "scope"
+  ],
+  "legacy": {
+    "id": "moving-source-orientation-split",
+    "family": "retarded-scarcity-wake",
+    "kind": "nature",
+    "status": "untested",
+    "claim": "A boost-violating model may produce an orientation-dependent split between in-plane lopsidedness and vertical displacement or warping",
+    "evidence": "Moot: Branch C closed (ORB-11175). For the minimal equation the split does exist in form — the in-plane component of \\(\\mathbf{w}\\) gives the tangential \\(m=1\\) force and the perpendicular component a midplane vertical acceleration falling as \\(1/R\\), a bowl-like differential forcing ([Branch C](branch-c.md) § The first-order moving-source solution) — but at amplitudes the ephemeris floor caps below \\(10^{-3}\\), so the disk-response derivation is no longer owed",
+    "links": [
+      "branch-c.md"
+    ],
+    "in_doc_ledger": true,
+    "kill": "Moot: Branch C closed. Reopening needs an amplitude above the ephemeris ceiling."
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "claim",
+    "statement": "A boost-violating model may produce an orientation-dependent split between in-plane lopsidedness and vertical displacement or warping",
+    "domain": "nature"
+  },
+  "revision_id": "sha256:0ffd1b42a5cd1d1d0116c6153460fe7343f06a868d2ea9b641d204fb83288e1f"
+}

@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "kind": "assessment",
+  "id": "urn:research:principia:assessment:scarcity-mw-vs-nfw%3Alegacy-verdict",
+  "aliases": [
+    "scarcity-mw-vs-nfw:legacy-verdict"
+  ],
+  "activity": "unknown",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "b5f58c64f4c6bf9d7d7f67c826f5d2dd7c9cb64f",
+    "sha256": "sha256:996b059ca4b45cee6dd42a503594508ebb8d6d13211ad1104df3754b116d5976",
+    "path": "theory/gravity-as-scarcity/claims.json",
+    "selector": "/claims/4",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Exact historical verdict and stated assumptions only; migration makes no new scientific inference."
+  ],
+  "missingness": [
+    "exact-evidence-owner-references",
+    "independently-verified-controls",
+    "activity",
+    "scope"
+  ],
+  "legacy": {
+    "id": "scarcity-mw-vs-nfw",
+    "family": "gravity-as-scarcity",
+    "kind": "nature",
+    "status": "mixed",
+    "claim": "Fit to real MW data, the scarcity model **matches or beats a standard dark-matter halo once AIC penalizes parameter count**",
+    "evidence": "**ORB-10082 ran** ([scarcity-rotation-curve-fit](../../../orrery/lab/sims/scarcity-rotation-curve-fit/), orrery `a9f93bd`) — reframed by Daniel before execution: NFW+baryons keeps a free baryonic scale plus M200 and concentration (3 physical params vs scarcity's 2; no longer equal-dof, AIC penalizes the extra). Point estimate favors scarcity — RMSE 2.70 vs 3.66 km/s, ΔAIC(scarcity−NFW) = −1663, same sign on all 27 profile variants (−2293 to −847) — **but the 200-resample bootstrap 95% CI spans −4129 to +1102 → statistically inconclusive, not a scarcity win**. Cutting the other way: NFW slightly wins the held-out band (4.99 vs 5.26 km/s RMSE) and flips the coherent residual sign; NFW is itself weakly identified here (drift pinned at its 10 km/s *upper* bound, c ≈ 37 — far above a typical MW-mass halo), so the 5–15 kpc band limits what the comparison establishes *in either direction*. Gate: **ORB-10083** (radially varying drift, applied identically to all three models)",
+    "links": [
+      "../../../orrery/lab/sims/scarcity-rotation-curve-fit/"
+    ],
+    "in_doc_ledger": true
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "claim": {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:scarcity-mw-vs-nfw",
+      "revision_id": "sha256:659f111f71da95847a96bd1d80c29c11893e29c52951a172aa867ae9ebbcf37b",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    "verdict": "inconclusive",
+    "legacy_verdict": "mixed",
+    "inference": "historical",
+    "basis": "legacy-report",
+    "controls": "unknown",
+    "rationale": "**ORB-10082 ran** ([scarcity-rotation-curve-fit](../../../orrery/lab/sims/scarcity-rotation-curve-fit/), orrery `a9f93bd`) — reframed by Daniel before execution: NFW+baryons keeps a free baryonic scale plus M200 and concentration (3 physical params vs scarcity's 2; no longer equal-dof, AIC penalizes the extra). Point estimate favors scarcity — RMSE 2.70 vs 3.66 km/s, ΔAIC(scarcity−NFW) = −1663, same sign on all 27 profile variants (−2293 to −847) — **but the 200-resample bootstrap 95% CI spans −4129 to +1102 → statistically inconclusive, not a scarcity win**. Cutting the other way: NFW slightly wins the held-out band (4.99 vs 5.26 km/s RMSE) and flips the coherent residual sign; NFW is itself weakly identified here (drift pinned at its 10 km/s *upper* bound, c ≈ 37 — far above a typical MW-mass halo), so the 5–15 kpc band limits what the comparison establishes *in either direction*. Gate: **ORB-10083** (radially varying drift, applied identically to all three models)",
+    "evidence": []
+  },
+  "revision_id": "sha256:50b577a606c4cb5e9bc19a38ba111ef928e3a9586d0bb2b94f364b8ca3a6e159"
+}

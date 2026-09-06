@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "kind": "assessment",
+  "id": "urn:research:principia:assessment:vortex-pingpong-classical-ceiling%3Alegacy-verdict",
+  "aliases": [
+    "vortex-pingpong-classical-ceiling:legacy-verdict"
+  ],
+  "activity": "unknown",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "2e8feac21c854c16c2864f0eb2b2a7eb5203e3e5",
+    "sha256": "sha256:9f8fda587770546752fa01279d86679cfc24f87e7eb6a93cb893da243664f5a1",
+    "path": "theory/vortex-electron/claims.json",
+    "selector": "/claims/3",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Exact historical verdict and stated assumptions only; migration makes no new scientific inference."
+  ],
+  "missingness": [
+    "exact-evidence-owner-references",
+    "independently-verified-controls",
+    "activity",
+    "scope"
+  ],
+  "legacy": {
+    "id": "vortex-pingpong-classical-ceiling",
+    "family": "bell-tests",
+    "kind": "model-property",
+    "status": "supported",
+    "claim": "A tabletop analog (ping-pong balls with hidden tilt axes) demonstrates the classical ceiling empirically",
+    "evidence": "[pingpong-bell](../../../orrery/lab/sims/pingpong-bell/): protocol + analysis give \\|S\\| = 1.49 ± 0.17 on sample data — within the classical bound, as any local mechanism must be (protocol: almanac `20-projects/pingpong-bell/`)",
+    "links": [
+      "../../../orrery/lab/sims/pingpong-bell/"
+    ],
+    "in_doc_ledger": true
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "claim": {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:vortex-pingpong-classical-ceiling",
+      "revision_id": "sha256:c5849ebf1916fbf7bc82f28130d15b9f2ad6d24d426f744c9742b4976d2206a2",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    "verdict": "supported",
+    "legacy_verdict": "supported",
+    "inference": "historical",
+    "basis": "legacy-report",
+    "controls": "unknown",
+    "rationale": "[pingpong-bell](../../../orrery/lab/sims/pingpong-bell/): protocol + analysis give \\|S\\| = 1.49 ± 0.17 on sample data — within the classical bound, as any local mechanism must be (protocol: almanac `20-projects/pingpong-bell/`)",
+    "evidence": []
+  },
+  "revision_id": "sha256:f4ce8b5d7528ddf02da3b5bf053d7f3d6a7f36d3ab629779e4c4b977d374e522"
+}

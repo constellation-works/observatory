@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Atheory%2Fwide-binary-selection-methodology%2FREADME.md",
+  "aliases": [
+    "source:principia:4e3b02c59b694d85016915177ef1ae157895ed7b:theory/wide-binary-selection-methodology/README.md"
+  ],
+  "activity": "active",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "030a9f8afa135e668dafbdfd686580934bfa9783",
+    "sha256": "sha256:b68f7277ef80a53bf1e049c1f2e433ad57ae2c45f42dade00b92ab8291d99da4",
+    "path": "theory/wide-binary-selection-methodology/README.md",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Immutable archival source copy; upstream scientific ownership is unchanged."
+  ],
+  "missingness": [
+    "scope"
+  ],
+  "legacy": {
+    "source_pin": {
+      "repository": "principia",
+      "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "path": "theory/wide-binary-selection-methodology/README.md",
+      "blob_oid": "030a9f8afa135e668dafbdfd686580934bfa9783",
+      "sha256": "sha256:b68f7277ef80a53bf1e049c1f2e433ad57ae2c45f42dade00b92ab8291d99da4",
+      "bytes": 3128,
+      "commit_metadata": "4e3b02c59b694d85016915177ef1ae157895ed7b\n2026-09-06T02:49:35+00:00\n2026-09-06T02:49:35+00:00\nfeat: Migrate the wide-binary control pilot into versioned scientific r… [ORB-11378]\n"
+    },
+    "text": "---\ntitle: \"Wide-binary selection methodology: does geometry/truncation manufacture an acceleration-dependent artifact?\"\nstatus: exploratory\nfamilies: [wide-binary-selection-methodology]\nalmanac: \"orbit:ORB-11221 (task-originated; no almanac discussion thread)\"\ncreated: 2026-09-05\nupdated: 2026-09-05\n---\n\n# Wide-binary selection methodology\n\n**The idea.** [gaia-wide-binaries-low-acceleration](../../studies/gaia-wide-binaries-low-acceleration.md)\nput Astrolabe's predeclared wide-binary pipeline against real Gaia DR3 data and found no\nlow-acceleration excess on a 25° cone (n = 156 pairs). That pipeline applies sky geometry,\nbrightness truncation, an escape-speed proper-motion gate, and a shifted-field chance-alignment\nestimator before binning the scaled velocity statistic ṽ against internal Newtonian\nacceleration g_N. This doc is **not** a claim that the pipeline is wrong, and not a new\ngravity theory — it is a dedicated **methodological control family** asking a narrower\nquestion: can geometry/truncation cuts interacting with a nonuniform sky population, or a\nmiscalibrated chance-alignment estimator, manufacture a spurious acceleration-dependent offset\nin an otherwise purely Newtonian synthetic catalog run through the *real* pipeline? Candidate\npair-completeness defects in that pipeline are a separate, already-closed question (Astrolabe\nORB-11217, landed at astrolabe commit `90f5b58`) — this family is about the surviving\n*intentional* selection design (the cuts as specified), chance contamination, and forward-model\nassumptions, not about a completeness bug.\n\nThe full preregistered protocol — hypothesis, null, decision rule, controls, run matrix, and\nthe cross-repo contract for the Orrery follow-on experiment — is\n[studies/wide-binary-selection-bias-preregistration](../../studies/wide-binary-selection-bias-preregistration.md).\nThis hub carries only the claim registry; the study note is the protocol itself and is where\nthe falsifiable content lives.\n\n**Status.** The protocol remains frozen. ORB-11222 ran its cataloged synthetic fixture at\nmerged Orrery commit `28dd5c72bb670517b93b556f1d2483402c8e8655`\n([wide-binary-selection-bias](../../../orrery/lab/sims/wide-binary-selection-bias/)). Its\ncandidate oracle passes all 44 enumerated realizations, but R0 sanity, cap isolation, shifted\nfield calibration, and positive-control power fail under the predeclared rule; the overall\nverdict is therefore **unresolved**, not a result about gravity or the astronomical anomaly.\n[gates/wide-binary-selection-bias-control](../../gates/wide-binary-selection-bias-control.json)\nremains the live front, with repair task ORB-11241 diagnosing the frozen-control failures.\n\n## Contents\n\n- [evidence-ledger.md](evidence-ledger.md) — claim-by-claim outcomes, including unresolved\n  controls and the independently supported candidate-oracle regression.\n- [related.md](related.md) — links to the parent Gaia footprint, ORB-11217, and the literature\n  precedent for estimator-forensics in this exact test.\n- [open-questions.md](open-questions.md) — what the pilot needs to settle before promotion.\n",
+    "commit_object": "tree 682cccb1cf19c89c2c5f4371c14ed2b384d2ae8c\nparent 13866b2848fbcce9a1f1ef2d4b97051a65f7e626\nauthor orbit[gpt-6-astra] <agent@orbit.invalid> 1788662975 +0000\ncommitter orbit <orbit@orbit.local> 1788662975 +0000\n\nfeat: Migrate the wide-binary control pilot into versioned scientific r… [ORB-11378]\n\nMigrate the wide-binary control pilot into versioned scientific records\n\nPlanned-By: codex\n"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "source",
+    "availability": "available",
+    "snapshot_digest": "sha256:b68f7277ef80a53bf1e049c1f2e433ad57ae2c45f42dade00b92ab8291d99da4",
+    "locator": null,
+    "media_type": "text/plain"
+  },
+  "revision_id": "sha256:ce4f9b61f25ee84a8a664d327a461ad87515f476d794eb4e55d485d94dd1f31e"
+}

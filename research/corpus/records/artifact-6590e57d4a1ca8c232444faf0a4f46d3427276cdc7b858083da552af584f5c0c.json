@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Atheory%2Fshear-sourced-consumption%2Fevidence-ledger.md",
+  "aliases": [
+    "source:principia:4e3b02c59b694d85016915177ef1ae157895ed7b:theory/shear-sourced-consumption/evidence-ledger.md"
+  ],
+  "activity": "active",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "e424c48c95af11f79aea2cadbd4f5624f504ce2b",
+    "sha256": "sha256:f1e08dd9c647e0b6aa30b006d7a75b6f9904fce70789842e0cbe52482fc0e0cf",
+    "path": "theory/shear-sourced-consumption/evidence-ledger.md",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Immutable archival source copy; upstream scientific ownership is unchanged."
+  ],
+  "missingness": [
+    "scope"
+  ],
+  "legacy": {
+    "source_pin": {
+      "repository": "principia",
+      "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "path": "theory/shear-sourced-consumption/evidence-ledger.md",
+      "blob_oid": "e424c48c95af11f79aea2cadbd4f5624f504ce2b",
+      "sha256": "sha256:f1e08dd9c647e0b6aa30b006d7a75b6f9904fce70789842e0cbe52482fc0e0cf",
+      "bytes": 7769,
+      "commit_metadata": "4e3b02c59b694d85016915177ef1ae157895ed7b\n2026-09-06T02:49:35+00:00\n2026-09-06T02:49:35+00:00\nfeat: Migrate the wide-binary control pilot into versioned scientific r… [ORB-11378]\n"
+    },
+    "text": "## Evidence ledger\n\n**Family retired by Daniel on 2026-09-04.** The entries below are preserved as\nhistorical evidence or unanswered questions, not an active research queue.\nSee the [retirement decision](../gravity-as-scarcity/retirement.md).\n\n| Claim | Status | Evidence |\n|---|---|---|\n| The shear-consumption law + continuity uniquely select v ∝ r^(−1/2) (GP) among steady radial flows, with free amplitude | supported | Closed-form ODE derivation (§ above), now cataloged with its dynamical confirmation: **ORB-10751** measures steady exponent −0.5000149713 ± 2.9×10⁻⁷ (regression SE), ± 1.6×10⁻⁵ combined across seeds/resolution/timestep — −1/2 within one combined error |\n| The GP sink s = (3/2)nv/r equals n(e_rr − e_θθ) at coefficient exactly 1, and equals the von Mises form for radial flows | supported | Algebraic identity (§ the law), exercised on-lattice: ORB-10751's frozen rule *is* the coefficient-one von Mises law and the GP profile emerges under it |\n| The law consumes nothing in homogeneous Hubble flow (cosmological silence) | supported | ORB-10751 silence gate: uniformly expanding lattice shows max consumption density 7.4×10⁻¹⁸ = 3.7×10⁻¹⁶ of n\\|H\\| — consistent with zero |\n| GP is a dynamical *attractor* under the law (arbitrary initial flows converge) | supported | ORB-10751 attractor gate: convergence from rest and from perturbed initial states; initial-condition exponent difference 1.2×10⁻⁶; resolution (128/256/512 shells) and timestep (dt 0.2/0.1/0.05) sequences both converge on −1/2 |\n| A core boundary condition selects the exterior amplitude A monotonically and stably | supported | ORB-10751 amplitude gate: exterior half-power amplitude rises strictly (2.4×10⁻⁴ → 2.6×10⁻²) across core flux 0.003–0.3; max initial-condition relative spread 9.6×10⁻⁷ |\n| A mass of energy E imposes specifically A = √(2GM) via its boundary condition | supported | Controllability measured (row above); identification closed analytically (§ the closure) and **measured as a lattice attractor: ORB-10932 level gate passed** — A vs c²σ_s·r_s exponent 0.5000000000000002 ± 7.5×10⁻¹⁶ (regression SE) across 3 decades of mass, max \\|A²/(2c²σ_s·r_s) − 1\\| = 4.7×10⁻³, rest/perturbed amplitude spread 2.4×10⁻⁹ ([level-coupled-shear-lattice](../../../orrery/lab/sims/level-coupled-shear-lattice/), orrery `82b885c`) |\n| The amplitude coupling is flux-type — a universal per-energy consumption rate matched at the matter surface (the doc's recorded natural guess) | refuted | Closed-form (§ closure (a), symbolically checked): flux matching forces G_eff = κ²ρ_body/(24πn²) — source strength ∝ bulk density, independent of M — contradicting the counting mechanic's verified mass-only σ ∝ M normalization and breaking mass additivity except at universal packing density. **Lattice discriminator ran (ORB-10932 density gate): at fixed draw, A is independent of core radius over a 4× span (exponent −2×10⁻¹⁷ ± 9×10⁻¹⁵) — the flux signature A ∝ r_s^(−3/2) did not revive.** **External universality bounds now sourced (ORB-10933): [source-side-universality-of-g](../../studies/source-side-universality-of-g.md).** Writing G_eff = G₀(ρ/ρ₀)^p, laboratory determinations whose *source* masses span ~1.0–18.0 g/cc (lake water; #316 stainless steel; mercury; 95%-W Inermet180) agree to ≲10⁻³, bounding p below 10⁻³ in magnitude against this coupling's p = 1 — excluded by ~three orders of magnitude (the homogeneous-source pair, steel 8.0 vs tungsten alloy 18.0, alone gives p ≤ 4.3×10⁻⁴). The lunar Fe/Al active–passive bound 3.9×10⁻¹⁴ kills the per-element variant far harder but is null against the bulk-density variant; Kreuzer 1968 is a null at *equal* density (composition only); ephemeris consistency discriminates nothing on its own, since every dynamical channel measures G_eff·M |\n| The closed system {draw-sourced 1/r level, inertial rolling rule, coefficient-one shear law} is consistent, parameter-free, and uniquely selects GP with A = √(2GM); consistency forces the shear coefficient k = 1 | supported | Closed-form derivation (§ closure (b)): Bernoulli against the 1/r level gives ½v² = c²σ = GM/r at every radius; shear+continuity independently give v ∝ r^((k−2)/(k+1)), matching only at k = 1. Verified symbolically. **The attractor question is now measured: ORB-10932 converges to the closed system from rest and from seeded perturbed states** (96/192/384-shell ladder, finest relative amplitude shift 3.2×10⁻³; CFL-halving shift 1.0×10⁻⁹) |\n| Newtonian mass additivity forces quadrature composition of river amplitudes (A² additive; A ∝ √N for clustered sources) | supported | Algebra (§ closure (c)): GM_eff = A²/2 and mass additivity. Kills linear velocity superposition (σ ∝ N²) and one-amplitude laws (s ∝ nv³) structurally; level coupling passes by construction. **Measured: ORB-10932 composition gate passed** — A vs N exponent 0.4999999999999982 ± 2.0×10⁻¹⁵ across 1.5 decades of N (radial-monopole reduction; nonspherical near-field is ORB-10934's territory) |\n| The ORB-10751 two-core superposition divergence is a flux-boundary artifact; level-type cores restore the counting mechanic's ORB-10157 headroom family | supported | Predicted by the closure (§ closure (d)); **measured both ways, 2026-08-21.** Flux arm: **ORB-10755** converged the divergent family under flux cores (c = 4.63 ± 0.18, β = 0.606 ± 0.027 at 65³) — real physics of that boundary condition. Level arm: **ORB-10934 family gate confirmed** — full 3-D draw-sourced level cores, same frozen stencil, revert to (1−D)^p with continuum p = 1.0717 ± 0.0036 (consistent with 1.071); free flux family loses ~14× in log-RMSE (0.0949 vs 0.0066) with β driven to the analytic bound 2 — no non-analytic revival ([level-core-two-core-superposition](../../../orrery/lab/sims/level-core-two-core-superposition/), orrery `9e273e2`) |\n| Two-source superposition under the shear law reproduces the measured headroom-screening family (ORB-10157) | supported — under level cores, the closure's physical boundary condition | **ORB-10934** (full 3-D, 25³/41³/65³ ladder, fixed physical core width, matched depletion grid, second-order spacing extrapolation): (1−D)^p with continuum p = 1.0717 ± 0.0036, finest log-RMSE 0.0066 — the fixed ORB-10157 exponent 1.071 fits equally well (0.0066). Small-D probe analytic (d ln A/dD bounded, −1.006…−1.054); far-field quadrature A² = A₁² + A₂² at 5.2×10⁻¹⁶; separation control log-RMSE 0.0092 over separations 6/8/10. The flux-core arm (**ORB-10755**: 1/(1 + c·D^β), c = 4.6251 ± 0.1841, β = 0.60556 ± 0.02687) stands as converged physics of the *excluded* boundary condition — one mechanic, two boundary conditions, one physical. Declared limits carried: one-way draw coupling, deterministic slot expectation, finite Dirichlet box |\n| Global budget: Hubble generation inside R balances GP intake exactly at the turnaround radius R³ = 2GM/H² | mixed | **ORB-10754** (tycho, 11 systems, Karachentsev program + Virgo/Fornax): with independent masses, measured turnaround radii sit at 0.43–0.83× (median ≈ 0.55) the budget radius — right scale, wrong coefficient. Data track the ΛCDM zero-velocity formula (≈ 1.0), whose matter/Λ factors the pure-Hubble idealization here drops. Circular R₀-derived masses excluded per the compilation's own flags ([study note](../../studies/cosmological-expansion-and-bound-systems.md)) |\n| \"Shear consumes, isotropic strain doesn't\" corresponds to GR's Weyl/Ricci split | conjecture | Resonance only; no derivation, no citation yet |\n",
+    "commit_object": "tree 682cccb1cf19c89c2c5f4371c14ed2b384d2ae8c\nparent 13866b2848fbcce9a1f1ef2d4b97051a65f7e626\nauthor orbit[gpt-6-astra] <agent@orbit.invalid> 1788662975 +0000\ncommitter orbit <orbit@orbit.local> 1788662975 +0000\n\nfeat: Migrate the wide-binary control pilot into versioned scientific r… [ORB-11378]\n\nMigrate the wide-binary control pilot into versioned scientific records\n\nPlanned-By: codex\n"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "source",
+    "availability": "available",
+    "snapshot_digest": "sha256:f1e08dd9c647e0b6aa30b006d7a75b6f9904fce70789842e0cbe52482fc0e0cf",
+    "locator": null,
+    "media_type": "text/plain"
+  },
+  "revision_id": "sha256:6590e57d4a1ca8c232444faf0a4f46d3427276cdc7b858083da552af584f5c0c"
+}

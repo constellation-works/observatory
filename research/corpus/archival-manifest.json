@@ -1,0 +1,537 @@
+{
+  "schema_version": 1,
+  "kind": "manifest",
+  "repositories": [
+    {
+      "id": "principia",
+      "git_revision": null
+    }
+  ],
+  "references": [
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aorrery%3Aa1c430db54d585048ec85c4e7c47141db634f398%3Alab%2Fsims%2Fdynamical-consumption-lattice%2FREADME.md",
+      "revision_id": "sha256:1a8f933f20f054f0908ebd99255b1462d9879cfeb6989a52735c81ddf1df7ef7",
+      "source_revision": null,
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aorrery%3Aa1c430db54d585048ec85c4e7c47141db634f398%3Alab%2Fsims%2Fdynamical-consumption-lattice%2Fassets%2Fresults.json",
+      "revision_id": "sha256:77e6bf0a7773d6578c907b27cdca365a80b68fe9d6616e0de8111aedfe2940de",
+      "source_revision": null,
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aorrery%3Aa1c430db54d585048ec85c4e7c47141db634f398%3Alab%2Fsims%2Fdynamical-consumption-lattice%2Fsim.json",
+      "revision_id": "sha256:d70eea72357043fb6bf9dc651fdfddf4e1229fdfc087db18ea6433c055112d51",
+      "source_revision": null,
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aorrery%3Aa1c430db54d585048ec85c4e7c47141db634f398%3Alab%2Fsims%2Fframe-drag-swirl%2Fsim.json",
+      "revision_id": "sha256:554dc0fd672ab9b7eea8af95eb9726b544b2d11c4f792bdba32df0943c92bd6d",
+      "source_revision": null,
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aorrery%3Aa1c430db54d585048ec85c4e7c47141db634f398%3Alab%2Fsims%2Flattice-two-source-superposition%2FREADME.md",
+      "revision_id": "sha256:d0b58898e153d008a1da0effecdae23256f51b57bd77829807bbbbd6fe29eec2",
+      "source_revision": null,
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aorrery%3Aa1c430db54d585048ec85c4e7c47141db634f398%3Alab%2Fsims%2Flattice-two-source-superposition%2Fassets%2Fresults.json",
+      "revision_id": "sha256:a7ec0392ff0e1bb3cea319a7e5b13e30c8f9199298ce86a6e6588d1d52bbd73b",
+      "source_revision": null,
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aorrery%3Aa1c430db54d585048ec85c4e7c47141db634f398%3Alab%2Fsims%2Flattice-two-source-superposition%2Fsim.json",
+      "revision_id": "sha256:bbf4f649f117deb28c85b88fa4373163a15e63e1d9648c482fff5aa238338c44",
+      "source_revision": null,
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aorrery%3Aa1c430db54d585048ec85c4e7c47141db634f398%3Alab%2Fsims%2Flevel-core-dynamical-relaxation%2FREADME.md",
+      "revision_id": "sha256:0a90849ad1270a6a5404093520d8cdfb46e3ec41d53981f7d53587e218759618",
+      "source_revision": null,
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aorrery%3Aa1c430db54d585048ec85c4e7c47141db634f398%3Alab%2Fsims%2Flevel-core-dynamical-relaxation%2Fassets%2Fresults.json",
+      "revision_id": "sha256:61ccfcff83f7cb6d944dfb1cff24216aef9ad89dfeee610ba4c5aae8e672dcc5",
+      "source_revision": null,
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aorrery%3Aa1c430db54d585048ec85c4e7c47141db634f398%3Alab%2Fsims%2Flevel-core-dynamical-relaxation%2Fruns%2F2026-08-21-extended-seed-42.json",
+      "revision_id": "sha256:0295dfb32db80cc4c68ac03f53fc8b97f5c0d0e0b81483c26a8031e9f06b69be",
+      "source_revision": null,
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aorrery%3Aa1c430db54d585048ec85c4e7c47141db634f398%3Alab%2Fsims%2Flevel-core-dynamical-relaxation%2Fruns%2F2026-08-21-seed-42.json",
+      "revision_id": "sha256:5c94335befa0e9185bcefe32905e2197ce6ce0df902421686f4d51f0412b2e1d",
+      "source_revision": null,
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aorrery%3Aa1c430db54d585048ec85c4e7c47141db634f398%3Alab%2Fsims%2Flevel-core-dynamical-relaxation%2Fsim.json",
+      "revision_id": "sha256:6cf7c846af09b5a641819700b3db1143302062b70636ba507ee48d992aefffba",
+      "source_revision": null,
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aorrery%3Aa1c430db54d585048ec85c4e7c47141db634f398%3Alab%2Fsims%2Flevel-core-far-field-slot-coefficients%2FREADME.md",
+      "revision_id": "sha256:471d704575b9d8701ba4bc51358b4250dfd16a5dcf18e0a9f7b8f8338846faf4",
+      "source_revision": null,
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aorrery%3Aa1c430db54d585048ec85c4e7c47141db634f398%3Alab%2Fsims%2Flevel-core-far-field-slot-coefficients%2Fassets%2Fresults.json",
+      "revision_id": "sha256:773baa7c61f8601ad2453764f66c091ba43534d8810cc25ab84502a543978344",
+      "source_revision": null,
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aorrery%3Aa1c430db54d585048ec85c4e7c47141db634f398%3Alab%2Fsims%2Flevel-core-far-field-slot-coefficients%2Fruns%2F2026-08-28-seed-42.json",
+      "revision_id": "sha256:6de1cf9838f0a70df2fdb1f78c706aa823df7b9a4a4dd8530cd0f29f5d074dfa",
+      "source_revision": null,
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aorrery%3Aa1c430db54d585048ec85c4e7c47141db634f398%3Alab%2Fsims%2Flevel-core-far-field-slot-coefficients%2Fruns%2F2026-09-04-seed-42.json",
+      "revision_id": "sha256:e7d09c5117aedc1bafb05c92e7841939b35f2889c77e2e1eec89972224a635c1",
+      "source_revision": null,
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aorrery%3Aa1c430db54d585048ec85c4e7c47141db634f398%3Alab%2Fsims%2Flevel-core-far-field-slot-coefficients%2Fsim.json",
+      "revision_id": "sha256:493e070e8c3d034872179481498d92c827d58aa02b16ab587debbba88b33ac2a",
+      "source_revision": null,
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aorrery%3Aa1c430db54d585048ec85c4e7c47141db634f398%3Alab%2Fsims%2Flevel-core-two-core-superposition%2FREADME.md",
+      "revision_id": "sha256:ee1344d6d88a96adc16bf6d3c3c8cd6cfe9e370fced6df132ff2495c6b655e7d",
+      "source_revision": null,
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aorrery%3Aa1c430db54d585048ec85c4e7c47141db634f398%3Alab%2Fsims%2Flevel-core-two-core-superposition%2Fassets%2Fresults.json",
+      "revision_id": "sha256:bc70f25902bd36ac17b7e75b6e73f55fc798da438d42a011e47824cecae9d1d7",
+      "source_revision": null,
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aorrery%3Aa1c430db54d585048ec85c4e7c47141db634f398%3Alab%2Fsims%2Flevel-core-two-core-superposition%2Fruns%2F2026-08-21-seed-42.json",
+      "revision_id": "sha256:8b3f9b83a195cb6be1576e23304279554d55ef5c299be2c35af4c64531cc6f9d",
+      "source_revision": null,
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aorrery%3Aa1c430db54d585048ec85c4e7c47141db634f398%3Alab%2Fsims%2Flevel-core-two-core-superposition%2Fsim.json",
+      "revision_id": "sha256:a2f72fda40d7b1e58d20f250597baf0eef9cb1235a3a33f87e4b6fc1f453da9d",
+      "source_revision": null,
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aorrery%3Aa1c430db54d585048ec85c4e7c47141db634f398%3Alab%2Fsims%2Flevel-core-wind-tunnel%2FREADME.md",
+      "revision_id": "sha256:4c593016b127d9bd2a23911a02f262f1c63ebb9ae5ef7b250c1067be39b5c17f",
+      "source_revision": null,
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aorrery%3Aa1c430db54d585048ec85c4e7c47141db634f398%3Alab%2Fsims%2Flevel-core-wind-tunnel%2Fassets%2Fresults.json",
+      "revision_id": "sha256:f6088022d1ff0c74ba0f960f43dd1c54e73725b5585d0108dbefa581168aa21c",
+      "source_revision": null,
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aorrery%3Aa1c430db54d585048ec85c4e7c47141db634f398%3Alab%2Fsims%2Flevel-core-wind-tunnel%2Fruns%2F2026-08-21-seed-42.json",
+      "revision_id": "sha256:9f1a8a786efc88e7cb256a7d810f7693231d645455736be39d9591c92470563a",
+      "source_revision": null,
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aorrery%3Aa1c430db54d585048ec85c4e7c47141db634f398%3Alab%2Fsims%2Flevel-core-wind-tunnel%2Fsim.json",
+      "revision_id": "sha256:baaf051042ab6413ab49ea4d804d97e22e45a479f00f88483c3c565825d5e1b3",
+      "source_revision": null,
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aorrery%3Aa1c430db54d585048ec85c4e7c47141db634f398%3Alab%2Fsims%2Flevel-coupled-shear-lattice%2FREADME.md",
+      "revision_id": "sha256:173c7d642761f7a823ef33545e49d7c99c12eb616b3912d6f4c4e3025a40f759",
+      "source_revision": null,
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aorrery%3Aa1c430db54d585048ec85c4e7c47141db634f398%3Alab%2Fsims%2Flevel-coupled-shear-lattice%2Fassets%2Fresults.json",
+      "revision_id": "sha256:b958586378f6f307b32a3dc8b2053037739354bc3baea4535a60950062e992e5",
+      "source_revision": null,
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aorrery%3Aa1c430db54d585048ec85c4e7c47141db634f398%3Alab%2Fsims%2Flevel-coupled-shear-lattice%2Fruns%2F2026-08-21-seed-42.json",
+      "revision_id": "sha256:cb92afe85e5a138d8eea30605a96beeaccd1dfab3f1a13fcd432db49f400a423",
+      "source_revision": null,
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aorrery%3Aa1c430db54d585048ec85c4e7c47141db634f398%3Alab%2Fsims%2Flevel-coupled-shear-lattice%2Fsim.json",
+      "revision_id": "sha256:5534abc9466812251f54b2b3c8fb2b7daeac841abf750c6362f56f8bd1108bc9",
+      "source_revision": null,
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aorrery%3Aa1c430db54d585048ec85c4e7c47141db634f398%3Alab%2Fsims%2Fpingpong-bell%2Fsim.json",
+      "revision_id": "sha256:71e4210aad9fb82c4acf42a95843a229e5a20555b5dd1284875db0d7d585038d",
+      "source_revision": null,
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aorrery%3Aa1c430db54d585048ec85c4e7c47141db634f398%3Alab%2Fsims%2Fppn-reduction-symbolic-checks%2FREADME.md",
+      "revision_id": "sha256:c6a05ceb4d56a086d3ee4f83e928259ce0f18f78ddcb4bb80e25bcdf9c62185b",
+      "source_revision": null,
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aorrery%3Aa1c430db54d585048ec85c4e7c47141db634f398%3Alab%2Fsims%2Fppn-reduction-symbolic-checks%2Fassets%2Fresults.json",
+      "revision_id": "sha256:54f9d107ff14172fea37b3d17a9346bb85e7bfe469d7cefd4e20cc8af5634ced",
+      "source_revision": null,
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aorrery%3Aa1c430db54d585048ec85c4e7c47141db634f398%3Alab%2Fsims%2Fppn-reduction-symbolic-checks%2Fsim.json",
+      "revision_id": "sha256:b32d75a24d0577633330fd15d57210efc3143f373440f86d10e093d4af1dac69",
+      "source_revision": null,
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aorrery%3Aa1c430db54d585048ec85c4e7c47141db634f398%3Alab%2Fsims%2Frotation-curve-distributed-mass%2Fsim.json",
+      "revision_id": "sha256:93c3d0c39671b3cfb65dfcd4f7f61160206551fe293e448c5b85db2d34c91a23",
+      "source_revision": null,
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aorrery%3Aa1c430db54d585048ec85c4e7c47141db634f398%3Alab%2Fsims%2Fscarcity-capped-cumulative-field%2Fsim.json",
+      "revision_id": "sha256:38564d1792a5b65dcad1c6d2371915389803f8784a5052f8204e267941523bce",
+      "source_revision": null,
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aorrery%3Aa1c430db54d585048ec85c4e7c47141db634f398%3Alab%2Fsims%2Fscarcity-grid-weight-black-hole%2Fsim.json",
+      "revision_id": "sha256:864bc67affa82b61e9760ced78fe9799e6ce979bce919163fcf4bdf365375d0f",
+      "source_revision": null,
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aorrery%3Aa1c430db54d585048ec85c4e7c47141db634f398%3Alab%2Fsims%2Fscarcity-rotation-curve-fit%2FREADME.md",
+      "revision_id": "sha256:38034c081b099b4f47a17afae596d683db4b41dc5f0c0c6f4321c53604c0977a",
+      "source_revision": null,
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aorrery%3Aa1c430db54d585048ec85c4e7c47141db634f398%3Alab%2Fsims%2Fscarcity-rotation-curve-fit%2Fassets%2Fradial-drift-results.json",
+      "revision_id": "sha256:1883b35863271bfcb8d77dde25aef64b1fb556b96c27a9f99b92e2d64ec0c47d",
+      "source_revision": null,
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aorrery%3Aa1c430db54d585048ec85c4e7c47141db634f398%3Alab%2Fsims%2Fscarcity-rotation-curve-fit%2Fassets%2Fresults.json",
+      "revision_id": "sha256:b928ce30b718d2021949db7c2be18a0d38e6232d759e527e9d07db893f60ca75",
+      "source_revision": null,
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aorrery%3Aa1c430db54d585048ec85c4e7c47141db634f398%3Alab%2Fsims%2Fscarcity-rotation-curve-fit%2Fsim.json",
+      "revision_id": "sha256:711afa74fb825e4cb3dd9fae306dd735d6c07524dc06f8e4beb61c470d0cea52",
+      "source_revision": null,
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aorrery%3Aa1c430db54d585048ec85c4e7c47141db634f398%3Alab%2Fsims%2Fscarcity-shell-depletion-field%2Fsim.json",
+      "revision_id": "sha256:be2f5414878546e4412e8a9ed1554d7963a47b712e485a5b3f954d09282a340c",
+      "source_revision": null,
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aorrery%3Aa1c430db54d585048ec85c4e7c47141db634f398%3Alab%2Fsims%2Fscarcity-star-well-headroom%2Fsim.json",
+      "revision_id": "sha256:ba4ba4c92077238cb01be7e9b43f6ed68ae71e75a886a2ddfddec4deda274f59",
+      "source_revision": null,
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aorrery%3Aa1c430db54d585048ec85c4e7c47141db634f398%3Alab%2Fsims%2Fshear-consumption-lattice%2FREADME.md",
+      "revision_id": "sha256:41b826fec93b38adb2a54d37e5fb36a654a821136155ca0fbb13ae5ab9a2fa9f",
+      "source_revision": null,
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aorrery%3Aa1c430db54d585048ec85c4e7c47141db634f398%3Alab%2Fsims%2Fshear-consumption-lattice%2Fruns%2F2026-08-12-seed-42.json",
+      "revision_id": "sha256:cb3d591b503f0d391784c9ec29013e57182b51668de2e5e2222b816ed460f63e",
+      "source_revision": null,
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aorrery%3Aa1c430db54d585048ec85c4e7c47141db634f398%3Alab%2Fsims%2Fshear-consumption-lattice%2Fruns%2F2026-08-21-seed-42.json",
+      "revision_id": "sha256:e81e9e7e1119272df3abccc8c87f5b67bbbb058fe30ec855b767a7affaca3699",
+      "source_revision": null,
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aorrery%3Aa1c430db54d585048ec85c4e7c47141db634f398%3Alab%2Fsims%2Fshear-consumption-lattice%2Fsim.json",
+      "revision_id": "sha256:3f2988110b0229955b6a6ae16d143d07b789532ddc2e9c2d3b566adcf971cf24",
+      "source_revision": null,
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aorrery%3Aa1c430db54d585048ec85c4e7c47141db634f398%3Alab%2Fsims%2Fshear-consumption-lattice%2Fsummary.json",
+      "revision_id": "sha256:59e8128ca15480b99b5ca84145312de909b8d5293950f61611b76af0f2adbec2",
+      "source_revision": null,
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aorrery%3Aa1c430db54d585048ec85c4e7c47141db634f398%3Alab%2Fsims%2Fsolar-system-nbody%2FREADME.md",
+      "revision_id": "sha256:b0ba103f67744763f5fe382f720b831e559d5268dd7108ee4cfa16a8721d90dd",
+      "source_revision": null,
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aorrery%3Aa1c430db54d585048ec85c4e7c47141db634f398%3Alab%2Fsims%2Fsolar-system-nbody%2Fbaseline%2Fsummary.json",
+      "revision_id": "sha256:23f74f68ac3d12dea440742ae0b9191dcbca55685e315ff42284a1ed0ef2c2b9",
+      "source_revision": null,
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aorrery%3Aa1c430db54d585048ec85c4e7c47141db634f398%3Alab%2Fsims%2Fsolar-system-nbody%2Fscarcity%2Fsummary.json",
+      "revision_id": "sha256:baf6c1e6c99f4ddcd210c7a0361edc5aa4443df0135a1e29abc70f614cf24050",
+      "source_revision": null,
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aorrery%3Aa1c430db54d585048ec85c4e7c47141db634f398%3Alab%2Fsims%2Fsolar-system-nbody%2Fsim.json",
+      "revision_id": "sha256:233dab98a8ef5260e359ba71b503187a64bb145a866fe1234f2dca42c261a328",
+      "source_revision": null,
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aorrery%3Aa1c430db54d585048ec85c4e7c47141db634f398%3Alab%2Fsims%2Fsparc-scarcity-universality%2FREADME.md",
+      "revision_id": "sha256:1fc61eeb9c7ad765e6b403a633b39cc5abde831892fd25ff21c250e4d6a65017",
+      "source_revision": null,
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aorrery%3Aa1c430db54d585048ec85c4e7c47141db634f398%3Alab%2Fsims%2Fsparc-scarcity-universality%2Fassets%2Fresults.json",
+      "revision_id": "sha256:ec40a4deb08339d0290fbf0ae71657058962dbea5363616f426f50f29cea52d6",
+      "source_revision": null,
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aorrery%3Aa1c430db54d585048ec85c4e7c47141db634f398%3Alab%2Fsims%2Fsparc-scarcity-universality%2Fsim.json",
+      "revision_id": "sha256:816837f2d463678c2c4cbe843a4e07626252a7e749d48e1f201e910fa8d8cf67",
+      "source_revision": null,
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aorrery%3Aa1c430db54d585048ec85c4e7c47141db634f398%3Alab%2Fsims%2Fswirl-ball-far-field%2Fsim.json",
+      "revision_id": "sha256:1331083bdd552b4e67525bacf288ca2138f32f78bb83ec5f70acd39a479d8c16",
+      "source_revision": null,
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aorrery%3Aa1c430db54d585048ec85c4e7c47141db634f398%3Alab%2Fsims%2Fswirl-ball%2Fsim.json",
+      "revision_id": "sha256:c43cde83b9124e2e7c50e1d51f1186dc8f1b1f0ac98ee8b2ec4a91e853fada0e",
+      "source_revision": null,
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aorrery%3Aa1c430db54d585048ec85c4e7c47141db634f398%3Alab%2Fsims%2Ftwo-substance-defect-gravity%2FREADME.md",
+      "revision_id": "sha256:f013600a4d7855237548a6b631c8485a67cbe3701df3134eb46dbfdc72825c8e",
+      "source_revision": null,
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aorrery%3Aa1c430db54d585048ec85c4e7c47141db634f398%3Alab%2Fsims%2Ftwo-substance-defect-gravity%2Fassets%2Fresults.json",
+      "revision_id": "sha256:338aad2ba83f1a76780f590cd65e009b94eca4c3b84d82b1014fef37a91bf33f",
+      "source_revision": null,
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aorrery%3Aa1c430db54d585048ec85c4e7c47141db634f398%3Alab%2Fsims%2Ftwo-substance-defect-gravity%2Fsim.json",
+      "revision_id": "sha256:da57d30cfe735e390d6a9d5089ae72f37d5dce6afa5fb4ef5b06ef84a7fd5d6b",
+      "source_revision": null,
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aorrery%3Aa1c430db54d585048ec85c4e7c47141db634f398%3Alab%2Fsims%2Ftwo-substance-dynamical-packet%2FREADME.md",
+      "revision_id": "sha256:3f80dd2cdbc229fea0c0f1ddd59e3d8075384f8ad125dd6706caffd8eb26a7a4",
+      "source_revision": null,
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aorrery%3Aa1c430db54d585048ec85c4e7c47141db634f398%3Alab%2Fsims%2Ftwo-substance-dynamical-packet%2FRUN-2026-08-21.md",
+      "revision_id": "sha256:7eb358e2f6eeeef759c82d2708b76432262c7d8a54bc1f2a2bc93d0cddaaac42",
+      "source_revision": null,
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aorrery%3Aa1c430db54d585048ec85c4e7c47141db634f398%3Alab%2Fsims%2Ftwo-substance-dynamical-packet%2Fassets%2Fresults.json",
+      "revision_id": "sha256:87202d627f57403f2b5fb1f177848e97d6a244e4d47c01dcf2774983c0dc6572",
+      "source_revision": null,
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aorrery%3Aa1c430db54d585048ec85c4e7c47141db634f398%3Alab%2Fsims%2Ftwo-substance-dynamical-packet%2Fsim.json",
+      "revision_id": "sha256:6b4856f1d6eb61e6801af0efcc1b50cfacf3f72dab83a4b8caf14b59144fe942",
+      "source_revision": null,
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aorrery%3Aa1c430db54d585048ec85c4e7c47141db634f398%3Alab%2Fsims%2Ftwo-substance-packet-linear-symbol%2FREADME.md",
+      "revision_id": "sha256:bf2d43c3cd6b24058194345ae21afa1f1806d88bfeef57279dc865ecb07f527d",
+      "source_revision": null,
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aorrery%3Aa1c430db54d585048ec85c4e7c47141db634f398%3Alab%2Fsims%2Ftwo-substance-packet-linear-symbol%2FRUN-2026-09-05.md",
+      "revision_id": "sha256:89b9b6da4a546d258775503f12c3ff339b805a59f729ce769eebce3934b024a2",
+      "source_revision": null,
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aorrery%3Aa1c430db54d585048ec85c4e7c47141db634f398%3Alab%2Fsims%2Ftwo-substance-packet-linear-symbol%2Fassets%2Fresults.json",
+      "revision_id": "sha256:457e14cfb42445dfb691e431ef402c2613fae35dca83290429c86b6f9b5611a5",
+      "source_revision": null,
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aorrery%3Aa1c430db54d585048ec85c4e7c47141db634f398%3Alab%2Fsims%2Ftwo-substance-packet-linear-symbol%2Fsim.json",
+      "revision_id": "sha256:4572dde896f67366a0956c82dfcf204f6293bca63b74d72ecfc1d2d965e65e68",
+      "source_revision": null,
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aorrery%3Aa1c430db54d585048ec85c4e7c47141db634f398%3Alab%2Fsims%2Ftwo-substance-vortex-lattice%2FREADME.md",
+      "revision_id": "sha256:ed18b72b92c8f26047fe243e169893cbe4e8788bd9419aa687bf533fde40c9f4",
+      "source_revision": null,
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aorrery%3Aa1c430db54d585048ec85c4e7c47141db634f398%3Alab%2Fsims%2Ftwo-substance-vortex-lattice%2Fassets%2Fresults.json",
+      "revision_id": "sha256:f07ed8235d2e874613e8b2656e23b5d2fb75e7edc8fecaece700e914b1163dc1",
+      "source_revision": null,
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aorrery%3Aa1c430db54d585048ec85c4e7c47141db634f398%3Alab%2Fsims%2Ftwo-substance-vortex-lattice%2Fsim.json",
+      "revision_id": "sha256:24747f2b2bab82f1b8d4542c8a9783a7251037bce12b7cb0d701773527919d67",
+      "source_revision": null,
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aorrery%3Aa1c430db54d585048ec85c4e7c47141db634f398%3Alab%2Fsims%2Fvortex-bell%2Fsim.json",
+      "revision_id": "sha256:17f73c83231bada1bd5eeb5d6347f6c6020f65f89f5df3ac2e6b0ba903717105",
+      "source_revision": null,
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aorrery%3Aa1c430db54d585048ec85c4e7c47141db634f398%3Alab%2Fsims%2Fwide-binary-selection-bias%2FREADME.md",
+      "revision_id": "sha256:b1d86143d57d78256abe811281895525da4f44ebf06b156f91fbc0407e9caaa0",
+      "source_revision": null,
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aorrery%3Aa1c430db54d585048ec85c4e7c47141db634f398%3Alab%2Fsims%2Fwide-binary-selection-bias%2FRUN-2026-09-05.md",
+      "revision_id": "sha256:58daa68cf4113130e08983a7ace02ee39af23c670debd20ed596a01d8cc251df",
+      "source_revision": null,
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aorrery%3Aa1c430db54d585048ec85c4e7c47141db634f398%3Alab%2Fsims%2Fwide-binary-selection-bias%2Fassets%2Fresults.json",
+      "revision_id": "sha256:c7cdbaa406ac181f48998a09378a41511974154d6b55542605d8edfef84d674b",
+      "source_revision": null,
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aorrery%3Aa1c430db54d585048ec85c4e7c47141db634f398%3Alab%2Fsims%2Fwide-binary-selection-bias%2Fsim.json",
+      "revision_id": "sha256:eff727d711af9787aad6c05bab68034a6525aaf28f6d8eaa74d415d3aec05a99",
+      "source_revision": null,
+      "status": "pending"
+    }
+  ]
+}

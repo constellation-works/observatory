@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:principia:artifact:source%3Aorrery%3Aa1c430db54d585048ec85c4e7c47141db634f398%3Alab%2Fsims%2Fdynamical-consumption-lattice%2Fassets%2Fresults.json",
+  "aliases": [
+    "source:orrery:a1c430db54d585048ec85c4e7c47141db634f398:lab/sims/dynamical-consumption-lattice/assets/results.json"
+  ],
+  "activity": "active",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": null,
+    "blob_oid": null,
+    "sha256": "sha256:a73817a9d8f40e04ea52165442c9fcbfd711b1177aba6b852bef9570cca6344b",
+    "path": "upstream-snapshot/orrery/a1c430db54d585048ec85c4e7c47141db634f398/lab/sims/dynamical-consumption-lattice/assets/results.json",
+    "selector": "$",
+    "historical": true,
+    "working_tree": true
+  },
+  "limitations": [
+    "Immutable archival source copy; upstream scientific ownership is unchanged."
+  ],
+  "missingness": [
+    "git-revision",
+    "owner-ingestion-git-pin",
+    "scope",
+    "upstream-canonical-record"
+  ],
+  "legacy": {
+    "source_pin": {
+      "repository": "orrery",
+      "git_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "path": "lab/sims/dynamical-consumption-lattice/assets/results.json",
+      "blob_oid": "048e8d41fab1826f2de26882405753bab4be45f9",
+      "sha256": "sha256:a73817a9d8f40e04ea52165442c9fcbfd711b1177aba6b852bef9570cca6344b",
+      "bytes": 5515,
+      "commit_metadata": "a1c430db54d585048ec85c4e7c47141db634f398\n2026-09-06T02:28:14+00:00\n2026-09-06T02:28:14+00:00\nfeat: Preserve the original electron animation's continuous fold in a c… [ORB-11374]\n"
+    },
+    "text": "{\n  \"apparatus\": {\n    \"diffusivity\": 10000.0,\n    \"fit_radial_decades\": 1.6989700043360187,\n    \"fit_radius_range\": [\n      10.0,\n      500.0\n    ],\n    \"radius_range\": [\n      1.0,\n      1001.0\n    ],\n    \"reservoir_density\": 1.0,\n    \"shell_width\": 1.0,\n    \"shells\": 1000,\n    \"steady_tolerance\": 1e-09\n  },\n  \"rules\": {\n    \"central-only\": {\n      \"candidate_comparison\": {\n        \"equal-per-shell-budget\": {\n          \"candidate_exponent\": -1.0,\n          \"log_rmse\": 0.8311716092127314\n        },\n        \"flux-conserving\": {\n          \"candidate_exponent\": -2.0,\n          \"log_rmse\": 0.0006041293379789378\n        },\n        \"free-fall\": {\n          \"candidate_exponent\": -0.5,\n          \"log_rmse\": 1.246499350033445\n        }\n      },\n      \"comoving_dilution_measurements\": {\n        \"at_fit_max\": 0.0,\n        \"at_fit_min\": 0.0,\n        \"inner\": 0.8218924826305983,\n        \"maximum\": 0.8218924826305983\n      },\n      \"comoving_dilution_vs_static_inverse_r\": {\n        \"amplitude\": 0.0,\n        \"r_squared\": null,\n        \"relative_rmse\": 0.0\n      },\n      \"flow_fit\": {\n        \"ci95_high\": -2.0005877101584058,\n        \"ci95_low\": -2.0006547510813113,\n        \"exponent\": -2.0006212306198585,\n        \"intercept\": 6.2192494930825974,\n        \"radial_decades\": 1.6989700043360187,\n        \"samples\": 491,\n        \"standard_error\": 1.710227625141429e-05\n      },\n      \"rule\": \"central-only\",\n      \"rule_definition\": \"all destruction occurs in the innermost cell\",\n      \"sigma_identity\": {\n        \"c_lattice\": 10000.0,\n        \"definition\": \"c = nearest-neighbour hop rate D/dr^2 times hop length dr\",\n        \"median_sigma_flow_over_standing_sigma\": 2.0257945810144547e-09,\n        \"passes_factor_two_shape_and_normalization\": false,\n        \"rms_log10_ratio\": 8.423241134993827\n      },\n      \"sink_fit\": null,\n      \"sink_localization\": \"innermost shell only\",\n      \"standing_deficit_measurements\": {\n        \"at_fit_max\": 4.999986860954042e-05,\n        \"at_fit_min\": 0.004713074951901763,\n        \"inner\": 0.03222894989676384\n      },\n      \"standing_deficit_vs_static_inverse_r\": {\n        \"amplitude\": 0.050034984507888486,\n        \"r_squared\": 0.9999999174782175,\n        \"relative_rmse\": 3.595939969026731e-05\n      },\n      \"steady_state\": {\n        \"elapsed_time\": 150.0,\n        \"inner_density\": 0.9677710501032362,\n        \"last_step_change_over_max_deficit\": 8.495808109519644e-10,\n        \"max_shell_balance_over_total_sink\": 9.379403524474797e-09,\n        \"outer_density\": 0.9999999750250448,\n        \"outer_diffusion_time\": 100.0,\n        \"reached\": true,\n        \"steps\": 75,\n        \"tolerance\": 1e-09\n      },\n      \"total_consumption_rate\": 6289.468492486766\n    },\n    \"equal-per-shell\": {\n      \"candidate_comparison\": {\n        \"equal-per-shell-budget\": {\n          \"candidate_exponent\": -1.0,\n          \"log_rmse\": 0.00802750359330109\n        },\n        \"flux-conserving\": {\n          \"candidate_exponent\": -2.0,\n          \"log_rmse\": 0.8352190645634494\n        },\n        \"free-fall\": {\n          \"candidate_exponent\": -0.5,\n          \"log_rmse\": 0.4108438444151206\n        }\n      },\n      \"comoving_dilution_measurements\": {\n        \"at_fit_max\": 0.5009996930786527,\n        \"at_fit_min\": 0.9909809198454268,\n        \"inner\": 0.9998114866684839,\n        \"maximum\": 0.9998114866684839\n      },\n      \"comoving_dilution_vs_static_inverse_r\": {\n        \"amplitude\": 33.80081992289215,\n        \"r_squared\": -17.29508082596567,\n        \"relative_rmse\": 1.2372993800730976\n      },\n      \"flow_fit\": {\n        \"ci95_high\": -0.9938310820403699,\n        \"ci95_low\": -0.9952443169619235,\n        \"exponent\": -0.9945376995011467,\n        \"intercept\": 4.256462269652659,\n        \"radial_decades\": 1.6989700043360187,\n        \"samples\": 491,\n        \"standard_error\": 0.0003605191126412496\n      },\n      \"rule\": \"equal-per-shell\",\n      \"rule_definition\": \"the same absolute mean point budget is destroyed in every equal-width shell\",\n      \"sigma_identity\": {\n        \"c_lattice\": 10000.0,\n        \"definition\": \"c = nearest-neighbour hop rate D/dr^2 times hop length dr\",\n        \"median_sigma_flow_over_standing_sigma\": 4.127418628758665e-08,\n        \"passes_factor_two_shape_and_normalization\": false,\n        \"rms_log10_ratio\": 7.212743714694979\n      },\n      \"sink_fit\": {\n        \"ci95_high\": 0.0007905159615036171,\n        \"ci95_low\": -0.00021945854228472544,\n        \"exponent\": 0.0002855287096094458,\n        \"intercept\": 6.811548126011961,\n        \"radial_decades\": 1.677346193492063,\n        \"samples\": 490,\n        \"standard_error\": 0.0002576465570888629\n      },\n      \"sink_localization\": \"distributed\",\n      \"standing_deficit_measurements\": {\n        \"at_fit_max\": 0.005009208867341908,\n        \"at_fit_min\": 0.03229840172893372,\n        \"inner\": 0.042279943749549576\n      },\n      \"standing_deficit_vs_static_inverse_r\": {\n        \"amplitude\": 0.7576807538690269,\n        \"r_squared\": -0.8379269038748851,\n        \"relative_rmse\": 0.2933098692638145\n      },\n      \"steady_state\": {\n        \"elapsed_time\": 196.0,\n        \"inner_density\": 0.9577200562504504,\n        \"last_step_change_over_max_deficit\": 8.820639134100882e-10,\n        \"max_shell_balance_over_total_sink\": 7.864767749439128e-11,\n        \"outer_density\": 0.999996388629349,\n        \"outer_diffusion_time\": 100.0,\n        \"reached\": true,\n        \"steps\": 98,\n        \"tolerance\": 1e-09\n      },\n      \"total_consumption_rate\": 909452.6449240051\n    }\n  },\n  \"schema_version\": 1,\n  \"seed\": 42\n}\n",
+    "commit_object": "tree 8d851030602405b11b7166108b09cf9cd5664329\nparent 148b668391f575466282eaa81aab0dc943846a87\nauthor orbit[gpt-6-astra] <agent@orbit.invalid> 1788661694 +0000\ncommitter orbit <orbit@orbit.local> 1788661694 +0000\n\nfeat: Preserve the original electron animation's continuous fold in a c… [ORB-11374]\n\nPreserve the original electron animation's continuous fold in a computed-field view\n\nPlanned-By: codex\n"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "source",
+    "availability": "available",
+    "snapshot_digest": "sha256:a73817a9d8f40e04ea52165442c9fcbfd711b1177aba6b852bef9570cca6344b",
+    "locator": null,
+    "media_type": "application/json"
+  },
+  "revision_id": "sha256:77e6bf0a7773d6578c907b27cdca365a80b68fe9d6616e0de8111aedfe2940de"
+}

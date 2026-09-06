@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "kind": "assessment",
+  "id": "urn:research:principia:assessment:retarded-wake-delayed-center-dipole%3Alegacy-verdict",
+  "aliases": [
+    "retarded-wake-delayed-center-dipole:legacy-verdict"
+  ],
+  "activity": "unknown",
+  "scope": "derivation",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "5a0334520045b6866e96fd14cbe0f87a1feee659",
+    "sha256": "sha256:4c18601b8818d5bb0724f512c671a9a618cf27a59fdf02401c19ab1b07413d59",
+    "path": "theory/retarded-scarcity-wake/claims.json",
+    "selector": "/claims/2",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Exact historical verdict and stated assumptions only; migration makes no new scientific inference."
+  ],
+  "missingness": [
+    "exact-evidence-owner-references",
+    "independently-verified-controls",
+    "activity"
+  ],
+  "legacy": {
+    "id": "retarded-wake-delayed-center-dipole",
+    "family": "retarded-scarcity-wake",
+    "kind": "derived",
+    "status": "untested",
+    "claim": "Under the delayed-center postulate, uniform translation produces a first-order potential dipole proportional to \\(v/c_g\\), with higher conventional potential on the leading edge and stronger attraction on the trailing edge",
+    "evidence": "The algebra is internally consistent, but \\(\\Phi_{\\rm lag}\\) is not the compact-source exterior solution of the standard Poisson equation: it has \\(\\nabla^2\\Phi\\neq0\\) outside the galaxy and a linearly divergent Poisson-equivalent dipole moment. The analytic check awaits a cataloged negative-control fixture — [moving-source-field-consistency](../moving-source-field-consistency/)",
+    "links": [
+      "../moving-source-field-consistency/"
+    ],
+    "in_doc_ledger": true,
+    "kill": "Cataloged negative-control fixture confirms Laplace-forbidden n≥1 terms and the linearly divergent dipole."
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "claim": {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:retarded-wake-delayed-center-dipole",
+      "revision_id": "sha256:f7a536e38f1f01f067078940d769a713c232e533a19870625f37820d0ec4eb0c",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    "verdict": "untested",
+    "legacy_verdict": "untested",
+    "inference": "historical",
+    "basis": "legacy-report",
+    "controls": "unknown",
+    "rationale": "The algebra is internally consistent, but \\(\\Phi_{\\rm lag}\\) is not the compact-source exterior solution of the standard Poisson equation: it has \\(\\nabla^2\\Phi\\neq0\\) outside the galaxy and a linearly divergent Poisson-equivalent dipole moment. The analytic check awaits a cataloged negative-control fixture — [moving-source-field-consistency](../moving-source-field-consistency/)",
+    "evidence": []
+  },
+  "revision_id": "sha256:1188a76e4f0f9d1a47f20c2ba84142a8a4789f6d2d878b92bc67760a0e256cc6"
+}

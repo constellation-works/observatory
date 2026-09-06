@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "kind": "program",
+  "id": "urn:research:principia:program:moving-sources-in-the-closed-system",
+  "aliases": [
+    "moving-sources-in-the-closed-system"
+  ],
+  "activity": "retired",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "d9f73691ac539f5935cd6dbedcabdb6f722777a3",
+    "sha256": "sha256:0ec4339ac8934344ada2473abd7941e08d9c413b12e2636c275ab4f9a35a70a5",
+    "path": "theory/moving-sources-in-the-closed-system/claims.json",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Exact historical verdict and stated assumptions only; migration makes no new scientific inference."
+  ],
+  "missingness": [
+    "scope"
+  ],
+  "legacy": {
+    "doc": "moving-sources-in-the-closed-system",
+    "title": "Moving sources in the closed system: the substrate wind, exactly",
+    "status": "retired",
+    "families": [
+      "gravity-as-scarcity"
+    ],
+    "updated": "2026-09-04",
+    "headline": "RETIRED by Daniel (2026-09-04). No active research or follow-up; historical results and claim verdicts preserved.",
+    "live_fronts": [],
+    "retirement": {
+      "date": "2026-09-04",
+      "authorized_by": "Daniel",
+      "reason": "Retired by Daniel on 2026-09-04: discontinue the gravity-as-scarcity research family, including the shear-flow completion, moving-source repair, and PPN continuation. Preserve all evidence and individual claim verdicts; no follow-up or reopening without Daniel's explicit authorization.",
+      "previous_status": "growing",
+      "previous_headline": "Theorem 1's Bernoulli closure is refuted as a description of the realized moving system. Cavitation fired at U/v_GP=0.3. Existence of a regular moving solution is the live front; PPN/drag phenomenology is blocked. The named PPN obligation is executed as algebra in ppn-reduction-of-the-settled-flow; the sourced moving-source walls landed (ORB-10936)."
+    }
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "theory",
+    "title": "Moving sources in the closed system: the substrate wind, exactly"
+  },
+  "revision_id": "sha256:2c5f626e6bce88009b9b270069d7774eec99223460acf0a5ceebb00c3794b6ee"
+}

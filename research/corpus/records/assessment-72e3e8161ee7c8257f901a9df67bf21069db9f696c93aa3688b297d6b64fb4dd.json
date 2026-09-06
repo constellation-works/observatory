@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "kind": "assessment",
+  "id": "urn:research:principia:assessment:scarcity-newton-from-budget%3Alegacy-verdict",
+  "aliases": [
+    "scarcity-newton-from-budget:legacy-verdict"
+  ],
+  "activity": "unknown",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "b5f58c64f4c6bf9d7d7f67c826f5d2dd7c9cb64f",
+    "sha256": "sha256:996b059ca4b45cee6dd42a503594508ebb8d6d13211ad1104df3754b116d5976",
+    "path": "theory/gravity-as-scarcity/claims.json",
+    "selector": "/claims/0",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Exact historical verdict and stated assumptions only; migration makes no new scientific inference."
+  ],
+  "missingness": [
+    "exact-evidence-owner-references",
+    "independently-verified-controls",
+    "activity",
+    "scope"
+  ],
+  "legacy": {
+    "id": "scarcity-newton-from-budget",
+    "family": "gravity-as-scarcity",
+    "kind": "model-property",
+    "status": "supported",
+    "claim": "Accumulated per-shell dilution Σ 1/count(k) ∝ 1/r, so \"gravity = gradient of scarcity\" reproduces Newton's 1/r²",
+    "evidence": "by construction in [scarcity-grid-weight-black-hole](../../../orrery/lab/sims/scarcity-grid-weight-black-hole/), [scarcity-capped-cumulative-field](../../../orrery/lab/sims/scarcity-capped-cumulative-field/); note: storing 1/r² and differentiating gives 1/r³ — the stored field must be potential-like (correction #1 in the thread)",
+    "links": [
+      "../../../orrery/lab/sims/scarcity-grid-weight-black-hole/",
+      "../../../orrery/lab/sims/scarcity-capped-cumulative-field/"
+    ],
+    "in_doc_ledger": true
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "claim": {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:scarcity-newton-from-budget",
+      "revision_id": "sha256:a20700165131d98fb49dd21ab4156e8fe7e3477696423a4b02e757963ea12b03",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    "verdict": "supported",
+    "legacy_verdict": "supported",
+    "inference": "historical",
+    "basis": "legacy-report",
+    "controls": "unknown",
+    "rationale": "by construction in [scarcity-grid-weight-black-hole](../../../orrery/lab/sims/scarcity-grid-weight-black-hole/), [scarcity-capped-cumulative-field](../../../orrery/lab/sims/scarcity-capped-cumulative-field/); note: storing 1/r² and differentiating gives 1/r³ — the stored field must be potential-like (correction #1 in the thread)",
+    "evidence": []
+  },
+  "revision_id": "sha256:72e3e8161ee7c8257f901a9df67bf21069db9f696c93aa3688b297d6b64fb4dd"
+}

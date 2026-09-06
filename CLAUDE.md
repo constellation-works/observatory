@@ -26,14 +26,15 @@ ledger.md   Generated rollup. Never hand-edit; --write-ledger regenerates it.
 
 ## The evidence-ledger contract
 
-**One migrated pilot:** `wide-binary-selection-methodology` is owned by the
-immutable v1 records described in [research/wide-binary/README.md](research/wide-binary/README.md).
-Its original five theory files, gate and protocol study are byte-identical checked
-compatibility views; append owner record revisions rather than editing those files
-independently. The checker still applies every legacy policy rule to the views.
-All other families retain the contract below.
+**Record authority:** All ten programs, claims, gates, studies, wall and scientific prose
+are owned by the immutable history and explicitly selected native revisions described in
+[research/README.md](research/README.md). `research/active.json` selects exact records;
+the original science files are generated/checked compatibility views. Append through the
+pinned orbit-research native workflow and project the views; never edit them independently.
+The original wide-binary v1 history remains unchanged. Every legacy policy rule still
+applies to the projected corpus; migration opens no new scientific work.
 
-Each `theory/<slug>/` directory has a matching `claims.json` (canonical) and an
+Each `theory/<slug>/` directory has a matching `claims.json` (checked projection) and an
 **evidence ledger** table in `evidence-ledger.md` that must match it byte-for-byte in the
 `claim` column. Claim statuses:
 
@@ -98,11 +99,11 @@ note (via orrery `sim.json` `provenance.almanac`) records the discussion it was 
 ## Validating a change
 
 Install the exact framework environment from `requirements-research.txt` using the
-[pilot validation instructions](research/wide-binary/README.md) before running the
-whole-corpus checker. The pilot adds Python 3.11+ and the version-pinned
+[owner validation instructions](research/README.md) before running the
+whole-corpus checker. The owner workflow uses Python 3.11+ and the version-pinned
 orbit-research package; environments and caches stay outside the checkout.
-Changes to `research/wide-binary/` or its adapter also require
-`python3 -m unittest discover -s scripts -p 'test_wide_binary_records.py' -v`.
+Changes to `research/` or its adapters also require
+`python3 -m unittest discover -s scripts -p 'test_*records.py' -v`.
 
 principia is still a **prose corpus** — nothing here compiles — but the research policy is
 machine-checked. The checks below are portable (`python3`, `git` and the pinned

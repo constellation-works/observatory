@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Atheory%2Ftwo-substance-vortex-vacuum%2Fkill-condition-b.md",
+  "aliases": [
+    "source:principia:4e3b02c59b694d85016915177ef1ae157895ed7b:theory/two-substance-vortex-vacuum/kill-condition-b.md"
+  ],
+  "activity": "active",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "377b55f7266d1c50337ff8d75685bc802e94f135",
+    "sha256": "sha256:01c1515c3d4dcd0a8e6be75ce2770c0083c5f996c84580cb632977eb530803f4",
+    "path": "theory/two-substance-vortex-vacuum/kill-condition-b.md",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Immutable archival source copy; upstream scientific ownership is unchanged."
+  ],
+  "missingness": [
+    "scope"
+  ],
+  "legacy": {
+    "source_pin": {
+      "repository": "principia",
+      "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "path": "theory/two-substance-vortex-vacuum/kill-condition-b.md",
+      "blob_oid": "377b55f7266d1c50337ff8d75685bc802e94f135",
+      "sha256": "sha256:01c1515c3d4dcd0a8e6be75ce2770c0083c5f996c84580cb632977eb530803f4",
+      "bytes": 5372,
+      "commit_metadata": "4e3b02c59b694d85016915177ef1ae157895ed7b\n2026-09-06T02:49:35+00:00\n2026-09-06T02:49:35+00:00\nfeat: Migrate the wide-binary control pilot into versioned scientific r… [ORB-11378]\n"
+    },
+    "text": "## Kill condition B — two substances, one light\n\n**The generic failure.** A medium with two components carries one propagating branch per\ndegree of freedom: two scalar sounds (in-phase and counterflow — He II's first and second\nsound, with speeds differing by an order of magnitude; studies note), two candidate rest\nframes, and — if the EM mode decomposes unevenly onto the substances — polarization-\ndependent propagation. Measured against that default, the photon sector is a wall of\nalready-lost bets unless a theorem intervenes:\n\n- **One speed, no birefringence:** GRB polarimetry bounds the dimension-5 helicity-speed\n  split at ξ < 1 × 10⁻¹⁶ (GRB 140206A; \n  [studies/lorentz-violation-bounds](../../studies/lorentz-violation-bounds.md)) — the two\n  polarizations must see *one* medium to that precision.\n- **No detectable rest frame, twice over:** the parent's ORB-10159 exclusion of\n  substance-coupled matter (resonator bounds beat an O(1) coupling by 9–12 orders) applies\n  to *each* substrate separately, and the S1–S2 **relative velocity** is a new physical\n  field with no analog in the parent — it must be locked or unexcited everywhere we look.\n  Energy-dependent dispersion bounds (lattice spacing ≲ 10⁸ ℓ_Pl, parity-symmetric rules\n  only) inherit unchanged.\n- **The inherited photon floor (ORB-10156):** the parent's static photon sector is refuted\n  — every static coupling gives γ ≤ 0 against Cassini's γ − 1 = (2.1 ± 2.3) × 10⁻⁵ — and\n  the only derived route back to γ = 1 is flow drag on the free-fall (GP) inflow\n  (ORB-10159(e)). This model must *beat that floor, not just meet it*: its photon must\n  ride a substance combination locked to the gravitating flow. If S1 and S2 fall\n  differently into a mass, light acquires gravitational birefringence/double refraction —\n  a qualitatively new failure mode the parent could not even express.\n- **Maxwell exactly (the removability lesson):** Maxwell built EM from vortex cells in\n  1861 and removed the machinery in 1865 with nothing measurable lost (studies note). The\n  substrate must reproduce Maxwell's equations *exactly* in the tested regime and predict\n  beyond them, or the two substances are removable scaffolding.\n\n**The theorem the model owes.** In Volovik's superfluid-³He program this problem has a\n*solution with a proof*: near a topologically protected Fermi point, the low-energy action\nis forced into relativistic form — one emergent metric, one emergent gauge field, one\nshared cone for all excitations — as a property of a universality class, not a tuning\n([studies/superfluid-vacuum-and-emergent-gauge-fields](../../studies/superfluid-vacuum-and-emergent-gauge-fields.md)).\nThe analogous obligation here: **prove that the coupled two-substance vacuum has exactly\none gapless transverse vector mode, propagating at one speed on one cone shared by all\ndefects, coupling to defects proportionally to net winding with one universal unit.**\nUntil that theorem exists (or a lattice computation stands in for it), the single photon\nsector is an assumption sitting exactly where generic two-fluid media measurably fail —\nand where the unit-equality half of charge quantization (§(a) above) also lives.\n\n<<<<<<< Updated upstream\n**The existing packet Hamiltonian is not that theorem (ORB-11219).** Its continuum\nlinearization — frozen in\n[packet-hamiltonian-linearization](packet-hamiltonian-linearization.md), compared\nagainst\n[studies/maxwell-mode-content-and-two-fluid-acoustics](../../studies/maxwell-mode-content-and-two-fluid-acoustics.md)\n— is two longitudinal acoustic branches plus frozen transverse currents. Setting\n\\(c_+=c_-\\) degenerates the two scalar cones; it does not produce two propagating\ntransverse Maxwell polarizations, a Gauss constraint, or Faraday's curl. The\n\\(\\lambda=0\\) control agrees with \\(\\lambda\\neq0\\) on the vacuum background at linear\norder; Hessian mixing on a small background is local and does not cure the cubic's\nglobal unboundedness. That is a failure of this scalar-density apparatus, not a no-go\nfor every two-component order-parameter theory. The gate remains open on a recast or a\ndifferent interaction. No gravity-wall id is reopened.\n\n**Cataloged verification (ORB-11220, 2026-09-05).** The frozen apparatus was then run at\nOrrery commit `73c9bd53e963e44bb365992c1df87a1077cc996f` in\n[two-substance-packet-linear-symbol](../../../orrery/lab/sims/two-substance-packet-linear-symbol/).\nThe independent matrix and actual evolution agree within the predeclared refinement controls\n(maximum matrix/time frequency disagreement 6.58×10⁻⁵; B0 squared-speed disagreement\n0.00319 against a 0.02 bound). U0/U1/U2/B0/T0 report four longitudinal propagating roots,\ntwo frozen transverse currents in 2-D, and no Gauss constraint. The fixture's `refuted`\nclassification is therefore a result about calling this Hamiltonian Maxwell, not a refutation\nof Kill condition B's still-untested nature claim.\n=======\n**Bounded attempt (2026-09-04):** [Photon-mode obstruction](photon-mode-obstruction.md)\nderives the scalar-mode and relative-phase-locking obstruction under explicit assumptions.\nIt does not assume the Volovik analogy supplies a universal cone. The gate stays open;\nneither a sound-speed split alone nor equal sound speeds identifies optical polarizations.\n>>>>>>> Stashed changes\n",
+    "commit_object": "tree 682cccb1cf19c89c2c5f4371c14ed2b384d2ae8c\nparent 13866b2848fbcce9a1f1ef2d4b97051a65f7e626\nauthor orbit[gpt-6-astra] <agent@orbit.invalid> 1788662975 +0000\ncommitter orbit <orbit@orbit.local> 1788662975 +0000\n\nfeat: Migrate the wide-binary control pilot into versioned scientific r… [ORB-11378]\n\nMigrate the wide-binary control pilot into versioned scientific records\n\nPlanned-By: codex\n"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "source",
+    "availability": "available",
+    "snapshot_digest": "sha256:01c1515c3d4dcd0a8e6be75ce2770c0083c5f996c84580cb632977eb530803f4",
+    "locator": null,
+    "media_type": "text/plain"
+  },
+  "revision_id": "sha256:09497b52c4e6a6c690882291f09fa538261f90cbd83677ffcef979eae7584df3"
+}

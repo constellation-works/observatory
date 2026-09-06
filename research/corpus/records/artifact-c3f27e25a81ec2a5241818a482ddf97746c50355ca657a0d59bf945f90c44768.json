@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Astudies%2Ftwo-component-phase-locking.md",
+  "aliases": [
+    "source:principia:4e3b02c59b694d85016915177ef1ae157895ed7b:studies/two-component-phase-locking.md"
+  ],
+  "activity": "active",
+  "scope": "literature",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "b9d990a2100c4cf1574fb75eeb65b4f9da7f2781",
+    "sha256": "sha256:14055d49783cac10117e3cdcbf9ef6e3e46ec4f24336dfb4977bedb402f6ca9e",
+    "path": "studies/two-component-phase-locking.md",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Immutable archival source copy; upstream scientific ownership is unchanged."
+  ],
+  "missingness": [],
+  "legacy": {
+    "source_pin": {
+      "repository": "principia",
+      "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "path": "studies/two-component-phase-locking.md",
+      "blob_oid": "b9d990a2100c4cf1574fb75eeb65b4f9da7f2781",
+      "sha256": "sha256:14055d49783cac10117e3cdcbf9ef6e3e46ec4f24336dfb4977bedb402f6ca9e",
+      "bytes": 1356,
+      "commit_metadata": "4e3b02c59b694d85016915177ef1ae157895ed7b\n2026-09-06T02:49:35+00:00\n2026-09-06T02:49:35+00:00\nfeat: Migrate the wide-binary control pilot into versioned scientific r… [ORB-11378]\n"
+    },
+    "text": "---\ntitle: \"Two-component condensates: phase locking, mode gaps, and vortex walls\"\nstatus: active\ncreated: 2026-09-04\nupdated: 2026-09-04\n---\n\n# Two-component phase locking\n\nVerified source: D. T. Son and M. A. Stephanov, *Domain walls of relative phase in\ntwo-component Bose-Einstein condensates*, Phys. Rev. A **65**, 063621 (2002),\n[full paper](https://arxiv.org/pdf/cond-mat/0103451),\n[DOI](https://doi.org/10.1103/PhysRevA.65.063621). Checked sections II, III and V.\n\nWithout coherent conversion, separate particle conservation gives two global phase\nsymmetries. Their condensate has two acoustic modes. A conversion drive preserves only\nthe common phase symmetry and gaps the relative-phase mode (section II, equations\n2.9–2.20). The relative-phase energy admits sine-Gordon walls (section III).\nVortices bounding a wall experience a confining force at separations larger than its\nwidth (section V); the wall can decay, so absolute stability is not implied.\n\nThis is a binary-condensate result, not a theorem producing electromagnetism. Its\napplication to Principia's proposed charge is a separate conditional calculation in\n[photon-mode obstruction](../theory/two-substance-vortex-vacuum/photon-mode-obstruction.md).\nThat chapter assumes a regular isotropic phase-only effective action and does not\nexclude emergent gauge sectors in other phases.\n",
+    "commit_object": "tree 682cccb1cf19c89c2c5f4371c14ed2b384d2ae8c\nparent 13866b2848fbcce9a1f1ef2d4b97051a65f7e626\nauthor orbit[gpt-6-astra] <agent@orbit.invalid> 1788662975 +0000\ncommitter orbit <orbit@orbit.local> 1788662975 +0000\n\nfeat: Migrate the wide-binary control pilot into versioned scientific r… [ORB-11378]\n\nMigrate the wide-binary control pilot into versioned scientific records\n\nPlanned-By: codex\n"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "source",
+    "availability": "available",
+    "snapshot_digest": "sha256:14055d49783cac10117e3cdcbf9ef6e3e46ec4f24336dfb4977bedb402f6ca9e",
+    "locator": null,
+    "media_type": "text/plain"
+  },
+  "revision_id": "sha256:c3f27e25a81ec2a5241818a482ddf97746c50355ca657a0d59bf945f90c44768"
+}

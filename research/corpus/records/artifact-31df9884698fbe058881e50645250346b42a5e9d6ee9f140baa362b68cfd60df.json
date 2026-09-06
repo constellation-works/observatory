@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Atheory%2Fmoving-source-field-consistency%2Frelated.md",
+  "aliases": [
+    "source:principia:4e3b02c59b694d85016915177ef1ae157895ed7b:theory/moving-source-field-consistency/related.md"
+  ],
+  "activity": "active",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "a40e3f3f43a3dd45aafd5c7f3c28fb1c0ae1b915",
+    "sha256": "sha256:33ffb4bec2b1305d4ffd460274f7c852a53812fcd9bb96c925013c47aad70736",
+    "path": "theory/moving-source-field-consistency/related.md",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Immutable archival source copy; upstream scientific ownership is unchanged."
+  ],
+  "missingness": [
+    "scope"
+  ],
+  "legacy": {
+    "source_pin": {
+      "repository": "principia",
+      "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "path": "theory/moving-source-field-consistency/related.md",
+      "blob_oid": "a40e3f3f43a3dd45aafd5c7f3c28fb1c0ae1b915",
+      "sha256": "sha256:33ffb4bec2b1305d4ffd460274f7c852a53812fcd9bb96c925013c47aad70736",
+      "bytes": 2634,
+      "commit_metadata": "4e3b02c59b694d85016915177ef1ae157895ed7b\n2026-09-06T02:49:35+00:00\n2026-09-06T02:49:35+00:00\nfeat: Migrate the wide-binary control pilot into versioned scientific r… [ORB-11378]\n"
+    },
+    "text": "## Related\n\n- [The retarded-scarcity wake](../retarded-scarcity-wake/) — the parent branch this document\n  adjudicated; its Branch C was written explicitly and closed here ([Branch C](branch-c.md)),\n  and the parent is `refuted`\n- [Moving sources in the closed system](../moving-sources-in-the-closed-system/) — what this\n  document demanded (an explicit substrate equation with derived moving-source behavior),\n  now supplied for the measured elliptic-level closed system of the gravity-as-scarcity\n  family: exact speed isotropy, a proven first-order wake difference from GR's boosted\n  river, and a predeclared wind-tunnel fixture (2026-08-21). Its family owes its own\n  moving-source confrontation; nothing here pays it\n- [PPN reduction of the settled flow](../ppn-reduction-of-the-settled-flow/) — the half-order\n  hazard precedent: a first-order-in-velocity term with a new scale sits outside the PPN\n  potentials, which is why the Branch C dipole is not bounded by \\(\\alpha_1/\\alpha_2\\)\n- [Gravity as the gradient of scarce space](../gravity-as-scarcity/) — grandparent mechanics and its\n  unchanged empirical verdicts\n- [Moving-source gravity bounds](../../studies/moving-source-gravity-bounds.md) — the aberration\n  cancellation (the control), the preferred-frame PPN table, frame dragging, and the gravitational\n  Cherenkov wall\n- [Solar-system ephemeris precision floor](../../studies/solar-system-ephemeris-precision-floor.md)\n  — the wall that closed Branch C: the Newtonian-omission residuals that cap a uniform anomalous\n  acceleration of the planets\n- [Lorentz-violation bounds](../../studies/lorentz-violation-bounds.md) — the resonator wall the\n  Branch C completion must survive, and the sourced velocity scales\n- [Scalar gravity and PPN constraints](../../studies/scalar-gravity-ppn-constraints.md) — carries the\n  GW170817 tensor-speed bound used in the toy amplitude scale and the Cassini \\(\\gamma\\) wall\n- [Milky Way rotation curve](../../studies/milky-way-rotation-curve.md) — the Sun's Galactic\n  circular speed, the floor on its motion relative to any \\(U\\) not comoving with it\n- [Source-side universality of G](../../studies/source-side-universality-of-g.md) — why the same\n  equation must govern the Sun's field as governs a galaxy's\n- [River model and analog gravity](../../studies/river-model-and-analog-gravity.md) — precedent for a\n  medium whose excitations hide uniform motion\n- [Cosmological expansion and bound systems](../../studies/cosmological-expansion-and-bound-systems.md)\n  — what expansion does and does not reach; the substrate/Hubble-flow question, now moot here\n",
+    "commit_object": "tree 682cccb1cf19c89c2c5f4371c14ed2b384d2ae8c\nparent 13866b2848fbcce9a1f1ef2d4b97051a65f7e626\nauthor orbit[gpt-6-astra] <agent@orbit.invalid> 1788662975 +0000\ncommitter orbit <orbit@orbit.local> 1788662975 +0000\n\nfeat: Migrate the wide-binary control pilot into versioned scientific r… [ORB-11378]\n\nMigrate the wide-binary control pilot into versioned scientific records\n\nPlanned-By: codex\n"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "source",
+    "availability": "available",
+    "snapshot_digest": "sha256:33ffb4bec2b1305d4ffd460274f7c852a53812fcd9bb96c925013c47aad70736",
+    "locator": null,
+    "media_type": "text/plain"
+  },
+  "revision_id": "sha256:31df9884698fbe058881e50645250346b42a5e9d6ee9f140baa362b68cfd60df"
+}

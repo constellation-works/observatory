@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Atheory%2Fshear-sourced-consumption%2Fthe-law.md",
+  "aliases": [
+    "source:principia:4e3b02c59b694d85016915177ef1ae157895ed7b:theory/shear-sourced-consumption/the-law.md"
+  ],
+  "activity": "active",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "fa7cc2b722272f76268ce2f74936df83c78385ec",
+    "sha256": "sha256:a12ca82a375a1d701efbbb7b5e175c0db64e82f39a8cc85b0cc07a02716c84b7",
+    "path": "theory/shear-sourced-consumption/the-law.md",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Immutable archival source copy; upstream scientific ownership is unchanged."
+  ],
+  "missingness": [
+    "scope"
+  ],
+  "legacy": {
+    "source_pin": {
+      "repository": "principia",
+      "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "path": "theory/shear-sourced-consumption/the-law.md",
+      "blob_oid": "fa7cc2b722272f76268ce2f74936df83c78385ec",
+      "sha256": "sha256:a12ca82a375a1d701efbbb7b5e175c0db64e82f39a8cc85b0cc07a02716c84b7",
+      "bytes": 1019,
+      "commit_metadata": "4e3b02c59b694d85016915177ef1ae157895ed7b\n2026-09-06T02:49:35+00:00\n2026-09-06T02:49:35+00:00\nfeat: Migrate the wide-binary control pilot into versioned scientific r… [ORB-11378]\n"
+    },
+    "text": "## The law\n\nLet the substrate have density n and flow field **v**, with strain-rate tensor\ne_ij = ½(∂_i v_j + ∂_j v_i). Decompose e into its isotropic part (tr e)/3 and deviatoric\npart e^dev. The proposed consumption law:\n\n**s = n · √( (3/2) e^dev : e^dev )**  — volumetric destruction rate = density × von Mises\nequivalent (anisotropic) strain rate, coefficient 1.\n\nFor an axisymmetric radial flow (eigenvalues e_rr, e_θθ, e_θθ) this scalar reduces exactly\nto |e_rr − e_θθ|, so the radial statement is s = n(e_rr − e_θθ): destruction wherever the\nflow stretches along one axis and squeezes along the others — i.e., wherever it is *tidally\ndistorted*. Isotropic strain — uniform expansion or compression — consumes nothing.\n\nSign convention: converging accelerating inflow (GP-like) has e_rr > 0 > e_θθ and consumes;\nthe time-reversed (white-hole-like) outflow has the shear signature reversed and *generates*.\nThe law carries a sensible two-sided symmetry rather than a bolted-on arrow.\n",
+    "commit_object": "tree 682cccb1cf19c89c2c5f4371c14ed2b384d2ae8c\nparent 13866b2848fbcce9a1f1ef2d4b97051a65f7e626\nauthor orbit[gpt-6-astra] <agent@orbit.invalid> 1788662975 +0000\ncommitter orbit <orbit@orbit.local> 1788662975 +0000\n\nfeat: Migrate the wide-binary control pilot into versioned scientific r… [ORB-11378]\n\nMigrate the wide-binary control pilot into versioned scientific records\n\nPlanned-By: codex\n"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "source",
+    "availability": "available",
+    "snapshot_digest": "sha256:a12ca82a375a1d701efbbb7b5e175c0db64e82f39a8cc85b0cc07a02716c84b7",
+    "locator": null,
+    "media_type": "text/plain"
+  },
+  "revision_id": "sha256:cad8be6c9dd5095bc7d1db6561a9606ee94fae33bad755ad8227f88e91751c46"
+}

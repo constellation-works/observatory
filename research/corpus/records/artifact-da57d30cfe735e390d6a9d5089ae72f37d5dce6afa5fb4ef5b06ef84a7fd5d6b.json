@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:principia:artifact:source%3Aorrery%3Aa1c430db54d585048ec85c4e7c47141db634f398%3Alab%2Fsims%2Ftwo-substance-defect-gravity%2Fsim.json",
+  "aliases": [
+    "source:orrery:a1c430db54d585048ec85c4e7c47141db634f398:lab/sims/two-substance-defect-gravity/sim.json"
+  ],
+  "activity": "active",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": null,
+    "blob_oid": null,
+    "sha256": "sha256:c7eb0c932e32fc7f45b7d76b626c13037f5b12d1420ae6efc93f165cb5010111",
+    "path": "upstream-snapshot/orrery/a1c430db54d585048ec85c4e7c47141db634f398/lab/sims/two-substance-defect-gravity/sim.json",
+    "selector": "$",
+    "historical": true,
+    "working_tree": true
+  },
+  "limitations": [
+    "Immutable archival source copy; upstream scientific ownership is unchanged."
+  ],
+  "missingness": [
+    "git-revision",
+    "owner-ingestion-git-pin",
+    "scope",
+    "upstream-canonical-record"
+  ],
+  "legacy": {
+    "source_pin": {
+      "repository": "orrery",
+      "git_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "path": "lab/sims/two-substance-defect-gravity/sim.json",
+      "blob_oid": "a03da55e130d40c7c23bb4126fa384ab59b0fce4",
+      "sha256": "sha256:c7eb0c932e32fc7f45b7d76b626c13037f5b12d1420ae6efc93f165cb5010111",
+      "bytes": 930,
+      "commit_metadata": "a1c430db54d585048ec85c4e7c47141db634f398\n2026-09-06T02:28:14+00:00\n2026-09-06T02:28:14+00:00\nfeat: Preserve the original electron animation's continuous fold in a c… [ORB-11374]\n"
+    },
+    "text": "{\n  \"slug\": \"two-substance-defect-gravity\",\n  \"title\": \"Two-substance defect gravity bridge\",\n  \"kind\": \"py\",\n  \"entry\": \"main.py\",\n  \"status\": \"active\",\n  \"created\": \"2026-07-12\",\n  \"topics\": [\n    \"two-substance-vacuum\",\n    \"vortex-defects\",\n    \"gravity-as-scarcity\",\n    \"far-field\",\n    \"moving-wake\",\n    \"equivalence-principle\"\n  ],\n  \"family\": \"two-substance-vortex-vacuum\",\n  \"summary\": \"A conserved two-substance defect lattice tests its stationary scarcity monopole, forced moving wake, and independent void-volume versus winding-energy source candidates.\",\n  \"provenance\": {\n    \"almanac\": \"15-discussions/26-07/two-substance-vortex-vacuum.md\",\n    \"orbit_tasks\": [\n      \"ORB-10160\",\n      \"ORB-10164\"\n    ],\n    \"theory_context\": \"../../principia/theory/two-substance-vortex-vacuum/\",\n    \"parent_theory\": \"../../principia/theory/gravity-as-scarcity/\",\n    \"companion_sim\": \"../two-substance-vortex-lattice/\"\n  }\n}\n",
+    "commit_object": "tree 8d851030602405b11b7166108b09cf9cd5664329\nparent 148b668391f575466282eaa81aab0dc943846a87\nauthor orbit[gpt-6-astra] <agent@orbit.invalid> 1788661694 +0000\ncommitter orbit <orbit@orbit.local> 1788661694 +0000\n\nfeat: Preserve the original electron animation's continuous fold in a c… [ORB-11374]\n\nPreserve the original electron animation's continuous fold in a computed-field view\n\nPlanned-By: codex\n"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "source",
+    "availability": "available",
+    "snapshot_digest": "sha256:c7eb0c932e32fc7f45b7d76b626c13037f5b12d1420ae6efc93f165cb5010111",
+    "locator": null,
+    "media_type": "application/json"
+  },
+  "revision_id": "sha256:da57d30cfe735e390d6a9d5089ae72f37d5dce6afa5fb4ef5b06ef84a7fd5d6b"
+}

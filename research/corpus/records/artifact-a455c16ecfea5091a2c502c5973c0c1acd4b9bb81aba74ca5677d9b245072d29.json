@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Atheory%2Ftwo-substance-vortex-vacuum%2Ftopological-dynamical-split.md",
+  "aliases": [
+    "source:principia:4e3b02c59b694d85016915177ef1ae157895ed7b:theory/two-substance-vortex-vacuum/topological-dynamical-split.md"
+  ],
+  "activity": "active",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "3981470c4e3ce9712f89aef98f5dc06d2cd395e8",
+    "sha256": "sha256:c98031bbf433bf759241ef860d022a8f6c70f089983e67fe89054d7cd91c67fa",
+    "path": "theory/two-substance-vortex-vacuum/topological-dynamical-split.md",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Immutable archival source copy; upstream scientific ownership is unchanged."
+  ],
+  "missingness": [
+    "scope"
+  ],
+  "legacy": {
+    "source_pin": {
+      "repository": "principia",
+      "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "path": "theory/two-substance-vortex-vacuum/topological-dynamical-split.md",
+      "blob_oid": "3981470c4e3ce9712f89aef98f5dc06d2cd395e8",
+      "sha256": "sha256:c98031bbf433bf759241ef860d022a8f6c70f089983e67fe89054d7cd91c67fa",
+      "bytes": 4002,
+      "commit_metadata": "4e3b02c59b694d85016915177ef1ae157895ed7b\n2026-09-06T02:49:35+00:00\n2026-09-06T02:49:35+00:00\nfeat: Migrate the wide-binary control pilot into versioned scientific r… [ORB-11378]\n"
+    },
+    "text": "## The topological/dynamical split — the keep-worthy feature\n\nThe structure the whole family is built to keep: **charge is topology, mass is dynamics.**\nWinding numbers are integers because the substance's circulation must close on itself\naround a defect — exact regardless of core size, shape, energy, or history — while core\nenergy is set by healing lengths and flow configuration, free to take any value. This\nsplit is not speculation; it is measured superfluid physics (circulation quantized at\nexactly h/m, Vinen 1961; flux at exactly h/2e; core energies dynamical — studies note).\nWorked against the four things it must deliver:\n\n**(a) Exact charge quantization across the 1836× mass ratio.** Delivered in halves. The\n*integer* half is structural: every |net winding| = 1 defect carries exactly one charge\nquantum, whatever its core — \"exact opposite winding, wildly different cores\" is precisely\nhow the electron and proton can cancel charge to the measured neutrality of matter while\ndiffering 1836× in mass. The mass ratio puts *no strain* on charge equality, which no\nnon-topological model achieves. The *unit-equality* half is owed: q = e(w₂ − w₁) assumes a\nsubstance-1 winding couples to the EM sector with exactly the same unit as a substance-2\nwinding, which topology alone does not guarantee — it needs a substance-exchange symmetry\nor the emergent-gauge theorem of kill condition B. (The measured wall for that half is the\nelectric neutrality of bulk matter, commonly quoted near 10⁻²¹ per electron-proton pair —\n`conjecture — to verify`, studies note owed.)\n\n**(b) One-signed gravity.** The void fraction is positive-definite and polarity-blind: a\nscarcity *monopole* that only adds, never cancels — the right qualitative shape for\ngravity, and the reason the ontology puts gravity in the void rather than in the signed\nsector. Whether the void's *volume* is the coupling survives kill condition A below (it\ndoes not; the sign structure survives, the literal coupling dies).\n\n**(c) Two-signed EM.** Polarity gives exactly two signs, and opposite windings superpose\nto zero net circulation at distance — aggregate neutrality and shieldability come out\nstructurally. What is *not* structural is the force law's sign and profile (the Bjerknes\nreversal risk, §4 above) — measured by **ORB-10163**: sign delivered in 2-D under the\ndeclared coupling, law 2-D-correct, the 3-D 1/r² half still open (§ lattice adjudications).\n\n**(d) A consistent neutron.** The (1, 1) balanced defect passes every bookkeeping test the\nmechanics can currently pose. Beta decay: (1,1) → (1,0) + (0,1) conserves both windings —\nn → e⁻ + p is topologically allowed. Electron capture: (1,0) + (0,1) → (1,1) — allowed,\nand it is how nature makes neutrons. Annihilation selection: e⁺e⁻ = (−1,0) + (1,0) → (0,0)\n— allowed to vacuum; but e⁻ + p = (1,0) + (0,1) → net (1,1) ≠ (0,0) — hydrogen *cannot*\nannihilate, only capture into a neutron when energetically forced. Proton vs positron:\n(0,1) ≠ (−1,0) despite equal charge — proton decay to the positron is topologically\nforbidden, with w₂ playing baryon number and the two-winding bookkeeping reinventing\nB and L conservation as topological charges (named reinvention: Skyrme's baryon-number-as-\nwinding, *Proc. R. Soc. A* 260, 127 (1961) — `conjecture — to verify` as a citation, the\ncorrespondence is qualitative). And the neutron is *elementary* here — a balanced defect,\nnot a bound (p + e) pair — which is forced, not optional: the composite-neutron model is\ndead against the measured Bose statistics of N-14 (Heitler–Herzberg 1929; studies note).\nWhat the mechanics does not yet contain: spin-½ and statistics for any defect, the\nneutron's anomalous magnetic moment (it demands internal charge structure — the\nco-rotating composite is suggestive but nothing is computed), and the neutrino, whose slot\n(0, 0) is indistinguishable from vacuum. Recorded as owed, not patched.\n",
+    "commit_object": "tree 682cccb1cf19c89c2c5f4371c14ed2b384d2ae8c\nparent 13866b2848fbcce9a1f1ef2d4b97051a65f7e626\nauthor orbit[gpt-6-astra] <agent@orbit.invalid> 1788662975 +0000\ncommitter orbit <orbit@orbit.local> 1788662975 +0000\n\nfeat: Migrate the wide-binary control pilot into versioned scientific r… [ORB-11378]\n\nMigrate the wide-binary control pilot into versioned scientific records\n\nPlanned-By: codex\n"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "source",
+    "availability": "available",
+    "snapshot_digest": "sha256:c98031bbf433bf759241ef860d022a8f6c70f089983e67fe89054d7cd91c67fa",
+    "locator": null,
+    "media_type": "text/plain"
+  },
+  "revision_id": "sha256:a455c16ecfea5091a2c502c5973c0c1acd4b9bb81aba74ca5677d9b245072d29"
+}

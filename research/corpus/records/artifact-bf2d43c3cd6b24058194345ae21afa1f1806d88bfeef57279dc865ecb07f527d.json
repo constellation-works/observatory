@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:principia:artifact:source%3Aorrery%3Aa1c430db54d585048ec85c4e7c47141db634f398%3Alab%2Fsims%2Ftwo-substance-packet-linear-symbol%2FREADME.md",
+  "aliases": [
+    "source:orrery:a1c430db54d585048ec85c4e7c47141db634f398:lab/sims/two-substance-packet-linear-symbol/README.md"
+  ],
+  "activity": "active",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": null,
+    "blob_oid": null,
+    "sha256": "sha256:5aa3f0c1bd64a17cb4a32d91f1e902de12dc8052c2ac3a6a07d61cc6f70064c6",
+    "path": "upstream-snapshot/orrery/a1c430db54d585048ec85c4e7c47141db634f398/lab/sims/two-substance-packet-linear-symbol/README.md",
+    "selector": "$",
+    "historical": true,
+    "working_tree": true
+  },
+  "limitations": [
+    "Immutable archival source copy; upstream scientific ownership is unchanged."
+  ],
+  "missingness": [
+    "git-revision",
+    "owner-ingestion-git-pin",
+    "scope",
+    "upstream-canonical-record"
+  ],
+  "legacy": {
+    "source_pin": {
+      "repository": "orrery",
+      "git_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "path": "lab/sims/two-substance-packet-linear-symbol/README.md",
+      "blob_oid": "716f4af1f7b47875fc86f61df0578ceb67b16c24",
+      "sha256": "sha256:5aa3f0c1bd64a17cb4a32d91f1e902de12dc8052c2ac3a6a07d61cc6f70064c6",
+      "bytes": 2451,
+      "commit_metadata": "a1c430db54d585048ec85c4e7c47141db634f398\n2026-09-06T02:28:14+00:00\n2026-09-06T02:28:14+00:00\nfeat: Preserve the original electron animation's continuous fold in a c… [ORB-11374]\n"
+    },
+    "text": "# Two-substance packet linear symbol and polarization controls\n\nThis deterministic fixture implements the verification contract delivered by\nPrincipia task `ORB-11219` for the existing two-density/gradient-flux packet\nHamiltonian. It asks whether setting `c_plus = c_minus` changes two scalar\nsound branches into a Maxwell-like transverse sector. It does not add a\ncoupling, modify the packet apparatus, make an observational claim, or edit\nPrincipia.\n\nRun the full fixture and its byte-reproducibility check from the repository\nroot:\n\n```sh\nuv run lab/sims/two-substance-packet-linear-symbol/main.py --check-determinism\n```\n\nThe committed `assets/results.json` is the authoritative machine-readable run.\nIt records the Orrery and Principia source commits, apparatus SHA-256,\nequations, cases, solver, deterministic Fourier seeds, thresholds, exact rerun\ncommands, every gate, and the result-neutral verdict rule.\n\n## Independent calculations\n\nThe matrix lane assembles the six-field Fourier operator in the species basis\n`(n1,n2,j1x,j1y,j2x,j2y)`. The time lane separately uses the exact nonlinear\nchemical potentials, periodic centered derivative, and symmetric\nkick-drift-kick step copied from the frozen packet apparatus. Small isolated\nFourier perturbations measure phase frequency and flux direction without\nchanging the model.\n\nThe predeclared U0/U1/U2/B0/T0 controls cover unequal and equal speeds,\n`lambda=0` and `lambda=0.8`, the admissible mixed background, both sound\nbranches, axial and diagonal wavevectors, and transverse current. Three spatial\nand three temporal rungs separate centered-difference dispersion and lattice\nanisotropy from continuum mode content. An explicit indefinite-Hessian witness\nis rejected before evolution.\n\n## Scoped result\n\nThe validated run refutes the apparatus hypothesis: it finds four propagating\nroots in two positive-frequency longitudinal acoustic branches, plus two\nzero-frequency transverse current modes and no algebraic/Gauss constraint.\nEqual speeds make the two longitudinal eigenvalues degenerate; this is not\nreported as Maxwell evidence. Transverse seeds remain frozen and conserve each\nspecies' discrete curl. This result concerns only the frozen Hamiltonian, not\nevery possible emergent-gauge construction.\n\nThe `lambda=0.8` mixed background is locally stable for the tested B0 values,\nbut the cubic Hamiltonian remains globally unbounded. A positive sampled patch\nis not treated as a cure.\n",
+    "commit_object": "tree 8d851030602405b11b7166108b09cf9cd5664329\nparent 148b668391f575466282eaa81aab0dc943846a87\nauthor orbit[gpt-6-astra] <agent@orbit.invalid> 1788661694 +0000\ncommitter orbit <orbit@orbit.local> 1788661694 +0000\n\nfeat: Preserve the original electron animation's continuous fold in a c… [ORB-11374]\n\nPreserve the original electron animation's continuous fold in a computed-field view\n\nPlanned-By: codex\n"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "source",
+    "availability": "available",
+    "snapshot_digest": "sha256:5aa3f0c1bd64a17cb4a32d91f1e902de12dc8052c2ac3a6a07d61cc6f70064c6",
+    "locator": null,
+    "media_type": "text/plain"
+  },
+  "revision_id": "sha256:bf2d43c3cd6b24058194345ae21afa1f1806d88bfeef57279dc865ecb07f527d"
+}

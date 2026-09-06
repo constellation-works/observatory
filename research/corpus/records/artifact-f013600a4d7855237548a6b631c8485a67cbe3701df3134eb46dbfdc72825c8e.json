@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:principia:artifact:source%3Aorrery%3Aa1c430db54d585048ec85c4e7c47141db634f398%3Alab%2Fsims%2Ftwo-substance-defect-gravity%2FREADME.md",
+  "aliases": [
+    "source:orrery:a1c430db54d585048ec85c4e7c47141db634f398:lab/sims/two-substance-defect-gravity/README.md"
+  ],
+  "activity": "active",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": null,
+    "blob_oid": null,
+    "sha256": "sha256:0f270f31775a91402253c027a5009ffd32502c9c471b7c1eb677028bdd214ef4",
+    "path": "upstream-snapshot/orrery/a1c430db54d585048ec85c4e7c47141db634f398/lab/sims/two-substance-defect-gravity/README.md",
+    "selector": "$",
+    "historical": true,
+    "working_tree": true
+  },
+  "limitations": [
+    "Immutable archival source copy; upstream scientific ownership is unchanged."
+  ],
+  "missingness": [
+    "git-revision",
+    "owner-ingestion-git-pin",
+    "scope",
+    "upstream-canonical-record"
+  ],
+  "legacy": {
+    "source_pin": {
+      "repository": "orrery",
+      "git_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "path": "lab/sims/two-substance-defect-gravity/README.md",
+      "blob_oid": "c9c9ff76a6c7822d6b5bc937cd28d8b70df5e795",
+      "sha256": "sha256:0f270f31775a91402253c027a5009ffd32502c9c471b7c1eb677028bdd214ef4",
+      "bytes": 4535,
+      "commit_metadata": "a1c430db54d585048ec85c4e7c47141db634f398\n2026-09-06T02:28:14+00:00\n2026-09-06T02:28:14+00:00\nfeat: Preserve the original electron animation's continuous fold in a c… [ORB-11374]\n"
+    },
+    "text": "# Two-substance defect gravity bridge\n\nThis experiment asks whether the conserved two-substance lattice used by the\ncompanion vortex-interaction sim supplies the missing mechanics claimed by\ngravity-as-scarcity. The questions and outcomes were fixed before the run:\n\n| question | observable | supporting outcome |\n| --- | --- | --- |\n| stationary far field | spherical accumulated signed depletion | a resolved `1/r` tail from the conserved defect |\n| moving wake | depletion-centroid lag and fitted pattern velocity | a following wake with pattern/core velocity ratio near one |\n| gravitational charge | factorial core-size × winding sweep | far amplitude varies uniquely with void volume or flow energy |\n\nRun the deterministic apparatus with:\n\n```sh\nuv run lab/sims/two-substance-defect-gravity/main.py\n```\n\nIt writes the complete numerical record to `assets/results.json` and the four\ndiagnostic panels to `assets/gravity-bridge.png`.\n\n## Apparatus\n\nThe stationary experiment uses a `97^3` cubic lattice. Each cell begins with\n`rho_A = rho_B = 0.5`; a balanced defect removes both substances from a\nGaussian core and places exactly the same signed amount in a broader Gaussian\nhalo. The two fields are separately conserved to floating-point tolerance and\nremain positive. Spherical shell sums define the potential-like accumulated\ndepletion. An uncompensated core is run as a positive control: if a monopole is\npresent, this estimator must recover its `1/r` exterior.\n\nThe wake experiment evolves a `161^2` slice with diffusion plus finite-time\nrelaxation toward the same compensated profile while its center is translated\nat 0.15, 0.30, and 0.45 cells per time. This is a forced trajectory, not an\nemergent moving soliton. The density response and diffusive replenishment flow\nare measured rather than translated analytically. The 0.30 run is repeated at\nhalf the time step.\n\nThe source sweep crosses four core radii with windings 0–3. Core size varies\npositive void volume; winding varies a regularized individual-phase kinetic\nenergy diagnostic. This is deliberately factorial, so either quantity could\nchange independently. No gravity coupling is inserted.\n\n## Measured result\n\n- **Far field: negative.** The positive void volume is `122.8834` cell-density\n  units and the expelled halo is `-122.8834`, leaving a signed monopole of\n  `-2.0e-14` (`1.6e-16` of the positive volume). Across radii 36–44 the\n  compensated signal is `3.95e-7` of the uncompensated control and is residual\n  halo tail, not a resolved power-law field. The control follows `1/r` with\n  relative RMSE `2.13e-16`; its `1/r^2` alternative has relative RMSE `0.0524`.\n  The null is therefore not a blind estimator. The parent profile requires a\n  net source, a nonconserving sink, or another long-range equation absent here.\n- **Wake: qualified positive.** Finite relaxation produces a lagging asymmetric\n  depletion/replenishment pattern. At imposed speed `0.30`, the fitted pattern\n  speed is `0.2999992` (ratio `0.999997`) with a `0.586`-cell mean lag; the\n  behind/ahead positive-depletion ratio is `2.21`. Ratios at speeds `0.15` and\n  `0.45` are `0.999990` and `0.999997`. Halving the time step changes fitted\n  speed by `5.0e-7` fraction and lag by `2.34%`. This supports the kinematic\n  possibility of a following wake, but the core is externally driven, so it\n  does not establish dynamical defect motion or stability.\n- **Which quantity gravitates: neither is selected.** In the 16-configuration\n  factorial sweep, positive void volume explains `R² = 0.9925` of the compact\n  response, while flow energy explains `R² = 0.00032`; changing winding at a\n  fixed core changes compact scarcity by exactly zero. All conserved\n  configurations retain a zero far monopole within floating-point tolerance,\n  so far-field predictor fits are undefined. A void-sourced Poisson field and\n  an energy-sourced Poisson field can each be added as alternative postulates,\n  but the present lattice contains no measurement or equation that chooses one.\n\n## Interpretation boundary\n\nThis result tests the apparatus, not the theory ledger. It does not convert the\nnull monopole into a verdict about equivalence-principle data, and it does not\nidentify the diagnostic winding energy with gravity. Reconciliation of the\ngravity-bridge and kill-condition-A rows belongs to principia/kepler. The\nexperimental handoff is: the conserved defect model supplies a compact void and\na forced wake, but no nonzero gravitational far field and no unique gravitating\ncharge.\n",
+    "commit_object": "tree 8d851030602405b11b7166108b09cf9cd5664329\nparent 148b668391f575466282eaa81aab0dc943846a87\nauthor orbit[gpt-6-astra] <agent@orbit.invalid> 1788661694 +0000\ncommitter orbit <orbit@orbit.local> 1788661694 +0000\n\nfeat: Preserve the original electron animation's continuous fold in a c… [ORB-11374]\n\nPreserve the original electron animation's continuous fold in a computed-field view\n\nPlanned-By: codex\n"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "source",
+    "availability": "available",
+    "snapshot_digest": "sha256:0f270f31775a91402253c027a5009ffd32502c9c471b7c1eb677028bdd214ef4",
+    "locator": null,
+    "media_type": "text/plain"
+  },
+  "revision_id": "sha256:f013600a4d7855237548a6b631c8485a67cbe3701df3134eb46dbfdc72825c8e"
+}

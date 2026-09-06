@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Apolicy.md",
+  "aliases": [
+    "source:principia:4e3b02c59b694d85016915177ef1ae157895ed7b:policy.md"
+  ],
+  "activity": "active",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "522d28ec1cacf10d3d691a9db3d454c7e3e7692d",
+    "sha256": "sha256:16f426747dc6cb11bcfb1483be9583472241c0d6b5e083aaf6062c62cbd897b0",
+    "path": "policy.md",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Immutable archival source copy; upstream scientific ownership is unchanged."
+  ],
+  "missingness": [
+    "scope"
+  ],
+  "legacy": {
+    "source_pin": {
+      "repository": "principia",
+      "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "path": "policy.md",
+      "blob_oid": "522d28ec1cacf10d3d691a9db3d454c7e3e7692d",
+      "sha256": "sha256:16f426747dc6cb11bcfb1483be9583472241c0d6b5e083aaf6062c62cbd897b0",
+      "bytes": 4501,
+      "commit_metadata": "4e3b02c59b694d85016915177ef1ae157895ed7b\n2026-09-06T02:49:35+00:00\n2026-09-06T02:49:35+00:00\nfeat: Migrate the wide-binary control pilot into versioned scientific r… [ORB-11378]\n"
+    },
+    "text": "# Research policy\n\nThis is the procedure. `scripts/check-theory.py` is the lock. The essays in\n`theory/` remain the argument; they are not the source of truth for claim\nstatus, kind, or what work is allowed to start.\n\n## Unit of work\n\nNew theory work is a **gate card** in `gates/`, not a new paragraph and not a\nnew sim. A card states one owed object, one family, and one of:\n\n| kind | meaning |\n|---|---|\n| `existence` | does a regular solution / sector even exist? |\n| `control` | the coupling-off / comparator-off run |\n| `derivation` | a named postulate becomes a consequence of a local mechanism |\n| `phenomenology` | numbers about nature (PPN, drag timescales, galaxies, clocks) |\n\nPhenomenology is illegal while an existence claim it names in `blocked_by` is\nnot `supported`. Compute the ugly number in a notebook before filing a lattice\nfor a phenomenology card.\n\n## Kinds of claim\n\nCanonical files: `theory/<doc>/claims.json`. Every `## Evidence ledger` row in\n`theory/<doc>/evidence-ledger.md` must appear there, byte-for-byte in `claim`.\n\nThe single migrated exception is `wide-binary-selection-methodology`:\n[its immutable records](research/wide-binary/README.md) own the pilot, and its\noriginal theory files, gate and protocol study are checked compatibility views.\nThe checker enforces their exact projection as well as every existing rule below.\nAppend a new owner record revision for future changes; do not edit those views\nindependently. No other family's authority changes.\n\n| kind | what it is |\n|---|---|\n| `postulate` | we put this in. Not a discovery. Needs `named`, `expires`, `kill`. Cannot be `supported` (use `model-property` for lattice theorems of a postulate). |\n| `derived` | follows from named postulates by algebra |\n| `model-property` | true of the model / lattice (the ⊙ rows) |\n| `nature` | a claim about the world |\n| `hook` | a structural feature a later source law might couple to. Requires `control`. Cannot be `supported` unless `control_ran` is true. |\n\nA coupling written into a Hamiltonian is a postulate or a hook. Measuring that\nthe model then contains the coupling's algebra is a model-property, not a\nnature result.\n\n## Families do not pay each other's debts\n\n`family` is exactly one of the doc's families. `pays_debt_of` must point at a\nclaim in the same family. The shear law does not pay two-substance's source-law\ndebt. Two-substance does not inherit scarcity's closed system.\n\n## Refuted wall\n\n`schema/wall.json` lists claim ids that may not vanish. Reopening one requires\n`reopens` on a new claim **and** `daniel_reopen: true`. Quiet resurrection\nfails the checker.\n\n## Preferred-frame confrontations\n\nA claim tagged `preferred-frame` must name `comparator`. The comparator is the\ntheory in the frame the observation is actually in — for GR and uniform motion,\nmass-frame Schwarzschild (U is gauge), not a Galilean \\(U+v_{GP}\\) picture.\n\n## Live front\n\nA `growing` or `exploratory` doc names `live_fronts`: gate ids. One live front\nper family. Do not open a second phenomenology front on a family whose\nexistence card is still open.\n\n## Named postulates expire\n\nA postulate with `derived: false` past `expires` fails the check. Renew with a\nreason (still a debt) or derive it. Default window is thirty days from naming.\n\n## Evidence\n\nAdmissible evidence is a cataloged orrery sim or a sourced `studies/` note.\nAnalytic rows stay `untested` until one of those exists — including algebra\nthat is decisive on paper.\n\n## What the checker cannot do\n\nIt cannot tell whether a comparator is the *right* GR frame beyond requiring\nthat one is named, whether a derivation is genuine, or whether a picture is\ntrue. Those stay human. The lock makes it expensive to skip the question.\n\n## Retirement\n\n`retired` is a document-level research decision, distinct from a claim being refuted.\nDaniel may retire a family and all its continuations. Retired documents have empty\n`live_fronts`; their research gates are closed with the authorization and reason.\nIndividual claim statuses, refuted-wall entries, evidence and runnable sims are retained.\nUnanswered questions and proposed experiments become historical, not dispatchable work.\nUnderived postulates retain their original expiry dates but no longer require renewal\nwhile their document is retired. Reactivating the document restores expiry checks.\nReopening a retired family requires Daniel's explicit authorization; no automatic\nfollow-up, renamed successor, or debt transfer may bypass that decision.\n",
+    "commit_object": "tree 682cccb1cf19c89c2c5f4371c14ed2b384d2ae8c\nparent 13866b2848fbcce9a1f1ef2d4b97051a65f7e626\nauthor orbit[gpt-6-astra] <agent@orbit.invalid> 1788662975 +0000\ncommitter orbit <orbit@orbit.local> 1788662975 +0000\n\nfeat: Migrate the wide-binary control pilot into versioned scientific r… [ORB-11378]\n\nMigrate the wide-binary control pilot into versioned scientific records\n\nPlanned-By: codex\n"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "source",
+    "availability": "available",
+    "snapshot_digest": "sha256:16f426747dc6cb11bcfb1483be9583472241c0d6b5e083aaf6062c62cbd897b0",
+    "locator": null,
+    "media_type": "text/plain"
+  },
+  "revision_id": "sha256:9f7e25e1bdde2ac5901ae6b65f8d62a1365ed42e7e7ad99db82c141857e06608"
+}

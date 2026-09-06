@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "kind": "assessment",
+  "id": "urn:research:principia:assessment:ppn-slots-far-field%3Alegacy-verdict",
+  "aliases": [
+    "ppn-slots-far-field:legacy-verdict"
+  ],
+  "activity": "unknown",
+  "scope": "derivation",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "cf1add5f518795b48696ace5aae1ea01f6b094fe",
+    "sha256": "sha256:b258d05cb8d485f7930cd4898e3b3f45abd7485187030cf02e2752174d451291",
+    "path": "theory/ppn-reduction-of-the-settled-flow/claims.json",
+    "selector": "/claims/5",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Exact historical verdict and stated assumptions only; migration makes no new scientific inference."
+  ],
+  "missingness": [
+    "exact-evidence-owner-references",
+    "independently-verified-controls",
+    "activity"
+  ],
+  "legacy": {
+    "id": "ppn-slots-far-field",
+    "family": "gravity-as-scarcity",
+    "kind": "derived",
+    "status": "mixed",
+    "claim": "Effective preferred-frame coefficients are far-field slot coefficients of the settled wake — the non-gauge g₀ᵢ dipole against the PPN Φw/c³ structure (α₁ slot) and the speed-field wind-axis anisotropy against the w-quadrupole structure (α₂ slot) — defined only at r much greater than the matching radius r_m = 2GM/U²; the far-field fixture now reads that zone and finds the speed sector carrying slot-matching tails while the total non-gauge g₀ᵢ dipole has no converged scaling regime at any wind",
+    "evidence": "§ slots and § far field: slot mapping schematic against the sourced PPN formalism ([moving-source-gravity-bounds](../../studies/moving-source-gravity-bounds.md)). Measured by ORB-11041 ([level-core-far-field-slot-coefficients](../../../orrery/lab/sims/level-core-far-field-slot-coefficients/): half-width-24 box, one-unit core, shells to r = 20, 41³ → 57³, winds U/v_GP(5) = 0.65/0.8/1.0): the ŵ-dipole has a rung-converged slot-matching tail at all three winds (2α₃−α₁-class lattice proxies 14.1 ± 3.5 / 9.8 ± 2.1 / 6.6 ± 1.3, falling with wind); the ŵ-quadrupole resolves an α₂-slot proxy only at 0.8 (52.2 ± 13.2); the α₁ slot is unextractable — no converged scaling regime for the total non-gauge g₀ᵢ dipole at any wind. Caveats carried: the resolved proxies drift monotonically outward across shells 14 → 17 → 20 (α₂ shell values 37.5 → 49.6 → 69.5) with the outer shell four units from an open face — shell-unstable pending a larger box — and the one-unit core is resolved by about one cell",
+    "links": [
+      "../../studies/moving-source-gravity-bounds.md",
+      "../../../orrery/lab/sims/level-core-far-field-slot-coefficients/"
+    ],
+    "in_doc_ledger": true,
+    "kill": "A shell-stable larger-box extraction that finds no scaling regime in any sector — anisotropies falling neither onto PPN-potential tails nor to zero — leaving the model with no PPN limit"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "claim": {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:ppn-slots-far-field",
+      "revision_id": "sha256:d5f99385e41439ffcab7c53ee148754b36813991760ce46eb2a3b01cd584f8d1",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    "verdict": "inconclusive",
+    "legacy_verdict": "mixed",
+    "inference": "historical",
+    "basis": "legacy-report",
+    "controls": "unknown",
+    "rationale": "§ slots and § far field: slot mapping schematic against the sourced PPN formalism ([moving-source-gravity-bounds](../../studies/moving-source-gravity-bounds.md)). Measured by ORB-11041 ([level-core-far-field-slot-coefficients](../../../orrery/lab/sims/level-core-far-field-slot-coefficients/): half-width-24 box, one-unit core, shells to r = 20, 41³ → 57³, winds U/v_GP(5) = 0.65/0.8/1.0): the ŵ-dipole has a rung-converged slot-matching tail at all three winds (2α₃−α₁-class lattice proxies 14.1 ± 3.5 / 9.8 ± 2.1 / 6.6 ± 1.3, falling with wind); the ŵ-quadrupole resolves an α₂-slot proxy only at 0.8 (52.2 ± 13.2); the α₁ slot is unextractable — no converged scaling regime for the total non-gauge g₀ᵢ dipole at any wind. Caveats carried: the resolved proxies drift monotonically outward across shells 14 → 17 → 20 (α₂ shell values 37.5 → 49.6 → 69.5) with the outer shell four units from an open face — shell-unstable pending a larger box — and the one-unit core is resolved by about one cell",
+    "evidence": []
+  },
+  "revision_id": "sha256:1df61d47bacc29cdcdf0b9c0982ce893994dcf7d50c6624a843014039f145de0"
+}

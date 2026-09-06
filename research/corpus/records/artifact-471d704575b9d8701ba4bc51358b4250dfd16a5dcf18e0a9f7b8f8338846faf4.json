@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:principia:artifact:source%3Aorrery%3Aa1c430db54d585048ec85c4e7c47141db634f398%3Alab%2Fsims%2Flevel-core-far-field-slot-coefficients%2FREADME.md",
+  "aliases": [
+    "source:orrery:a1c430db54d585048ec85c4e7c47141db634f398:lab/sims/level-core-far-field-slot-coefficients/README.md"
+  ],
+  "activity": "active",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": null,
+    "blob_oid": null,
+    "sha256": "sha256:f25cd7f837bb2b462bd1e201f6b99f292850e029961c1f59276485ad135d03ce",
+    "path": "upstream-snapshot/orrery/a1c430db54d585048ec85c4e7c47141db634f398/lab/sims/level-core-far-field-slot-coefficients/README.md",
+    "selector": "$",
+    "historical": true,
+    "working_tree": true
+  },
+  "limitations": [
+    "Immutable archival source copy; upstream scientific ownership is unchanged."
+  ],
+  "missingness": [
+    "git-revision",
+    "owner-ingestion-git-pin",
+    "scope",
+    "upstream-canonical-record"
+  ],
+  "legacy": {
+    "source_pin": {
+      "repository": "orrery",
+      "git_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "path": "lab/sims/level-core-far-field-slot-coefficients/README.md",
+      "blob_oid": "3286827fc4c5fe3137caf5c93ee7d9a9fbf23adc",
+      "sha256": "sha256:f25cd7f837bb2b462bd1e201f6b99f292850e029961c1f59276485ad135d03ce",
+      "bytes": 2481,
+      "commit_metadata": "a1c430db54d585048ec85c4e7c47141db634f398\n2026-09-06T02:28:14+00:00\n2026-09-06T02:28:14+00:00\nfeat: Preserve the original electron animation's continuous fold in a c… [ORB-11374]\n"
+    },
+    "text": "# Level-core far-field shell stability\n\nORB-11171 evolves the ORB-11041 fixture in place because the model, G1--G5\ndefinitions, and measured slot question are unchanged; git history preserves\nthe earlier rung. It imports ORB-10938's evolution module and checks the frozen\nstencil at runtime against SHA-256\n`aa1155e07536c3318c0afb0baabbbf472d66658046be4d21d816f135632c8461`.\nBernoulli speed is imposed nowhere.\n\nRun the authoritative experiment with:\n\n```sh\nPYTHONDONTWRITEBYTECODE=1 UV_CACHE_DIR=/tmp/orbit-uv-cache-11171 \\\n  uv run lab/sims/level-core-far-field-slot-coefficients/main.py \\\n  --check-determinism\n```\n\nThe `47^3 -> 63^3`, half-width-26, `T=480` feasibility choice improves core\nsampling on the corresponding ORB-11041 rungs while preserving all three\nwinds. The shell ladder is `{3,5,8,11,14,17,20,22,24}`: every old shell is an\nexact subset and both added shells are wind dominated at all winds. The command\nwrites byte-identical canonical JSON to `assets/results.json` and\n`runs/2026-09-04-seed-42.json`.\n\n## Gate verdicts\n\nAll five unchanged gates pass: settlement/trough control, radial falloff,\nlattice-unit slot extraction, per-wind scaling, and the Galilean null. A pass\nmeans the predeclared measurement completed under its resolution rules; it does\nnot mean every candidate field has a PPN scaling regime. Each gate records an\nexplicit `PASS`/`KILL` verdict in the result.\n\n## Predeclared answers\n\n1. **Shell stability:** boundary-sensitive. The extended dipole exponents are\n   `-1.00`, `-1.13`, and `-1.16`; only the highest-wind value remains within\n   ORB-11041's quoted adjacent-rung error. The middle-wind alpha2 lattice proxy\n   is `73.1 +/- 14.9`, consistent only after combining its new apparatus error\n   with ORB-11041's `52.2 +/- 13.2`. The drift is reported as a boundary\n   artifact/instability, not a physics result.\n2. **Alpha1 regime:** absent on the converged extended ladder at every wind.\n3. **Half-order hazard:** slot-order. The wind-axis dipole of `|w_hat|^2` is the\n   ORB-11040 symmetry channel containing `2 u_GP dot delta-v`; it retains a\n   converged slot-matching tail at all three winds. A decomposition-dependent\n   direct residual is also recorded, but is not substituted for that declared\n   arbiter.\n4. **Lowest-wind anisotropy:** still has no scaling regime.\n\nThese are dimensionless lattice-unit coefficients only. They are neither\nphysical alpha values nor phenomenological constraints. No principia file is\nmodified.\n",
+    "commit_object": "tree 8d851030602405b11b7166108b09cf9cd5664329\nparent 148b668391f575466282eaa81aab0dc943846a87\nauthor orbit[gpt-6-astra] <agent@orbit.invalid> 1788661694 +0000\ncommitter orbit <orbit@orbit.local> 1788661694 +0000\n\nfeat: Preserve the original electron animation's continuous fold in a c… [ORB-11374]\n\nPreserve the original electron animation's continuous fold in a computed-field view\n\nPlanned-By: codex\n"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "source",
+    "availability": "available",
+    "snapshot_digest": "sha256:f25cd7f837bb2b462bd1e201f6b99f292850e029961c1f59276485ad135d03ce",
+    "locator": null,
+    "media_type": "text/plain"
+  },
+  "revision_id": "sha256:471d704575b9d8701ba4bc51358b4250dfd16a5dcf18e0a9f7b8f8338846faf4"
+}

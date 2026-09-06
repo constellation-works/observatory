@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "kind": "assessment",
+  "id": "urn:research:principia:assessment:moving-source-toy-lopsidedness-scale%3Alegacy-verdict",
+  "aliases": [
+    "moving-source-toy-lopsidedness-scale:legacy-verdict"
+  ],
+  "activity": "unknown",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "f55e1dace027658053ccc8f5b740363237c0eda4",
+    "sha256": "sha256:34d8fd1300c47a5df5ea2300abe6ba3ac4e6c29d546f03686710d88e1297d681",
+    "path": "theory/moving-source-field-consistency/claims.json",
+    "selector": "/claims/6",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Exact historical verdict and stated assumptions only; migration makes no new scientific inference."
+  ],
+  "missingness": [
+    "exact-evidence-owner-references",
+    "independently-verified-controls",
+    "activity",
+    "scope"
+  ],
+  "legacy": {
+    "id": "moving-source-toy-lopsidedness-scale",
+    "family": "retarded-scarcity-wake",
+    "kind": "nature",
+    "status": "conjecture",
+    "claim": "The delayed-center toy scale \\(A_1\\sim2\\times10^{-3}\\) is roughly 50–100× below representative observed disk-lopsidedness scales",
+    "evidence": "\\(\\beta_g\\approx2\\times10^{-3}\\) from ~600 km/s; the cited review reports both a larger-sample characteristic scale near 0.1 and older thresholds near 0.2 ([Jog & Combes 2009 review](https://ned.ipac.caltech.edu/level5/Sept09/Jog/Jog2.html), [arXiv:0811.1101](https://arxiv.org/pdf/0811.1101)). The Branch C ceiling is now known and sits at or below this toy scale ([Branch C](branch-c.md) § Walls)",
+    "links": [
+      "https://ned.ipac.caltech.edu/level5/Sept09/Jog/Jog2.html",
+      "https://arxiv.org/pdf/0811.1101",
+      "branch-c.md"
+    ],
+    "in_doc_ledger": true
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "claim": {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:moving-source-toy-lopsidedness-scale",
+      "revision_id": "sha256:6ce5afe1e32d2991c0c97ffd3fc2b8eaa7b13314be2b66b7c886588cf024ea30",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    "verdict": "untested",
+    "legacy_verdict": "conjecture",
+    "inference": "historical",
+    "basis": "legacy-report",
+    "controls": "unknown",
+    "rationale": "\\(\\beta_g\\approx2\\times10^{-3}\\) from ~600 km/s; the cited review reports both a larger-sample characteristic scale near 0.1 and older thresholds near 0.2 ([Jog & Combes 2009 review](https://ned.ipac.caltech.edu/level5/Sept09/Jog/Jog2.html), [arXiv:0811.1101](https://arxiv.org/pdf/0811.1101)). The Branch C ceiling is now known and sits at or below this toy scale ([Branch C](branch-c.md) § Walls)",
+    "evidence": []
+  },
+  "revision_id": "sha256:71961f7f3676ae93f3c6912bb96a91006c4afdbfedbfcdf593c1add9c140ee7a"
+}

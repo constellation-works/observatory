@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Atheory%2Fshear-sourced-consumption%2Fthree-checks.md",
+  "aliases": [
+    "source:principia:4e3b02c59b694d85016915177ef1ae157895ed7b:theory/shear-sourced-consumption/three-checks.md"
+  ],
+  "activity": "active",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "15c7d8a85b2744b88e16f538c001348d58329df5",
+    "sha256": "sha256:5aefef85ae1ba6183277a1a4a9ddbc0ca9b0ed9d2a2b79ebfee6611014c5d2ee",
+    "path": "theory/shear-sourced-consumption/three-checks.md",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Immutable archival source copy; upstream scientific ownership is unchanged."
+  ],
+  "missingness": [
+    "scope"
+  ],
+  "legacy": {
+    "source_pin": {
+      "repository": "principia",
+      "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "path": "theory/shear-sourced-consumption/three-checks.md",
+      "blob_oid": "15c7d8a85b2744b88e16f538c001348d58329df5",
+      "sha256": "sha256:5aefef85ae1ba6183277a1a4a9ddbc0ca9b0ed9d2a2b79ebfee6611014c5d2ee",
+      "bytes": 2202,
+      "commit_metadata": "4e3b02c59b694d85016915177ef1ae157895ed7b\n2026-09-06T02:49:35+00:00\n2026-09-06T02:49:35+00:00\nfeat: Migrate the wide-binary control pilot into versioned scientific r… [ORB-11378]\n"
+    },
+    "text": "## Three checks that came out unforced\n\n- **Cosmological silence.** Pure Hubble flow **v** = H**r** has e_rr = e_θθ = H — zero\n  anisotropic shear — so the law consumes nothing in a homogeneous expanding universe.\n  Homogeneous-isotropic (FRW) spacetimes are exactly the Weyl-flat ones, so \"shear consumes,\n  isotropic strain is free\" echoes GR's split between tidal (Weyl) and volume (Ricci)\n  curvature (`conjecture` as a correspondence — resonance noted, nothing derived). The\n  law does not eat the expansion; conversely it supplies no generation term — what sources\n  the 3Hn of homogeneous expansion is cosmology's side of the books, not this law's.\n- **The global budget closes at the turnaround radius.** The GP flow's intake through a\n  sphere of radius R grows as 4πnA R^(3/2) — an isolated mass in static space would demand\n  infinite supply, which is the old \"where does it all come from\" objection to every inflow\n  picture. In an expanding universe, Hubble generation at 3H per unit volume supplies\n  4πnHR³ inside R, and this balances the intake exactly where HR = √(2GM/R) — i.e. at\n  R³ = 2GM/H², the **turnaround radius**, the physically correct boundary where infall\n  detaches from expansion. Masses eat what expansion makes, with no tuned cutoff.\n  **Measured (ORB-10754, 2026-08-12): order-unity yes, exact no** — against the\n  Karachentsev-program zero-velocity radii with *independent* (orbital/virial) masses,\n  R_meas/R_sc ≈ 0.55 median (0.43–0.83); the data track the ΛCDM zero-velocity formula\n  (ratio ≈ 1.0), whose O(1) matter/Λ factors this law's pure-Hubble idealization drops.\n  Details and the circularity discipline in\n  [studies/cosmological-expansion-and-bound-systems](../../studies/cosmological-expansion-and-bound-systems.md)\n  § measured turnaround radii.\n- **All consumption is distributed; the mass itself eats nothing.** The inward flux\n  4πr²nv ∝ r^(3/2) → 0 at the center: the law needs no point sink at the matter, so it\n  evades ORB-10162's specific failure (central-only consumption gives the refuted\n  flux-conserving 1/r² flow). The mass *anchors* the flow; the vacuum's own strained state\n  does the consuming.\n",
+    "commit_object": "tree 682cccb1cf19c89c2c5f4371c14ed2b384d2ae8c\nparent 13866b2848fbcce9a1f1ef2d4b97051a65f7e626\nauthor orbit[gpt-6-astra] <agent@orbit.invalid> 1788662975 +0000\ncommitter orbit <orbit@orbit.local> 1788662975 +0000\n\nfeat: Migrate the wide-binary control pilot into versioned scientific r… [ORB-11378]\n\nMigrate the wide-binary control pilot into versioned scientific records\n\nPlanned-By: codex\n"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "source",
+    "availability": "available",
+    "snapshot_digest": "sha256:5aefef85ae1ba6183277a1a4a9ddbc0ca9b0ed9d2a2b79ebfee6611014c5d2ee",
+    "locator": null,
+    "media_type": "text/plain"
+  },
+  "revision_id": "sha256:7ad98a420637863abaad81acf5048c17a5b750edd42a24c0b95c62aae83629e8"
+}

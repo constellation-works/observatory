@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:principia:artifact:source%3Aorrery%3Aa1c430db54d585048ec85c4e7c47141db634f398%3Alab%2Fsims%2Flevel-core-dynamical-relaxation%2FREADME.md",
+  "aliases": [
+    "source:orrery:a1c430db54d585048ec85c4e7c47141db634f398:lab/sims/level-core-dynamical-relaxation/README.md"
+  ],
+  "activity": "active",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": null,
+    "blob_oid": null,
+    "sha256": "sha256:383087072f627fa891ed1942012c1349fb152110c1f1c195843c1370698750fd",
+    "path": "upstream-snapshot/orrery/a1c430db54d585048ec85c4e7c47141db634f398/lab/sims/level-core-dynamical-relaxation/README.md",
+    "selector": "$",
+    "historical": true,
+    "working_tree": true
+  },
+  "limitations": [
+    "Immutable archival source copy; upstream scientific ownership is unchanged."
+  ],
+  "missingness": [
+    "git-revision",
+    "owner-ingestion-git-pin",
+    "scope",
+    "upstream-canonical-record"
+  ],
+  "legacy": {
+    "source_pin": {
+      "repository": "orrery",
+      "git_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "path": "lab/sims/level-core-dynamical-relaxation/README.md",
+      "blob_oid": "b759e33abaf1698d10f2c84d2bca9969b82a6db8",
+      "sha256": "sha256:383087072f627fa891ed1942012c1349fb152110c1f1c195843c1370698750fd",
+      "bytes": 4909,
+      "commit_metadata": "a1c430db54d585048ec85c4e7c47141db634f398\n2026-09-06T02:28:14+00:00\n2026-09-06T02:28:14+00:00\nfeat: Preserve the original electron animation's continuous fold in a c… [ORB-11374]\n"
+    },
+    "text": "# Level-core extended dynamical relaxation\n\nThis apparatus advances the moving closed-system equations themselves. It does\nnot impose Bernoulli speed or a fixed-flux core boundary. A normalized Gaussian\ndraw sources the exactly comoving elliptic level, and wind enters only through\nthe upstream face. ORB-10938 extends ORB-10937's `T=60` initial-value experiment\nto `T=600`, long enough to distinguish settlement from a stalled residual or\ncontinued slow decay.\n\nRun the cataloged experiment with:\n\n```sh\nPYTHONDONTWRITEBYTECODE=1 UV_CACHE_DIR=/tmp/orbit-uv-cache-10938 uv run lab/sims/level-core-dynamical-relaxation/main.py --check-determinism\n```\n\nThe command executes the complete experiment twice, asserts byte-identical JSON\nencodings, and writes `assets/results.json` plus\n`runs/2026-08-21-extended-seed-42.json`. The prior ORB-10937 run record remains\nat `runs/2026-08-21-seed-42.json` as the finite-horizon baseline.\n\n## Numerical apparatus\n\nThe literal equations are advanced on a fixed 24-unit cube with a physical\nGaussian width of 0.75. The complete four-wind ladder uses `33^3` and `41^3`;\n`61^3` supplies a full-horizon anchor at `U/v_GP(r=5)=0.3`. A cell-centered\ndonor-cell operator supplies truncation diffusion but no physical viscosity or\nrelaxation term. SSP-RK2 uses adaptive `CFL=0.22`; density has a `1e-10`\npositivity floor. The ramped-pure-wind start raises the draw force over three\ntime units. The attractor probe evolves that start and the wind/GP blend\ntogether at `33^3`, `U/v_GP=0.3`, recording their relative velocity and density\nL2 differences throughout `T=600`.\n\nUpstream velocity and density are prescribed. The other five faces copy the\nadjacent interior value as a one-sided open treatment. The full requested\nhorizon was feasible and completed at both base rungs and the finer anchor.\n\n## Predeclared gates\n\n- G1 reports a settled/stalled/still-decaying verdict for every `(U,rung)` and\n  separate velocity/density verdicts. Settlement requires both volume-RMS\n  residuals below `2e-3` for the final 11 samples; a failing sector with late\n  log slope below `-0.002/time` is still decaying, otherwise stalled. Minimum\n  and `1.5 <= r <= 3` shell-mean density must each change by at most 1% over the\n  final window for the separate trough-saturation diagnostic to pass. G1 also\n  names cavitation separately: a cutoff contact is cavitated, while final\n  `n_min < 0.01` with log slope below `-0.002/time` is a cavitation candidate;\n  cutoff contact or adjacent-rung candidate agreement kills the excitation\n  reading. Adjacent-rung velocity/density residual slopes and the full late\n  `n_min` trajectory are recorded.\n- G2 records net six-face mass influx, integrated consumption, their ratio,\n  and its late trend for every case. Flux balance targets a ratio of one.\n- G3 admits every velocity-settled case without waiting for density. It reports\n  `|v|^2 - U^2 - 2 c^2 sigma` pointwise and in shell multipoles, along with the\n  equivalent speed residual and temporal/adjacent-rung errors.\n- G4 applies the same admission and compares direction multipoles to both the\n  boosted static GP field and ORB-10935's marched branch, then reports\n  stagnation. Vorticity is reported on every run, settled or not.\n- G5 records the late consumed-momentum integral and advective far-surface\n  flux, comparing the measured law to ORB-10937's `55.91 U^0.979` and\n  ORB-10935's `20.3 U^0.098` fits.\n- G6 advances pure wind/no core to `T=600` through the identical integrator and\n  boundary path at every executed rung/wind.\n\n## Result\n\nAll nine `(rung,wind)` runs meet the joint volume-RMS residual criterion by\n`T=600`, and the two `33^3`, `U/v_GP=0.3` starts converge to relative L2\ndifferences of 0.75% in velocity and 0.25% in density. That residual verdict is\nnot the whole story: the trough saturates only at `41^3`, `U/v_GP=1`. At\n`U/v_GP=0.3`, `n_min` remains below 0.01 and keeps an exponential cutoff-ward\ntrend on `33^3`, `41^3`, and `61^3`, so the amended G1 cavitation gate kills the\nexcitation reading. The two lower winds have a cavitation candidate only on\n`41^3` and therefore do not pass the adjacent-rung kill criterion.\n\nMass influx/consumption reaches 0.40-0.67 at the two lowest winds, 0.93-0.95 at\n`U/v_GP=0.3`, and 0.998-0.999 at the highest wind. On velocity-settled cases,\nthe converged squared Bernoulli residual exceeds its temporal/resolution error\nat both measured shells for `41^3`, `U/v_GP=0.3` and again at radius 3 on the\n`61^3` anchor, refuting the closure. The settled `41^3` consumed-momentum fit is\n`81.24 U^1.332`, rather than either prior fit. The extended Galilean null passes.\n\nThe ORB-10751 consumption function remains frozen byte-for-byte at SHA-256\n`aa1155e07536c3318c0afb0baabbbf472d66658046be4d21d816f135632c8461`.\nThe results artifact records the measured match. Theory reconciliation is left\nto Kepler; no principia files are touched.\n",
+    "commit_object": "tree 8d851030602405b11b7166108b09cf9cd5664329\nparent 148b668391f575466282eaa81aab0dc943846a87\nauthor orbit[gpt-6-astra] <agent@orbit.invalid> 1788661694 +0000\ncommitter orbit <orbit@orbit.local> 1788661694 +0000\n\nfeat: Preserve the original electron animation's continuous fold in a c… [ORB-11374]\n\nPreserve the original electron animation's continuous fold in a computed-field view\n\nPlanned-By: codex\n"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "source",
+    "availability": "available",
+    "snapshot_digest": "sha256:383087072f627fa891ed1942012c1349fb152110c1f1c195843c1370698750fd",
+    "locator": null,
+    "media_type": "text/plain"
+  },
+  "revision_id": "sha256:0a90849ad1270a6a5404093520d8cdfb46e3ec41d53981f7d53587e218759618"
+}

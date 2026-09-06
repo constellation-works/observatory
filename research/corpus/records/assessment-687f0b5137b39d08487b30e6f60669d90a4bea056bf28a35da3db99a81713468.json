@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "kind": "assessment",
+  "id": "urn:research:principia:assessment:shear-amplitude-controllable%3Alegacy-verdict",
+  "aliases": [
+    "shear-amplitude-controllable:legacy-verdict"
+  ],
+  "activity": "unknown",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "c9b26b67f260c4002319c1d9268872f2339ab69b",
+    "sha256": "sha256:e1bd24b05676d65097d91c786c4fb02d28dba5293720deb7bc96898a88e268d0",
+    "path": "theory/shear-sourced-consumption/claims.json",
+    "selector": "/claims/4",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Exact historical verdict and stated assumptions only; migration makes no new scientific inference."
+  ],
+  "missingness": [
+    "exact-evidence-owner-references",
+    "independently-verified-controls",
+    "activity",
+    "scope"
+  ],
+  "legacy": {
+    "id": "shear-amplitude-controllable",
+    "family": "gravity-as-scarcity",
+    "kind": "model-property",
+    "status": "supported",
+    "claim": "A core boundary condition selects the exterior amplitude A monotonically and stably",
+    "evidence": "ORB-10751 amplitude gate: exterior half-power amplitude rises strictly (2.4×10⁻⁴ → 2.6×10⁻²) across core flux 0.003–0.3; max initial-condition relative spread 9.6×10⁻⁷",
+    "links": [],
+    "in_doc_ledger": true
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "claim": {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:shear-amplitude-controllable",
+      "revision_id": "sha256:27c111f2b2aa00f8b2907a84d5519cf171d34dd83cbd3ac83a19a76ecfb427ea",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    "verdict": "supported",
+    "legacy_verdict": "supported",
+    "inference": "historical",
+    "basis": "legacy-report",
+    "controls": "unknown",
+    "rationale": "ORB-10751 amplitude gate: exterior half-power amplitude rises strictly (2.4×10⁻⁴ → 2.6×10⁻²) across core flux 0.003–0.3; max initial-condition relative spread 9.6×10⁻⁷",
+    "evidence": []
+  },
+  "revision_id": "sha256:687f0b5137b39d08487b30e6f60669d90a4bea056bf28a35da3db99a81713468"
+}

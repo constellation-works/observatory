@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "kind": "assessment",
+  "id": "urn:research:principia:assessment:moving-source-boost-invariant-no-dipole%3Alegacy-verdict",
+  "aliases": [
+    "moving-source-boost-invariant-no-dipole:legacy-verdict"
+  ],
+  "activity": "unknown",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "f55e1dace027658053ccc8f5b740363237c0eda4",
+    "sha256": "sha256:34d8fd1300c47a5df5ea2300abe6ba3ac4e6c29d546f03686710d88e1297d681",
+    "path": "theory/moving-source-field-consistency/claims.json",
+    "selector": "/claims/5",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Exact historical verdict and stated assumptions only; migration makes no new scientific inference."
+  ],
+  "missingness": [
+    "exact-evidence-owner-references",
+    "independently-verified-controls",
+    "activity",
+    "scope"
+  ],
+  "legacy": {
+    "id": "moving-source-boost-invariant-no-dipole",
+    "family": "retarded-scarcity-wake",
+    "kind": "nature",
+    "status": "conjecture",
+    "claim": "In a specified boost-invariant control theory, uniform motion produces no first-order wake; acceleration or explicit boost violation is required for an \\(O(\\beta_g)\\) dipole",
+    "evidence": "Sourced 2026-08-28 in [moving-source-gravity-bounds](../../studies/moving-source-gravity-bounds.md) § aberration cancellation: Heaviside/Liénard–Wiechert electromagnetism and Carlip's general-relativistic calculation calibrate the absence of a first-order uniform-motion wake in those specified equations. For the minimal class this is also a theorem of the explicit equation ([Branch C](branch-c.md) § The control, eq. 2, even in \\(\\xi_\\parallel\\) at every order). Kept at conjecture because the claim's general requirement that acceleration or explicit boost violation is necessary overreaches those examples: the sourced result is a calibration, not a verdict on every preferred-medium equation",
+    "links": [
+      "../../studies/moving-source-gravity-bounds.md",
+      "branch-c.md"
+    ],
+    "in_doc_ledger": true
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "claim": {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:moving-source-boost-invariant-no-dipole",
+      "revision_id": "sha256:7a429f50c81cf35095811f6bee98bcfc3c3e136735b3b649597a4cf6f256475c",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    "verdict": "untested",
+    "legacy_verdict": "conjecture",
+    "inference": "historical",
+    "basis": "legacy-report",
+    "controls": "unknown",
+    "rationale": "Sourced 2026-08-28 in [moving-source-gravity-bounds](../../studies/moving-source-gravity-bounds.md) § aberration cancellation: Heaviside/Liénard–Wiechert electromagnetism and Carlip's general-relativistic calculation calibrate the absence of a first-order uniform-motion wake in those specified equations. For the minimal class this is also a theorem of the explicit equation ([Branch C](branch-c.md) § The control, eq. 2, even in \\(\\xi_\\parallel\\) at every order). Kept at conjecture because the claim's general requirement that acceleration or explicit boost violation is necessary overreaches those examples: the sourced result is a calibration, not a verdict on every preferred-medium equation",
+    "evidence": []
+  },
+  "revision_id": "sha256:e92257b6e0cc09aab5cc8fa0529978d12a2b626aa3f051e2d786c9cf4bb3dd34"
+}

@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "kind": "assessment",
+  "id": "urn:research:principia:assessment:shear-level-matching-amplitude%3Alegacy-verdict",
+  "aliases": [
+    "shear-level-matching-amplitude:legacy-verdict"
+  ],
+  "activity": "unknown",
+  "scope": "derivation",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "c9b26b67f260c4002319c1d9268872f2339ab69b",
+    "sha256": "sha256:e1bd24b05676d65097d91c786c4fb02d28dba5293720deb7bc96898a88e268d0",
+    "path": "theory/shear-sourced-consumption/claims.json",
+    "selector": "/claims/5",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Exact historical verdict and stated assumptions only; migration makes no new scientific inference."
+  ],
+  "missingness": [
+    "exact-evidence-owner-references",
+    "independently-verified-controls",
+    "activity"
+  ],
+  "legacy": {
+    "id": "shear-level-matching-amplitude",
+    "family": "gravity-as-scarcity",
+    "kind": "derived",
+    "status": "supported",
+    "claim": "A mass of energy E imposes specifically A = √(2GM) via its boundary condition",
+    "evidence": "Controllability measured (row above); identification closed analytically (§ the closure) and **measured as a lattice attractor: ORB-10932 level gate passed** — A vs c²σ_s·r_s exponent 0.5000000000000002 ± 7.5×10⁻¹⁶ (regression SE) across 3 decades of mass, max \\|A²/(2c²σ_s·r_s) − 1\\| = 4.7×10⁻³, rest/perturbed amplitude spread 2.4×10⁻⁹ ([level-coupled-shear-lattice](../../../orrery/lab/sims/level-coupled-shear-lattice/), orrery `82b885c`)",
+    "links": [
+      "../../../orrery/lab/sims/level-coupled-shear-lattice/"
+    ],
+    "in_doc_ledger": true
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "claim": {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:shear-level-matching-amplitude",
+      "revision_id": "sha256:2bbbe1901fabbe412abd35f1983cccd6895c41c161155dd840470a7c438c444b",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    "verdict": "supported",
+    "legacy_verdict": "supported",
+    "inference": "historical",
+    "basis": "legacy-report",
+    "controls": "unknown",
+    "rationale": "Controllability measured (row above); identification closed analytically (§ the closure) and **measured as a lattice attractor: ORB-10932 level gate passed** — A vs c²σ_s·r_s exponent 0.5000000000000002 ± 7.5×10⁻¹⁶ (regression SE) across 3 decades of mass, max \\|A²/(2c²σ_s·r_s) − 1\\| = 4.7×10⁻³, rest/perturbed amplitude spread 2.4×10⁻⁹ ([level-coupled-shear-lattice](../../../orrery/lab/sims/level-coupled-shear-lattice/), orrery `82b885c`)",
+    "evidence": []
+  },
+  "revision_id": "sha256:94530666a2d624d1aea7a429a2a30dd863aa7112ed5850bb6f39ca01c2fea33f"
+}

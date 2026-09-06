@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "kind": "claim",
+  "id": "urn:research:principia:claim:swirl-far-zone-self-sustaining",
+  "aliases": [
+    "swirl-far-zone-self-sustaining"
+  ],
+  "activity": "resolved",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "517472769edf9f0ecca05be56a593c9eb7966358",
+    "sha256": "sha256:5f3a6781773b00af68cd17925543b5f4ae589a8188a4cae350ae1552a3d25cb3",
+    "path": "theory/swirl-photon/claims.json",
+    "selector": "/claims/1",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Exact historical verdict and stated assumptions only; migration makes no new scientific inference."
+  ],
+  "missingness": [
+    "scope"
+  ],
+  "legacy": {
+    "id": "swirl-far-zone-self-sustaining",
+    "family": "swirl-photon",
+    "kind": "nature",
+    "status": "supported",
+    "claim": "The detached swirl is self-sustaining in the far zone (E and B regenerating each other, carrying energy, momentum, angular momentum)",
+    "evidence": "the standard source-free Maxwell radiation solution — concretely, the 1/r acceleration term [swirl-ball](../../../orrery/lab/sims/swirl-ball/) computes exactly and renders detaching from the bound field. **Audit 2026-08-20:** [swirl-ball-far-field](../../../orrery/lab/sims/swirl-ball-far-field/) is illustration only, not the previously claimed \"free wave-equation solution\" — its rings are spawned at the emitter and expanded kinematically, with their count set by the emission-density slider, so any apparent discreteness or pocket structure is put in by the renderer, not emergent. The source-free-solution citation belongs in the same `../studies/` note as the antibunching row",
+    "links": [
+      "../../../orrery/lab/sims/swirl-ball/",
+      "../../../orrery/lab/sims/swirl-ball-far-field/"
+    ],
+    "in_doc_ledger": true
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "claim",
+    "statement": "The detached swirl is self-sustaining in the far zone (E and B regenerating each other, carrying energy, momentum, angular momentum)",
+    "domain": "nature"
+  },
+  "revision_id": "sha256:2023d60d8b83e17b2e0db5404286e82fd89a4ef13f62616f6050392eb22e1c39"
+}

@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Atheory%2Fmoving-sources-in-the-closed-system%2FREADME.md",
+  "aliases": [
+    "source:principia:4e3b02c59b694d85016915177ef1ae157895ed7b:theory/moving-sources-in-the-closed-system/README.md"
+  ],
+  "activity": "active",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "b78c85e9a0656afd9fa6f5e4296615e10e11c4e0",
+    "sha256": "sha256:7652cbf45696cb33d7d05596ba885b3bc7bed24a0b9296e7b75184612d09872d",
+    "path": "theory/moving-sources-in-the-closed-system/README.md",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Immutable archival source copy; upstream scientific ownership is unchanged."
+  ],
+  "missingness": [
+    "scope"
+  ],
+  "legacy": {
+    "source_pin": {
+      "repository": "principia",
+      "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "path": "theory/moving-sources-in-the-closed-system/README.md",
+      "blob_oid": "b78c85e9a0656afd9fa6f5e4296615e10e11c4e0",
+      "sha256": "sha256:7652cbf45696cb33d7d05596ba885b3bc7bed24a0b9296e7b75184612d09872d",
+      "bytes": 7076,
+      "commit_metadata": "4e3b02c59b694d85016915177ef1ae157895ed7b\n2026-09-06T02:49:35+00:00\n2026-09-06T02:49:35+00:00\nfeat: Migrate the wide-binary control pilot into versioned scientific r… [ORB-11378]\n"
+    },
+    "text": "---\ntitle: \"Moving sources in the closed system: the substrate wind, exactly\"\nstatus: retired\nfamilies: [gravity-as-scarcity]\nalmanac: 15-discussions/26-08/from-galactic-motion-to-the-moving-gravity-medium-problem.md\ncreated: 2026-08-21\nupdated: 2026-09-04\n---\n\n# Moving sources in the closed system\n\n**Retired by Daniel — 2026-09-04.** This document is an archival part of the\n`gravity-as-scarcity` family. No live front or further repair is authorized.\nSee the [family retirement decision](../gravity-as-scarcity/retirement.md).\nIndividual evidence statuses remain unchanged: retirement is a research decision,\nnot a claim that every conditional derivation is false. All verdicts and proposed\nnext steps below are historical and do not authorize continuation.\n\n\n**The idea (kepler, 2026-08-21 — the front that opens once the closure is fully measured).**\nWith ORB-10751, ORB-10932, ORB-10755, and ORB-10934 all adjudicated, the closed system\n{draw-sourced counting level σ = GM/c²r, rolling rule for space a = c²∇σ, coefficient-one\nshear-consumption law} is a measured structure — but every measurement so far is **static\nand radial**. The oldest killer of substrate theories waits exactly one step further: a\nsource *moving through* the substrate. The\n[retarded-scarcity-wake](../retarded-scarcity-wake/) family already mapped this territory\nfor a *postulated* retarded potential and found that nothing survives except an explicit\nsubstrate equation with derived dynamics\n([moving-source-field-consistency](../moving-source-field-consistency/): retardation talk is\nnot a model; Branch C — matter as excitations of the medium — is the only live reading).\nThe closed system **is** such an explicit substrate equation, and its uniform-motion\nproblem turns out to be partly solvable in closed form. Two exact results fall out, one\nreassuring and one sharp: the wind is invisible in the *speed* field (what that means\nfor clocks is a relational question — Theorem 1, consequence 2), and the flow *pattern* around\na moving mass carries a wake at first order in the wind that general relativity — for\nwhich uniform motion is gauge — has no mass-frame counterpart of: a measurable\ndirection-field departure, with a new named debt (consumed momentum) attached.\n\n**Current verdict:** the wind-tunnel fixture ran (ORB-10935, faraday, 2026-08-21 — §\nadjudication below) and split the front cleanly. The Galilean null and the Bernoulli\nbranch's lattice realization are verified at machine precision, the measured wake differs\ngrossly from the Galilean river comparator U + v_GP (0.46–0.73 rad RMS), and the Bernoulli speed law's\nno-stagnation-point corollary gives a sharp qualitative discriminator. But the apparatus's\npredeclared steady-existence measurable returned a real wrinkle: **no globally smooth\nsteady single-valued flow branch exists at any swept wind strength** (ladder-stable\ncaustics). Because the apparatus *imposes* Bernoulli (a Hamilton–Jacobi march of the speed\nlaw) rather than letting the dynamics discover it, the theorem rows sit at `mixed`, not\n`supported`: the conditional algebra is machine-verified, and its premise — that the\nmoving system reaches a steady irrotational state — is now the front's live question.\n\nThe dynamical-relaxation fixture then ran (ORB-10937, faraday, 2026-08-21 — second §\nadjudication below) and returned **the third outcome** — the one the binary framing\nmissed: neither a steady state nor sustained unsteadiness, but *slow relaxation still in\nprogress at the feasible horizon*. The velocity sector settles (its residual meets the\npredeclared criterion at every wind on the finest rung); the density sector does not —\nthe consumption trough around the core is still deepening at T = 60, decaying at a\nU-independent rate whose e-folding time (~65) is comparable to the whole run. No steady\nsample was admitted, so the Theorem 1 kill remains undelivered. One constructed-branch\nresult did *not* survive contact with the dynamics: the realized consumed-momentum drag\nis **linear in the wind** (|∫s·v_x dV| ≈ 56·U^0.98, drag sign at every U), not the\nbranch's near-U-independent 20.3·U^0.098. The extended-horizon fixture (filed at this\nadjudication) inherits the kill next.\n\nA requested outside critique was then arbitrated (grok, Daniel, 2026-08-21 — § frame\ncritique below) and re-aimed the confrontation: mass-frame GR is exactly Schwarzschild\n(uniform motion is gauge), so the boosted-GP comparator was a Galilean coordinate\npicture, not a GR observable. Theorem 2 is restated with corrected order counting — the\nwake/g₀ᵢ direction sector carries the first-order-in-U physics, while the speed field's\nU² term is second-order and its observability is an open relational question. The clock\n\"cancellation\" is retracted to its common-mode core, the linear drag re-read as a\nfixed-strength sink (with a posture-3 timescale that is phenomenologically silent under\nany cosmological substrate inertia), cavitation of the trough named a live branch kill\n(predeclared into ORB-10938 by amendment), a photon-sector modulation *scale estimate*\nfiled (ORB-10939), and one new named obligation recorded: the **PPN reduction of the\neffective metric** — raw U/c is not comparable to α₁/α₂.\n\nThe extended horizon then adjudicated (ORB-10938, faraday, 2026-08-21 — third §\nadjudication below), and the premise question is answered — **against the theorems**. At\nT = 600 every (U, rung) case meets the joint residual criterion: the moving closed system\n*does* settle. But the settled flow is **not the Bernoulli flow**: on converged\nvelocity-settled samples the squared residual |v|² − U² − 2c²σ has relative RMS 0.12\n(r = 3) and 0.45 (r = 5) at 41³, U/v_GP = 0.3 — orders beyond apparatus error, with the\n61³ anchor independently beyond error — and the settled state carries finite, rung-stable\nvorticity. **Theorem 1's closure is refuted as a description of the realized system**\n(the conditional algebra stands; the dynamics decline its irrotational premise), and the\nclock corollary falls with its premise. The realized direction field lands near\nORB-10935's marched branch (multipole differences 0.02–0.18) and far from boosted GP\n(0.30–0.37), with no stagnation point anywhere. Two further teeth: the **cavitation kill\nfired at U/v_GP = 0.3** — the trough's minimum density trends to the positivity cutoff\nwith candidate agreement across 33³→41³→61³, a hole in the medium around a moving mass,\nvoiding the excitation reading there (a finite floor survives only at U/v_GP = 1) — and\nthe drag law moved again at settlement: |∫s·v_x dV| = 81.2·U^1.33, superlinear,\noverturning the transient linear fit and the fixed-strength-sink slogan with it.\n\n## Contents\n\n- [Evidence ledger](evidence-ledger.md)\n- [Related](related.md)\n- [Open questions](open-questions.md)\n- [Setup](setup.md)\n- [Theorem 1](theorem-1.md)\n- [Theorem 2](theorem-2.md)\n- [Consumed momentum](consumed-momentum.md)\n- [What sets U](what-sets-u.md)\n- [The program](program.md)\n",
+    "commit_object": "tree 682cccb1cf19c89c2c5f4371c14ed2b384d2ae8c\nparent 13866b2848fbcce9a1f1ef2d4b97051a65f7e626\nauthor orbit[gpt-6-astra] <agent@orbit.invalid> 1788662975 +0000\ncommitter orbit <orbit@orbit.local> 1788662975 +0000\n\nfeat: Migrate the wide-binary control pilot into versioned scientific r… [ORB-11378]\n\nMigrate the wide-binary control pilot into versioned scientific records\n\nPlanned-By: codex\n"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "source",
+    "availability": "available",
+    "snapshot_digest": "sha256:7652cbf45696cb33d7d05596ba885b3bc7bed24a0b9296e7b75184612d09872d",
+    "locator": null,
+    "media_type": "text/plain"
+  },
+  "revision_id": "sha256:c11f11428a5c9a39949ceb2fd811a424ea24a237119780001c48a986e351dff0"
+}

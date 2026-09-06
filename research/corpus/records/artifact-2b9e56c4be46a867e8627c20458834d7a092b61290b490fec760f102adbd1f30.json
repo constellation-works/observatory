@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Astudies%2Fmilky-way-rotation-curve.md",
+  "aliases": [
+    "source:principia:4e3b02c59b694d85016915177ef1ae157895ed7b:studies/milky-way-rotation-curve.md"
+  ],
+  "activity": "active",
+  "scope": "literature",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "08629c958cc2822b8ae3fe76c6259808c06dc318",
+    "sha256": "sha256:a28f826d9269fe881faa6ab7b16804458e8292c9575483c89573c22b33849134",
+    "path": "studies/milky-way-rotation-curve.md",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Immutable archival source copy; upstream scientific ownership is unchanged."
+  ],
+  "missingness": [],
+  "legacy": {
+    "source_pin": {
+      "repository": "principia",
+      "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "path": "studies/milky-way-rotation-curve.md",
+      "blob_oid": "08629c958cc2822b8ae3fe76c6259808c06dc318",
+      "sha256": "sha256:a28f826d9269fe881faa6ab7b16804458e8292c9575483c89573c22b33849134",
+      "bytes": 4785,
+      "commit_metadata": "4e3b02c59b694d85016915177ef1ae157895ed7b\n2026-09-06T02:49:35+00:00\n2026-09-06T02:49:35+00:00\nfeat: Migrate the wide-binary control pilot into versioned scientific r… [ORB-11378]\n"
+    },
+    "text": "---\ntitle: \"Measured Milky Way rotation curve and the MOND acceleration scale\"\nstatus: active\ncreated: 2026-07-10\nupdated: 2026-07-10\n---\n\n# Measured Milky Way rotation curve\n\nThe established-physics facts the `gravity-as-scarcity` rotation-curve claim is tested against:\nwhat the Milky Way's circular-velocity curve actually looks like, and the acceleration scale at\nwhich the mass discrepancy sets in.\n\n## The measured curve\n\n| Fact | Value | Source |\n|---|---|---|\n| Circular velocity at the Sun's radius R₀ | v_c(R₀) = 229.0 ± 0.2 km/s (statistical); ~2–5% systematic | Eilers, Hogg, Rix & Ness 2019 |\n| Slope of the curve beyond the inner disk | dv_c/dR = **−1.7 ± 0.1 km/s/kpc** — gently *declining*, not perfectly flat | Eilers et al. 2019 |\n| Range measured | 5 ≤ R ≤ 25 kpc (inner 5 kpc excluded — the bar breaks axisymmetry) | Eilers et al. 2019 |\n| Method | Jeans equation in an axisymmetric potential, ≳23,000 luminous red-giant stars (APOGEE spectra + WISE/2MASS/Gaia photometry, spectrophotometric parallaxes) | Eilers et al. 2019 |\n| Implied dark-halo mass within the virial radius | (7.25 ± 0.26) × 10¹¹ M☉ | Eilers et al. 2019 |\n\n**Citation.** A.-C. Eilers, D. W. Hogg, H.-W. Rix, M. K. Ness, \"The Circular Velocity Curve of the\nMilky Way from 5 to 25 kpc,\" *Astrophysical Journal* **871**, 120 (2019).\nDOI [10.3847/1538-4357/aaf648](https://doi.org/10.3847/1538-4357/aaf648); arXiv:1810.09466;\nADS bibcode 2019ApJ...871..120E. *(Verified against the ADS record and the arXiv abstract on\n2026-07-10.)*\n\nThe load-bearing subtlety for our ledger: the real curve is **not flat** — it declines gently\n(−1.7 km/s/kpc). \"Flat rotation curve\" is the textbook shorthand for \"far above the Keplerian\nv ∝ R^(−1/2) a pure baryonic disk would give,\" not literal constancy. A model that produces a\nstill-declining curve in the outer disk is not automatically wrong; it must be compared to the\n*measured* slope, not to a flat line.\n\n## The MOND acceleration scale\n\n| Fact | Value | Source |\n|---|---|---|\n| Milgrom's acceleration constant a₀ | a₀ ≈ 1.2 × 10⁻¹⁰ m/s² (= 1.2 × 10⁻⁸ cm/s²), fitted from spiral rotation curves | M. Milgrom 1983 |\n\n**Citation.** M. Milgrom, \"A modification of the Newtonian dynamics as a possible alternative to\nthe hidden mass hypothesis,\" *Astrophysical Journal* **270**, 365 (1983) — the first of three\nconsecutive 1983 papers (ApJ **270**, 365 / 371 / 384) introducing MOND. The a₀ ≈ 1.2 × 10⁻¹⁰\nm/s² value is the canonical fit from spiral-galaxy rotation curves. *(a₀ value verified 2026-07-10;\nrecorded as the standard fitted constant.)*\n\nBelow a₀ the observed accelerations exceed the Newtonian-baryonic prediction — the mass\ndiscrepancy. Any modified-gravity account of rotation curves must reproduce this scale, not just\nthe shape. This is the quantitative bar behind the discussion's recurring \"right shape, wrong\nmagnitude\" verdict: the scarcity headroom effect produced a ~10–25% boost where galaxies need\n~2×.\n\n## The dataset our sim actually fit (ORB-10075 lineage)\n\nThe Orrery experiment [scarcity-rotation-curve-fit](../../orrery/lab/sims/scarcity-rotation-curve-fit/)\ndoes **not** fit the Eilers curve directly; it fits a Gaia DR3 median-`v_φ` curve that **tycho**\nderived and delivered in ORB-10075. Lineage, from the delivered sidecar\n(`astrolabe/data/processed/derived/mw_rotation_curve.json`):\n\n- **Product:** `derived/mw_rotation_curve.parquet` — 30 rows, columns `R_kpc, v_c_kms, v_c_err_kms,\n  n_stars`; 4.0–25.0 kpc in 0.5 kpc bins, `|z| < 0.5 kpc`, min 30 stars per bin.\n- **Three-catalog Gaia lineage:** `mw_disk_gaia`, `mw_disk_outer_gaia`, `mw_disk_anticenter_gaia`\n  (deduplicated on `source_id`); Bailer-Jones photogeometric distances (`r_med_photogeo`) carry\n  the far bins; fetched 2026-07-10.\n- **Galactocentric frame:** R₀ = 8.122 kpc, z_sun = 20.8 pc, v_sun = (12.9, 245.6, 7.78) km/s.\n- **Known bias — the reason the fit carries a drift nuisance:** the curve is **median `v_φ`, NOT\n  asymmetric-drift corrected**, so it is biased *low* by ~5–15 km/s for a mixed-population sample\n  (stated in the sidecar `method` field). Both the scarcity and Newtonian fits absorb this with the\n  same bounded constant asymmetric-drift term; the sim's pinned-lower-bound drift and its coherent\n  held-out underprediction (see the theory ledger) are downstream of this uncorrected bias — a\n  constant offset cannot capture a drift that varies with radius.\n\n## What hangs on this\n\n- [theory/gravity-as-scarcity](../theory/gravity-as-scarcity/) — the rotation-curve ledger row\n  cites this note for (a) the measured slope the model is judged against, (b) the a₀ magnitude bar,\n  and (c) the dataset provenance and its asymmetric-drift bias.\n",
+    "commit_object": "tree 682cccb1cf19c89c2c5f4371c14ed2b384d2ae8c\nparent 13866b2848fbcce9a1f1ef2d4b97051a65f7e626\nauthor orbit[gpt-6-astra] <agent@orbit.invalid> 1788662975 +0000\ncommitter orbit <orbit@orbit.local> 1788662975 +0000\n\nfeat: Migrate the wide-binary control pilot into versioned scientific r… [ORB-11378]\n\nMigrate the wide-binary control pilot into versioned scientific records\n\nPlanned-By: codex\n"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "source",
+    "availability": "available",
+    "snapshot_digest": "sha256:a28f826d9269fe881faa6ab7b16804458e8292c9575483c89573c22b33849134",
+    "locator": null,
+    "media_type": "text/plain"
+  },
+  "revision_id": "sha256:2b9e56c4be46a867e8627c20458834d7a092b61290b490fec760f102adbd1f30"
+}

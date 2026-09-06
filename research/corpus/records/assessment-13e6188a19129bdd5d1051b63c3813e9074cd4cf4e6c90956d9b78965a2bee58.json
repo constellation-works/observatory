@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "kind": "assessment",
+  "id": "urn:research:principia:assessment:two-substance-kill-condition-b%3Alegacy-verdict",
+  "aliases": [
+    "two-substance-kill-condition-b:legacy-verdict"
+  ],
+  "activity": "unknown",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "94e76368a84e00ed742153d77b3d25dd5962c664",
+    "sha256": "sha256:c95d48cf673efa43d6d77005c73cadea42fac1ff00da556a7b7fd260df14f9a6",
+    "path": "theory/two-substance-vortex-vacuum/claims.json",
+    "selector": "/claims/8",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Exact historical verdict and stated assumptions only; migration makes no new scientific inference."
+  ],
+  "missingness": [
+    "exact-evidence-owner-references",
+    "independently-verified-controls",
+    "activity",
+    "scope"
+  ],
+  "legacy": {
+    "id": "two-substance-kill-condition-b",
+    "family": "two-substance-vortex-vacuum",
+    "kind": "nature",
+    "status": "untested",
+    "claim": "**Kill condition B:** the coupled two-substance vacuum supports a single Maxwell photon sector (one speed, two transverse polarizations, no birefringence, no detectable frame, γ = 1 via flow drag)",
+    "evidence": "Stated as the theorem owed, with the Volovik Fermi-point theorem as the standard of proof ([studies/superfluid-vacuum-and-emergent-gauge-fields](../../studies/superfluid-vacuum-and-emergent-gauge-fields.md)). ORB-11219: the existing packet Hamiltonian is not a candidate — its linearized symbol is two longitudinal sounds plus frozen transverse currents; equal c₊=c₋ degenerates those cones without producing Maxwell polarizations ([packet-hamiltonian-linearization](packet-hamiltonian-linearization.md), [studies/maxwell-mode-content-and-two-fluid-acoustics](../../studies/maxwell-mode-content-and-two-fluid-acoustics.md)). The analytic attempt ([photon-mode-obstruction](photon-mode-obstruction.md)) also excludes speed matching and Josephson locking as sufficient Maxwell mechanisms in a regular isotropic phase-only action; locking attaches walls to relative-winding charge ([studies/two-component-phase-locking](../../studies/two-component-phase-locking.md)). These are failures of the stated scalar-density and phase-only apparatuses, not a no-go for every two-component order-parameter theory. The nature claim stays untested; additional gauge structure is outside the calculation. Binding measurements if a later sector fails: birefringence ξ < 1 × 10⁻¹⁶ (GRB 140206A), resonator anisotropy 10⁻¹⁷–10⁻¹⁸ per rest frame (×2 frames + relative flow), GRB dispersion, and the inherited ORB-10156 γ = 1 floor ([studies/lorentz-violation-bounds](../../studies/lorentz-violation-bounds.md))",
+    "links": [
+      "../../studies/superfluid-vacuum-and-emergent-gauge-fields.md",
+      "../../studies/lorentz-violation-bounds.md",
+      "../../studies/maxwell-mode-content-and-two-fluid-acoustics.md",
+      "photon-mode-obstruction.md",
+      "../../studies/two-component-phase-locking.md",
+      "packet-hamiltonian-linearization.md"
+    ],
+    "in_doc_ledger": true,
+    "tags": [
+      "existence"
+    ],
+    "kill": "Birefringence, two sound speeds, resonator anisotropy, or γ ≠ 1. Binding walls already measured if it fails."
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "claim": {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:two-substance-kill-condition-b",
+      "revision_id": "sha256:d0724aa68307f2ae822bf2282f0bb2d09aba464ab0cdb99da35c6b731c44e28e",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    "verdict": "untested",
+    "legacy_verdict": "untested",
+    "inference": "historical",
+    "basis": "legacy-report",
+    "controls": "unknown",
+    "rationale": "Stated as the theorem owed, with the Volovik Fermi-point theorem as the standard of proof ([studies/superfluid-vacuum-and-emergent-gauge-fields](../../studies/superfluid-vacuum-and-emergent-gauge-fields.md)). ORB-11219: the existing packet Hamiltonian is not a candidate — its linearized symbol is two longitudinal sounds plus frozen transverse currents; equal c₊=c₋ degenerates those cones without producing Maxwell polarizations ([packet-hamiltonian-linearization](packet-hamiltonian-linearization.md), [studies/maxwell-mode-content-and-two-fluid-acoustics](../../studies/maxwell-mode-content-and-two-fluid-acoustics.md)). The analytic attempt ([photon-mode-obstruction](photon-mode-obstruction.md)) also excludes speed matching and Josephson locking as sufficient Maxwell mechanisms in a regular isotropic phase-only action; locking attaches walls to relative-winding charge ([studies/two-component-phase-locking](../../studies/two-component-phase-locking.md)). These are failures of the stated scalar-density and phase-only apparatuses, not a no-go for every two-component order-parameter theory. The nature claim stays untested; additional gauge structure is outside the calculation. Binding measurements if a later sector fails: birefringence ξ < 1 × 10⁻¹⁶ (GRB 140206A), resonator anisotropy 10⁻¹⁷–10⁻¹⁸ per rest frame (×2 frames + relative flow), GRB dispersion, and the inherited ORB-10156 γ = 1 floor ([studies/lorentz-violation-bounds](../../studies/lorentz-violation-bounds.md))",
+    "evidence": []
+  },
+  "revision_id": "sha256:13e6188a19129bdd5d1051b63c3813e9074cd4cf4e6c90956d9b78965a2bee58"
+}

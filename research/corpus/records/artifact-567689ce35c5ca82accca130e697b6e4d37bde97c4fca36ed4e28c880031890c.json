@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Atheory%2Fmoving-source-field-consistency%2Fopen-questions.md",
+  "aliases": [
+    "source:principia:4e3b02c59b694d85016915177ef1ae157895ed7b:theory/moving-source-field-consistency/open-questions.md"
+  ],
+  "activity": "active",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "bbf6170fa80a22b04557f60ee8ec4d262fe6d92c",
+    "sha256": "sha256:edcdf8db19ddb7f093b49c406d52b67f4dfaf616070174b5316f2c31dee6186e",
+    "path": "theory/moving-source-field-consistency/open-questions.md",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Immutable archival source copy; upstream scientific ownership is unchanged."
+  ],
+  "missingness": [
+    "scope"
+  ],
+  "legacy": {
+    "source_pin": {
+      "repository": "principia",
+      "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "path": "theory/moving-source-field-consistency/open-questions.md",
+      "blob_oid": "bbf6170fa80a22b04557f60ee8ec4d262fe6d92c",
+      "sha256": "sha256:edcdf8db19ddb7f093b49c406d52b67f4dfaf616070174b5316f2c31dee6186e",
+      "bytes": 2905,
+      "commit_metadata": "4e3b02c59b694d85016915177ef1ae157895ed7b\n2026-09-06T02:49:35+00:00\n2026-09-06T02:49:35+00:00\nfeat: Migrate the wide-binary control pilot into versioned scientific r… [ORB-11378]\n"
+    },
+    "text": "## Open questions\n\nPruned 2026-09-04 (ORB-11175) when [Branch C](branch-c.md) closed the family's last live front.\nItems retired by the closure are recorded below the line so the pruning is auditable.\n\n- Catalog the analytic checks as an Orrery fixture so the `untested` derivation rows — the\n  Branch A negative controls and the Branch C solutions — can move to `supported` under the\n  evidence-ledger contract. The Branch C fixture is named with predeclared gates in\n  [Branch C](branch-c.md) § Follow-on fixture; nothing in the closure waits on it.\n- Decide whether the parent's \\(\\mathbf{a}=-\\nabla\\Phi\\) or \\(\\mathbf{a}_{\\rm ret}\\) is the intended\n  Branch-A rule, and record the choice — the two differ by 2× in the only predeclared observable.\n  This matters only to the negative-control fixture's predeclaration.\n- Two channels that would tighten the Branch C ceiling by orders are recorded as\n  `conjecture — to verify` and not used: a neutron star's binding fraction turning the\n  self-acceleration into a pulsar period-derivative signal (the channel behind the sourced\n  \\(\\alpha_3\\) bound), and the same dissipation entering binary orbital decay at\n  \\(\\dot E/E\\sim\\Gamma v^2/c^2\\). Sourcing either is a `studies/` job, not a theory debt.\n- The disk-lopsidedness statistics note this document demanded is still not in `studies/`; the\n  50–100× comparison row stays `conjecture — to verify`. It no longer gates anything in this family.\n\n---\n\nRetired by the closure (2026-09-04):\n\n- ~~The moving-source `studies/` note~~ — landed 2026-08-28 as\n  [moving-source-gravity-bounds](../../studies/moving-source-gravity-bounds.md); the aberration\n  and Cherenkov rows moved to `supported`.\n- ~~Derive \\(A_1=F(\\epsilon_{\\rm boost},\\beta_g,\\rho,\\text{tracer coupling})\\) for a concrete Branch C\n  model~~ — done: [Branch C](branch-c.md) eq. 5, \\(A_1=\\beta_g r/2\\ell_\\Gamma+\\lvert\\tau_s\\rvert w/r\\),\n  concentration-independent, tracer coupling through the potential only.\n- ~~Quantify the sensitivity of existing lopsidedness catalogs to a declared preferred-axis\n  signal~~ — moot: the surviving amplitude is at or below the toy scale.\n- ~~Does the substrate comove with the Hubble flow?~~ — moot for this family: the closure needs\n  only that the Sun and a galaxy move relative to \\(U\\) at comparable speeds, which every answer\n  short of a \\(U\\) comoving with the Sun gives. The established physics stays in\n  [cosmological-expansion-and-bound-systems](../../studies/cosmological-expansion-and-bound-systems.md).\n- ~~Derive the vertical response to the perpendicular component of the dipole~~ — moot; the\n  minimal equation's perpendicular forcing is a \\(1/R\\) midplane vertical acceleration (bowl-like),\n  at amplitudes the ephemeris floor excludes.\n- ~~Obtain a structure-formation baseline for the peculiar-velocity/asymmetry-axis correlation~~\n  — moot for this family.\n",
+    "commit_object": "tree 682cccb1cf19c89c2c5f4371c14ed2b384d2ae8c\nparent 13866b2848fbcce9a1f1ef2d4b97051a65f7e626\nauthor orbit[gpt-6-astra] <agent@orbit.invalid> 1788662975 +0000\ncommitter orbit <orbit@orbit.local> 1788662975 +0000\n\nfeat: Migrate the wide-binary control pilot into versioned scientific r… [ORB-11378]\n\nMigrate the wide-binary control pilot into versioned scientific records\n\nPlanned-By: codex\n"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "source",
+    "availability": "available",
+    "snapshot_digest": "sha256:edcdf8db19ddb7f093b49c406d52b67f4dfaf616070174b5316f2c31dee6186e",
+    "locator": null,
+    "media_type": "text/plain"
+  },
+  "revision_id": "sha256:567689ce35c5ca82accca130e697b6e4d37bde97c4fca36ed4e28c880031890c"
+}

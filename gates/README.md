@@ -1,5 +1,8 @@
 # gates/
 
+The [owner records](../research/README.md) generate/check these scientific views.
+Append native owner revisions and project them; do not edit the views independently.
+
 One JSON card per owed object. New theory work starts here, not as a new
 paragraph and not as a new sim.
 

@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "kind": "assessment",
+  "id": "urn:research:principia:assessment:scarcity-excitation-reading-only%3Alegacy-verdict",
+  "aliases": [
+    "scarcity-excitation-reading-only:legacy-verdict"
+  ],
+  "activity": "unknown",
+  "scope": "derivation",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "b5f58c64f4c6bf9d7d7f67c826f5d2dd7c9cb64f",
+    "sha256": "sha256:996b059ca4b45cee6dd42a503594508ebb8d6d13211ad1104df3754b116d5976",
+    "path": "theory/gravity-as-scarcity/claims.json",
+    "selector": "/claims/15",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Exact historical verdict and stated assumptions only; migration makes no new scientific inference."
+  ],
+  "missingness": [
+    "exact-evidence-owner-references",
+    "independently-verified-controls",
+    "activity"
+  ],
+  "legacy": {
+    "id": "scarcity-excitation-reading-only",
+    "family": "gravity-as-scarcity",
+    "kind": "derived",
+    "status": "supported",
+    "claim": "Matter coupling: only the excitation (analog-gravity) reading lets the river buy time dilation while the lattice ontology does work",
+    "evidence": "**Derived by elimination (ORB-10159, §(c)):** the rules as stated make matter an external tracer reading ∇σ — a tracer inherits no SR-in-the-flowing-frame, so the river buys it no dilation (the drag objection is fatal: no coupling constant exists to carry it). The deflationary reading is exactly GR in GP coordinates — consistent, ontology idle (Hamilton & Lisle's own caution: nothing measurable flows). The excitation reading — matter as waves *of* the lattice, **Unruh 1981 acoustic-metric family, riding the GP river** — makes carriage constitutive with no coupling constant, and is the only reading delivering the clock sector with the ontology live. Price: excitation dynamics with one universal local speed is new structure the rules don't yet contain ([studies/river-model-and-analog-gravity](../../studies/river-model-and-analog-gravity.md)). **Viability caveat (ORB-10938, 2026-08-21):** the elimination argument stands, but the reading acquired a measured wound — the settled moving closed system cavitates at U/v_GP = 0.3 (ladder-confirmed cutoff-ward trough), and an excitation has no medium inside a hole; see [moving-sources-in-the-closed-system](../moving-sources-in-the-closed-system/) cavitation row",
+    "links": [
+      "../../studies/river-model-and-analog-gravity.md",
+      "../moving-sources-in-the-closed-system/"
+    ],
+    "in_doc_ledger": true
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "claim": {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:scarcity-excitation-reading-only",
+      "revision_id": "sha256:5c88973b35490e9dbd7744b9968c7f2a9981b412aed3e9dc20d11c4925b75223",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    "verdict": "supported",
+    "legacy_verdict": "supported",
+    "inference": "historical",
+    "basis": "legacy-report",
+    "controls": "unknown",
+    "rationale": "**Derived by elimination (ORB-10159, §(c)):** the rules as stated make matter an external tracer reading ∇σ — a tracer inherits no SR-in-the-flowing-frame, so the river buys it no dilation (the drag objection is fatal: no coupling constant exists to carry it). The deflationary reading is exactly GR in GP coordinates — consistent, ontology idle (Hamilton & Lisle's own caution: nothing measurable flows). The excitation reading — matter as waves *of* the lattice, **Unruh 1981 acoustic-metric family, riding the GP river** — makes carriage constitutive with no coupling constant, and is the only reading delivering the clock sector with the ontology live. Price: excitation dynamics with one universal local speed is new structure the rules don't yet contain ([studies/river-model-and-analog-gravity](../../studies/river-model-and-analog-gravity.md)). **Viability caveat (ORB-10938, 2026-08-21):** the elimination argument stands, but the reading acquired a measured wound — the settled moving closed system cavitates at U/v_GP = 0.3 (ladder-confirmed cutoff-ward trough), and an excitation has no medium inside a hole; see [moving-sources-in-the-closed-system](../moving-sources-in-the-closed-system/) cavitation row",
+    "evidence": []
+  },
+  "revision_id": "sha256:57c9434ab4ea2fdbf455e7985664d5106149220e27ebd5acae160c697e79a2dd"
+}

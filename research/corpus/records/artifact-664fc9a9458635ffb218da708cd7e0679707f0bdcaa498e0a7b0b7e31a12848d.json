@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Atheory%2Fgravity-as-scarcity%2Fconfronting-solar-system.md",
+  "aliases": [
+    "source:principia:4e3b02c59b694d85016915177ef1ae157895ed7b:theory/gravity-as-scarcity/confronting-solar-system.md"
+  ],
+  "activity": "active",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "0c3902a97eb76ac66fea0502e6c82d99529fd5b8",
+    "sha256": "sha256:a94016b5bbc2df1792dff56d97fae64df4fb64950e76371bbf95bd93782b9f59",
+    "path": "theory/gravity-as-scarcity/confronting-solar-system.md",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Immutable archival source copy; upstream scientific ownership is unchanged."
+  ],
+  "missingness": [
+    "scope"
+  ],
+  "legacy": {
+    "source_pin": {
+      "repository": "principia",
+      "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "path": "theory/gravity-as-scarcity/confronting-solar-system.md",
+      "blob_oid": "0c3902a97eb76ac66fea0502e6c82d99529fd5b8",
+      "sha256": "sha256:a94016b5bbc2df1792dff56d97fae64df4fb64950e76371bbf95bd93782b9f59",
+      "bytes": 5573,
+      "commit_metadata": "4e3b02c59b694d85016915177ef1ae157895ed7b\n2026-09-06T02:49:35+00:00\n2026-09-06T02:49:35+00:00\nfeat: Migrate the wide-binary control pilot into versioned scientific r… [ORB-11378]\n"
+    },
+    "text": "## Confronting the solar system — the AU-scale precision floor\n\nThe second observable of the upgrade-or-kill pair arrived 2026-07-10: tycho and faraday's\nNewtonian-omission floor — how far a pure-Newtonian 9-body solar system drifts from JPL\nHorizons over 2016–2026, per planet ([studies/solar-system-ephemeris-precision-floor](../../studies/solar-system-ephemeris-precision-floor.md);\nlineage ORB-10076 → ORB-10093 → ORB-10094). Any real dynamics the Newtonian baseline omits is\n*contained in* those residuals, so a modification predicting more deviation than a planet's\nfloor is excluded at that amplitude.\n\n**First pass (analytic, 2026-07-10).** The fitted continuum form multiplies Newtonian gravity\nby q(r)/q(R₀); its local logarithmic gradient at the Sun's galactocentric radius is\n\n> d ln q/dr = β·F(R₀)/R₀² ≈ 5.25 kpc × 0.86 / (8.25 kpc)² ≈ 0.066 /kpc ≈ **3.2×10⁻¹⁰ /AU**\n\nIn the heliocentric frame only the *differential* across the system matters. Two regimes:\n\n- **Inner planets** complete many orbits in the window; a quasi-constant vector perturbation\n  orbit-averages, leaving a bounded epicyclic response a_p/n² — predicted offsets sit **4–6\n  orders below** their floors. Safe regardless of reading.\n- **Outer planets** barely move in 10 years; nothing averages. The quasi-static bound\n  ½·a_p·T² gives Jupiter 1.2e-7 (0.7× floor), Saturn 6.7e-8 (**1.6×**), Uranus 3.3e-8\n  (**8×**), Neptune 2.1e-8 (**1.2×**) AU.\n\nWhether the outer-planet numbers are a real prediction hinges on a model assumption the\nlattice toy has never fixed: does the galactic scarcity factor **multiply the Sun's own\nfield** (then the tension above is real, and the floor already bites), or does the Sun's own\ndepletion **dominate and screen** the galactic gradient locally (then the prediction collapses\nto ~0 and the bound is trivially satisfied)? That superposition rule is now a load-bearing\nopen question — `conjecture — to verify` either way. The ½aT² bound is also crude (no\norientation projection, no orbital geometry, no IC/GM absorption), which is why the\nadjudication is an experiment, not more algebra: **ORB-10097** (Faraday) integrates the\nmultiplicative reading on the exact ORB-10093 protocol and compares per-planet deviations to\nthe measured floors. If the multiplicative reading survives unmodified it is remarkable; if\nit fails, the *screened* variant becomes the only viable branch and the theory owes a\nmechanism for the screening.\n\n**Numerical adjudication (ORB-10097, run 2026-07-11).** Faraday integrated the multiplicative\nreading on the exact ORB-10093 protocol — same first-epoch Horizons initial conditions,\n366-epoch TDB grid, heliocentric ICRF frame — scaling every heliocentric acceleration by the\nfitted local gradient exp[(βF(R₀)/R₀²)(r_gal − R₀)], with β = 5.25 kpc and the ORB-10077/10082\nmass-profile surrogate imported unchanged (apparatus F(R₀) = 0.830; no retuning). Differenced\nagainst a concurrently integrated pure-Newtonian twin (which matches the frozen ORB-10093\nbaseline to 4.5e-10 AU per coordinate; step-halving moves the signature ≤ 1.6e-12 AU). Result\n([solar-system-nbody](../../../orrery/lab/sims/solar-system-nbody/) `scarcity/`\n[summary.json](../../../orrery/lab/sims/solar-system-nbody/scarcity/summary.json), orrery `23fe253`):\n\n- **Primary orientation** (galactocentric outward axis from the ICRF Galactic-center\n  direction): **Uranus exceeds its floor — rms 7.7e-9 vs 4.1e-9 AU (1.89×), max 1.8e-8 vs\n  6.5e-9 AU (2.84×)**. Every other planet is below its rms floor: Saturn 0.74×, Jupiter 0.17×,\n  Neptune 0.11×, Mars 0.032×, and the inner three at ~2–4×10⁻³ — confirming the\n  orbit-averaging regime split from the first pass.\n- **Orientation qualification:** across the six cardinal-axis sweep the Uranus rms signature\n  spans 2.7e-9 – 1.2e-8 AU (0.66×–3.0× floor) — the envelope **crosses** the floor, so the\n  verdict is orientation-sensitive at O(1). Tension under the physically-motivated\n  orientation, **not an orientation-independent refutation**. R₀ (8.25 → 8.122 kpc) shifts\n  signatures only ~2.5%.\n- **Screened control:** identically zero by construction — screened local dominance leaves\n  the equations exactly Newtonian, so this test **cannot constrain the screened branch**.\n\nTwo honest postscripts. The first-pass ½aT² bound above overestimated the apparatus result by\n~4× (Uranus 8× → 1.89× rms) — it picked the binding planet and the qualitative verdict\ncorrectly, but the measured ratios in the ledger row are the numbers of record. And at the\ntime of the run, the multiplicative rule the apparatus tested was a deliberately chosen\n*interpretation* of the fitted form, not a field equation derived from the lattice model.\n**That gap briefly closed (ORB-10156, § next) and has reopened under measurement (ORB-10157,\n§ superposition adjudication):** the multiplicative reading was derived from the mechanic on\nthe anonymity argument; the lattice then measured the mechanic's actual modulation as\nsurvivor-fraction headroom screening — unit gain, keyed to local occupancy — so ORB-10097's\ninstrument tested the fitted-form transplant after all, not a rule the mechanic supplies.\nThe tension it found is conditioned on identifying the fitted boost with the measured\nmodulation (ledger row above); the exactly-Newtonian escape stays closed regardless\n(independence refuted on the lattice at log-RMSE 1.074). The row stays `mixed` on the\norientation qualification *and* on that conditioning.\n",
+    "commit_object": "tree 682cccb1cf19c89c2c5f4371c14ed2b384d2ae8c\nparent 13866b2848fbcce9a1f1ef2d4b97051a65f7e626\nauthor orbit[gpt-6-astra] <agent@orbit.invalid> 1788662975 +0000\ncommitter orbit <orbit@orbit.local> 1788662975 +0000\n\nfeat: Migrate the wide-binary control pilot into versioned scientific r… [ORB-11378]\n\nMigrate the wide-binary control pilot into versioned scientific records\n\nPlanned-By: codex\n"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "source",
+    "availability": "available",
+    "snapshot_digest": "sha256:a94016b5bbc2df1792dff56d97fae64df4fb64950e76371bbf95bd93782b9f59",
+    "locator": null,
+    "media_type": "text/plain"
+  },
+  "revision_id": "sha256:664fc9a9458635ffb218da708cd7e0679707f0bdcaa498e0a7b0b7e31a12848d"
+}

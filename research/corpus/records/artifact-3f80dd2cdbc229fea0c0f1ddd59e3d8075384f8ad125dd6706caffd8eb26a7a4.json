@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:principia:artifact:source%3Aorrery%3Aa1c430db54d585048ec85c4e7c47141db634f398%3Alab%2Fsims%2Ftwo-substance-dynamical-packet%2FREADME.md",
+  "aliases": [
+    "source:orrery:a1c430db54d585048ec85c4e7c47141db634f398:lab/sims/two-substance-dynamical-packet/README.md"
+  ],
+  "activity": "active",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": null,
+    "blob_oid": null,
+    "sha256": "sha256:dcb9f98a67dd35fec6932e4a90a283465de942c9293f70c574b9812fa6ec4f1b",
+    "path": "upstream-snapshot/orrery/a1c430db54d585048ec85c4e7c47141db634f398/lab/sims/two-substance-dynamical-packet/README.md",
+    "selector": "$",
+    "historical": true,
+    "working_tree": true
+  },
+  "limitations": [
+    "Immutable archival source copy; upstream scientific ownership is unchanged."
+  ],
+  "missingness": [
+    "git-revision",
+    "owner-ingestion-git-pin",
+    "scope",
+    "upstream-canonical-record"
+  ],
+  "legacy": {
+    "source_pin": {
+      "repository": "orrery",
+      "git_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "path": "lab/sims/two-substance-dynamical-packet/README.md",
+      "blob_oid": "d975f85624a0995e67192eaa1c7c0a2192f4ee10",
+      "sha256": "sha256:dcb9f98a67dd35fec6932e4a90a283465de942c9293f70c574b9812fa6ec4f1b",
+      "bytes": 4821,
+      "commit_metadata": "a1c430db54d585048ec85c4e7c47141db634f398\n2026-09-06T02:28:14+00:00\n2026-09-06T02:28:14+00:00\nfeat: Preserve the original electron animation's continuous fold in a c… [ORB-11374]\n"
+    },
+    "text": "# Two-substance packet coupling and wake test\n\nThis fixture tests whether the local common response accompanying a\nrelative-mode packet is genuinely packet-bound or is a wake driven by the\ninserted nonlinear coupling. It preserves the original two-substance dynamics\nand distinguishes the signed global common monopole from local absolute common\ncontent.\n\nRun the deterministic apparatus with:\n\n```sh\nuv run lab/sims/two-substance-dynamical-packet/main.py\n```\n\nIt writes the complete machine-readable record to `assets/results.json` and a\nfour-panel summary to `assets/packet-budget.png`. The dated validated run is\nrecorded in `RUN-2026-08-21.md`.\n\n## Predeclared apparatus\n\nThe periodic 2-D lattice evolves `n1`, `n2` and their individual vector fluxes\nunder\n\n```text\nH = (|j1|^2 + |j2|^2)/2\n  + c_plus^2 n_plus^2/4 + c_minus^2 n_minus^2/4\n  + lambda n_plus n_minus^2/4.\n```\n\nEach density changes only through a telescoping discrete divergence. The\nfour-amplitude ladder `0.02, 0.04, 0.06, 0.08` is run at `lambda = 0, 0.2,\n0.5, 0.8`. The zero-coupling arm is the causal null: without the cubic term,\nthe declared equations contain no driver from `n_minus` into `n_plus`.\n\nEvery run records time-resolved y-integrated common and relative profiles.\nSigned, absolute, positive, and negative content; their centroids and absolute\nwidths; translated-relative and common/relative correlations; fitted profile\nspeeds; centroid lag; and lag normalized by packet width are machine-readable.\nFor samples after 40% of the run:\n\n- **packet-attached** requires a resolved signal and at least 80% of resolved\n  samples with `|lag|/width <= 0.75` and absolute-profile correlation at least\n  `0.50`, plus common and relative fitted speeds within 10%;\n- **trailing wake** requires at least 80% resolved late samples, median\n  `lag/width < -0.75`, median correlation at least `0.50`, and a common-profile\n  speed more than 10% below the relative packet speed;\n- all other resolved outcomes are reported as mixed or detached.\n\nThe primary `lambda=0.8` four-amplitude fit is repeated on grids `128, 192,\n256` and timesteps `0.09, 0.06, 0.03`. Convergence requires a finest-rung\nexponent shift no larger than `0.02`, prefactor change no larger than 5%,\nnormalized-lag shift no larger than `0.10`, and an unchanged profile\nclassification. Speed alone is not a convergence gate.\n\n## Measured result (2026-08-21)\n\n- **The common response is imposed by the coupling.** At `lambda=0`, the\n  largest common magnitude is `2.42e-12`, below the declared `2.62e-10`\n  numerical floor. At nonzero lambdas, the energy exponents are `0.999918`,\n  `0.999495`, and `0.998717`, while the prefactors are `0.61458`, `1.53432`,\n  and `2.44866`. Across nonzero lambda, the common response has lambda\n  exponents `0.99744–0.99984`: it is linear in the inserted coupling to this\n  accuracy, not an endogenous lambda-independent effect.\n- **The representative structure is a trailing wake.** Its median late lag is\n  `-0.84129` packet widths, its median absolute-profile correlation is\n  `0.70179`, and its common-profile speed is `0.67265` versus `0.96959` for the\n  relative packet. It therefore passes the predeclared wake criterion and\n  fails the attachment speed/lag criterion.\n- **The primary G3 observable converges under the declared tests.** The finest\n  grid-rung shifts are `8.66e-5` in exponent, `0.881%` in prefactor, and\n  `0.0119` packet widths in lag. The finest timestep shifts are `4.31e-7`,\n  `0.00244%`, and `0.00287`, respectively. Both refinement arms retain the\n  same wake classification.\n- **Endogenous defect emission is unsupported.** The existing packet equations\n  directly initialize the disturbance; the companion defect apparatus pins\n  analytic cores and externally translates a relaxation target. There is no\n  operator coupling an autonomous defect and its energy to outgoing\n  `J_minus`/`n_minus` flux with a closed defect-plus-field energy/refill budget.\n  No ad hoc source was inserted.\n- **The original cubic Hamiltonian is globally unbounded for every nonzero\n  lambda.** Minimizing over `n_plus` leaves a negative quartic term in\n  `n_minus`. This sampled weak-field domain remained finite and positive\n  (`min n1 = 0.97524`, `min n2 = 0.96000`), with nonnegative sampled energy\n  density, but that local observation does not cure the analytic instability.\n  No stabilizing variant was added.\n- **Conserved budgets remain clean.** Each substance drifts by at most\n  `1.82e-12` against a `6.55e-11` floor; the common monopole remains below\n  `5.79e-13`, the relative total below `8.96e-13`, and maximum relative energy\n  drift is `1.32e-6`.\n\nThe absolute local common profile is not a net gravitational mass. This\nfixture introduces no gravity-source law, `E/c^2` normalization, observational\nfit, or Principia change.\n",
+    "commit_object": "tree 8d851030602405b11b7166108b09cf9cd5664329\nparent 148b668391f575466282eaa81aab0dc943846a87\nauthor orbit[gpt-6-astra] <agent@orbit.invalid> 1788661694 +0000\ncommitter orbit <orbit@orbit.local> 1788661694 +0000\n\nfeat: Preserve the original electron animation's continuous fold in a c… [ORB-11374]\n\nPreserve the original electron animation's continuous fold in a computed-field view\n\nPlanned-By: codex\n"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "source",
+    "availability": "available",
+    "snapshot_digest": "sha256:dcb9f98a67dd35fec6932e4a90a283465de942c9293f70c574b9812fa6ec4f1b",
+    "locator": null,
+    "media_type": "text/plain"
+  },
+  "revision_id": "sha256:3f80dd2cdbc229fea0c0f1ddd59e3d8075384f8ad125dd6706caffd8eb26a7a4"
+}

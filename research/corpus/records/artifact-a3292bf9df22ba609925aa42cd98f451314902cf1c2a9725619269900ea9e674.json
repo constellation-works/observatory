@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Aschema%2Fclaims.schema.json",
+  "aliases": [
+    "source:principia:4e3b02c59b694d85016915177ef1ae157895ed7b:schema/claims.schema.json"
+  ],
+  "activity": "active",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "6920d9a044349c0e775fd95077653a7752972f48",
+    "sha256": "sha256:ed890b80b50cd74f3ad8e3f622ce5ba362eb1550296c15638e5b1b5f3d6e90a2",
+    "path": "schema/claims.schema.json",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Immutable archival source copy; upstream scientific ownership is unchanged."
+  ],
+  "missingness": [
+    "scope"
+  ],
+  "legacy": {
+    "source_pin": {
+      "repository": "principia",
+      "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "path": "schema/claims.schema.json",
+      "blob_oid": "6920d9a044349c0e775fd95077653a7752972f48",
+      "sha256": "sha256:ed890b80b50cd74f3ad8e3f622ce5ba362eb1550296c15638e5b1b5f3d6e90a2",
+      "bytes": 2315,
+      "commit_metadata": "4e3b02c59b694d85016915177ef1ae157895ed7b\n2026-09-06T02:49:35+00:00\n2026-09-06T02:49:35+00:00\nfeat: Migrate the wide-binary control pilot into versioned scientific r… [ORB-11378]\n"
+    },
+    "text": "{\n  \"$comment\": \"Documentation for theory/<doc>/claims.json. Enforced by scripts/check-theory.py, not a JSON-Schema runtime.\",\n  \"type\": \"object\",\n  \"required\": [\"doc\", \"title\", \"status\", \"families\", \"updated\", \"headline\", \"live_fronts\", \"claims\"],\n  \"properties\": {\n    \"doc\": { \"type\": \"string\", \"description\": \"Directory name of theory/<doc>/\" },\n    \"title\": { \"type\": \"string\" },\n    \"status\": { \"enum\": [\"exploratory\", \"growing\", \"refuted\", \"resolved\", \"retired\"] },\n    \"families\": { \"type\": \"array\", \"items\": { \"type\": \"string\" }, \"minItems\": 1 },\n    \"updated\": { \"type\": \"string\", \"description\": \"YYYY-MM-DD\" },\n    \"headline\": { \"type\": \"string\" },\n    \"live_fronts\": {\n      \"type\": \"array\",\n      \"items\": { \"type\": \"string\" },\n      \"description\": \"Gate ids. Required nonempty iff status is growing or exploratory.\"\n    },\n    \"claims\": {\n      \"type\": \"array\",\n      \"items\": {\n        \"type\": \"object\",\n        \"required\": [\"id\", \"family\", \"kind\", \"status\", \"claim\", \"in_doc_ledger\"],\n        \"properties\": {\n          \"id\": { \"type\": \"string\" },\n          \"family\": { \"type\": \"string\" },\n          \"kind\": { \"enum\": [\"postulate\", \"derived\", \"model-property\", \"nature\", \"hook\"] },\n          \"status\": { \"enum\": [\"supported\", \"mixed\", \"untested\", \"refuted\", \"conjecture\"] },\n          \"claim\": { \"type\": \"string\" },\n          \"evidence\": { \"type\": \"string\" },\n          \"links\": { \"type\": \"array\", \"items\": { \"type\": \"string\" } },\n          \"in_doc_ledger\": { \"type\": \"boolean\" },\n          \"tags\": { \"type\": \"array\", \"items\": { \"type\": \"string\" } },\n          \"kill\": { \"type\": [\"string\", \"null\"] },\n          \"control\": { \"type\": [\"string\", \"null\"] },\n          \"control_ran\": { \"type\": \"boolean\" },\n          \"blocked_by\": { \"type\": \"array\", \"items\": { \"type\": \"string\" } },\n          \"reopens\": { \"type\": \"array\", \"items\": { \"type\": \"string\" } },\n          \"daniel_reopen\": { \"type\": \"boolean\" },\n          \"comparator\": { \"type\": [\"string\", \"null\"] },\n          \"pays_debt_of\": { \"type\": [\"string\", \"null\"] },\n          \"named\": { \"type\": [\"string\", \"null\"], \"description\": \"YYYY-MM-DD for postulates\" },\n          \"expires\": { \"type\": [\"string\", \"null\"], \"description\": \"YYYY-MM-DD for underived postulates\" },\n          \"derived\": { \"type\": [\"boolean\", \"null\"] }\n        }\n      }\n    }\n  }\n}\n",
+    "commit_object": "tree 682cccb1cf19c89c2c5f4371c14ed2b384d2ae8c\nparent 13866b2848fbcce9a1f1ef2d4b97051a65f7e626\nauthor orbit[gpt-6-astra] <agent@orbit.invalid> 1788662975 +0000\ncommitter orbit <orbit@orbit.local> 1788662975 +0000\n\nfeat: Migrate the wide-binary control pilot into versioned scientific r… [ORB-11378]\n\nMigrate the wide-binary control pilot into versioned scientific records\n\nPlanned-By: codex\n"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "source",
+    "availability": "available",
+    "snapshot_digest": "sha256:ed890b80b50cd74f3ad8e3f622ce5ba362eb1550296c15638e5b1b5f3d6e90a2",
+    "locator": null,
+    "media_type": "application/json"
+  },
+  "revision_id": "sha256:a3292bf9df22ba609925aa42cd98f451314902cf1c2a9725619269900ea9e674"
+}

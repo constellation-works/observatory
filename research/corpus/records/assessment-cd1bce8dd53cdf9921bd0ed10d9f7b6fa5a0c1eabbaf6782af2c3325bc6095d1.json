@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "kind": "assessment",
+  "id": "urn:research:principia:assessment:moving-source-retarded-direction-curl%3Alegacy-verdict",
+  "aliases": [
+    "moving-source-retarded-direction-curl:legacy-verdict"
+  ],
+  "activity": "unknown",
+  "scope": "derivation",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "f55e1dace027658053ccc8f5b740363237c0eda4",
+    "sha256": "sha256:34d8fd1300c47a5df5ea2300abe6ba3ac4e6c29d546f03686710d88e1297d681",
+    "path": "theory/moving-source-field-consistency/claims.json",
+    "selector": "/claims/2",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Exact historical verdict and stated assumptions only; migration makes no new scientific inference."
+  ],
+  "missingness": [
+    "exact-evidence-owner-references",
+    "independently-verified-controls",
+    "activity"
+  ],
+  "legacy": {
+    "id": "moving-source-retarded-direction-curl",
+    "family": "retarded-scarcity-wake",
+    "kind": "derived",
+    "status": "untested",
+    "claim": "The alternative retarded-direction rule has nonzero curl and admits closed loops with work \\(\\sim\\beta_g GM/R\\)",
+    "evidence": "§ Two rules, and only one of them is even a force law; constant-\\(R\\) circles return zero, while generic loops spanning radius and angle need not",
+    "links": [],
+    "in_doc_ledger": true,
+    "kill": "Catalog generic loops spanning radius and angle."
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "claim": {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:moving-source-retarded-direction-curl",
+      "revision_id": "sha256:bc206fd07adde756d19ee2755dc3a1e43ce8815e1ad4ab9f9c6ea009e2afaaa6",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    "verdict": "untested",
+    "legacy_verdict": "untested",
+    "inference": "historical",
+    "basis": "legacy-report",
+    "controls": "unknown",
+    "rationale": "§ Two rules, and only one of them is even a force law; constant-\\(R\\) circles return zero, while generic loops spanning radius and angle need not",
+    "evidence": []
+  },
+  "revision_id": "sha256:cd1bce8dd53cdf9921bd0ed10d9f7b6fa5a0c1eabbaf6782af2c3325bc6095d1"
+}

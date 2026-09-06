@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Astudies%2Florentz-violation-bounds.md",
+  "aliases": [
+    "source:principia:4e3b02c59b694d85016915177ef1ae157895ed7b:studies/lorentz-violation-bounds.md"
+  ],
+  "activity": "active",
+  "scope": "literature",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "0d56fa8730c55810d8068a5671f5e75c5d73115d",
+    "sha256": "sha256:8768eef7437e9875be488fc1cde92bf930caa737c60367454f11977b51c34e0b",
+    "path": "studies/lorentz-violation-bounds.md",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Immutable archival source copy; upstream scientific ownership is unchanged."
+  ],
+  "missingness": [],
+  "legacy": {
+    "source_pin": {
+      "repository": "principia",
+      "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "path": "studies/lorentz-violation-bounds.md",
+      "blob_oid": "0d56fa8730c55810d8068a5671f5e75c5d73115d",
+      "sha256": "sha256:8768eef7437e9875be488fc1cde92bf930caa737c60367454f11977b51c34e0b",
+      "bytes": 7125,
+      "commit_metadata": "4e3b02c59b694d85016915177ef1ae157895ed7b\n2026-09-06T02:49:35+00:00\n2026-09-06T02:49:35+00:00\nfeat: Migrate the wide-binary control pilot into versioned scientific r… [ORB-11378]\n"
+    },
+    "text": "---\ntitle: \"Lorentz-violation bounds: Michelson–Morley to SME resonators and GRB dispersion\"\nstatus: active\ncreated: 2026-07-12\nupdated: 2026-07-12\n---\n\n# Lorentz-violation bounds: Michelson–Morley to SME resonators and GRB dispersion\n\nThe measured walls around any theory with a preferred frame or a spatial microstructure:\nlaboratory bounds on anisotropy of c (aether-style violations) and astrophysical bounds on\nenergy-dependent photon dispersion (lattice-scale violations). These bound the rest-frame\nquestion for gravity-as-scarcity in\n[theory/gravity-as-scarcity](../theory/gravity-as-scarcity/) (ORB-10159).\n\n## The velocity scales\n\nA theory in which matter couples to a spatial substance must confront the measured motion\nrelative to the natural candidate frames: the solar system moves at **369.82 ± 0.11 km/s**\nrelative to the CMB rest frame (Planck 2018: Aghanim et al. 2020, *Astron. & Astrophys.*\n641, A1), i.e. β = v/c ≈ 1.23×10⁻³, β² ≈ 1.5×10⁻⁶; Earth's orbital motion adds ±30 km/s\nannually (β² ≈ 10⁻⁸); and in a Gullstrand–Painlevé inflow picture the solar river at 1 AU\nruns at the local escape speed √(2GM☉/r) ≈ 42 km/s (β² ≈ 2×10⁻⁸ — derived arithmetic, not\nsourced).\n\n## Laboratory anisotropy bounds (Michelson–Morley class)\n\n| Experiment | Bound | Source |\n|---|---|---|\n| Michelson–Morley 1887 (interferometer) | null at the sensitivity of Earth's 30 km/s orbital aether wind — fringes < ¼ of expected | Michelson & Morley 1887, *Am. J. Sci.* 34, 333 |\n| Rotating optical resonators 2009 | Δc/c anisotropy < ~1×10⁻¹⁷ ((0.6 ± 1.2)×10⁻¹⁷) | Eisele, Nevsky & Schiller 2009, *Phys. Rev. Lett.* 103, 090401 |\n| Rotating sapphire microwave resonators 2015 | anisotropy coefficient (9.2 ± 10.7)×10⁻¹⁹ | Nagel et al. 2015, *Nature Communications* 6, 8174 |\n\nThe modern framework is the Standard-Model Extension (SME; Colladay & Kostelecký 1998,\n*Phys. Rev. D* 58, 116002), with measured coefficients compiled in Kostelecký & Russell\n2011, *Rev. Mod. Phys.* 83, 11 (living data tables). The resonator bounds above constrain\nthe photon-sector anisotropy coefficients at 10⁻¹⁷–10⁻¹⁸.\n\n**The kill arithmetic for substance couplings** (ours, flagged as derived): a medium theory\nin which matter couples to the medium's rest frame at O(1) predicts anisotropies of order\nβ² — that is 1.5×10⁻⁶ for the CMB-frame motion, or 2×10⁻⁸ even granting full entrainment\ndown to the local solar inflow. Against 10⁻¹⁷–10⁻¹⁸ measured bounds, an O(1)\nsubstance-coupled preferred frame is excluded by **9 to 12 orders of magnitude**. Only two\nescapes are known: no coupling (the frame is gauge — deflationary), or matter as excitations\n*of* the medium (one shared limiting speed → Michelson–Morley null by construction; see\n[river-model-and-analog-gravity](river-model-and-analog-gravity.md)).\n\n## Astrophysical dispersion bounds (lattice-scale violations)\n\nAn emergent-Lorentz-invariance theory generically breaks the invariance at its\nmicrostructure scale as energy-dependent photon group velocity, parametrized\nv/c ≈ 1 ± (E/E_QG,1) ± (E/E_QG,2)². Gamma-ray-burst timing bounds (short GRB 090510,\nFermi-LAT):\n\n- **Linear (n = 1):** E_QG,1 > 1.2 E_Planck from the initial analysis (Abdo et al. 2009,\n  *Nature* 462, 331); the dedicated follow-up strengthens the subluminal case to\n  **E_QG,1 > 7.6 E_Planck** (Vasileiou et al. 2013, *Phys. Rev. D* 87, 122001).\n  E_Planck = 1.22×10¹⁹ GeV.\n- **Quadratic (n = 2):** E_QG,2 > 1.3×10¹¹ GeV (same Vasileiou et al. 2013 analysis) —\n  eight orders of magnitude *below* the Planck energy.\n\n**Generic lattice dispersion** (ours, flagged as derived; textbook lattice-wave algebra): a\nwave hopping on a lattice of spacing a with a parity-symmetric rule has an even dispersion\nrelation — e.g. the 1-D chain ω = (2c/a)·sin(ka/2) = ck·[1 − (ka)²/24 + …] — so the leading\ncorrection is **quadratic and subluminal**, δv_g/c ≈ −(ka)²/8; odd (linear) terms are\nforbidden by parity. Consequences:\n\n1. A parity-symmetric lattice evades the (Planck-exceeding) linear bounds automatically.\n2. The quadratic bound translates to a **maximum lattice spacing**:\n   a ≲ ħc/E_QG,2 ≈ 1.5×10⁻²⁷ m ≈ 10⁸ Planck lengths. A Planck-spaced lattice sits eight\n   orders below current GRB sensitivity; any lattice coarser than ~10⁻²⁷ m is refuted.\n3. A lattice with a parity-*asymmetric* hop rule acquires a linear term and is dead at any\n   spacing coarser than ~E_Planck⁻¹ — the linear bounds already exceed the Planck scale.\n4. Discreteness also makes the quadratic term direction-dependent (cubic anisotropy) — at\n   Planck-squared suppression this sits far below all current sensitivity; but any\n   *energy-independent* residual anisotropy falls under the resonator bounds above, which\n   is why emergent-metric models need all species to share one medium (universality) rather\n   than approximate frame-independence.\n\n## Vacuum birefringence bounds (GRB polarimetry)\n\nA photon sector in which the two polarization states propagate at (even slightly)\ndifferent speeds is *birefringent*: linear polarization rotates with propagation distance,\nand for the energy-dependent (dimension-5, CPT-odd) case the rotation grows as E², so any\nhigh linear polarization observed from a cosmological source washes out unless the\nhelicity-speed split is essentially zero. Measured wall:\n\n- **GRB 140206A** (INTEGRAL/IBIS Compton polarimetry; redshift z = 2.739 from the optical\n  afterglow): linear polarization > 28% at 90% confidence in the prompt emission, giving\n  **ξ < 1 × 10⁻¹⁶** on the dimension-5 birefringence parameter — the deepest such limit\n  from a cosmological source (Götz et al. 2014, *Mon. Not. R. Astron. Soc.* 444, 2776).\n\nInterpretation for medium models (ours, flagged as derived): ξ ~ 10⁻¹⁶ means the two\ntransverse polarizations must see *one* medium to that fractional precision at gamma-ray\nenergies. A vacuum built from two components that couple differently to the two\npolarization states — or whose two components carry the EM mode at two speeds — is bound\ndirectly by this, independent of the isotropy (resonator) and dispersion (GRB timing)\nwalls above.\n\n## What this binds in our corpus\n\nFor gravity-as-scarcity's rest-frame question: the lattice-as-substance (aether) branch is\nexcluded by the resonator bounds at 9–12 orders; the lattice-as-medium-of-excitations\nbranch survives with two computed conditions — a parity-symmetric hop rule (no linear\ndispersion) and lattice spacing ≲ 10⁸ Planck lengths. The placement lives in\n[theory/gravity-as-scarcity](../theory/gravity-as-scarcity/) (ORB-10159 section and\nledger). For the two-substance vortex vacuum\n([theory/two-substance-vortex-vacuum](../theory/two-substance-vortex-vacuum/),\nORB-10160) every wall in this note binds *doubled*: two substrates supply two candidate\nrest frames (each facing the resonator exclusion) and a two-component photon sector facing\nthe birefringence bound — kill condition B in that doc's ledger.\n",
+    "commit_object": "tree 682cccb1cf19c89c2c5f4371c14ed2b384d2ae8c\nparent 13866b2848fbcce9a1f1ef2d4b97051a65f7e626\nauthor orbit[gpt-6-astra] <agent@orbit.invalid> 1788662975 +0000\ncommitter orbit <orbit@orbit.local> 1788662975 +0000\n\nfeat: Migrate the wide-binary control pilot into versioned scientific r… [ORB-11378]\n\nMigrate the wide-binary control pilot into versioned scientific records\n\nPlanned-By: codex\n"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "source",
+    "availability": "available",
+    "snapshot_digest": "sha256:8768eef7437e9875be488fc1cde92bf930caa737c60367454f11977b51c34e0b",
+    "locator": null,
+    "media_type": "text/plain"
+  },
+  "revision_id": "sha256:34d7f0599b1fe0d2a56baf60d2ec1809ea0444f7fa6f95d8bc9e405a88dba590"
+}

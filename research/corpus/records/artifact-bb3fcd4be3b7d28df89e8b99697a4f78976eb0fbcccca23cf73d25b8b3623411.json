@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Atheory%2Fswirl-photon%2Frelated.md",
+  "aliases": [
+    "source:principia:4e3b02c59b694d85016915177ef1ae157895ed7b:theory/swirl-photon/related.md"
+  ],
+  "activity": "active",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "cbc75b55e626d978470dcb0d189fedd1b54f8ff6",
+    "sha256": "sha256:4d2c6aac20de945d4d2ff2d78c6fa9cfe3de1b1ccaf28ba343ee1ca1102b3ae6",
+    "path": "theory/swirl-photon/related.md",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Immutable archival source copy; upstream scientific ownership is unchanged."
+  ],
+  "missingness": [
+    "scope"
+  ],
+  "legacy": {
+    "source_pin": {
+      "repository": "principia",
+      "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "path": "theory/swirl-photon/related.md",
+      "blob_oid": "cbc75b55e626d978470dcb0d189fedd1b54f8ff6",
+      "sha256": "sha256:4d2c6aac20de945d4d2ff2d78c6fa9cfe3de1b1ccaf28ba343ee1ca1102b3ae6",
+      "bytes": 678,
+      "commit_metadata": "4e3b02c59b694d85016915177ef1ae157895ed7b\n2026-09-06T02:49:35+00:00\n2026-09-06T02:49:35+00:00\nfeat: Migrate the wide-binary control pilot into versioned scientific r… [ORB-11378]\n"
+    },
+    "text": "## Related\n\n- [vortex-electron](../vortex-electron/) leans on this correspondence for its photon objection\n  (interference from the mode, discreteness only at detection).\n- Asset: `../../../orrery/lab/sims/swirl-ball/assets/photon-field.png` — the captured frame the almanac note\n  embeds.\n- The 2026-08-21 packet-budget question grew out of this correspondence: whether the\n  \"pocket + refill\" emission picture carries a common-mode draw scaling with packet energy —\n  the structural hook gravitating radiation requires. Filed as **ORB-10940**; the\n  adjudicating ledger row lives in\n  [two-substance-vortex-vacuum](../two-substance-vortex-vacuum/) (radiation-sector row).\n",
+    "commit_object": "tree 682cccb1cf19c89c2c5f4371c14ed2b384d2ae8c\nparent 13866b2848fbcce9a1f1ef2d4b97051a65f7e626\nauthor orbit[gpt-6-astra] <agent@orbit.invalid> 1788662975 +0000\ncommitter orbit <orbit@orbit.local> 1788662975 +0000\n\nfeat: Migrate the wide-binary control pilot into versioned scientific r… [ORB-11378]\n\nMigrate the wide-binary control pilot into versioned scientific records\n\nPlanned-By: codex\n"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "source",
+    "availability": "available",
+    "snapshot_digest": "sha256:4d2c6aac20de945d4d2ff2d78c6fa9cfe3de1b1ccaf28ba343ee1ca1102b3ae6",
+    "locator": null,
+    "media_type": "text/plain"
+  },
+  "revision_id": "sha256:bb3fcd4be3b7d28df89e8b99697a4f78976eb0fbcccca23cf73d25b8b3623411"
+}

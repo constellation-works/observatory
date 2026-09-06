@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "kind": "claim",
+  "id": "urn:research:principia:claim:retarded-wake-rescues-parent",
+  "aliases": [
+    "retarded-wake-rescues-parent"
+  ],
+  "activity": "paused",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "5a0334520045b6866e96fd14cbe0f87a1feee659",
+    "sha256": "sha256:4c18601b8818d5bb0724f512c671a9a618cf27a59fdf02401c19ab1b07413d59",
+    "path": "theory/retarded-scarcity-wake/claims.json",
+    "selector": "/claims/11",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Exact historical verdict and stated assumptions only; migration makes no new scientific inference."
+  ],
+  "missingness": [
+    "scope"
+  ],
+  "legacy": {
+    "id": "retarded-wake-rescues-parent",
+    "family": "retarded-scarcity-wake",
+    "kind": "nature",
+    "status": "refuted",
+    "claim": "The new velocity-dependent branch rescues the parent scarcity theory's fixed-β galactic law, photon sector, or source-law debt",
+    "evidence": "It does not address those failures. The parent ledger remains controlling: [gravity-as-scarcity](../gravity-as-scarcity/)",
+    "links": [
+      "../gravity-as-scarcity/"
+    ],
+    "in_doc_ledger": true
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "claim",
+    "statement": "The new velocity-dependent branch rescues the parent scarcity theory's fixed-β galactic law, photon sector, or source-law debt",
+    "domain": "nature"
+  },
+  "revision_id": "sha256:00cee6fa907a4d9c2b39bc0f1b32be3a23db2fd8a901363abb219f73ddba2231"
+}

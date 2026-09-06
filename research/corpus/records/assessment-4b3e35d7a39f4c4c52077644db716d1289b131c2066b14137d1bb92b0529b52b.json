@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "kind": "assessment",
+  "id": "urn:research:principia:assessment:scarcity-clocks-not-second-instrument%3Alegacy-verdict",
+  "aliases": [
+    "scarcity-clocks-not-second-instrument:legacy-verdict"
+  ],
+  "activity": "unknown",
+  "scope": "derivation",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "b5f58c64f4c6bf9d7d7f67c826f5d2dd7c9cb64f",
+    "sha256": "sha256:996b059ca4b45cee6dd42a503594508ebb8d6d13211ad1104df3754b116d5976",
+    "path": "theory/gravity-as-scarcity/claims.json",
+    "selector": "/claims/18",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Exact historical verdict and stated assumptions only; migration makes no new scientific inference."
+  ],
+  "missingness": [
+    "exact-evidence-owner-references",
+    "independently-verified-controls",
+    "activity"
+  ],
+  "legacy": {
+    "id": "scarcity-clocks-not-second-instrument",
+    "family": "gravity-as-scarcity",
+    "kind": "derived",
+    "status": "supported",
+    "claim": "The multiplicative β factor leaves all current clock comparisons unaffected — clocks are not a second instrument on the ORB-10097 branch",
+    "evidence": "**Computed (ORB-10159, §(f)):** the multiplicative rule (derived by ORB-10156; since measured to be the mechanic's behavior only under the fitted-boost identification — ORB-10157, superposition rows above) rescales locally generated σ by X(r_gal), \\|X − 1\\| ≤ 3.2×10⁻¹⁰ per AU of galactocentric offset — a branch property, holding for *any* multiplicative carrier of the fitted boost shape, the measured screening law included. Fractional correction to any measured redshift ≤ 3×10⁻¹⁰ vs 2.5×10⁻⁵ best accuracy (five orders below); annual species-universal rate modulation ~3×10⁻¹⁸ vs 10⁻¹⁶-class comparisons (and blind to LPI/null-redshift tests *because* universal; ~16 ps/yr vs ~100 ns pulsar timing); terrestrial differentials ≲ 10⁻²¹ vs 10⁻¹⁸ optical-clock systematics. Orbits integrate accelerations twice over decades, clocks read rates instantaneously — the binding instrument on the multiplicative branch remains ORB-10097's Uranus channel ([studies/gravitational-time-dilation](../../studies/gravitational-time-dilation.md))",
+    "links": [
+      "../../studies/gravitational-time-dilation.md"
+    ],
+    "in_doc_ledger": true
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "claim": {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:scarcity-clocks-not-second-instrument",
+      "revision_id": "sha256:065131c522719bfaaa1499ce36988e0b6865483116cb72a3f6589a273b1c1b26",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    "verdict": "supported",
+    "legacy_verdict": "supported",
+    "inference": "historical",
+    "basis": "legacy-report",
+    "controls": "unknown",
+    "rationale": "**Computed (ORB-10159, §(f)):** the multiplicative rule (derived by ORB-10156; since measured to be the mechanic's behavior only under the fitted-boost identification — ORB-10157, superposition rows above) rescales locally generated σ by X(r_gal), \\|X − 1\\| ≤ 3.2×10⁻¹⁰ per AU of galactocentric offset — a branch property, holding for *any* multiplicative carrier of the fitted boost shape, the measured screening law included. Fractional correction to any measured redshift ≤ 3×10⁻¹⁰ vs 2.5×10⁻⁵ best accuracy (five orders below); annual species-universal rate modulation ~3×10⁻¹⁸ vs 10⁻¹⁶-class comparisons (and blind to LPI/null-redshift tests *because* universal; ~16 ps/yr vs ~100 ns pulsar timing); terrestrial differentials ≲ 10⁻²¹ vs 10⁻¹⁸ optical-clock systematics. Orbits integrate accelerations twice over decades, clocks read rates instantaneously — the binding instrument on the multiplicative branch remains ORB-10097's Uranus channel ([studies/gravitational-time-dilation](../../studies/gravitational-time-dilation.md))",
+    "evidence": []
+  },
+  "revision_id": "sha256:4b3e35d7a39f4c4c52077644db716d1289b131c2066b14137d1bb92b0529b52b"
+}

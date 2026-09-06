@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "kind": "assessment",
+  "id": "urn:research:principia:assessment:ppn-alpha-contact%3Alegacy-verdict",
+  "aliases": [
+    "ppn-alpha-contact:legacy-verdict"
+  ],
+  "activity": "unknown",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "cf1add5f518795b48696ace5aae1ea01f6b094fe",
+    "sha256": "sha256:b258d05cb8d485f7930cd4898e3b3f45abd7485187030cf02e2752174d451291",
+    "path": "theory/ppn-reduction-of-the-settled-flow/claims.json",
+    "selector": "/claims/7",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Exact historical verdict and stated assumptions only; migration makes no new scientific inference."
+  ],
+  "missingness": [
+    "exact-evidence-owner-references",
+    "independently-verified-controls",
+    "activity",
+    "scope"
+  ],
+  "legacy": {
+    "id": "ppn-alpha-contact",
+    "family": "gravity-as-scarcity",
+    "kind": "nature",
+    "status": "conjecture",
+    "claim": "The settled wake's far-field slot coefficients land under the measured preferred-frame walls (α₁ at 10⁻⁴ LLR and 7×10⁻⁵ pulsar, α₂ at about 10⁻⁷ solar spin axis and 1.6×10⁻⁹ pulsar) — equivalently the wake is a near-zone structure whose anisotropies carry no slot-matching far-field tails; a generic order-one surviving coefficient is excluded by four (α₁) to seven-plus (α₂) orders",
+    "evidence": "The confrontation this doc defines but cannot execute: walls sourced ([moving-source-gravity-bounds](../../studies/moving-source-gravity-bounds.md)); the far-field fixture has now run (ORB-11041, [level-core-far-field-slot-coefficients](../../../orrery/lab/sims/level-core-far-field-slot-coefficients/)) and its direction is adverse — nonzero slot-matching lattice tails in the speed sector (2α₃−α₁ class at all three winds, α₂ at U/v_GP(5) = 0.8) where the survival shape demanded none — and the symbolic fixture (ORB-11040 G5) raises the stakes on the same contraction: a generic wake's surviving u_GP·δv term is super-PPN (√ε·ε_w, the half-order-hazard row) unless the realized wake cancels it. Contact stays barred: the resolved proxies are shell-unstable (monotone outward drift toward an open face), the α₁ slot is unextractable, the Bernoulli obstruction is near-zone-confined (the survival direction), physical normalization of lattice units is an open family debt, and the existence card (`closed-system-moving-existence`) blocks phenomenology",
+    "links": [
+      "../../studies/moving-source-gravity-bounds.md",
+      "../../../orrery/lab/sims/level-core-far-field-slot-coefficients/"
+    ],
+    "in_doc_ledger": true,
+    "tags": [
+      "preferred-frame",
+      "phenomenology"
+    ],
+    "comparator": "PPN preferred-frame slots in the universe rest frame against mass-frame Schwarzschild GR (uniform U is gauge); walls per moving-source-gravity-bounds (α₁: LLR/PSR J1738+0333; α₂: solar spin axis/solitary pulsars). Not a raw U/c comparison.",
+    "blocked_by": [
+      "moving-cavitation-floor"
+    ]
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "claim": {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:ppn-alpha-contact",
+      "revision_id": "sha256:638582a2e792e6e5f10e478bde543877fe5de3e15de5511e5178436c2e70447f",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    "verdict": "untested",
+    "legacy_verdict": "conjecture",
+    "inference": "historical",
+    "basis": "legacy-report",
+    "controls": "unknown",
+    "rationale": "The confrontation this doc defines but cannot execute: walls sourced ([moving-source-gravity-bounds](../../studies/moving-source-gravity-bounds.md)); the far-field fixture has now run (ORB-11041, [level-core-far-field-slot-coefficients](../../../orrery/lab/sims/level-core-far-field-slot-coefficients/)) and its direction is adverse — nonzero slot-matching lattice tails in the speed sector (2α₃−α₁ class at all three winds, α₂ at U/v_GP(5) = 0.8) where the survival shape demanded none — and the symbolic fixture (ORB-11040 G5) raises the stakes on the same contraction: a generic wake's surviving u_GP·δv term is super-PPN (√ε·ε_w, the half-order-hazard row) unless the realized wake cancels it. Contact stays barred: the resolved proxies are shell-unstable (monotone outward drift toward an open face), the α₁ slot is unextractable, the Bernoulli obstruction is near-zone-confined (the survival direction), physical normalization of lattice units is an open family debt, and the existence card (`closed-system-moving-existence`) blocks phenomenology",
+    "evidence": []
+  },
+  "revision_id": "sha256:590554677b8774f8def9fccecb07504b4685aac43e06971dfd12f3e5f964b88f"
+}

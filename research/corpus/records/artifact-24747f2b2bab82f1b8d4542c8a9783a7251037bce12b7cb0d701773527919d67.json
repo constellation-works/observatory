@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:principia:artifact:source%3Aorrery%3Aa1c430db54d585048ec85c4e7c47141db634f398%3Alab%2Fsims%2Ftwo-substance-vortex-lattice%2Fsim.json",
+  "aliases": [
+    "source:orrery:a1c430db54d585048ec85c4e7c47141db634f398:lab/sims/two-substance-vortex-lattice/sim.json"
+  ],
+  "activity": "active",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": null,
+    "blob_oid": null,
+    "sha256": "sha256:1a468c6b0456904be30b7f6f03a2ba81e7ee29301eff5110c53858e36cd51263",
+    "path": "upstream-snapshot/orrery/a1c430db54d585048ec85c4e7c47141db634f398/lab/sims/two-substance-vortex-lattice/sim.json",
+    "selector": "$",
+    "historical": true,
+    "working_tree": true
+  },
+  "limitations": [
+    "Immutable archival source copy; upstream scientific ownership is unchanged."
+  ],
+  "missingness": [
+    "git-revision",
+    "owner-ingestion-git-pin",
+    "scope",
+    "upstream-canonical-record"
+  ],
+  "legacy": {
+    "source_pin": {
+      "repository": "orrery",
+      "git_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "path": "lab/sims/two-substance-vortex-lattice/sim.json",
+      "blob_oid": "7fbb7943be009b03444fc28fd4085f23369d731a",
+      "sha256": "sha256:1a468c6b0456904be30b7f6f03a2ba81e7ee29301eff5110c53858e36cd51263",
+      "bytes": 777,
+      "commit_metadata": "a1c430db54d585048ec85c4e7c47141db634f398\n2026-09-06T02:28:14+00:00\n2026-09-06T02:28:14+00:00\nfeat: Preserve the original electron animation's continuous fold in a c… [ORB-11374]\n"
+    },
+    "text": "{\n  \"slug\": \"two-substance-vortex-lattice\",\n  \"title\": \"Two-substance lattice vortex defects\",\n  \"kind\": \"py\",\n  \"entry\": \"main.py\",\n  \"status\": \"active\",\n  \"created\": \"2026-07-12\",\n  \"topics\": [\n    \"two-substance-vacuum\",\n    \"vortex-defects\",\n    \"quantized-circulation\",\n    \"interaction-sign\",\n    \"lattice\"\n  ],\n  \"family\": \"two-substance-vortex-vacuum\",\n  \"summary\": \"A 2-D conserved-density lattice measures the sign, force law, short-range correction, and neutral balanced state of two-substance circulation defects.\",\n  \"seed\": 42,\n  \"provenance\": {\n    \"almanac\": \"15-discussions/26-07/two-substance-vortex-vacuum.md\",\n    \"orbit_tasks\": [\n      \"ORB-10160\",\n      \"ORB-10163\"\n    ],\n    \"theory_context\": \"../../principia/theory/two-substance-vortex-vacuum/\"\n  }\n}\n",
+    "commit_object": "tree 8d851030602405b11b7166108b09cf9cd5664329\nparent 148b668391f575466282eaa81aab0dc943846a87\nauthor orbit[gpt-6-astra] <agent@orbit.invalid> 1788661694 +0000\ncommitter orbit <orbit@orbit.local> 1788661694 +0000\n\nfeat: Preserve the original electron animation's continuous fold in a c… [ORB-11374]\n\nPreserve the original electron animation's continuous fold in a computed-field view\n\nPlanned-By: codex\n"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "source",
+    "availability": "available",
+    "snapshot_digest": "sha256:1a468c6b0456904be30b7f6f03a2ba81e7ee29301eff5110c53858e36cd51263",
+    "locator": null,
+    "media_type": "application/json"
+  },
+  "revision_id": "sha256:24747f2b2bab82f1b8d4542c8a9783a7251037bce12b7cb0d701773527919d67"
+}

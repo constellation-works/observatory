@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "kind": "assessment",
+  "id": "urn:research:principia:assessment:two-substance-density-set-c%3Alegacy-verdict",
+  "aliases": [
+    "two-substance-density-set-c:legacy-verdict"
+  ],
+  "activity": "unknown",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "94e76368a84e00ed742153d77b3d25dd5962c664",
+    "sha256": "sha256:c95d48cf673efa43d6d77005c73cadea42fac1ff00da556a7b7fd260df14f9a6",
+    "path": "theory/two-substance-vortex-vacuum/claims.json",
+    "selector": "/claims/20",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Exact historical verdict and stated assumptions only; migration makes no new scientific inference."
+  ],
+  "missingness": [
+    "exact-evidence-owner-references",
+    "independently-verified-controls",
+    "activity",
+    "scope"
+  ],
+  "legacy": {
+    "id": "two-substance-density-set-c",
+    "family": "two-substance-vortex-vacuum",
+    "kind": "nature",
+    "status": "refuted",
+    "claim": "Branch B: time dilation from density-set propagation speed (the discussion's stated mechanism)",
+    "evidence": "**Computed (§B1, §B2):** a static index is one function for two potentials (the ORB-10156 disease, sign flipped), and density-dependence of the excitation speed is bounded at κ ≤ 4 × 10⁻¹⁴ by the GP-A profile (compressible fork). The delivering mechanism is flow drag (σ = ½v²/c², ORB-10159); density-set-c survives only as a bounded contaminant",
+    "links": [],
+    "in_doc_ledger": true
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "claim": {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:two-substance-density-set-c",
+      "revision_id": "sha256:b0691dc5adb3a029d04ab40ad83c5a7de21fba2cac4ad16c6b4bcad1e3703a79",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    "verdict": "refuted",
+    "legacy_verdict": "refuted",
+    "inference": "historical",
+    "basis": "legacy-report",
+    "controls": "unknown",
+    "rationale": "**Computed (§B1, §B2):** a static index is one function for two potentials (the ORB-10156 disease, sign flipped), and density-dependence of the excitation speed is bounded at κ ≤ 4 × 10⁻¹⁴ by the GP-A profile (compressible fork). The delivering mechanism is flow drag (σ = ½v²/c², ORB-10159); density-set-c survives only as a bounded contaminant",
+    "evidence": []
+  },
+  "revision_id": "sha256:7157c3290df1679070772e0cd68a7139690be9137a7a310a0da1073e20eceac8"
+}

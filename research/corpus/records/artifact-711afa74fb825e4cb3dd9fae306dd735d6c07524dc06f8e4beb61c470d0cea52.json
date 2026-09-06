@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:principia:artifact:source%3Aorrery%3Aa1c430db54d585048ec85c4e7c47141db634f398%3Alab%2Fsims%2Fscarcity-rotation-curve-fit%2Fsim.json",
+  "aliases": [
+    "source:orrery:a1c430db54d585048ec85c4e7c47141db634f398:lab/sims/scarcity-rotation-curve-fit/sim.json"
+  ],
+  "activity": "active",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": null,
+    "blob_oid": null,
+    "sha256": "sha256:fcb1b9d91debf76dc8dc6709ded2302c96cfc21d38ae590158716b98ecb3c242",
+    "path": "upstream-snapshot/orrery/a1c430db54d585048ec85c4e7c47141db634f398/lab/sims/scarcity-rotation-curve-fit/sim.json",
+    "selector": "$",
+    "historical": true,
+    "working_tree": true
+  },
+  "limitations": [
+    "Immutable archival source copy; upstream scientific ownership is unchanged."
+  ],
+  "missingness": [
+    "git-revision",
+    "owner-ingestion-git-pin",
+    "scope",
+    "upstream-canonical-record"
+  ],
+  "legacy": {
+    "source_pin": {
+      "repository": "orrery",
+      "git_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "path": "lab/sims/scarcity-rotation-curve-fit/sim.json",
+      "blob_oid": "950606b0bea5e548032d5e5bc115cf0917f81f72",
+      "sha256": "sha256:fcb1b9d91debf76dc8dc6709ded2302c96cfc21d38ae590158716b98ecb3c242",
+      "bytes": 842,
+      "commit_metadata": "a1c430db54d585048ec85c4e7c47141db634f398\n2026-09-06T02:28:14+00:00\n2026-09-06T02:28:14+00:00\nfeat: Preserve the original electron animation's continuous fold in a c… [ORB-11374]\n"
+    },
+    "text": "{\n  \"slug\": \"scarcity-rotation-curve-fit\",\n  \"title\": \"Scarcity rotation-curve fit\",\n  \"kind\": \"py\",\n  \"entry\": \"main.py\",\n  \"status\": \"active\",\n  \"created\": \"2026-07-10\",\n  \"topics\": [\n    \"gravity\",\n    \"galaxy-rotation\",\n    \"model-fitting\",\n    \"gaia\"\n  ],\n  \"family\": \"gravity-as-scarcity\",\n  \"summary\": \"A Sanders-form Yukawa fit lands at alpha=-0.679 and xi=4.64 kpc, but its scarcity-minus-Yukawa delta-AIC bootstrap interval crosses zero: the Gaia band is shape-degenerate.\",\n  \"seed\": 42,\n  \"provenance\": {\n    \"almanac\": \"15-discussions/26-07/gravity-as-scarcity-of-space.md\",\n    \"orbit_tasks\": [\n      \"ORB-10077\",\n      \"ORB-10082\",\n      \"ORB-10083\",\n      \"ORB-10075\",\n      \"ORB-10167\"\n    ],\n    \"dataset\": \"astrolabe/data/processed/derived/mw_rotation_curve.parquet\",\n    \"extends\": \"rotation-curve-distributed-mass\"\n  }\n}\n",
+    "commit_object": "tree 8d851030602405b11b7166108b09cf9cd5664329\nparent 148b668391f575466282eaa81aab0dc943846a87\nauthor orbit[gpt-6-astra] <agent@orbit.invalid> 1788661694 +0000\ncommitter orbit <orbit@orbit.local> 1788661694 +0000\n\nfeat: Preserve the original electron animation's continuous fold in a c… [ORB-11374]\n\nPreserve the original electron animation's continuous fold in a computed-field view\n\nPlanned-By: codex\n"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "source",
+    "availability": "available",
+    "snapshot_digest": "sha256:fcb1b9d91debf76dc8dc6709ded2302c96cfc21d38ae590158716b98ecb3c242",
+    "locator": null,
+    "media_type": "application/json"
+  },
+  "revision_id": "sha256:711afa74fb825e4cb3dd9fae306dd735d6c07524dc06f8e4beb61c470d0cea52"
+}

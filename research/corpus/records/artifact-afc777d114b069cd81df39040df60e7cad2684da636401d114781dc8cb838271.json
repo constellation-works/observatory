@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Astudies%2Fsuperfluid-vacuum-and-emergent-gauge-fields.md",
+  "aliases": [
+    "source:principia:4e3b02c59b694d85016915177ef1ae157895ed7b:studies/superfluid-vacuum-and-emergent-gauge-fields.md"
+  ],
+  "activity": "active",
+  "scope": "literature",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "7f4d8f5537469a3ccd8fd9c7cfcb27d76c129422",
+    "sha256": "sha256:73a79820b505b47a9b1ff154a8ee6e77fe32b9338abcea8bb8c17dd063ebb2b2",
+    "path": "studies/superfluid-vacuum-and-emergent-gauge-fields.md",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Immutable archival source copy; upstream scientific ownership is unchanged."
+  ],
+  "missingness": [],
+  "legacy": {
+    "source_pin": {
+      "repository": "principia",
+      "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "path": "studies/superfluid-vacuum-and-emergent-gauge-fields.md",
+      "blob_oid": "7f4d8f5537469a3ccd8fd9c7cfcb27d76c129422",
+      "sha256": "sha256:73a79820b505b47a9b1ff154a8ee6e77fe32b9338abcea8bb8c17dd063ebb2b2",
+      "bytes": 5048,
+      "commit_metadata": "4e3b02c59b694d85016915177ef1ae157895ed7b\n2026-09-06T02:49:35+00:00\n2026-09-06T02:49:35+00:00\nfeat: Migrate the wide-binary control pilot into versioned scientific r… [ORB-11378]\n"
+    },
+    "text": "---\ntitle: \"Superfluid vacuum: Volovik's ³He program, emergent gauge fields, and two-fluid wave content\"\nstatus: active\ncreated: 2026-07-12\nupdated: 2026-07-12\n---\n\n# Superfluid vacuum: Volovik's ³He program, emergent gauge fields, and two-fluid wave content\n\nThe serious modern version of \"the vacuum is a condensed medium and particles are its\nexcitations\": Volovik's superfluid-³He analog program. This note carries what that program\nactually establishes — because it is the standard any new substrate ontology must be\nmeasured against — plus the generic wave content of a *two*-component medium. Both bind the\ntwo-substance vortex vacuum in\n[theory/two-substance-vortex-vacuum](../theory/two-substance-vortex-vacuum/) (ORB-10160).\n\n## The Volovik program (³He-A as a vacuum analog)\n\nReference: Volovik, *The Universe in a Helium Droplet* (Oxford University Press,\nInternational Series of Monographs on Physics 117, 2003). Load-bearing results:\n\n- **Emergent Weyl fermions.** Superfluid ³He-A has gapless fermionic quasiparticles at\n  isolated points of momentum space (Fermi points). Near a Fermi point the quasiparticle\n  spectrum is *forced* into the relativistic form g^{μν}(p−qA)_μ(p−qA)_ν = 0 — massless\n  chiral (Weyl) fermions, though the underlying atoms are non-relativistic.\n- **Emergent gauge fields and metric.** In that expansion, the slow collective motions of\n  the order parameter enter *exactly* as an effective gauge field A_μ and an effective\n  metric g^{μν} (vierbein) acting on the quasiparticles. Electrodynamics-like and\n  gravity-like fields appear as low-energy collective modes of the vacuum medium, not as\n  added ingredients.\n- **Topological protection (the universality-class theorem).** The Fermi point carries a\n  momentum-space topological invariant; its existence and the relativistic form of the\n  low-energy action are stable against perturbations of the microphysics. This is the\n  crucial logical structure: the emergence of one shared light cone, chiral fermions, and\n  gauge fields near a Fermi point is a *theorem about a universality class*, not a tuning.\n  Any medium in the class delivers it; a medium outside the class generically does not.\n- **Emergent Lorentz invariance is low-energy only.** The invariance holds near the Fermi\n  point and breaks at the medium's microscopic scale — appearing as high-energy dispersion\n  (the bound side of this lives in\n  [lorentz-violation-bounds](lorentz-violation-bounds.md)).\n- **What the program does *not* deliver.** The effective metric's *dynamics* is not\n  Einstein's: the medium obeys its own hydrodynamics, and the induced gravitational action\n  is contaminated by non-covariant terms (the same caution as\n  [river-model-and-analog-gravity](river-model-and-analog-gravity.md) — analog models\n  reproduce propagation on a metric, not the Einstein equations for it). Relatedly, the\n  equivalence principle is a known open difficulty for superfluid-vacuum theories:\n  quasiparticle energy, not constituent count, must be the only gravitating quantity, and\n  that has to be arranged, not assumed.\n\nThe one-sentence standard this sets: **in a substrate theory, \"one light, one cone, gauge\ncoupling universal\" is something you prove from the topology of the vacuum, or you do not\nhave it.**\n\n## Two-fluid media carry two sounds\n\nThe generic wave content of a medium with two components (established physics, He II):\n\n- **Landau's two-fluid model** (Landau 1941, *J. Phys. USSR* 5, 71): He II described as\n  interpenetrating superfluid and normal components with independent velocity fields.\n- **Two propagating scalar branches**: first sound (components in phase — an ordinary\n  density/pressure wave) and second sound (components in counterflow — an\n  entropy/temperature wave), predicted by the two-fluid equations and measured by Peshkov\n  (1944, *J. Phys. USSR* 8, 381; second sound speed ~20 m/s vs ~240 m/s first sound —\n  grossly different speeds).\n- **The generic lesson**: each relative degree of freedom of a multi-component medium is\n  an extra propagating branch with its own speed. Two components → two scalar sounds is\n  the default; a *single* shared propagation speed is the exception that requires a\n  mechanism (a locking symmetry, or Fermi-point-type protection as above).\n\n## What this binds in our corpus\n\nFor the two-substance vortex vacuum: Volovik is the model's nearest serious relative and\nits standard of proof — the single-photon-sector requirement (one speed, two transverse\npolarizations, universal coupling) is exactly the emergent-gauge/one-cone theorem, which in\n³He-A is bought by Fermi-point topology and in the two-substance model is currently owed\n(kill condition B in the theory doc's ledger). The two-sound fact is the default the model\nmust escape: two substances generically give two wave speeds, and He II shows how large\nsuch splittings naturally are. The equivalence-principle caution feeds kill condition A\n(see [equivalence-principle-tests](equivalence-principle-tests.md)).\n",
+    "commit_object": "tree 682cccb1cf19c89c2c5f4371c14ed2b384d2ae8c\nparent 13866b2848fbcce9a1f1ef2d4b97051a65f7e626\nauthor orbit[gpt-6-astra] <agent@orbit.invalid> 1788662975 +0000\ncommitter orbit <orbit@orbit.local> 1788662975 +0000\n\nfeat: Migrate the wide-binary control pilot into versioned scientific r… [ORB-11378]\n\nMigrate the wide-binary control pilot into versioned scientific records\n\nPlanned-By: codex\n"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "source",
+    "availability": "available",
+    "snapshot_digest": "sha256:73a79820b505b47a9b1ff154a8ee6e77fe32b9338abcea8bb8c17dd063ebb2b2",
+    "locator": null,
+    "media_type": "text/plain"
+  },
+  "revision_id": "sha256:afc777d114b069cd81df39040df60e7cad2684da636401d114781dc8cb838271"
+}

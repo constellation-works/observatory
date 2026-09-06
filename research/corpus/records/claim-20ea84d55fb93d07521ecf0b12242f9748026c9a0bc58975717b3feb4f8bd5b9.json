@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "kind": "claim",
+  "id": "urn:research:principia:claim:moving-gravitomagnetic-sector",
+  "aliases": [
+    "moving-gravitomagnetic-sector"
+  ],
+  "activity": "retired",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "d9f73691ac539f5935cd6dbedcabdb6f722777a3",
+    "sha256": "sha256:0ec4339ac8934344ada2473abd7941e08d9c413b12e2636c275ab4f9a35a70a5",
+    "path": "theory/moving-sources-in-the-closed-system/claims.json",
+    "selector": "/claims/4",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Exact historical verdict and stated assumptions only; migration makes no new scientific inference."
+  ],
+  "missingness": [
+    "scope"
+  ],
+  "legacy": {
+    "id": "moving-gravitomagnetic-sector",
+    "family": "gravity-as-scarcity",
+    "kind": "nature",
+    "status": "untested",
+    "claim": "The counting mechanic sources no vector potential; the physical gravitomagnetic obligation is whether the wake's deflection field δv reproduces the measured O(GM·U/c²r) GEM sector (GP-B, LAGEOS, binary pulsars) — the static GP shift and any uniform wind are coordinate",
+    "evidence": "Previously conjecture pending the external note; upgraded to untested when [moving-source gravity bounds](../../studies/moving-source-gravity-bounds.md) supplied the GP-B, LAGEOS/LARES, and α₁ targets, because the remaining question is now a concrete model test. Structural context: no vector source appears in the counting mechanic, but a g₀ᵢ-analog exists (the river itself, gauge for the static and uniform parts), and the physical sector is the settled wake's vorticity plus its Bernoulli-anisotropy term — measured nonzero at U/v_GP = 0.3 after the PPN reduction ([ppn-reduction-of-the-settled-flow](../ppn-reduction-of-the-settled-flow/)). ORB-11041's [far-field fixture](../../../orrery/lab/sims/level-core-far-field-slot-coefficients/) found no converged scaling regime and hence no extractable α₁ proxy or wall contact; the spin sector still needs a rotating-source apparatus to test the sourced Lense–Thirring magnitude, 1/r³ falloff, and spin-source character",
+    "kill": "A surviving translational far-field g₀ᵢ slot coefficient beyond the α₁ wall, or — once a rotating-source apparatus exists — a spin sector failing Ω_LT's magnitude, 1/r³ falloff, or spin-source character where GP-B/LARES measure it",
+    "links": [
+      "../moving-source-field-consistency/",
+      "../../studies/moving-source-gravity-bounds.md",
+      "../ppn-reduction-of-the-settled-flow/",
+      "../../../orrery/lab/sims/level-core-far-field-slot-coefficients/"
+    ],
+    "in_doc_ledger": true,
+    "tags": [
+      "preferred-frame"
+    ],
+    "comparator": "Measured GEM sector (GP-B, LAGEOS, binary pulsars) after a PPN reduction of the analog metric; raw U/c is not α1/α2."
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "claim",
+    "statement": "The counting mechanic sources no vector potential; the physical gravitomagnetic obligation is whether the wake's deflection field δv reproduces the measured O(GM·U/c²r) GEM sector (GP-B, LAGEOS, binary pulsars) — the static GP shift and any uniform wind are coordinate",
+    "domain": "nature"
+  },
+  "revision_id": "sha256:20ea84d55fb93d07521ecf0b12242f9748026c9a0bc58975717b3feb4f8bd5b9"
+}

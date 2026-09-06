@@ -1,0 +1,115 @@
+{
+  "schema_version": 1,
+  "kind": "protocol",
+  "id": "urn:research:principia:protocol:two-substance-photon-sector",
+  "aliases": [
+    "two-substance-photon-sector"
+  ],
+  "activity": "active",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "c8d04c0c2da775ab76636f8b56e1a008619b339c",
+    "sha256": "sha256:c3bf8a263e5c5a4ca92fc13a2832ce4d6ff4f5f917436670b15f7f649ef210a0",
+    "path": "gates/two-substance-photon-sector.json",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Exact historical verdict and stated assumptions only; migration makes no new scientific inference."
+  ],
+  "missingness": [
+    "prospective-freeze-and-consumption-not-verified",
+    "scope"
+  ],
+  "legacy": {
+    "id": "two-substance-photon-sector",
+    "doc": "two-substance-vortex-vacuum",
+    "family": "two-substance-vortex-vacuum",
+    "kind": "existence",
+    "owed_object": "A single Maxwell photon sector (one cone, two polarizations, no birefringence, no detectable frame, γ=1), or a recast to one substance with a two-component order parameter. SUB-OBJECT (ORB-11219, algebra delivered): continuum linearized principal symbol and mode/constraint count of the existing packet Hamiltonian (two conserved densities, gradient-driven fluxes). That apparatus does not deliver the Maxwell sector — equal c₊=c₋ degenerates two longitudinal cones and leaves transverse flux frozen.",
+    "inherited_postulates": [
+      "postulate-lambda-coupling"
+    ],
+    "new_postulates": [],
+    "control": "Coupling-off λ=0 on a uniform rest background: the cubic term is absent from the linearized principal symbol. Unequal speeds c₊=0.65, c₋=1.0 (the existing packet fixture) are two distinct longitudinal cones. Equal-speed c₊=c₋ is the degeneracy the photon-sector conjecture proposed, not a Maxwell control.",
+    "kill": "The linearized packet symbol has two propagating transverse polarizations (Maxwell count) rather than four longitudinal acoustic branches plus frozen transverse currents. If a later sector exists, binding walls remain birefringence, two speeds, resonator anisotropy, or γ≠1.",
+    "forbidden_reopens": [
+      "two-substance-void-volume-ep",
+      "two-substance-conserving-far-field",
+      "two-substance-s2-fifth-force-charge",
+      "two-substance-fixed-length-universality"
+    ],
+    "blocked_phenomenology": [
+      "gravitating-radiation",
+      "s2-clocks"
+    ],
+    "comparator": "Maxwell plane-wave content versus two-fluid acoustics (studies/maxwell-mode-content-and-two-fluid-acoustics). Binding walls: studies/lorentz-violation-bounds and scalar-gravity-ppn-constraints.",
+    "claims": [
+      "two-substance-kill-condition-b",
+      "two-substance-packet-linear-modes",
+      "two-substance-packet-linear-local-only"
+    ],
+    "follow_on_fixture": "two-substance-packet-linear-symbol (Orrery ORB-11220, merged remote commit 73c9bd53e963e44bb365992c1df87a1077cc996f; frozen U0/U1/U2/B0/T0 gates all validated). It supports the stated linear mode properties and refutes the Maxwell reading of this apparatus only: four longitudinal roots, frozen transverse currents, no Gauss constraint. The live gate remains owed by a recast or different interaction; no nature claim or gravity wall moved.",
+    "analytic_attempt": {
+      "date": "2026-09-04",
+      "chapter": "theory/two-substance-vortex-vacuum/photon-mode-obstruction.md",
+      "outcome": "Conditional phase-only obstruction; gate stays open. Equal speeds do not supply transverse modes; Josephson locking gaps relative sound but attaches walls to relative-winding charge.",
+      "next_object": "Explicit gauge-sector action and constraints with defect-charge mapping, beyond a regular isotropic two-phase action.",
+      "control": "Josephson J=0 restores two gapless scalar modes and removes the locking wall tension."
+    }
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "semantic": {
+      "gate": {
+        "id": "two-substance-photon-sector",
+        "doc": "two-substance-vortex-vacuum",
+        "family": "two-substance-vortex-vacuum",
+        "kind": "existence",
+        "owed_object": "A single Maxwell photon sector (one cone, two polarizations, no birefringence, no detectable frame, γ=1), or a recast to one substance with a two-component order parameter. SUB-OBJECT (ORB-11219, algebra delivered): continuum linearized principal symbol and mode/constraint count of the existing packet Hamiltonian (two conserved densities, gradient-driven fluxes). That apparatus does not deliver the Maxwell sector — equal c₊=c₋ degenerates two longitudinal cones and leaves transverse flux frozen.",
+        "inherited_postulates": [
+          "postulate-lambda-coupling"
+        ],
+        "new_postulates": [],
+        "control": "Coupling-off λ=0 on a uniform rest background: the cubic term is absent from the linearized principal symbol. Unequal speeds c₊=0.65, c₋=1.0 (the existing packet fixture) are two distinct longitudinal cones. Equal-speed c₊=c₋ is the degeneracy the photon-sector conjecture proposed, not a Maxwell control.",
+        "kill": "The linearized packet symbol has two propagating transverse polarizations (Maxwell count) rather than four longitudinal acoustic branches plus frozen transverse currents. If a later sector exists, binding walls remain birefringence, two speeds, resonator anisotropy, or γ≠1.",
+        "forbidden_reopens": [
+          "two-substance-void-volume-ep",
+          "two-substance-conserving-far-field",
+          "two-substance-s2-fifth-force-charge",
+          "two-substance-fixed-length-universality"
+        ],
+        "blocked_phenomenology": [
+          "gravitating-radiation",
+          "s2-clocks"
+        ],
+        "comparator": "Maxwell plane-wave content versus two-fluid acoustics (studies/maxwell-mode-content-and-two-fluid-acoustics). Binding walls: studies/lorentz-violation-bounds and scalar-gravity-ppn-constraints.",
+        "claims": [
+          "two-substance-kill-condition-b",
+          "two-substance-packet-linear-modes",
+          "two-substance-packet-linear-local-only"
+        ],
+        "follow_on_fixture": "two-substance-packet-linear-symbol (Orrery ORB-11220, merged remote commit 73c9bd53e963e44bb365992c1df87a1077cc996f; frozen U0/U1/U2/B0/T0 gates all validated). It supports the stated linear mode properties and refutes the Maxwell reading of this apparatus only: four longitudinal roots, frozen transverse currents, no Gauss constraint. The live gate remains owed by a recast or different interaction; no nature claim or gravity wall moved.",
+        "analytic_attempt": {
+          "date": "2026-09-04",
+          "chapter": "theory/two-substance-vortex-vacuum/photon-mode-obstruction.md",
+          "outcome": "Conditional phase-only obstruction; gate stays open. Equal speeds do not supply transverse modes; Josephson locking gaps relative sound but attaches walls to relative-winding charge.",
+          "next_object": "Explicit gauge-sector action and constraints with defect-charge mapping, beyond a regular isotropic two-phase action.",
+          "control": "Josephson J=0 restores two gapless scalar modes and removes the locking wall tension."
+        }
+      },
+      "linked_prose": {
+        "theory/two-substance-vortex-vacuum/photon-mode-obstruction.md": "# Photon gate: phase modes and the cost of locking\n\nAnalytic attempt, 2026-09-04, under the existing\n`two-substance-photon-sector` existence gate. **Conditional result, not a family-wide\nrefutation:** a regular, isotropic two-phase superfluid cannot identify its linear\nphase waves with Maxwell photons. Equalizing their speeds does not supply transverse\npolarizations. Josephson locking removes a gapless phase but puts the proposed charged\nwindings on domain walls. Renaming two substances as two components alone fixes neither.\n\nThe registered nature claim `two-substance-kill-condition-b` remains **untested**.\nThis chapter specifies an obstruction within an explicit effective theory, not an\nadjudication of every microscopic completion. No new experiment or nature claim is added.\n\n## Assumptions and the quadratic action\n\nTake the [mechanics](mechanics.md) at its ordinary two-superfluid reading: two nonzero\ncondensates with phases \\(\\theta=(\\theta_1,\\theta_2)^T\\), separately conserved substance\nnumbers, a homogeneous isotropic rest background, and no independent gauge or orientational\nfield. Work away from vortex cores, at long wavelengths, with nonsingular positive\ncompressibility and stiffness matrices. Density fluctuations are auxiliary at leading\nderivative order; eliminating them gives\n\n\\[\n\\mathcal L_2=\\tfrac12\\dot\\theta^T K\\dot\\theta\n-\\tfrac12\\sum_i(\\partial_i\\theta)^T R(\\partial_i\\theta),\n\\qquad K=K^T>0,\\quad R=R^T>0.\n\\]\n\nOff-diagonal entries allow density coupling and entrainment. Independent constant phase\nshifts forbid a phase mass term. This is a specified hydrodynamic class, not a deduction\nthat the corpus has already supplied a microscopic action. Singular incompressible limits,\nvortex condensates, additional gapless fields, and anisotropic backgrounds are outside it.\nThe binary-condensate precedent and its limitations are sourced in\n[two-component phase locking](../../studies/two-component-phase-locking.md).\n\nFor a plane wave,\n\n\\[\n(\\omega^2K-k^2R)a=0,\\qquad\nc_{1,2}^2=\\operatorname{eig}(K^{-1/2}RK^{-1/2}).\n\\]\n\nThere are two positive acoustic eigenvalues. Requiring both to equal \\(c^2\\) makes the\nreal symmetric matrix \\(K^{-1/2}RK^{-1/2}=c^2I\\), hence **\\(R=c^2K\\)**. This can be\nimposed or protected by additional structure; it is not automatic from two components.\nEven when it holds, there are still two scalar modes.\n\nAt linear order each superfluid velocity is proportional to \\(\\nabla\\theta_a\\), and\nentrained currents are linear combinations of these gradients. Thus all these currents\nare parallel to \\(\\mathbf k\\). Rotating about \\(\\mathbf k\\) leaves the phase amplitudes\nunchanged. The two internal labels do not become the two spatial transverse polarizations\nof a Maxwell field. A local rotation-covariant vector constructed linearly from these\nscalars and derivatives is likewise longitudinal; taking its curl gives zero. Nonlinear\ncomposites or a new phase with emergent gauge structure require a separate derivation.\n\nConsequently **two different sound speeds are not, by themselves, optical birefringence**:\none must first identify the photon and how it couples to matter. Equal sound speeds are\nalso insufficient to pass this gate. Counting two amplitudes is insufficient to identify\ntheir transformation under spatial rotations.\n\n## The tempting repair changes the charge sector\n\nAs a diagnostic alternative, explicitly relax separate substance-number conservation and\nadd a Josephson energy \\(J[1-\\cos(\\theta_1-\\theta_2)]\\), with \\(J>0\\). This is a new\ninteraction being examined, **not adopted as a derived law**. Set \\(v=(1,-1)^T\\).\nAt \\(k=0\\), its quadratic mass matrix is \\(Jvv^T\\), giving\n\n\\[\n\\omega^2=0,\\qquad \\omega_J^2=Jv^TK^{-1}v.\n\\]\n\nOne phase becomes gapped; the surviving common-phase excitation is still scalar.\nThe full potential also exposes a topological cost hidden by that linear calculation.\nMinimizing over the common-phase gradient leaves the static relative phase\n\\(\\phi=\\theta_1-\\theta_2\\) with\n\n\\[\nE_\\phi=\\int d^3x\\left[\\tfrac12\\rho_{\\rm rel}|\\nabla\\phi|^2\n+J(1-\\cos\\phi)\\right],\\qquad\n\\rho_{\\rm rel}=(v^TR^{-1}v)^{-1}.\n\\]\n\nA planar \\(2\\pi\\) sine-Gordon wall has width\n\\(\\ell_J=\\sqrt{\\rho_{\\rm rel}/J}\\) and tension\n\\(T=8\\sqrt{\\rho_{\\rm rel}J}\\). These follow by the first integral\n\\(\\rho_{\\rm rel}(\\phi')^2/2=J(1-\\cos\\phi)\\) and integration from 0 to \\(2\\pi\\).\n\nNow apply the family's own charge assignment:\n\n\\[\n\\oint d\\phi=2\\pi(w_1-w_2)=-2\\pi q/e.\n\\]\n\nA defect with nonzero proposed charge therefore winds the **locked** relative phase.\nIt must carry a wall, meet another defect that cancels the relative winding, or terminate\nthe wall on a boundary. For long parallel vortex lines the wall energy per unit length\ngrows linearly with their separation once that separation exceeds \\(\\ell_J\\). In this\nregime the electron assignment \\((1,0)\\) and proton assignment \\((0,1)\\) both acquire\nthis cost; a combined \\((1,1)\\) winding is neutral and avoids the relative-phase wall.\nIt does not selectively explain why only proton constituents confine.\n\nThis is an obstruction for the stated vortex-line charge realization, not a proof about\nall localized three-dimensional particles. Closed loops, wall decay, finite boundaries,\nand core dynamics require their own analysis. The result also does **not** mean that an\nexisting winding can simply disappear while both order parameters stay nonzero on its\ncontour: explicit symmetry breaking, number conservation, and winding conservation are\ndifferent statements.\n\nThe control is \\(J=0\\): the relative gap and wall tension vanish, independent phase\nsymmetry returns, and both scalar acoustic branches remain. Increasing entrainment\nwithout breaking that symmetry changes \\(K,R\\); it does not generate this gap.\n\n## What would move the existing gate\n\nThis closes the two easy algebraic shortcuts within the assumptions above: matching\nspeeds, and gapping the relative phase. The broader gate remains open. Its next owed\nobject should be an explicit action and constraint structure that produce a transverse\ngauge sector, with a declared regime in which the phase-only assumptions cease to apply.\nThe proposal must show both its linear polarization content and its defect couplings;\ninserting a Maxwell field would be a postulate, not its emergence.\n\nMerely calling \\((\\psi_1,\\psi_2)\\) one order parameter leaves the calculation unchanged.\nA useful recast must change the symmetry, constraints, or phase of matter. It must also\nexplain whether the charge assignment survives. A single shared propagation cone for\ndefects and gauge excitations, absence of observable frame effects, and the gravitational\nlight sector remain further obligations. No inference about those follows from this\nflat-background mode calculation, and no universal-cone theorem is borrowed from the\ncorpus's Volovik analogy.\n"
+      }
+    },
+    "semantic_digest": "sha256:b961cf91f1e060ead556e90eab7476eed708248ed8979d6d8f3b29e177eda02f",
+    "freeze": "historical-unverified",
+    "frozen_at": null,
+    "freeze_evidence": null
+  },
+  "revision_id": "sha256:b961cf91f1e060ead556e90eab7476eed708248ed8979d6d8f3b29e177eda02f"
+}

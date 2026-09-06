@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Atheory%2Ftwo-substance-vortex-vacuum%2Fopen-questions.md",
+  "aliases": [
+    "source:principia:4e3b02c59b694d85016915177ef1ae157895ed7b:theory/two-substance-vortex-vacuum/open-questions.md"
+  ],
+  "activity": "active",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "3d8420e1dedec5a841844bbee7237c9275c519eb",
+    "sha256": "sha256:da56647640909b5b21b1f00ea6604208899aae68c620b2b3c02d290cfc84c694",
+    "path": "theory/two-substance-vortex-vacuum/open-questions.md",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Immutable archival source copy; upstream scientific ownership is unchanged."
+  ],
+  "missingness": [
+    "scope"
+  ],
+  "legacy": {
+    "source_pin": {
+      "repository": "principia",
+      "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "path": "theory/two-substance-vortex-vacuum/open-questions.md",
+      "blob_oid": "3d8420e1dedec5a841844bbee7237c9275c519eb",
+      "sha256": "sha256:da56647640909b5b21b1f00ea6604208899aae68c620b2b3c02d290cfc84c694",
+      "bytes": 5843,
+      "commit_metadata": "4e3b02c59b694d85016915177ef1ae157895ed7b\n2026-09-06T02:49:35+00:00\n2026-09-06T02:49:35+00:00\nfeat: Migrate the wide-binary control pilot into versioned scientific r… [ORB-11378]\n"
+    },
+    "text": "## Open questions\n\n- **Closed — does the packet's common response survive at λ=0, and is it attached?**\n  ORB-10941's control in\n  [two-substance-dynamical-packet](../../../orrery/lab/sims/two-substance-dynamical-packet/)\n  measured the largest λ=0 common magnitude at 2.42×10⁻¹², below the 2.62×10⁻¹⁰ floor,\n  while the nonzero response scales linearly with λ. The inserted coupling is therefore the\n  cause. The resolved structure is a trailing wake (median late lag −0.84 packet widths;\n  common speed 0.673 versus relative-packet speed 0.970), not an attached common component.\n  The control gate closes; the hook remains mixed and does not reopen the refuted far-field\n  claim or supply a gravity-source law.\n- **The source-law debt — where does substance go?** The family's one consolidated\n  gravitational debt (§ three-strike convergence): ORB-10162 measured that no natural\n  counting rule yields the r^(−3/2) volumetric sink, ORB-10164 measured that a conserving\n  two-substance lattice has no far monopole at all, and §B2's incompressible fork owes\n  exactly the same consumption law analytically. These were three open items; they are one\n  owed object — a derived law of non-conservation. Until it exists the family has no\n  gravitational sector: the parent bridge stays refuted, kill condition A's fork stays\n  mooted, and the B2 clock requirement stands unmet. Routes, unchanged: named postulate,\n  derivation from deeper S2 dynamics, or concession.\n- **Can the single-photon-sector theorem be proven — or must \"two substances\" be recast?**\n<<<<<<< Updated upstream\n  The Volovik standard suggests the theorem may only be available for one vacuum with a\n  two-component order parameter, not two genuinely independent substances. If so, the\n  recasting changes the ontology's headline (two *components*, one substance) while\n  keeping the winding/void structure — worth doing carefully rather than by fiat.\n  **Closed for the existing packet Hamiltonian (ORB-11219):** equalizing \\(c_+\\) and\n  \\(c_-\\) on that two-density, gradient-driven apparatus degenerates two longitudinal\n  cones and leaves transverse flux frozen; it is not a Maxwell sector\n  ([packet-hamiltonian-linearization](packet-hamiltonian-linearization.md)). The\n  question remains open for a different interaction or the order-parameter recast.\n  **Validated for that apparatus (ORB-11220, Orrery `73c9bd53e963e44bb365992c1df87a1077cc996f`):**\n  the named fixture passed its frozen symbol, evolution, λ, background, transverse, and\n  refinement controls, so this linear mode count is no longer an open verification item.\n  The open object is still a recast or different interaction, not a reinterpretation of scalar\n  degeneracy as Maxwell.\n=======\n  [The phase-mode calculation](photon-mode-obstruction.md) rules out speed matching and\n  Josephson locking as sufficient repairs within a regular isotropic phase-only action.\n  Locking also puts the proposed charged windings on domain walls. The next owed object\n  is an explicit action with a transverse gauge sector and consistent defect charge;\n  renaming two substances as one two-component order parameter does not supply it.\n  The general existence claim remains untested.\n>>>>>>> Stashed changes\n- **What sets 1836?** The split explains why the mass ratio is *unconstrained* by charge;\n  it says nothing about its value. A core-energy computation (composite of three confined\n  sub-vortices vs one unit anti-polarity vortex) is the natural first target once a\n  lattice apparatus exists.\n- **Spin-½, statistics, and the neutrino.** All three are outside the current mechanics;\n  the vortex-electron family's Bell-test refutation\n  ([vortex-electron](../vortex-electron/)) additionally warns that any *local hidden\n  configuration* reading of defect spin dies against CHSH regardless of mechanism.\n- **Why does one polarity confine in triples?** The asymmetry between the electron (free\n  unit vortex) and the proton (confined triple) is asserted by assignment, not derived.\n- **Does the substrate headroom mechanic reproduce the parent's fitted β-boost?** If the\n  scarcity field is this model's far-field limit, the parent's one empirical success (the\n  ORB-10077 galactic fit) becomes a constraint on substrate depletion at galactic scale —\n  untouched here, and the right kind of second observable *once the source-law debt is\n  paid*: ORB-10164 measured the conserving substrate producing no far field at all, so\n  there is currently no far-field limit to constrain (§ lattice adjudications). The\n  ORB-10161 resolution adds the constraint's shape: whatever carries the boost must live in\n  the metric sector (Branch A is dead). **ORB-10169 has since reshaped the target itself**\n  (parent § form and universality adjudication): the fixed-β form is refuted as a universal\n  law — β_i tracks galaxy size, and the data organize by acceleration — so the far-field\n  limit a paid source-law debt must reproduce is *not* one β; it is a per-galaxy or\n  acceleration-organized boost the family does not yet have. The universality falsifier has\n  fired; what stands in its place is the parent's harder open question — whether any\n  derivable substrate mechanic produces acceleration organization.\n- **Can any medium be pressureless to its own flow and exactly stiff to its excitations?**\n  The B2 requirement — bulk response ≲ 15 m/s under the flow while excitations propagate at\n  c, density-independence of the excitation speed to parts in 10¹³ — is the S2 sector's\n  hardest new constraint. He II and ³He show the *shape* (decoupled speeds) is realizable,\n  not the magnitude (10¹–10² vs the needed ≥ 10⁷). A microphysical S2 equation-of-state\n  proposal, or a proof that no condensate-like medium satisfies it, moves the branch either\n  way.\n",
+    "commit_object": "tree 682cccb1cf19c89c2c5f4371c14ed2b384d2ae8c\nparent 13866b2848fbcce9a1f1ef2d4b97051a65f7e626\nauthor orbit[gpt-6-astra] <agent@orbit.invalid> 1788662975 +0000\ncommitter orbit <orbit@orbit.local> 1788662975 +0000\n\nfeat: Migrate the wide-binary control pilot into versioned scientific r… [ORB-11378]\n\nMigrate the wide-binary control pilot into versioned scientific records\n\nPlanned-By: codex\n"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "source",
+    "availability": "available",
+    "snapshot_digest": "sha256:da56647640909b5b21b1f00ea6604208899aae68c620b2b3c02d290cfc84c694",
+    "locator": null,
+    "media_type": "text/plain"
+  },
+  "revision_id": "sha256:8730fecb6cb053167d331eafebb00b4241a9ae0f4f95b8685cef8073a8924d85"
+}

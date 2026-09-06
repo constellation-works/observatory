@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "kind": "assessment",
+  "id": "urn:research:principia:assessment:scarcity-yukawa-cutoff%3Alegacy-verdict",
+  "aliases": [
+    "scarcity-yukawa-cutoff:legacy-verdict"
+  ],
+  "activity": "unknown",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "b5f58c64f4c6bf9d7d7f67c826f5d2dd7c9cb64f",
+    "sha256": "sha256:996b059ca4b45cee6dd42a503594508ebb8d6d13211ad1104df3754b116d5976",
+    "path": "theory/gravity-as-scarcity/claims.json",
+    "selector": "/claims/2",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Exact historical verdict and stated assumptions only; migration makes no new scientific inference."
+  ],
+  "missingness": [
+    "exact-evidence-owner-references",
+    "independently-verified-controls",
+    "activity",
+    "scope"
+  ],
+  "legacy": {
+    "id": "scarcity-yukawa-cutoff",
+    "family": "gravity-as-scarcity",
+    "kind": "model-property",
+    "status": "supported",
+    "claim": "Subtractive budget gives a hard cutoff radius r ≈ (3T/4π)^⅓ beyond which gravity dies (Yukawa-cartoon)",
+    "evidence": "[scarcity-capped-cumulative-field](../../../orrery/lab/sims/scarcity-capped-cumulative-field/), [scarcity-star-well-headroom](../../../orrery/lab/sims/scarcity-star-well-headroom/) — as a property of the *model*; no claim it matches nature",
+    "links": [
+      "../../../orrery/lab/sims/scarcity-capped-cumulative-field/",
+      "../../../orrery/lab/sims/scarcity-star-well-headroom/"
+    ],
+    "in_doc_ledger": true
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "claim": {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:scarcity-yukawa-cutoff",
+      "revision_id": "sha256:35717abef00d0dda75cffd25b243569f3f31202233661354e78467510d5ef1f4",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    "verdict": "supported",
+    "legacy_verdict": "supported",
+    "inference": "historical",
+    "basis": "legacy-report",
+    "controls": "unknown",
+    "rationale": "[scarcity-capped-cumulative-field](../../../orrery/lab/sims/scarcity-capped-cumulative-field/), [scarcity-star-well-headroom](../../../orrery/lab/sims/scarcity-star-well-headroom/) — as a property of the *model*; no claim it matches nature",
+    "evidence": []
+  },
+  "revision_id": "sha256:7d12be08678988bb5f878120948882b76065a18798545d2b829d551390adbb96"
+}

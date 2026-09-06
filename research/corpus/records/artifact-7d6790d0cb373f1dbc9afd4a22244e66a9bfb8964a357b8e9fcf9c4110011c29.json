@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Astudies%2Friver-model-and-analog-gravity.md",
+  "aliases": [
+    "source:principia:4e3b02c59b694d85016915177ef1ae157895ed7b:studies/river-model-and-analog-gravity.md"
+  ],
+  "activity": "active",
+  "scope": "literature",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "99121ae72daf21473259c3909619cca5f5f3619c",
+    "sha256": "sha256:b151150786ea8620df4bacc154bdf9d5bb8177e18e973d899052c3acb80121bd",
+    "path": "studies/river-model-and-analog-gravity.md",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Immutable archival source copy; upstream scientific ownership is unchanged."
+  ],
+  "missingness": [],
+  "legacy": {
+    "source_pin": {
+      "repository": "principia",
+      "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "path": "studies/river-model-and-analog-gravity.md",
+      "blob_oid": "99121ae72daf21473259c3909619cca5f5f3619c",
+      "sha256": "sha256:b151150786ea8620df4bacc154bdf9d5bb8177e18e973d899052c3acb80121bd",
+      "bytes": 5958,
+      "commit_metadata": "4e3b02c59b694d85016915177ef1ae157895ed7b\n2026-09-06T02:49:35+00:00\n2026-09-06T02:49:35+00:00\nfeat: Migrate the wide-binary control pilot into versioned scientific r… [ORB-11378]\n"
+    },
+    "text": "---\ntitle: \"The river model (Gullstrand–Painlevé) and analog gravity (acoustic metrics)\"\nstatus: active\ncreated: 2026-07-12\nupdated: 2026-07-12\n---\n\n# The river model (Gullstrand–Painlevé) and analog gravity (acoustic metrics)\n\nTwo pieces of established physics that make \"space flows into masses\" a precise statement\nrather than a picture: the Gullstrand–Painlevé (GP) form of the Schwarzschild geometry and\nits physical elaboration as the *river model*; and Unruh's acoustic metrics, the canonical\ndemonstration that excitations of a flowing medium propagate on an effective Lorentzian\ngeometry. These are the canonical families the dynamical reading of gravity-as-scarcity is\nplaced against in [theory/gravity-as-scarcity](../theory/gravity-as-scarcity/) (ORB-10159).\n\n## Gullstrand–Painlevé coordinates and the river model\n\nThe Schwarzschild geometry in GP coordinates (Painlevé 1921, *C. R. Acad. Sci. (Paris)* 173,\n677; Gullstrand 1922, *Ark. Mat. Astron. Fys.* 16(8), 1):\n\n> ds² = −c²dt² + (dr + v(r) dt)² + r²dΩ²,  with v(r) = √(2GM/r)\n\nSame geometry as Schwarzschild — a coordinate transformation, not a different theory. Its\nreading (Hamilton & Lisle 2008, \"The river model of black holes\", *Am. J. Phys.* 76, 519;\narXiv:gr-qc/0411060): flat space \"flows\" radially inward with the Newtonian escape velocity\nv = √(2GM/r); local physics is special relativity in the frame comoving with the flow;\nobjects move through the flowing space per SR while the space itself falls in. Load-bearing\nfacts, each verifiable from the line element:\n\n- **The flow free-falls.** v(r) = √(2GM/r) is exactly the speed of an observer falling from\n  rest at infinity: ½v² = GM/r. The river obeys Newtonian energy conservation in the flat\n  background — it accelerates down the potential it represents.\n- **A static clock dilates by the flow speed.** Setting dr = dΩ = 0: dτ² = (1 − v²/c²)dt²,\n  so √(−g₀₀) = √(1 − v²/c²) = √(1 − 2GM/c²r) — *exactly* the Schwarzschild time dilation. In\n  the river reading, gravitational time dilation *is* SR time dilation of a clock swimming\n  upstream at v(r).\n- **The horizon is where the river reaches c**: v(r_s) = c at r_s = 2GM/c², and inside it\n  the flow is superluminal relative to infinity (nothing local exceeds c relative to the\n  river). Regular at the horizon; the constant-t spatial slices are flat.\n- **Flux arithmetic** (ours, from the line element — flagged as derived, not sourced): the\n  volume flux through a shell is 4πr²v(r) ∝ r^(3/2), *growing* outward. A GP river with\n  incompressible density is therefore not a flux-conserving flow with a point sink: in a\n  steady state, volume must be destroyed *throughout* the region (sink density\n  ∝ r^(−3/2)), predominantly at large radius per shell (∝ r^(1/2) per unit radius). A\n  flux-conserving point-sink flow would instead force v ∝ 1/r², which is *not* the GP\n  profile and yields the wrong time dilation (∝ 1/r⁴ rather than the measured GM/c²r — see\n  [gravitational-time-dilation](gravitational-time-dilation.md)).\n- **The caution the source itself carries:** Hamilton & Lisle stress the river is a\n  coordinate dressing of Schwarzschild — nothing observable \"moves\"; in pure GR the flow\n  field is gauge and only the geometry it encodes is physical. Treating the river as a\n  physical medium is an *addition* to GR, not a reading of it.\n\n## Acoustic metrics and analog gravity\n\nUnruh 1981 (\"Experimental black-hole evaporation?\", *Phys. Rev. Lett.* 46, 1351): sound\nwaves in an irrotational barotropic fluid with flow velocity **v** and sound speed c_s\npropagate exactly as a massless scalar field on the effective (\"acoustic\") metric\n\n> ds² ∝ −(c_s² − v²)dt² − 2**v**·d**x** dt + d**x**²\n\nThe standard modern reference is Barceló, Liberati & Visser 2011, \"Analogue Gravity\",\n*Living Rev. Relativity* 14:3. Load-bearing facts:\n\n- **Excitations of a moving medium see a Lorentzian geometry.** For phonons, \"being carried\n  by the flow\" is not an interaction with a coupling constant — a phonon *is* a disturbance\n  of the medium, so advection is constitutive. This is the canonical answer to \"why would\n  matter be dragged by flowing space\": it is dragged if and only if it is an excitation *of*\n  the space, not a foreign body *in* it.\n- **Constant c_s + GP flow = Schwarzschild.** If the medium's propagation speed is uniform\n  and the flow has the free-fall profile v = √(2GM/r), the acoustic line element is exactly\n  the GP form above, i.e. exactly the Schwarzschild geometry: a sonic horizon where v = c_s\n  (Unruh's sonic black hole). All effects usually attributed to the spatial potential\n  (γΦ — deflection toward the mass, Shapiro *delay*) are then supplied by flow drag, with\n  no refractive-index gradient at all.\n- **Lorentz invariance is emergent and low-energy only.** All excitations of one medium\n  share one limiting speed c_s, so no experiment *made of the excitations* detects uniform\n  motion relative to the medium at leading order — a Michelson–Morley null by construction.\n  The invariance breaks at the medium's microstructure scale, appearing as high-frequency\n  dispersion (see [lorentz-violation-bounds](lorentz-violation-bounds.md)).\n- **The dynamics is not GR's.** Analog metrics reproduce kinematics (wave propagation on a\n  fixed background); the medium's flow obeys fluid equations, not Einstein's equations. An\n  analog model owes its own account of *why* the flow has the GR-matching profile.\n\n## What this binds in our corpus\n\nThe dynamical (\"river\") reading of gravity-as-scarcity is a member of exactly this family:\nits clock sector works only if the lattice inflow has the free-fall profile (GP), and its\nmatter coupling works only in the excitation (analog-gravity) reading. The derivation and\nverdicts live in [theory/gravity-as-scarcity](../theory/gravity-as-scarcity/)\n(ORB-10159 section and ledger).\n",
+    "commit_object": "tree 682cccb1cf19c89c2c5f4371c14ed2b384d2ae8c\nparent 13866b2848fbcce9a1f1ef2d4b97051a65f7e626\nauthor orbit[gpt-6-astra] <agent@orbit.invalid> 1788662975 +0000\ncommitter orbit <orbit@orbit.local> 1788662975 +0000\n\nfeat: Migrate the wide-binary control pilot into versioned scientific r… [ORB-11378]\n\nMigrate the wide-binary control pilot into versioned scientific records\n\nPlanned-By: codex\n"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "source",
+    "availability": "available",
+    "snapshot_digest": "sha256:b151150786ea8620df4bacc154bdf9d5bb8177e18e973d899052c3acb80121bd",
+    "locator": null,
+    "media_type": "text/plain"
+  },
+  "revision_id": "sha256:7d6790d0cb373f1dbc9afd4a22244e66a9bfb8964a357b8e9fcf9c4110011c29"
+}

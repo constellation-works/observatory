@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Astudies%2Fgravitational-time-dilation.md",
+  "aliases": [
+    "source:principia:4e3b02c59b694d85016915177ef1ae157895ed7b:studies/gravitational-time-dilation.md"
+  ],
+  "activity": "active",
+  "scope": "literature",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "0ef084d822a542631f099eae7e0b10eb72bd3d7d",
+    "sha256": "sha256:2ed460060090306a3d10c496f1051d82da70245ad197953d2275f2073a2406b2",
+    "path": "studies/gravitational-time-dilation.md",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Immutable archival source copy; upstream scientific ownership is unchanged."
+  ],
+  "missingness": [],
+  "legacy": {
+    "source_pin": {
+      "repository": "principia",
+      "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "path": "studies/gravitational-time-dilation.md",
+      "blob_oid": "0ef084d822a542631f099eae7e0b10eb72bd3d7d",
+      "sha256": "sha256:2ed460060090306a3d10c496f1051d82da70245ad197953d2275f2073a2406b2",
+      "bytes": 5275,
+      "commit_metadata": "4e3b02c59b694d85016915177ef1ae157895ed7b\n2026-09-06T02:49:35+00:00\n2026-09-06T02:49:35+00:00\nfeat: Migrate the wide-binary control pilot into versioned scientific r… [ORB-11378]\n"
+    },
+    "text": "---\ntitle: \"Gravitational time dilation: the measured ladder from Pound–Rebka to optical clocks\"\nstatus: active\ncreated: 2026-07-12\nupdated: 2026-07-12\n---\n\n# Gravitational time dilation: the measured ladder from Pound–Rebka to optical clocks\n\nThe established-physics wall any theory without a clock sector runs into: gravitational time\ndilation is *measured*, at precisions from 10% (1960) to parts in 10⁵ of the effect (today),\nacross baselines from one millimeter to 10⁴ km, and it is engineering fact in GPS. In\nweak-field GR the fractional rate deficit of a clock at potential Φ = −GM/r is |Φ|/c² = GM/c²r\n— a pure g₀₀ effect that slow massive particles and clocks probe even though they never probe\nthe spatial potential γΦ (see\n[scalar-gravity-ppn-constraints](scalar-gravity-ppn-constraints.md)). This note carries the\nmeasured ladder the gravity-as-scarcity clock sector is confronted with in\n[theory/gravity-as-scarcity](../theory/gravity-as-scarcity/) (ORB-10159).\n\n## The measured ladder\n\n| Experiment | Baseline | Result | Source |\n|---|---|---|---|\n| Pound–Rebka 1960 (¹⁵⁷Fe Mössbauer, Harvard tower) | 22.5 m | gΔh/c² = 2.46×10⁻¹⁵ confirmed to ~10% | Pound & Rebka 1960, *Phys. Rev. Lett.* 4, 337 |\n| Pound–Snider 1965 (same apparatus, improved) | 22.5 m | agreement to ~1% | Pound & Snider 1965, *Phys. Rev.* 140, B788 |\n| Gravity Probe A 1976 (H-maser on a ballistic rocket) | 0 → 10⁴ km altitude | GM/r redshift profile tracked continuously along the trajectory; agreement to 7×10⁻⁵ | Vessot et al. 1980, *Phys. Rev. Lett.* 45, 2081 |\n| GPS (operational, continuous) | 20,200 km orbits | net satellite clock rate +38.6 μs/day (gravitational +45.7, second-order Doppler −7.1); fractional 4.46×10⁻¹⁰, corrected by design | Ashby 2003, *Living Rev. Relativity* 6:1 |\n| Galileo 5 & 6 (eccentric orbits after launch anomaly, e ≈ 0.16) | periodic ΔΦ modulation | GM/r profile via orbital modulation; violation parameter (0.19 ± 2.48)×10⁻⁵ | Delva et al. 2018, *Phys. Rev. Lett.* 121, 231101 |\n| Al⁺ optical clocks (NIST) | 33 cm of lab height | rate difference (4.1 ± 1.6)×10⁻¹⁷, consistent with gΔh/c² | Chou et al. 2010, *Science* 329, 1630 |\n| Sr lattice clocks, Tokyo Skytree | 450 m | redshift confirmed; LPI violation parameter (1.4 ± 9.1)×10⁻⁵ | Takamoto et al. 2020, *Nature Photonics* 14, 411 |\n| Yb lattice clocks (NIST) | — | total systematic uncertainty 1.4×10⁻¹⁸ — sensitive to ~1 cm of height | McGrew et al. 2018, *Nature* 564, 87 |\n| Sr ensemble, single sample | 1 mm | redshift gradient resolved *within one atomic sample* | Bothwell et al. 2022, *Nature* 602, 420 |\n\nThree properties of the ladder matter for theory confrontation, beyond the bare existence of\nthe effect:\n\n1. **The profile is tested, not just the local gradient.** Tower and lab experiments test\n   gΔh/c² (the local gradient of the potential); Gravity Probe A and the eccentric Galileo\n   clocks test the *shape* Φ ∝ 1/r over ~10⁴–10⁴·⁵ km of altitude at the 10⁻⁵–10⁻⁴ level. A\n   theory predicting a dilation profile other than GM/c²r (e.g. ∝ 1/r² or 1/r⁴) fails these\n   even if it can be tuned to match g at one height.\n2. **The magnitude is anchored to the same G and M as orbital dynamics.** GPS works because\n   the clock effect and the satellite dynamics are two faces of one potential; a theory\n   cannot rescale one without breaking the other.\n3. **Universality (local position invariance) is separately bounded.** Clock-comparison\n   tests bound *species-dependent* deviations (different atoms redshifting differently) at\n   the 10⁻⁵–10⁻⁶ level of the effect (Takamoto 2020, Delva 2018 above); a strictly universal\n   (species-independent) rescaling of all clock rates evades these null-redshift tests and is\n   constrained only by comparisons against a reference *outside* the rescaled region —\n   ephemeris/pulsar timing rather than co-located clock pairs.\n\n## Constancy in time\n\nA related measured anchor: the effective coupling cannot drift. Lunar laser ranging bounds\nĠ/G = (7.1 ± 7.6)×10⁻¹⁴ yr⁻¹ (Hofmann & Müller 2018, *Class. Quantum Grav.* 35, 035015).\nAny mechanism whose stored potential *accumulates* on ~Gyr timescales (fractional growth\n~1/t_age ≈ 2×10⁻¹⁰ yr⁻¹ for the solar system) is excluded by more than three orders of\nmagnitude unless it reaches a steady state.\n\n## What this binds in our corpus\n\nA theory whose gravitational field is a static spatial structure with **no clock mechanism**\npredicts zero gravitational time dilation and is refuted by every row of the ladder above. A\ntheory that buys dilation from motion through a flowing medium (the river reading — see\n[river-model-and-analog-gravity](river-model-and-analog-gravity.md)) must produce the\ndilation factor √(1 − v²/c²) with v² = 2GM/r *exactly*, because rows 3–5 test the profile,\nnot only the local gradient. The confrontation lives in\n[theory/gravity-as-scarcity](../theory/gravity-as-scarcity/) (ORB-10159 section and\nledger). The redshift rungs beyond the solar neighborhood (solar disk, S2 at Sgr A*, galaxy\nclusters) are in\n[gravitational-redshift-astronomical](gravitational-redshift-astronomical.md).\n",
+    "commit_object": "tree 682cccb1cf19c89c2c5f4371c14ed2b384d2ae8c\nparent 13866b2848fbcce9a1f1ef2d4b97051a65f7e626\nauthor orbit[gpt-6-astra] <agent@orbit.invalid> 1788662975 +0000\ncommitter orbit <orbit@orbit.local> 1788662975 +0000\n\nfeat: Migrate the wide-binary control pilot into versioned scientific r… [ORB-11378]\n\nMigrate the wide-binary control pilot into versioned scientific records\n\nPlanned-By: codex\n"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "source",
+    "availability": "available",
+    "snapshot_digest": "sha256:2ed460060090306a3d10c496f1051d82da70245ad197953d2275f2073a2406b2",
+    "locator": null,
+    "media_type": "text/plain"
+  },
+  "revision_id": "sha256:29e5c5db2f5f27605f987a76e09857fb1b4a91f9dc086f5aae0ac8f7b2d23ff2"
+}

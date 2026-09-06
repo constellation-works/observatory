@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "kind": "claim",
+  "id": "urn:research:principia:claim:two-substance-conserving-far-field",
+  "aliases": [
+    "two-substance-conserving-far-field"
+  ],
+  "activity": "active",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "94e76368a84e00ed742153d77b3d25dd5962c664",
+    "sha256": "sha256:c95d48cf673efa43d6d77005c73cadea42fac1ff00da556a7b7fd260df14f9a6",
+    "path": "theory/two-substance-vortex-vacuum/claims.json",
+    "selector": "/claims/12",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Exact historical verdict and stated assumptions only; migration makes no new scientific inference."
+  ],
+  "missingness": [
+    "scope"
+  ],
+  "legacy": {
+    "id": "two-substance-conserving-far-field",
+    "family": "two-substance-vortex-vacuum",
+    "kind": "nature",
+    "status": "refuted",
+    "claim": "The model derives gravity-as-scarcity as its effective far field (defect ensembles produce accumulated depletion ∝ 1/r; moving defects produce the scarcity wake)",
+    "evidence": "**Measured (ORB-10164, [two-substance-defect-gravity](../../../orrery/lab/sims/two-substance-defect-gravity/), orrery `712a814`, § lattice adjudications):** in a substance-conserving lattice the balanced defect's expelled halo cancels the signed monopole exactly (net deficit −2.0×10⁻¹⁴, 1.6×10⁻¹⁶ of the 122.88 void volume); the radii-36–44 signal is 3.95×10⁻⁷ of an uncompensated 1/r control the estimator resolves at relative RMSE 2.1×10⁻¹⁶. **Far-field sourcing from conservation-respecting voids is refuted at the mechanic level** — \"moving clump of void creates scarcity\" fails as stated; the parent's field requires a nonconserving sink or other net source, absent here (faraday's L-0005). Survives: the compact void structure (void-volume-controlled) and the *kinematic* wake (forced core drags a lagging wake, pattern/core velocity ratio 0.999997 at speed 0.30, lag 0.586 cells — motion imposed, no stability shown). What re-opens the row: paying the **source-law debt** (§ three-strike convergence)",
+    "links": [
+      "../../../orrery/lab/sims/two-substance-defect-gravity/"
+    ],
+    "in_doc_ledger": true
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "claim",
+    "statement": "The model derives gravity-as-scarcity as its effective far field (defect ensembles produce accumulated depletion ∝ 1/r; moving defects produce the scarcity wake)",
+    "domain": "nature"
+  },
+  "revision_id": "sha256:79833fe55b0b26ed869d5d50da35b7001073b4c88b3beb097fedb0ea98669d3f"
+}

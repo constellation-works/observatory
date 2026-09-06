@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "kind": "claim",
+  "id": "urn:research:principia:claim:two-substance-em-sign-2d",
+  "aliases": [
+    "two-substance-em-sign-2d"
+  ],
+  "activity": "active",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "94e76368a84e00ed742153d77b3d25dd5962c664",
+    "sha256": "sha256:c95d48cf673efa43d6d77005c73cadea42fac1ff00da556a7b7fd260df14f9a6",
+    "path": "theory/two-substance-vortex-vacuum/claims.json",
+    "selector": "/claims/6",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Exact historical verdict and stated assumptions only; migration makes no new scientific inference."
+  ],
+  "missingness": [
+    "scope"
+  ],
+  "legacy": {
+    "id": "two-substance-em-sign-2d",
+    "family": "two-substance-vortex-vacuum",
+    "kind": "nature",
+    "status": "mixed",
+    "claim": "Like-polarity defects repel, opposite attract, with a 1/r² far field (the EM correspondence)",
+    "evidence": "**Measured in 2-D (ORB-10163, [two-substance-vortex-lattice](../../../orrery/lab/sims/two-substance-vortex-lattice/), orrery `7eb10ec`, § lattice adjudications):** sign supported — like repels (+0.137474 mean far force), opposite attracts (−0.137443); the Bjerknes reversal did not bite, *given the declared relative-phase coupling* (a model hypothesis, not emergent). Law: force exponent −1.051 with a log potential (fit RMSE 0.0070 vs 0.1383 for 1/r) — correct 2-D point-vortex physics; **the 3-D 1/r² half is deliberately unclaimed** (needs a vortex-line/ring apparatus, not yet filed). Contact mechanism qualified: the density/capacity term strengthens like-repulsion +2.51% at 8–16 cells but reverses below 12 cells (−0.0746 at the 8-cell probe) — the ontology's contact-repulsion mechanism is not monotonic in this parameterization",
+    "links": [
+      "../../../orrery/lab/sims/two-substance-vortex-lattice/"
+    ],
+    "in_doc_ledger": true,
+    "control": "Declared relative-phase coupling; Bjerknes reversal is the named alternative."
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "claim",
+    "statement": "Like-polarity defects repel, opposite attract, with a 1/r² far field (the EM correspondence)",
+    "domain": "nature"
+  },
+  "revision_id": "sha256:e4c18b775bd0b44732f93e4fdf3a2a64e112fefb98060f4fabe0c2a032c9efac"
+}

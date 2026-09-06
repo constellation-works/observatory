@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Atheory%2Fgravity-as-scarcity%2Flattice-adjudication.md",
+  "aliases": [
+    "source:principia:4e3b02c59b694d85016915177ef1ae157895ed7b:theory/gravity-as-scarcity/lattice-adjudication.md"
+  ],
+  "activity": "active",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "d8eb9d60c94a2c742b9c7fef4123e4b50a185c69",
+    "sha256": "sha256:c8e6e06a757343aff2a0c31eccbf9d5a960bedb7796cfd789fc73714c1ae7a34",
+    "path": "theory/gravity-as-scarcity/lattice-adjudication.md",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Immutable archival source copy; upstream scientific ownership is unchanged."
+  ],
+  "missingness": [
+    "scope"
+  ],
+  "legacy": {
+    "source_pin": {
+      "repository": "principia",
+      "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "path": "theory/gravity-as-scarcity/lattice-adjudication.md",
+      "blob_oid": "d8eb9d60c94a2c742b9c7fef4123e4b50a185c69",
+      "sha256": "sha256:c8e6e06a757343aff2a0c31eccbf9d5a960bedb7796cfd789fc73714c1ae7a34",
+      "bytes": 5875,
+      "commit_metadata": "4e3b02c59b694d85016915177ef1ae157895ed7b\n2026-09-06T02:49:35+00:00\n2026-09-06T02:49:35+00:00\nfeat: Migrate the wide-binary control pilot into versioned scientific r… [ORB-11378]\n"
+    },
+    "text": "## The lattice adjudication — the ORB-10162 measurement\n\nThe first of the clock sector's two gates has run (faraday,\n[dynamical-consumption-lattice](../../../orrery/lab/sims/dynamical-consumption-lattice/),\norrery `98396a8`, seed 42): a 1000-shell radial counting lattice with deficit-driven\nnearest-neighbour hopping, a fixed-density outer reservoir, and the mechanic's two natural\nlocal destruction rules, evolved from a full state to demonstrated steady state (final step\nchange < 10⁻⁹ of the maximum standing deficit; shell-balance residuals 9.4×10⁻⁹ and\n7.9×10⁻¹¹ of total sink; byte-identical reruns). Fits span radii 10–500 — 1.699 decades,\n491 face samples:\n\n| Local consumption rule | Measured v(r) exponent (± SE, 95% CI) | Nearest candidate law | Sink scaling per shell |\n|---|---|---|---|\n| central-only (sink at the mass — the naive rule) | −2.00062 ± 0.00002, [−2.00065, −2.00059] | r⁻² — the flux-conserving branch, §(b) rule 1 | localized to the innermost shell |\n| equal-per-shell (the Gauss bookkeeping read as a rate) | −0.99454 ± 0.00036, [−0.99524, −0.99383] | r⁻¹ — the budget-flow branch, §(b) rule 2 | r^(0.00029 ± 0.00026), CI [−0.00022, 0.00079] — flat |\n\n**The gate, applied.** Each rule locked in exactly the flow that continuity dictates for its\nsink distribution — the two branches §(b) refuted against the clock ladder — and neither\nself-organized toward free-fall: the naive rule *is* the predeclared kill-condition\nflux-conserving flow, and the mechanic's own bookkeeping draws a flat r⁰ per-shell budget\nwhere the GP river requires r^(1/2) (the measured CI excludes 1/2 by three orders of\nmagnitude). ORB-10162's predeclared gate — *\"a lattice whose natural consumption rules\ncannot produce the free-fall flow refutes the river completion at the mechanic level\"* —\nfires: **the GP flow does not emerge from the existing counting mechanic** (river-fork\nledger row moved `mixed` → `refuted`). What survives is exactly what was derived and no\nmore: extending the rolling rule to space yields GP analytically (§(b) branch 3 stands as\nmathematics), but the r^(−3/2) volumetric destruction law that sustains it is now a\n**measured** debt — the existing rules produce r⁰, and the lattice does not bend toward\nr^(1/2) on its own.\n\n**The time-integrated snapshot, reconciled.** ORB-10159's consistency identity — the static\nΣ 1/count ∝ 1/r field is the comoving time-integral of the flow — was claimed *for branch 3*\n(GP flow over a distributed volumetric sink). The measured branches do not exhibit it:\ncentral-only's *standing* deficit reproduces the finite-reservoir static shape A(1/r − 1/R)\nat R² = 0.99999992 (relative RMSE 3.6×10⁻⁵) — the verified static field returns — but a\ncomoving parcel on that branch accumulates *zero* destruction before the innermost sink, so\nthe standing 1/r is a diffusion-against-reservoir profile, not the comoving record of\nanything; equal-per-shell matches neither shape (standing R² = −0.838, comoving R² = −17.30).\nScope, stated precisely: this does **not** refute the branch-3 identity — no GP branch\nemerged for the measurement to test it on, so the identity stands as derived, exactly as\nconditional as the branch it lives on. What the measurement *removes* is ambient support:\nthe lattice manifestly produces the verified 1/r standing field with no comoving history\nbehind it, so the static sims' 1/r result can no longer be read as suggestive evidence *for*\nthe flow interpretation. Likewise σ = v²/2c² fails on both measured branches (median\nflow/standing-σ ratios 2.0×10⁻⁹ and 4.1×10⁻⁸; RMS log-discrepancies 8.4 and 7.2 dex) —\nexpected, since neither branch is GP; the failure confirms what the branches are, and does\nnot test branch 3.\n\n**Apparatus caveats, and what they gate.** Two, both declared by faraday. (i) *Radial shell\nreduction:* the lattice is a finite-volume spherical-shell reduction (deterministic mean-field\nflow, Poisson counting over 50 time units for the sink measurement), not a full 3D stochastic\nlattice. The flow-law fork is a statement of radial continuity and the reduction implements\nexactly the spherical symmetry the analytic fork assumes, so the exponent verdict is not\nsoftened; a conjecture that full-3D stochasticity self-organizes differently would need a\nmechanism no current rule supplies. (ii) *Hop-speed normalization:* the identity check's\nc ≡ D/dr is apparatus-specific, so the σ = v²/2c² residuals are apparatus-conditioned in\nabsolute normalization — but 7–8 dex is far beyond any O(1) renormalization (c enters\nsquared), and on the measured branches the identity is not expected regardless. **Neither\ncaveat gates the gate verdict.** One scope limit for the record: the third candidate family\nORB-10162 named — consumption keyed to local scarcity gradient or inflow speed — was not\nrun; such a rule is a *new coupling*, not part of the existing mechanic, so its absence does\nnot soften what the measurement says about the mechanic as it stands — it belongs to the\nderive-it-from-deeper-dynamics route below.\n\n**Where the debt now lives.** With the mechanic's own rules measured out, exactly one route\ninside the family remains short of concession: derive the r^(−3/2) destruction rule from\nsubstrate dynamics — **ORB-10161 Branch B's standing obligation**\n([two-substance-vortex-vacuum](../two-substance-vortex-vacuum/), §B2: the incompressible fork\nowes precisely this sink law, and harder — outside a star there are no cores to do the\nconsuming). That derivation is not attempted here. The statement of record: **impose the\nrule as a named postulate (and say so), derive it from S2 dynamics (ORB-10161's obligation),\nor concede the clock sector.** The excitation gate (**ORB-10158**) is independent and\nremains open.\n",
+    "commit_object": "tree 682cccb1cf19c89c2c5f4371c14ed2b384d2ae8c\nparent 13866b2848fbcce9a1f1ef2d4b97051a65f7e626\nauthor orbit[gpt-6-astra] <agent@orbit.invalid> 1788662975 +0000\ncommitter orbit <orbit@orbit.local> 1788662975 +0000\n\nfeat: Migrate the wide-binary control pilot into versioned scientific r… [ORB-11378]\n\nMigrate the wide-binary control pilot into versioned scientific records\n\nPlanned-By: codex\n"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "source",
+    "availability": "available",
+    "snapshot_digest": "sha256:c8e6e06a757343aff2a0c31eccbf9d5a960bedb7796cfd789fc73714c1ae7a34",
+    "locator": null,
+    "media_type": "text/plain"
+  },
+  "revision_id": "sha256:e1d595ba25b8fb8332e2606f049ccf9f49da75168c24750541bdb57cfa97430e"
+}
