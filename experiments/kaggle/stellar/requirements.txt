@@ -1,0 +1,9 @@
+# Stellar (Playground Series S6E6) — Python deps for src/train_lgbm.py
+# Install into the project venv (macOS, Python 3.12):
+#   cd /Users/daniel/workspace/repos/ml/kaggle
+#   source .venv/bin/activate
+#   pip install -r stellar/requirements.txt
+numpy>=2.0
+pandas>=2.2
+lightgbm>=4.6
+scikit-learn>=1.5

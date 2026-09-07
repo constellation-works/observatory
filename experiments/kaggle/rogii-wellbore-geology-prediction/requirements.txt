@@ -1,0 +1,9 @@
+# Install into the workspace virtual environment:
+#   pip install -r rogii-wellbore-geology-prediction/requirements.txt
+numpy>=2.0
+pandas>=2.2
+pyarrow>=16.0
+scikit-learn>=1.5
+scipy>=1.13
+lightgbm>=4.6
+matplotlib>=3.9
