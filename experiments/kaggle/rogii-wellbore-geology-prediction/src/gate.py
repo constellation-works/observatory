@@ -33,7 +33,7 @@ import pandas as pd
 from scipy.spatial import cKDTree
 
 from .baselines import ConstantTVT, Model, WellLoader
-from .data import WellPair, default_data_dir, list_wells, load_well
+from .data import WellPair, default_data_dir, list_wells, load_well, outputs_root
 from .ensemble import PrefixPlayoff, _masked_at
 from .topology import RegionalDipPrior, SpatialTopology
 
@@ -112,7 +112,7 @@ def build_gate_table(data_dir: Path, out_path: Path,
                      results_dir: Path | None = None) -> pd.DataFrame:
     """Per-well features + leakage-safe labels; resumable, cached."""
     train_dir = data_dir / "train"
-    results = results_dir if results_dir is not None else data_dir.parent / "results"
+    results = results_dir if results_dir is not None else outputs_root(data_dir) / "results"
     wells = list_wells(train_dir)
 
     done: set[str] = set()
@@ -291,7 +291,7 @@ def main() -> None:
     ap.add_argument("--data-dir", type=Path, default=default_data_dir())
     ap.add_argument("--budget-s", type=float, default=None)
     args = ap.parse_args()
-    out = args.data_dir.parent / "results" / "cache" / TABLE_NAME
+    out = outputs_root(args.data_dir) / "results" / "cache" / TABLE_NAME
     out.parent.mkdir(parents=True, exist_ok=True)
     build_gate_table(args.data_dir, out, budget_s=args.budget_s)
 

@@ -12,19 +12,20 @@ from __future__ import annotations
 import time
 from pathlib import Path
 
+import lightgbm as lgb
 import numpy as np
 import pandas as pd
-import lightgbm as lgb
-from sklearn.model_selection import StratifiedKFold
 from sklearn.metrics import accuracy_score, log_loss
+from sklearn.model_selection import StratifiedKFold
 from sklearn.preprocessing import LabelEncoder
 
 SEED = 42
 N_FOLDS = 5
-ROOT = Path(__file__).resolve().parents[1]
-DATA = ROOT / "data"
-SUBS = ROOT / "submissions"
-ARTIFACTS = ROOT / "artifacts"
+# experiments/kaggle/stellar/src -> observatory root is parents[4]
+ROOT = Path(__file__).resolve().parents[4]
+DATA = ROOT / "_data" / "kaggle" / "stellar"
+SUBS = ROOT / "_outputs" / "kaggle" / "stellar" / "submissions"
+ARTIFACTS = ROOT / "_outputs" / "kaggle" / "stellar" / "artifacts"
 
 TARGET = "class"
 ID = "id"
@@ -57,8 +58,8 @@ def add_features(df: pd.DataFrame) -> pd.DataFrame:
 
 def main() -> None:
     t0 = time.time()
-    SUBS.mkdir(exist_ok=True)
-    ARTIFACTS.mkdir(exist_ok=True)
+    SUBS.mkdir(parents=True, exist_ok=True)
+    ARTIFACTS.mkdir(parents=True, exist_ok=True)
 
     train = pd.read_csv(DATA / "train.csv")
     test = pd.read_csv(DATA / "test.csv")

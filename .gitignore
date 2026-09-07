@@ -1,8 +1,10 @@
 # Data and outputs live on disk, never in git. Manifests and READMEs do.
-_data/*
+_data/**
+!_data/**/
 !_data/README.md
 !_data/**/manifest.json
-_outputs/*
+_outputs/**
+!_outputs/**/
 !_outputs/README.md
 
 # Python

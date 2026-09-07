@@ -90,6 +90,11 @@ id,tvt
 must be disabled, and Kaggle currently permits up to 9 hours on either CPU or
 GPU. Commit the Kaggle notebook, then submit its generated `submission.csv`.
 
+Data lives in `_data/kaggle/rogii-wellbore-geology-prediction/` (see
+`data-dictionary.md`), derived artifacts in
+`_outputs/kaggle/rogii-wellbore-geology-prediction/{results,submissions}/`;
+`results/<run>` below means that directory.
+
 The pipeline is `python -m src.submit` (see its docstring for Kaggle paths).
 It rebuilds every derived artifact from training data when missing, fits the
 best-known stack on all training wells, discovers whatever wells are in

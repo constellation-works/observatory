@@ -15,19 +15,21 @@ from __future__ import annotations
 import time
 from pathlib import Path
 
+import lightgbm as lgb
 import numpy as np
 import pandas as pd
-import lightgbm as lgb
-from sklearn.model_selection import StratifiedKFold
 from sklearn.metrics import accuracy_score, log_loss, recall_score
+from sklearn.model_selection import StratifiedKFold
 from sklearn.preprocessing import LabelEncoder
 
 SEED = 42
 N_FOLDS = 5
-ROOT = Path(__file__).resolve().parents[1]
-DATA = ROOT / "data"
-SUBS = ROOT / "submissions"
-CKPT = ROOT / "artifacts" / "cv_lowlr"
+# experiments/kaggle/stellar/src -> observatory root is parents[4]
+ROOT = Path(__file__).resolve().parents[4]
+DATA = ROOT / "_data" / "kaggle" / "stellar"
+SUBS = ROOT / "_outputs" / "kaggle" / "stellar" / "submissions"
+ARTIFACTS = ROOT / "_outputs" / "kaggle" / "stellar" / "artifacts"
+CKPT = ARTIFACTS / "cv_lowlr"
 
 CATS = ["spectral_type", "galaxy_population"]
 FEATURES = [
@@ -75,8 +77,6 @@ def folds(y: np.ndarray):
 def main() -> None:
     t0 = time.time()
     CKPT.mkdir(parents=True, exist_ok=True)
-    done = sorted(CKPT.glob("fold*.npz"))
-
     train = add_features(pd.read_csv(DATA / "train.csv"))
     le = LabelEncoder()
     y = le.fit_transform(train["class"])

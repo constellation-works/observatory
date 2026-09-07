@@ -18,20 +18,21 @@ from __future__ import annotations
 import time
 from pathlib import Path
 
+import lightgbm as lgb
 import numpy as np
 import pandas as pd
-import lightgbm as lgb
+from sklearn.metrics import accuracy_score, confusion_matrix, recall_score
 from sklearn.model_selection import StratifiedKFold
-from sklearn.metrics import accuracy_score, recall_score, confusion_matrix
 from sklearn.preprocessing import LabelEncoder
 
 SEED = 42
 N_FOLDS = 5
 ZONE = 0.5  # redshift below which STAR/GALAXY confusion lives; routing + specialist scope
-ROOT = Path(__file__).resolve().parents[1]
-DATA = ROOT / "data"
-ARTIFACTS = ROOT / "artifacts"
-SUBS = ROOT / "submissions"
+# experiments/kaggle/stellar/src -> observatory root is parents[4]
+ROOT = Path(__file__).resolve().parents[4]
+DATA = ROOT / "_data" / "kaggle" / "stellar"
+ARTIFACTS = ROOT / "_outputs" / "kaggle" / "stellar" / "artifacts"
+SUBS = ROOT / "_outputs" / "kaggle" / "stellar" / "submissions"
 
 CATS = ["spectral_type", "galaxy_population"]
 
@@ -62,7 +63,7 @@ SPEC_FEATS = [
 
 def main() -> None:
     t0 = time.time()
-    SUBS.mkdir(exist_ok=True)
+    SUBS.mkdir(parents=True, exist_ok=True)
 
     train = add_features(pd.read_csv(DATA / "train.csv"))
     test = add_features(pd.read_csv(DATA / "test.csv"))

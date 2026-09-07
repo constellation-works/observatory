@@ -24,11 +24,33 @@ INFERENCE_COLS = ["MD", "X", "Y", "Z", "GR", "TVT_input"]
 SURFACE_COLS = ["ANCC", "ASTNU", "ASTNL", "EGFDU", "EGFDL", "BUDA"]
 
 
+SLUG = "rogii-wellbore-geology-prediction"
+
+
 def default_data_dir() -> Path:
     env = os.environ.get("ROGII_DATA_DIR")
     if env:
         return Path(env)
-    return Path(__file__).resolve().parent.parent / "data"
+    # experiments/kaggle/<slug>/src/data.py -> observatory root is parents[4]
+    return Path(__file__).resolve().parents[4] / "_data" / "kaggle" / SLUG
+
+
+def outputs_root(data_dir: Path) -> Path:
+    """Where derived artifacts (``results/``, ``submissions/``) go.
+
+    Under observatory, data lives in ``_data/kaggle/<slug>`` and outputs mirror
+    it in ``_outputs/kaggle/<slug>``. Anywhere else (a Kaggle notebook's
+    ``/kaggle/working``, or the original flat layout) it is the data
+    directory's parent, as before. ``ROGII_OUTPUTS_DIR`` overrides both.
+    """
+    env = os.environ.get("ROGII_OUTPUTS_DIR")
+    if env:
+        return Path(env)
+    parts = Path(data_dir).resolve().parts
+    if "_data" in parts:
+        i = parts.index("_data")
+        return Path(*parts[:i], "_outputs", *parts[i + 1:])
+    return Path(data_dir).parent
 
 
 def list_wells(split_dir: Path) -> list[str]:

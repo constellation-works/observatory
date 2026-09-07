@@ -25,8 +25,8 @@ import pandas as pd
 from scipy.optimize import least_squares
 from scipy.spatial import cKDTree
 
-from .data import WellPair, list_wells, load_well
 from .baselines import WellLoader
+from .data import WellPair, list_wells, load_well
 
 #: Along-path spacing of surface samples taken from each training well.
 SAMPLE_SPACING_FT = 200.0
@@ -352,7 +352,7 @@ class TrendCorrectedSpatial(SpatialTopology):
         ok = np.isfinite(r)
         if ok.sum() < 5:
             return base
-        slope, intercept = np.polyfit(md[q_idx][ok], r[ok], 1)
+        slope, _intercept = np.polyfit(md[q_idx][ok], r[ok], 1)
         slope = float(np.clip(slope, -self.max_slope, self.max_slope))
         # base already matches at the anchor; apply only the *change* in the
         # residual trend after the anchor.

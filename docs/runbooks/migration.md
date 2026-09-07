@@ -21,7 +21,7 @@ original repository stays authoritative until its row below says landed.
 | principia `studies/` | stays at `knowledgebase/theory/studies/` | literature notes claims cite, not results; see decisions |
 | orrery `lab/` | `experiments/physics/_orrery/` initially, then per-node directories as each sim is tied to a node | `research/catalog` becomes manifests |
 | parallax `src/`, `notebooks/`, `docs/` | `experiments/economics/_parallax/` then per-node | `data/` (2.1 GB) is **not** migrated; write manifests |
-| kaggle `<competition>/` | `experiments/kaggle/<competition>/` | competition slug is the id |
+| kaggle `<competition>/` | `experiments/kaggle/<competition>/` | competition slug is the id; tracked `results/` and `submissions/` moved out of git to `_outputs/kaggle/<slug>/` (history keeps them); `data/README.md` → `data-dictionary.md` |
 | nebula personal corpus | `knowledgebase/lineage/` | `neb init` here; `~/.nebula` retired after |
 
 ## Procedure per source
@@ -49,6 +49,6 @@ repository gets an archive note in its README pointing here.
 | source | status | landed on |
 |---|---|---|
 | principia | landed | 2026-09-07 |
-| kaggle | pending | |
+| kaggle | landed | 2026-09-07 |
 | orrery | pending | |
 | parallax | pending | |

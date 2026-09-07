@@ -20,14 +20,14 @@ from __future__ import annotations
 
 import argparse
 import time
+from collections.abc import Callable
 from pathlib import Path
-from typing import Callable
 
 import numpy as np
 import pandas as pd
 
 from .baselines import Model, default_baselines
-from .data import INFERENCE_COLS, WellPair, default_data_dir, list_wells, load_well
+from .data import INFERENCE_COLS, WellPair, default_data_dir, list_wells, load_well, outputs_root
 
 TRAIN_COLS = INFERENCE_COLS + ["TVT"]
 DISTANCE_BUCKET_FT = 1000.0
@@ -166,7 +166,7 @@ def build_models(names: str, data_dir: Path) -> list[Model]:
     from .topology import RegionalDipPrior, SpatialTopology
 
     train_dir = data_dir / "train"
-    cache = data_dir.parent / "results" / "cache" / "surface_samples.parquet"
+    cache = outputs_root(data_dir) / "results" / "cache" / "surface_samples.parquet"
     from .baselines import ConstantTVT
     from .ensemble import PrefixPlayoff, SoftBlendPlayoff
     from .gate import DipAxisGate, LearnedGate
@@ -189,74 +189,74 @@ def build_models(names: str, data_dir: Path) -> list[Model]:
                           eval_window_ft=w, margin_ft=m)
             for w in (700.0, 1000.0) for m in (0.0, 1.0)
         ],
-        "gate": lambda: [LearnedGate(train_dir, data_dir.parent / "results")],
+        "gate": lambda: [LearnedGate(train_dir, outputs_root(data_dir) / "results")],
         "dip-gate": lambda: [
-            DipAxisGate(train_dir, data_dir.parent / "results")
+            DipAxisGate(train_dir, outputs_root(data_dir) / "results")
         ],
         "dip-gate-sweep": lambda: [
-            DipAxisGate(train_dir, data_dir.parent / "results", residual_shrink=s)
+            DipAxisGate(train_dir, outputs_root(data_dir) / "results", residual_shrink=s)
             for s in (0.1, 0.15, 0.2)
         ],
-        "gr": lambda: [GRStateSpace(LearnedGate(train_dir, data_dir.parent / "results"),
+        "gr": lambda: [GRStateSpace(LearnedGate(train_dir, outputs_root(data_dir) / "results"),
                                     shape_weight=0.0)],
         "gr-shrink": lambda: [GRStateSpace(
-            LearnedGate(train_dir, data_dir.parent / "results"), shrink=0.5,
+            LearnedGate(train_dir, outputs_root(data_dir) / "results"), shrink=0.5,
             shape_weight=0.0)],
         "best": lambda: [GRStateSpace(
-            LearnedGate(train_dir, data_dir.parent / "results"),
+            LearnedGate(train_dir, outputs_root(data_dir) / "results"),
             level_weight=1.0, shape_weight=0.0,
             sigma_vel=0.05, adaptive_scale=3.0, shrink=0.7,
             bias_cache=(train_dir,
-                        data_dir.parent / "results" / "cache" / "bias_samples.csv"))],
+                        outputs_root(data_dir) / "results" / "cache" / "bias_samples.csv"))],
         "dip-best": lambda: [GRStateSpace(
-            DipAxisGate(train_dir, data_dir.parent / "results",
+            DipAxisGate(train_dir, outputs_root(data_dir) / "results",
                         uphill_shrink=0.0, downhill_shrink=0.15),
             level_weight=1.0, shape_weight=0.0,
             sigma_vel=0.05, adaptive_scale=3.0, shrink=0.7,
             bias_cache=(train_dir,
-                        data_dir.parent / "results" / "cache" / "bias_samples.csv"))],
+                        outputs_root(data_dir) / "results" / "cache" / "bias_samples.csv"))],
         "panel": lambda: [DirectPanelPhase()],
         "panel-best": lambda: [EarlyPanelBlend(
             GRStateSpace(
-                DipAxisGate(train_dir, data_dir.parent / "results",
+                DipAxisGate(train_dir, outputs_root(data_dir) / "results",
                             uphill_shrink=0.0, downhill_shrink=0.15),
                 level_weight=1.0, shape_weight=0.0,
                 sigma_vel=0.05, adaptive_scale=3.0, shrink=0.7,
                 bias_cache=(train_dir,
-                            data_dir.parent / "results" / "cache" / "bias_samples.csv")),
+                            outputs_root(data_dir) / "results" / "cache" / "bias_samples.csv")),
             weight=0.30,
             max_distance_ft=1000.0,
         )],
         "dip-best-sweep": lambda: [GRStateSpace(
-            DipAxisGate(train_dir, data_dir.parent / "results", residual_shrink=s),
+            DipAxisGate(train_dir, outputs_root(data_dir) / "results", residual_shrink=s),
             level_weight=1.0, shape_weight=0.0,
             sigma_vel=0.05, adaptive_scale=3.0, shrink=0.7,
             bias_cache=(train_dir,
-                        data_dir.parent / "results" / "cache" / "bias_samples.csv"))
+                        outputs_root(data_dir) / "results" / "cache" / "bias_samples.csv"))
             for s in (0.05, 0.1, 0.15)
         ],
         "gr-bold": lambda: [
-            GRStateSpace(LearnedGate(train_dir, data_dir.parent / "results"),
+            GRStateSpace(LearnedGate(train_dir, outputs_root(data_dir) / "results"),
                          level_weight=1.0, shape_weight=0.0,
                          sigma_vel=0.05, adaptive_scale=sc, shrink=sh,
                          bias_cache=(train_dir,
-                                     data_dir.parent / "results" / "cache" / "bias_samples.csv"))
+                                     outputs_root(data_dir) / "results" / "cache" / "bias_samples.csv"))
             for sc, sh in ((3.0, 0.7), (5.0, 1.0))
         ],
         "gr-shape": lambda: [
-            GRStateSpace(LearnedGate(train_dir, data_dir.parent / "results"),
+            GRStateSpace(LearnedGate(train_dir, outputs_root(data_dir) / "results"),
                          shrink=s, bias_cache=(
                              train_dir,
-                             data_dir.parent / "results" / "cache" / "bias_samples.csv"))
+                             outputs_root(data_dir) / "results" / "cache" / "bias_samples.csv"))
             for s in (0.5, 1.0)
         ],
         "gr-bias": lambda: [GRStateSpace(
-            LearnedGate(train_dir, data_dir.parent / "results"), shrink=0.5,
+            LearnedGate(train_dir, outputs_root(data_dir) / "results"), shrink=0.5,
             shape_weight=0.0,
             bias_cache=(train_dir,
-                        data_dir.parent / "results" / "cache" / "bias_samples.csv"))],
+                        outputs_root(data_dir) / "results" / "cache" / "bias_samples.csv"))],
         "gr-sweep": lambda: [
-            GRStateSpace(LearnedGate(train_dir, data_dir.parent / "results"),
+            GRStateSpace(LearnedGate(train_dir, outputs_root(data_dir) / "results"),
                          sigma_geo_ft=g, sigma_vel=v)
             for g, v in ((15.0, 0.01), (15.0, 0.05), (30.0, 0.02))
         ],
@@ -288,7 +288,7 @@ def main() -> None:
                          "(prefix only), simulating Kaggle-rerun conditions")
     args = ap.parse_args()
 
-    out_dir = args.data_dir.parent / "results" / args.run
+    out_dir = outputs_root(args.data_dir) / "results" / args.run
     run_cv(build_models(args.models, args.data_dir), args.data_dir, out_dir,
            n_folds=args.n_folds, seed=args.seed, budget_s=args.budget_s,
            transductive=args.transductive)

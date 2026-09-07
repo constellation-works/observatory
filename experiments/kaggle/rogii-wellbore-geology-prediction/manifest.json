@@ -1,0 +1,12 @@
+{
+  "node": "rogii-wellbore-geology-prediction",
+  "domain": "kaggle",
+  "created": "2026-09-07",
+  "data": [
+    "_data/kaggle/rogii-wellbore-geology-prediction"
+  ],
+  "outputs": "_outputs/kaggle/rogii-wellbore-geology-prediction",
+  "study": "knowledgebase/studies/kaggle/rogii-wellbore-geology-prediction.md",
+  "status": "submitted",
+  "migrated_from": "danieljhkim/kaggle"
+}

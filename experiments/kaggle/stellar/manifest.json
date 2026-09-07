@@ -1,0 +1,12 @@
+{
+  "node": "stellar",
+  "domain": "kaggle",
+  "created": "2026-09-07",
+  "data": [
+    "_data/kaggle/stellar"
+  ],
+  "outputs": "_outputs/kaggle/stellar",
+  "study": "knowledgebase/studies/kaggle/stellar.md",
+  "status": "submitted",
+  "migrated_from": "danieljhkim/kaggle"
+}

@@ -8,12 +8,15 @@ dependencies = [
     "pandas>=2.2",
     "matplotlib>=3.8",
     "pyyaml>=6",
+    "scipy>=1.13",
+    "pyarrow>=16",
 ]
 
 [project.optional-dependencies]
 notebook = ["jupyterlab>=4", "nbstripout>=0.7"]
 spark = ["pyspark>=3.5"]
-ml = ["scikit-learn>=1.4", "lightgbm>=4"]
+ml = ["scikit-learn>=1.5", "lightgbm>=4.6", "kaggle>=1.6"]
+arc = ["torch>=2.6", "tqdm>=4.66"]
 # The scientific record checkers (knowledgebase/theory/scripts) require this exact
 # orbit-research revision; see knowledgebase/theory/research/README.md.
 research = [
@@ -30,6 +33,10 @@ extend-exclude = ["_data", "_outputs", "knowledgebase"]
 
 [tool.ruff.lint]
 select = ["E", "F", "I", "B", "UP"]
+
+[tool.ruff.lint.per-file-ignores]
+# Competition code migrated as written; long lines and lenient zip() stay.
+"experiments/kaggle/**" = ["E501", "B905"]
 
 [tool.pytest.ini_options]
 testpaths = ["_scripts", "experiments", "knowledgebase/theory/scripts"]

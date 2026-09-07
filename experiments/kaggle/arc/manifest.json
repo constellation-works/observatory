@@ -1,0 +1,10 @@
+{
+  "node": "arc",
+  "domain": "kaggle",
+  "created": "2026-09-07",
+  "data": [],
+  "outputs": "_outputs/kaggle/arc",
+  "study": "knowledgebase/studies/kaggle/arc.md",
+  "status": "exploring",
+  "migrated_from": "danieljhkim/kaggle"
+}

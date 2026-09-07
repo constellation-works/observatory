@@ -47,7 +47,6 @@ from .gr import _calibrate, _resample_reference, _smooth_horizontal
 from .topology import RegionalDipPrior
 from .validate import DISTANCE_BUCKET_FT, make_folds, summarize
 
-
 FEATURE_NAMES = [
     "dX",
     "dY",
@@ -363,8 +362,8 @@ def _coefficient_frame(
     if horizons is None:
         horizons = np.arange(1, len(equations.n) + 1)
     rows = []
-    for model in raw:
-        for h in range(len(raw[model])):
+    for model, series in raw.items():
+        for h in range(len(series)):
             for j, feature in enumerate(FEATURE_NAMES):
                 rows.append({
                     "fold": fold,

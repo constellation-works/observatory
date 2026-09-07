@@ -32,7 +32,7 @@ import numpy as np
 import pandas as pd
 
 from .baselines import Model, default_baselines
-from .data import default_data_dir, list_wells, load_well, resolve_data_dir
+from .data import default_data_dir, list_wells, load_well, outputs_root, resolve_data_dir
 from .gate import TABLE_NAME, DipAxisGate, build_gate_table
 from .gr import GRStateSpace, build_bias_samples
 from .panel import DirectPanelPhase, EarlyPanelBlend
@@ -158,8 +158,8 @@ def main() -> None:
 
     data_dir = resolve_data_dir(args.data_dir)
     print(f"competition data: {data_dir}")
-    results_dir = args.results_dir or data_dir.parent / "results"
-    out = args.out or data_dir.parent / "submissions" / "submission.csv"
+    results_dir = args.results_dir or outputs_root(data_dir) / "results"
+    out = args.out or outputs_root(data_dir) / "submissions" / "submission.csv"
 
     ensure_artifacts(data_dir, results_dir)
     model = build_model(data_dir, results_dir)

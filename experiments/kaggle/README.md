@@ -1,55 +1,46 @@
-# Kaggle
+# experiments/kaggle
 
-Workspace for Kaggle competitions and projects. Each competition lives in its own subfolder.
-
-## Structure
+Kaggle competitions. The competition slug is the id: `experiments/kaggle/<slug>/`
+holds the code and notes, `_data/kaggle/<slug>/` the downloaded data,
+`_outputs/kaggle/<slug>/` every derived artifact (results, caches, submissions).
+Kaggle is the one domain whose ids are not nebula nodes; `check-layout` exempts it.
 
 ```
-kaggle/
-├── README.md
-├── CLAUDE.md
-└── <competition-name>/
-    ├── data/          # raw + processed data (gitignored)
-    ├── notebooks/     # exploration & EDA
-    ├── src/           # reusable code: features, models, training
-    ├── submissions/   # generated submission files
-    └── README.md      # competition-specific notes
+experiments/kaggle/<slug>/
+  README.md          task, metric, CV-vs-leaderboard log
+  manifest.json      data and output locations, status
+  src/               reusable code: features, models, training, submit
+  approaches/        write-ups of what was tried (optional)
+  data-dictionary.md what each column means (optional)
+_data/kaggle/<slug>/manifest.json   where the data comes from and how to fetch it
 ```
 
-## Getting started
+## Flow
 
-1. Create a folder for the competition:
+1. `mkdir experiments/kaggle/<slug>` and copy `manifest.json` from a sibling.
+2. Fetch: the `fetch` command in `_data/kaggle/<slug>/manifest.json`
+   (`kaggle competitions download -c <slug> -p _data/kaggle/<slug>`).
+   Credentials live in `~/.kaggle/kaggle.json` (chmod 600).
+3. Explore in a notebook, promote stable code into `src/`.
+4. Write submissions to `_outputs/kaggle/<slug>/submissions/`, then
+   `kaggle competitions submit -c <slug> -f <file> -m "<description>"`.
+5. Log CV and leaderboard scores in the competition README.
 
-   ```bash
-   mkdir -p <competition-name>/{data,notebooks,src,submissions}
-   ```
+## Principles
 
-2. Download the data with the Kaggle CLI:
+- **Reproducibility first.** Seed every source of randomness; make splits
+  deterministic; note exact data versions.
+- **Validate before submitting.** Build a trustworthy cross-validation scheme
+  early and trust it over the public leaderboard. Watch for leakage and shift.
+- **Be explicit about the metric.** Optimize and report the competition's
+  exact metric, not a proxy.
+- **Nothing derived in git.** Results and submissions regenerate from `src/`;
+  the write-up of what they showed goes in the README or `approaches/`.
 
-   ```bash
-   kaggle competitions download -c <competition-name> -p <competition-name>/data
-   unzip '<competition-name>/data/*.zip' -d <competition-name>/data
-   ```
+## Environment
 
-3. Explore in `notebooks/`, promote stable code into `src/`.
-
-4. Submit:
-
-   ```bash
-   kaggle competitions submit -c <competition-name> \
-     -f <competition-name>/submissions/submission.csv -m "description"
-   ```
-
-## Setup
-
-```bash
-pip install -r requirements.txt   # kaggle, pandas, numpy, scikit-learn, torch, etc.
-```
-
-Configure Kaggle API credentials at `~/.kaggle/kaggle.json` (chmod 600).
-
-## Conventions
-
-- Keep raw data out of version control; commit small artifacts and code only.
-- Set a global random seed for reproducibility.
-- Track CV scores vs. leaderboard scores in each competition's README.
+The root `pyproject.toml` covers these: `uv sync --extra ml` for the tabular
+competitions (scikit-learn, lightgbm, kaggle CLI), `--extra arc` adds torch.
+Scripts resolve `_data` and `_outputs` from the observatory root, so run them
+from anywhere: `uv run python -m src.submit` inside a competition directory,
+or set `ROGII_DATA_DIR` / `ROGII_OUTPUTS_DIR` to point elsewhere.
