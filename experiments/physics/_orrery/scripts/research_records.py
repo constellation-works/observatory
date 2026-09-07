@@ -22,7 +22,7 @@ import tempfile
 
 from orbit_research import make_record, validate
 from orbit_research.contract import canonical, reference, revision_digest
-from orbit_research.importers import import_source, strict_json
+from orbit_research.importers import import_source, strict_json, discover
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -62,7 +62,31 @@ def require(condition, message):
         raise ValueError(message)
 
 
+# Under observatory each former sibling repository is a subtree of the same
+# repository, and its pinned delivery commit is part of this history.
+SUBTREES = {
+    "principia": ("knowledgebase/theory", PRINCIPIA_DELIVERY),
+    "astrolabe": ("lib/astrolabe", ASTROLABE_DELIVERY),
+}
+
+
+def toplevel():
+    return Path(git(ROOT, "rev-parse", "--show-toplevel"))
+
+
 def sibling_checkout(name):
+    env = os.environ.get(f"ORRERY_{name.upper()}_ROOT")
+    if env:
+        return Path(env)
+    prefix, delivery = SUBTREES.get(name, (None, None))
+    if prefix:
+        try:
+            top = toplevel()
+            if (top / prefix).is_dir():
+                git(top, "cat-file", "-e", f"{delivery}^{{commit}}")
+                return top
+        except ValueError:
+            pass
     for parent in (ROOT, *ROOT.parents):
         candidate = parent / name
         if candidate != ROOT and candidate.is_dir() and (candidate / ".git").exists():
@@ -87,10 +111,12 @@ def package_check():
             "Install requirements-research.txt: exact orbit-research 0.2.0 Git revision required")
 
 
-def blob_pin(root, revision, path):
+def blob_pin(root, revision, path, repository=None):
     data = git(root, "show", f"{revision}:{path}", binary=True)
+    # Repository identity is the historical namespace of the pinned commit, not
+    # the name of whatever checkout now holds it (under observatory, all of them).
     return {
-        "repository": "orrery" if root == ROOT else root.name,
+        "repository": repository or ("orrery" if root == ROOT else root.name),
         "git_revision": revision,
         "path": path,
         "blob_oid": git(root, "rev-parse", f"{revision}:{path}"),
@@ -181,9 +207,9 @@ def load_external(principia_root, astrolabe_root):
         record, pin = external_record("astrolabe", astrolabe_root, ASTROLABE_DELIVERY, a_index,
                                       ref["id"], ref["revision_id"])
         records.append(record); pins.append(pin)
-    documents = [blob_pin(principia_root, PRINCIPIA_DELIVERY, path)
+    documents = [blob_pin(principia_root, PRINCIPIA_DELIVERY, path, "principia")
                  for path in EXTERNAL_DOCUMENTS["principia"]]
-    documents += [blob_pin(astrolabe_root, ASTROLABE_DELIVERY, path)
+    documents += [blob_pin(astrolabe_root, ASTROLABE_DELIVERY, path, "astrolabe")
                   for path in EXTERNAL_DOCUMENTS["astrolabe"]]
     return (records, pins, p_migration["protocol"],
             p_migration["phases"]["freeze"]["claims"], a_refs, documents)
@@ -239,7 +265,10 @@ def baseline_source_report():
     """Import the immutable migration source from its own historical checkout."""
     with tempfile.TemporaryDirectory(prefix="orrery-research-baseline-") as parent:
         checkout = Path(parent) / "source"
-        git(ROOT.parent, "clone", "--no-hardlinks", str(ROOT), str(checkout))
+        # ROOT may be a subtree; clone the enclosing repository. BASELINE is an
+        # original orrery commit, so the detached tree has lab/ at its root.
+        top = toplevel()
+        git(top.parent, "clone", "--no-hardlinks", str(top), str(checkout))
         git(checkout, "checkout", "--detach", BASELINE)
         report = import_source(checkout, "orrery", "orrery", expected_revision=BASELINE)
         catalogs = []
@@ -250,9 +279,33 @@ def baseline_source_report():
         return report, supporting_paths(checkout, catalogs)
 
 
+def live_source_report():
+    """Import the live tree. Under observatory ROOT is a subtree, and the framework
+    only imports from a checkout root, so select this subtree's files from the
+    top level and report their paths relative to ROOT, as the catalog records them."""
+    top = toplevel()
+    if top == ROOT:
+        return import_source(ROOT, "orrery", "orrery")
+    prefix = ROOT.relative_to(top).as_posix() + "/"
+    files, _ = discover(ROOT, "orrery", None)
+    selected = [prefix + f.relative_to(ROOT).as_posix() for f in files]
+    report = import_source(top, "orrery", "orrery", selected=selected)
+
+    def strip(value):
+        if isinstance(value, dict):
+            return {k: strip(v) for k, v in value.items()}
+        if isinstance(value, list):
+            return [strip(v) for v in value]
+        if isinstance(value, str) and value.startswith(prefix):
+            return value[len(prefix):]
+        return value
+
+    return strip(report)
+
+
 def require_live_source_matches_baseline(baseline_report, baseline_supporting):
     """Reject live selected-source or supporting-artifact drift before rebuilding."""
-    live_report = import_source(ROOT, "orrery", "orrery")
+    live_report = live_source_report()
     baseline_paths = [item["path"] for item in baseline_report["files"]]
     live_paths = [item["path"] for item in live_report["files"]]
     require(live_paths == baseline_paths, "source inventory differs from migration baseline")

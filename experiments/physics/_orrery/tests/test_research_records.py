@@ -12,6 +12,17 @@ import unittest
 
 ROOT = Path(__file__).resolve().parents[1]
 SCRIPT = ROOT / "scripts/research_records.py"
+# Under observatory ROOT is a subtree of a larger repository; clones must take
+# the enclosing checkout and tests then run inside the subtree of the clone.
+TOP = Path(subprocess.run(["git", "-C", str(ROOT), "rev-parse", "--show-toplevel"],
+                          capture_output=True, text=True, check=True).stdout.strip())
+PREFIX = ROOT.relative_to(TOP)
+
+
+def clone_source(parent):
+    checkout = Path(parent) / "checkout"
+    git(TOP.parent, "clone", "--no-hardlinks", str(TOP), str(checkout))
+    return checkout / PREFIX
 
 
 def run(*args, ok=True):
@@ -93,8 +104,7 @@ class ResearchRecordMigrationTests(unittest.TestCase):
 
     def test_landed_migration_survives_head_advance_and_refuses_source_drift(self):
         with tempfile.TemporaryDirectory() as parent:
-            checkout = Path(parent) / "orrery"
-            git(ROOT.parent, "clone", "--no-hardlinks", str(ROOT), str(checkout))
+            checkout = clone_source(parent)
             shutil.copyfile(SCRIPT, checkout / "scripts/research_records.py")
             git(checkout, "add", "scripts/research_records.py")
             git(checkout, "-c", "user.name=Research test", "-c", "user.email=test@example.invalid",
@@ -107,7 +117,7 @@ class ResearchRecordMigrationTests(unittest.TestCase):
 
             self.assertEqual(json.loads(run_at(checkout, "check").stdout)["catalogs"], 39)
             checker = load_checker(checkout)
-            baseline_report = checker.import_source(checkout, "orrery", "orrery")
+            baseline_report = checker.live_source_report()
             baseline_catalogs = [(item["path"], checker.strict_json((checkout / item["path"]).read_bytes()))
                                  for item in baseline_report["files"] if Path(item["path"]).name == "sim.json"]
             baseline_supporting = checker.supporting_paths(checkout, baseline_catalogs)
@@ -121,11 +131,10 @@ class ResearchRecordMigrationTests(unittest.TestCase):
 
     def test_source_addition_and_deletion_fail_closed(self):
         with tempfile.TemporaryDirectory() as parent:
-            checkout = Path(parent) / "orrery"
-            git(ROOT.parent, "clone", "--no-hardlinks", str(ROOT), str(checkout))
+            checkout = clone_source(parent)
             shutil.copyfile(SCRIPT, checkout / "scripts/research_records.py")
             checker = load_checker(checkout)
-            baseline_report = checker.import_source(checkout, "orrery", "orrery")
+            baseline_report = checker.live_source_report()
             baseline_catalogs = [(item["path"], checker.strict_json((checkout / item["path"]).read_bytes()))
                                  for item in baseline_report["files"] if Path(item["path"]).name == "sim.json"]
             baseline_supporting = checker.supporting_paths(checkout, baseline_catalogs)

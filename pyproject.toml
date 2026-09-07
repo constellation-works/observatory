@@ -10,6 +10,7 @@ dependencies = [
     "pyyaml>=6",
     "scipy>=1.13",
     "pyarrow>=16",
+    "orrery",
 ]
 
 [project.optional-dependencies]
@@ -24,12 +25,20 @@ research = [
     "jsonschema>=4.26",
 ]
 
+[tool.uv.workspace]
+members = ["experiments/physics/_orrery"]
+
+[tool.uv.sources]
+orrery = { workspace = true }
+
 [dependency-groups]
 dev = ["pytest>=8", "ruff>=0.6", "pre-commit>=3"]
 
 [tool.ruff]
 line-length = 100
-extend-exclude = ["_data", "_outputs", "knowledgebase"]
+# Migration staging areas are migrated as written; lint applies once a sim moves
+# to its node directory under experiments/<domain>/<node-id>/.
+extend-exclude = ["_data", "_outputs", "knowledgebase", "experiments/physics/_orrery"]
 
 [tool.ruff.lint]
 select = ["E", "F", "I", "B", "UP"]

@@ -5,7 +5,7 @@ established physics they must respect. Named for Newton's *Philosophiæ Naturali
 Mathematica*.
 
 Prose only. The experiments these theories are tested against live in the sibling repo
-[**orrery**](../orrery) (`codebases/orrery`), the cabinet of cataloged physics sims.
+[**orrery**](../../experiments/physics/_orrery) (`experiments/physics/_orrery`), the cabinet of cataloged physics sims.
 
 ```
 policy.md  Research procedure. Enforced by scripts/check-theory.py.
@@ -27,7 +27,8 @@ scripts/   check-theory.py — run before landing theory changes.
 - **studies/** is the one place we write down established physics, with a verifiable citation,
   so theory docs and sim docstrings point here instead of restating facts from memory.
 - **orrery/lab/sims/** is where the experiments run. principia is prose; orrery is executable.
-  Sim links in the ledgers are relative to the constellation checkout (`../../orrery/...`).
+  Sim links in the ledgers keep their historical form (`../../../orrery/lab/sims/...`);
+  `_scripts/check-theory.sh` resolves them with `--external-root orrery=experiments/physics/_orrery`.
 
 ## Checking an isolated worktree
 

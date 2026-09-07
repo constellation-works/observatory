@@ -14,7 +14,7 @@ uv run lab/sims/vortex-bell/vortex_bell.py   # python sims run through uv
 ```
 
 Everything that runs lives under `lab/`. The theory it tests lives in the
-sibling repo [principia](../principia) (`theory/`, `studies/`).
+theory lock at [knowledgebase/theory](../../../knowledgebase/theory) (`theory/`, `studies/`).
 
 ## Add a sim
 

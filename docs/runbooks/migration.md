@@ -19,7 +19,7 @@ original repository stays authoritative until its row below says landed.
 |---|---|---|
 | principia, whole | `knowledgebase/theory/` | the lock, checker and records included; `_scripts/check-theory.sh` wraps `scripts/check-theory.py` |
 | principia `studies/` | stays at `knowledgebase/theory/studies/` | literature notes claims cite, not results; see decisions |
-| orrery `lab/` | `experiments/physics/_orrery/` initially, then per-node directories as each sim is tied to a node | `research/catalog` becomes manifests |
+| orrery, whole | `experiments/physics/_orrery/` (staging), then per-node directories as each sim family is tied to a node | `research/catalog` stays the authoritative record; `scripts/research_records.py` learned to run as a subtree (clone the enclosing repo, select its own files, pin repository identity explicitly). orrery is a uv workspace member so `uv run` py sims resolve |
 | parallax `src/`, `notebooks/`, `docs/` | `experiments/economics/_parallax/` then per-node | `data/` (2.1 GB) is **not** migrated; write manifests |
 | kaggle `<competition>/` | `experiments/kaggle/<competition>/` | competition slug is the id; tracked `results/` and `submissions/` moved out of git to `_outputs/kaggle/<slug>/` (history keeps them); `data/README.md` → `data-dictionary.md` |
 | nebula personal corpus | `knowledgebase/lineage/` | `neb init` here; `~/.nebula` retired after |
@@ -50,5 +50,5 @@ repository gets an archive note in its README pointing here.
 |---|---|---|
 | principia | landed | 2026-09-07 |
 | kaggle | landed | 2026-09-07 |
-| orrery | pending | |
+| orrery | landed (staging) | 2026-09-07 |
 | parallax | pending | |

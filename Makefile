@@ -1,4 +1,4 @@
-.PHONY: help setup check check-lineage check-theory check-records check-layout lint test experiment fmt clean
+.PHONY: help setup check check-lineage check-theory check-records check-layout check-gallery lint test experiment fmt clean
 
 # ------------------------------------------------------------
 # Config
@@ -23,6 +23,7 @@ help:
 	@echo "  make check-theory   principia's lock over knowledgebase/theory"
 	@echo "  make check-records  immutable research records under knowledgebase/theory/research"
 	@echo "  make check-layout   experiments and studies keyed by node id; no data in git"
+	@echo "  make check-gallery  orrery sim catalog (experiments/physics/_orrery/lab/gallery) is current"
 	@echo "  make lint           ruff"
 	@echo "  make test           pytest"
 	@echo "  make experiment DOMAIN=<d> ID=<node-id>   Scaffold experiments/<d>/<id>/ from the template"
@@ -40,7 +41,7 @@ setup:
 # ------------------------------------------------------------
 # Quality
 # ------------------------------------------------------------
-check: check-lineage check-theory check-records check-layout lint test
+check: check-lineage check-theory check-records check-layout check-gallery lint test
 
 check-lineage:
 	$(NEB) check
@@ -56,6 +57,10 @@ check-records:
 
 check-layout:
 	./_scripts/check-layout.sh
+
+# orrery's generated sim catalog must match lab/sims.
+check-gallery:
+	$(UV) run python experiments/physics/_orrery/lab/tools/build-gallery.py --check
 
 lint:
 	$(UV) run ruff check .

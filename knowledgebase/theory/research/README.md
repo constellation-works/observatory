@@ -30,10 +30,10 @@ export PYTHONDONTWRITEBYTECODE=1
 python3 scripts/corpus_records.py check
 python3 scripts/wide_binary_records.py check
 python3 -m unittest discover -s scripts -p 'test_*records.py' -v
-python3 scripts/check-theory.py --external-root orrery=/absolute/path/to/orrery
+python3 scripts/check-theory.py --external-root orrery=<observatory>/experiments/physics/_orrery
 python3 scripts/check-theory.py --selftest
-python3 scripts/corpus_records.py verify-history --orrery-root /absolute/path/to/orrery
-python3 scripts/wide_binary_records.py verify-history --orrery-root /absolute/path/to/orrery
+python3 scripts/corpus_records.py verify-history --orrery-root <observatory>/experiments/physics/_orrery
+python3 scripts/wide_binary_records.py verify-history --orrery-root <observatory>/experiments/physics/_orrery
 orbit-research validate research/corpus/source-manifest.json
 orbit-research validate research/corpus/archival-manifest.json
 git diff --check
@@ -115,7 +115,7 @@ to Orrery. The following operations describe authoring, not a new scientific ass
 5. Generate a candidate and run the retained scientific policy before copying anything:
 
    ```sh
-   python3 scripts/corpus_records.py project --active /tmp/active-candidate.json --output /tmp/principia-candidate --orrery-root /absolute/path/to/orrery
+   python3 scripts/corpus_records.py project --active /tmp/active-candidate.json --output /tmp/principia-candidate --orrery-root <observatory>/experiments/physics/_orrery
    ```
 
    The output directory must not exist and must be outside the checkout. Review the
@@ -142,11 +142,11 @@ after rollback. They never modify this corpus or run a simulation.
 Migration reads fixed source commits, never a sibling's current working files:
 
 ```sh
-python3 scripts/corpus_records.py migrate --orrery-root /absolute/path/to/orrery --output /tmp/principia-migration
+python3 scripts/corpus_records.py migrate --orrery-root <observatory>/experiments/physics/_orrery --output /tmp/principia-migration
 diff -r research/corpus /tmp/principia-migration/research/corpus
 cmp research/active.json /tmp/principia-migration/research/active.json
-python3 scripts/corpus_records.py project --output /tmp/principia-selected --orrery-root /absolute/path/to/orrery
-python3 scripts/corpus_records.py rollback --output /tmp/principia-baseline --orrery-root /absolute/path/to/orrery
+python3 scripts/corpus_records.py project --output /tmp/principia-selected --orrery-root <observatory>/experiments/physics/_orrery
+python3 scripts/corpus_records.py rollback --output /tmp/principia-baseline --orrery-root <observatory>/experiments/physics/_orrery
 ```
 
 `rollback` exports all 110 original scientific files, regardless of later native
@@ -164,7 +164,7 @@ archived policy guide alongside the scientific views so its existing study link 
 ```sh
 git show 13866b2848fbcce9a1f1ef2d4b97051a65f7e626:scripts/check-theory.py > /tmp/check-theory-source.py
 git show 4e3b02c59b694d85016915177ef1ae157895ed7b:policy.md > /tmp/principia-baseline/policy.md
-python3 /tmp/check-theory-source.py --root /tmp/principia-baseline --external-root orrery=/absolute/path/to/orrery
+python3 /tmp/check-theory-source.py --root /tmp/principia-baseline --external-root orrery=<observatory>/experiments/physics/_orrery
 python3 /tmp/check-theory-source.py --selftest
 ```
 

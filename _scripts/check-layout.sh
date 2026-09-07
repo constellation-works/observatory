@@ -21,6 +21,9 @@ for dir in experiments/*/*/; do
   domain=$(basename "$(dirname "$dir")"); id=$(basename "$dir")
   [ "$domain" = "_template" ] && continue
   [ "$domain" = "kaggle" ] && continue
+  # Underscore-prefixed ids are migration staging areas (e.g. physics/_orrery):
+  # a whole source repository parked until each family is tied to a node.
+  case "$id" in _*) continue ;; esac
   [ -f "$root/nodes/$id.md" ] || say "experiments/$domain/$id has no node $id in $root/nodes"
   [ -f "$dir/manifest.json" ] || say "experiments/$domain/$id has no manifest.json"
 done

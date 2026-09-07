@@ -13,6 +13,12 @@ resolution-markers = [
     "python_full_version < '3.12' and sys_platform != 'emscripten' and sys_platform != 'win32'",
 ]
 
+[manifest]
+members = [
+    "observatory",
+    "orrery",
+]
+
 [[package]]
 name = "anyio"
 version = "4.15.1"
@@ -2034,6 +2040,7 @@ dependencies = [
     { name = "matplotlib" },
     { name = "numpy", version = "2.4.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.12'" },
     { name = "numpy", version = "2.5.3", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.12'" },
+    { name = "orrery" },
     { name = "pandas" },
     { name = "pyarrow" },
     { name = "pyyaml" },
@@ -2080,6 +2087,7 @@ requires-dist = [
     { name = "nbstripout", marker = "extra == 'notebook'", specifier = ">=0.7" },
     { name = "numpy", specifier = ">=1.26" },
     { name = "orbit-research", marker = "extra == 'research'", git = "https://github.com/constellation-works/orbit-research.git?rev=0a9cf756e1c2522b9d5ee71c1cf462b8676f4281" },
+    { name = "orrery", editable = "experiments/physics/_orrery" },
     { name = "pandas", specifier = ">=2.2" },
     { name = "pyarrow", specifier = ">=16" },
     { name = "pyspark", marker = "extra == 'spark'", specifier = ">=3.5" },
@@ -2105,6 +2113,29 @@ source = { git = "https://github.com/constellation-works/orbit-research.git?rev=
 dependencies = [
     { name = "jsonschema" },
     { name = "referencing" },
+]
+
+[[package]]
+name = "orrery"
+version = "0.1.0"
+source = { editable = "experiments/physics/_orrery" }
+dependencies = [
+    { name = "matplotlib" },
+    { name = "numpy", version = "2.4.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.12'" },
+    { name = "numpy", version = "2.5.3", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.12'" },
+    { name = "pyarrow" },
+    { name = "scipy", version = "1.17.1", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.12'" },
+    { name = "scipy", version = "1.18.1", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.12'" },
+    { name = "sympy" },
+]
+
+[package.metadata]
+requires-dist = [
+    { name = "matplotlib", specifier = ">=3.8" },
+    { name = "numpy", specifier = ">=2" },
+    { name = "pyarrow", specifier = ">=20" },
+    { name = "scipy", specifier = ">=1.14" },
+    { name = "sympy", specifier = ">=1.13" },
 ]
 
 [[package]]

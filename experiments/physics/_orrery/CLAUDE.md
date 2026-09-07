@@ -10,7 +10,7 @@ working physical models you can play with. That's this repo.
 ## Layout
 
 Everything in orrery is executable, under `lab/`. The **theory** this apparatus tests lives in
-the sibling repo **principia** (`codebases/principia`): `theory/` (evidence ledgers) and
+the theory lock **principia** (`knowledgebase/theory`): `theory/` (evidence ledgers) and
 `studies/` (sourced physics notes) split out on 2026-07-10. principia's ledgers cite these sims
 via `../../orrery/lab/sims/<slug>/`.
 
@@ -42,7 +42,7 @@ This repo has two complementary memory-only agents, both running one-shot via wo
   primary owner of executable `lab/`: designing, implementing, running, and numerically
   validating sims; maintaining the shared apparatus; capturing reproducible results.
 - **kepler / Fable (Claude)** (`agentbase/kepler/memory`) is the theoretical physicist, owner of
-  the **principia** theory corpus (`codebases/principia`: `theory/` + `studies/`): literature
+  the **principia** theory corpus (`knowledgebase/theory`: `theory/` + `studies/`): literature
   judgment, evidence-ledger status, and reconciliation when experimental results support or
   contradict a claim.
 
@@ -65,7 +65,7 @@ their docs (`status: refuted`) — they are results, not embarrassments.
   docstring is the sim's abstract — model, question, result.
 - **Provenance both ways**: `provenance.almanac` in sim.json points at the
   almanac discussion/project note (vault-relative path); the note should link
-  back to `codebases/orrery/lab/sims/<slug>/`. New sims from discussions land here,
+  back to `experiments/physics/_orrery/lab/sims/<slug>/`. New sims from discussions land here,
   not in almanac — almanac keeps the *writeup*, orrery keeps the *sim*.
 
 ## Adding a sim

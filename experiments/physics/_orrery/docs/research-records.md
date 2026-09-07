@@ -98,6 +98,8 @@ verification when those checkouts are available:
 ```sh
 /tmp/orrery-research-env/bin/python scripts/research_records.py verify-history \
   --principia-root /path/to/principia --astrolabe-root /path/to/astrolabe
+  # Under observatory both default to this repository: principia and astrolabe
+  # are subtrees and their pinned delivery commits are in its history.
 ```
 
 No assessment is minted by this migration. Historical records have no native
