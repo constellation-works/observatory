@@ -1,0 +1,412 @@
+:root {
+  color-scheme: dark;
+  --ink: #d4e9de;
+  --muted: #89a696;
+  --cyan: #6ec8ff;
+  --gold: #ffd36e;
+  font: 12px/1.5 ui-monospace, SFMono-Regular, Consolas, monospace;
+  background: #04120b;
+  color: var(--ink)
+}
+
+* {
+  box-sizing: border-box
+}
+
+body {
+  margin: 0
+}
+
+main {
+  height: 100svh;
+  min-height: 480px;
+  position: relative;
+  overflow: hidden
+}
+
+a {
+  color: #a2dccc;
+  text-underline-offset: 3px
+}
+
+button,
+select {
+  font: inherit;
+  color: inherit;
+  background: #0d251a;
+  border: 1px solid #315343;
+  border-radius: 4px;
+  padding: 6px 10px
+}
+
+button,
+summary,
+select,
+input {
+  cursor: pointer
+}
+
+button:hover,
+button.active {
+  background: #254635;
+  border-color: #7ba38b
+}
+
+button:focus-visible,
+a:focus-visible,
+summary:focus-visible,
+input:focus-visible,
+#scene:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px
+}
+
+#scene {
+  position: absolute;
+  inset: 0;
+  touch-action: none
+}
+
+#scene canvas {
+  width: 100%;
+  height: 100% !important;
+  display: block
+}
+
+header {
+  position: absolute;
+  top: 18px;
+  left: 24px;
+  right: 24px;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 11px
+}
+
+header>a {
+  text-decoration: none;
+  letter-spacing: .14em
+}
+
+nav {
+  display: flex;
+  gap: 18px
+}
+
+nav span {
+  color: white
+}
+
+.intro {
+  position: absolute;
+  top: 64px;
+  left: 24px;
+  pointer-events: none
+}
+
+h1 {
+  font: 400 25px/1.2 system-ui;
+  margin: 0 0 9px
+}
+
+.intro p {
+  font: 12px/1.5 system-ui;
+  color: var(--muted);
+  margin: 0
+}
+
+.legend {
+  position: absolute;
+  top: 145px;
+  left: 24px;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  color: var(--muted);
+  font-size: 10px
+}
+
+.legend small {
+  font-size: 10px
+}
+
+.legend i {
+  display: inline-block;
+  width: 12px;
+  height: 2px;
+  vertical-align: middle;
+  margin: 0 4px
+}
+
+.cyan {
+  background: var(--cyan)
+}
+
+.gold {
+  background: var(--gold)
+}
+
+#readout {
+  position: absolute;
+  right: 24px;
+  top: 65px;
+  text-align: right;
+  color: var(--muted);
+  font-size: 11px;
+  white-space: pre-line;
+  pointer-events: none
+}
+
+#settings {
+  position: absolute;
+  left: 20px;
+  bottom: 138px;
+  width: 246px;
+  background: #071b13e8;
+  border: 1px solid #315343;
+  border-radius: 5px;
+  max-height: calc(100% - 220px);
+  overflow: auto;
+  backdrop-filter: blur(8px)
+}
+
+summary {
+  padding: 10px 12px;
+  color: #bfd7ca
+}
+
+.settings-body {
+  padding: 0 12px 12px
+}
+
+.settings-body label {
+  display: block;
+  margin: 9px 0;
+  color: #a3b9ac
+}
+
+.settings-body select {
+  display: block;
+  width: 100%;
+  margin-top: 4px
+}
+
+.settings-body output {
+  float: right
+}
+
+.settings-body input[type=range] {
+  display: block;
+  width: 100%
+}
+
+.settings-body .check {
+  display: flex;
+  gap: 8px;
+  align-items: center
+}
+
+.micro {
+  font-size: 10px;
+  color: var(--muted);
+  margin: 9px 0 0
+}
+
+input {
+  accent-color: var(--gold)
+}
+
+.transport {
+  position: absolute;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(720px, calc(100% - 40px));
+  background: #06180feb;
+  padding: 10px 14px;
+  border: 1px solid #315343;
+  border-radius: 6px;
+  backdrop-filter: blur(8px)
+}
+
+.moments {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 9px
+}
+
+.moments button {
+  min-width: 85px
+}
+
+.timeline {
+  display: flex;
+  align-items: center;
+  gap: 10px
+}
+
+#phase {
+  min-width: 40px;
+  flex: 1
+}
+
+#phase-value {
+  min-width: 45px;
+  text-align: right
+}
+
+.transport p {
+  font: 10px/1.5 system-ui;
+  color: #94ae9d;
+  margin: 9px 0 0;
+  text-align: center
+}
+
+#fatal {
+  position: absolute;
+  inset: 30%;
+  background: #321;
+  padding: 20px
+}
+
+#power-value {
+  font-size: 10px;
+  overflow-wrap: anywhere;
+  color: var(--gold)
+}
+
+@media(max-width:650px) {
+  header {
+    left: 16px;
+    right: 16px;
+    top: 14px;
+    display: block
+  }
+
+  header>a {
+    font-size: 9px
+  }
+
+  nav {
+    margin-top: 10px;
+    gap: 16px
+  }
+
+  .intro {
+    left: 16px;
+    top: 81px
+  }
+
+  h1 {
+    font-size: 22px
+  }
+
+  .intro p {
+    max-width: 290px
+  }
+
+  .legend {
+    left: 16px;
+    top: 153px;
+    flex-wrap: wrap;
+    gap: 5px 12px;
+    max-width: 320px
+  }
+
+  .legend small {
+    width: 100%
+  }
+
+  #readout {
+    top: 202px;
+    right: 16px;
+    font-size: 10px
+  }
+
+  #settings {
+    left: 12px;
+    bottom: 166px;
+    width: 230px;
+    max-height: calc(100% - 260px)
+  }
+
+  .transport {
+    bottom: 12px;
+    width: calc(100% - 24px);
+    padding: 10px
+  }
+
+  .moments {
+    gap: 5px
+  }
+
+  .moments button {
+    min-width: 0;
+    flex: 1;
+    padding: 6px
+  }
+
+  .timeline {
+    gap: 6px
+  }
+
+  .timeline button {
+    padding: 6px 8px
+  }
+
+  .transport p {
+    font-size: 10px
+  }
+
+  .transport p a {
+    white-space: nowrap
+  }
+}
+
+@media(max-height:650px) and (min-width:651px) {
+  .intro {
+    top: 52px
+  }
+
+  .legend {
+    top: 115px
+  }
+
+  #settings {
+    bottom: 145px
+  }
+
+  .transport {
+    bottom: 8px
+  }
+}
+
+header,
+.intro,
+.legend,
+#readout {
+  text-shadow: 0 1px 3px #04120b, 0 0 12px #04120b;
+  background: #04120bcc;
+  border-radius: 4px
+}
+
+.intro {
+  padding: 6px 10px;
+  margin-left: -10px
+}
+
+.legend {
+  padding: 4px 6px;
+  margin-left: -6px
+}
+
+header {
+  padding: 4px 0
+}
+
+#readout {
+  padding: 5px 8px;
+  margin-right: -8px
+}

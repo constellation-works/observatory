@@ -1,0 +1,25 @@
+{
+  "slug": "level-core-far-field-slot-coefficients",
+  "title": "Level-core far-field shell stability",
+  "kind": "py",
+  "entry": "main.py",
+  "status": "active",
+  "created": "2026-08-28",
+  "topics": [
+    "gravity",
+    "gravity-as-scarcity",
+    "moving-source",
+    "preferred-frame",
+    "far-field",
+    "PPN",
+    "dynamical-relaxation",
+    "resolution-convergence"
+  ],
+  "family": "gravity-as-scarcity",
+  "summary": "A larger-box deterministic rung extends the far-field ladder through r=24, finds boundary-sensitive dipole exponents, no alpha1 regime, and a surviving slot-order half-order contraction channel.",
+  "provenance": {
+    "almanac": "15-discussions/26-08/from-galactic-motion-to-the-moving-gravity-medium-problem.md",
+    "orbit_task": "ORB-11171",
+    "predecessors": ["ORB-11041", "ORB-11040", "ORB-10938"]
+  }
+}

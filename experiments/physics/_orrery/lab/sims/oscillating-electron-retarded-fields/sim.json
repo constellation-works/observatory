@@ -1,0 +1,24 @@
+{
+  "slug": "oscillating-electron-retarded-fields",
+  "title": "Turning electron \u2014 retarded fields",
+  "kind": "web",
+  "entry": "index.html",
+  "status": "active",
+  "created": "2026-09-06",
+  "topics": [
+    "electromagnetism",
+    "radiation",
+    "retarded-fields"
+  ],
+  "family": "swirl-photon",
+  "summary": "A tight, smooth electron turn and its outward delayed response, drawn as dense stationary samples of the full retarded field. Compact phase controls, exact field contributions and direct comparison with the original illustration.",
+  "provenance": {
+    "task": "ORB-11374",
+    "predecessor": "lab/sims/swirl-ball-far-field/",
+    "sources": [
+      "https://www.feynmanlectures.caltech.edu/II_21.html",
+      "https://www.damtp.cam.ac.uk/user/tong/em/el5.pdf"
+    ],
+    "previous_task": "ORB-11364"
+  }
+}

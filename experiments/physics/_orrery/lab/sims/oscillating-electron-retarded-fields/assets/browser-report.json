@@ -1,0 +1,552 @@
+{
+  "status": "pass",
+  "recordedAt": "2026-09-06T02:21:05.496582+00:00",
+  "browser": "151.0.7922.34",
+  "os": "Linux-6.8.0-138-generic-x86_64-with-glibc2.39",
+  "cpu": "13th Gen Intel(R) Core(TM) i5-13500H",
+  "logicalCpus": 14,
+  "renderer": "Chromium Canvas2D, headless; no physical GPU/mobile claims",
+  "launchArgs": [
+    "--no-sandbox"
+  ],
+  "sequence": [
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "moment": "before",
+      "time": -3,
+      "visible": 7693,
+      "electron": {
+        "position": [
+          -0.2433424615735836,
+          0,
+          -1.122266410744178
+        ],
+        "velocity": [
+          0.0025987944997648118,
+          0,
+          0.44147414494077697
+        ],
+        "acceleration": [
+          0.0025679541894549802,
+          0,
+          -0.0047147570228450895
+        ]
+      },
+      "witnesses": [
+        {
+          "tr": -6.495733471888089,
+          "By": -0.06588293596402729
+        },
+        {
+          "tr": -9.649831105672783,
+          "By": -0.016935446831692
+        }
+      ]
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "moment": "during",
+      "time": 0,
+      "visible": 7691,
+      "electron": {
+        "position": [
+          0,
+          0,
+          9.179396125594073e-16
+        ],
+        "velocity": [
+          0.44999999999999996,
+          0,
+          -0.0
+        ],
+        "acceleration": [
+          -0.0,
+          0,
+          -0.816394162936814
+        ]
+      },
+      "witnesses": [
+        {
+          "tr": -2.3999372881912473,
+          "By": -0.09115341883023291
+        },
+        {
+          "tr": -5.745773311047507,
+          "By": -0.01793601117024721
+        }
+      ]
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "moment": "delay",
+      "time": 3,
+      "visible": 7124,
+      "electron": {
+        "position": [
+          0.2433424615735836,
+          0,
+          -1.122266410744178
+        ],
+        "velocity": [
+          0.0025987944997648118,
+          0,
+          -0.44147414494077697
+        ],
+        "acceleration": [
+          -0.0025679541894549802,
+          0,
+          -0.0047147570228450895
+        ]
+      },
+      "witnesses": [
+        {
+          "tr": 1.191961136963726,
+          "By": 0.0985394531049223
+        },
+        {
+          "tr": -2.3038719565760815,
+          "By": -0.01363967789520149
+        }
+      ]
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "moment": "after",
+      "time": 6,
+      "visible": 6968,
+      "electron": {
+        "position": [
+          0.24614691085796378,
+          0,
+          -2.457126317270862
+        ],
+        "velocity": [
+          0.0002209830439979476,
+          0,
+          -0.44656200277637764
+        ],
+        "acceleration": [
+          -0.0002160848208993717,
+          0,
+          -0.00040090948272874133
+        ]
+      },
+      "witnesses": [
+        {
+          "tr": 3.726953040739362,
+          "By": 0.02554645702164373
+        },
+        {
+          "tr": 1.2124791640116244,
+          "By": 0.02002479944878043
+        }
+      ]
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "moment": "before",
+      "time": -3,
+      "visible": 7053,
+      "electron": {
+        "position": [
+          -0.2433424615735836,
+          0,
+          -1.122266410744178
+        ],
+        "velocity": [
+          0.0025987944997648118,
+          0,
+          0.44147414494077697
+        ],
+        "acceleration": [
+          0.0025679541894549802,
+          0,
+          -0.0047147570228450895
+        ]
+      },
+      "witnesses": [
+        {
+          "tr": -6.495733471888089,
+          "By": -0.06588293596402729
+        },
+        {
+          "tr": -9.649831105672783,
+          "By": -0.016935446831692
+        }
+      ]
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "moment": "during",
+      "time": 0,
+      "visible": 6971,
+      "electron": {
+        "position": [
+          0,
+          0,
+          9.179396125594073e-16
+        ],
+        "velocity": [
+          0.44999999999999996,
+          0,
+          -0.0
+        ],
+        "acceleration": [
+          -0.0,
+          0,
+          -0.816394162936814
+        ]
+      },
+      "witnesses": [
+        {
+          "tr": -2.3999372881912473,
+          "By": -0.09115341883023291
+        },
+        {
+          "tr": -5.745773311047507,
+          "By": -0.01793601117024721
+        }
+      ]
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "moment": "delay",
+      "time": 3,
+      "visible": 6461,
+      "electron": {
+        "position": [
+          0.2433424615735836,
+          0,
+          -1.122266410744178
+        ],
+        "velocity": [
+          0.0025987944997648118,
+          0,
+          -0.44147414494077697
+        ],
+        "acceleration": [
+          -0.0025679541894549802,
+          0,
+          -0.0047147570228450895
+        ]
+      },
+      "witnesses": [
+        {
+          "tr": 1.191961136963726,
+          "By": 0.0985394531049223
+        },
+        {
+          "tr": -2.3038719565760815,
+          "By": -0.01363967789520149
+        }
+      ]
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "moment": "after",
+      "time": 6,
+      "visible": 6428,
+      "electron": {
+        "position": [
+          0.24614691085796378,
+          0,
+          -2.457126317270862
+        ],
+        "velocity": [
+          0.0002209830439979476,
+          0,
+          -0.44656200277637764
+        ],
+        "acceleration": [
+          -0.0002160848208993717,
+          0,
+          -0.00040090948272874133
+        ]
+      },
+      "witnesses": [
+        {
+          "tr": 3.726953040739362,
+          "By": 0.02554645702164373
+        },
+        {
+          "tr": 1.2124791640116244,
+          "By": 0.02002479944878043
+        }
+      ]
+    }
+  ],
+  "originalSequence": [
+    {
+      "T": 11.377,
+      "p": {
+        "x": 705,
+        "y": 345.5408140000719,
+        "tx": 0,
+        "ty": -1,
+        "turn": false
+      },
+      "rings": 246,
+      "dist": 1127.2925656076218,
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "moment": "before",
+      "targetT": 11.365805255913582,
+      "turnT": 12.262205255913582,
+      "candidateTime": -3,
+      "candidateModelPixelsPerUnit": 71.71199999999999,
+      "comparisonTimeScalePixelsPerUnit": 71.71199999999999
+    },
+    {
+      "T": 12.320000000000002,
+      "p": {
+        "x": 725.5885054201002,
+        "y": 267.4719207197118,
+        "tx": 0.9280052853525501,
+        "ty": 0.3725670280066824,
+        "turn": true
+      },
+      "rings": 246,
+      "dist": 1220.7299295320308,
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "moment": "during",
+      "targetT": 12.262205255913582,
+      "turnT": 12.262205255913582,
+      "candidateTime": 0,
+      "candidateModelPixelsPerUnit": 71.71199999999999,
+      "comparisonTimeScalePixelsPerUnit": 71.71199999999999
+    },
+    {
+      "T": 13.217000000000002,
+      "p": {
+        "x": 735,
+        "y": 352.43610385346443,
+        "tx": 0,
+        "ty": 1,
+        "turn": false
+      },
+      "rings": 246,
+      "dist": 1309.609373265005,
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "moment": "delay",
+      "targetT": 13.158605255913582,
+      "turnT": 12.262205255913582,
+      "candidateTime": 3,
+      "candidateModelPixelsPerUnit": 71.71199999999999,
+      "comparisonTimeScalePixelsPerUnit": 71.71199999999999
+    },
+    {
+      "T": 14.119000000000002,
+      "p": {
+        "x": 735,
+        "y": 441.81097369420314,
+        "tx": 0,
+        "ty": 1,
+        "turn": false
+      },
+      "rings": 245,
+      "dist": 1398.9842431057436,
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "moment": "after",
+      "targetT": 14.055005255913581,
+      "turnT": 12.262205255913582,
+      "candidateTime": 6,
+      "candidateModelPixelsPerUnit": 71.71199999999999,
+      "comparisonTimeScalePixelsPerUnit": 71.71199999999999
+    },
+    {
+      "T": 10.925,
+      "p": {
+        "x": 180,
+        "y": 485.55767214201273,
+        "tx": 0,
+        "ty": -1,
+        "turn": false
+      },
+      "rings": 74,
+      "dist": 383.2737074656811,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "moment": "before",
+      "targetT": 10.931980102680122,
+      "turnT": 11.828380102680121,
+      "candidateTime": -3,
+      "candidateModelPixelsPerUnit": 19.422,
+      "comparisonTimeScalePixelsPerUnit": 71.71199999999999
+    },
+    {
+      "T": 11.82,
+      "p": {
+        "x": 194.70602586805452,
+        "y": 462.4298809696746,
+        "tx": 0.9998079353550237,
+        "ty": -0.01959827546303123,
+        "turn": true
+      },
+      "rings": 75,
+      "dist": 414.67233155554675,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "moment": "during",
+      "targetT": 11.828380102680121,
+      "turnT": 11.828380102680121,
+      "candidateTime": 0,
+      "candidateModelPixelsPerUnit": 19.422,
+      "comparisonTimeScalePixelsPerUnit": 71.71199999999999
+    },
+    {
+      "T": 12.716000000000001,
+      "p": {
+        "x": 210,
+        "y": 485.00476849542446,
+        "tx": 0,
+        "ty": 1,
+        "turn": false
+      },
+      "rings": 74,
+      "dist": 446.1060379069653,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "moment": "delay",
+      "targetT": 12.724780102680121,
+      "turnT": 11.828380102680121,
+      "candidateTime": 3,
+      "candidateModelPixelsPerUnit": 19.422,
+      "comparisonTimeScalePixelsPerUnit": 71.71199999999999
+    },
+    {
+      "T": 13.612000000000002,
+      "p": {
+        "x": 210,
+        "y": 516.4384748468431,
+        "tx": 0,
+        "ty": 1,
+        "turn": false
+      },
+      "rings": 74,
+      "dist": 477.53974425838385,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "moment": "after",
+      "targetT": 13.621180102680121,
+      "turnT": 11.828380102680121,
+      "candidateTime": 6,
+      "candidateModelPixelsPerUnit": 19.422,
+      "comparisonTimeScalePixelsPerUnit": 71.71199999999999
+    }
+  ],
+  "measurements": [
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "density": "standard",
+      "samples": 8064,
+      "beta": 0.45,
+      "startTime": -1.9901200000107289,
+      "endTime": 6.894499999999999,
+      "warmupSeconds": 1,
+      "measurementSeconds": 5,
+      "frameIntervalMs": {
+        "samples": 60,
+        "median": 75.69999999925494,
+        "p95": 171.40000000596046,
+        "max": 238.5
+      },
+      "cpuComputeAndCanvasSubmitMs": {
+        "samples": 61,
+        "median": 44.900000005960464,
+        "p95": 108.89999999850988,
+        "max": 135.39999999850988
+      },
+      "pixelRatio": 1
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "density": "standard",
+      "samples": 8064,
+      "beta": 0.45,
+      "startTime": -1.9278399999946356,
+      "endTime": 7.083319999997318,
+      "warmupSeconds": 1,
+      "measurementSeconds": 5,
+      "frameIntervalMs": {
+        "samples": 71,
+        "median": 67,
+        "p95": 114.39999999850988,
+        "max": 149
+      },
+      "cpuComputeAndCanvasSubmitMs": {
+        "samples": 72,
+        "median": 48.850000001490116,
+        "p95": 92.30000000447035,
+        "max": 129.80000000447035
+      },
+      "pixelRatio": 1
+    }
+  ],
+  "slowFrameClock": {
+    "dt": 0.6192000000000002,
+    "wall": 0.5756399999946356
+  },
+  "errors": [],
+  "failedRequests": [],
+  "checks": [
+    "desktop/narrow full-window four-phase sequence",
+    "real playback across turn, timings exclude screenshots",
+    "pause/scrub/end/reset",
+    "mouse/keyboard/touch/pinch",
+    "density/gain/camera/viewport preserve probe",
+    "both vectors and all contributions",
+    "zero-speed zero-B control",
+    "trajectory and full-sphere power controls",
+    "optional guide explicitly labeled",
+    "reciprocal original navigation and gallery"
+  ]
+}

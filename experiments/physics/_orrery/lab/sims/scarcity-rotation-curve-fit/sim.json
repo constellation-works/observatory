@@ -1,0 +1,29 @@
+{
+  "slug": "scarcity-rotation-curve-fit",
+  "title": "Scarcity rotation-curve fit",
+  "kind": "py",
+  "entry": "main.py",
+  "status": "active",
+  "created": "2026-07-10",
+  "topics": [
+    "gravity",
+    "galaxy-rotation",
+    "model-fitting",
+    "gaia"
+  ],
+  "family": "gravity-as-scarcity",
+  "summary": "A Sanders-form Yukawa fit lands at alpha=-0.679 and xi=4.64 kpc, but its scarcity-minus-Yukawa delta-AIC bootstrap interval crosses zero: the Gaia band is shape-degenerate.",
+  "seed": 42,
+  "provenance": {
+    "almanac": "15-discussions/26-07/gravity-as-scarcity-of-space.md",
+    "orbit_tasks": [
+      "ORB-10077",
+      "ORB-10082",
+      "ORB-10083",
+      "ORB-10075",
+      "ORB-10167"
+    ],
+    "dataset": "astrolabe/data/processed/derived/mw_rotation_curve.parquet",
+    "extends": "rotation-curve-distributed-mass"
+  }
+}

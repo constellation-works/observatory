@@ -1,0 +1,52 @@
+{
+  "status": "pass",
+  "sweep": {
+    "count": 37440,
+    "maxResidual": 1.9874401679942366e-8,
+    "maxIterations": 39,
+    "maxRelativeEradMinusCBrad": 6.809544600899929e-16
+  },
+  "boundaryControls": "pass: invalid beta rejected; mask fixed at present-source radius 0.18; long/negative times finite",
+  "analyticControls": {
+    "stationaryError": 3.878959614448864e-18,
+    "uniformRelativeError": 3.9292592679630034e-12
+  },
+  "potentialDerivativeRelativeError": 1.0933442048634791e-7,
+  "farObserverCycleSinSquaredNormalizedError": 0.00009376107761962291,
+  "radiation": {
+    "sinSquaredAbsoluteNormalizedError": 3.193238981331145e-16,
+    "inverseRadiusRelativeError": 1.364687918226082e-10,
+    "larmor": [
+      {
+        "beta": 0.1,
+        "measured": 0.003358616011160567,
+        "prediction": 0.003333333333333334,
+        "relativeError": 0.0075848033481698
+      },
+      {
+        "beta": 0.03,
+        "measured": 0.00030020529539502425,
+        "prediction": 0.0003,
+        "relativeError": 0.0006843179834141733
+      },
+      {
+        "beta": 0.01,
+        "measured": 0.00003333612304374073,
+        "prediction": 0.000033333333333333335,
+        "relativeError": 0.00008369131222196735
+      }
+    ],
+    "refinedLowBetaPower": 0.00003333590594845523,
+    "relativisticPowerError": 0.000006176575743088719
+  },
+  "turning": {
+    "samples": 5025,
+    "derivativeAbsoluteError": 1.1192796052337758e-10,
+    "normalizedRetardedResidual": 1.9895196601282805e-12,
+    "potentialDerivativeRelativeError": 6.690213475098652e-9,
+    "fullSpherePowerRelativeError": 0.00003843317488128051,
+    "nonAxisymmetricPowerDifference": 0.011094612328741076,
+    "streamlineCoarseVsFine": 0.013377953342460244,
+    "streamlineHalfStepVsFine": 0.001769548195451415
+  }
+}
