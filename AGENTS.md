@@ -26,7 +26,7 @@ never comes here.
    once it has run, is a `make check` finding.
 4. **The theory lock stays locked.** `knowledgebase/theory/` carries principia's
    `policy.md`, claim registries, gates and refuted wall, checked by
-   `_scripts/check-theory.py`. Reopening a refuted claim, or filing a
+   `_scripts/check-theory.sh`. Reopening a refuted claim, or filing a
    phenomenology card on a family whose existence claim is open, is refused
    there for reasons that still apply. Read `knowledgebase/theory/policy.md`
    before touching it.

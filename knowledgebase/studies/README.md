@@ -7,8 +7,9 @@ A study says what was run, what came out, which way it cuts on the node's kill
 condition, and what is shaky about it. Include the figure; the raw outputs stay
 in `_outputs/` and are regenerable.
 
-Principia's `studies/` (sourced notes on established physics) lands here under
-`studies/physics/` with its history.
+Principia's `studies/` are a different thing: sourced notes on established
+physics that theory claims cite. They stay inside the lock at
+`knowledgebase/theory/studies/`, where `check-theory` resolves them.
 
 Template:
 

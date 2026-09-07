@@ -1,4 +1,4 @@
-.PHONY: help setup check check-lineage check-theory check-layout lint test experiment fmt clean
+.PHONY: help setup check check-lineage check-theory check-records check-layout lint test experiment fmt clean
 
 # ------------------------------------------------------------
 # Config
@@ -7,6 +7,9 @@ UV ?= uv
 NEB ?= neb
 export NEBULA_ROOT := $(CURDIR)/knowledgebase/lineage
 THEORY := knowledgebase/theory
+# macOS: /tmp is a symlink; the record checkers refuse temp paths that resolve outside
+# the owner root, so hand them the real temp directory.
+export TMPDIR := $(shell python3 -c 'import os,tempfile;print(os.path.realpath(tempfile.gettempdir()))')
 
 # ------------------------------------------------------------
 # Help
@@ -17,7 +20,8 @@ help:
 	@echo "  make setup          uv sync, pre-commit hook, verify neb finds the corpus"
 	@echo "  make check          Full gate: lineage + theory + layout + lint + tests"
 	@echo "  make check-lineage  neb check over knowledgebase/lineage"
-	@echo "  make check-theory   principia's lock over knowledgebase/theory (no-op until migrated)"
+	@echo "  make check-theory   principia's lock over knowledgebase/theory"
+	@echo "  make check-records  immutable research records under knowledgebase/theory/research"
 	@echo "  make check-layout   experiments and studies keyed by node id; no data in git"
 	@echo "  make lint           ruff"
 	@echo "  make test           pytest"
@@ -36,14 +40,19 @@ setup:
 # ------------------------------------------------------------
 # Quality
 # ------------------------------------------------------------
-check: check-lineage check-theory check-layout lint test
+check: check-lineage check-theory check-records check-layout lint test
 
 check-lineage:
 	$(NEB) check
 
-# principia's checker arrives with the migration; until then this passes.
+# principia's lock: claim registry, ledger, links to studies and orrery sims.
 check-theory:
-	@if [ -f _scripts/check-theory.py ]; then $(UV) run python _scripts/check-theory.py $(THEORY); else echo "check-theory: not migrated yet"; fi
+	$(UV) run --extra research ./_scripts/check-theory.sh
+
+# The immutable research records under $(THEORY)/research; needs the pinned orbit-research.
+check-records:
+	cd $(THEORY) && $(UV) run --extra research python scripts/corpus_records.py check
+	cd $(THEORY) && $(UV) run --extra research python scripts/wide_binary_records.py check
 
 check-layout:
 	./_scripts/check-layout.sh
@@ -55,7 +64,7 @@ fmt:
 	$(UV) run ruff format .
 
 test:
-	$(UV) run pytest -q
+	$(UV) run --extra research pytest -q
 
 # ------------------------------------------------------------
 # Scaffold

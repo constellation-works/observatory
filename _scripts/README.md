@@ -6,4 +6,4 @@ Shared tooling. Nothing here is domain-specific.
 |---|---|
 | `check-layout.sh` | experiments and studies keyed by node id; no data or outputs tracked |
 | `new-experiment.sh` | scaffold `experiments/<domain>/<id>/` from `experiments/_template/` |
-| `check-theory.py` | principia's lock, arrives with the migration |
+| `check-theory.sh` | principia's lock, unchanged, run over `knowledgebase/theory` with the orrery root wired |

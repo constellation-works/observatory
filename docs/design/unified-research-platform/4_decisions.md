@@ -49,6 +49,12 @@ theory lock encodes physics-specific policy (postulate expiry, comparators,
 retirement) that nebula deliberately does not know about. They are different
 layers with a graduation edge between them.
 
+Considered moving principia's `studies/` into `knowledgebase/studies/physics/`.
+Rejected on landing (2026-09-07): those notes are literature, not results, every
+theory document links to them relatively, and the checker resolves them under
+the lock root. Two kinds of "study" with two homes is clearer than one directory
+with two contracts.
+
 ## Migration with history
 
 Considered copying files. Rejected: a platform for tracing where ideas came

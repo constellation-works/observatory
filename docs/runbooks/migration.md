@@ -17,8 +17,8 @@ original repository stays authoritative until its row below says landed.
 
 | source | lands at | notes |
 |---|---|---|
-| principia `theory/`, `gates/`, `schema/`, `policy.md`, `ledger.md`, `research/` | `knowledgebase/theory/` | the lock; `scripts/check-theory.py` → `_scripts/check-theory.py` |
-| principia `studies/` | `knowledgebase/studies/physics/` | sourced notes on established physics |
+| principia, whole | `knowledgebase/theory/` | the lock, checker and records included; `_scripts/check-theory.sh` wraps `scripts/check-theory.py` |
+| principia `studies/` | stays at `knowledgebase/theory/studies/` | literature notes claims cite, not results; see decisions |
 | orrery `lab/` | `experiments/physics/_orrery/` initially, then per-node directories as each sim is tied to a node | `research/catalog` becomes manifests |
 | parallax `src/`, `notebooks/`, `docs/` | `experiments/economics/_parallax/` then per-node | `data/` (2.1 GB) is **not** migrated; write manifests |
 | kaggle `<competition>/` | `experiments/kaggle/<competition>/` | competition slug is the id |
@@ -48,7 +48,7 @@ repository gets an archive note in its README pointing here.
 
 | source | status | landed on |
 |---|---|---|
-| principia | pending | |
+| principia | landed | 2026-09-07 |
 | kaggle | pending | |
 | orrery | pending | |
 | parallax | pending | |

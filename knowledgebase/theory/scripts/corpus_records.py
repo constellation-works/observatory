@@ -46,7 +46,7 @@ def policy():
 
 
 def local_paths(root):
-    paths = git(root, "ls-tree", "-r", "--name-only", BASE).decode().splitlines()
+    paths = git(root, "ls-tree", "-r", "--full-tree", "--name-only", BASE).decode().splitlines()
     return [p for p in paths if p.startswith(("theory/", "studies/", "gates/", "schema/"))
             or p in {"ledger.md", "policy.md"}]
 
@@ -65,7 +65,7 @@ def collect(root, orrery):
     sources = [snapshot("principia", BASE, p, root) for p in local_paths(root)]
     slugs = {m for s in sources for m in re.findall(r"orrery/lab/sims/([a-z0-9-]+)", s["legacy"]["text"])}
     # Catalog and textual result metadata only. Never execute/import sim code.
-    listing = git(orrery, "ls-tree", "-r", "--name-only", ORRERY).decode().splitlines()
+    listing = git(orrery, "ls-tree", "-r", "--full-tree", "--name-only", ORRERY).decode().splitlines()
     selected = [p for p in listing if any(p.startswith(f"lab/sims/{slug}/") for slug in slugs)
                 and p.endswith((".json", ".md"))]
     return sources + [snapshot("orrery", ORRERY, p, orrery) for p in selected]

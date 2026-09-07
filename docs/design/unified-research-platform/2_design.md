@@ -50,8 +50,14 @@ paths. The work corpus is a separate corpus elsewhere. `make setup` exports
 
 Principia's value was never the prose alone; it was `policy.md`, the claim
 registries, the gates and the refuted wall, machine-checked. That moves intact
-to `knowledgebase/theory/` with the checker at `_scripts/check-theory.py`, and
-`make check-theory` runs it. Nebula sits upstream and graduates into it.
+to `knowledgebase/theory/` whole, checker included (`scripts/check-theory.py`
+and the record scripts stay where the lock expects them). `_scripts/check-theory.sh`
+runs it with the orrery root wired, and `make check-theory` / `make check-records`
+call it. Nebula sits upstream and graduates into it.
+
+Principia's `studies/` stays inside the lock: those are sourced notes on
+established physics that claims cite, not experiment results. Observatory's
+`knowledgebase/studies/` is the latter, keyed by node id.
 
 ## One environment
 

@@ -14,6 +14,12 @@ dependencies = [
 notebook = ["jupyterlab>=4", "nbstripout>=0.7"]
 spark = ["pyspark>=3.5"]
 ml = ["scikit-learn>=1.4", "lightgbm>=4"]
+# The scientific record checkers (knowledgebase/theory/scripts) require this exact
+# orbit-research revision; see knowledgebase/theory/research/README.md.
+research = [
+    "orbit-research @ git+https://github.com/constellation-works/orbit-research.git@0a9cf756e1c2522b9d5ee71c1cf462b8676f4281",
+    "jsonschema>=4.26",
+]
 
 [dependency-groups]
 dev = ["pytest>=8", "ruff>=0.6", "pre-commit>=3"]
@@ -26,5 +32,5 @@ extend-exclude = ["_data", "_outputs", "knowledgebase"]
 select = ["E", "F", "I", "B", "UP"]
 
 [tool.pytest.ini_options]
-testpaths = ["_scripts", "experiments"]
+testpaths = ["_scripts", "experiments", "knowledgebase/theory/scripts"]
 python_files = ["test_*.py"]
