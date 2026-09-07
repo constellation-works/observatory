@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Atheory%2Fretarded-scarcity-wake%2Fopen-questions.md",
+  "aliases": [
+    "source:principia:4e3b02c59b694d85016915177ef1ae157895ed7b:theory/retarded-scarcity-wake/open-questions.md"
+  ],
+  "activity": "active",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "362a6b609671edfcee5c69401c2ada2d3eeff74c",
+    "sha256": "sha256:6d0b0bba31c20013c6473fb1f661b51a7f7c9edc10c2255476d6c38fdf70f249",
+    "path": "theory/retarded-scarcity-wake/open-questions.md",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Immutable archival source copy; upstream scientific ownership is unchanged."
+  ],
+  "missingness": [
+    "scope"
+  ],
+  "legacy": {
+    "source_pin": {
+      "repository": "principia",
+      "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "path": "theory/retarded-scarcity-wake/open-questions.md",
+      "blob_oid": "362a6b609671edfcee5c69401c2ada2d3eeff74c",
+      "sha256": "sha256:6d0b0bba31c20013c6473fb1f661b51a7f7c9edc10c2255476d6c38fdf70f249",
+      "bytes": 2936,
+      "commit_metadata": "4e3b02c59b694d85016915177ef1ae157895ed7b\n2026-09-06T02:49:35+00:00\n2026-09-06T02:49:35+00:00\nfeat: Migrate the wide-binary control pilot into versioned scientific r… [ORB-11378]\n"
+    },
+    "text": "## Open questions\n\nPruned 2026-09-04 (ORB-11175): the family is `refuted`. Nothing below reopens it; the retired\nitems are kept under the line so the pruning is auditable.\n\n- Catalog the Branch A negative-control fixture so the three `untested` delayed-center rows\n  (Laplace-forbidden terms, \\(2\\beta_g\\) versus \\(4\\beta_g\\), non-conservative retarded-direction\n  rule) can close under the evidence-ledger contract. Provenance only; no verdict waits on it.\n- Whether a gravitational substrate with a velocity field \\(\\mathbf U\\) exists *with no coupling\n  to the gravitational field at all* is not a question this family can ask — its minimal\n  gravitational coupling is bounded to \\(\\ell_\\Gamma>10\\)–\\(100\\) kpc\n  ([Branch C](../moving-source-field-consistency/branch-c.md)). If another family needs a\n  substrate frame, it inherits that bound.\n\n---\n\nRetired by the closure (2026-09-04):\n\n- ~~Derive, rather than postulate, the substrate evolution equation and its conserved\n  quantities.~~ — Done for the minimal class: [Branch C](../moving-source-field-consistency/branch-c.md)\n  eq. 1 is the most general linear, local, two-derivative equation with one preferred vector; its\n  only conservation-breaking terms are the dissipation \\(\\Gamma\\) and the source delay \\(\\tau_s\\),\n  and the momentum they leak to the substrate is the drag that killed the branch.\n- ~~Decide whether \\(S\\) is a standing scalar, a flow history, or an effective metric field.~~ —\n  A scalar potential suffices to pose and close the question; a metric (aether-type) completion\n  lands in the PPN \\(\\alpha_1/\\alpha_2\\) table and is bounded harder ([Branch C](../moving-source-field-consistency/branch-c.md) § Walls).\n- ~~Specify what defines **U**, without assuming it equals the CMB frame; does the substrate comove\n  with the Hubble flow?~~ — Moot: the closure uses only that the Sun and a galaxy move relative to\n  \\(\\mathbf U\\) at comparable speeds, true for every definition short of a \\(\\mathbf U\\) comoving\n  with the Sun. Established physics stays in\n  [cosmological-expansion-and-bound-systems](../../studies/cosmological-expansion-and-bound-systems.md).\n- ~~Determine whether the same substrate carries tensor gravitational waves or an additional mode\n  with its own \\(c_g\\).~~ — The wake's field is the conventionally coupled potential; its speed is\n  pinned by Cherenkov ([moving-source-gravity-bounds](../../studies/moving-source-gravity-bounds.md)),\n  and the speed parameter makes no dipole in any case.\n- ~~Add a sourced Principia study on moving-source fields, gravitational aberration, preferred-frame\n  PPN parameters, and gravitational Cherenkov constraints.~~ — Landed 2026-08-28 as\n  [moving-source-gravity-bounds](../../studies/moving-source-gravity-bounds.md).\n- ~~Derive the extended-density response \\(C[\\rho;R]\\).~~ — Absent in the minimal class: the\n  Branch C amplitude is concentration-independent at \\(O(a/r)\\).\n",
+    "commit_object": "tree 682cccb1cf19c89c2c5f4371c14ed2b384d2ae8c\nparent 13866b2848fbcce9a1f1ef2d4b97051a65f7e626\nauthor orbit[gpt-6-astra] <agent@orbit.invalid> 1788662975 +0000\ncommitter orbit <orbit@orbit.local> 1788662975 +0000\n\nfeat: Migrate the wide-binary control pilot into versioned scientific r… [ORB-11378]\n\nMigrate the wide-binary control pilot into versioned scientific records\n\nPlanned-By: codex\n"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "source",
+    "availability": "available",
+    "snapshot_digest": "sha256:6d0b0bba31c20013c6473fb1f661b51a7f7c9edc10c2255476d6c38fdf70f249",
+    "locator": null,
+    "media_type": "text/plain"
+  },
+  "revision_id": "sha256:4144812f02e66c7d9bf9d18ab5dbf49942d6c0c781909d18c41fab69fb5ac171"
+}

@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:principia:artifact:source%3Aorrery%3Aa1c430db54d585048ec85c4e7c47141db634f398%3Alab%2Fsims%2Fdynamical-consumption-lattice%2FREADME.md",
+  "aliases": [
+    "source:orrery:a1c430db54d585048ec85c4e7c47141db634f398:lab/sims/dynamical-consumption-lattice/README.md"
+  ],
+  "activity": "active",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": null,
+    "blob_oid": null,
+    "sha256": "sha256:4db3ca8104af9e34d384ffc38a13e2b91929ab92e0cfbc684fc888d84b079da0",
+    "path": "upstream-snapshot/orrery/a1c430db54d585048ec85c4e7c47141db634f398/lab/sims/dynamical-consumption-lattice/README.md",
+    "selector": "$",
+    "historical": true,
+    "working_tree": true
+  },
+  "limitations": [
+    "Immutable archival source copy; upstream scientific ownership is unchanged."
+  ],
+  "missingness": [
+    "git-revision",
+    "owner-ingestion-git-pin",
+    "scope",
+    "upstream-canonical-record"
+  ],
+  "legacy": {
+    "source_pin": {
+      "repository": "orrery",
+      "git_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "path": "lab/sims/dynamical-consumption-lattice/README.md",
+      "blob_oid": "4dc60d94140291fd1cbf412931b51dea7bd70803",
+      "sha256": "sha256:4db3ca8104af9e34d384ffc38a13e2b91929ab92e0cfbc684fc888d84b079da0",
+      "bytes": 2743,
+      "commit_metadata": "a1c430db54d585048ec85c4e7c47141db634f398\n2026-09-06T02:28:14+00:00\n2026-09-06T02:28:14+00:00\nfeat: Preserve the original electron animation's continuous fold in a c… [ORB-11374]\n"
+    },
+    "text": "# Dynamical-consumption lattice flow\n\nThis experiment evolves a spherical radial counting lattice from a full state.\nNearest-neighbour point hopping is proportional to the density deficit across\neach face, a fixed-density outer ghost shell replenishes the lattice, and local\nsinks destroy points. The `central-only` rule destroys points only beside the\nmass. The `equal-per-shell` rule destroys the same absolute mean budget in every\nequal-width radial shell. Both use identical hopping physics and sink strength\nis chosen for an approximately 5% inner standing deficit.\n\nRun `uv run lab/sims/dynamical-consumption-lattice/main.py`. The seeded run\nwrites the full measurements to `assets/results.json` and the diagnostic plot\nto `assets/profiles.png`.\n\n## Measured run (seed 42)\n\nBoth fields reached the declared stationarity tolerance: the largest final\nstep change was below `1e-9` of the maximum standing deficit. The shell-balance\nresidual was `9.4e-9` of the total sink for central-only and `7.9e-11` for\nequal-per-shell.\n\nFits use radii 10–500, spanning 1.699 decades (491 face samples):\n\n| local consumption rule | measured `v(r)` exponent ± SE | 95% CI | nearest candidate by log-RMSE |\n| --- | ---: | ---: | --- |\n| central-only | -2.00062 ± 0.00002 | [-2.00065, -2.00059] | `r^-2` (0.00060; versus 0.831 for `r^-1`, 1.246 for `r^-1/2`) |\n| equal-per-shell | -0.99454 ± 0.00036 | [-0.99524, -0.99383] | `r^-1` (0.00803; versus 0.835 for `r^-2`, 0.411 for `r^-1/2`) |\n\nThe central-only sink is localized to the innermost shell, so it has no\ndistributed sink exponent. Poisson counting over 50 time units for the\nequal-per-shell rule measures consumption per shell as\n`r^(0.00029 ± 0.00026)` (95% CI [-0.00022, 0.00079]), discriminating the\nimplemented `r^0` rule from `r^(1/2)`.\n\nThe central-only standing deficit matches the finite-reservoir static shape\n`A(1/r - 1/R)` with `R² = 0.99999992` and relative RMSE `3.60e-5`; a comoving\npoint accumulates no destruction before the innermost sink, so its dilution is\nzero throughout the fitted range and does not reproduce that snapshot. Under\nequal-per-shell consumption, the standing deficit does not match the static\nshape (`R² = -0.838`, relative RMSE 0.293), and the comoving accumulated\ndilution also does not (`R² = -17.30`, relative RMSE 1.237).\n\nUsing the lattice signal speed `c = D/dr`, neither measured branch satisfies\n`sigma = v²/(2c²)`: the median flow/standing-sigma ratio over the fitted range\nis `2.03e-9` for central-only and `4.13e-8` for equal-per-shell, with RMS\nlog10 discrepancies of 8.42 and 7.21 dex respectively.\n\nThese are apparatus measurements and numerical consistency checks only.\nInterpretation of the theory ledger belongs to principia/kepler.\n",
+    "commit_object": "tree 8d851030602405b11b7166108b09cf9cd5664329\nparent 148b668391f575466282eaa81aab0dc943846a87\nauthor orbit[gpt-6-astra] <agent@orbit.invalid> 1788661694 +0000\ncommitter orbit <orbit@orbit.local> 1788661694 +0000\n\nfeat: Preserve the original electron animation's continuous fold in a c… [ORB-11374]\n\nPreserve the original electron animation's continuous fold in a computed-field view\n\nPlanned-By: codex\n"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "source",
+    "availability": "available",
+    "snapshot_digest": "sha256:4db3ca8104af9e34d384ffc38a13e2b91929ab92e0cfbc684fc888d84b079da0",
+    "locator": null,
+    "media_type": "text/plain"
+  },
+  "revision_id": "sha256:1a8f933f20f054f0908ebd99255b1462d9879cfeb6989a52735c81ddf1df7ef7"
+}

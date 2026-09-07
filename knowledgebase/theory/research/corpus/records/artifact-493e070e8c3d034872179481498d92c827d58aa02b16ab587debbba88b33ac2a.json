@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:principia:artifact:source%3Aorrery%3Aa1c430db54d585048ec85c4e7c47141db634f398%3Alab%2Fsims%2Flevel-core-far-field-slot-coefficients%2Fsim.json",
+  "aliases": [
+    "source:orrery:a1c430db54d585048ec85c4e7c47141db634f398:lab/sims/level-core-far-field-slot-coefficients/sim.json"
+  ],
+  "activity": "active",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": null,
+    "blob_oid": null,
+    "sha256": "sha256:a72ba86ccce26d25425731bb74976602039a9d455f280102954e028a633ed83c",
+    "path": "upstream-snapshot/orrery/a1c430db54d585048ec85c4e7c47141db634f398/lab/sims/level-core-far-field-slot-coefficients/sim.json",
+    "selector": "$",
+    "historical": true,
+    "working_tree": true
+  },
+  "limitations": [
+    "Immutable archival source copy; upstream scientific ownership is unchanged."
+  ],
+  "missingness": [
+    "git-revision",
+    "owner-ingestion-git-pin",
+    "scope",
+    "upstream-canonical-record"
+  ],
+  "legacy": {
+    "source_pin": {
+      "repository": "orrery",
+      "git_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "path": "lab/sims/level-core-far-field-slot-coefficients/sim.json",
+      "blob_oid": "d39970c8ed3159d00e3acd6fdd2cf520e41b3bc2",
+      "sha256": "sha256:a72ba86ccce26d25425731bb74976602039a9d455f280102954e028a633ed83c",
+      "bytes": 843,
+      "commit_metadata": "a1c430db54d585048ec85c4e7c47141db634f398\n2026-09-06T02:28:14+00:00\n2026-09-06T02:28:14+00:00\nfeat: Preserve the original electron animation's continuous fold in a c… [ORB-11374]\n"
+    },
+    "text": "{\n  \"slug\": \"level-core-far-field-slot-coefficients\",\n  \"title\": \"Level-core far-field shell stability\",\n  \"kind\": \"py\",\n  \"entry\": \"main.py\",\n  \"status\": \"active\",\n  \"created\": \"2026-08-28\",\n  \"topics\": [\n    \"gravity\",\n    \"gravity-as-scarcity\",\n    \"moving-source\",\n    \"preferred-frame\",\n    \"far-field\",\n    \"PPN\",\n    \"dynamical-relaxation\",\n    \"resolution-convergence\"\n  ],\n  \"family\": \"gravity-as-scarcity\",\n  \"summary\": \"A larger-box deterministic rung extends the far-field ladder through r=24, finds boundary-sensitive dipole exponents, no alpha1 regime, and a surviving slot-order half-order contraction channel.\",\n  \"provenance\": {\n    \"almanac\": \"15-discussions/26-08/from-galactic-motion-to-the-moving-gravity-medium-problem.md\",\n    \"orbit_task\": \"ORB-11171\",\n    \"predecessors\": [\"ORB-11041\", \"ORB-11040\", \"ORB-10938\"]\n  }\n}\n",
+    "commit_object": "tree 8d851030602405b11b7166108b09cf9cd5664329\nparent 148b668391f575466282eaa81aab0dc943846a87\nauthor orbit[gpt-6-astra] <agent@orbit.invalid> 1788661694 +0000\ncommitter orbit <orbit@orbit.local> 1788661694 +0000\n\nfeat: Preserve the original electron animation's continuous fold in a c… [ORB-11374]\n\nPreserve the original electron animation's continuous fold in a computed-field view\n\nPlanned-By: codex\n"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "source",
+    "availability": "available",
+    "snapshot_digest": "sha256:a72ba86ccce26d25425731bb74976602039a9d455f280102954e028a633ed83c",
+    "locator": null,
+    "media_type": "application/json"
+  },
+  "revision_id": "sha256:493e070e8c3d034872179481498d92c827d58aa02b16ab587debbba88b33ac2a"
+}

@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "kind": "assessment",
+  "id": "urn:research:principia:assessment:wbsel-candidate-oracle-regression%3Afreeze",
+  "aliases": [
+    "wbsel-candidate-oracle-regression:freeze"
+  ],
+  "activity": "active",
+  "scope": "synthetic-calibration",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "c04f2ed1ae91d6c126bc60863b5e48f46abe4576",
+    "blob_oid": "b2c91ed074ed6042133cd945180985b3550156d8",
+    "sha256": "sha256:58a4d01fa8c9fee5b97d8cbfb6fee1fe57adf6aa44fb468e9b19680cc5d57bbb",
+    "path": "theory/wide-binary-selection-methodology/claims.json",
+    "selector": "/claims/4",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Historical synthetic/model calibration only; no new scientific adjudication or nature-level inference."
+  ],
+  "missingness": [],
+  "legacy": {
+    "id": "wbsel-candidate-oracle-regression",
+    "family": "wide-binary-selection-methodology",
+    "kind": "model-property",
+    "status": "untested",
+    "claim": "An independent exhaustive great-circle candidate oracle (astropy SkyCoord.search_around_sky), run on every synthetic realization in this protocol, reproduces Astrolabe's cKDTree-based candidate/pair set exactly, confirming the ORB-11217 completeness fix continues to hold on the nonuniform, RA-wrap, and polar footprints used here.",
+    "kill": "Any realization where the independent oracle's candidate or final pair set disagrees with Astrolabe's, on any footprint (equatorial, wrap, or polar) — this reopens a candidate-completeness question against Astrolabe directly and is not folded into this protocol's own bias-statistic verdict.",
+    "links": [
+      "../../studies/wide-binary-selection-bias-preregistration.md"
+    ],
+    "in_doc_ledger": true
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "claim": {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:wbsel-candidate-oracle-regression",
+      "revision_id": "sha256:79ac5b0fc943fa6ab255f10439710546b578fb36e8770a177ba565c7fc3b92f4",
+      "source_revision": "c04f2ed1ae91d6c126bc60863b5e48f46abe4576",
+      "status": "pending"
+    },
+    "verdict": "untested",
+    "legacy_verdict": "untested",
+    "inference": "historical",
+    "basis": "legacy-report",
+    "controls": "not-run",
+    "rationale": "Untested in the original ORB-11221 registry.",
+    "evidence": []
+  },
+  "revision_id": "sha256:e48191e96682722eb26694ae03f004808feb29fa613c4663cf99a70e8999f2c5"
+}

@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Astudies%2Fmaxwell-mode-content-and-two-fluid-acoustics.md",
+  "aliases": [
+    "source:principia:4e3b02c59b694d85016915177ef1ae157895ed7b:studies/maxwell-mode-content-and-two-fluid-acoustics.md"
+  ],
+  "activity": "active",
+  "scope": "literature",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "90bd21066202d843f3fd25fbfd495a1fbed66ba1",
+    "sha256": "sha256:d65a478447db05d8fa50b85f91ef9b8604c652130cab284aa3c0a32ca62f29db",
+    "path": "studies/maxwell-mode-content-and-two-fluid-acoustics.md",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Immutable archival source copy; upstream scientific ownership is unchanged."
+  ],
+  "missingness": [],
+  "legacy": {
+    "source_pin": {
+      "repository": "principia",
+      "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "path": "studies/maxwell-mode-content-and-two-fluid-acoustics.md",
+      "blob_oid": "90bd21066202d843f3fd25fbfd495a1fbed66ba1",
+      "sha256": "sha256:d65a478447db05d8fa50b85f91ef9b8604c652130cab284aa3c0a32ca62f29db",
+      "bytes": 6178,
+      "commit_metadata": "4e3b02c59b694d85016915177ef1ae157895ed7b\n2026-09-06T02:49:35+00:00\n2026-09-06T02:49:35+00:00\nfeat: Migrate the wide-binary control pilot into versioned scientific r… [ORB-11378]\n"
+    },
+    "text": "---\ntitle: \"Maxwell plane-wave content versus two-fluid acoustics\"\nstatus: active\ncreated: 2026-09-05\nupdated: 2026-09-05\n---\n\n# Maxwell plane-wave content versus two-fluid acoustics\n\nThe mode-and-constraint count that distinguishes a Maxwell photon sector from\nordinary two-component sound. This note is the established-physics comparator\nfor the packet-Hamiltonian linearization in\n[theory/two-substance-vortex-vacuum](../theory/two-substance-vortex-vacuum/)\n(ORB-11219). It does not adjudicate any two-substance model; it records what\nMaxwell vacuum waves *are*, what two-fluid media *generically* carry, and why\nequal characteristic speeds are not polarizations.\n\n## Maxwell vacuum waves: two transverse polarizations, two constraints\n\nSourceless Maxwell equations in vacuum (Jackson, *Classical Electrodynamics*,\n3rd ed., Wiley, 1998, Ch. 6 §6.1 and Ch. 7 §7.1):\n\n\\[\n\\nabla\\cdot\\mathbf{E}=0,\\qquad\n\\nabla\\cdot\\mathbf{B}=0,\\qquad\n\\nabla\\times\\mathbf{E}=-\\partial_t\\mathbf{B},\\qquad\n\\nabla\\times\\mathbf{B}=c^{-2}\\partial_t\\mathbf{E}.\n\\]\n\nSix first-order fields \\((\\mathbf{E},\\mathbf{B})\\). The two divergences are\n**constraints**, not dynamical equations: they restrict the Cauchy data and are\npreserved by Faraday and Ampère. Plane-wave substitution\n\\(\\propto\\exp[i(\\mathbf{k}\\cdot\\mathbf{x}-\\omega t)]\\) with \\(\\mathbf{k}\\ne0\\)\nturns them into \\(\\mathbf{k}\\cdot\\mathbf{E}=0\\) and \\(\\mathbf{k}\\cdot\\mathbf{B}=0\\).\nThe remaining Faraday–Ampère pair closes on the two components of \\(\\mathbf{E}\\)\northogonal to \\(\\mathbf{k}\\), with \\(\\mathbf{B}=c^{-1}\\hat{\\mathbf{k}}\\times\\mathbf{E}\\)\nand \\(\\omega=\\pm c|\\mathbf{k}|\\). Jackson §7.2: those two orthogonal directions\nare two independent linear polarizations; general monochromatic data is a\ncomplex combination of them (including circular polarization). Faraday’s law is\nthe restoring force for the transverse electric field — a **curl**, not a\ngradient of a scalar potential.\n\nMaxwell already identified the waves as *transverse* in the 1861–62 mechanical\nmodel (“transverse undulations”; see\n[vortex-atoms-and-quantized-circulation](vortex-atoms-and-quantized-circulation.md)\n§ Maxwell’s vortex cells) and kept that content after removing the machinery\n(Maxwell 1865, “A Dynamical Theory of the Electromagnetic Field”, *Phil. Trans.\nR. Soc.* 155, 459–512, Part VI). The 1865 count is the one a substrate model\nmust match: two propagating transverse polarizations on one cone, Gauss\nconstraints killing longitudinal field, not two scalar sounds that happen to\nshare a speed.\n\n**What this is not.** Two equal eigenvalues of a principal symbol are a\ndegenerate pair of whatever those eigenvectors already were. If both\neigenvectors are longitudinal density waves, degeneracy is one cone with two\nscalar branches, not two photon polarizations. Polarization is an eigenvector\nstatement (the oscillating field is orthogonal to \\(\\mathbf{k}\\)), not a\nmultiplicity statement.\n\n## Two-fluid media: two longitudinal sounds\n\nA medium with two independently moving components generically carries **two\nscalar, longitudinal** branches — first sound (in-phase density/pressure) and\nsecond sound (counterflow / entropy). Landau 1941, “The theory of\nsuperfluidity of helium II”, *J. Phys. USSR* 5, 71; measured by Peshkov\n1944, *J. Phys. USSR* 8, 381, with second-sound speed \\(\\sim 20\\,\\mathrm{m/s}\\)\nagainst first sound \\(\\sim 240\\,\\mathrm{m/s}\\). The load-bearing statement and\nthe size of the splitting are recorded in\n[superfluid-vacuum-and-emergent-gauge-fields](superfluid-vacuum-and-emergent-gauge-fields.md)\n§ Two-fluid media carry two sounds. A single shared speed is the exception\nthat needs a mechanism (a locking symmetry, or Fermi-point-type protection),\nnot the default.\n\nThose branches remain **longitudinal**: the oscillating current of each\ncomponent is parallel to \\(\\mathbf{k}\\). Equalizing \\(u_1\\) and \\(u_2\\) by a\nparameter choice would make the two cones coincide; it would not rotate the\neigenvectors into the transverse plane and would not manufacture Faraday’s\ncurl.\n\n## Gradient-driven flux: transverse currents are frozen, not photons\n\nIn an ideal barotropic fluid the acceleration is minus the gradient of a\nscalar (specific enthalpy). Helmholtz 1858 (“Über Integrale der\nhydrodynamischen Gleichungen, welche den Wirbelbewegungen entsprechen”,\n*J. reine angew. Math.* 55, 25–55) then implies that vortex lines are\npermanent — circulation is conserved, vorticity is frozen into the flow. The\nsame identity holds for any continuum whose flux is kicked by\n\\(\\partial_t\\mathbf{j}=-\\nabla\\mu\\) with \\(\\mu\\) a local scalar: \n\\(\\partial_t(\\nabla\\times\\mathbf{j})=-\\nabla\\times\\nabla\\mu=0\\). Transverse\ncurrent is a **zero-frequency** mode of that force law, at finite amplitude,\nnot a propagating wave. It is the opposite of Maxwell’s transverse photon,\nwhose restoring force is the curl coupling of \\(\\mathbf{E}\\) and \\(\\mathbf{B}\\).\n\nThis is why a pair of conserved densities with gradient-driven fluxes is the\nwrong kinematic type for a Maxwell sector, independently of how the two\nscalar sound speeds are tuned. A theory that *does* deliver emergent photons\ndoes it with additional structure — in Volovik’s program, the collective\ncoordinates of a topologically protected Fermi point acting as \\(A_\\mu\\) and a\nvierbein, a theorem about a universality class, not a speed-tuning\n([superfluid-vacuum-and-emergent-gauge-fields](superfluid-vacuum-and-emergent-gauge-fields.md)).\nThat is a different object than two scalar densities.\n\n## What this binds\n\nFor any claim that a two-density, gradient-driven apparatus is a Maxwell\nsector: the Maxwell count is two propagating *transverse* polarizations plus\ntwo Gauss constraints; the two-fluid default is two *longitudinal* sounds;\nequal speeds are not polarizations; frozen transverse current is not a photon.\nThe packet-Hamiltonian algebra that applies this comparator lives in the\ntheory chapter, not here. Observational walls on birefringence, resonator\nanisotropy, and \\(\\gamma=1\\) remain\n[lorentz-violation-bounds](lorentz-violation-bounds.md) and\n[scalar-gravity-ppn-constraints](scalar-gravity-ppn-constraints.md).\n",
+    "commit_object": "tree 682cccb1cf19c89c2c5f4371c14ed2b384d2ae8c\nparent 13866b2848fbcce9a1f1ef2d4b97051a65f7e626\nauthor orbit[gpt-6-astra] <agent@orbit.invalid> 1788662975 +0000\ncommitter orbit <orbit@orbit.local> 1788662975 +0000\n\nfeat: Migrate the wide-binary control pilot into versioned scientific r… [ORB-11378]\n\nMigrate the wide-binary control pilot into versioned scientific records\n\nPlanned-By: codex\n"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "source",
+    "availability": "available",
+    "snapshot_digest": "sha256:d65a478447db05d8fa50b85f91ef9b8604c652130cab284aa3c0a32ca62f29db",
+    "locator": null,
+    "media_type": "text/plain"
+  },
+  "revision_id": "sha256:980fc2a8c2b66562941c1de360119ced35dd2616fdc04d38d95a9662696bedc4"
+}

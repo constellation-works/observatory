@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "kind": "program",
+  "id": "urn:research:principia:program:wide-binary-selection-methodology",
+  "aliases": [
+    "wide-binary-selection-methodology"
+  ],
+  "activity": "active",
+  "scope": "synthetic-calibration",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "c04f2ed1ae91d6c126bc60863b5e48f46abe4576",
+    "blob_oid": "b2c91ed074ed6042133cd945180985b3550156d8",
+    "sha256": "sha256:58a4d01fa8c9fee5b97d8cbfb6fee1fe57adf6aa44fb468e9b19680cc5d57bbb",
+    "path": "theory/wide-binary-selection-methodology/claims.json",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Historical synthetic/model calibration only; no new scientific adjudication or nature-level inference."
+  ],
+  "missingness": [],
+  "legacy": {
+    "doc": "wide-binary-selection-methodology",
+    "title": "Wide-binary selection methodology: does geometry/truncation manufacture an acceleration-dependent artifact?",
+    "status": "exploratory",
+    "families": [
+      "wide-binary-selection-methodology"
+    ],
+    "updated": "2026-09-05",
+    "headline": "Preregistered control protocol (not yet run) testing whether Astrolabe's wide-binary selection pipeline manufactures a spurious acceleration-dependent bias, or a miscalibrated chance-alignment rate, on a purely Newtonian synthetic catalog with a realistic nonuniform footprint.",
+    "live_fronts": [
+      "wide-binary-selection-bias-control"
+    ]
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "program",
+    "title": "Wide-binary selection methodology: does geometry/truncation manufacture an acceleration-dependent artifact?"
+  },
+  "revision_id": "sha256:8984ee8cdbd455526503d40ce5f867b42d33e5a27428c4a630892d1bd22552df"
+}

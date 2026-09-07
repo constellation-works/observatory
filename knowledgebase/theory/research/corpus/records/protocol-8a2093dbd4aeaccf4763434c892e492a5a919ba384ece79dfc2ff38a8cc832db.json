@@ -1,0 +1,121 @@
+{
+  "schema_version": 1,
+  "kind": "protocol",
+  "id": "urn:research:principia:protocol:closed-system-moving-existence",
+  "aliases": [
+    "closed-system-moving-existence"
+  ],
+  "activity": "paused",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "169c6d0c57fd25e44fd3dca8739bfb2b1046f519",
+    "sha256": "sha256:d06122414e0f46f70e0567c277866212e2ee3790a50bd4e9595140e3b3eac788",
+    "path": "gates/closed-system-moving-existence.json",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Exact historical verdict and stated assumptions only; migration makes no new scientific inference."
+  ],
+  "missingness": [
+    "prospective-freeze-and-consumption-not-verified",
+    "scope"
+  ],
+  "legacy": {
+    "id": "closed-system-moving-existence",
+    "doc": "moving-sources-in-the-closed-system",
+    "family": "gravity-as-scarcity",
+    "kind": "existence",
+    "owed_object": "Does a non-cavitating moving solution exist at solar-system winds, with a floor that still lets matter be an excitation?",
+    "inherited_postulates": [
+      "postulate-rolling-rule",
+      "postulate-elliptic-sigma",
+      "postulate-shear-law"
+    ],
+    "new_postulates": [],
+    "control": "Pure-wind state (already passed: zero consumption). No PPN numbers, observational ray-tracing fits, or galaxy fits until this card passes; the coefficient reduction as algebra (ppn-reduction-of-the-settled-flow, ORB-11039) and scale estimates (ORB-10939) are allowed — its structural rows move on cataloged evidence (ORB-11040 symbolic, ORB-11041 far-field) while phenomenology numbers stay blocked — amended 2026-08-28 to match the 2026-08-21 arbitration's named obligation.",
+    "kill": "Cavitation in physical units at Earth/Sun orbital winds, or no regular settled flow that is an excitation medium.",
+    "forbidden_reopens": [
+      "scarcity-fixed-beta-universality",
+      "scarcity-static-photon-gamma",
+      "scarcity-static-clocks",
+      "scarcity-counting-produces-gp"
+    ],
+    "blocked_phenomenology": [
+      "ppn",
+      "photon-modulation",
+      "sparc",
+      "drag-ephemerides"
+    ],
+    "comparator": "GR mass-frame Schwarzschild (uniform U is gauge). Not Galilean U+v_GP.",
+    "claims": [
+      "moving-cavitation-floor",
+      "moving-theorem-1-bernoulli-realized",
+      "moving-theorem-2-wake-not-gauge",
+      "ppn-slots-far-field",
+      "ppn-half-order-hazard",
+      "ppn-alpha-contact"
+    ],
+    "status": "closed",
+    "closed_on": "2026-09-04",
+    "closed_by": "Daniel: explicit family retirement",
+    "closure": "Retired by Daniel on 2026-09-04: discontinue the gravity-as-scarcity research family, including the shear-flow completion, moving-source repair, and PPN continuation. Preserve all evidence and individual claim verdicts; no follow-up or reopening without Daniel's explicit authorization.",
+    "reopen_requires": "Explicit authorization from Daniel; this closure does not assert the existence claim was proven false in every possible completion."
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "semantic": {
+      "gate": {
+        "id": "closed-system-moving-existence",
+        "doc": "moving-sources-in-the-closed-system",
+        "family": "gravity-as-scarcity",
+        "kind": "existence",
+        "owed_object": "Does a non-cavitating moving solution exist at solar-system winds, with a floor that still lets matter be an excitation?",
+        "inherited_postulates": [
+          "postulate-rolling-rule",
+          "postulate-elliptic-sigma",
+          "postulate-shear-law"
+        ],
+        "new_postulates": [],
+        "control": "Pure-wind state (already passed: zero consumption). No PPN numbers, observational ray-tracing fits, or galaxy fits until this card passes; the coefficient reduction as algebra (ppn-reduction-of-the-settled-flow, ORB-11039) and scale estimates (ORB-10939) are allowed — its structural rows move on cataloged evidence (ORB-11040 symbolic, ORB-11041 far-field) while phenomenology numbers stay blocked — amended 2026-08-28 to match the 2026-08-21 arbitration's named obligation.",
+        "kill": "Cavitation in physical units at Earth/Sun orbital winds, or no regular settled flow that is an excitation medium.",
+        "forbidden_reopens": [
+          "scarcity-fixed-beta-universality",
+          "scarcity-static-photon-gamma",
+          "scarcity-static-clocks",
+          "scarcity-counting-produces-gp"
+        ],
+        "blocked_phenomenology": [
+          "ppn",
+          "photon-modulation",
+          "sparc",
+          "drag-ephemerides"
+        ],
+        "comparator": "GR mass-frame Schwarzschild (uniform U is gauge). Not Galilean U+v_GP.",
+        "claims": [
+          "moving-cavitation-floor",
+          "moving-theorem-1-bernoulli-realized",
+          "moving-theorem-2-wake-not-gauge",
+          "ppn-slots-far-field",
+          "ppn-half-order-hazard",
+          "ppn-alpha-contact"
+        ],
+        "status": "closed",
+        "closed_on": "2026-09-04",
+        "closed_by": "Daniel: explicit family retirement",
+        "closure": "Retired by Daniel on 2026-09-04: discontinue the gravity-as-scarcity research family, including the shear-flow completion, moving-source repair, and PPN continuation. Preserve all evidence and individual claim verdicts; no follow-up or reopening without Daniel's explicit authorization.",
+        "reopen_requires": "Explicit authorization from Daniel; this closure does not assert the existence claim was proven false in every possible completion."
+      },
+      "linked_prose": {}
+    },
+    "semantic_digest": "sha256:8a2093dbd4aeaccf4763434c892e492a5a919ba384ece79dfc2ff38a8cc832db",
+    "freeze": "historical-unverified",
+    "frozen_at": null,
+    "freeze_evidence": null
+  },
+  "revision_id": "sha256:8a2093dbd4aeaccf4763434c892e492a5a919ba384ece79dfc2ff38a8cc832db"
+}

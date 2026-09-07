@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Astudies%2Fgaia-wide-binaries-low-acceleration.md",
+  "aliases": [
+    "source:principia:4e3b02c59b694d85016915177ef1ae157895ed7b:studies/gaia-wide-binaries-low-acceleration.md"
+  ],
+  "activity": "active",
+  "scope": "literature",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "799889aaec86a3418c4d9957a630a118ac067685",
+    "sha256": "sha256:52f25f78f9debf47fd73eb7e35022f8b1cd747aa278d8d3c5b02457de7de6758",
+    "path": "studies/gaia-wide-binaries-low-acceleration.md",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Immutable archival source copy; upstream scientific ownership is unchanged."
+  ],
+  "missingness": [],
+  "legacy": {
+    "source_pin": {
+      "repository": "principia",
+      "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "path": "studies/gaia-wide-binaries-low-acceleration.md",
+      "blob_oid": "799889aaec86a3418c4d9957a630a118ac067685",
+      "sha256": "sha256:52f25f78f9debf47fd73eb7e35022f8b1cd747aa278d8d3c5b02457de7de6758",
+      "bytes": 4055,
+      "commit_metadata": "4e3b02c59b694d85016915177ef1ae157895ed7b\n2026-09-06T02:49:35+00:00\n2026-09-06T02:49:35+00:00\nfeat: Migrate the wide-binary control pilot into versioned scientific r… [ORB-11378]\n"
+    },
+    "text": "---\ntitle: \"Gaia DR3 wide binaries across the low-acceleration boundary — first footprint\"\nstatus: active\ncreated: 2026-08-12\nupdated: 2026-08-12\n---\n\n# Gaia wide binaries across the low-acceleration boundary\n\nThe first stellar-scale datum against the **acceleration-organization problem** (standing\ndebt #2, [ledger](../ledger.md); ORB-10169's residue). Wide binaries with internal Newtonian\nacceleration g_N = G(M₁+M₂)/s² below a₀ ≈ 1.2×10⁻¹⁰ m/s² sample the same regime where the\nSPARC data organize by acceleration — but with no dark-matter degeneracy: if the organization\nis a property of *gravity*, it should appear here; if binaries are cleanly Newtonian through\nthe boundary, that constrains any universal low-acceleration carrier.\n\n**Source (tycho, ORB-10753, ws_astrolabe, 2026-08-12).** Gaia DR3 (`gaiadr3.gaia_source`,\nDOI 10.5270/esa-1ugzkg7), local-volume cone: ra 180°, dec +40°, radius 25°, d < 200 pc\n(ϖ > 5 mas, ϖ/σ_ϖ > 10, RUWE < 1.4, G < 18); 51,549 stars → **156 pairs** after El-Badry &\nRix-style selection (θ ∈ [1.5″, 1°], s ∈ [0.5, 50] kAU projected, 3σ parallax consistency,\nescape-velocity PM gate). Analysis policy — thermal eccentricity prior f(e) = 2e, RUWE +\nΔRV triple veto (residual triple fraction recorded as 0.10), shifted-field chance-alignment\ncontrol (global R = 0.013; only the two lowest-g bins flagged at R ≈ 0.13–0.17) — was\n**predeclared in the task plan before binning**, with the contested alternatives (flat\neccentricity prior, RUWE < 1.2) exercised only in the sensitivity table afterward.\nComparison is against forward-modeled Keplerian Monte Carlo mocks with the same projected\nselection, not circular-orbit analytics. Apparatus: astrolabe `9c08636` (adapter, analysis,\nend-to-end script, offline tests — 70 passed); datasets in the astrolabe Store\n(`catalog/widebin_pairs_baseline`, `derived/widebin_vtilde_gn`, `derived/widebin_sensitivity`,\nbox-side); full binned tables in the ORB-10753 task record.\n\n**Result.** The scaled relative-velocity statistic ṽ = Δv_sky / v_circ(s, M_tot), binned in\ng_N over 5.5×10⁻¹² → 4.6×10⁻⁸ m/s²:\n\n- Low-g regime (g_N < 1.2×10⁻¹⁰, n = 16): median ṽ = 0.702 vs Newtonian mock 0.677 —\n  **no low-acceleration excess**.\n- High-g regime (n = 140): median ṽ = 0.625 vs mock 0.687 — consistent.\n- The verdict is unchanged under every contested-choice combination (thermal/flat prior ×\n  RUWE 1.4/1.2): the low-g median never moves off 0.702, the mock never leaves 0.65–0.69.\n- One mid bin (g_N ≈ 1.8×10⁻¹⁰) sits ~2σ high — isolated, not a coherent excess across the\n  boundary.\n\n**Verdict: Newtonian-consistent on this footprint — an honest null.** The predeclared\npipeline found no acceleration organization at stellar scale where the SPARC apparatus\nmeasures it at galactic scale.\n\n**What this does and does not constrain.** With n = 6–16 pairs per low-g bin on a single\n25° cone, this footprint cannot adjudicate the contested literature (Chae 2023/2024 excess\nvs Banik et al. 2024 null — both from vastly larger samples); it is a pipeline-validated\nfirst datum, not a decisive measurement. What it *does* do: put the corpus's own predeclared\napparatus on the Newtonian side at current power, and make \"the boost is a universal\nproperty of gravity below a₀\" carry a burden it has not met at stellar scale. The follow-up\nwith teeth is a multi-cone / full-sky campaign reaching n ≫ 10³ pairs below a₀ (tycho's\nrecommended v2; not yet filed).\n\n## Consumers\n\n- [gravity-as-scarcity](../theory/gravity-as-scarcity/) § what remains live — the\n  acceleration-organized-successor question now has a stellar-scale null to respect.\n- [ledger](../ledger.md) — supported row + standing debt #2.\n- [wide-binary-selection-bias-preregistration](wide-binary-selection-bias-preregistration.md) —\n  the methodological control protocol auditing this footprint's own apparatus (geometry/\n  truncation coupling, chance-alignment calibration) before its null is leaned on further.\n",
+    "commit_object": "tree 682cccb1cf19c89c2c5f4371c14ed2b384d2ae8c\nparent 13866b2848fbcce9a1f1ef2d4b97051a65f7e626\nauthor orbit[gpt-6-astra] <agent@orbit.invalid> 1788662975 +0000\ncommitter orbit <orbit@orbit.local> 1788662975 +0000\n\nfeat: Migrate the wide-binary control pilot into versioned scientific r… [ORB-11378]\n\nMigrate the wide-binary control pilot into versioned scientific records\n\nPlanned-By: codex\n"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "source",
+    "availability": "available",
+    "snapshot_digest": "sha256:52f25f78f9debf47fd73eb7e35022f8b1cd747aa278d8d3c5b02457de7de6758",
+    "locator": null,
+    "media_type": "text/plain"
+  },
+  "revision_id": "sha256:86c584503632be70f625c1f2ca423ada5403ac2463377f5589a70a6545031fb5"
+}

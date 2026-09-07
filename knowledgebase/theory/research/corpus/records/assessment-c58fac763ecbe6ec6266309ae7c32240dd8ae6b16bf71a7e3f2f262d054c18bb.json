@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "kind": "assessment",
+  "id": "urn:research:principia:assessment:moving-theorem-1-bernoulli-realized%3Alegacy-verdict",
+  "aliases": [
+    "moving-theorem-1-bernoulli-realized:legacy-verdict"
+  ],
+  "activity": "unknown",
+  "scope": "derivation",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "d9f73691ac539f5935cd6dbedcabdb6f722777a3",
+    "sha256": "sha256:0ec4339ac8934344ada2473abd7941e08d9c413b12e2636c275ab4f9a35a70a5",
+    "path": "theory/moving-sources-in-the-closed-system/claims.json",
+    "selector": "/claims/0",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Exact historical verdict and stated assumptions only; migration makes no new scientific inference."
+  ],
+  "missingness": [
+    "exact-evidence-owner-references",
+    "independently-verified-controls",
+    "activity"
+  ],
+  "legacy": {
+    "id": "moving-theorem-1-bernoulli-realized",
+    "family": "gravity-as-scarcity",
+    "kind": "derived",
+    "status": "refuted",
+    "claim": "Steady irrotational flow of the closed system around a uniformly moving mass has exactly isotropic speed \\|v\\|² = U² + 2c²σ; the wake is confined to the direction field (Theorem 1)",
+    "evidence": "The conditional algebra is exact (sympy) and its lattice realization on the *imposed* branch is machine-precision (ORB-10935 G1: dipoles ≤2.7×10⁻¹⁶, [level-core-wind-tunnel](../../../orrery/lab/sims/level-core-wind-tunnel/)). **The dynamics refute the closure as a description of the realized system** — ORB-10938 G3 (the inherited kill, delivered): at T = 600 the system settles, and on converged velocity-settled samples the squared residual \\|v\\|² − U² − 2c²σ has relative RMS 0.121 (r = 3) and 0.447 (r = 5) at 41³, U/v_GP = 0.3, both beyond combined temporal/resolution error, with the 61³ anchor (0.145 at r = 3) independently beyond error; normalized speed dipoles 0.04–0.24, rung-converged ([level-core-dynamical-relaxation](../../../orrery/lab/sims/level-core-dynamical-relaxation/)). The failing premise is irrotationality: the settled flow carries finite vorticity (RMS ~0.015 at U/v_GP = 0.3, stable 41³→61³), so Kelvin does not survive the realized dynamics. What survives: the theorem as conditional algebra, and the wind-cancellation *structure* it motivated — but the realized speed field is anisotropic",
+    "links": [
+      "../../../orrery/lab/sims/level-core-wind-tunnel/",
+      "../../../orrery/lab/sims/level-core-dynamical-relaxation/"
+    ],
+    "in_doc_ledger": true
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "claim": {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:moving-theorem-1-bernoulli-realized",
+      "revision_id": "sha256:a679a1b92a8e7005dee810944d6ed71b95770aab0460236608007001eb140407",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    "verdict": "refuted",
+    "legacy_verdict": "refuted",
+    "inference": "historical",
+    "basis": "legacy-report",
+    "controls": "unknown",
+    "rationale": "The conditional algebra is exact (sympy) and its lattice realization on the *imposed* branch is machine-precision (ORB-10935 G1: dipoles ≤2.7×10⁻¹⁶, [level-core-wind-tunnel](../../../orrery/lab/sims/level-core-wind-tunnel/)). **The dynamics refute the closure as a description of the realized system** — ORB-10938 G3 (the inherited kill, delivered): at T = 600 the system settles, and on converged velocity-settled samples the squared residual \\|v\\|² − U² − 2c²σ has relative RMS 0.121 (r = 3) and 0.447 (r = 5) at 41³, U/v_GP = 0.3, both beyond combined temporal/resolution error, with the 61³ anchor (0.145 at r = 3) independently beyond error; normalized speed dipoles 0.04–0.24, rung-converged ([level-core-dynamical-relaxation](../../../orrery/lab/sims/level-core-dynamical-relaxation/)). The failing premise is irrotationality: the settled flow carries finite vorticity (RMS ~0.015 at U/v_GP = 0.3, stable 41³→61³), so Kelvin does not survive the realized dynamics. What survives: the theorem as conditional algebra, and the wind-cancellation *structure* it motivated — but the realized speed field is anisotropic",
+    "evidence": []
+  },
+  "revision_id": "sha256:c58fac763ecbe6ec6266309ae7c32240dd8ae6b16bf71a7e3f2f262d054c18bb"
+}

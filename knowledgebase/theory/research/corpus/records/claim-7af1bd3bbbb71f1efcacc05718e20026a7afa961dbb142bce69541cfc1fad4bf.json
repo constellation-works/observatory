@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "kind": "claim",
+  "id": "urn:research:principia:claim:moving-consumed-momentum-drag",
+  "aliases": [
+    "moving-consumed-momentum-drag"
+  ],
+  "activity": "retired",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "d9f73691ac539f5935cd6dbedcabdb6f722777a3",
+    "sha256": "sha256:0ec4339ac8934344ada2473abd7941e08d9c413b12e2636c275ab4f9a35a70a5",
+    "path": "theory/moving-sources-in-the-closed-system/claims.json",
+    "selector": "/claims/5",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Exact historical verdict and stated assumptions only; migration makes no new scientific inference."
+  ],
+  "missingness": [
+    "scope"
+  ],
+  "legacy": {
+    "id": "moving-consumed-momentum-drag",
+    "family": "gravity-as-scarcity",
+    "kind": "nature",
+    "status": "mixed",
+    "claim": "Consumed momentum has no bookkeeping; the wake makes the gap observable (possible secular drag on moving sources)",
+    "evidence": "ORB-10935 G3 measured the constructed branch: drag sign at every wind, fit \\|∫s·v_x dV\\| = 20.3·U^0.098 — nearly U-independent. ORB-10937 G4 then measured the *realized* (time-averaged, still-relaxing) flow and the constructed scaling **did not survive**: consumed +x momentum is **linear in the wind** — consumed/U = 61.8, 61.8, 61.1, 57.2 across the 33× sweep, fit \\|∫s·v_x dV\\| = 55.9·U^0.979, drag sign at every U, finest adjacent-rung shifts within the 25% target ([level-core-dynamical-relaxation](../../../orrery/lab/sims/level-core-dynamical-relaxation/)). Linear-in-U means a **fixed-strength sink** — wind-independent volume consumption Q with captured momentum n·Q·U; flux capture (area × wind) would be quadratic (slogan corrected at the 2026-08-21 critique). Posture-3 back-of-envelope (§ consumed momentum): BHL-form τ ~ U³/(4πG²M·n_s), phenomenologically silent for any cosmological substrate inertia — the drag is not the fast kill. **The linear law did not survive settlement either** (ORB-10938 G5): the late-time 41³ fit is \\|∫s·v_x dV\\| = 81.2·U^1.332 — superlinear, with settled drag well below the transient fit at low winds (measured/ORB-10937-fit 0.23–0.76 ascending in U) — so the fixed-strength-sink slogan describes the *transient*, not the settled state; the settled trough depth is itself U-dependent (deep at low U, shallow at U/v_GP = 1), which plausibly sources the extra power. The BHL bound above was premised on linear and needs redoing on the settled law before it is quoted again. The surface ledger stays advective-only; the debt itself (where the momentum goes, physical normalization) remains open",
+    "links": [
+      "../../../orrery/lab/sims/level-core-dynamical-relaxation/"
+    ],
+    "in_doc_ledger": true
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "claim",
+    "statement": "Consumed momentum has no bookkeeping; the wake makes the gap observable (possible secular drag on moving sources)",
+    "domain": "nature"
+  },
+  "revision_id": "sha256:7af1bd3bbbb71f1efcacc05718e20026a7afa961dbb142bce69541cfc1fad4bf"
+}

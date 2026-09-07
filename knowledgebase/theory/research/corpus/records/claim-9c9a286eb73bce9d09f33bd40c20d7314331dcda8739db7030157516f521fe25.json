@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "kind": "claim",
+  "id": "urn:research:principia:claim:branch-c-drag-lock",
+  "aliases": [
+    "branch-c-drag-lock"
+  ],
+  "activity": "resolved",
+  "scope": "derivation",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "f55e1dace027658053ccc8f5b740363237c0eda4",
+    "sha256": "sha256:34d8fd1300c47a5df5ea2300abe6ba3ac4e6c29d546f03686710d88e1297d681",
+    "path": "theory/moving-source-field-consistency/claims.json",
+    "selector": "/claims/15",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Exact historical verdict and stated assumptions only; migration makes no new scientific inference."
+  ],
+  "missingness": [],
+  "legacy": {
+    "id": "branch-c-drag-lock",
+    "family": "retarded-scarcity-wake",
+    "kind": "derived",
+    "status": "untested",
+    "claim": "The dissipative parameter that sets the dipole also sets a first-order self-acceleration \\(\\mathbf{a}_{\\rm self}=-\\tfrac{2}{3}\\Gamma\\,(\\lvert W\\rvert/Mc^2)\\,\\mathbf{w}\\) of every gravitationally bound body along its substrate-relative velocity, so a galactic dipole \\(A_1\\) at radius \\(R\\) forces \\(a_{\\rm self}=\\tfrac{4A_1}{3R}(\\lvert W\\rvert/M)(\\beta_{\\rm b}/\\beta_{\\rm gal})\\) on every other body",
+    "evidence": "[Branch C](branch-c.md) § The drag lemma (eqs. 6–8): two integrations by parts from the first-order field equation, agreeing with the dissipated-power balance; the integration-by-parts identity verified on a periodic grid to \\(10^{-12}\\) for a uniform sphere, uncataloged",
+    "links": [
+      "branch-c.md"
+    ],
+    "in_doc_ledger": true,
+    "kill": "Catalog the branch-c-first-order-solution fixture (gate iv): self-force on the uniform sphere = −(2k/3)(3/5)GM²/a and on the Plummer sphere = −(2k/3)|W| within grid error."
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "claim",
+    "statement": "The dissipative parameter that sets the dipole also sets a first-order self-acceleration \\(\\mathbf{a}_{\\rm self}=-\\tfrac{2}{3}\\Gamma\\,(\\lvert W\\rvert/Mc^2)\\,\\mathbf{w}\\) of every gravitationally bound body along its substrate-relative velocity, so a galactic dipole \\(A_1\\) at radius \\(R\\) forces \\(a_{\\rm self}=\\tfrac{4A_1}{3R}(\\lvert W\\rvert/M)(\\beta_{\\rm b}/\\beta_{\\rm gal})\\) on every other body",
+    "domain": "model"
+  },
+  "revision_id": "sha256:9c9a286eb73bce9d09f33bd40c20d7314331dcda8739db7030157516f521fe25"
+}

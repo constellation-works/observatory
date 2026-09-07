@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Aschema%2Fwall.json",
+  "aliases": [
+    "source:principia:4e3b02c59b694d85016915177ef1ae157895ed7b:schema/wall.json"
+  ],
+  "activity": "active",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "284cb77b99a727802771f4b82c2aecc2dd1e1f40",
+    "sha256": "sha256:1f58f26205a7b141a2042aff6603d04ea5f501414ea26ecdc6da192c12ba760e",
+    "path": "schema/wall.json",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Immutable archival source copy; upstream scientific ownership is unchanged."
+  ],
+  "missingness": [
+    "scope"
+  ],
+  "legacy": {
+    "source_pin": {
+      "repository": "principia",
+      "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "path": "schema/wall.json",
+      "blob_oid": "284cb77b99a727802771f4b82c2aecc2dd1e1f40",
+      "sha256": "sha256:1f58f26205a7b141a2042aff6603d04ea5f501414ea26ecdc6da192c12ba760e",
+      "bytes": 703,
+      "commit_metadata": "4e3b02c59b694d85016915177ef1ae157895ed7b\n2026-09-06T02:49:35+00:00\n2026-09-06T02:49:35+00:00\nfeat: Migrate the wide-binary control pilot into versioned scientific r… [ORB-11378]\n"
+    },
+    "text": "{\n  \"refuted_ids\": [\n    \"scarcity-fixed-beta-universality\",\n    \"scarcity-static-photon-gamma\",\n    \"scarcity-multiplicative-superposition\",\n    \"scarcity-static-clocks\",\n    \"scarcity-counting-produces-gp\",\n    \"two-substance-void-volume-ep\",\n    \"two-substance-conserving-far-field\",\n    \"two-substance-s2-fifth-force-charge\",\n    \"two-substance-s2-yukawa-light\",\n    \"two-substance-density-set-c\",\n    \"two-substance-fixed-length-universality\",\n    \"retarded-wake-rescues-parent\",\n    \"vortex-two-particle-bell\",\n    \"vortex-nature-chsh-ceiling\",\n    \"swirl-is-classically-a-photon\",\n    \"shear-flux-type-amplitude\",\n    \"moving-theorem-1-bernoulli-realized\",\n    \"branch-c-observable-dipole\"\n  ]\n}\n",
+    "commit_object": "tree 682cccb1cf19c89c2c5f4371c14ed2b384d2ae8c\nparent 13866b2848fbcce9a1f1ef2d4b97051a65f7e626\nauthor orbit[gpt-6-astra] <agent@orbit.invalid> 1788662975 +0000\ncommitter orbit <orbit@orbit.local> 1788662975 +0000\n\nfeat: Migrate the wide-binary control pilot into versioned scientific r… [ORB-11378]\n\nMigrate the wide-binary control pilot into versioned scientific records\n\nPlanned-By: codex\n"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "source",
+    "availability": "available",
+    "snapshot_digest": "sha256:1f58f26205a7b141a2042aff6603d04ea5f501414ea26ecdc6da192c12ba760e",
+    "locator": null,
+    "media_type": "application/json"
+  },
+  "revision_id": "sha256:94147acf5b1558ae5e89a1c563708ce3cfcc7f4c72e3fa700a718201dc6f3e4a"
+}

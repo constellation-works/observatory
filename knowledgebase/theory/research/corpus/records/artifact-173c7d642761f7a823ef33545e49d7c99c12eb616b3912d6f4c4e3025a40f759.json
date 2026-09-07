@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:principia:artifact:source%3Aorrery%3Aa1c430db54d585048ec85c4e7c47141db634f398%3Alab%2Fsims%2Flevel-coupled-shear-lattice%2FREADME.md",
+  "aliases": [
+    "source:orrery:a1c430db54d585048ec85c4e7c47141db634f398:lab/sims/level-coupled-shear-lattice/README.md"
+  ],
+  "activity": "active",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": null,
+    "blob_oid": null,
+    "sha256": "sha256:72493105175866d75491b0503c11d0c2f28953a0cf61fb8a3f26e5a4c64e5790",
+    "path": "upstream-snapshot/orrery/a1c430db54d585048ec85c4e7c47141db634f398/lab/sims/level-coupled-shear-lattice/README.md",
+    "selector": "$",
+    "historical": true,
+    "working_tree": true
+  },
+  "limitations": [
+    "Immutable archival source copy; upstream scientific ownership is unchanged."
+  ],
+  "missingness": [
+    "git-revision",
+    "owner-ingestion-git-pin",
+    "scope",
+    "upstream-canonical-record"
+  ],
+  "legacy": {
+    "source_pin": {
+      "repository": "orrery",
+      "git_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "path": "lab/sims/level-coupled-shear-lattice/README.md",
+      "blob_oid": "9065171169f6385a415f8f369e3e1efbb71c31c3",
+      "sha256": "sha256:72493105175866d75491b0503c11d0c2f28953a0cf61fb8a3f26e5a4c64e5790",
+      "bytes": 2839,
+      "commit_metadata": "a1c430db54d585048ec85c4e7c47141db634f398\n2026-09-06T02:28:14+00:00\n2026-09-06T02:28:14+00:00\nfeat: Preserve the original electron animation's continuous fold in a c… [ORB-11374]\n"
+    },
+    "text": "# Level-coupled shear lattice\n\nThis apparatus tests whether a draw-sourced standing scarcity level, inertial\nrolling, and the frozen coefficient-one von Mises shear rule dynamically settle\non the level-matching amplitude\n\n`A² = 2 c² sigma_s r_s`.\n\nIt is a spherical finite-volume experiment. Core draw cells are summed by the\ndiscrete Gauss law and the exterior level is integrated inward; the exterior\nis not filled with an analytic `1/r` profile. Composition runs use `N`\nindividually counted unit-core draws in a deterministic quasi-uniform cluster,\nthen retain their radial monopole on the flow lattice. A semi-Lagrangian\nmomentum lattice then evolves the material rolling rule. A second transported\nfield evolves continuity and local shear destruction using the exact frozen\nrule from `shear-consumption-lattice`. The outer Robin face represents rest at\ninfinity on the finite domain; it is not a fitted amplitude.\n\nRun:\n\n```text\nuv run lab/sims/level-coupled-shear-lattice/main.py\n```\n\nThe command writes the concise `assets/results.json` and the authoritative\nfull-precision `runs/2026-08-21-seed-42.json`. Verify a byte-identical in-memory\nrerun with:\n\n```text\nuv run lab/sims/level-coupled-shear-lattice/main.py --check-determinism --no-write\n```\n\n## Predeclared gates\n\n- **Level:** four draw strengths span three decades. The measured amplitude is\n  fitted against `sigma_s r_s`, every run reports\n  `A²/(2 c² sigma_s r_s)`, and mass one is evolved from rest and a seeded\n  perturbed velocity/density state.\n- **Density:** equal draw strength is repeated for core radii 0.5, 1, and 2, a\n  fourfold span. The fitted `A(r_s)` exponent adjudicates level independence\n  against the flux prediction `-3/2`.\n- **Composition:** 1–32 unit draws are co-clustered at fixed packing density,\n  represented by `r_cluster = N^(1/3)`. The far-field amplitude is fitted to\n  `A(N)` and tested against exponent `1/2`.\n- **Convergence:** the level case uses 96/192/384 shells plus CFL 0.4 → 0.2\n  step halving. Successive spatial amplitude shifts must shrink.\n\nThe committed results artifact and run record contain each numeric estimate,\nregression standard error, 95% interval, pass/kill criterion, and verdict.\n\n## Limitations\n\nThe spherical reduction preserves the draw monopole but coarse-grains the\ncomposition gate's nonspherical near field, so it does not test interactions\nbetween resolved individual cores. The draw count sources the standing level\none-way: shear destruction evolves substrate density and checks the steady\ncontinuity balance, but does not change the conserved draws. The finite outer\nRobin face supplies the isolated rest-at-infinity reference. Regression errors\nand numerical-convergence shifts are reported separately. This is an\napparatus-level handoff; principia theory documents are deliberately unchanged.\n",
+    "commit_object": "tree 8d851030602405b11b7166108b09cf9cd5664329\nparent 148b668391f575466282eaa81aab0dc943846a87\nauthor orbit[gpt-6-astra] <agent@orbit.invalid> 1788661694 +0000\ncommitter orbit <orbit@orbit.local> 1788661694 +0000\n\nfeat: Preserve the original electron animation's continuous fold in a c… [ORB-11374]\n\nPreserve the original electron animation's continuous fold in a computed-field view\n\nPlanned-By: codex\n"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "source",
+    "availability": "available",
+    "snapshot_digest": "sha256:72493105175866d75491b0503c11d0c2f28953a0cf61fb8a3f26e5a4c64e5790",
+    "locator": null,
+    "media_type": "text/plain"
+  },
+  "revision_id": "sha256:173c7d642761f7a823ef33545e49d7c99c12eb616b3912d6f4c4e3025a40f759"
+}

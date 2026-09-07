@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "kind": "assessment",
+  "id": "urn:research:principia:assessment:wbsel-geometry-truncation-null%3Afreeze",
+  "aliases": [
+    "wbsel-geometry-truncation-null:freeze"
+  ],
+  "activity": "active",
+  "scope": "synthetic-calibration",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "c04f2ed1ae91d6c126bc60863b5e48f46abe4576",
+    "blob_oid": "b2c91ed074ed6042133cd945180985b3550156d8",
+    "sha256": "sha256:58a4d01fa8c9fee5b97d8cbfb6fee1fe57adf6aa44fb468e9b19680cc5d57bbb",
+    "path": "theory/wide-binary-selection-methodology/claims.json",
+    "selector": "/claims/0",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Historical synthetic/model calibration only; no new scientific adjudication or nature-level inference."
+  ],
+  "missingness": [],
+  "legacy": {
+    "id": "wbsel-geometry-truncation-null",
+    "family": "wide-binary-selection-methodology",
+    "kind": "model-property",
+    "status": "untested",
+    "claim": "On a synthetic, purely Newtonian wide-binary population with a realistic nonuniform sky footprint (declination-dependent quality/completeness gradient, anisotropic density) and zero injected acceleration-dependent kinematics, Astrolabe's baseline selection pipeline (quality cuts, theta/s window, escape-speed PM gate) recovers a v-tilde(g_N) profile whose deviation from its own Newtonian-mock comparator stays below the predeclared threshold (abs(B_i) < 0.04 in median v-tilde) in every populated g_N bin.",
+    "kill": "Any populated bin (n >= 5 pairs) shows abs(B_i) >= 0.04 in median v-tilde, reproducibly across the seed ladder (median seed-to-seed abs(B_i) at or above threshold), under the baseline nonuniform-footprint arm (R1) at the operational max_stars=8000 cap.",
+    "links": [
+      "../../studies/wide-binary-selection-bias-preregistration.md",
+      "../../studies/gaia-wide-binaries-low-acceleration.md"
+    ],
+    "in_doc_ledger": true
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "claim": {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:wbsel-geometry-truncation-null",
+      "revision_id": "sha256:f5167b4f269e3e26112feea3ef2a28347616840c5d4df61830a7f330c067c883",
+      "source_revision": "c04f2ed1ae91d6c126bc60863b5e48f46abe4576",
+      "status": "pending"
+    },
+    "verdict": "untested",
+    "legacy_verdict": "untested",
+    "inference": "historical",
+    "basis": "legacy-report",
+    "controls": "not-run",
+    "rationale": "Untested in the original ORB-11221 registry.",
+    "evidence": []
+  },
+  "revision_id": "sha256:dbac6d2d95bee283c250cf9057aa8cb71a30e21be1a4780aa790bed8592dc683"
+}

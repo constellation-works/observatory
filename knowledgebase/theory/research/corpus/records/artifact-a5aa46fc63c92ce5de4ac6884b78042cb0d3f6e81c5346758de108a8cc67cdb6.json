@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Atheory%2Fshear-sourced-consumption%2Fdebts-of-the-payment.md",
+  "aliases": [
+    "source:principia:4e3b02c59b694d85016915177ef1ae157895ed7b:theory/shear-sourced-consumption/debts-of-the-payment.md"
+  ],
+  "activity": "active",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "fd56803243766385584ba711cd7e5d983b92b4a0",
+    "sha256": "sha256:e37d71062357681d0b25e62f17f71162195244cbd5504032a2b4b626e9c1129d",
+    "path": "theory/shear-sourced-consumption/debts-of-the-payment.md",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Immutable archival source copy; upstream scientific ownership is unchanged."
+  ],
+  "missingness": [
+    "scope"
+  ],
+  "legacy": {
+    "source_pin": {
+      "repository": "principia",
+      "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "path": "theory/shear-sourced-consumption/debts-of-the-payment.md",
+      "blob_oid": "fd56803243766385584ba711cd7e5d983b92b4a0",
+      "sha256": "sha256:e37d71062357681d0b25e62f17f71162195244cbd5504032a2b4b626e9c1129d",
+      "bytes": 4882,
+      "commit_metadata": "4e3b02c59b694d85016915177ef1ae157895ed7b\n2026-09-06T02:49:35+00:00\n2026-09-06T02:49:35+00:00\nfeat: Migrate the wide-binary control pilot into versioned scientific r… [ORB-11378]\n"
+    },
+    "text": "## What this does not deliver — the debts of the payment\n\nStated before anyone gets excited:\n\n1. **It is a postulate.** The law is not derived from the counting mechanic — it is a third\n   rule, exactly the \"impose it as a named postulate\" route the parent's statement of record\n   anticipated, now with unexpectedly good structure. ORB-10162's verdict (neither *natural*\n   counting rule yields GP) stands in full.\n2. **The amplitude–mass coupling is underived.** With the central flux zero, nothing in the\n   fluid mechanics ties A to M. The boundary condition at the matter — how a mass of given\n   energy imposes √(2GM) on the exterior flow — is the surviving hard core of the source-law\n   debt, relocated but not paid. (Natural guess: the matter region sets v at its surface via\n   its own internal consumption; underived.) **Update 2026-08-20 (§ the level-matching\n   closure below):** the natural guess is now excluded in closed form, and the coupling has\n   an analytic closure — level matching against the counting field — that dissolves this\n   debt into already-named postulates iff its lattice gates pass (**ORB-10932**).\n   **Adjudicated 2026-08-21: the gates passed** (§ adjudication under the closure section);\n   this debt is paid.\n3. **Stability is unproven.** Uniqueness of the steady state is not convergence to it. If GP\n   is a repeller rather than an attractor under time-dependent dynamics, the law is dead on\n   arrival. Lattice question.\n4. **Superposition is unknown.** Two-source behavior under the shear law has no analytic\n   result here — and after ORB-10157 (the multiplicative rule's derivation dying by\n   measurement), no superposition claim gets stated without a lattice run. **Update\n   2026-08-21:** the flux-core arm is now resolution-converged (**ORB-10755** — the\n   divergent family is real physics of flux cores, not a grid artifact); the level-core\n   arm, the closure's physical boundary condition, is the open discriminator\n   (**ORB-10934**). **Adjudicated 2026-08-21 (second wave): ORB-10934 confirmed the\n   level-core arm reverts to the ORB-10157 headroom family** (§ adjudication below) —\n   this debt is paid at superposition order, within the apparatus's declared limits\n   (one-way draw coupling; finite Dirichlet box).\n5. **Non-radial flows are unexplored.** Rotating, translating, and wave-carrying\n   configurations all shear; the law consumes in all of them. Whether that produces\n   phenomenology (secular drag on orbiting bodies? consumption in gravitational-wave\n   fields?) or pathology is unknown and must be bounded before the law is more than a\n   steady-state statement. **Update 2026-08-21:** the translating case is now opened\n   analytically in [moving-sources-in-the-closed-system](../moving-sources-in-the-closed-system/)\n   — exact speed isotropy (the wind cancels from the speed field; the clock question is\n   relational and open), a first-order wake in the direction field where mass-frame GR\n   (exactly Schwarzschild — uniform motion is gauge) has none, and a new named debt\n   (consumed momentum); the wind-tunnel fixture ran the same day (ORB-10935): Galilean\n   null exact, drag-sign consumed momentum measured, but **no smooth steady branch found\n   at any wind**. The dynamical-relaxation fixture (ORB-10937, same day) then evolved the\n   real equations: slow relaxation unresolved at horizon (velocity settles, the\n   consumption trough still deepening at a U-independent rate), and the realized drag is\n   **linear in the wind** (≈56·U^0.98) — a fixed-strength sink (wind-independent\n   consumption Q, captured momentum n·Q·U; corrected from an earlier \"momentum-capture\"\n   reading at the 2026-08-21 critique), overturning the constructed branch's\n   near-U-independence. The extended horizon (ORB-10938, same day) then finished the\n   sentence: the system **settles** at every wind by T = 600, but the settled flow is\n   rotational and refutes the Bernoulli closure beyond error, the settled drag is\n   **superlinear** (81.2·U^1.33 — the linear law was the transient), and the trough\n   **cavitates at U/v_GP = 0.3** (ladder-confirmed; finite floor only at trans-critical\n   wind) — so under this law a slowly moving core drains a hole in the medium: either a\n   floor mechanism is missing from the law or the excitation reading dies around moving\n   masses ([moving-sources-in-the-closed-system](../moving-sources-in-the-closed-system/),\n   third adjudication). An acoustic ray-tracing scale estimate (ORB-10939) brackets the\n   photon sector. Rotation and waves remain open.\nRemaining unpaid items are listed in [open-questions.md](open-questions.md).\n\n6. **It does not touch the galactic question.** The acceleration-organization problem\n   (ORB-10169) is untouched: this law addresses the clock/photon-sector debt, not the\n   boost's carrier or form.\n",
+    "commit_object": "tree 682cccb1cf19c89c2c5f4371c14ed2b384d2ae8c\nparent 13866b2848fbcce9a1f1ef2d4b97051a65f7e626\nauthor orbit[gpt-6-astra] <agent@orbit.invalid> 1788662975 +0000\ncommitter orbit <orbit@orbit.local> 1788662975 +0000\n\nfeat: Migrate the wide-binary control pilot into versioned scientific r… [ORB-11378]\n\nMigrate the wide-binary control pilot into versioned scientific records\n\nPlanned-By: codex\n"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "source",
+    "availability": "available",
+    "snapshot_digest": "sha256:e37d71062357681d0b25e62f17f71162195244cbd5504032a2b4b626e9c1129d",
+    "locator": null,
+    "media_type": "text/plain"
+  },
+  "revision_id": "sha256:a5aa46fc63c92ce5de4ac6884b78042cb0d3f6e81c5346758de108a8cc67cdb6"
+}

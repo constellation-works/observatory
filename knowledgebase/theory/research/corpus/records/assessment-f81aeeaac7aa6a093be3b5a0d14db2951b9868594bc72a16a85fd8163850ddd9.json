@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "kind": "assessment",
+  "id": "urn:research:principia:assessment:scarcity-headroom-screening%3Alegacy-verdict",
+  "aliases": [
+    "scarcity-headroom-screening:legacy-verdict"
+  ],
+  "activity": "unknown",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "b5f58c64f4c6bf9d7d7f67c826f5d2dd7c9cb64f",
+    "sha256": "sha256:996b059ca4b45cee6dd42a503594508ebb8d6d13211ad1104df3754b116d5976",
+    "path": "theory/gravity-as-scarcity/claims.json",
+    "selector": "/claims/12",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Exact historical verdict and stated assumptions only; migration makes no new scientific inference."
+  ],
+  "missingness": [
+    "exact-evidence-owner-references",
+    "independently-verified-controls",
+    "activity",
+    "scope"
+  ],
+  "legacy": {
+    "id": "scarcity-headroom-screening",
+    "family": "gravity-as-scarcity",
+    "kind": "model-property",
+    "status": "supported",
+    "claim": "The mechanic's measured superposition rule is headroom screening: an embedded source's field scales as the local survivor fraction, A(D) = (1−D)^1.071, with no exhaustion upturn",
+    "evidence": "**Measured (ORB-10157, [lattice-two-source-superposition](../../../orrery/lab/sims/lattice-two-source-superposition/), § superposition adjudication below):** 129² shared-budget lattice, 50,000 anonymous slots/cell, compact source (peak exposure 0.1) embedded in an extended disk well; sweeping ambient depletion D = 0.01–0.90 (12 levels, 32 replicates, seed 42, byte-identical reruns; all finite-count means within 2.31 SE of the exact binomial expectation), A(D) = (1−D)^1.07079, log-RMSE 0.0031; resolution checks 1.0725 (97²) / 1.0700 (161²), amplitude shifts ≤ 4.4×10⁻⁴; exponent excess over 1 attributed to spatially varying headroom across the 4–18-cell measurement annulus. Continuous suppression through exhaustion — amplitude 0.1790 at D = 0.80, 0.0029 at 0.995, no upturn. This is the turn-7 headroom rule (wells dug from remaining capacity) returned by the mechanic at unit gain — same family as the fitted q(r) boost (suppression; boost rising where depletion falls); it reproduces the *fitted* galactic form only under the O(1)-occupancy identification (§ below). Caveats (2D static pinned geometry, anonymous fixed-coupling attempts, declared-not-emergent profiles) scope extrapolation, not this verdict",
+    "links": [
+      "../../../orrery/lab/sims/lattice-two-source-superposition/"
+    ],
+    "in_doc_ledger": true
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "claim": {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:scarcity-headroom-screening",
+      "revision_id": "sha256:005b771e63357348d29fae870e7368a5298eb1bb92a1f0955bca1b2791f93d40",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    "verdict": "supported",
+    "legacy_verdict": "supported",
+    "inference": "historical",
+    "basis": "legacy-report",
+    "controls": "unknown",
+    "rationale": "**Measured (ORB-10157, [lattice-two-source-superposition](../../../orrery/lab/sims/lattice-two-source-superposition/), § superposition adjudication below):** 129² shared-budget lattice, 50,000 anonymous slots/cell, compact source (peak exposure 0.1) embedded in an extended disk well; sweeping ambient depletion D = 0.01–0.90 (12 levels, 32 replicates, seed 42, byte-identical reruns; all finite-count means within 2.31 SE of the exact binomial expectation), A(D) = (1−D)^1.07079, log-RMSE 0.0031; resolution checks 1.0725 (97²) / 1.0700 (161²), amplitude shifts ≤ 4.4×10⁻⁴; exponent excess over 1 attributed to spatially varying headroom across the 4–18-cell measurement annulus. Continuous suppression through exhaustion — amplitude 0.1790 at D = 0.80, 0.0029 at 0.995, no upturn. This is the turn-7 headroom rule (wells dug from remaining capacity) returned by the mechanic at unit gain — same family as the fitted q(r) boost (suppression; boost rising where depletion falls); it reproduces the *fitted* galactic form only under the O(1)-occupancy identification (§ below). Caveats (2D static pinned geometry, anonymous fixed-coupling attempts, declared-not-emergent profiles) scope extrapolation, not this verdict",
+    "evidence": []
+  },
+  "revision_id": "sha256:f81aeeaac7aa6a093be3b5a0d14db2951b9868594bc72a16a85fd8163850ddd9"
+}

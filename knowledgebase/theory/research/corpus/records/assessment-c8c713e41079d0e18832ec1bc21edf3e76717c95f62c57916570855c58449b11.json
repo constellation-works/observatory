@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "kind": "assessment",
+  "id": "urn:research:principia:assessment:moving-source-poisson-dipole-divergence%3Alegacy-verdict",
+  "aliases": [
+    "moving-source-poisson-dipole-divergence:legacy-verdict"
+  ],
+  "activity": "unknown",
+  "scope": "derivation",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "f55e1dace027658053ccc8f5b740363237c0eda4",
+    "sha256": "sha256:34d8fd1300c47a5df5ea2300abe6ba3ac4e6c29d546f03686710d88e1297d681",
+    "path": "theory/moving-source-field-consistency/claims.json",
+    "selector": "/claims/1",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Exact historical verdict and stated assumptions only; migration makes no new scientific inference."
+  ],
+  "missingness": [
+    "exact-evidence-owner-references",
+    "independently-verified-controls",
+    "activity"
+  ],
+  "legacy": {
+    "id": "moving-source-poisson-dipole-divergence",
+    "family": "retarded-scarcity-wake",
+    "kind": "derived",
+    "status": "untested",
+    "claim": "Under the standard Poisson operator, \\(\\Phi_{\\rm lag}\\) has \\(\\nabla^2\\Phi\\neq0\\) outside the compact matter source, corresponding at first order to an effective dipolar density \\(\\propto\\cos\\theta/R^3\\) whose dipole moment diverges linearly with box radius",
+    "evidence": "Same section; analytic calculation plus an uncataloged finite-difference check. This excludes a compact-source Poisson-vacuum interpretation, not every possible local substrate equation",
+    "links": [],
+    "in_doc_ledger": true,
+    "kill": "Catalog the finite-difference check as an orrery fixture."
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "claim": {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:moving-source-poisson-dipole-divergence",
+      "revision_id": "sha256:c7e4931ee2fe99645be77669f87fb05b9744f75f79937b0d92c322f63fe39a36",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    "verdict": "untested",
+    "legacy_verdict": "untested",
+    "inference": "historical",
+    "basis": "legacy-report",
+    "controls": "unknown",
+    "rationale": "Same section; analytic calculation plus an uncataloged finite-difference check. This excludes a compact-source Poisson-vacuum interpretation, not every possible local substrate equation",
+    "evidence": []
+  },
+  "revision_id": "sha256:c8c713e41079d0e18832ec1bc21edf3e76717c95f62c57916570855c58449b11"
+}

@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Astudies%2Fgravitational-redshift-astronomical.md",
+  "aliases": [
+    "source:principia:4e3b02c59b694d85016915177ef1ae157895ed7b:studies/gravitational-redshift-astronomical.md"
+  ],
+  "activity": "active",
+  "scope": "literature",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "b9be7fcd094ae6dfaccd3752c45c180094b855b9",
+    "sha256": "sha256:eec371d5dd8d3ec97882e31e379ac9365b6ecb55a3d92d272f6a75722763bf33",
+    "path": "studies/gravitational-redshift-astronomical.md",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Immutable archival source copy; upstream scientific ownership is unchanged."
+  ],
+  "missingness": [],
+  "legacy": {
+    "source_pin": {
+      "repository": "principia",
+      "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "path": "studies/gravitational-redshift-astronomical.md",
+      "blob_oid": "b9be7fcd094ae6dfaccd3752c45c180094b855b9",
+      "sha256": "sha256:eec371d5dd8d3ec97882e31e379ac9365b6ecb55a3d92d272f6a75722763bf33",
+      "bytes": 4887,
+      "commit_metadata": "4e3b02c59b694d85016915177ef1ae157895ed7b\n2026-09-06T02:49:35+00:00\n2026-09-06T02:49:35+00:00\nfeat: Migrate the wide-binary control pilot into versioned scientific r… [ORB-11378]\n"
+    },
+    "text": "---\ntitle: \"Gravitational redshift at astronomical scales: the Sun, S2 at Sgr A*, and galaxy clusters\"\nstatus: active\ncreated: 2026-07-12\nupdated: 2026-07-12\n---\n\n# Gravitational redshift at astronomical scales\n\nThe laboratory-to-orbit clock ladder lives in\n[gravitational-time-dilation](gravitational-time-dilation.md); this note carries the rungs\n*beyond* the solar neighborhood — the Sun's surface, a star at the Galactic-center black\nhole, and stacked galaxy clusters. These are the instruments for any theory in which clock\nrates could decouple from the dynamically inferred potential at astronomical scales (the\nS2-disjunction confrontation in\n[theory/two-substance-vortex-vacuum](../theory/two-substance-vortex-vacuum/), ORB-10161).\n\n## The measured rungs\n\n| System | Scale | Result | Source |\n|---|---|---|---|\n| Solar photospheric Fe lines (Moon-reflected sunlight, HARPS + laser frequency comb) | 1 AU | measured 638 ± 6 m/s (line-by-line; 639 ± 14 m/s from the line-list average) vs the GR prediction 633.1 m/s for light received at Earth | González Hernández et al. 2020, *Astron. Astrophys.* 643, A146 |\n| S2/S0-2 pericenter passage at Sgr A* (~2800 gravitational radii of a 4 × 10⁶ M☉ black hole) | ~10⁻³ pc | redshift parameter f = 0.90 ± 0.09 (stat) ± 0.15 (sys) at the 2018 passage (f = 0 Newtonian, f = 1 GR); improved to f = 1.04 ± 0.05 (20σ from Newtonian); independent confirmation by the UCLA group | GRAVITY Collaboration 2018, *Astron. Astrophys.* 615, L15; GRAVITY Collaboration 2019, *Astron. Astrophys.* 625, L10; Do et al. 2019, *Science* 365, 664 |\n| Stacked galaxy clusters (7,800 SDSS clusters; member-galaxy spectra vs brightest cluster galaxy) | ~1 Mpc | net gravitational offset of ~10 km/s magnitude between cluster members and the BCG at the potential minimum, detected at 99% confidence, consistent with the GR prediction for the *dynamically inferred* (dark-matter-dominated) cluster potential | Wojtak, Hansen & Hjorth 2011, *Nature* 477, 567 |\n\n**Caveat on the cluster rung.** Kaiser 2013 (*Mon. Not. R. Astron. Soc.* 435, 1278) showed\nthat kinematic terms of comparable size (transverse Doppler shift, light-cone and\nsurface-brightness selection effects) contribute to the stacked signal and must be modeled;\nthe measured magnitude has held up in later analyses, but its weight as a *precision* GR test\nis limited at the O(1) level. It remains the only rung where the dynamically inferred and\nbaryons-only potentials differ enough (a factor of several in mass) for a clock measurement\nto distinguish them.\n\n## What the rungs establish, structurally\n\n1. **Redshift tracks the dynamics-determined potential at every measured scale.** The solar\n   rung uses the ephemeris GM☉; the S2 rung's potential is fixed by the same orbit that\n   exhibits the redshift; the cluster rung's prediction uses the halo mass inferred from\n   member kinematics/lensing — and each measurement agrees. Any theory in which clock rates\n   read a *different* potential than orbits do (e.g. a baryons-only potential while a fifth\n   force carries the missing dynamics) predicts a specific deficit on the cluster rung:\n   roughly the baryon fraction of the signal, ~5× below the measured ~10 km/s — disfavored\n   by Wojtak et al. at the ~2σ level (soft, given the Kaiser caveat).\n2. **The S2 rung is black-hole-dominated.** At ~10⁻³ pc the potential is that of the central\n   mass; kpc-scale structure in the Galaxy's field contributes nothing measurable to S2's\n   redshift. It anchors redshift-tracks-dynamics in a strong(er)-field regime; it does not\n   probe galactic-scale clock anomalies.\n3. **No current instrument reads clock rates across kpc baselines at interesting precision.**\n   Between the solar rung (m/s at 1 AU) and the cluster rung (km/s at Mpc), a systematic\n   radial redshift trend across the Galactic disk of order tens of m/s would sit below\n   current stellar radial-velocity systematics; the potential differences at issue are\n   ~10⁻⁷–10⁻⁶ in z. A theory predicting kpc-scale clock anomalies at that level is currently\n   unconstrained by direct measurement — the binding constraints come through the solar-system\n   profile tests instead (see the theory doc's stiffness computation).\n\n## What this binds in our corpus\n\nThe Branch B (metric-medium) kill-or-live row of the S2 disjunction\n([theory/two-substance-vortex-vacuum](../theory/two-substance-vortex-vacuum/), ORB-10161):\nits surviving form predicts redshift ≡ dynamics-inferred potential at all scales, consistent\nwith every rung above and degenerate with GR + dark matter in the clock channel. The\nclean-clock alternative (redshift reads baryons only) is what rung 1 disfavors. The\nlaboratory/orbit ladder, LPI/null-redshift universality bounds, and the Ġ/G constancy anchor\nare in [gravitational-time-dilation](gravitational-time-dilation.md).\n",
+    "commit_object": "tree 682cccb1cf19c89c2c5f4371c14ed2b384d2ae8c\nparent 13866b2848fbcce9a1f1ef2d4b97051a65f7e626\nauthor orbit[gpt-6-astra] <agent@orbit.invalid> 1788662975 +0000\ncommitter orbit <orbit@orbit.local> 1788662975 +0000\n\nfeat: Migrate the wide-binary control pilot into versioned scientific r… [ORB-11378]\n\nMigrate the wide-binary control pilot into versioned scientific records\n\nPlanned-By: codex\n"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "source",
+    "availability": "available",
+    "snapshot_digest": "sha256:eec371d5dd8d3ec97882e31e379ac9365b6ecb55a3d92d272f6a75722763bf33",
+    "locator": null,
+    "media_type": "text/plain"
+  },
+  "revision_id": "sha256:87a50a6eccacca35980cb8f8f289789e0c6658a93b03a620d02634c79f1260c7"
+}

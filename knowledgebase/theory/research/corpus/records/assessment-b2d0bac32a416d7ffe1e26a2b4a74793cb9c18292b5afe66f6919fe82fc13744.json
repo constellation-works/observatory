@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "kind": "assessment",
+  "id": "urn:research:principia:assessment:scarcity-fixed-beta-universality%3Alegacy-verdict",
+  "aliases": [
+    "scarcity-fixed-beta-universality:legacy-verdict"
+  ],
+  "activity": "unknown",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "b5f58c64f4c6bf9d7d7f67c826f5d2dd7c9cb64f",
+    "sha256": "sha256:996b059ca4b45cee6dd42a503594508ebb8d6d13211ad1104df3754b116d5976",
+    "path": "theory/gravity-as-scarcity/claims.json",
+    "selector": "/claims/6",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Exact historical verdict and stated assumptions only; migration makes no new scientific inference."
+  ],
+  "missingness": [
+    "exact-evidence-owner-references",
+    "independently-verified-controls",
+    "activity",
+    "scope"
+  ],
+  "legacy": {
+    "id": "scarcity-fixed-beta-universality",
+    "family": "gravity-as-scarcity",
+    "kind": "nature",
+    "status": "refuted",
+    "claim": "One global β (the MW's fitted ~5.25 kpc) fits external galaxies — the fixed-β scarcity form is a universal law",
+    "evidence": "**Measured (ORB-10169, [sparc-scarcity-universality](../../../orrery/lab/sims/sparc-scarcity-universality/), orrery `1ab8085`, § form and universality adjudication below):** 149 SPARC galaxies / 3,150 points (standard Q ≤ 2, inclination ≥ 30° cuts; uniform no-drift nuisance policy; honest AIC — global k = 150, per-galaxy k = 298, MOND control k = 150). Global β = 5.526 kpc (5% from the MW's 5.25 — recorded, not exculpatory); per-galaxy β_i improves AIC by **51,723** (106,619 → 54,896); β_i tracks disk scale length at Spearman ρ = 0.343, p = 1.86×10⁻⁵ (and characteristic acceleration at ρ = 0.401, p = 4.1×10⁻⁷); constant-β heterogeneity p underflows to zero; the same-policy global-a₀ MOND control reaches AIC 29,198 vs global scarcity's 106,619 — the discrepancy organizes by acceleration, not fixed length (the radial-acceleration-relation verdict; McGaugh, Lelli & Schombert 2016, [studies/fifth-force-searches](../../studies/fifth-force-searches.md)). **The predeclared kill condition fired on both prongs — the same verdict Sanders' fixed r₀ received.** Caveats (spherical enclosed-mass surrogate over thin-disk component curves; statistical-only errors — absolute χ² unacceptable for all fits, MOND control included; no-drift policy differs from the MW apparatus; validation parquets reconstructed from the published tables) gate decisiveness, not the verdict: none manufactures a p ~ 10⁻⁵ size correlation or a five-figure acceleration-organization gap under an identical likelihood",
+    "links": [
+      "../../../orrery/lab/sims/sparc-scarcity-universality/",
+      "../../studies/fifth-force-searches.md"
+    ],
+    "in_doc_ledger": true
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "claim": {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:scarcity-fixed-beta-universality",
+      "revision_id": "sha256:ac101d5fdf1c8af2b1f838697d174686cae5e84febd9abe7bcfb9e2d14d0e3bd",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    "verdict": "refuted",
+    "legacy_verdict": "refuted",
+    "inference": "historical",
+    "basis": "legacy-report",
+    "controls": "unknown",
+    "rationale": "**Measured (ORB-10169, [sparc-scarcity-universality](../../../orrery/lab/sims/sparc-scarcity-universality/), orrery `1ab8085`, § form and universality adjudication below):** 149 SPARC galaxies / 3,150 points (standard Q ≤ 2, inclination ≥ 30° cuts; uniform no-drift nuisance policy; honest AIC — global k = 150, per-galaxy k = 298, MOND control k = 150). Global β = 5.526 kpc (5% from the MW's 5.25 — recorded, not exculpatory); per-galaxy β_i improves AIC by **51,723** (106,619 → 54,896); β_i tracks disk scale length at Spearman ρ = 0.343, p = 1.86×10⁻⁵ (and characteristic acceleration at ρ = 0.401, p = 4.1×10⁻⁷); constant-β heterogeneity p underflows to zero; the same-policy global-a₀ MOND control reaches AIC 29,198 vs global scarcity's 106,619 — the discrepancy organizes by acceleration, not fixed length (the radial-acceleration-relation verdict; McGaugh, Lelli & Schombert 2016, [studies/fifth-force-searches](../../studies/fifth-force-searches.md)). **The predeclared kill condition fired on both prongs — the same verdict Sanders' fixed r₀ received.** Caveats (spherical enclosed-mass surrogate over thin-disk component curves; statistical-only errors — absolute χ² unacceptable for all fits, MOND control included; no-drift policy differs from the MW apparatus; validation parquets reconstructed from the published tables) gate decisiveness, not the verdict: none manufactures a p ~ 10⁻⁵ size correlation or a five-figure acceleration-organization gap under an identical likelihood",
+    "evidence": []
+  },
+  "revision_id": "sha256:b2d0bac32a416d7ffe1e26a2b4a74793cb9c18292b5afe66f6919fe82fc13744"
+}

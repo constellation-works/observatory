@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "kind": "assessment",
+  "id": "urn:research:principia:assessment:postulate-lambda-coupling%3Alegacy-verdict",
+  "aliases": [
+    "postulate-lambda-coupling:legacy-verdict"
+  ],
+  "activity": "unknown",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "94e76368a84e00ed742153d77b3d25dd5962c664",
+    "sha256": "sha256:c95d48cf673efa43d6d77005c73cadea42fac1ff00da556a7b7fd260df14f9a6",
+    "path": "theory/two-substance-vortex-vacuum/claims.json",
+    "selector": "/claims/24",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Exact historical verdict and stated assumptions only; migration makes no new scientific inference."
+  ],
+  "missingness": [
+    "exact-evidence-owner-references",
+    "independently-verified-controls",
+    "activity",
+    "scope"
+  ],
+  "legacy": {
+    "kind": "postulate",
+    "status": "mixed",
+    "in_doc_ledger": false,
+    "evidence": "Named postulate; lattice consistency is not a derivation.",
+    "links": [],
+    "named": "2026-08-21",
+    "expires": "2026-09-21",
+    "id": "postulate-lambda-coupling",
+    "family": "two-substance-vortex-vacuum",
+    "claim": "Relative and common modes couple by λ n₊ n₋²/4 in the Hamiltonian.",
+    "kill": "Run λ = 0 as control, or derive λ from two-substance mechanics."
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "claim": {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:postulate-lambda-coupling",
+      "revision_id": "sha256:071cc8fe6ec2446b81bcf6ec6ee6cd42e630d285f7251ba0f17bde032f47e1d4",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    "verdict": "inconclusive",
+    "legacy_verdict": "mixed",
+    "inference": "historical",
+    "basis": "legacy-report",
+    "controls": "unknown",
+    "rationale": "Named postulate; lattice consistency is not a derivation.",
+    "evidence": []
+  },
+  "revision_id": "sha256:f73a6f331c4040ed39a5439cb3cffba50254efd2ca7df9409809e2a971e5f148"
+}

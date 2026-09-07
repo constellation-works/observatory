@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "kind": "assessment",
+  "id": "urn:research:principia:assessment:moving-pure-wind-null%3Alegacy-verdict",
+  "aliases": [
+    "moving-pure-wind-null:legacy-verdict"
+  ],
+  "activity": "unknown",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "d9f73691ac539f5935cd6dbedcabdb6f722777a3",
+    "sha256": "sha256:0ec4339ac8934344ada2473abd7941e08d9c413b12e2636c275ab4f9a35a70a5",
+    "path": "theory/moving-sources-in-the-closed-system/claims.json",
+    "selector": "/claims/2",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Exact historical verdict and stated assumptions only; migration makes no new scientific inference."
+  ],
+  "missingness": [
+    "exact-evidence-owner-references",
+    "independently-verified-controls",
+    "activity",
+    "scope"
+  ],
+  "legacy": {
+    "id": "moving-pure-wind-null",
+    "family": "gravity-as-scarcity",
+    "kind": "model-property",
+    "status": "supported",
+    "claim": "The pure-wind state (no source) is an exact steady solution with exactly zero consumption",
+    "evidence": "ORB-10935 G4 (kill gate): no-core wind states at all four speeds keep maximum pointwise consumption ≤2.2×10⁻¹⁷ and speed error exactly 0.0 on every rung — the real frozen stencil evaluated, not a construction ([level-core-wind-tunnel](../../../orrery/lab/sims/level-core-wind-tunnel/)). ORB-10937 G5 (kill gate) adds the dynamical twin: pure wind advanced to T = 60 by the full SSP-RK2 time integrator preserves velocity and density exactly with consumption at floating precision, on every rung and wind ([level-core-dynamical-relaxation](../../../orrery/lab/sims/level-core-dynamical-relaxation/))",
+    "links": [
+      "../../../orrery/lab/sims/level-core-wind-tunnel/",
+      "../../../orrery/lab/sims/level-core-dynamical-relaxation/"
+    ],
+    "in_doc_ledger": true
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "claim": {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:moving-pure-wind-null",
+      "revision_id": "sha256:87f7bfecde3daf939dca1411c66244e5c09cf5ba81d560503eeaa1859d2d6787",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    "verdict": "supported",
+    "legacy_verdict": "supported",
+    "inference": "historical",
+    "basis": "legacy-report",
+    "controls": "unknown",
+    "rationale": "ORB-10935 G4 (kill gate): no-core wind states at all four speeds keep maximum pointwise consumption ≤2.2×10⁻¹⁷ and speed error exactly 0.0 on every rung — the real frozen stencil evaluated, not a construction ([level-core-wind-tunnel](../../../orrery/lab/sims/level-core-wind-tunnel/)). ORB-10937 G5 (kill gate) adds the dynamical twin: pure wind advanced to T = 60 by the full SSP-RK2 time integrator preserves velocity and density exactly with consumption at floating precision, on every rung and wind ([level-core-dynamical-relaxation](../../../orrery/lab/sims/level-core-dynamical-relaxation/))",
+    "evidence": []
+  },
+  "revision_id": "sha256:0e206bfef59da6b744b4845f5b578c8bf37f13722b9b4db8c473f21afcf18207"
+}

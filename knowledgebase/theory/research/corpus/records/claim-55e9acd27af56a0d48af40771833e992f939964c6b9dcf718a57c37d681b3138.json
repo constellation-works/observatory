@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "kind": "claim",
+  "id": "urn:research:principia:claim:two-substance-packet-energy-hook",
+  "aliases": [
+    "two-substance-packet-energy-hook"
+  ],
+  "activity": "active",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "94e76368a84e00ed742153d77b3d25dd5962c664",
+    "sha256": "sha256:c95d48cf673efa43d6d77005c73cadea42fac1ff00da556a7b7fd260df14f9a6",
+    "path": "theory/two-substance-vortex-vacuum/claims.json",
+    "selector": "/claims/11",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Exact historical verdict and stated assumptions only; migration makes no new scientific inference."
+  ],
+  "missingness": [
+    "scope"
+  ],
+  "legacy": {
+    "id": "two-substance-packet-energy-hook",
+    "family": "two-substance-vortex-vacuum",
+    "kind": "hook",
+    "status": "mixed",
+    "claim": "A propagating relative-mode (n₋) packet carries a co-moving common-mode (δn₊) structure scaling with packet energy — the structural hook gravitating radiation requires (radiation gravitates with the ρ + 3p weighting, twice dust per unit energy: radiation-era cosmology — `conjecture — to verify`, studies note owed)",
+    "evidence": "**Hook, not a nature result; status remains mixed.** ORB-10940 and ORB-10941 ran ([two-substance-dynamical-packet](../../../orrery/lab/sims/two-substance-dynamical-packet/)). ORB-10941's coupling-off control found the largest common magnitude at λ=0 was 2.42×10⁻¹², below the declared 2.62×10⁻¹⁰ floor: the gate's kill did not fire, and `two-substance-packet-control` closes. At nonzero λ the common response is linear in the inserted coupling (λ exponents 0.99744–0.99984) and packet energy (energy exponents 0.999918/0.999495/0.998717). The representative structure is a **trailing wake, not an attached co-moving packet**: median late lag −0.84129 packet widths and common-profile speed 0.67265 versus 0.96959 for the relative packet; it passes the wake criterion and fails attachment, with G3 converged under both declared refinement arms. Thus the energy-scaling half is supported while the attached/co-moving half is refuted. This establishes that the declared λ n₊ n₋² coupling causes the wake; it does not derive λ, establish a nature-level gravity source or endogenous defect emission, cure the cubic Hamiltonian's global unboundedness, or reopen `two-substance-conserving-far-field`. The common monopole remains null, and radiation-era ρ+3p weighting remains `conjecture — to verify`.",
+    "links": [
+      "../../../orrery/lab/sims/two-substance-dynamical-packet/"
+    ],
+    "in_doc_ledger": true,
+    "kill": "A purely relative-mode packet with no E-scaling co-moving n₊, or λ remaining an underived coupling.",
+    "control": "ORB-10941 ran the Hamiltonian with λ = 0: the largest common magnitude was 2.42×10⁻¹², below the declared 2.62×10⁻¹⁰ numerical floor.",
+    "control_ran": true
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "claim",
+    "statement": "A propagating relative-mode (n₋) packet carries a co-moving common-mode (δn₊) structure scaling with packet energy — the structural hook gravitating radiation requires (radiation gravitates with the ρ + 3p weighting, twice dust per unit energy: radiation-era cosmology — `conjecture — to verify`, studies note owed)",
+    "domain": "model"
+  },
+  "revision_id": "sha256:55e9acd27af56a0d48af40771833e992f939964c6b9dcf718a57c37d681b3138"
+}

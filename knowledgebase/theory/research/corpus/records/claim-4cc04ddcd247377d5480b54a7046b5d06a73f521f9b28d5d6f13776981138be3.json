@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "kind": "claim",
+  "id": "urn:research:principia:claim:two-substance-charge-winding",
+  "aliases": [
+    "two-substance-charge-winding"
+  ],
+  "activity": "active",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "94e76368a84e00ed742153d77b3d25dd5962c664",
+    "sha256": "sha256:c95d48cf673efa43d6d77005c73cadea42fac1ff00da556a7b7fd260df14f9a6",
+    "path": "theory/two-substance-vortex-vacuum/claims.json",
+    "selector": "/claims/1",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Exact historical verdict and stated assumptions only; migration makes no new scientific inference."
+  ],
+  "missingness": [
+    "scope"
+  ],
+  "legacy": {
+    "id": "two-substance-charge-winding",
+    "family": "two-substance-vortex-vacuum",
+    "kind": "nature",
+    "status": "mixed",
+    "claim": "Charge = winding delivers exact, species-independent quantization across the 1836× mass ratio",
+    "evidence": "The integer half is structural (topology) with measured existence proofs — circulation h/m, flux h/2e, core energies dynamical (studies note). The unit-equality half (S1 winding ≡ S2 winding in coupling) is owed to the kill-condition-B theorem; its measured wall is the ~10⁻²¹ neutrality of matter (`conjecture — to verify`, studies note owed)",
+    "links": [],
+    "in_doc_ledger": true
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "claim",
+    "statement": "Charge = winding delivers exact, species-independent quantization across the 1836× mass ratio",
+    "domain": "nature"
+  },
+  "revision_id": "sha256:4cc04ddcd247377d5480b54a7046b5d06a73f521f9b28d5d6f13776981138be3"
+}

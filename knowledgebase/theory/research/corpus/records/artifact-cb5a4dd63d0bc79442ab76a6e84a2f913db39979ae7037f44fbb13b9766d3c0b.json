@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Atheory%2Fmoving-sources-in-the-closed-system%2Ftheorem-2.md",
+  "aliases": [
+    "source:principia:4e3b02c59b694d85016915177ef1ae157895ed7b:theory/moving-sources-in-the-closed-system/theorem-2.md"
+  ],
+  "activity": "active",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "4e2bcfae54e35e3a5574f7777c869971522baa19",
+    "sha256": "sha256:194aa9777212be918e79e3a3af80cfce088c1844a80d11dd8e91e45e4255545b",
+    "path": "theory/moving-sources-in-the-closed-system/theorem-2.md",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Immutable archival source copy; upstream scientific ownership is unchanged."
+  ],
+  "missingness": [
+    "scope"
+  ],
+  "legacy": {
+    "source_pin": {
+      "repository": "principia",
+      "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "path": "theory/moving-sources-in-the-closed-system/theorem-2.md",
+      "blob_oid": "4e2bcfae54e35e3a5574f7777c869971522baa19",
+      "sha256": "sha256:194aa9777212be918e79e3a3af80cfce088c1844a80d11dd8e91e45e4255545b",
+      "bytes": 3899,
+      "commit_metadata": "4e3b02c59b694d85016915177ef1ae157895ed7b\n2026-09-06T02:49:35+00:00\n2026-09-06T02:49:35+00:00\nfeat: Migrate the wide-binary control pilot into versioned scientific r… [ORB-11378]\n"
+    },
+    "text": "## Theorem 2 — the wake is not GR's: the discriminator, restated in the right frame\n\nThe exact algebra first, unchanged and symbolically checked: the Galilean field\n**v** = **U** + **v**_GP fails the closed system's momentum equation with residual\nexactly (**U**·∇)**v**_GP ≠ 0 — it would require the comoving level to carry a\nvelocity-coupled dipole term **U**·**v**_GP/c², which the counting mechanic does not\ngenerate. Draws source a scalar level; nothing sources a vector potential.\n\nWhat that comparator *is* was corrected at the 2026-08-21 frame critique.\n**U** + **v**_GP is GR's moving river only as a *lab-frame coordinate picture* — the\nPainlevé–Gullstrand shift dragged along Galileanly; it is not a GR observable. In GR a\nuniformly moving mass has a rest frame, that rest frame is exactly Schwarzschild, and\nuniform motion is gauge: mass-frame physics cannot depend on U. The \"GR speed dipole\n2**U**·**v**_GP\" this section's first draft forbade — and boosted-GP's axis stagnation\nzeros — are artifacts of adding **U** in the wrong frame; ORB-10935's measured\ndepartures from that field remain informative about the wake but say nothing against GR\nproper.\n\nThe restated discriminator, with the order counting done carefully (arbitration,\n2026-08-21):\n\n- **At O(U²), in g₀₀:** the closed system's mass-frame speed field is √(U² + 2c²σ)\n  where GR's is √(2GM/r) — motion through the substrate enters the analog metric's g₀₀\n  at *second* order in U. Whether that term is observable at all is the open relational\n  question of the clock consequence above (a uniform flow can be coordinate-like for\n  excitations); it is not automatically a measurable anomaly.\n- **At O(U), in the direction field — the g₀ᵢ-analog sector:** this is where genuinely\n  first-order-in-U physics lives, and it is the sector Theorem 2's observables always\n  pointed at. In the mass frame GR's optics and orbital cross terms are exactly\n  Schwarzschild's — the deflection field is static radial GP, no wake. The closed\n  system's wake distorts the direction field away from radial GP at O(U). Every\n  observable that samples flow *direction* — photon fore-aft deflection and Shapiro\n  asymmetry around a moving lens, orbiting-clock −2**v**·**w** cross terms (an O(Uw/c²)\n  orbital-phase modulation) — differs at first order in the wind, against the *right*\n  comparator.\n\nOn gravitomagnetism the slogan sharpens rather than survives: in the excitation reading\ng₀ᵢ *is* the river, and the static GP shift is already a large, gauge g₀ᵢ (it reproduces\nSchwarzschild in GP coordinates). Gravitomagnetism proper is the *physical*\nO(GM·U/c²r) sector (GP-B, LAGEOS, binary pulsars), and the obligation is not \"no shift\nvector exists\" but: **does the wake's deflection field δv = v − v_∞ reproduce the GEM\nsector where GEM is measured?** The counting mechanic sources no vector potential, so\nthe answer comes from emergent wake dynamics or not at all. That confrontation needs\nthree things, the first two now in hand (ORB-10938's settled wake — § third adjudication;\nthe sourced external walls — moving-lens deflection, preferred-frame PPN α₁/α₂,\nframe-dragging — landed as\n[moving-source-gravity-bounds](../../studies/moving-source-gravity-bounds.md), ORB-10936),\nand a **PPN reduction of the effective metric to observable coefficients** — raw U/c is\nnot comparable to α₁/α₂ bounds. That reduction, recorded here as a named obligation, is\nnow executed as algebra in\n[ppn-reduction-of-the-settled-flow](../ppn-reduction-of-the-settled-flow/) (kepler,\n2026-08-28, ORB-11039): the physical g₀ᵢ sector is exactly the wake's vorticity plus its\nBernoulli-anisotropy term, and the effective α₁/α₂ are far-field slot coefficients no\ncataloged measurement yet reaches — the far-field fixture it demands is the remaining\npiece.\n",
+    "commit_object": "tree 682cccb1cf19c89c2c5f4371c14ed2b384d2ae8c\nparent 13866b2848fbcce9a1f1ef2d4b97051a65f7e626\nauthor orbit[gpt-6-astra] <agent@orbit.invalid> 1788662975 +0000\ncommitter orbit <orbit@orbit.local> 1788662975 +0000\n\nfeat: Migrate the wide-binary control pilot into versioned scientific r… [ORB-11378]\n\nMigrate the wide-binary control pilot into versioned scientific records\n\nPlanned-By: codex\n"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "source",
+    "availability": "available",
+    "snapshot_digest": "sha256:194aa9777212be918e79e3a3af80cfce088c1844a80d11dd8e91e45e4255545b",
+    "locator": null,
+    "media_type": "text/plain"
+  },
+  "revision_id": "sha256:cb5a4dd63d0bc79442ab76a6e84a2f913db39979ae7037f44fbb13b9766d3c0b"
+}

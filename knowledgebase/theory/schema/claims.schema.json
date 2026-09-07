@@ -1,0 +1,47 @@
+{
+  "$comment": "Documentation for theory/<doc>/claims.json. Enforced by scripts/check-theory.py, not a JSON-Schema runtime.",
+  "type": "object",
+  "required": ["doc", "title", "status", "families", "updated", "headline", "live_fronts", "claims"],
+  "properties": {
+    "doc": { "type": "string", "description": "Directory name of theory/<doc>/" },
+    "title": { "type": "string" },
+    "status": { "enum": ["exploratory", "growing", "refuted", "resolved", "retired"] },
+    "families": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+    "updated": { "type": "string", "description": "YYYY-MM-DD" },
+    "headline": { "type": "string" },
+    "live_fronts": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Gate ids. Required nonempty iff status is growing or exploratory."
+    },
+    "claims": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "family", "kind", "status", "claim", "in_doc_ledger"],
+        "properties": {
+          "id": { "type": "string" },
+          "family": { "type": "string" },
+          "kind": { "enum": ["postulate", "derived", "model-property", "nature", "hook"] },
+          "status": { "enum": ["supported", "mixed", "untested", "refuted", "conjecture"] },
+          "claim": { "type": "string" },
+          "evidence": { "type": "string" },
+          "links": { "type": "array", "items": { "type": "string" } },
+          "in_doc_ledger": { "type": "boolean" },
+          "tags": { "type": "array", "items": { "type": "string" } },
+          "kill": { "type": ["string", "null"] },
+          "control": { "type": ["string", "null"] },
+          "control_ran": { "type": "boolean" },
+          "blocked_by": { "type": "array", "items": { "type": "string" } },
+          "reopens": { "type": "array", "items": { "type": "string" } },
+          "daniel_reopen": { "type": "boolean" },
+          "comparator": { "type": ["string", "null"] },
+          "pays_debt_of": { "type": ["string", "null"] },
+          "named": { "type": ["string", "null"], "description": "YYYY-MM-DD for postulates" },
+          "expires": { "type": ["string", "null"], "description": "YYYY-MM-DD for underived postulates" },
+          "derived": { "type": ["boolean", "null"] }
+        }
+      }
+    }
+  }
+}

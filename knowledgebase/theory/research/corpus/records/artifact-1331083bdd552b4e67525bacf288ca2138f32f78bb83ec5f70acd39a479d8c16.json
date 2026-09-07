@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:principia:artifact:source%3Aorrery%3Aa1c430db54d585048ec85c4e7c47141db634f398%3Alab%2Fsims%2Fswirl-ball-far-field%2Fsim.json",
+  "aliases": [
+    "source:orrery:a1c430db54d585048ec85c4e7c47141db634f398:lab/sims/swirl-ball-far-field/sim.json"
+  ],
+  "activity": "active",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": null,
+    "blob_oid": null,
+    "sha256": "sha256:77739f184fae1a1b737117f20827510946683d97f5e26f9246ea90d154f86ad9",
+    "path": "upstream-snapshot/orrery/a1c430db54d585048ec85c4e7c47141db634f398/lab/sims/swirl-ball-far-field/sim.json",
+    "selector": "$",
+    "historical": true,
+    "working_tree": true
+  },
+  "limitations": [
+    "Immutable archival source copy; upstream scientific ownership is unchanged."
+  ],
+  "missingness": [
+    "git-revision",
+    "owner-ingestion-git-pin",
+    "scope",
+    "upstream-canonical-record"
+  ],
+  "legacy": {
+    "source_pin": {
+      "repository": "orrery",
+      "git_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "path": "lab/sims/swirl-ball-far-field/sim.json",
+      "blob_oid": "c8b8cedf4fcad6a15aff5f64d4269f5aeab78b9d",
+      "sha256": "sha256:77739f184fae1a1b737117f20827510946683d97f5e26f9246ea90d154f86ad9",
+      "bytes": 672,
+      "commit_metadata": "a1c430db54d585048ec85c4e7c47141db634f398\n2026-09-06T02:28:14+00:00\n2026-09-06T02:28:14+00:00\nfeat: Preserve the original electron animation's continuous fold in a c… [ORB-11374]\n"
+    },
+    "text": "{\n  \"slug\": \"swirl-ball-far-field\",\n  \"title\": \"Oscillating electron \\u2014 radiating B-field\",\n  \"kind\": \"web\",\n  \"entry\": \"index.html\",\n  \"status\": \"imported\",\n  \"created\": \"2026-06-27\",\n  \"topics\": [\n    \"electromagnetism\",\n    \"radiation\"\n  ],\n  \"family\": \"swirl-photon\",\n  \"summary\": \"Original illustrative electron animation: dense expanding rings and a tight turnaround. Compare the computed Maxwell field in oscillating-electron-retarded-fields; these illustrative rings are not field samples.\",\n  \"provenance\": {\n    \"almanac\": \"15-discussions/26-06/swirl-photon-correspondence.md\",\n    \"imported_from\": \"almanac/_attachments/swirl-ball-sim/far-field.html\"\n  }\n}\n",
+    "commit_object": "tree 8d851030602405b11b7166108b09cf9cd5664329\nparent 148b668391f575466282eaa81aab0dc943846a87\nauthor orbit[gpt-6-astra] <agent@orbit.invalid> 1788661694 +0000\ncommitter orbit <orbit@orbit.local> 1788661694 +0000\n\nfeat: Preserve the original electron animation's continuous fold in a c… [ORB-11374]\n\nPreserve the original electron animation's continuous fold in a computed-field view\n\nPlanned-By: codex\n"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "source",
+    "availability": "available",
+    "snapshot_digest": "sha256:77739f184fae1a1b737117f20827510946683d97f5e26f9246ea90d154f86ad9",
+    "locator": null,
+    "media_type": "application/json"
+  },
+  "revision_id": "sha256:1331083bdd552b4e67525bacf288ca2138f32f78bb83ec5f70acd39a479d8c16"
+}

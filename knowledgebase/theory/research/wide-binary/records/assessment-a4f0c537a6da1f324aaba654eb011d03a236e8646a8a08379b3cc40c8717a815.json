@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "kind": "assessment",
+  "id": "urn:research:principia:assessment:wbsel-shifted-field-calibration%3Afreeze",
+  "aliases": [
+    "wbsel-shifted-field-calibration:freeze"
+  ],
+  "activity": "active",
+  "scope": "synthetic-calibration",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "c04f2ed1ae91d6c126bc60863b5e48f46abe4576",
+    "blob_oid": "b2c91ed074ed6042133cd945180985b3550156d8",
+    "sha256": "sha256:58a4d01fa8c9fee5b97d8cbfb6fee1fe57adf6aa44fb468e9b19680cc5d57bbb",
+    "path": "theory/wide-binary-selection-methodology/claims.json",
+    "selector": "/claims/2",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Historical synthetic/model calibration only; no new scientific adjudication or nature-level inference."
+  ],
+  "missingness": [],
+  "legacy": {
+    "id": "wbsel-shifted-field-calibration",
+    "family": "wide-binary-selection-methodology",
+    "kind": "model-property",
+    "status": "untested",
+    "claim": "The shifted-field chance-alignment estimator R = N_shift/N_real, evaluated on the nonuniform-footprint synthetic population with known injected field-star contamination fractions (5%, 10%, 20%) and RA-wrap/polar field placements, recovers each injected fraction within the predeclared tolerance (+/-0.05 absolute at 5%, +/-25% relative at 10% and 20%).",
+    "kill": "R_chance falls outside the predeclared tolerance band for any injected-contamination arm or any field placement (equatorial baseline, RA-wrap, polar).",
+    "links": [
+      "../../studies/wide-binary-selection-bias-preregistration.md"
+    ],
+    "in_doc_ledger": true
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "claim": {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:wbsel-shifted-field-calibration",
+      "revision_id": "sha256:c913a7c4d4029c5cb9ca40b11ccd4c88b5d120224e883afdd25555e716190d0c",
+      "source_revision": "c04f2ed1ae91d6c126bc60863b5e48f46abe4576",
+      "status": "pending"
+    },
+    "verdict": "untested",
+    "legacy_verdict": "untested",
+    "inference": "historical",
+    "basis": "legacy-report",
+    "controls": "not-run",
+    "rationale": "Untested in the original ORB-11221 registry.",
+    "evidence": []
+  },
+  "revision_id": "sha256:a4f0c537a6da1f324aaba654eb011d03a236e8646a8a08379b3cc40c8717a815"
+}

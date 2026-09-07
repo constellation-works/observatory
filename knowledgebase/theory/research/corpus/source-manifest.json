@@ -1,0 +1,2518 @@
+{
+  "schema_version": 1,
+  "kind": "manifest",
+  "repositories": [
+    {
+      "id": "principia",
+      "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b"
+    }
+  ],
+  "references": [
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Agates%2FREADME.md",
+      "revision_id": "sha256:caecda4b96fb9bee89c4426955d7ea3f6f076ee1c0867c2e31a879a8ff329659",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Agates%2Fclosed-system-moving-existence.json",
+      "revision_id": "sha256:8d319049aa6039272368db3af801fda3587bd2250f6e1b64cc3a0d1c5820ea54",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Agates%2Fretarded-wake-branch-c.json",
+      "revision_id": "sha256:f0a9630434b8dcdf5a8a0c7504291936f02fc23f62c1782b42be0f9e2afa83cf",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Agates%2Ftwo-substance-photon-sector.json",
+      "revision_id": "sha256:2902946b35a6356f95a5c4d1e02ad767b8bcdb8ef8e112724f065ed9bcc2ad69",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Agates%2Fwide-binary-selection-bias-control.json",
+      "revision_id": "sha256:1c838360686f561ef90abb210257b3c915b716f3ee61acebad3eb462e743d92f",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Aledger.md",
+      "revision_id": "sha256:2bedd6aba437099cc7daaace5de055c27a748efa4815825efd9f8054fce3d896",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Apolicy.md",
+      "revision_id": "sha256:9f7e25e1bdde2ac5901ae6b65f8d62a1365ed42e7e7ad99db82c141857e06608",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Aschema%2Fclaims.schema.json",
+      "revision_id": "sha256:a3292bf9df22ba609925aa42cd98f451314902cf1c2a9725619269900ea9e674",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Aschema%2Fgate.schema.json",
+      "revision_id": "sha256:17cc692c5ae3593a8290e814b8d4d116578490013499c7e03a0508a41c057640",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Aschema%2Fwall.json",
+      "revision_id": "sha256:94147acf5b1558ae5e89a1c563708ce3cfcc7f4c72e3fa700a718201dc6f3e4a",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Astudies%2FREADME.md",
+      "revision_id": "sha256:a804b89646e2c2acf02b4e9ef6ffb6874fdaf78f3d3a6c0d8856b143539ebfde",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Astudies%2Fchsh-bounds.md",
+      "revision_id": "sha256:1a1016b718d13e53f77af5891dc8a82c0fd964a728ef24e06a575301b0314ff3",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Astudies%2Fcosmological-expansion-and-bound-systems.md",
+      "revision_id": "sha256:a154a78aef8f0960a57aee504dd52779014ed5b9deac69e6689cb7bfe7b47743",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Astudies%2Fequivalence-principle-tests.md",
+      "revision_id": "sha256:98017b79d16dfc773c5ce87293dab2827bbeba48f67d45b20927ff2ddcfeb75a",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Astudies%2Ffifth-force-searches.md",
+      "revision_id": "sha256:474e157de27a7a7d500c66f728b76d43bf7c82307f2d8a5b0b10445a64c2a828",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Astudies%2Fgaia-wide-binaries-low-acceleration.md",
+      "revision_id": "sha256:86c584503632be70f625c1f2ca423ada5403ac2463377f5589a70a6545031fb5",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Astudies%2Fgravitational-redshift-astronomical.md",
+      "revision_id": "sha256:87a50a6eccacca35980cb8f8f289789e0c6658a93b03a620d02634c79f1260c7",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Astudies%2Fgravitational-time-dilation.md",
+      "revision_id": "sha256:29e5c5db2f5f27605f987a76e09857fb1b4a91f9dc086f5aae0ac8f7b2d23ff2",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Astudies%2Florentz-violation-bounds.md",
+      "revision_id": "sha256:34d7f0599b1fe0d2a56baf60d2ec1809ea0444f7fa6f95d8bc9e405a88dba590",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Astudies%2Fmaxwell-mode-content-and-two-fluid-acoustics.md",
+      "revision_id": "sha256:980fc2a8c2b66562941c1de360119ced35dd2616fdc04d38d95a9662696bedc4",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Astudies%2Fmilky-way-rotation-curve.md",
+      "revision_id": "sha256:2b9e56c4be46a867e8627c20458834d7a092b61290b490fec760f102adbd1f30",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Astudies%2Fmoving-source-gravity-bounds.md",
+      "revision_id": "sha256:a39c61bf2e6ad7e5e8d719a98514a086ccdc7986654c532c09b1302887bee008",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Astudies%2Friver-model-and-analog-gravity.md",
+      "revision_id": "sha256:7d6790d0cb373f1dbc9afd4a22244e66a9bfb8964a357b8e9fcf9c4110011c29",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Astudies%2Fscalar-gravity-ppn-constraints.md",
+      "revision_id": "sha256:832d3770f8f223f36eae8f28c67147a29ccedf0e65246d32f4a7cb7893780489",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Astudies%2Fsolar-system-ephemeris-precision-floor.md",
+      "revision_id": "sha256:b425224b903452598c0b5189489ced8c923afb9ad0d9d568f710027574f5c5d5",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Astudies%2Fsource-side-universality-of-g.md",
+      "revision_id": "sha256:b1759de117d30b3e8b4149ff98e2b4f39579c1343e4bf125e1a0f1341496c468",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Astudies%2Fsuperfluid-vacuum-and-emergent-gauge-fields.md",
+      "revision_id": "sha256:afc777d114b069cd81df39040df60e7cad2684da636401d114781dc8cb838271",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Astudies%2Ftwo-component-phase-locking.md",
+      "revision_id": "sha256:c3f27e25a81ec2a5241818a482ddf97746c50355ca657a0d59bf945f90c44768",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Astudies%2Fvortex-atoms-and-quantized-circulation.md",
+      "revision_id": "sha256:4ddc2475b245508783bcd2d99032874d3c53a6a402e96592f2cdcfc58eef80d6",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Astudies%2Fwide-binary-selection-bias-preregistration.md",
+      "revision_id": "sha256:937410e0436af23b172d4b765d6e105538897023750c3b087917c11d7a7dae1a",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Atheory%2FREADME.md",
+      "revision_id": "sha256:373ff01e0be061a8c20f7407a761431ba9b894fadff645d2610e6b6422d9116b",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Atheory%2Fgravity-as-scarcity%2FREADME.md",
+      "revision_id": "sha256:a2aa6c633f81e661ca69246799ac3e0cc85f849f3e289954a1eab2814a4b0544",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Atheory%2Fgravity-as-scarcity%2Fclaims.json",
+      "revision_id": "sha256:1cf6e1f9f695c9b1a56eca98cd3c4789a3a65b24f095fc3d29598e4e8996629c",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Atheory%2Fgravity-as-scarcity%2Fclock-sector.md",
+      "revision_id": "sha256:5bd3cb5bddca3d6135734738fabd25dbbea8f6eeae90f69e5ce4fbb1ad7e8657",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Atheory%2Fgravity-as-scarcity%2Fconfronting-nfw.md",
+      "revision_id": "sha256:5c58c4c5d4c8951e762ded01f55e3c510a1141c7f5643a81ef3eaab46a26297c",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Atheory%2Fgravity-as-scarcity%2Fconfronting-rotation-curve.md",
+      "revision_id": "sha256:63083e8b95809fb4a7c059d731885e1cd1f2a7cbb703235465875ca5f6c9a1de",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Atheory%2Fgravity-as-scarcity%2Fconfronting-solar-system.md",
+      "revision_id": "sha256:664fc9a9458635ffb218da708cd7e0679707f0bdcaa498e0a7b0b7e31a12848d",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Atheory%2Fgravity-as-scarcity%2Fevidence-ledger.md",
+      "revision_id": "sha256:71f431e71b7bb7610c21e2dcd2739971c78c8dc6b034979989a50b8747ff4cc6",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Atheory%2Fgravity-as-scarcity%2Flattice-adjudication.md",
+      "revision_id": "sha256:e1d595ba25b8fb8332e2606f049ccf9f49da75168c24750541bdb57cfa97430e",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Atheory%2Fgravity-as-scarcity%2Fopen-questions.md",
+      "revision_id": "sha256:2d6647b0364f3987b3fa58a769661fad21bf433cbf87a6748ab41c352c0e2b02",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Atheory%2Fgravity-as-scarcity%2Fphoton-sector.md",
+      "revision_id": "sha256:6618f3189cb9635849bbb8cbaff94c71474d8796e6cb5e71976c737ae919eed1",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Atheory%2Fgravity-as-scarcity%2Frelated.md",
+      "revision_id": "sha256:49f8d623df6bf148d9aadfc6a88f2c7bfc9879597ed4a32ef297ec66eeeb8846",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Atheory%2Fgravity-as-scarcity%2Fretirement.md",
+      "revision_id": "sha256:679b3f67b2395b52a33cab458ed916797cbdb65fd4d7d17e00d4aa64e5f7aceb",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Atheory%2Fgravity-as-scarcity%2Fsuperposition.md",
+      "revision_id": "sha256:a9268e63fa2ea8dc47e15ff96cb166acccbfe53a4ddf6a75d8a72f808c81cefa",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Atheory%2Fgravity-as-scarcity%2Funiversality.md",
+      "revision_id": "sha256:114b04afe9360f7b2ae505294b72e408ecd7091a6e39fade992a09347407b2e9",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Atheory%2Fmoving-source-field-consistency%2FREADME.md",
+      "revision_id": "sha256:c3b602c8dafec5ea30b5be47c2a5c8abbc1b77518e16f48a4406ec9320fac3c9",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Atheory%2Fmoving-source-field-consistency%2Fbranch-c.md",
+      "revision_id": "sha256:87611002b30c70dadb24af59db8f82358c9f72cf0944b315d2d825ca104beb45",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Atheory%2Fmoving-source-field-consistency%2Fclaims.json",
+      "revision_id": "sha256:8c6903f9cead0644d0c02d0575a8240d6907005b599cea599e5ef1abae9509a5",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Atheory%2Fmoving-source-field-consistency%2Fevidence-ledger.md",
+      "revision_id": "sha256:d01f623a0143de7c529ba89f165ee3b9a22f3e12b1808c4de8c567fb3c1a941b",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Atheory%2Fmoving-source-field-consistency%2Fopen-questions.md",
+      "revision_id": "sha256:567689ce35c5ca82accca130e697b6e4d37bde97c4fca36ed4e28c880031890c",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Atheory%2Fmoving-source-field-consistency%2Frelated.md",
+      "revision_id": "sha256:31df9884698fbe058881e50645250346b42a5e9d6ee9f140baa362b68cfd60df",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Atheory%2Fmoving-sources-in-the-closed-system%2FREADME.md",
+      "revision_id": "sha256:c11f11428a5c9a39949ceb2fd811a424ea24a237119780001c48a986e351dff0",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Atheory%2Fmoving-sources-in-the-closed-system%2Fclaims.json",
+      "revision_id": "sha256:6b36866c34bc955ec24bef33f3f1ee9e148667bd6cadb58309e38d0fb9e7e3c8",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Atheory%2Fmoving-sources-in-the-closed-system%2Fconsumed-momentum.md",
+      "revision_id": "sha256:8f19cf2bcfd99fb4faabfb32a5e4f96e90de76c7664815b10c5a0cfe58b6478f",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Atheory%2Fmoving-sources-in-the-closed-system%2Fevidence-ledger.md",
+      "revision_id": "sha256:fc6d0f0fca082eb4549f1d467a0fb749b420d3fa67418e112a59ca168b309963",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Atheory%2Fmoving-sources-in-the-closed-system%2Fopen-questions.md",
+      "revision_id": "sha256:091370ab554a69b9ab420283a76125389cbc2c1bbe4a533535f35a0ea0f6c6c4",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Atheory%2Fmoving-sources-in-the-closed-system%2Fprogram.md",
+      "revision_id": "sha256:99dcbcd0c9a7bf18e6b7456381ddab7e5e7d580e546b99e912e1721f4655a4cf",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Atheory%2Fmoving-sources-in-the-closed-system%2Frelated.md",
+      "revision_id": "sha256:eaec6b0c4623689dc028e30b692d7aeee38aa9a8dbd68282a45a391a6a3e68fc",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Atheory%2Fmoving-sources-in-the-closed-system%2Fsetup.md",
+      "revision_id": "sha256:19330bdd49da835c89797e2a01c59b37fb5bfe4f0e14b79296ac47ccfb1d25c6",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Atheory%2Fmoving-sources-in-the-closed-system%2Ftheorem-1.md",
+      "revision_id": "sha256:535b2122e2f42571732611d232b053aa638b4e8614dc2350b7bde80ddada5088",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Atheory%2Fmoving-sources-in-the-closed-system%2Ftheorem-2.md",
+      "revision_id": "sha256:cb5a4dd63d0bc79442ab76a6e84a2f913db39979ae7037f44fbb13b9766d3c0b",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Atheory%2Fmoving-sources-in-the-closed-system%2Fwhat-sets-u.md",
+      "revision_id": "sha256:2760842f9addda5c66800aef412520550693c6871a2d0a5b2c252204f387b85b",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Atheory%2Fppn-reduction-of-the-settled-flow%2FREADME.md",
+      "revision_id": "sha256:2f34f2dcdcd595fe59813db6c01e36667cf89e4c1662e9e7c8003eb76e6fbf2e",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Atheory%2Fppn-reduction-of-the-settled-flow%2Fclaims.json",
+      "revision_id": "sha256:6a88f38dea551b6538c27592c801b47c1f01b98ac1f4359de14f5f878199aea2",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Atheory%2Fppn-reduction-of-the-settled-flow%2Fevidence-ledger.md",
+      "revision_id": "sha256:f0b6a617127897c44cce3488de940beae10e123a6d85aa0f6b0c7c9f89fd3606",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Atheory%2Fppn-reduction-of-the-settled-flow%2Fopen-questions.md",
+      "revision_id": "sha256:21db4bd5c7eecce3c6f1aad45fb1ab6794a4a3d3e44fa74a65e81df39eeac04d",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Atheory%2Fppn-reduction-of-the-settled-flow%2Frelated.md",
+      "revision_id": "sha256:7557e7ad3ebaf4d05c928bc3470d01e5a8f48e0dee670c342a2fbc63584c631f",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Atheory%2Fretarded-scarcity-wake%2FREADME.md",
+      "revision_id": "sha256:6b52209ce42e80537b9c554c0e10d4483e0d18e94b10cd4e27324dff51e1a225",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Atheory%2Fretarded-scarcity-wake%2Fclaims.json",
+      "revision_id": "sha256:0d147ac109b72776489c5eeae88cf735488c3893130b048c2b5087f712870b00",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Atheory%2Fretarded-scarcity-wake%2Fevidence-ledger.md",
+      "revision_id": "sha256:98094f21970fb43ce029e95bf4e1ca01d228118947e59bb3ddf9761518116e2f",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Atheory%2Fretarded-scarcity-wake%2Fopen-questions.md",
+      "revision_id": "sha256:4144812f02e66c7d9bf9d18ab5dbf49942d6c0c781909d18c41fab69fb5ac171",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Atheory%2Fretarded-scarcity-wake%2Frelated.md",
+      "revision_id": "sha256:06924972a158c0910a31c163ba2235e53bb7391de44b0f0bc3e51d47bd884b05",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Atheory%2Fshear-sourced-consumption%2FREADME.md",
+      "revision_id": "sha256:9970262f446d77ee8eeea9967e3400d69e8a6e86a96b40cc33ce617feaab5f3f",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Atheory%2Fshear-sourced-consumption%2Fclaims.json",
+      "revision_id": "sha256:05dcfee6e2482726cb84922fe23617a1287326979372082b05605a7a4a6f4ed1",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Atheory%2Fshear-sourced-consumption%2Fdebts-of-the-payment.md",
+      "revision_id": "sha256:a5aa46fc63c92ce5de4ac6884b78042cb0d3f6e81c5346758de108a8cc67cdb6",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Atheory%2Fshear-sourced-consumption%2Fderivation.md",
+      "revision_id": "sha256:eb5856b12f61f0e6ea9bd5a43f341b1b4bbd5ca98308525fffc6d6a7f619cd3c",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Atheory%2Fshear-sourced-consumption%2Fevidence-ledger.md",
+      "revision_id": "sha256:6590e57d4a1ca8c232444faf0a4f46d3427276cdc7b858083da552af584f5c0c",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Atheory%2Fshear-sourced-consumption%2Ffalsifier.md",
+      "revision_id": "sha256:c550ff221592cd46b504e1738f1e9528ce612283a58c6314c56a07b8d510e8d3",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Atheory%2Fshear-sourced-consumption%2Flevel-matching-closure.md",
+      "revision_id": "sha256:022ef13563df1d5aaa75a55893df98c96a9317df8c5d2b0484c69dcd6d214866",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Atheory%2Fshear-sourced-consumption%2Fopen-questions.md",
+      "revision_id": "sha256:66c2e7cec0fe1a08e00d6dff9a87944f3e6920307d0b2742914a0e7093fb9179",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Atheory%2Fshear-sourced-consumption%2Frelated.md",
+      "revision_id": "sha256:9341bd34d2dde21f7959286be19e14a380ba0b0e1fc44b8eda81bae9f559b173",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Atheory%2Fshear-sourced-consumption%2Fthe-law.md",
+      "revision_id": "sha256:cad8be6c9dd5095bc7d1db6561a9606ee94fae33bad755ad8227f88e91751c46",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Atheory%2Fshear-sourced-consumption%2Fthree-checks.md",
+      "revision_id": "sha256:7ad98a420637863abaad81acf5048c17a5b750edd42a24c0b95c62aae83629e8",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Atheory%2Fswirl-photon%2FREADME.md",
+      "revision_id": "sha256:c615835287adc7a8a9abe2dbc2ba2ccb4b18f9482b5eac3fc781c94570e24ecc",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Atheory%2Fswirl-photon%2Fclaims.json",
+      "revision_id": "sha256:b736dc7d868e44c1458b58761a31b807a43110081369595058159636fe9ff30e",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Atheory%2Fswirl-photon%2Fevidence-ledger.md",
+      "revision_id": "sha256:2eac445cea2662c61a68b0d0da2bad6c378b047ab9d051bfff2edf5f5168d5b1",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Atheory%2Fswirl-photon%2Fopen-questions.md",
+      "revision_id": "sha256:28586c520b522376e024edcd84223f0ec494681e4e7051a1a2ee97ddad427bb1",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Atheory%2Fswirl-photon%2Frelated.md",
+      "revision_id": "sha256:bb3fcd4be3b7d28df89e8b99697a4f78976eb0fbcccca23cf73d25b8b3623411",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Atheory%2Ftwo-substance-vortex-vacuum%2FREADME.md",
+      "revision_id": "sha256:33c94098e323144a27a403c70b491620f4aa562d394a92c455b317672dff3e72",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Atheory%2Ftwo-substance-vortex-vacuum%2Fcanon.md",
+      "revision_id": "sha256:a70f50f9024e5767c08e5443084f78d38679503c50550b759b3e44da20456880",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Atheory%2Ftwo-substance-vortex-vacuum%2Fclaims.json",
+      "revision_id": "sha256:f7b9fe571f930a9a3832ae16f0eaeb7f57298a2d46b9b133f7c1eefb9e36f02e",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Atheory%2Ftwo-substance-vortex-vacuum%2Fevidence-ledger.md",
+      "revision_id": "sha256:39004ac807784c3dca576650fe7512e51e2b7301b7abe1af088f7c72961f6620",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Atheory%2Ftwo-substance-vortex-vacuum%2Ffalsifiers.md",
+      "revision_id": "sha256:a4e32b6c722588dadf577fc3239b88c3bc594a50b2c0579822ed34ed9e3c96bc",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Atheory%2Ftwo-substance-vortex-vacuum%2Fkill-condition-a.md",
+      "revision_id": "sha256:354235f8594427d259bb3dd9116ad57214feae4cb018d676010c4e8e350c8ef6",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Atheory%2Ftwo-substance-vortex-vacuum%2Fkill-condition-b.md",
+      "revision_id": "sha256:09497b52c4e6a6c690882291f09fa538261f90cbd83677ffcef979eae7584df3",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Atheory%2Ftwo-substance-vortex-vacuum%2Flattice-adjudications.md",
+      "revision_id": "sha256:ae52d6f12f52d6c44522fc753b4187ae50ec179cfac8d2351c49cba821162b0e",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Atheory%2Ftwo-substance-vortex-vacuum%2Fmechanics.md",
+      "revision_id": "sha256:eb3b54e83e60313ea07dcbbce351320077a4bf1923e5512eeb01f6acdc1646db",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Atheory%2Ftwo-substance-vortex-vacuum%2Fopen-questions.md",
+      "revision_id": "sha256:8730fecb6cb053167d331eafebb00b4241a9ae0f4f95b8685cef8073a8924d85",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Atheory%2Ftwo-substance-vortex-vacuum%2Fpacket-hamiltonian-linearization.md",
+      "revision_id": "sha256:395e1ed7ef5f0920ee92c4a43e3436bf6f21cee72d1d21a6bfc4469b7516c847",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Atheory%2Ftwo-substance-vortex-vacuum%2Fphoton-mode-obstruction.md",
+      "revision_id": "sha256:1408b2c1b3744f1efd914d60402f475e50269d344474817cc6e6dbac2a8ffb75",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Atheory%2Ftwo-substance-vortex-vacuum%2Frelated.md",
+      "revision_id": "sha256:0bb31e04d9276093ace10861f7a854ac7bdb16f9bfa470ba8052a94ec4206411",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Atheory%2Ftwo-substance-vortex-vacuum%2Frelation-to-gravity-as-scarcity.md",
+      "revision_id": "sha256:0892e5fb22dc34eb068d5bd85d0a068c7fefda9eb4df699fa5c7547ac1dbbc5f",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Atheory%2Ftwo-substance-vortex-vacuum%2Fs2-disjunction.md",
+      "revision_id": "sha256:a5628201500d5e20cb557e62e0b456b8ea438cae7a2419e90baeb471d9a4e9dc",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Atheory%2Ftwo-substance-vortex-vacuum%2Ftopological-dynamical-split.md",
+      "revision_id": "sha256:a455c16ecfea5091a2c502c5973c0c1acd4b9bb81aba74ca5677d9b245072d29",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Atheory%2Fvortex-electron%2FREADME.md",
+      "revision_id": "sha256:e5c4bd5b7c15fe7fc0f3909166ce3ffc1332d139035d8d3dc2a7457535ee21f4",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Atheory%2Fvortex-electron%2Fclaims.json",
+      "revision_id": "sha256:63e847faa29dd3704886dbb638780f962f9ef19ecbd3874552fbc7adf99a20ac",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Atheory%2Fvortex-electron%2Fevidence-ledger.md",
+      "revision_id": "sha256:235cf4881555488a5e5f705c2cdccc8fac0a1c618936726f81c096f801710cae",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Atheory%2Fvortex-electron%2Fopen-questions.md",
+      "revision_id": "sha256:4755723741af7b27b38d015ba1c526bd2fecf4865fe3d68add14df5ff4c5b676",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Atheory%2Fvortex-electron%2Frelated.md",
+      "revision_id": "sha256:71eb041fb47a21c2341edfd7b6a2988b957ef7f79ae6a80f210188668d33d870",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Atheory%2Fwide-binary-selection-methodology%2FREADME.md",
+      "revision_id": "sha256:ce4f9b61f25ee84a8a664d327a461ad87515f476d794eb4e55d485d94dd1f31e",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Atheory%2Fwide-binary-selection-methodology%2Fclaims.json",
+      "revision_id": "sha256:0502f51588d7abf2cf3cdcae9c5846c074bf6733e7d5fc139b2779887d249e63",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Atheory%2Fwide-binary-selection-methodology%2Fevidence-ledger.md",
+      "revision_id": "sha256:cea4fa7672a73452668351c9b463970bf7fc3035be281788fdddb20856931f91",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Atheory%2Fwide-binary-selection-methodology%2Fopen-questions.md",
+      "revision_id": "sha256:11c27375a6ab0a6b25987d82d96aa1410cdbe1e8fc34e8cf67b1855f3d1b08b2",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Atheory%2Fwide-binary-selection-methodology%2Frelated.md",
+      "revision_id": "sha256:85ac8cd6d8b85088c85b0a4ed0db4bf2d40ada0ba8b2914f6de36d41d0439ee6",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:program:gravity-as-scarcity",
+      "revision_id": "sha256:b18f877c85b69f86e9d2502cd1a939e198cb77d3e4abf653658f6fd18955cfe9",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:scarcity-newton-from-budget",
+      "revision_id": "sha256:a20700165131d98fb49dd21ab4156e8fe7e3477696423a4b02e757963ea12b03",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:assessment:scarcity-newton-from-budget%3Alegacy-verdict",
+      "revision_id": "sha256:72e3e8161ee7c8257f901a9df67bf21069db9f696c93aa3688b297d6b64fb4dd",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:scarcity-gauss-from-budget",
+      "revision_id": "sha256:edb1c16268505dae47c02a68db78095b4b1bce49e8669272d06bc7176c9a4df7",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:assessment:scarcity-gauss-from-budget%3Alegacy-verdict",
+      "revision_id": "sha256:0bf1224186b96bb4e646bb54efe044a7459672c2d1b0bdc0a0cc0aa4fb57a105",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:scarcity-yukawa-cutoff",
+      "revision_id": "sha256:35717abef00d0dda75cffd25b243569f3f31202233661354e78467510d5ef1f4",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:assessment:scarcity-yukawa-cutoff%3Alegacy-verdict",
+      "revision_id": "sha256:7d12be08678988bb5f878120948882b76065a18798545d2b829d551390adbb96",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:scarcity-mw-shape-beats-baryons",
+      "revision_id": "sha256:ccd95b77601ac0743e52d543e15e2db205e1ae7844586266b503874419403e7b",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:assessment:scarcity-mw-shape-beats-baryons%3Alegacy-verdict",
+      "revision_id": "sha256:676e682d0b37faf0a01458a32bf0e9d1812cc3fb11f30f43720242448689329a",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:scarcity-mw-vs-nfw",
+      "revision_id": "sha256:659f111f71da95847a96bd1d80c29c11893e29c52951a172aa867ae9ebbcf37b",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:assessment:scarcity-mw-vs-nfw%3Alegacy-verdict",
+      "revision_id": "sha256:50b577a606c4cb5e9bc19a38ba111ef928e3a9586d0bb2b94f364b8ca3a6e159",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:scarcity-mw-absolute-curve",
+      "revision_id": "sha256:4f8d6e819e9385456529a7bfdc48ba644a12d5189290267021211dfcf5f3fa4f",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:assessment:scarcity-mw-absolute-curve%3Alegacy-verdict",
+      "revision_id": "sha256:926ab220800401cbeb139ff48caeec9b492d73efa7808c5b6ad8194deca7de9b",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:scarcity-fixed-beta-universality",
+      "revision_id": "sha256:ac101d5fdf1c8af2b1f838697d174686cae5e84febd9abe7bcfb9e2d14d0e3bd",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:assessment:scarcity-fixed-beta-universality%3Alegacy-verdict",
+      "revision_id": "sha256:b2d0bac32a416d7ffe1e26a2b4a74793cb9c18292b5afe66f6919fe82fc13744",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:scarcity-solar-system-ephemerides",
+      "revision_id": "sha256:9bb1b1002445c2ed040a04ede1fa0fc78da94d866fab2deaa0456c0a55c12bf0",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:assessment:scarcity-solar-system-ephemerides%3Alegacy-verdict",
+      "revision_id": "sha256:72bdb6bb3969981ae86310a6950e0932ceebdf0571d0730a37f177bb9234c920",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:scarcity-frame-dragging",
+      "revision_id": "sha256:e2c4e36c404ca470872fbe83684833d66a0e939b3be4d7c719b1a01e40746cbb",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:assessment:scarcity-frame-dragging%3Alegacy-verdict",
+      "revision_id": "sha256:1e9fd382ca23389f1182436dd9536284e5efe68b800a68d0eee7fbf11a301c24",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:scarcity-gr-clock-heuristic",
+      "revision_id": "sha256:3ac64d52c4a8fe417a9879c8c473fa4f901bcc2244f18f2d31d7ebcc517640e6",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:assessment:scarcity-gr-clock-heuristic%3Alegacy-verdict",
+      "revision_id": "sha256:ee686d3bd052dd225715d234deb3531cc3dff3a08bf02206fdd65afdab552d8c",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:scarcity-static-photon-gamma",
+      "revision_id": "sha256:1313ab678216ac228600977a44ad6522937ad1f093c373c7b433bb4b8c6739de",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:assessment:scarcity-static-photon-gamma%3Alegacy-verdict",
+      "revision_id": "sha256:96995d297417ce41fa152acbc8a7222ce69b9673fdf6e43d3f762537c3579adb",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:scarcity-multiplicative-superposition",
+      "revision_id": "sha256:75d2d9942f30ebb8558a5bb848bf3ebd04c55c003d7552ed2c555a4ae8ca61c1",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:assessment:scarcity-multiplicative-superposition%3Alegacy-verdict",
+      "revision_id": "sha256:eea23a98362b0100376a805729672706d707f01494da9a8aee6a30755da1c09c",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:scarcity-headroom-screening",
+      "revision_id": "sha256:005b771e63357348d29fae870e7368a5298eb1bb92a1f0955bca1b2791f93d40",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:assessment:scarcity-headroom-screening%3Alegacy-verdict",
+      "revision_id": "sha256:f81aeeaac7aa6a093be3b5a0d14db2951b9868594bc72a16a85fd8163850ddd9",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:scarcity-static-clocks",
+      "revision_id": "sha256:b26587777f94c0915828cdb4d7718fabe032ac724ee39717e88f178261495ea5",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:assessment:scarcity-static-clocks%3Alegacy-verdict",
+      "revision_id": "sha256:5a9b7c9ecdc73abf9dc3feee61c5c55476732cd98c896b65e9d7a64e0ad417c9",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:scarcity-counting-produces-gp",
+      "revision_id": "sha256:be7a7eb88326f5f2ef0d471fdb2beaa037c3768d18918cc95d44468243b8ecda",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:assessment:scarcity-counting-produces-gp%3Alegacy-verdict",
+      "revision_id": "sha256:45f67063df6005e719ab0ae68b8c45689c751489257750e9cd7a029032f908fb",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:scarcity-excitation-reading-only",
+      "revision_id": "sha256:5c88973b35490e9dbd7744b9968c7f2a9981b412aed3e9dc20d11c4925b75223",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:assessment:scarcity-excitation-reading-only%3Alegacy-verdict",
+      "revision_id": "sha256:57c9434ab4ea2fdbf455e7985664d5106149220e27ebd5acae160c697e79a2dd",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:scarcity-excitation-hides-rest-frame",
+      "revision_id": "sha256:b232d75108249417f198d4593bce31ed9ce6ea9d31e15c6c02f4845555596d4a",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:assessment:scarcity-excitation-hides-rest-frame%3Alegacy-verdict",
+      "revision_id": "sha256:479c40ac2afba72b16fb68d775388d5498f06d572bdbe98d0d33f3100518b006",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:scarcity-excitation-photon-gamma",
+      "revision_id": "sha256:38802b8570224d714d65160b9dd75a3c583fd921fa296ec83729cfb2b9f5c367",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:assessment:scarcity-excitation-photon-gamma%3Alegacy-verdict",
+      "revision_id": "sha256:4d5184bd68fb4d20272567f7ffaf6243cfcdd8b09762211d2c530410a1d6f09d",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:scarcity-clocks-not-second-instrument",
+      "revision_id": "sha256:065131c522719bfaaa1499ce36988e0b6865483116cb72a3f6589a273b1c1b26",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:assessment:scarcity-clocks-not-second-instrument%3Alegacy-verdict",
+      "revision_id": "sha256:4b3e35d7a39f4c4c52077644db716d1289b131c2066b14137d1bb92b0529b52b",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:postulate-rolling-rule",
+      "revision_id": "sha256:5b1455efb96fd2c523b6547f6b979a9735a31c8745064694eb9d44eebde5e445",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:assessment:postulate-rolling-rule%3Alegacy-verdict",
+      "revision_id": "sha256:6481287e8428817b8f49896cbce1f28d354d64cf24333260ff8d12d466b6a26f",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:postulate-elliptic-sigma",
+      "revision_id": "sha256:7f095c2f7f366fb8f3aa4cc2b06f3dfabaf3fe204ac3486520b639850a9e07a8",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:assessment:postulate-elliptic-sigma%3Alegacy-verdict",
+      "revision_id": "sha256:69ba89f58fe93f2f6a9a2bf3ae5fa36ff8f324de16ee2d5de8bd554938883cf6",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:program:moving-source-field-consistency",
+      "revision_id": "sha256:82931a41b5850812bce6c6f4ffa4ec24c3930c962a9ff8644580d388b0e35fe7",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:moving-source-legendre-not-laplace",
+      "revision_id": "sha256:2561c87812b0a41d7f70b45c038b6e795078a1beb1d9a02fdaa38984d2bbd819",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:assessment:moving-source-legendre-not-laplace%3Alegacy-verdict",
+      "revision_id": "sha256:ebc52767cd996fa866519e204bf08874b193a6d2a38ce19af479cb15480218b3",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:moving-source-poisson-dipole-divergence",
+      "revision_id": "sha256:c7e4931ee2fe99645be77669f87fb05b9744f75f79937b0d92c322f63fe39a36",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:assessment:moving-source-poisson-dipole-divergence%3Alegacy-verdict",
+      "revision_id": "sha256:c8c713e41079d0e18832ec1bc21edf3e76717c95f62c57916570855c58449b11",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:moving-source-retarded-direction-curl",
+      "revision_id": "sha256:bc206fd07adde756d19ee2755dc3a1e43ce8815e1ad4ab9f9c6ea009e2afaaa6",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:assessment:moving-source-retarded-direction-curl%3Alegacy-verdict",
+      "revision_id": "sha256:cd1bce8dd53cdf9921bd0ed10d9f7b6fa5a0c1eabbaf6782af2c3325bc6095d1",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:moving-source-2beta-not-4beta",
+      "revision_id": "sha256:00514885d5cfa70022236af387d14891e8930b6670e96622a07bbb0b257eabfc",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:assessment:moving-source-2beta-not-4beta%3Alegacy-verdict",
+      "revision_id": "sha256:8858431521386a71c9cdd41ebe669d5cb562826990189397b7152e47321767d7",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:moving-source-em-gr-aberration-cancel",
+      "revision_id": "sha256:cd7531af0bb47433dc0b1d02a4694cae4a1045d988262b46ba7dd3ecef443b77",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:assessment:moving-source-em-gr-aberration-cancel%3Alegacy-verdict",
+      "revision_id": "sha256:e90f3c4480547d9fc56f843845103f004ec9a4fa0465c5877012a0d8c65bb409",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:moving-source-boost-invariant-no-dipole",
+      "revision_id": "sha256:7a429f50c81cf35095811f6bee98bcfc3c3e136735b3b649597a4cf6f256475c",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:assessment:moving-source-boost-invariant-no-dipole%3Alegacy-verdict",
+      "revision_id": "sha256:e92257b6e0cc09aab5cc8fa0529978d12a2b626aa3f051e2d786c9cf4bb3dd34",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:moving-source-toy-lopsidedness-scale",
+      "revision_id": "sha256:6ce5afe1e32d2991c0c97ffd3fc2b8eaa7b13314be2b66b7c886588cf024ea30",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:assessment:moving-source-toy-lopsidedness-scale%3Alegacy-verdict",
+      "revision_id": "sha256:71961f7f3676ae93f3c6912bb96a91006c4afdbfedbfcdf593c1add9c140ee7a",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:moving-source-large-n-alignment",
+      "revision_id": "sha256:14f403f61299384bde935d3ffb5f643a8fb3cb7b209e05d339bf15bcff3353aa",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:assessment:moving-source-large-n-alignment%3Alegacy-verdict",
+      "revision_id": "sha256:6e2d5a8110d079eba60b2ee95ff9a16b9deccb9701131c1146d18fa199bfff44",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:moving-source-structure-formation-confounder",
+      "revision_id": "sha256:98c8127cc94332edc01b5e529d026b1d1bcb46d5d526e3a0137943256ad1fbda",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:assessment:moving-source-structure-formation-confounder%3Alegacy-verdict",
+      "revision_id": "sha256:bc9a9f3037ae772e5784ec3e59f6e3e71a1d2eb03d1d976e7fb5892ce9c8c73d",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:moving-source-orientation-split",
+      "revision_id": "sha256:0ffd1b42a5cd1d1d0116c6153460fe7343f06a868d2ea9b641d204fb83288e1f",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:assessment:moving-source-orientation-split%3Alegacy-verdict",
+      "revision_id": "sha256:7b503d6c2cd977a81ba9deceb73df8190dbd6a2333d6404b0e04ca64587f8c24",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:moving-source-cherenkov-bound",
+      "revision_id": "sha256:62258d11670d295b54b971af9501a65bcef6c943fdf9dd67e0c3099ddf2a3384",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:assessment:moving-source-cherenkov-bound%3Alegacy-verdict",
+      "revision_id": "sha256:b57dec773b440e43fcd53d22893d0dcce12c104f61dd328847f4089e139d2f37",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:moving-source-gravitomagnetic-gap",
+      "revision_id": "sha256:70eed1e460def1ca43cf6e1f03eb3a44e89e59c33ba075b5e010d7f82dfe7936",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:assessment:moving-source-gravitomagnetic-gap%3Alegacy-verdict",
+      "revision_id": "sha256:ceeb6714a776780be1db44c0b7efed18af0c117a17154a09c00e3a279904e3ef",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:moving-source-branch-c-not-adjudicated",
+      "revision_id": "sha256:966711acb052d2fb591e6a66334acbefc98946a987d6e0af535258cb9588c812",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:assessment:moving-source-branch-c-not-adjudicated%3Alegacy-verdict",
+      "revision_id": "sha256:1a052b0026b9600ab3d0eb2296c753a1cb8289c5ab4b2cb6c7efe1798b767a1f",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:branch-c-minimal-sector",
+      "revision_id": "sha256:1c72851b355bab870c1a6534687c54ddae8a8d7b5708568d19656a2ee3f4f4a9",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:assessment:branch-c-minimal-sector%3Alegacy-verdict",
+      "revision_id": "sha256:eb9082a43449b849ddcc829722a3d0d5944959c2e20ceb8fa518e1e13b28f5c2",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:branch-c-first-order-solution",
+      "revision_id": "sha256:b6f9a7388d99c44d050bc5efd40745da64d97874c1c39df684db5bbf22951c5f",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:assessment:branch-c-first-order-solution%3Alegacy-verdict",
+      "revision_id": "sha256:5ed6d9a96cf2918ea11d34669f1c99f8ead89870c6609378260dc53a7240f58d",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:branch-c-drag-lock",
+      "revision_id": "sha256:9c9a286eb73bce9d09f33bd40c20d7314331dcda8739db7030157516f521fe25",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:assessment:branch-c-drag-lock%3Alegacy-verdict",
+      "revision_id": "sha256:7a1c55cd9a92a5d1dda744ddbece68f8c25332073f01e94f4531ea2e8f2697fa",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:branch-c-observable-dipole",
+      "revision_id": "sha256:99e6c54fa94da4a79a28e8dc62bdc5ba8c04462b3e44e916d8814f41c68e5159",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:assessment:branch-c-observable-dipole%3Alegacy-verdict",
+      "revision_id": "sha256:446eee16a1019298ddf23aa694d8c8ad276149a6a09bbf89567ece0d80bf7615",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:program:moving-sources-in-the-closed-system",
+      "revision_id": "sha256:2c5f626e6bce88009b9b270069d7774eec99223460acf0a5ceebb00c3794b6ee",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:moving-theorem-1-bernoulli-realized",
+      "revision_id": "sha256:a679a1b92a8e7005dee810944d6ed71b95770aab0460236608007001eb140407",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:assessment:moving-theorem-1-bernoulli-realized%3Alegacy-verdict",
+      "revision_id": "sha256:c58fac763ecbe6ec6266309ae7c32240dd8ae6b16bf71a7e3f2f262d054c18bb",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:moving-clock-common-mode",
+      "revision_id": "sha256:35310e24a5a06ebca6cf3cb070302fd4dcde98587674a764d12aeae6e50d5653",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:assessment:moving-clock-common-mode%3Alegacy-verdict",
+      "revision_id": "sha256:b1778d76535bd3ce5d1ceca9c85542c65825374dc3d7289ae0adacbee513f3cd",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:moving-pure-wind-null",
+      "revision_id": "sha256:87f7bfecde3daf939dca1411c66244e5c09cf5ba81d560503eeaa1859d2d6787",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:assessment:moving-pure-wind-null%3Alegacy-verdict",
+      "revision_id": "sha256:0e206bfef59da6b744b4845f5b578c8bf37f13722b9b4db8c473f21afcf18207",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:moving-theorem-2-wake-not-gauge",
+      "revision_id": "sha256:b48bdee70978926e02e945b78746f5ccd475e5f8149af47e654213192b202872",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:assessment:moving-theorem-2-wake-not-gauge%3Alegacy-verdict",
+      "revision_id": "sha256:70a7570a5ee06682c011221cb427700841c220d793687849ee3a4fb29c919d00",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:moving-gravitomagnetic-sector",
+      "revision_id": "sha256:20ea84d55fb93d07521ecf0b12242f9748026c9a0bc58975717b3feb4f8bd5b9",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:assessment:moving-gravitomagnetic-sector%3Alegacy-verdict",
+      "revision_id": "sha256:58377cb9dd74fd9502b215d0f01d9b1ecc161bd1c70171cc77963be3dda8fedf",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:moving-consumed-momentum-drag",
+      "revision_id": "sha256:7af1bd3bbbb71f1efcacc05718e20026a7afa961dbb142bce69541cfc1fad4bf",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:assessment:moving-consumed-momentum-drag%3Alegacy-verdict",
+      "revision_id": "sha256:839c41a047a9bf19483738aeb5695ab743af5a4e6b27a99c76b6a72fe6d1e073",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:moving-no-bernoulli-graph",
+      "revision_id": "sha256:645ee8fc2bdf4d434cb569e8f87813cd5e1e3cae89046c68e567b8608f59fe45",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:assessment:moving-no-bernoulli-graph%3Alegacy-verdict",
+      "revision_id": "sha256:a7e44c4a67b0fbb6e9688b53091881c65ff07994056d4c62d7928fb6be85fd88",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:moving-density-rate-limit",
+      "revision_id": "sha256:301dcc8638a091a6c6565f85fe9c50690097d031c31f7f44132f6451f50cccc8",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:assessment:moving-density-rate-limit%3Alegacy-verdict",
+      "revision_id": "sha256:03e9efbe39566a0ea0916714229e276da13ba47bd1debb900e27373bcfd74649",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:moving-cavitation-floor",
+      "revision_id": "sha256:10c902d326db231cfacbaaa57ee6e58418aeda28e6dcb8d70f6e45045c249f41",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:assessment:moving-cavitation-floor%3Alegacy-verdict",
+      "revision_id": "sha256:29e9bac41a744e1699872da3e70ef6b617e5fb741d3ca2c167afc9edaf2f66c5",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:moving-local-wind-orbital-scale",
+      "revision_id": "sha256:f01b646394aba85237d4f7054d5e70b0700106ad97678ef7a7fffa067acf30fb",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:assessment:moving-local-wind-orbital-scale%3Alegacy-verdict",
+      "revision_id": "sha256:ca2cf22dd7033e7f6d3f72c4115632300f706e61a504f75af4c4670c629026b5",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:program:ppn-reduction-of-the-settled-flow",
+      "revision_id": "sha256:677ce613590e50af44ff3a0ca9825a72766b094167f2e6106ea743ed7fd7266a",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:ppn-reservoir-pg-form",
+      "revision_id": "sha256:79e1feaf459fbb527fca90415407660f9284b2e9713000389c1a746f3955fb00",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:assessment:ppn-reservoir-pg-form%3Alegacy-verdict",
+      "revision_id": "sha256:79e9ca9ed0ce2bf8c7dc906f395c9b1040fafc5cc7a02a01f0a1314373742da8",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:ppn-uniform-wind-flat",
+      "revision_id": "sha256:7b448c6a9466a16166d82d9334a1a2868deb3190893c4a96cb14d14079bb8742",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:assessment:ppn-uniform-wind-flat%3Alegacy-verdict",
+      "revision_id": "sha256:28bebb711187333ea5975cb7f1c7d80a09204fa9fc074baf81f6d2a3c26c72ca",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:ppn-static-diagonal-schwarzschild",
+      "revision_id": "sha256:1eceb8aef05df43ee2a0b0ed6f9c2d5b59dd47a144c23533491020dc1606b9aa",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:assessment:ppn-static-diagonal-schwarzschild%3Alegacy-verdict",
+      "revision_id": "sha256:23171569044a56068e08e33823b8c3b5663b5f9746b08dccb5f03d2ac300a8d7",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:ppn-gauge-obstruction-two-pieces",
+      "revision_id": "sha256:8542e6428751be233ca55849b4de7a620857311bc7e6e195a06aab28797bd9e7",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:assessment:ppn-gauge-obstruction-two-pieces%3Alegacy-verdict",
+      "revision_id": "sha256:55a9ace6ba9e5b7bb7ce9e7aa372a5e3881c1fa3e9fedd5a129647b7cbbaa0e7",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:ppn-half-order-hazard",
+      "revision_id": "sha256:15cdb54f79601c6f1f5fc4440431b4265f9d0f074b3f80c0f3d5259415789676",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:assessment:ppn-half-order-hazard%3Alegacy-verdict",
+      "revision_id": "sha256:258e32fb0b0bcae297b369add3275be35437d2a20471f3d1c0e0b09f69a8853b",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:ppn-slots-far-field",
+      "revision_id": "sha256:d5f99385e41439ffcab7c53ee148754b36813991760ce46eb2a3b01cd584f8d1",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:assessment:ppn-slots-far-field%3Alegacy-verdict",
+      "revision_id": "sha256:1df61d47bacc29cdcdf0b9c0982ce893994dcf7d50c6624a843014039f145de0",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:ppn-far-field-trans-critical",
+      "revision_id": "sha256:194e32f889a2e514c52e5c8640559aa1894ac57d2ef6c6e726d22731ac2b0706",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:assessment:ppn-far-field-trans-critical%3Alegacy-verdict",
+      "revision_id": "sha256:52da2d2f23850dfa152ea9d2da71b01ed8f520f5f2064f54a47a6ab5125f9b17",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:ppn-alpha-contact",
+      "revision_id": "sha256:638582a2e792e6e5f10e478bde543877fe5de3e15de5511e5178436c2e70447f",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:assessment:ppn-alpha-contact%3Alegacy-verdict",
+      "revision_id": "sha256:590554677b8774f8def9fccecb07504b4685aac43e06971dfd12f3e5f964b88f",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:program:retarded-scarcity-wake",
+      "revision_id": "sha256:9b0e4e7b4de5f533e4675752a11b5c0c1dca7ebb4699f0c2bdbae03cc21172f4",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:retarded-wake-potential-like-scalar",
+      "revision_id": "sha256:f853bc655e5b01c45585c2548765cf1e35e4b296acf6d157b590838d0f97b671",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:assessment:retarded-wake-potential-like-scalar%3Alegacy-verdict",
+      "revision_id": "sha256:f69be8d2ed6d8d39bf08258152d41efe18332856dcf8172cb8bfacaafce1b1b5",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:retarded-wake-substrate-u-exists",
+      "revision_id": "sha256:3e976fa40e56c356c2cc92cc4e01967e3d9f6c767cebfd8c1c1df4613a1a77ae",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:assessment:retarded-wake-substrate-u-exists%3Alegacy-verdict",
+      "revision_id": "sha256:bd90de450fdc6edea9dd6a897ef46c37b32c2aabce00e0b789cc3ae0e3df939a",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:retarded-wake-delayed-center-dipole",
+      "revision_id": "sha256:f7a536e38f1f01f067078940d769a713c232e533a19870625f37820d0ec4eb0c",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:assessment:retarded-wake-delayed-center-dipole%3Alegacy-verdict",
+      "revision_id": "sha256:1188a76e4f0f9d1a47f20c2ba84142a8a4789f6d2d878b92bc67760a0e256cc6",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:retarded-wake-4beta-contrast",
+      "revision_id": "sha256:421140fd8b43b1fe6ab002abbe32860f5dcb801fb7de523004423c4fe315b499",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:assessment:retarded-wake-4beta-contrast%3Alegacy-verdict",
+      "revision_id": "sha256:85602272cc320f4bdf335c688dd85e2b1e9f458ebbd7e64c33716a028ff0460c",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:retarded-wake-retarded-direction-conservative",
+      "revision_id": "sha256:4749b1b6a4f69471b6c16e35b329b30835b82cb2d38e8ed0f594caf3ae14f8b5",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:assessment:retarded-wake-retarded-direction-conservative%3Alegacy-verdict",
+      "revision_id": "sha256:a70f0c89415debe4ae244f51ab194443366e13cfcd7d82a6582ebf3e69291a44",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:retarded-wake-concentration",
+      "revision_id": "sha256:845ee662a8d80ec345321833c56e213fea06fddc58c471e1c12282b1c4005764",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:assessment:retarded-wake-concentration%3Alegacy-verdict",
+      "revision_id": "sha256:5e563ce1800ce7256a7351a3695e2f45a98ed383aae2893e4da3df7c171c1859",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:retarded-wake-m1-asymmetry",
+      "revision_id": "sha256:f6bceffb43b7bee54e62dbd4b4719eeb5bd2669836dc139d4ee65a5334eaf5dd",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:assessment:retarded-wake-m1-asymmetry%3Alegacy-verdict",
+      "revision_id": "sha256:40cc4a283ee3028f891e5b35fc74231186a4f311843232f45b26dc66ad9910a4",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:retarded-wake-axis-velocity-correlation",
+      "revision_id": "sha256:818dfcb1f8e1239d31fad92712aaec75528302a8d32a2699eb1ed43b0399ad4c",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:assessment:retarded-wake-axis-velocity-correlation%3Alegacy-verdict",
+      "revision_id": "sha256:6a6f019ab614c5df20139af072e33be49f68ea715f64dd0342801250e2fc52ab",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:retarded-wake-lopsidedness-warp-split",
+      "revision_id": "sha256:adbd7a49934703e4879a126204f5e38b64f8d7dd48711d79dc9e5772a01f43f6",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:assessment:retarded-wake-lopsidedness-warp-split%3Alegacy-verdict",
+      "revision_id": "sha256:7cea3b635c88f8b50bc2bc81d6b32444dcd5f2852e09b16c19b45d4226b3510d",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:retarded-wake-boost-invariant-cancel",
+      "revision_id": "sha256:deb37b8a9203ec25ea5d6b174a3b970ec0866e69018a5e9463839a3d92a23552",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:assessment:retarded-wake-boost-invariant-cancel%3Alegacy-verdict",
+      "revision_id": "sha256:76e888520a62d17bebf127248ed5de3154748619b74a4d9b1c0cfd7697ec2aa2",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:retarded-wake-gravitational-cone",
+      "revision_id": "sha256:3412de9cb812c20435ab46266f8b8312db22f072514a0fda94352f5ebaf7f892",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:assessment:retarded-wake-gravitational-cone%3Alegacy-verdict",
+      "revision_id": "sha256:3c3e85693435b0bff4a5744e4ae16f9d3b0c7d6bbc1879a283083351940e0874",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:retarded-wake-rescues-parent",
+      "revision_id": "sha256:00cee6fa907a4d9c2b39bc0f1b32be3a23db2fd8a901363abb219f73ddba2231",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:assessment:retarded-wake-rescues-parent%3Alegacy-verdict",
+      "revision_id": "sha256:940a13b89882de57565df4a2f9a105fd734dbffed100df70820e997e26387a8f",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:program:shear-sourced-consumption",
+      "revision_id": "sha256:d89c54c55cc0aff350f864679756a07bd4572b6ac230d764128347e8dea83c2e",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:shear-unique-gp-profile",
+      "revision_id": "sha256:93b85b9bb99b2fb016ac488d9a851cfea1e7073f94429cf6bcc7c6f0c63f4619",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:assessment:shear-unique-gp-profile%3Alegacy-verdict",
+      "revision_id": "sha256:e1f8f3a70665e0704e4c88a11bded7e4fc79f99fdaf9fdd53aa456b333e7831f",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:shear-sink-identity",
+      "revision_id": "sha256:bd293dfd6de40c197ef53213228589199ab3425d368b5cac11f4de8769aa8f9f",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:assessment:shear-sink-identity%3Alegacy-verdict",
+      "revision_id": "sha256:25eab8436dd9ae1551f9c6740cfc7de2094f0ba6d0330177ebcd7c1e6db1781e",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:shear-hubble-silence",
+      "revision_id": "sha256:180c9916dc5e0c74c864bfc94c025d77b3326e95d87478c80b2d6d78b4e1fd56",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:assessment:shear-hubble-silence%3Alegacy-verdict",
+      "revision_id": "sha256:4189aaf553921ee4ba3686595f9e9d8ee4c9f6a3fd70b2abd95e6c74bb1df32e",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:shear-gp-attractor",
+      "revision_id": "sha256:8baa2919a0282bc88c2c9513c77dd9f6369e60b30ab80169e0a91d40b6c87f26",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:assessment:shear-gp-attractor%3Alegacy-verdict",
+      "revision_id": "sha256:9722c94992991b050cef3810153698ed310122ba576bee38c8506037c0e082ac",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:shear-amplitude-controllable",
+      "revision_id": "sha256:27c111f2b2aa00f8b2907a84d5519cf171d34dd83cbd3ac83a19a76ecfb427ea",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:assessment:shear-amplitude-controllable%3Alegacy-verdict",
+      "revision_id": "sha256:687f0b5137b39d08487b30e6f60669d90a4bea056bf28a35da3db99a81713468",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:shear-level-matching-amplitude",
+      "revision_id": "sha256:2bbbe1901fabbe412abd35f1983cccd6895c41c161155dd840470a7c438c444b",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:assessment:shear-level-matching-amplitude%3Alegacy-verdict",
+      "revision_id": "sha256:94530666a2d624d1aea7a429a2a30dd863aa7112ed5850bb6f39ca01c2fea33f",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:shear-flux-type-amplitude",
+      "revision_id": "sha256:5ffae04ddc3c5c0d3737400a3e9e4de0305ac872ee35f5454144eb5778d2b6eb",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:assessment:shear-flux-type-amplitude%3Alegacy-verdict",
+      "revision_id": "sha256:1b99370a93755d70a3ac9e58f216f01b6f687e85a777c9b8f402e8b35a88f1a2",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:shear-closed-system-uniqueness",
+      "revision_id": "sha256:4a8ebff3d87f7a1ea064202c3725f1e8b6a0efb0c12c9f0d50bd0565113e0d29",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:assessment:shear-closed-system-uniqueness%3Alegacy-verdict",
+      "revision_id": "sha256:5fce6b54200a87a9f82eb6d5fd0b0ba8f4e27dbd53fa38efd8b263fd32896a53",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:shear-quadrature-composition",
+      "revision_id": "sha256:481b17dfdb98748469c5787cf3f99efd37e9987d7070c247a501706f7c5e81e9",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:assessment:shear-quadrature-composition%3Alegacy-verdict",
+      "revision_id": "sha256:b3aec92d0e3d8a8ed08d0bd4d8dd4c8df88e9e7654da8464729f5e551cdde08c",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:shear-flux-superposition-artifact",
+      "revision_id": "sha256:0adbf67d7e3992af1bebcbb740613ee465a6ffddd772d909e747dc28a0e366ca",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:assessment:shear-flux-superposition-artifact%3Alegacy-verdict",
+      "revision_id": "sha256:43d4f9c0d47dd4bfc0dc25926c950694d3647315a7d73ed85c11de45496c1387",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:shear-level-core-headroom",
+      "revision_id": "sha256:63c37b87a4c145695b36a085047db2d884310727aded5c2942a599cd58ab3b56",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:assessment:shear-level-core-headroom%3Alegacy-verdict",
+      "revision_id": "sha256:26315a3ad0d2871d47f8917a2132fc9a54bf73b02258d5bd571cea627086626c",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:shear-turnaround-budget",
+      "revision_id": "sha256:cc35f7783320eb85f18edb8294e3c41f1660390d740e92a083dd134ee7f12943",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:assessment:shear-turnaround-budget%3Alegacy-verdict",
+      "revision_id": "sha256:59f6b64e8925dfd2100fb5117b8a443c52bdb82e12a133fa05b9038a9feeba9a",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:shear-weyl-ricci-resonance",
+      "revision_id": "sha256:781fe5b9720195b417961d551abcca6b57a798b632bc9a8f40bbaaa1747d07bc",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:assessment:shear-weyl-ricci-resonance%3Alegacy-verdict",
+      "revision_id": "sha256:d9fe1891caf513de0d62cdaf33cd1ff3228166a183a7de61cda4b46253d2a0ec",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:postulate-shear-law",
+      "revision_id": "sha256:a04634b0410a8c5e954cdff7edbc550267cd022858e174dcf192795c7c374dc1",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:assessment:postulate-shear-law%3Alegacy-verdict",
+      "revision_id": "sha256:959e6fd6d66519c9cbf4883c901219c64712c89b7f9f44245a4b462cc7ffbfc1",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:program:swirl-photon",
+      "revision_id": "sha256:0503132f0e5adc6d92c3a85c890718b767b138580718d954c228984efb01236a",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:swirl-detaching-radiation",
+      "revision_id": "sha256:3e8e20b54e191972a59afeb343311825e887f21deaeebcf1d1da1ec751183140",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:assessment:swirl-detaching-radiation%3Alegacy-verdict",
+      "revision_id": "sha256:696a41bb56d6e022fe95eeebbeaab8f5dddbdc5cec3281932d0a1050dd3a81d0",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:swirl-far-zone-self-sustaining",
+      "revision_id": "sha256:2023d60d8b83e17b2e0db5404286e82fd89a4ef13f62616f6050392eb22e1c39",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:assessment:swirl-far-zone-self-sustaining%3Alegacy-verdict",
+      "revision_id": "sha256:ecc4b3a3b300ea624aa8bee063292ee991731b854816a2eca3d05e11e37f0b04",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:swirl-is-classically-a-photon",
+      "revision_id": "sha256:08dc921273e7706d8f8985c93f844ebdf70bf30578baa5adb204f3a1439d6d23",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:assessment:swirl-is-classically-a-photon%3Alegacy-verdict",
+      "revision_id": "sha256:9f9c92f7e1f1d91a7e7c29e9516b75b7d3292634e8f9ae186fdb7ccaf8f43ff5",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:swirl-is-field-mode",
+      "revision_id": "sha256:8bcb851c92f15d64f4da6351c744f02c6d40044251b8486309b33cda0b0ad6f9",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:assessment:swirl-is-field-mode%3Alegacy-verdict",
+      "revision_id": "sha256:2f1f96b2634b226ea090a276906030b0960b25ee1c1ab1d0426ffe782a18022f",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:program:two-substance-vortex-vacuum",
+      "revision_id": "sha256:fd3a6947806a28a5bb6975fa1398e2fb49c9d72af92ab01538a45d81e3fc9516",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:two-substance-must-be-superfluid",
+      "revision_id": "sha256:384fb2340661da808d3546a247e054785061dc91d8009b21a4560cd321cf9fb2",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:assessment:two-substance-must-be-superfluid%3Alegacy-verdict",
+      "revision_id": "sha256:5fa0bdd59ec5ae04202a0bb4561630fc429027e930a7f18246250b5967ab066e",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:two-substance-charge-winding",
+      "revision_id": "sha256:4cc04ddcd247377d5480b54a7046b5d06a73f521f9b28d5d6f13776981138be3",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:assessment:two-substance-charge-winding%3Alegacy-verdict",
+      "revision_id": "sha256:67a981c2f8a057f2d540537fcd24f88e89c137e41075f5c14a7392250f270cb7",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:two-substance-mass-core-energy",
+      "revision_id": "sha256:6e6df8bf4c75804cd75db3f5f4b3cd693819695f925c54db64e6684a380a6532",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:assessment:two-substance-mass-core-energy%3Alegacy-verdict",
+      "revision_id": "sha256:c98a3233a828cfc77fbce6df738ce0d4a2afcef42afea21c20c38e49fb1b56db",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:two-substance-monopole-polarity-blind",
+      "revision_id": "sha256:1645fa64680d1783f6945d2db2d59141e0d0a6b5ed9d5b13e24d88f28c389920",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:assessment:two-substance-monopole-polarity-blind%3Alegacy-verdict",
+      "revision_id": "sha256:a3f43aea9094cce3d93ef4beab3523244a8cd43d0a76d855f5a5712e6f0d1b77",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:two-substance-void-volume-ep",
+      "revision_id": "sha256:f4cbe7237c103e58c95caeee18d4e488ce01ed2a0322c29eecf55657bd281f4c",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:assessment:two-substance-void-volume-ep%3Alegacy-verdict",
+      "revision_id": "sha256:02903a4e8d28b5414fbc733dd8af1bb1fb15584f30ea2530f74fa95c7115be86",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:two-substance-energy-sourced-fork",
+      "revision_id": "sha256:2be1da3ce7d03f7ad896f3ccf3724cce60373b3ec2ef785f0f2d688823a53fb9",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:assessment:two-substance-energy-sourced-fork%3Alegacy-verdict",
+      "revision_id": "sha256:4e1e4b2520939e16ee67fe3b50febe6d5b32471fad51cc94ca6bba636f9478be",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:two-substance-em-sign-2d",
+      "revision_id": "sha256:e4c18b775bd0b44732f93e4fdf3a2a64e112fefb98060f4fabe0c2a032c9efac",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:assessment:two-substance-em-sign-2d%3Alegacy-verdict",
+      "revision_id": "sha256:94a60ba55598f94edbc5b5822d9e30130698c0adae3a2bb6c3f6f1bf99be27b8",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:two-substance-neutron-balanced-defect",
+      "revision_id": "sha256:02a0ed0c6cbeb40b2d09667e070d3b44d8584a07ed163b92b9b10a0523e15983",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:assessment:two-substance-neutron-balanced-defect%3Alegacy-verdict",
+      "revision_id": "sha256:a4a09d13c3e88bc8e3437a3723044f88b8f5bbff62bb8da79fde40bf42ab440c",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:two-substance-kill-condition-b",
+      "revision_id": "sha256:d0724aa68307f2ae822bf2282f0bb2d09aba464ab0cdb99da35c6b731c44e28e",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:assessment:two-substance-kill-condition-b%3Alegacy-verdict",
+      "revision_id": "sha256:13e6188a19129bdd5d1051b63c3813e9074cd4cf4e6c90956d9b78965a2bee58",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:two-substance-packet-linear-modes",
+      "revision_id": "sha256:f516ad9becebcbb6cd78313698e837f75e17f941b72257de026974e64a28e5c0",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:assessment:two-substance-packet-linear-modes%3Alegacy-verdict",
+      "revision_id": "sha256:f38e7c8b99700f288ee5692157b58c2c29486bafa56d02eba3496f704c7518bc",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:two-substance-packet-linear-local-only",
+      "revision_id": "sha256:5ef0a111cb57227bbf3b8942dc18df22e361cd5702d80f3e8e308a6741fd91cd",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:assessment:two-substance-packet-linear-local-only%3Alegacy-verdict",
+      "revision_id": "sha256:a20a2f64b825bc4fd4ca288c4e8373c81591f87de4198e7a10338a41188060da",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:two-substance-packet-energy-hook",
+      "revision_id": "sha256:55e9acd27af56a0d48af40771833e992f939964c6b9dcf718a57c37d681b3138",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:assessment:two-substance-packet-energy-hook%3Alegacy-verdict",
+      "revision_id": "sha256:c80965fef88872f500ea3729fc3e8a066f003e85c5983b6128648441d0517247",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:two-substance-conserving-far-field",
+      "revision_id": "sha256:79833fe55b0b26ed869d5d50da35b7001073b4c88b3beb097fedb0ea98669d3f",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:assessment:two-substance-conserving-far-field%3Alegacy-verdict",
+      "revision_id": "sha256:fa8fb488b28754859e09295bf49ea4faf5e775987a9498a26cacc6ce2ccc2447",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:two-substance-proton-confined-triple",
+      "revision_id": "sha256:a7893390dbb3f5fde8c1a9c2e88b695ed8babf91c3d423cd6635369dd90f9977",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:assessment:two-substance-proton-confined-triple%3Alegacy-verdict",
+      "revision_id": "sha256:83ca402bd9e8abb4675cfa0b11423fb47ed44dd95bdd7d50a91284889597e2b4",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:two-substance-s2-fifth-force-charge",
+      "revision_id": "sha256:ba9ed789a4f97cf7b2380977d653221cf4046b46cde859b9026244aafe53c052",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:assessment:two-substance-s2-fifth-force-charge%3Alegacy-verdict",
+      "revision_id": "sha256:f9bb39ca69136825c682a32e60478ba0984d261114cfd48c356f2e62946f2279",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:two-substance-s2-yukawa-light",
+      "revision_id": "sha256:a947d18553b04f6c41de1e64d8974695b5460f6d8f639410062c5543cef79716",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:assessment:two-substance-s2-yukawa-light%3Alegacy-verdict",
+      "revision_id": "sha256:f51e08d56e7dd85382f0d5692b9c88016c7ea15825836763630032b83aef5e55",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:two-substance-s2-yukawa-shape",
+      "revision_id": "sha256:e8e6a5566df19fdc780f114e3244ca3007438f2e231eae3f9bc4c735616cd40c",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:assessment:two-substance-s2-yukawa-shape%3Alegacy-verdict",
+      "revision_id": "sha256:51f11fbef880d3030fe5121cdc404006aecf0e91f49614809d6a39b44b31ee71",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:two-substance-s2-yukawa-solar-g",
+      "revision_id": "sha256:b7cb599234c9594210cbb538e0d530e3580ef8c55740e0f39afd800ca25bd75a",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:assessment:two-substance-s2-yukawa-solar-g%3Alegacy-verdict",
+      "revision_id": "sha256:51ce13a2af5f0ee0b62d2fa8df4bd467aa1bf95f309edf8e301476d6a1644101",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:two-substance-fifth-force-no-clocks",
+      "revision_id": "sha256:0db440f2dcef6380d85c1188ea5daa12d0a2cdbce6aeabac786eeb5d0cc43639",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:assessment:two-substance-fifth-force-no-clocks%3Alegacy-verdict",
+      "revision_id": "sha256:32eadde6c7bc8f27a9f004139d9eb4fb671ee7ec18ba8e3d040c82eccfb61b42",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:two-substance-forced-metric-merger",
+      "revision_id": "sha256:66d45a74b21d1c3170f2a7ce6303585069193c18db27e414e44f7754ee0396bf",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:assessment:two-substance-forced-metric-merger%3Alegacy-verdict",
+      "revision_id": "sha256:edcc6e7d04b5fa4be374f32c60706fabf6f627bf74bc8467c76f3b0fbab511fb",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:two-substance-density-set-c",
+      "revision_id": "sha256:b0691dc5adb3a029d04ab40ad83c5a7de21fba2cac4ad16c6b4bcad1e3703a79",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:assessment:two-substance-density-set-c%3Alegacy-verdict",
+      "revision_id": "sha256:7157c3290df1679070772e0cd68a7139690be9137a7a310a0da1073e20eceac8",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:two-substance-s2-eos-clocks",
+      "revision_id": "sha256:861a5fbdcc9136260a4f1cbfd1f8f5f668e5ea4910cb0684491716a8ba687184",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:assessment:two-substance-s2-eos-clocks%3Alegacy-verdict",
+      "revision_id": "sha256:20d7f3cf2df70ecaa0b65dd8dcefe847ca3646baeec1bf876f9151ff79fa56d4",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:two-substance-astronomical-clocks",
+      "revision_id": "sha256:a8f3976d04f39871165ea09e2e10ad406d42ac9eab935bfee3886fed12553c6a",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:assessment:two-substance-astronomical-clocks%3Alegacy-verdict",
+      "revision_id": "sha256:49106ef60b6252d9918fbce954cecd7cab41b27592128ece6333d25e063631e7",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:two-substance-fixed-length-universality",
+      "revision_id": "sha256:66f6d5c3c01741f9a7b0326e87d48dbe147933428bc5aa2981e2e449f7bad550",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:assessment:two-substance-fixed-length-universality%3Alegacy-verdict",
+      "revision_id": "sha256:24ad8615dfc42d29589ad0d62811c59259e8f5cadb97198380f04ec37c04ddee",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:postulate-lambda-coupling",
+      "revision_id": "sha256:071cc8fe6ec2446b81bcf6ec6ee6cd42e630d285f7251ba0f17bde032f47e1d4",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:assessment:postulate-lambda-coupling%3Alegacy-verdict",
+      "revision_id": "sha256:f73a6f331c4040ed39a5439cb3cffba50254efd2ca7df9409809e2a971e5f148",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:two-substance-source-law-from-s2",
+      "revision_id": "sha256:1ad4c8988b98e2fa7c5d9a99bfd755e91d0ea89863f428a0be2cdb615b912b90",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:assessment:two-substance-source-law-from-s2%3Alegacy-verdict",
+      "revision_id": "sha256:f4f4c0ce0a2c0ed45c4702f6a7ad4a40c14e74f8e2700cf30391e813e52d4605",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:program:vortex-electron",
+      "revision_id": "sha256:810c1ccc3203aeefe5f1b77282d737a7417765c7a4e29520d56d0626c7c4366e",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:vortex-single-particle-spin",
+      "revision_id": "sha256:0198d82821543420ab78c991e9b66a2a5741c26ba1e0eb9c400c333e821b425b",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:assessment:vortex-single-particle-spin%3Alegacy-verdict",
+      "revision_id": "sha256:be953286f35243d5e14aa09869ff56c335d4ab6ca1bab388c51c6e4f25d4f2ac",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:vortex-two-particle-bell",
+      "revision_id": "sha256:a46793fece5124632131a45f642f5082e9e5648a8104dcf7972ca888755895d9",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:assessment:vortex-two-particle-bell%3Alegacy-verdict",
+      "revision_id": "sha256:d9c9c629c9d1fe0b56c5e8ee5e199276e888f199863d8acadb739b04d07a33b2",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:vortex-nature-chsh-ceiling",
+      "revision_id": "sha256:19c194adaa49e9db753899cc5cfaee31422c64febc1e88ddf21c32da676fb244",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:assessment:vortex-nature-chsh-ceiling%3Alegacy-verdict",
+      "revision_id": "sha256:aed677c0d6770fd883b37db1ad099046329d3c34bb5c4b795f9c501df99dd498",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:vortex-pingpong-classical-ceiling",
+      "revision_id": "sha256:c5849ebf1916fbf7bc82f28130d15b9f2ad6d24d426f744c9742b4976d2206a2",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:assessment:vortex-pingpong-classical-ceiling%3Alegacy-verdict",
+      "revision_id": "sha256:f4ce8b5d7528ddf02da3b5bf053d7f3d6a7f36d3ab629779e4c4b977d374e522",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:protocol:closed-system-moving-existence",
+      "revision_id": "sha256:8a2093dbd4aeaccf4763434c892e492a5a919ba384ece79dfc2ff38a8cc832db",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:protocol:retarded-wake-branch-c",
+      "revision_id": "sha256:e13c4960e9d14651cbdf86ac5eb6b0b7e503d7f5f34abe14b0f0dcb7581f0690",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:protocol:two-substance-photon-sector",
+      "revision_id": "sha256:b961cf91f1e060ead556e90eab7476eed708248ed8979d6d8f3b29e177eda02f",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    }
+  ]
+}

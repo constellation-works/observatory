@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "kind": "program",
+  "id": "urn:research:principia:program:gravity-as-scarcity",
+  "aliases": [
+    "gravity-as-scarcity"
+  ],
+  "activity": "retired",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "b5f58c64f4c6bf9d7d7f67c826f5d2dd7c9cb64f",
+    "sha256": "sha256:996b059ca4b45cee6dd42a503594508ebb8d6d13211ad1104df3754b116d5976",
+    "path": "theory/gravity-as-scarcity/claims.json",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Exact historical verdict and stated assumptions only; migration makes no new scientific inference."
+  ],
+  "missingness": [
+    "scope"
+  ],
+  "legacy": {
+    "doc": "gravity-as-scarcity",
+    "title": "Gravity as the gradient of scarce space",
+    "status": "retired",
+    "families": [
+      "gravity-as-scarcity"
+    ],
+    "updated": "2026-09-04",
+    "headline": "RETIRED by Daniel (2026-09-04). No active research or follow-up; historical results and claim verdicts preserved.",
+    "live_fronts": [],
+    "retirement": {
+      "date": "2026-09-04",
+      "authorized_by": "Daniel",
+      "reason": "Retired by Daniel on 2026-09-04: discontinue the gravity-as-scarcity research family, including the shear-flow completion, moving-source repair, and PPN continuation. Preserve all evidence and individual claim verdicts; no follow-up or reopening without Daniel's explicit authorization.",
+      "previous_status": "growing",
+      "previous_headline": "No universal-gravity branch is live. Fixed-β universality, static photon and clock sectors, and counting→GP are refuted. The closed system is measured statically; the moving sector is the live front."
+    }
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "theory",
+    "title": "Gravity as the gradient of scarce space"
+  },
+  "revision_id": "sha256:b18f877c85b69f86e9d2502cd1a939e198cb77d3e4abf653658f6fd18955cfe9"
+}

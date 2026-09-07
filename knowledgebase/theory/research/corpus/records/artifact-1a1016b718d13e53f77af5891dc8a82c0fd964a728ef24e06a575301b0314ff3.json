@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Astudies%2Fchsh-bounds.md",
+  "aliases": [
+    "source:principia:4e3b02c59b694d85016915177ef1ae157895ed7b:studies/chsh-bounds.md"
+  ],
+  "activity": "active",
+  "scope": "literature",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "3be0ecc0c59d594510e9b54db92ef43ff8d1c7a9",
+    "sha256": "sha256:a55f6b3364cdec86729ae9571c9181d2fb18455f4317a881c90594456eda1ae7",
+    "path": "studies/chsh-bounds.md",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Immutable archival source copy; upstream scientific ownership is unchanged."
+  ],
+  "missingness": [],
+  "legacy": {
+    "source_pin": {
+      "repository": "principia",
+      "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "path": "studies/chsh-bounds.md",
+      "blob_oid": "3be0ecc0c59d594510e9b54db92ef43ff8d1c7a9",
+      "sha256": "sha256:a55f6b3364cdec86729ae9571c9181d2fb18455f4317a881c90594456eda1ae7",
+      "bytes": 1678,
+      "commit_metadata": "4e3b02c59b694d85016915177ef1ae157895ed7b\n2026-09-06T02:49:35+00:00\n2026-09-06T02:49:35+00:00\nfeat: Migrate the wide-binary control pilot into versioned scientific r… [ORB-11378]\n"
+    },
+    "text": "---\ntitle: \"CHSH: the classical bound, the quantum maximum, and the loophole-free measurements\"\nstatus: active\ncreated: 2026-07-09\nupdated: 2026-07-09\n---\n\n# CHSH bounds\n\nThe facts the `bell-tests` family leans on.\n\n## The statistic\n\nS = E(a,b) − E(a,b′) + E(a′,b) + E(a′,b′), with E the correlation of ±1-valued outcomes at\ndetector angles chosen per wing. (`lib/py/orrery` exposes `chsh_S` in exactly this form.)\n\n## The three numbers\n\n| Value | What | Source |\n|---|---|---|\n| \\|S\\| ≤ 2 | ceiling for **any** local hidden-variable model, regardless of mechanism | J. S. Bell, *Physics Physique Fizika* **1**, 195 (1964); J. F. Clauser, M. A. Horne, A. Shimony, R. A. Holt, *Phys. Rev. Lett.* **23**, 880 (1969) |\n| \\|S\\| ≤ 2√2 ≈ 2.828 | quantum-mechanical maximum (Tsirelson's bound) | B. S. Cirel'son, *Lett. Math. Phys.* **4**, 93 (1980) |\n| \\|S\\| ≈ 2.4–2.7 | measured, with detection + locality loopholes closed simultaneously | 2015 loophole-free tests: Hensen et al. (Delft, NV centers, 1.3 km), *Nature* **526**, 682; Giustina et al. (Vienna), *Phys. Rev. Lett.* **115**, 250401; Shalm et al. (NIST), *Phys. Rev. Lett.* **115**, 250402 |\n\nContext: the 2022 Nobel Prize in Physics (Clauser, Aspect, Zeilinger) recognized this\nexperimental lineage.\n\n## What hangs on this\n\n- [theory/vortex-electron](../theory/vortex-electron/) is refuted by the gap between rows 1\n  and 3: its best |S| is exactly 2.000 ([lab/sims/vortex-bell](../../orrery/lab/sims/vortex-bell/)), and nature\n  measurably exceeds 2.\n- [lab/sims/pingpong-bell](../../orrery/lab/sims/pingpong-bell/) demonstrates row 1 with a tabletop mechanism\n  (sample data: |S| = 1.49 ± 0.17).\n",
+    "commit_object": "tree 682cccb1cf19c89c2c5f4371c14ed2b384d2ae8c\nparent 13866b2848fbcce9a1f1ef2d4b97051a65f7e626\nauthor orbit[gpt-6-astra] <agent@orbit.invalid> 1788662975 +0000\ncommitter orbit <orbit@orbit.local> 1788662975 +0000\n\nfeat: Migrate the wide-binary control pilot into versioned scientific r… [ORB-11378]\n\nMigrate the wide-binary control pilot into versioned scientific records\n\nPlanned-By: codex\n"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "source",
+    "availability": "available",
+    "snapshot_digest": "sha256:a55f6b3364cdec86729ae9571c9181d2fb18455f4317a881c90594456eda1ae7",
+    "locator": null,
+    "media_type": "text/plain"
+  },
+  "revision_id": "sha256:1a1016b718d13e53f77af5891dc8a82c0fd964a728ef24e06a575301b0314ff3"
+}

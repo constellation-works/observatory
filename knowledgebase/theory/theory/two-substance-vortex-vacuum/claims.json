@@ -1,0 +1,342 @@
+{
+  "doc": "two-substance-vortex-vacuum",
+  "title": "The two-substance vortex vacuum: particles as substrate defects, charge as winding, gravity as void scarcity",
+  "status": "exploratory",
+  "families": [
+    "two-substance-vortex-vacuum"
+  ],
+  "updated": "2026-09-05",
+  "headline": "No gravitational sector pending a source law derived from S2. EM sign won in 2-D. Packet Hamiltonian linearized: two longitudinal sounds, not Maxwell; equal speeds degenerate cones without polarizations. Live front: one photon sector (recast or a different interaction).",
+  "live_fronts": [
+    "two-substance-photon-sector"
+  ],
+  "claims": [
+    {
+      "id": "two-substance-must-be-superfluid",
+      "family": "two-substance-vortex-vacuum",
+      "kind": "derived",
+      "status": "supported",
+      "claim": "The substrate must be superfluid (zero viscosity), with defects feeling Magnus-type forces, not drag",
+      "evidence": "Derived by elimination (any viscosity decays every atom — the thread's friction objection inverted); canonical precedent that such media exist with exactly the needed vortex phenomenology: [studies/vortex-atoms-and-quantized-circulation](../../studies/vortex-atoms-and-quantized-circulation.md)",
+      "links": [
+        "../../studies/vortex-atoms-and-quantized-circulation.md"
+      ],
+      "in_doc_ledger": true
+    },
+    {
+      "id": "two-substance-charge-winding",
+      "family": "two-substance-vortex-vacuum",
+      "kind": "nature",
+      "status": "mixed",
+      "claim": "Charge = winding delivers exact, species-independent quantization across the 1836× mass ratio",
+      "evidence": "The integer half is structural (topology) with measured existence proofs — circulation h/m, flux h/2e, core energies dynamical (studies note). The unit-equality half (S1 winding ≡ S2 winding in coupling) is owed to the kill-condition-B theorem; its measured wall is the ~10⁻²¹ neutrality of matter (`conjecture — to verify`, studies note owed)",
+      "links": [],
+      "in_doc_ledger": true
+    },
+    {
+      "id": "two-substance-mass-core-energy",
+      "family": "two-substance-vortex-vacuum",
+      "kind": "derived",
+      "status": "supported",
+      "claim": "Mass = core energy is unconstrained by charge — the 1836× ratio puts no strain on exact charge cancellation",
+      "evidence": "Structural consequence of the split; the superfluid precedent shows winding exact while core energy varies freely (studies note). What sets *1836 specifically* is entirely open (untested, below)",
+      "links": [],
+      "in_doc_ledger": true
+    },
+    {
+      "id": "two-substance-monopole-polarity-blind",
+      "family": "two-substance-vortex-vacuum",
+      "kind": "nature",
+      "status": "mixed",
+      "claim": "The gravitational monopole is one-signed and polarity-blind (void fraction ≥ 0; H/D 2:1, antihydrogen falls down, no shielding)",
+      "evidence": "Sign structure is by construction (∅ ≥ 0, both polarities produce void); polarity-blindness is forced by measurement — ALPHA-g (0.75 ± 0.13 ± 0.16)g downward, and composition/shielding walls ([studies/equivalence-principle-tests](../../studies/equivalence-principle-tests.md)). The *coupling* is adjudicated by kill condition A (next row)",
+      "links": [
+        "../../studies/equivalence-principle-tests.md"
+      ],
+      "in_doc_ledger": true
+    },
+    {
+      "id": "two-substance-void-volume-ep",
+      "family": "two-substance-vortex-vacuum",
+      "kind": "nature",
+      "status": "refuted",
+      "claim": "**Kill condition A:** gravity sourced on void volume (particle inventory) is consistent with tested free-fall universality",
+      "evidence": "**Computed (§ above):** inventory-coupled gravity predicts η(Ti, Pt) ~ 9 × 10⁻⁴ from the binding-energy budget alone vs MICROSCOPE's [−1.5 ± 2.3 ± 1.5] × 10⁻¹⁵ — dead by ~11 orders; QCD mass budget (>90% field dynamics) closes the per-species-void escape ([studies/equivalence-principle-tests](../../studies/equivalence-principle-tests.md)). Consequence recorded: the literal-void ontology is surrendered as a gravitational source; void survives as EM/structural anatomy only",
+      "links": [
+        "../../studies/equivalence-principle-tests.md"
+      ],
+      "in_doc_ledger": true
+    },
+    {
+      "id": "two-substance-energy-sourced-fork",
+      "family": "two-substance-vortex-vacuum",
+      "kind": "nature",
+      "status": "mixed",
+      "claim": "The energy-sourced fork: gravitating charge = substrate energy, deriving the parent's scarcity flow as moving energy",
+      "evidence": "Passes the equivalence principle by construction (inertia = excitation energy on this ontology) and lands on exactly the parent's surviving river branch (ORB-10159: σ = flow kinetic energy) — two independent adjudications converging. Price: deflationary (the two-substance layer does no *gravitational* work beyond being the medium). **ORB-10164 update ([two-substance-defect-gravity](../../../orrery/lab/sims/two-substance-defect-gravity/), orrery `712a814`, § lattice adjudications): the lattice adjudication returned *underdetermined by nullity* — the fork is mooted pending the source law.** Every conserved configuration has a zero far monopole, so neither candidate is selected: void volume controls only the *compact* response (R² = 0.9925), the winding/flow-energy diagnostic is uncoupled from it (R² = 0.00032, zero spread at fixed core), and the far-field predictor fit is undefined. The analytic verdict stands unchanged — MICROSCOPE kills void-volume, energy survives by construction — but the lattice cannot adjudicate *which quantity gravitates* while nothing on it gravitates",
+      "links": [
+        "../../../orrery/lab/sims/two-substance-defect-gravity/"
+      ],
+      "in_doc_ledger": true
+    },
+    {
+      "id": "two-substance-em-sign-2d",
+      "family": "two-substance-vortex-vacuum",
+      "kind": "nature",
+      "status": "mixed",
+      "claim": "Like-polarity defects repel, opposite attract, with a 1/r² far field (the EM correspondence)",
+      "evidence": "**Measured in 2-D (ORB-10163, [two-substance-vortex-lattice](../../../orrery/lab/sims/two-substance-vortex-lattice/), orrery `7eb10ec`, § lattice adjudications):** sign supported — like repels (+0.137474 mean far force), opposite attracts (−0.137443); the Bjerknes reversal did not bite, *given the declared relative-phase coupling* (a model hypothesis, not emergent). Law: force exponent −1.051 with a log potential (fit RMSE 0.0070 vs 0.1383 for 1/r) — correct 2-D point-vortex physics; **the 3-D 1/r² half is deliberately unclaimed** (needs a vortex-line/ring apparatus, not yet filed). Contact mechanism qualified: the density/capacity term strengthens like-repulsion +2.51% at 8–16 cells but reverses below 12 cells (−0.0746 at the 8-cell probe) — the ontology's contact-repulsion mechanism is not monotonic in this parameterization",
+      "links": [
+        "../../../orrery/lab/sims/two-substance-vortex-lattice/"
+      ],
+      "in_doc_ledger": true,
+      "control": "Declared relative-phase coupling; Bjerknes reversal is the named alternative."
+    },
+    {
+      "id": "two-substance-neutron-balanced-defect",
+      "family": "two-substance-vortex-vacuum",
+      "kind": "nature",
+      "status": "mixed",
+      "claim": "The neutron as elementary balanced defect (1,1): decay, capture, annihilation-selection, and proton-stability bookkeeping all consistent",
+      "evidence": "Worked (§(d) above): n → p + e⁻ winding-conserving; electron capture allowed; hydrogen annihilation forbidden; proton ≠ positron topologically (w₂ as baryon number). Owed: spin-½/statistics, magnetic moment, the neutrino slot. The composite-neutron alternative is independently dead (N-14 Bose statistics — studies note). Neutrality of the balanced defect: **measured (ORB-10163, § lattice adjudications)** — zero relative-phase charge with a retained 0.584 void fraction and a far-force residual of 1.88×10⁻⁴ of the charged-pair scale (2.58×10⁻⁵ absolute), consistent with the density-tail floor; 2-D statics, no dynamical stability shown",
+      "links": [],
+      "in_doc_ledger": true
+    },
+    {
+      "id": "two-substance-kill-condition-b",
+      "family": "two-substance-vortex-vacuum",
+      "kind": "nature",
+      "status": "untested",
+      "claim": "**Kill condition B:** the coupled two-substance vacuum supports a single Maxwell photon sector (one speed, two transverse polarizations, no birefringence, no detectable frame, γ = 1 via flow drag)",
+      "evidence": "Stated as the theorem owed, with the Volovik Fermi-point theorem as the standard of proof ([studies/superfluid-vacuum-and-emergent-gauge-fields](../../studies/superfluid-vacuum-and-emergent-gauge-fields.md)). ORB-11219: the existing packet Hamiltonian is not a candidate — its linearized symbol is two longitudinal sounds plus frozen transverse currents; equal c₊=c₋ degenerates those cones without producing Maxwell polarizations ([packet-hamiltonian-linearization](packet-hamiltonian-linearization.md), [studies/maxwell-mode-content-and-two-fluid-acoustics](../../studies/maxwell-mode-content-and-two-fluid-acoustics.md)). The analytic attempt ([photon-mode-obstruction](photon-mode-obstruction.md)) also excludes speed matching and Josephson locking as sufficient Maxwell mechanisms in a regular isotropic phase-only action; locking attaches walls to relative-winding charge ([studies/two-component-phase-locking](../../studies/two-component-phase-locking.md)). These are failures of the stated scalar-density and phase-only apparatuses, not a no-go for every two-component order-parameter theory. The nature claim stays untested; additional gauge structure is outside the calculation. Binding measurements if a later sector fails: birefringence ξ < 1 × 10⁻¹⁶ (GRB 140206A), resonator anisotropy 10⁻¹⁷–10⁻¹⁸ per rest frame (×2 frames + relative flow), GRB dispersion, and the inherited ORB-10156 γ = 1 floor ([studies/lorentz-violation-bounds](../../studies/lorentz-violation-bounds.md))",
+      "links": [
+        "../../studies/superfluid-vacuum-and-emergent-gauge-fields.md",
+        "../../studies/lorentz-violation-bounds.md",
+        "../../studies/maxwell-mode-content-and-two-fluid-acoustics.md",
+        "photon-mode-obstruction.md",
+        "../../studies/two-component-phase-locking.md",
+        "packet-hamiltonian-linearization.md"
+      ],
+      "in_doc_ledger": true,
+      "tags": [
+        "existence"
+      ],
+      "kill": "Birefringence, two sound speeds, resonator anisotropy, or γ ≠ 1. Binding walls already measured if it fails."
+    },
+    {
+      "id": "two-substance-packet-linear-modes",
+      "family": "two-substance-vortex-vacuum",
+      "kind": "model-property",
+      "status": "supported",
+      "claim": "Linearized about a uniform rest background, the existing packet Hamiltonian and continuity/flux system has 2+2d first-order fields, four propagating longitudinal acoustic branches, and 2(d−1) transverse zero-frequency current modes; there is no Gauss constraint and no propagating transverse polarization. Equal c₊=c₋ degenerates the two longitudinal cones without converting either into a Maxwell polarization.",
+      "evidence": "**Validated apparatus result (ORB-11220, Orrery `73c9bd53e963e44bb365992c1df87a1077cc996f`, [two-substance-packet-linear-symbol](../../../orrery/lab/sims/two-substance-packet-linear-symbol/)):** the independent Fourier operator and actual discretized time evolution agree (maximum frequency relative error 6.58×10⁻⁵; minimum longitudinal projector 0.9999999999999997). Across the frozen U0/U1/U2/B0/T0 controls and refinements, it finds four longitudinal propagating roots, frozen transverse currents, and no Gauss constraint; equal-speed degeneracy is scalar, not Maxwell. This supports the stated property of this frozen apparatus only, not a no-go for a two-component order-parameter recast, and reopens no gravity wall.",
+      "links": [
+        "packet-hamiltonian-linearization.md",
+        "../../studies/maxwell-mode-content-and-two-fluid-acoustics.md",
+        "../../../orrery/lab/sims/two-substance-dynamical-packet/",
+        "../../../orrery/lab/sims/two-substance-packet-linear-symbol/"
+      ],
+      "in_doc_ledger": true,
+      "tags": [
+        "existence"
+      ],
+      "kill": "Cataloged orrery fixture two-substance-packet-linear-symbol finds two propagating transverse polarizations with ω=±c|k|, or a Gauss-type constraint that removes the longitudinal branches."
+    },
+    {
+      "id": "two-substance-packet-linear-local-only",
+      "family": "two-substance-vortex-vacuum",
+      "kind": "model-property",
+      "status": "supported",
+      "claim": "On the vacuum background the cubic λ n₊ n₋²/4 term is absent from the linearized principal symbol (λ=0 and λ≠0 agree). A small uniform background mixes the two scalar Hessian speeds. Those spectral conclusions are local; completing the square in n₊ leaves a negative quartic −λ² n₋⁴/(16 c₊²), so global Hamiltonian unboundedness is uncured for every λ≠0.",
+      "evidence": "**Validated apparatus result (ORB-11220, Orrery `73c9bd53e963e44bb365992c1df87a1077cc996f`, [two-substance-packet-linear-symbol](../../../orrery/lab/sims/two-substance-packet-linear-symbol/)):** frozen vacuum λ=0 and λ=0.8 spectra agree exactly; the B0 mixed-background squared speeds agree with evolution to 0.00319, inside the 0.02 rule; T0 remains frozen. X0 is rejected for an indefinite Hessian, and the report explicitly retains the exact negative-quartic global-unboundedness result rather than promoting B0 local stability to a cure.",
+      "links": [
+        "packet-hamiltonian-linearization.md",
+        "../../../orrery/lab/sims/two-substance-dynamical-packet/",
+        "../../../orrery/lab/sims/two-substance-packet-linear-symbol/"
+      ],
+      "in_doc_ledger": true,
+      "kill": "Cataloged fixture finds vacuum λ≠0 linear spectrum differing from λ=0, a propagating transverse restoring force, or a globally bounded energy density for the declared cubic Hamiltonian at λ≠0."
+    },
+    {
+      "id": "two-substance-packet-energy-hook",
+      "family": "two-substance-vortex-vacuum",
+      "kind": "hook",
+      "status": "mixed",
+      "claim": "A propagating relative-mode (n₋) packet carries a co-moving common-mode (δn₊) structure scaling with packet energy — the structural hook gravitating radiation requires (radiation gravitates with the ρ + 3p weighting, twice dust per unit energy: radiation-era cosmology — `conjecture — to verify`, studies note owed)",
+      "evidence": "**Hook, not a nature result; status remains mixed.** ORB-10940 and ORB-10941 ran ([two-substance-dynamical-packet](../../../orrery/lab/sims/two-substance-dynamical-packet/)). ORB-10941's coupling-off control found the largest common magnitude at λ=0 was 2.42×10⁻¹², below the declared 2.62×10⁻¹⁰ floor: the gate's kill did not fire, and `two-substance-packet-control` closes. At nonzero λ the common response is linear in the inserted coupling (λ exponents 0.99744–0.99984) and packet energy (energy exponents 0.999918/0.999495/0.998717). The representative structure is a **trailing wake, not an attached co-moving packet**: median late lag −0.84129 packet widths and common-profile speed 0.67265 versus 0.96959 for the relative packet; it passes the wake criterion and fails attachment, with G3 converged under both declared refinement arms. Thus the energy-scaling half is supported while the attached/co-moving half is refuted. This establishes that the declared λ n₊ n₋² coupling causes the wake; it does not derive λ, establish a nature-level gravity source or endogenous defect emission, cure the cubic Hamiltonian's global unboundedness, or reopen `two-substance-conserving-far-field`. The common monopole remains null, and radiation-era ρ+3p weighting remains `conjecture — to verify`.",
+      "links": [
+        "../../../orrery/lab/sims/two-substance-dynamical-packet/"
+      ],
+      "in_doc_ledger": true,
+      "kill": "A purely relative-mode packet with no E-scaling co-moving n₊, or λ remaining an underived coupling.",
+      "control": "ORB-10941 ran the Hamiltonian with λ = 0: the largest common magnitude was 2.42×10⁻¹², below the declared 2.62×10⁻¹⁰ numerical floor.",
+      "control_ran": true
+    },
+    {
+      "id": "two-substance-conserving-far-field",
+      "family": "two-substance-vortex-vacuum",
+      "kind": "nature",
+      "status": "refuted",
+      "claim": "The model derives gravity-as-scarcity as its effective far field (defect ensembles produce accumulated depletion ∝ 1/r; moving defects produce the scarcity wake)",
+      "evidence": "**Measured (ORB-10164, [two-substance-defect-gravity](../../../orrery/lab/sims/two-substance-defect-gravity/), orrery `712a814`, § lattice adjudications):** in a substance-conserving lattice the balanced defect's expelled halo cancels the signed monopole exactly (net deficit −2.0×10⁻¹⁴, 1.6×10⁻¹⁶ of the 122.88 void volume); the radii-36–44 signal is 3.95×10⁻⁷ of an uncompensated 1/r control the estimator resolves at relative RMSE 2.1×10⁻¹⁶. **Far-field sourcing from conservation-respecting voids is refuted at the mechanic level** — \"moving clump of void creates scarcity\" fails as stated; the parent's field requires a nonconserving sink or other net source, absent here (faraday's L-0005). Survives: the compact void structure (void-volume-controlled) and the *kinematic* wake (forced core drags a lagging wake, pattern/core velocity ratio 0.999997 at speed 0.30, lag 0.586 cells — motion imposed, no stability shown). What re-opens the row: paying the **source-law debt** (§ three-strike convergence)",
+      "links": [
+        "../../../orrery/lab/sims/two-substance-defect-gravity/"
+      ],
+      "in_doc_ledger": true
+    },
+    {
+      "id": "two-substance-proton-confined-triple",
+      "family": "two-substance-vortex-vacuum",
+      "kind": "nature",
+      "status": "conjecture",
+      "claim": "The proton as a confined composite of sub-integer vortices (fractional constituents, three to a proton — the confinement correspondence)",
+      "evidence": "Precedent exists (Babaev 2002 fractional-vortex confinement; BEC splitting of multiply-wound vortices — studies note), but why one polarity confines in triples while the other stays single is underived, and no quantitative correspondence to QCD is claimed",
+      "links": [],
+      "in_doc_ledger": true
+    },
+    {
+      "id": "two-substance-s2-fifth-force-charge",
+      "family": "two-substance-vortex-vacuum",
+      "kind": "nature",
+      "status": "refuted",
+      "claim": "**S2 disjunction, Branch A (charge-sourced):** a kpc-range S2 Yukawa sourced on S2 displacement or void volume, at galactic strength",
+      "evidence": "**Computed (§A1):** any countable sourcing carries Δ(q/m) ≈ 8.6 × 10⁻⁴ between MICROSCOPE's materials, so \\|α\\| ≈ 0.68 predicts η ~ 6 × 10⁻⁴ vs the measured 3 × 10⁻¹⁵ — dead by ~11 orders, the same blade as kill condition A ([studies/equivalence-principle-tests](../../studies/equivalence-principle-tests.md), [studies/fifth-force-searches](../../studies/fifth-force-searches.md))",
+      "links": [
+        "../../studies/equivalence-principle-tests.md",
+        "../../studies/fifth-force-searches.md"
+      ],
+      "in_doc_ledger": true
+    },
+    {
+      "id": "two-substance-s2-yukawa-light",
+      "family": "two-substance-vortex-vacuum",
+      "kind": "nature",
+      "status": "refuted",
+      "claim": "**Branch A (any sourcing):** a kpc-range Yukawa at galactic strength survives the solar-system light sector",
+      "evidence": "**Computed (§A3):** at ξ₂ ≫ AU ephemerides calibrate G(1+α)M while light propagates on GM (scalar mediator: conformal invariance; vector: uncharged photon) → γ_eff − 1 = −2α/(1+α); Cassini forces \\|α\\| ≤ 1.2 × 10⁻⁵ vs the required 0.68 — 4.8 orders. Massive-tensor escape: vDVZ γ = ½, equally dead ([studies/fifth-force-searches](../../studies/fifth-force-searches.md)). The parent's boost is exempt whatever carries it (the measured ORB-10157 headroom screening included) — it lives in σ, which light also reads on the river completion",
+      "links": [
+        "../../studies/fifth-force-searches.md"
+      ],
+      "in_doc_ledger": true
+    },
+    {
+      "id": "two-substance-s2-yukawa-shape",
+      "family": "two-substance-vortex-vacuum",
+      "kind": "nature",
+      "status": "mixed",
+      "claim": "Branch A β identification: a kpc Yukawa reproduces the fitted q(r) boost shape",
+      "evidence": "**Analytic (§A2):** rise-and-saturate matches only for α < 0 (Sanders form — a vector, in tension with the Eötvös-forced scalar/energy sourcing); matched in value and slope at R₀ (α ≈ −0.68, point-mass kernel), the shapes diverge 2–9% in v² across the band with asymptotes 1.57 vs 1.73 — decidable in principle. **Apparatus adjudication run (ORB-10167, [scarcity-rotation-curve-fit](../../../orrery/lab/sims/scarcity-rotation-curve-fit/), orrery `8990fd3`; parent § form and universality adjudication): not decidable on this band** — the free fit landed on the matched parameters (α = −0.679, ξ = 4.642 kpc), ΔAIC(scarcity − Yukawa) = −369.6 with all 27 profile variants preferring scarcity, but the bootstrap 95% [−503.9, +1051.9] spans zero: **shape-degenerate** per the predeclared rule. Moot for Branch A (dead); as a shape control on the parent it reports that the MW band never identified the boost's functional form",
+      "links": [
+        "../../../orrery/lab/sims/scarcity-rotation-curve-fit/"
+      ],
+      "in_doc_ledger": true
+    },
+    {
+      "id": "two-substance-s2-yukawa-solar-g",
+      "family": "two-substance-vortex-vacuum",
+      "kind": "derived",
+      "status": "supported",
+      "claim": "Branch A solar system: a kpc Yukawa is locally an exact G rescaling — the ORB-10097 Uranus tension dissolves on this branch",
+      "evidence": "**Computed (§A3):** fractional deviation from rescaled-G ≈ 3.3 × 10⁻¹⁶ at Uranus, ~10⁻⁷ of the multiplicative reading's near-floor signature; the discriminating observable is ORB-10097's own channel — a galactocentric-oriented Uranus residual present (multiplicative — since ORB-10157, conditioned on the fitted-boost identification; parent § superposition adjudication) vs absent (Yukawa)",
+      "links": [],
+      "in_doc_ledger": true
+    },
+    {
+      "id": "two-substance-fifth-force-no-clocks",
+      "family": "two-substance-vortex-vacuum",
+      "kind": "derived",
+      "status": "supported",
+      "claim": "A charge-coupled fifth force cannot source time dilation — clean clocks would have been Branch A's signature",
+      "evidence": "**Derived on measured anchors (§A6):** the EM precedent is exact; Galileo's eccentric-orbit test ties clock rate to the orbit-determined potential at 2.5 × 10⁻⁵ and null-redshift comparisons force species universality — a species-charged S2 potential breaks both ([studies/gravitational-time-dilation](../../studies/gravitational-time-dilation.md)). Recorded although the branch is dead",
+      "links": [
+        "../../studies/gravitational-time-dilation.md"
+      ],
+      "in_doc_ledger": true
+    },
+    {
+      "id": "two-substance-forced-metric-merger",
+      "family": "two-substance-vortex-vacuum",
+      "kind": "derived",
+      "status": "supported",
+      "claim": "**The forced merger:** the only Eötvös-, Cassini-, and clock-consistent S2 coupling is universal — i.e. metric",
+      "evidence": "**Derived (§A6, §B4):** composition-blind ⇒ sources on energy ⇒ rescales all rest energies alike ⇒ is a universal clock potential; Cassini ⇒ light must track the dynamical G ⇒ couples as the metric does. The disjunction resolves: S2 is the metric medium or nothing at kpc scale",
+      "links": [],
+      "in_doc_ledger": true
+    },
+    {
+      "id": "two-substance-density-set-c",
+      "family": "two-substance-vortex-vacuum",
+      "kind": "nature",
+      "status": "refuted",
+      "claim": "Branch B: time dilation from density-set propagation speed (the discussion's stated mechanism)",
+      "evidence": "**Computed (§B1, §B2):** a static index is one function for two potentials (the ORB-10156 disease, sign flipped), and density-dependence of the excitation speed is bounded at κ ≤ 4 × 10⁻¹⁴ by the GP-A profile (compressible fork). The delivering mechanism is flow drag (σ = ½v²/c², ORB-10159); density-set-c survives only as a bounded contaminant",
+      "links": [],
+      "in_doc_ledger": true
+    },
+    {
+      "id": "two-substance-s2-eos-clocks",
+      "family": "two-substance-vortex-vacuum",
+      "kind": "nature",
+      "status": "untested",
+      "claim": "Branch B: an S2 equation of state delivering exact Schwarzschild clock rates exists",
+      "evidence": "**Requirement computed (§B2):** incompressible fork owes the volumetric sink ∝ r^(−3/2) (ORB-10162 measured both natural counting rules failing; reconciliation is ORB-10165's scope); compressible fork forces n₂ ∝ r^(−3/2) with κ ≤ 4 × 10⁻¹⁴ (a GP condensate, κ = 1, is dead by 13 orders) and bulk response c_b ≲ 15 m/s against excitations at c — a ≥ 10⁷ two-speed hierarchy vs measured precedents of 10¹–10² ([studies/superfluid-vacuum-and-emergent-gauge-fields](../../studies/superfluid-vacuum-and-emergent-gauge-fields.md))",
+      "links": [
+        "../../studies/superfluid-vacuum-and-emergent-gauge-fields.md"
+      ],
+      "in_doc_ledger": true,
+      "tags": [
+        "existence"
+      ],
+      "kill": "No EOS meeting κ ≤ 4e-14 and a ≥ 10⁷ two-speed hierarchy; a GP condensate (κ=1) is already dead."
+    },
+    {
+      "id": "two-substance-astronomical-clocks",
+      "family": "two-substance-vortex-vacuum",
+      "kind": "nature",
+      "status": "supported",
+      "claim": "Branch B kill-or-live: galactic/astronomical clock data",
+      "evidence": "**Computed and confronted (§B3):** redshift ≡ dynamics-inferred potential (one field; residual leak ≤ 10⁻¹⁴), consistent with solar 638 ± 6 vs 633.1 m/s, S2/Sgr A* f = 1.04 ± 0.05, and cluster ~10 km/s; degenerate with GR+DM in every clock channel; the cluster rung disfavors the clean-clock alternative at ~2σ ([studies/gravitational-redshift-astronomical](../../studies/gravitational-redshift-astronomical.md))",
+      "links": [
+        "../../studies/gravitational-redshift-astronomical.md"
+      ],
+      "in_doc_ledger": true
+    },
+    {
+      "id": "two-substance-fixed-length-universality",
+      "family": "two-substance-vortex-vacuum",
+      "kind": "nature",
+      "status": "refuted",
+      "claim": "Fixed-length-scale universality across external galaxies (β for the parent's boost, ξ₂ for any Yukawa reading)",
+      "evidence": "**Measured (ORB-10169, [sparc-scarcity-universality](../../../orrery/lab/sims/sparc-scarcity-universality/), orrery `1ab8085`; adjudicated in the parent's § form and universality adjudication):** 149 SPARC galaxies / 3,150 points (Q ≤ 2, inclination ≥ 30°, uniform no-drift policy; tycho ORB-10168 lineage). Per-galaxy β_i beats global β = 5.526 kpc by **ΔAIC 51,723**; β_i tracks disk scale length (Spearman ρ = 0.343, p = 1.86×10⁻⁵); constant-β heterogeneity p underflows to zero; the same-policy global-a₀ MOND control reaches AIC 29,198 vs global scarcity's 106,619 — the discrepancy organizes by acceleration, the RAR exposure §A5 named ([studies/fifth-force-searches](../../studies/fifth-force-searches.md)). **The predeclared kill condition fired — the same verdict Sanders' fixed r₀ received.** Recorded beside it, unlaundered: global β sits 5% from the MW's 5.25 kpc. Caveats (spherical enclosed-mass surrogate over thin-disk curves; statistical-only errors — absolute χ² unacceptable for all models, MOND control included; no-drift policy differs from the MW apparatus; validation parquets reconstructed from the published tables) gate decisiveness, not the verdict",
+      "links": [
+        "../../../orrery/lab/sims/sparc-scarcity-universality/",
+        "../../studies/fifth-force-searches.md"
+      ],
+      "in_doc_ledger": true
+    },
+    {
+      "kind": "postulate",
+      "status": "mixed",
+      "in_doc_ledger": false,
+      "evidence": "Named postulate; lattice consistency is not a derivation.",
+      "links": [],
+      "named": "2026-08-21",
+      "expires": "2026-09-21",
+      "id": "postulate-lambda-coupling",
+      "family": "two-substance-vortex-vacuum",
+      "claim": "Relative and common modes couple by λ n₊ n₋²/4 in the Hamiltonian.",
+      "kill": "Run λ = 0 as control, or derive λ from two-substance mechanics."
+    },
+    {
+      "id": "two-substance-source-law-from-s2",
+      "family": "two-substance-vortex-vacuum",
+      "kind": "nature",
+      "status": "untested",
+      "claim": "Non-conservation of substance is derived from S2 dynamics, not inherited from the parent shear law.",
+      "evidence": "Source-law debt of this family. The parent's named shear law does not pay it (family split).",
+      "links": [],
+      "in_doc_ledger": false,
+      "kill": "Derive a law of non-conservation from S2, recast to one substance with a two-component order parameter, or concede the gravitational sector."
+    }
+  ]
+}

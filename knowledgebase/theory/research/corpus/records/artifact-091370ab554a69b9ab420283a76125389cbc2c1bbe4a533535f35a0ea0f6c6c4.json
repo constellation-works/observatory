@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Atheory%2Fmoving-sources-in-the-closed-system%2Fopen-questions.md",
+  "aliases": [
+    "source:principia:4e3b02c59b694d85016915177ef1ae157895ed7b:theory/moving-sources-in-the-closed-system/open-questions.md"
+  ],
+  "activity": "active",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "941871486659f43f89a2b10d1b275076317938c9",
+    "sha256": "sha256:9680cf089386d57471e913b1395043e1f93d48bd890189b7ebeb14c753ad55de",
+    "path": "theory/moving-sources-in-the-closed-system/open-questions.md",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Immutable archival source copy; upstream scientific ownership is unchanged."
+  ],
+  "missingness": [
+    "scope"
+  ],
+  "legacy": {
+    "source_pin": {
+      "repository": "principia",
+      "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "path": "theory/moving-sources-in-the-closed-system/open-questions.md",
+      "blob_oid": "941871486659f43f89a2b10d1b275076317938c9",
+      "sha256": "sha256:9680cf089386d57471e913b1395043e1f93d48bd890189b7ebeb14c753ad55de",
+      "bytes": 886,
+      "commit_metadata": "4e3b02c59b694d85016915177ef1ae157895ed7b\n2026-09-06T02:49:35+00:00\n2026-09-06T02:49:35+00:00\nfeat: Migrate the wide-binary control pilot into versioned scientific r… [ORB-11378]\n"
+    },
+    "text": "## Open questions\n\n**Family retired by Daniel on 2026-09-04.** The entries below are preserved as\nhistorical evidence or unanswered questions, not an active research queue.\nSee the [retirement decision](../gravity-as-scarcity/retirement.md).\n\nUnpaid items the program still carries. The program section keeps the full prose.\n\n- **Existence of a regular moving solution** — the live front (`closed-system-moving-existence`). No globally smooth non-cavitating settled flow is yet an excitation medium at solar-system winds.\n- **Cavitation floor** — the trough cavitates at U/v_GP = 0.3. Either a floor mechanism is missing from the shear law or the excitation reading dies around slowly moving masses.\n- **What is U locally** — still coupled to the galactic-carrier question; the sourced walls exist, the PPN reduction is algebra, the comparison awaits far-field slot coefficients.\n",
+    "commit_object": "tree 682cccb1cf19c89c2c5f4371c14ed2b384d2ae8c\nparent 13866b2848fbcce9a1f1ef2d4b97051a65f7e626\nauthor orbit[gpt-6-astra] <agent@orbit.invalid> 1788662975 +0000\ncommitter orbit <orbit@orbit.local> 1788662975 +0000\n\nfeat: Migrate the wide-binary control pilot into versioned scientific r… [ORB-11378]\n\nMigrate the wide-binary control pilot into versioned scientific records\n\nPlanned-By: codex\n"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "source",
+    "availability": "available",
+    "snapshot_digest": "sha256:9680cf089386d57471e913b1395043e1f93d48bd890189b7ebeb14c753ad55de",
+    "locator": null,
+    "media_type": "text/plain"
+  },
+  "revision_id": "sha256:091370ab554a69b9ab420283a76125389cbc2c1bbe4a533535f35a0ea0f6c6c4"
+}

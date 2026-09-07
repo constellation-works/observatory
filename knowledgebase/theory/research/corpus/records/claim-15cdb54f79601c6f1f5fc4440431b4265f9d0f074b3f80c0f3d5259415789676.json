@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "kind": "claim",
+  "id": "urn:research:principia:claim:ppn-half-order-hazard",
+  "aliases": [
+    "ppn-half-order-hazard"
+  ],
+  "activity": "retired",
+  "scope": "derivation",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "cf1add5f518795b48696ace5aae1ea01f6b094fe",
+    "sha256": "sha256:b258d05cb8d485f7930cd4898e3b3f45abd7485187030cf02e2752174d451291",
+    "path": "theory/ppn-reduction-of-the-settled-flow/claims.json",
+    "selector": "/claims/4",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Exact historical verdict and stated assumptions only; migration makes no new scientific inference."
+  ],
+  "missingness": [],
+  "legacy": {
+    "id": "ppn-half-order-hazard",
+    "family": "gravity-as-scarcity",
+    "kind": "derived",
+    "status": "supported",
+    "claim": "In the double expansion (ε = 2GM/c²r, ε_w = U/c) the moving metric keeps generic slot-surviving half-order terms at O(√ε·ε_w) — the u_GP·δv contraction in the lapse and its symmetric partner in the spatial stretch — whose linearized curvature is nonzero for a generic potential wake: no temporal shift or spatial coordinate choice removes them, so a generic settled wake is a super-PPN preferred-frame effect, parametrically larger than the α₁ class, and the model survives only if the realized wake cancels the contraction's far-field curvature",
+    "evidence": "The predeclared hazard of § order bookkeeping, now executed (ORB-11040 G5, [ppn-reduction-symbolic-checks](../../../orrery/lab/sims/ppn-reduction-symbolic-checks/)): every monomial of h₀₀/h₀ᵢ/h_ij through O(ε·ε_w) is classified gauge-removable or slot-surviving; the h₀ᵢ ladder gauges away exactly as the static half-order piece does (its surviving transverse parts are the two-piece obstruction, previous row), but h₀₀ and h_ij keep 2a·b-type terms at √ε·ε_w with an explicit curvature witness — potential base flow, potential wake, R₀ᵢ₀ⱼ = −diag(2, 4, 6) ≠ 0 — and the fixture records the verdict as a KILL for a generic wake, conditional on realized-wake cancellations. The realized-wake arbiter is already a measured object: the speed-field ŵ-dipole is the same 2 u_GP·δv contraction, and ORB-11041 finds it carrying slot-matching tails rather than cancellation — but that reading is shell-unstable, one-cell-core, and taken at trans-critical winds where the double expansion is not clean, so the half-order kill is armed, not fired. The larger-box, better-resolved-core rung owed on the slots row is also this row's arbiter",
+    "links": [
+      "../../../orrery/lab/sims/ppn-reduction-symbolic-checks/",
+      "../../../orrery/lab/sims/level-core-far-field-slot-coefficients/",
+      "../../studies/moving-source-gravity-bounds.md"
+    ],
+    "in_doc_ledger": true,
+    "tags": [
+      "preferred-frame"
+    ],
+    "comparator": "The PPN expansion in the universe rest frame has no half-integer-order metric terms; the mass-frame comparator is Schwarzschild GR (uniform U is gauge). A surviving √ε·ε_w slot term confronts the same α-walls (moving-source-gravity-bounds) it parametrically exceeds.",
+    "kill": "A shell-stable far-field extraction showing the realized wake's u_GP·δv contraction carries a non-cancelling curvature tail in physical normalization — the super-PPN term survives and the model dies against the α-walls at half order"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "claim",
+    "statement": "In the double expansion (ε = 2GM/c²r, ε_w = U/c) the moving metric keeps generic slot-surviving half-order terms at O(√ε·ε_w) — the u_GP·δv contraction in the lapse and its symmetric partner in the spatial stretch — whose linearized curvature is nonzero for a generic potential wake: no temporal shift or spatial coordinate choice removes them, so a generic settled wake is a super-PPN preferred-frame effect, parametrically larger than the α₁ class, and the model survives only if the realized wake cancels the contraction's far-field curvature",
+    "domain": "model"
+  },
+  "revision_id": "sha256:15cdb54f79601c6f1f5fc4440431b4265f9d0f074b3f80c0f3d5259415789676"
+}

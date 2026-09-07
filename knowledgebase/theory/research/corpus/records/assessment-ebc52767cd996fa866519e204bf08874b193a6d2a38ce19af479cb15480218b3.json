@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "kind": "assessment",
+  "id": "urn:research:principia:assessment:moving-source-legendre-not-laplace%3Alegacy-verdict",
+  "aliases": [
+    "moving-source-legendre-not-laplace:legacy-verdict"
+  ],
+  "activity": "unknown",
+  "scope": "derivation",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "f55e1dace027658053ccc8f5b740363237c0eda4",
+    "sha256": "sha256:34d8fd1300c47a5df5ea2300abe6ba3ac4e6c29d546f03686710d88e1297d681",
+    "path": "theory/moving-source-field-consistency/claims.json",
+    "selector": "/claims/0",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Exact historical verdict and stated assumptions only; migration makes no new scientific inference."
+  ],
+  "missingness": [
+    "exact-evidence-owner-references",
+    "independently-verified-controls",
+    "activity"
+  ],
+  "legacy": {
+    "id": "moving-source-legendre-not-laplace",
+    "family": "retarded-scarcity-wake",
+    "kind": "derived",
+    "status": "untested",
+    "claim": "For \\(\\lvert\\beta_g\\rvert<1\\), the delayed-center potential with \\(\\boldsymbol{\\Delta}(R)=-\\mathbf{w}R/c_g\\) has a convergent Legendre expansion whose angular shape is radius-independent and whose \\(n\\ge1\\) terms are forbidden by the standard exterior Laplace equation",
+    "evidence": "Closed-form derivation in § The delayed-center potential is not a Poisson-vacuum field; identity checked numerically to \\(10^{-8}\\), but the check is uncataloged and therefore not yet admissible under the house rule",
+    "links": [],
+    "in_doc_ledger": true,
+    "kill": "Catalog the negative-control fixture; algebra is done."
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "claim": {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:moving-source-legendre-not-laplace",
+      "revision_id": "sha256:2561c87812b0a41d7f70b45c038b6e795078a1beb1d9a02fdaa38984d2bbd819",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    "verdict": "untested",
+    "legacy_verdict": "untested",
+    "inference": "historical",
+    "basis": "legacy-report",
+    "controls": "unknown",
+    "rationale": "Closed-form derivation in § The delayed-center potential is not a Poisson-vacuum field; identity checked numerically to \\(10^{-8}\\), but the check is uncataloged and therefore not yet admissible under the house rule",
+    "evidence": []
+  },
+  "revision_id": "sha256:ebc52767cd996fa866519e204bf08874b193a6d2a38ce19af479cb15480218b3"
+}

@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "kind": "assessment",
+  "id": "urn:research:principia:assessment:swirl-is-classically-a-photon%3Alegacy-verdict",
+  "aliases": [
+    "swirl-is-classically-a-photon:legacy-verdict"
+  ],
+  "activity": "unknown",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "517472769edf9f0ecca05be56a593c9eb7966358",
+    "sha256": "sha256:5f3a6781773b00af68cd17925543b5f4ae589a8188a4cae350ae1552a3d25cb3",
+    "path": "theory/swirl-photon/claims.json",
+    "selector": "/claims/2",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Exact historical verdict and stated assumptions only; migration makes no new scientific inference."
+  ],
+  "missingness": [
+    "exact-evidence-owner-references",
+    "independently-verified-controls",
+    "activity",
+    "scope"
+  ],
+  "legacy": {
+    "id": "swirl-is-classically-a-photon",
+    "family": "swirl-photon",
+    "kind": "nature",
+    "status": "refuted",
+    "claim": "The swirl *is* a photon, classically",
+    "evidence": "a one-photon state has ⟨E⟩ = 0 everywhere, and Grangier–Roger–Aspect antibunching (1986) shows a single photon never triggers both beamsplitter outputs while self-interfering — needs a `../studies/` note to carry the citation properly",
+    "links": [],
+    "in_doc_ledger": true
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "claim": {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:swirl-is-classically-a-photon",
+      "revision_id": "sha256:08dc921273e7706d8f8985c93f844ebdf70bf30578baa5adb204f3a1439d6d23",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    "verdict": "refuted",
+    "legacy_verdict": "refuted",
+    "inference": "historical",
+    "basis": "legacy-report",
+    "controls": "unknown",
+    "rationale": "a one-photon state has ⟨E⟩ = 0 everywhere, and Grangier–Roger–Aspect antibunching (1986) shows a single photon never triggers both beamsplitter outputs while self-interfering — needs a `../studies/` note to carry the citation properly",
+    "evidence": []
+  },
+  "revision_id": "sha256:9f9c92f7e1f1d91a7e7c29e9516b75b7d3292634e8f9ae186fdb7ccaf8f43ff5"
+}

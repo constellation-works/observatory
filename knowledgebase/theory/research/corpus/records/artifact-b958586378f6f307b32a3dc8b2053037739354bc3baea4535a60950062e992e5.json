@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:principia:artifact:source%3Aorrery%3Aa1c430db54d585048ec85c4e7c47141db634f398%3Alab%2Fsims%2Flevel-coupled-shear-lattice%2Fassets%2Fresults.json",
+  "aliases": [
+    "source:orrery:a1c430db54d585048ec85c4e7c47141db634f398:lab/sims/level-coupled-shear-lattice/assets/results.json"
+  ],
+  "activity": "active",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": null,
+    "blob_oid": null,
+    "sha256": "sha256:9f37e9fc1e2a18ccfc9c1671f4c07a269ddcdbc66e2e8774774fc60b702b627a",
+    "path": "upstream-snapshot/orrery/a1c430db54d585048ec85c4e7c47141db634f398/lab/sims/level-coupled-shear-lattice/assets/results.json",
+    "selector": "$",
+    "historical": true,
+    "working_tree": true
+  },
+  "limitations": [
+    "Immutable archival source copy; upstream scientific ownership is unchanged."
+  ],
+  "missingness": [
+    "git-revision",
+    "owner-ingestion-git-pin",
+    "scope",
+    "upstream-canonical-record"
+  ],
+  "legacy": {
+    "source_pin": {
+      "repository": "orrery",
+      "git_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "path": "lab/sims/level-coupled-shear-lattice/assets/results.json",
+      "blob_oid": "d49903cc814cbe767b673d770147d64a04f0641f",
+      "sha256": "sha256:9f37e9fc1e2a18ccfc9c1671f4c07a269ddcdbc66e2e8774774fc60b702b627a",
+      "bytes": 4532,
+      "commit_metadata": "a1c430db54d585048ec85c4e7c47141db634f398\n2026-09-06T02:28:14+00:00\n2026-09-06T02:28:14+00:00\nfeat: Preserve the original electron animation's continuous fold in a c… [ORB-11374]\n"
+    },
+    "text": "{\n  \"apparatus\": {\n    \"ORB_10751_strain_consumption_3d_sha256\": \"aa1155e07536c3318c0afb0baabbbf472d66658046be4d21d816f135632c8461\",\n    \"constants\": {\n      \"G\": 1.0,\n      \"c_squared\": 1.0,\n      \"seed\": 42\n    },\n    \"consumption\": \"s = n * sqrt((3/2) * e_dev:e_dev), coefficient exactly 1; radial reduction s = n*abs(-du/dr + u/r)\",\n    \"field\": \"finite-volume core draws, or N individually counted unit-core draws for composition; discrete Gauss accumulation and inward level integration with isolated Robin outer face\",\n    \"outer_boundary\": \"finite representation of rest at infinity: sigma(R)=GM/R and u(R)=sqrt(2 c^2 sigma(R))\",\n    \"primary\": {\n      \"cfl\": 0.4,\n      \"fit_radii_in_core_units\": [\n        4.0,\n        32.0\n      ],\n      \"shells\": 192,\n      \"steady_tolerance\": 5e-07\n    },\n    \"rolling_rule\": \"material inertial update D_-u/Dt = -c^2 d(sigma)/dr, semi-Lagrangian backtrace; no diffusive/Fick transport\"\n  },\n  \"gate_results\": {\n    \"composition\": {\n      \"amplitude_vs_count_fit\": {\n        \"ci95_high\": 0.5000000000000021,\n        \"ci95_low\": 0.4999999999999943,\n        \"coefficient\": 1.4232050762432455,\n        \"decades\": 1.505149978319906,\n        \"exponent\": 0.4999999999999982,\n        \"samples\": 6,\n        \"standard_error\": 2.008766274113435e-15\n      },\n      \"count_decades\": 1.505149978319906,\n      \"verdict\": \"pass\"\n    },\n    \"convergence\": {\n      \"cfl_values\": [\n        0.4,\n        0.2\n      ],\n      \"finest_relative_amplitude_shift\": 0.003180631878259915,\n      \"resolution_amplitudes\": [\n        1.431268071512573,\n        1.4232050762432513,\n        1.4186927368988151\n      ],\n      \"shells\": [\n        96,\n        192,\n        384\n      ],\n      \"timestep_amplitudes\": [\n        1.4232050762432513,\n        1.4232050748273293\n      ],\n      \"timestep_relative_amplitude_shift\": 9.948826569839633e-10,\n      \"verdict\": \"pass\"\n    },\n    \"density\": {\n      \"amplitude_vs_core_radius_fit\": {\n        \"ci95_high\": 1.828512596426534e-14,\n        \"ci95_low\": -1.8328456565163757e-14,\n        \"coefficient\": 1.4232050762432407,\n        \"decades\": 0.6020599913279624,\n        \"exponent\": -2.166530044920847e-17,\n        \"samples\": 3,\n        \"standard_error\": 9.340199624854361e-15\n      },\n      \"flux_r_minus_3_over_2_revived\": false,\n      \"maximum_to_minimum_amplitude\": 1.0000000000000113,\n      \"verdict\": \"pass_level_closure\"\n    },\n    \"frozen_rule_silence\": {\n      \"criterion\": \"copied ORB-10751 stencil returns <1e-12 on isotropic Hubble flow\",\n      \"maximum_consumption_density\": 6.009258394948637e-18,\n      \"passed\": true\n    },\n    \"level\": {\n      \"amplitude_vs_level_fit\": {\n        \"ci95_high\": 0.5000000000000017,\n        \"ci95_low\": 0.4999999999999987,\n        \"coefficient\": 1.4108549436422815,\n        \"decades\": 3.0,\n        \"exponent\": 0.5000000000000002,\n        \"samples\": 4,\n        \"standard_error\": 7.537809229077693e-16\n      },\n      \"mass_decades\": 3.0,\n      \"maximum_absolute_closure_ratio_error\": 0.004744164000074935,\n      \"rest_perturbed_relative_amplitude_difference\": 2.43987458135748e-09,\n      \"verdict\": \"pass\"\n    }\n  },\n  \"limitations\": [\n    \"The apparatus is a spherical finite-volume reduction; the composition gate retains N unit draws and fixed packing density but coarse-grains cluster multipoles and cannot diagnose near-field core interactions.\",\n    \"The draw-sourced standing level is one-way coupled into momentum. Shear destruction evolves substrate density and tests steady continuity, but destroyed substrate does not alter the externally conserved draw count.\",\n    \"An isolated-monopole Robin face represents infinity on a finite domain. It supplies the rest-at-infinity energy reference but not a fitted exterior amplitude.\",\n    \"Uncertainty intervals are log-regression standard errors; the separate resolution and timestep gate quantifies numerical sensitivity and is not folded into those intervals.\",\n    \"This is an apparatus result only; principia theory documents are intentionally untouched.\"\n  ],\n  \"reproducibility\": {\n    \"byte_identical_in_memory_rerun_verified\": true,\n    \"command\": \"uv run lab/sims/level-coupled-shear-lattice/main.py --check-determinism\"\n  },\n  \"run_record\": \"runs/2026-08-21-seed-42.json\",\n  \"schema_version\": 1,\n  \"task\": \"ORB-10932\",\n  \"verdict\": {\n    \"all_predeclared_gates_passed\": true,\n    \"composition_gate\": \"pass\",\n    \"density_gate\": \"pass_level_closure\",\n    \"level_gate\": \"pass\",\n    \"theory_reconciliation\": \"deferred to kepler; principia is intentionally untouched\"\n  }\n}\n",
+    "commit_object": "tree 8d851030602405b11b7166108b09cf9cd5664329\nparent 148b668391f575466282eaa81aab0dc943846a87\nauthor orbit[gpt-6-astra] <agent@orbit.invalid> 1788661694 +0000\ncommitter orbit <orbit@orbit.local> 1788661694 +0000\n\nfeat: Preserve the original electron animation's continuous fold in a c… [ORB-11374]\n\nPreserve the original electron animation's continuous fold in a computed-field view\n\nPlanned-By: codex\n"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "source",
+    "availability": "available",
+    "snapshot_digest": "sha256:9f37e9fc1e2a18ccfc9c1671f4c07a269ddcdbc66e2e8774774fc60b702b627a",
+    "locator": null,
+    "media_type": "application/json"
+  },
+  "revision_id": "sha256:b958586378f6f307b32a3dc8b2053037739354bc3baea4535a60950062e992e5"
+}

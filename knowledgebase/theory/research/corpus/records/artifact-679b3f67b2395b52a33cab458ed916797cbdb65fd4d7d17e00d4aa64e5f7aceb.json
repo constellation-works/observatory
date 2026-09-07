@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Atheory%2Fgravity-as-scarcity%2Fretirement.md",
+  "aliases": [
+    "source:principia:4e3b02c59b694d85016915177ef1ae157895ed7b:theory/gravity-as-scarcity/retirement.md"
+  ],
+  "activity": "active",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "4664c494d2a5766d1102d3cc13a9f404f9a164a6",
+    "sha256": "sha256:2f768310a913fef65252eb51c4337c8f5fd43340219f348a8a33544271cdb3f0",
+    "path": "theory/gravity-as-scarcity/retirement.md",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Immutable archival source copy; upstream scientific ownership is unchanged."
+  ],
+  "missingness": [
+    "scope"
+  ],
+  "legacy": {
+    "source_pin": {
+      "repository": "principia",
+      "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "path": "theory/gravity-as-scarcity/retirement.md",
+      "blob_oid": "4664c494d2a5766d1102d3cc13a9f404f9a164a6",
+      "sha256": "sha256:2f768310a913fef65252eb51c4337c8f5fd43340219f348a8a33544271cdb3f0",
+      "bytes": 2577,
+      "commit_metadata": "4e3b02c59b694d85016915177ef1ae157895ed7b\n2026-09-06T02:49:35+00:00\n2026-09-06T02:49:35+00:00\nfeat: Migrate the wide-binary control pilot into versioned scientific r… [ORB-11378]\n"
+    },
+    "text": "# Gravity-as-scarcity family retirement\n\n**Decision: Daniel, 2026-09-04.** “Let's retire the family of this theory.”\n\nThe research family is retired, including its remaining flow-based completion.\nThis supersedes every earlier live-front declaration and proposed next step in:\n\n- [Gravity as scarcity](README.md)\n- [Shear-sourced consumption](../shear-sourced-consumption/README.md)\n- [Moving sources in the closed system](../moving-sources-in-the-closed-system/README.md)\n- [PPN reduction of the settled flow](../ppn-reduction-of-the-settled-flow/README.md)\n\n## Reason and evidence boundary\n\nThe original static light and clock sectors and fixed-length galactic universality\nfailed their recorded tests. The named shear-flow completion produced conditional\nstatic successes, but its moving-source dynamics violated the proposed Bernoulli\nclosure and developed a cutoff-ward density trough in the tested regime. The\nremaining program required further mechanisms to establish a viable excitation medium.\nDaniel chose to end that program rather than pursue another repair.\n\nThis is a research-allocation decision informed by those results, not a universal\nimpossibility theorem for emergent gravity. Supported model properties remain supported;\nrefuted claims remain refuted; unresolved claims are not relabeled as disproven.\nThe static closure, algebraic PPN correspondences, negative results, studies, and\ncataloged Orrery simulations remain available as historical evidence.\n\n## Operational consequence\n\nThe `closed-system-moving-existence` gate is closed by retirement. There is no further\ncavitation-floor repair, far-field refinement, PPN phenomenology, excitation completion,\nor galaxy-fit continuation authorized for this family. Open-question lists are archival.\nReopening this family or commissioning a successor intended to continue its program\nrequires Daniel's explicit authorization.\n\nThe authoritative Orbit MCP reported no tasks in proposed, backlog, someday,\nin-progress, review, or blocked status in `ws_principia` or `ws_orrery` during this\nretirement check. No task cancellation was needed. This records the remote work queues;\nthe corpus changes were prepared in the local Principia checkout.\n\nThe separately registered `two-substance-vortex-vacuum` and `retarded-scarcity-wake`\nfamilies are outside this retirement's scope. They cannot use a scarcity-family debt\nor historical continuation note to reopen the retired program. The two-substance\nphoton question remains independent; it does not inherit a viable scarcity gravity\nsector from this archive.\n",
+    "commit_object": "tree 682cccb1cf19c89c2c5f4371c14ed2b384d2ae8c\nparent 13866b2848fbcce9a1f1ef2d4b97051a65f7e626\nauthor orbit[gpt-6-astra] <agent@orbit.invalid> 1788662975 +0000\ncommitter orbit <orbit@orbit.local> 1788662975 +0000\n\nfeat: Migrate the wide-binary control pilot into versioned scientific r… [ORB-11378]\n\nMigrate the wide-binary control pilot into versioned scientific records\n\nPlanned-By: codex\n"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "source",
+    "availability": "available",
+    "snapshot_digest": "sha256:2f768310a913fef65252eb51c4337c8f5fd43340219f348a8a33544271cdb3f0",
+    "locator": null,
+    "media_type": "text/plain"
+  },
+  "revision_id": "sha256:679b3f67b2395b52a33cab458ed916797cbdb65fd4d7d17e00d4aa64e5f7aceb"
+}

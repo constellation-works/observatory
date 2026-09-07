@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:principia:artifact:source%3Aorrery%3Aa1c430db54d585048ec85c4e7c47141db634f398%3Alab%2Fsims%2Flevel-core-two-core-superposition%2FREADME.md",
+  "aliases": [
+    "source:orrery:a1c430db54d585048ec85c4e7c47141db634f398:lab/sims/level-core-two-core-superposition/README.md"
+  ],
+  "activity": "active",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": null,
+    "blob_oid": null,
+    "sha256": "sha256:bb78375f0a3d2d9dfddd77d7d23b371cbc679e494057ba37dd0b8e2ec75dadf5",
+    "path": "upstream-snapshot/orrery/a1c430db54d585048ec85c4e7c47141db634f398/lab/sims/level-core-two-core-superposition/README.md",
+    "selector": "$",
+    "historical": true,
+    "working_tree": true
+  },
+  "limitations": [
+    "Immutable archival source copy; upstream scientific ownership is unchanged."
+  ],
+  "missingness": [
+    "git-revision",
+    "owner-ingestion-git-pin",
+    "scope",
+    "upstream-canonical-record"
+  ],
+  "legacy": {
+    "source_pin": {
+      "repository": "orrery",
+      "git_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "path": "lab/sims/level-core-two-core-superposition/README.md",
+      "blob_oid": "d23801cbec08ebdfbc340f3dd397cbf40dd6b72e",
+      "sha256": "sha256:bb78375f0a3d2d9dfddd77d7d23b371cbc679e494057ba37dd0b8e2ec75dadf5",
+      "bytes": 2715,
+      "commit_metadata": "a1c430db54d585048ec85c4e7c47141db634f398\n2026-09-06T02:28:14+00:00\n2026-09-06T02:28:14+00:00\nfeat: Preserve the original electron animation's continuous fold in a c… [ORB-11374]\n"
+    },
+    "text": "# Level-core two-core superposition\n\nThis deterministic full 3-D apparatus tests the last superposition prediction\nof the level-matching closure. Two fixed-width Gaussian draw cores source a\nstanding level through a discrete Poisson solve with an isolated outer face.\nThe cores impose no velocity or flux boundary. Literal shared-capacity counting\nstores the level as `sigma = 1-exp(-H)`, and paired background subtraction\nisolates the target core's modulation.\n\nRun:\n\n```sh\nUV_CACHE_DIR=/tmp/orbit-uv-cache-10934 uv run lab/sims/level-core-two-core-superposition/main.py --check-determinism\n```\n\nThe command writes `assets/results.json` and\n`runs/2026-08-21-seed-42.json`. It executes the experiment twice in memory and\nrequires byte-identical JSON encodings.\n\n## Apparatus decision\n\nThe sim extends ORB-10932's draw-sourced level coupling to a genuinely\nnonspherical 3-D field. This avoids carrying ORB-10755's fixed-flux core\nboundary into the discriminator. The tradeoff is the same one-way coupling as\nORB-10932: the frozen shear rule diagnoses destruction of transported\nsubstrate, while externally conserved core draws continue to source the\nstanding level.\n\nThe 25^3 -> 41^3 -> 65^3 ladder keeps the 24-unit box, 0.75-unit Gaussian core\nwidth, core positions, draws, and physical 2--6 exterior measurement annulus\nfixed. The wider window suppresses the finite-width core's near-field shape\nwithout entering the outer boundary layer.\nEvery rung is interpolated in log(D)-log(A) onto the same eleven-point\ndepletion grid before fitting. A fixed-draw separation control repeats the\nfinest measurement at separations 6, 8, and 10.\n\n## Predeclared results\n\nThe machine-readable artifacts are authoritative. The family gate compares:\n\n- free headroom `A=(1-D)^p`;\n- free flux form `A=1/(1+c D^beta)`;\n- fixed ORB-10157 headroom `A=(1-D)^1.071`.\n\nA family is decisive when its log-RMSE is at least three times smaller than\nthe competing free family. The recorded verdict is `confirmed`: the free\nheadroom form decisively beats the flux form, its resolution shifts shrink,\nand the continuum-extrapolated `p` is consistent with 1.071 within the\ncombined apparatus error. The finest small-D derivative stays bounded and the\nfar-field level fits pass `A_pair^2 = A_1^2 + A_2^2`. The dated run record also\ncontains the full log-RMSE table, every fitted parameter and uncertainty,\nresolution samples, separation measurements, and gate criteria.\n\nThe copied coefficient-one `strain_consumption_3d` function hashes to\n`aa1155e07536c3318c0afb0baabbbf472d66658046be4d21d816f135632c8461`,\nbyte-identical to ORB-10751 and ORB-10932. Theory reconciliation is deliberately\ndeferred to Kepler; this task does not edit principia.\n",
+    "commit_object": "tree 8d851030602405b11b7166108b09cf9cd5664329\nparent 148b668391f575466282eaa81aab0dc943846a87\nauthor orbit[gpt-6-astra] <agent@orbit.invalid> 1788661694 +0000\ncommitter orbit <orbit@orbit.local> 1788661694 +0000\n\nfeat: Preserve the original electron animation's continuous fold in a c… [ORB-11374]\n\nPreserve the original electron animation's continuous fold in a computed-field view\n\nPlanned-By: codex\n"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "source",
+    "availability": "available",
+    "snapshot_digest": "sha256:bb78375f0a3d2d9dfddd77d7d23b371cbc679e494057ba37dd0b8e2ec75dadf5",
+    "locator": null,
+    "media_type": "text/plain"
+  },
+  "revision_id": "sha256:ee1344d6d88a96adc16bf6d3c3c8cd6cfe9e370fced6df132ff2495c6b655e7d"
+}

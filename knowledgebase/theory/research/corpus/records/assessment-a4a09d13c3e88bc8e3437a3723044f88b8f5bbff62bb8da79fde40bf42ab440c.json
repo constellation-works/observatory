@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "kind": "assessment",
+  "id": "urn:research:principia:assessment:two-substance-neutron-balanced-defect%3Alegacy-verdict",
+  "aliases": [
+    "two-substance-neutron-balanced-defect:legacy-verdict"
+  ],
+  "activity": "unknown",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "94e76368a84e00ed742153d77b3d25dd5962c664",
+    "sha256": "sha256:c95d48cf673efa43d6d77005c73cadea42fac1ff00da556a7b7fd260df14f9a6",
+    "path": "theory/two-substance-vortex-vacuum/claims.json",
+    "selector": "/claims/7",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Exact historical verdict and stated assumptions only; migration makes no new scientific inference."
+  ],
+  "missingness": [
+    "exact-evidence-owner-references",
+    "independently-verified-controls",
+    "activity",
+    "scope"
+  ],
+  "legacy": {
+    "id": "two-substance-neutron-balanced-defect",
+    "family": "two-substance-vortex-vacuum",
+    "kind": "nature",
+    "status": "mixed",
+    "claim": "The neutron as elementary balanced defect (1,1): decay, capture, annihilation-selection, and proton-stability bookkeeping all consistent",
+    "evidence": "Worked (§(d) above): n → p + e⁻ winding-conserving; electron capture allowed; hydrogen annihilation forbidden; proton ≠ positron topologically (w₂ as baryon number). Owed: spin-½/statistics, magnetic moment, the neutrino slot. The composite-neutron alternative is independently dead (N-14 Bose statistics — studies note). Neutrality of the balanced defect: **measured (ORB-10163, § lattice adjudications)** — zero relative-phase charge with a retained 0.584 void fraction and a far-force residual of 1.88×10⁻⁴ of the charged-pair scale (2.58×10⁻⁵ absolute), consistent with the density-tail floor; 2-D statics, no dynamical stability shown",
+    "links": [],
+    "in_doc_ledger": true
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "claim": {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:two-substance-neutron-balanced-defect",
+      "revision_id": "sha256:02a0ed0c6cbeb40b2d09667e070d3b44d8584a07ed163b92b9b10a0523e15983",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    "verdict": "inconclusive",
+    "legacy_verdict": "mixed",
+    "inference": "historical",
+    "basis": "legacy-report",
+    "controls": "unknown",
+    "rationale": "Worked (§(d) above): n → p + e⁻ winding-conserving; electron capture allowed; hydrogen annihilation forbidden; proton ≠ positron topologically (w₂ as baryon number). Owed: spin-½/statistics, magnetic moment, the neutrino slot. The composite-neutron alternative is independently dead (N-14 Bose statistics — studies note). Neutrality of the balanced defect: **measured (ORB-10163, § lattice adjudications)** — zero relative-phase charge with a retained 0.584 void fraction and a far-force residual of 1.88×10⁻⁴ of the charged-pair scale (2.58×10⁻⁵ absolute), consistent with the density-tail floor; 2-D statics, no dynamical stability shown",
+    "evidence": []
+  },
+  "revision_id": "sha256:a4a09d13c3e88bc8e3437a3723044f88b8f5bbff62bb8da79fde40bf42ab440c"
+}

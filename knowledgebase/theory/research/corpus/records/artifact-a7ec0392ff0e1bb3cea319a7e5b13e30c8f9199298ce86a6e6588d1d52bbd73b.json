@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:principia:artifact:source%3Aorrery%3Aa1c430db54d585048ec85c4e7c47141db634f398%3Alab%2Fsims%2Flattice-two-source-superposition%2Fassets%2Fresults.json",
+  "aliases": [
+    "source:orrery:a1c430db54d585048ec85c4e7c47141db634f398:lab/sims/lattice-two-source-superposition/assets/results.json"
+  ],
+  "activity": "active",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": null,
+    "blob_oid": null,
+    "sha256": "sha256:83414e0ef59992da38f9d111bd3bf24633cfad9eedeae3fca974e08e6f1dbef6",
+    "path": "upstream-snapshot/orrery/a1c430db54d585048ec85c4e7c47141db634f398/lab/sims/lattice-two-source-superposition/assets/results.json",
+    "selector": "$",
+    "historical": true,
+    "working_tree": true
+  },
+  "limitations": [
+    "Immutable archival source copy; upstream scientific ownership is unchanged."
+  ],
+  "missingness": [
+    "git-revision",
+    "owner-ingestion-git-pin",
+    "scope",
+    "upstream-canonical-record"
+  ],
+  "legacy": {
+    "source_pin": {
+      "repository": "orrery",
+      "git_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "path": "lab/sims/lattice-two-source-superposition/assets/results.json",
+      "blob_oid": "46bf6bb5f347f6ab7efc11861e2e25c9828052b7",
+      "sha256": "sha256:83414e0ef59992da38f9d111bd3bf24633cfad9eedeae3fca974e08e6f1dbef6",
+      "bytes": 7414,
+      "commit_metadata": "a1c430db54d585048ec85c4e7c47141db634f398\n2026-09-06T02:28:14+00:00\n2026-09-06T02:28:14+00:00\nfeat: Preserve the original electron animation's continuous fold in a c… [ORB-11374]\n"
+    },
+    "text": "{\n  \"apparatus\": {\n    \"ambient_depletions\": [\n      0.0,\n      0.01,\n      0.03,\n      0.1,\n      0.2,\n      0.4,\n      0.6,\n      0.8,\n      0.9,\n      0.96,\n      0.985,\n      0.995\n    ],\n    \"background_source\": \"uniform disk of radius 0.31 times lattice width\",\n    \"boundary\": \"zero exposure (full reservoir) on outermost cells\",\n    \"cell_capacity\": 50000,\n    \"compact_peak_exposure\": 0.1,\n    \"compact_source\": \"one central lattice cell\",\n    \"primary_size\": 129,\n    \"replicates\": 32\n  },\n  \"microscopic_rule\": \"Each cell has a finite set of anonymous occupied slots; background hits act first and compact-source hits can clear only surviving slots.\",\n  \"primary\": {\n    \"candidate_comparison\": {\n      \"fitted-headroom-power\": {\n        \"log_rmse_through_90_percent\": 0.0030826466042751717\n      },\n      \"independence\": {\n        \"log_rmse_through_90_percent\": 1.0740363046602777\n      },\n      \"multiplicative-enhancement\": {\n        \"log_rmse_through_90_percent\": 2.0770652791489526\n      },\n      \"screening-headroom\": {\n        \"log_rmse_through_90_percent\": 0.07106765828640653\n      }\n    },\n    \"fit_radius_cells\": [\n      4,\n      18\n    ],\n    \"fitted_modulation\": {\n      \"alpha\": 1.0707862091828242,\n      \"fit_depletion_range\": [\n        0.01,\n        0.9\n      ],\n      \"form\": \"A(D) = (1-D)^alpha, constrained to A(0)=1\"\n    },\n    \"size\": 129,\n    \"sweep\": [\n      {\n        \"ambient_depletion\": 0.0,\n        \"ambient_headroom\": 1.0,\n        \"delivered_compact_sink_fraction\": 1.0,\n        \"expected_field_amplitude\": 1.0,\n        \"field_over_headroom\": 1.0,\n        \"measured_field_amplitude\": 0.9974112602137901,\n        \"measured_standard_error\": 0.0014522703314264784,\n        \"measurement_z_from_expectation\": -1.7825467684567495\n      },\n      {\n        \"ambient_depletion\": 0.01,\n        \"ambient_headroom\": 0.99,\n        \"delivered_compact_sink_fraction\": 0.9933926834411728,\n        \"expected_field_amplitude\": 0.9893956717494555,\n        \"field_over_headroom\": 0.9993895674236924,\n        \"measured_field_amplitude\": 0.9894049135812233,\n        \"measured_standard_error\": 0.0014449428448674577,\n        \"measurement_z_from_expectation\": 0.006395984312173042\n      },\n      {\n        \"ambient_depletion\": 0.03,\n        \"ambient_headroom\": 0.97,\n        \"delivered_compact_sink_fraction\": 0.9801320387958807,\n        \"expected_field_amplitude\": 0.9682038851486663,\n        \"field_over_headroom\": 0.9981483352048106,\n        \"measured_field_amplitude\": 0.970653509084304,\n        \"measured_standard_error\": 0.0018173501052851596,\n        \"measurement_z_from_expectation\": 1.3479097552606003\n      },\n      {\n        \"ambient_depletion\": 0.1,\n        \"ambient_headroom\": 0.9,\n        \"delivered_compact_sink_fraction\": 0.9332121219713474,\n        \"expected_field_amplitude\": 0.8942165828792158,\n        \"field_over_headroom\": 0.9935739809769064,\n        \"measured_field_amplitude\": 0.8932725954512601,\n        \"measured_standard_error\": 0.0014399555949250898,\n        \"measurement_z_from_expectation\": -0.6555670405966644\n      },\n      {\n        \"ambient_depletion\": 0.2,\n        \"ambient_headroom\": 0.8,\n        \"delivered_compact_sink_fraction\": 0.8646697541390626,\n        \"expected_field_amplitude\": 0.7890559952856202,\n        \"field_over_headroom\": 0.9863199941070252,\n        \"measured_field_amplitude\": 0.7876939143510452,\n        \"measured_standard_error\": 0.0015204386864501667,\n        \"measurement_z_from_expectation\": -0.8958473279544898\n      },\n      {\n        \"ambient_depletion\": 0.4,\n        \"ambient_headroom\": 0.6,\n        \"delivered_compact_sink_fraction\": 0.7209072245999454,\n        \"expected_field_amplitude\": 0.5809710895445436,\n        \"field_over_headroom\": 0.968285149240906,\n        \"measured_field_amplitude\": 0.5817912783702248,\n        \"measured_standard_error\": 0.001270831474680975,\n        \"measurement_z_from_expectation\": 0.6453954297025437\n      },\n      {\n        \"ambient_depletion\": 0.6,\n        \"ambient_headroom\": 0.4,\n        \"delivered_compact_sink_fraction\": 0.5641804650469522,\n        \"expected_field_amplitude\": 0.3768328791767308,\n        \"field_over_headroom\": 0.942082197941827,\n        \"measured_field_amplitude\": 0.3776985204531792,\n        \"measured_standard_error\": 0.0010466282216060284,\n        \"measurement_z_from_expectation\": 0.8270761848176466\n      },\n      {\n        \"ambient_depletion\": 0.8,\n        \"ambient_headroom\": 0.19999999999999996,\n        \"delivered_compact_sink_fraction\": 0.38283155689584925,\n        \"expected_field_amplitude\": 0.17901326180634375,\n        \"field_over_headroom\": 0.8950663090317189,\n        \"measured_field_amplitude\": 0.17725577354762856,\n        \"measured_standard_error\": 0.0007609785327716513,\n        \"measurement_z_from_expectation\": -2.309510955997708\n      },\n      {\n        \"ambient_depletion\": 0.9,\n        \"ambient_headroom\": 0.09999999999999998,\n        \"delivered_compact_sink_fraction\": 0.2703696499812733,\n        \"expected_field_amplitude\": 0.0845080672540119,\n        \"field_over_headroom\": 0.8450806725401192,\n        \"measured_field_amplitude\": 0.0852004708955114,\n        \"measured_standard_error\": 0.0006145300561886281,\n        \"measurement_z_from_expectation\": 1.126720547720402\n      },\n      {\n        \"ambient_depletion\": 0.96,\n        \"ambient_headroom\": 0.040000000000000036,\n        \"delivered_compact_sink_fraction\": 0.18110596163152892,\n        \"expected_field_amplitude\": 0.0309637497539471,\n        \"field_over_headroom\": 0.7740937438486768,\n        \"measured_field_amplitude\": 0.030766599292507517,\n        \"measured_standard_error\": 0.0003365264141847481,\n        \"measurement_z_from_expectation\": -0.5858394857865505\n      },\n      {\n        \"ambient_depletion\": 0.985,\n        \"ambient_headroom\": 0.015000000000000013,\n        \"delivered_compact_sink_fraction\": 0.12608425563339826,\n        \"expected_field_amplitude\": 0.010370529733101168,\n        \"field_over_headroom\": 0.6913686488734107,\n        \"measured_field_amplitude\": 0.010016164410734583,\n        \"measured_standard_error\": 0.00023231940903947968,\n        \"measurement_z_from_expectation\": -1.5253367070435582\n      },\n      {\n        \"ambient_depletion\": 0.995,\n        \"ambient_headroom\": 0.0050000000000000044,\n        \"delivered_compact_sink_fraction\": 0.08990939718916294,\n        \"expected_field_amplitude\": 0.002947937931700396,\n        \"field_over_headroom\": 0.5895875863400787,\n        \"measured_field_amplitude\": 0.0029017731143126425,\n        \"measured_standard_error\": 0.00010449758099819266,\n        \"measurement_z_from_expectation\": -0.44177881388997764\n      }\n    ]\n  },\n  \"question\": \"Does ambient depletion enhance, leave unchanged, or screen an embedded compact source's stored-scarcity gradient?\",\n  \"resolution_checks\": [\n    {\n      \"alpha\": 1.072500951604002,\n      \"max_absolute_amplitude_difference_from_primary\": 0.00044364629855425664,\n      \"size\": 97\n    },\n    {\n      \"alpha\": 1.0699852851259712,\n      \"max_absolute_amplitude_difference_from_primary\": 0.00020552464716444563,\n      \"size\": 161\n    }\n  ],\n  \"schema_version\": 1,\n  \"seed\": 42,\n  \"verdict\": {\n    \"apparatus_level\": \"screening, followed by saturation; no multiplicative enhancement\",\n    \"scope\": \"This verdict follows from anonymous fixed-coupling depletion attempts on a shared finite count. A microscopic rule that changes attempt rate with occupancy would be a different model.\"\n  }\n}\n",
+    "commit_object": "tree 8d851030602405b11b7166108b09cf9cd5664329\nparent 148b668391f575466282eaa81aab0dc943846a87\nauthor orbit[gpt-6-astra] <agent@orbit.invalid> 1788661694 +0000\ncommitter orbit <orbit@orbit.local> 1788661694 +0000\n\nfeat: Preserve the original electron animation's continuous fold in a c… [ORB-11374]\n\nPreserve the original electron animation's continuous fold in a computed-field view\n\nPlanned-By: codex\n"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "source",
+    "availability": "available",
+    "snapshot_digest": "sha256:83414e0ef59992da38f9d111bd3bf24633cfad9eedeae3fca974e08e6f1dbef6",
+    "locator": null,
+    "media_type": "application/json"
+  },
+  "revision_id": "sha256:a7ec0392ff0e1bb3cea319a7e5b13e30c8f9199298ce86a6e6588d1d52bbd73b"
+}

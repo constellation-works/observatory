@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Atheory%2Ftwo-substance-vortex-vacuum%2Frelation-to-gravity-as-scarcity.md",
+  "aliases": [
+    "source:principia:4e3b02c59b694d85016915177ef1ae157895ed7b:theory/two-substance-vortex-vacuum/relation-to-gravity-as-scarcity.md"
+  ],
+  "activity": "active",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "0637b553e046311fbb15d1d1fe678255acefe0d3",
+    "sha256": "sha256:f337797e5a4dd28761ef8b9902f21d26f0073eb00928537bd618afb0d99f1b91",
+    "path": "theory/two-substance-vortex-vacuum/relation-to-gravity-as-scarcity.md",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Immutable archival source copy; upstream scientific ownership is unchanged."
+  ],
+  "missingness": [
+    "scope"
+  ],
+  "legacy": {
+    "source_pin": {
+      "repository": "principia",
+      "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "path": "theory/two-substance-vortex-vacuum/relation-to-gravity-as-scarcity.md",
+      "blob_oid": "0637b553e046311fbb15d1d1fe678255acefe0d3",
+      "sha256": "sha256:f337797e5a4dd28761ef8b9902f21d26f0073eb00928537bd618afb0d99f1b91",
+      "bytes": 1341,
+      "commit_metadata": "4e3b02c59b694d85016915177ef1ae157895ed7b\n2026-09-06T02:49:35+00:00\n2026-09-06T02:49:35+00:00\nfeat: Migrate the wide-binary control pilot into versioned scientific r… [ORB-11378]\n"
+    },
+    "text": "## Relation to gravity-as-scarcity\n\n- **Derivation target:** this model must produce the parent's verified far field —\n  accumulated depletion ∝ 1/r around a defect ensemble — as its effective description, and\n  the parent's fitted galactic β-boost would then be a property of substrate headroom this\n  model has to either derive or discard. **ORB-10164 has run: negative** — the conserving\n  substrate produces no far field of any profile (the wake survives as kinematics only),\n  so the derivation target is unreachable until the source-law debt is paid (§ lattice\n  adjudications).\n- **Inherited refutations as constraints:** the ORB-10156 photon-sector refutation of the\n  static parent is a floor (kill condition B must clear it via flow drag, not repeat it);\n  the ORB-10159 rest-frame constraints apply doubled; the ORB-10159 river branch is the\n  *only* gravitational completion this model's kill condition A leaves standing — the two\n  docs' surviving branches coincide.\n- **Verdict independence:** nothing in this doc moves the parent's ledger; the parent\n  gains only a candidate-microphysics pointer. Evidence flows through orrery sims, per the\n  house rules.\n- The S2-as-fifth-force/S2-as-metric disjunction from the same discussion thread is derived\n  and resolved in § \"The S2 disjunction\" below (**ORB-10161**).\n",
+    "commit_object": "tree 682cccb1cf19c89c2c5f4371c14ed2b384d2ae8c\nparent 13866b2848fbcce9a1f1ef2d4b97051a65f7e626\nauthor orbit[gpt-6-astra] <agent@orbit.invalid> 1788662975 +0000\ncommitter orbit <orbit@orbit.local> 1788662975 +0000\n\nfeat: Migrate the wide-binary control pilot into versioned scientific r… [ORB-11378]\n\nMigrate the wide-binary control pilot into versioned scientific records\n\nPlanned-By: codex\n"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "source",
+    "availability": "available",
+    "snapshot_digest": "sha256:f337797e5a4dd28761ef8b9902f21d26f0073eb00928537bd618afb0d99f1b91",
+    "locator": null,
+    "media_type": "text/plain"
+  },
+  "revision_id": "sha256:0892e5fb22dc34eb068d5bd85d0a068c7fefda9eb4df699fa5c7547ac1dbbc5f"
+}

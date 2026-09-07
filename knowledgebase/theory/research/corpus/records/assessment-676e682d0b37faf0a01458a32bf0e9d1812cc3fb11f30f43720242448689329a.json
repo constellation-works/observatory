@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "kind": "assessment",
+  "id": "urn:research:principia:assessment:scarcity-mw-shape-beats-baryons%3Alegacy-verdict",
+  "aliases": [
+    "scarcity-mw-shape-beats-baryons:legacy-verdict"
+  ],
+  "activity": "unknown",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "b5f58c64f4c6bf9d7d7f67c826f5d2dd7c9cb64f",
+    "sha256": "sha256:996b059ca4b45cee6dd42a503594508ebb8d6d13211ad1104df3754b116d5976",
+    "path": "theory/gravity-as-scarcity/claims.json",
+    "selector": "/claims/3",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Exact historical verdict and stated assumptions only; migration makes no new scientific inference."
+  ],
+  "missingness": [
+    "exact-evidence-owner-references",
+    "independently-verified-controls",
+    "activity",
+    "scope"
+  ],
+  "legacy": {
+    "id": "scarcity-mw-shape-beats-baryons",
+    "family": "gravity-as-scarcity",
+    "kind": "nature",
+    "status": "supported",
+    "claim": "An extended (distributed) mass under the model bends rotation curves toward flat (dark-matter/MOND-adjacent) — the *shape*",
+    "evidence": "Qualitative: [rotation-curve-distributed-mass](../../../orrery/lab/sims/rotation-curve-distributed-mass/). Quantitative: fit to real Gaia DR3 data ([scarcity-rotation-curve-fit](../../../orrery/lab/sims/scarcity-rotation-curve-fit/), ORB-10077) — with one free β the scarcity shape beats the nested no-halo baryons control decisively (RMSE 2.70 vs 18.40 km/s; ΔAIC ≈ −10⁵, stable across 27 profile variants). Measured curve & data lineage: [studies/milky-way-rotation-curve](../../studies/milky-way-rotation-curve.md). **ORB-10167 qualification (§ form and universality adjudication below):** the band never tested the *functional form* — a canonical Sanders-form Yukawa under the identical protocol is **shape-degenerate** with scarcity (best fit α = −0.679, ξ = 4.642 kpc, landing on the ORB-10161 analytic matching point; RMSE 2.91 vs 2.70 km/s; ΔAIC(scarcity − Yukawa) = −369.6 point estimate with all 27 profile variants preferring scarcity, but the 200-resample bootstrap 95% interval **[−503.9, +1051.9]** spans zero → degenerate per the predeclared rule; held-out both underpredict, 5.26 vs 5.52 km/s). This row's evidential content is \"a ~5 kpc rise-and-saturate boost beats baryons\" — carrier (ORB-10157/ORB-10170) and form (ORB-10167) unidentified",
+    "links": [
+      "../../../orrery/lab/sims/rotation-curve-distributed-mass/",
+      "../../../orrery/lab/sims/scarcity-rotation-curve-fit/",
+      "../../studies/milky-way-rotation-curve.md"
+    ],
+    "in_doc_ledger": true
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "claim": {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:scarcity-mw-shape-beats-baryons",
+      "revision_id": "sha256:ccd95b77601ac0743e52d543e15e2db205e1ae7844586266b503874419403e7b",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    "verdict": "supported",
+    "legacy_verdict": "supported",
+    "inference": "historical",
+    "basis": "legacy-report",
+    "controls": "unknown",
+    "rationale": "Qualitative: [rotation-curve-distributed-mass](../../../orrery/lab/sims/rotation-curve-distributed-mass/). Quantitative: fit to real Gaia DR3 data ([scarcity-rotation-curve-fit](../../../orrery/lab/sims/scarcity-rotation-curve-fit/), ORB-10077) — with one free β the scarcity shape beats the nested no-halo baryons control decisively (RMSE 2.70 vs 18.40 km/s; ΔAIC ≈ −10⁵, stable across 27 profile variants). Measured curve & data lineage: [studies/milky-way-rotation-curve](../../studies/milky-way-rotation-curve.md). **ORB-10167 qualification (§ form and universality adjudication below):** the band never tested the *functional form* — a canonical Sanders-form Yukawa under the identical protocol is **shape-degenerate** with scarcity (best fit α = −0.679, ξ = 4.642 kpc, landing on the ORB-10161 analytic matching point; RMSE 2.91 vs 2.70 km/s; ΔAIC(scarcity − Yukawa) = −369.6 point estimate with all 27 profile variants preferring scarcity, but the 200-resample bootstrap 95% interval **[−503.9, +1051.9]** spans zero → degenerate per the predeclared rule; held-out both underpredict, 5.26 vs 5.52 km/s). This row's evidential content is \"a ~5 kpc rise-and-saturate boost beats baryons\" — carrier (ORB-10157/ORB-10170) and form (ORB-10167) unidentified",
+    "evidence": []
+  },
+  "revision_id": "sha256:676e682d0b37faf0a01458a32bf0e9d1812cc3fb11f30f43720242448689329a"
+}

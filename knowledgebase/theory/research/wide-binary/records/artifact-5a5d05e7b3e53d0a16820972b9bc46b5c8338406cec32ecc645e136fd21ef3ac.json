@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:principia:artifact:source%3Aprincipia%3A13866b2848fbcce9a1f1ef2d4b97051a65f7e626%3Atheory%2Fwide-binary-selection-methodology%2Fopen-questions.md",
+  "aliases": [
+    "source:principia:13866b2848fbcce9a1f1ef2d4b97051a65f7e626:theory/wide-binary-selection-methodology/open-questions.md"
+  ],
+  "activity": "active",
+  "scope": "synthetic-calibration",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "13866b2848fbcce9a1f1ef2d4b97051a65f7e626",
+    "blob_oid": "bde7a36af663fe393ce730008a93799f0ae8b56c",
+    "sha256": "sha256:c388d096b070b5bea786397a186ec412d36830068ac2ed42e849b31df191a44d",
+    "path": "theory/wide-binary-selection-methodology/open-questions.md",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Immutable archival source copy; upstream scientific ownership is unchanged."
+  ],
+  "missingness": [],
+  "legacy": {
+    "source_pin": {
+      "repository": "principia",
+      "git_revision": "13866b2848fbcce9a1f1ef2d4b97051a65f7e626",
+      "path": "theory/wide-binary-selection-methodology/open-questions.md",
+      "blob_oid": "bde7a36af663fe393ce730008a93799f0ae8b56c",
+      "sha256": "sha256:c388d096b070b5bea786397a186ec412d36830068ac2ed42e849b31df191a44d",
+      "bytes": 1696,
+      "commit_metadata": "13866b2848fbcce9a1f1ef2d4b97051a65f7e626\n2026-09-06T01:07:41+00:00\n2026-09-06T01:07:41+00:00\nfix: Restore valid photon claim and gate registries without changing sc… [ORB-11352]\n"
+    },
+    "text": "## Open questions\n\n- **Which failure is in the synthetic framework versus the apparatus?** ORB-11222 ran the\n  fixture, but R0 sanity, cap isolation, R3 calibration, and R4 power failed while the\n  candidate oracle passed every enumerated realization. ORB-11241 is the precise Orrery repair\n  task; it must preserve the frozen protocol and distinguish a fixture defect from a genuine\n  limitation before any of these mixed rows can become a conclusion.\n- If R1 fires after the failed controls are repaired (a populated bin exceeds the predeclared threshold), does the follow-up isolate\n  *which* cut (theta/s window, PM-escape gate, magnitude truncation, or the photometric\n  mass-luminosity scatter) is responsible, or only that the pipeline as a whole is miscalibrated\n  under the tested footprint? The current protocol's run matrix (cap ladder, wrap/polar\n  placements) gives partial isolation but does not ablate each cut independently — a natural v2\n  if R1 fires.\n- Is the predeclared effect-size threshold (0.04 in median v-tilde) the right operating point,\n  or should it track a specific literature number (e.g. Banik et al. 2024's quoted anomaly\n  upper bound) more tightly once that bound is sourced with a verified citation to a specific\n  number rather than the qualitative \"null at high significance\" framing used in this protocol's\n  references?\n- Does a real (not synthetic) nonuniform footprint — e.g. a Gaia cone straddling the Galactic\n  plane, where dust and crowding actually vary the completeness gradient this protocol only\n  approximates — change the verdict? Out of scope for the offline, CPU-bounded pilot; a\n  candidate v2 if the synthetic pilot is inconclusive.\n"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "source",
+    "availability": "available",
+    "snapshot_digest": "sha256:c388d096b070b5bea786397a186ec412d36830068ac2ed42e849b31df191a44d",
+    "locator": null,
+    "media_type": "text/plain"
+  },
+  "revision_id": "sha256:5a5d05e7b3e53d0a16820972b9bc46b5c8338406cec32ecc645e136fd21ef3ac"
+}

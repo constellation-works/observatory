@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Atheory%2Ftwo-substance-vortex-vacuum%2Ffalsifiers.md",
+  "aliases": [
+    "source:principia:4e3b02c59b694d85016915177ef1ae157895ed7b:theory/two-substance-vortex-vacuum/falsifiers.md"
+  ],
+  "activity": "active",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "636500b350a76935f37b08ed3f18b93db691c681",
+    "sha256": "sha256:a4ee3f599e3f9dfafa0de4b1ad8c0e36ac28ad1c021009f8b7c3b5a67592686f",
+    "path": "theory/two-substance-vortex-vacuum/falsifiers.md",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Immutable archival source copy; upstream scientific ownership is unchanged."
+  ],
+  "missingness": [
+    "scope"
+  ],
+  "legacy": {
+    "source_pin": {
+      "repository": "principia",
+      "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "path": "theory/two-substance-vortex-vacuum/falsifiers.md",
+      "blob_oid": "636500b350a76935f37b08ed3f18b93db691c681",
+      "sha256": "sha256:a4ee3f599e3f9dfafa0de4b1ad8c0e36ac28ad1c021009f8b7c3b5a67592686f",
+      "bytes": 4701,
+      "commit_metadata": "4e3b02c59b694d85016915177ef1ae157895ed7b\n2026-09-06T02:49:35+00:00\n2026-09-06T02:49:35+00:00\nfeat: Migrate the wide-binary control pilot into versioned scientific r… [ORB-11378]\n"
+    },
+    "text": "## Falsifiers → faraday/tycho\n\nSim tasks filed in ws_orrery per the house rule that evidence enters through orrery's\ncatalog; data-acquisition tasks in ws_astrolabe (tycho), marked as such. Status per task:\n\n- **ORB-10163 — Two-substance lattice vortex defects: interaction sign, force law, and\n  the neutron analog.** Measures the sign (the Bjerknes reversal risk), the far-field law\n  (1/r²?), the short-range denser-region mechanism, and the balanced defect's neutrality.\n  **Run** — adjudicated § lattice adjudications: sign delivered in 2-D, contact mechanism\n  qualified, neutron neutral at the measured residual; the 3-D law remains open (a\n  vortex-line/ring apparatus is not yet filed).\n- **ORB-10164 — Two-substance lattice defect gravity: void-core far field, moving-defect\n  wake, and which quantity gravitates.** Measures whether a defect core reproduces the\n  parent's 1/r accumulated-depletion far field, whether motion produces the assumed\n  scarcity wake, and whether void volume or flow energy controls the far-field amplitude —\n  the lattice-level face of kill condition A. **Run** — adjudicated § lattice\n  adjudications: far field negative (bridge row refuted), wake kinematic only, gravitating\n  quantity mooted by nullity.\n- **ORB-10167 — Yukawa-vs-scarcity shape discrimination on the Gaia rotation-curve fit.**\n  Adds the Sanders-form Yukawa as a third model under the exact ORB-10077/ORB-10082\n  protocol; measures whether the fitted band distinguishes exponential saturation from the\n  scarcity form's 1/r-tail saturation. Adjudicates the β-identification row — serving as a\n  shape control on the parent's one empirical success. **Run** — shape-degenerate: the free\n  fit lands on §A2's matched parameters (α = −0.679, ξ = 4.642 kpc) and the bootstrap ΔAIC\n  interval spans zero; the band never identified the boost's form (β-identification row\n  updated; parent § form and universality adjudication).\n- **ORB-10168 (tycho, ws_astrolabe) — SPARC external-galaxy catalog.** Rotation curves +\n  baryonic component profiles, dwarfs through giants, with the standard radial-acceleration\n  arrays; the dataset for the universality test. **Delivered with a gap** — producer code\n  landed without the processed parquets; ORB-10169's validation inputs were reconstructed\n  from the published HTTPS tables (repair task per faraday L-0001/F2026-07-008).\n- **ORB-10169 — External-galaxy universality fit.** One global β across the SPARC sample\n  vs per-galaxy β, residual organization by size vs acceleration; kill condition\n  predeclared (β_i tracking disk scale kills the fixed-β form). Adjudicates the\n  universality row. **Run — the kill condition fired:** β_i tracks disk scale (ρ = 0.343,\n  p = 1.86×10⁻⁵), per-galaxy β wins by 51,723 AIC, and the same-policy MOND control\n  organizes by acceleration at a five-figure AIC advantage (universality row moved to\n  refuted; parent § form and universality adjudication).\n\n- **ORB-10940 / ORB-10941 — Two-substance dynamical packet budget and λ=0 control.** The radiation-sector fixture\n  (2026-08-21, from the swirl-photon discussion): the family's first dynamical evolution —\n  launches a localized relative-mode packet (direct initialization, plus defect emission\n  where the apparatus supports it), tracks n₁/n₂/n₊/n₋ budgets, fluxes, and energy;\n  adjudicates whether a propagating packet carries co-moving common-mode content scaling\n  with its energy — the hook gravitating radiation requires. Explicitly scoped not to\n  reopen the gravity-bridge row (the source-law debt is a separate object); a purely\n  relative-mode packet is the kill outcome. **Run:** ORB-10941 measured the λ=0 common\n  response below the numerical floor and the nonzero response linear in λ and energy. The\n  resolved common structure is a trailing wake, not attached; the control kill did not fire,\n  the packet-control gate closes, and the refuted gravity bridge stays closed\n  ([two-substance-dynamical-packet](../../../orrery/lab/sims/two-substance-dynamical-packet/)).\n\n- **ORB-11220 — Packet linear-symbol and polarization controls.** The named verification\n  fixture for ORB-11219's frozen packet Hamiltonian, merged at Orrery\n  `73c9bd53e963e44bb365992c1df87a1077cc996f`. **Run — the frozen apparatus fails the\n  Maxwell reading:** independent operator and actual-evolution lanes validate the numerical\n  controls and find four longitudinal acoustic roots, frozen transverse currents, and no\n  Gauss constraint; equal speeds are scalar degeneracy. This supports the corresponding\n  model-property rows, leaves Kill condition B's nature claim untested, and reopens no wall.\n",
+    "commit_object": "tree 682cccb1cf19c89c2c5f4371c14ed2b384d2ae8c\nparent 13866b2848fbcce9a1f1ef2d4b97051a65f7e626\nauthor orbit[gpt-6-astra] <agent@orbit.invalid> 1788662975 +0000\ncommitter orbit <orbit@orbit.local> 1788662975 +0000\n\nfeat: Migrate the wide-binary control pilot into versioned scientific r… [ORB-11378]\n\nMigrate the wide-binary control pilot into versioned scientific records\n\nPlanned-By: codex\n"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "source",
+    "availability": "available",
+    "snapshot_digest": "sha256:a4ee3f599e3f9dfafa0de4b1ad8c0e36ac28ad1c021009f8b7c3b5a67592686f",
+    "locator": null,
+    "media_type": "text/plain"
+  },
+  "revision_id": "sha256:a4e32b6c722588dadf577fc3239b88c3bc594a50b2c0579822ed34ed9e3c96bc"
+}

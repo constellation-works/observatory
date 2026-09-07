@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:principia:artifact:source%3Aorrery%3Aa1c430db54d585048ec85c4e7c47141db634f398%3Alab%2Fsims%2Fscarcity-star-well-headroom%2Fsim.json",
+  "aliases": [
+    "source:orrery:a1c430db54d585048ec85c4e7c47141db634f398:lab/sims/scarcity-star-well-headroom/sim.json"
+  ],
+  "activity": "active",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": null,
+    "blob_oid": null,
+    "sha256": "sha256:120e213bbd8c7f691fb8f77020b97911e88af1deeb4aeffe908423ac7767e0b8",
+    "path": "upstream-snapshot/orrery/a1c430db54d585048ec85c4e7c47141db634f398/lab/sims/scarcity-star-well-headroom/sim.json",
+    "selector": "$",
+    "historical": true,
+    "working_tree": true
+  },
+  "limitations": [
+    "Immutable archival source copy; upstream scientific ownership is unchanged."
+  ],
+  "missingness": [
+    "git-revision",
+    "owner-ingestion-git-pin",
+    "scope",
+    "upstream-canonical-record"
+  ],
+  "legacy": {
+    "source_pin": {
+      "repository": "orrery",
+      "git_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "path": "lab/sims/scarcity-star-well-headroom/sim.json",
+      "blob_oid": "555f966036f0ca058825126a9398426ec087614e",
+      "sha256": "sha256:120e213bbd8c7f691fb8f77020b97911e88af1deeb4aeffe908423ac7767e0b8",
+      "bytes": 579,
+      "commit_metadata": "a1c430db54d585048ec85c4e7c47141db634f398\n2026-09-06T02:28:14+00:00\n2026-09-06T02:28:14+00:00\nfeat: Preserve the original electron animation's continuous fold in a c… [ORB-11374]\n"
+    },
+    "text": "{\n  \"slug\": \"scarcity-star-well-headroom\",\n  \"title\": \"Nonlinear headroom star-well profile\",\n  \"kind\": \"web\",\n  \"entry\": \"index.html\",\n  \"status\": \"imported\",\n  \"created\": \"2026-07-05\",\n  \"topics\": [\n    \"gravity\",\n    \"potential-wells\"\n  ],\n  \"family\": \"gravity-as-scarcity\",\n  \"summary\": \"1D profile of a star's potential well under the nonlinear-headroom variant of the scarcity model.\",\n  \"provenance\": {\n    \"almanac\": \"15-discussions/26-07/gravity-as-scarcity-of-space.md\",\n    \"imported_from\": \"almanac/40-outputs/gravity/nonlinear_headroom_star_well_profile.html\"\n  }\n}\n",
+    "commit_object": "tree 8d851030602405b11b7166108b09cf9cd5664329\nparent 148b668391f575466282eaa81aab0dc943846a87\nauthor orbit[gpt-6-astra] <agent@orbit.invalid> 1788661694 +0000\ncommitter orbit <orbit@orbit.local> 1788661694 +0000\n\nfeat: Preserve the original electron animation's continuous fold in a c… [ORB-11374]\n\nPreserve the original electron animation's continuous fold in a computed-field view\n\nPlanned-By: codex\n"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "source",
+    "availability": "available",
+    "snapshot_digest": "sha256:120e213bbd8c7f691fb8f77020b97911e88af1deeb4aeffe908423ac7767e0b8",
+    "locator": null,
+    "media_type": "application/json"
+  },
+  "revision_id": "sha256:ba4ba4c92077238cb01be7e9b43f6ed68ae71e75a886a2ddfddec4deda274f59"
+}

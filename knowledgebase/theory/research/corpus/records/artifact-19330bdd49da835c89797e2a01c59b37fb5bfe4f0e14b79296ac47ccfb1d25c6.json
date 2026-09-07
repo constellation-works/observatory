@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Atheory%2Fmoving-sources-in-the-closed-system%2Fsetup.md",
+  "aliases": [
+    "source:principia:4e3b02c59b694d85016915177ef1ae157895ed7b:theory/moving-sources-in-the-closed-system/setup.md"
+  ],
+  "activity": "active",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "fd117c967634599be2711e06d32debd19684a98d",
+    "sha256": "sha256:48866b72b11ba69910b6f2ea4099cb92e9ba88981a9fe782788dbfbc8ef27abe",
+    "path": "theory/moving-sources-in-the-closed-system/setup.md",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Immutable archival source copy; upstream scientific ownership is unchanged."
+  ],
+  "missingness": [
+    "scope"
+  ],
+  "legacy": {
+    "source_pin": {
+      "repository": "principia",
+      "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "path": "theory/moving-sources-in-the-closed-system/setup.md",
+      "blob_oid": "fd117c967634599be2711e06d32debd19684a98d",
+      "sha256": "sha256:48866b72b11ba69910b6f2ea4099cb92e9ba88981a9fe782788dbfbc8ef27abe",
+      "bytes": 2229,
+      "commit_metadata": "4e3b02c59b694d85016915177ef1ae157895ed7b\n2026-09-06T02:49:35+00:00\n2026-09-06T02:49:35+00:00\nfeat: Migrate the wide-binary control pilot into versioned scientific r… [ORB-11378]\n"
+    },
+    "text": "## Setup\n\nSubstrate of uniform density n, at rest at infinity (frame Σ — the reservoir frame the\nlattice apparatus has always had). A mass M translates uniformly at velocity **U** through\nΣ. Work in the mass frame (inertial for uniform **U**; the closed system's ingredients are\nall Galilean-covariant): the wind blows past at −**U** at infinity, and the level is\n**exactly comoving** — draws move with the mass and the level solve is elliptic\n(instantaneous), as in every cataloged apparatus (ORB-10932/ORB-10934's discrete Gauss /\nPoisson accumulation). So σ = GM/c²r rides rigidly with the source. A finite\nlevel-propagation speed would add retardation distortions on top; that is the\n[retarded-scarcity-wake](../retarded-scarcity-wake/) family's question and is out of scope\nhere — this doc analyzes the closed system *as implemented and measured*. One structural\nfact to keep in view (recorded at the 2026-08-21 critique): the system as implemented has\n**two causalities** — the level is elliptic (instantaneous) while excitations ride the\nflow at finite c. The instantaneous level dodges retarded wakes by construction, and it\ndodges Carlip's aberration-cancellation question the same way, because there is nothing\nto cancel; but any ray-tracing of the analog metric traces exactly this hybrid.\n\nSteady state in the mass frame. The flow **v** (substrate velocity in the mass frame)\nobeys:\n\n- **Rolling rule** (steady): (**v**·∇)**v** = c²∇σ.\n- **Continuity with consumption**: ∇·(n**v**) = −s.\n- **Shear law**: s = n·√((3/2) e^dev : e^dev).\n\nThe inflow at infinity is uniform (−**U**), hence irrotational; the force is a pure\ngradient, so Kelvin's theorem keeps the flow irrotational everywhere. (For ∇×**v** = 0 the\nconvective term is (**v**·∇)**v** = ∇(|**v**|²/2) — the identity is symbolically checked.)\n**This premise is where the realized dynamics part company with the theorems**\n(ORB-10938, § third adjudication): the settled flow carries finite, rung-stable\nvorticity — the consumption sink plus the open boundaries are not the barotropic\nclosed-loop setting Kelvin's theorem protects — and with irrotationality gone the global\nBernoulli integral below goes with it.\n",
+    "commit_object": "tree 682cccb1cf19c89c2c5f4371c14ed2b384d2ae8c\nparent 13866b2848fbcce9a1f1ef2d4b97051a65f7e626\nauthor orbit[gpt-6-astra] <agent@orbit.invalid> 1788662975 +0000\ncommitter orbit <orbit@orbit.local> 1788662975 +0000\n\nfeat: Migrate the wide-binary control pilot into versioned scientific r… [ORB-11378]\n\nMigrate the wide-binary control pilot into versioned scientific records\n\nPlanned-By: codex\n"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "source",
+    "availability": "available",
+    "snapshot_digest": "sha256:48866b72b11ba69910b6f2ea4099cb92e9ba88981a9fe782788dbfbc8ef27abe",
+    "locator": null,
+    "media_type": "text/plain"
+  },
+  "revision_id": "sha256:19330bdd49da835c89797e2a01c59b37fb5bfe4f0e14b79296ac47ccfb1d25c6"
+}

@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Atheory%2Fgravity-as-scarcity%2Fconfronting-nfw.md",
+  "aliases": [
+    "source:principia:4e3b02c59b694d85016915177ef1ae157895ed7b:theory/gravity-as-scarcity/confronting-nfw.md"
+  ],
+  "activity": "active",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "a8bf9b9ed9163727ab93582d9d7b7cc9b1600692",
+    "sha256": "sha256:20b95ea8515853fd2dc354f1a04615307e5b2ec8570f047797682b9cb270859d",
+    "path": "theory/gravity-as-scarcity/confronting-nfw.md",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Immutable archival source copy; upstream scientific ownership is unchanged."
+  ],
+  "missingness": [
+    "scope"
+  ],
+  "legacy": {
+    "source_pin": {
+      "repository": "principia",
+      "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "path": "theory/gravity-as-scarcity/confronting-nfw.md",
+      "blob_oid": "a8bf9b9ed9163727ab93582d9d7b7cc9b1600692",
+      "sha256": "sha256:20b95ea8515853fd2dc354f1a04615307e5b2ec8570f047797682b9cb270859d",
+      "bytes": 2472,
+      "commit_metadata": "4e3b02c59b694d85016915177ef1ae157895ed7b\n2026-09-06T02:49:35+00:00\n2026-09-06T02:49:35+00:00\nfeat: Migrate the wide-binary control pilot into versioned scientific r… [ORB-11378]\n"
+    },
+    "text": "## Confronting a standard halo — the ORB-10082 NFW comparison\n\nThe falsifier ran (Faraday, orrery `a9f93bd`; run record\n`agentbase/faraday/memory/runs/26-07/run-20260711T010553.md`), with one reframe by Daniel before\nexecution: NFW+baryons keeps its own free baryonic scale alongside M200 and concentration —\n**3 physical parameters to scarcity's 2** — so the test is no longer equal-dof and AIC penalizes\nthe extra parameter. The protocol is otherwise inherited unchanged from ORB-10077 (same\npredeclared bands, same bounded drift nuisance, seed 42, 27 profile variants, 200 bootstrap\nresamples).\n\n| Metric | Scarcity | NFW + baryons |\n|---|---:|---:|\n| RMSE (5–15 kpc fit) | 2.70 km/s | 3.66 km/s |\n| AIC | 2464.8 | 4128.2 |\n| Held-out 15–18.75 kpc RMSE | 5.26 km/s | 4.99 km/s |\n| Held-out mean residual | +4.86 km/s (under) | −4.26 km/s (over) |\n| Drift nuisance | 3.0 km/s (pinned, *lower* bound) | 10.0 km/s (pinned, *upper* bound) |\n\nΔAIC(scarcity − NFW) = **−1663** at the point estimate, same sign across all 27 profile variants\n(−2293 to −847) — but the 200-resample bootstrap 95% interval spans **−4129 to +1102**. Per the\npredeclared decision rule the verdict is **inconclusive**: the sample cannot decide between\nscarcity and a standard halo. Three facts keep this honest in both directions:\n\n1. **The point estimate is not evidence.** The bootstrap interval spans zero; recording this as\n   a scarcity win would be exactly the laundering the standing rules forbid.\n2. **NFW wins the held-out band, barely, and flips the residual sign** — scarcity coherently\n   underpredicts where NFW overpredicts. Whichever model is right about 15–18.75 kpc, neither is\n   complete there.\n3. **NFW is itself weakly identified on this band** — its drift term pins the 10 km/s *upper*\n   bound throughout the bootstrap (scarcity's pins the lower) and concentration fits at ~37\n   (bootstrap median 37.2), far above the c ≈ 10–15 typical of an MW-mass halo. The 5–15 kpc\n   band does not cleanly identify a conventional halo, which limits what this comparison can\n   establish *in either direction*.\n\nWhat decides next is **ORB-10083**. The two drift terms pinning *opposite* bounds says the\nconstant-drift nuisance is doing model-dependent work — the held-out misfit may belong to the\ndrift model, not to either gravity model. Radially varying asymmetric drift, applied identically\nto scarcity, NFW, and the control, re-gates this row.\n",
+    "commit_object": "tree 682cccb1cf19c89c2c5f4371c14ed2b384d2ae8c\nparent 13866b2848fbcce9a1f1ef2d4b97051a65f7e626\nauthor orbit[gpt-6-astra] <agent@orbit.invalid> 1788662975 +0000\ncommitter orbit <orbit@orbit.local> 1788662975 +0000\n\nfeat: Migrate the wide-binary control pilot into versioned scientific r… [ORB-11378]\n\nMigrate the wide-binary control pilot into versioned scientific records\n\nPlanned-By: codex\n"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "source",
+    "availability": "available",
+    "snapshot_digest": "sha256:20b95ea8515853fd2dc354f1a04615307e5b2ec8570f047797682b9cb270859d",
+    "locator": null,
+    "media_type": "text/plain"
+  },
+  "revision_id": "sha256:5c58c4c5d4c8951e762ded01f55e3c510a1141c7f5643a81ef3eaab46a26297c"
+}

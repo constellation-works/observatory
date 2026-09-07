@@ -1,0 +1,37 @@
+{
+  "id": "two-substance-photon-sector",
+  "doc": "two-substance-vortex-vacuum",
+  "family": "two-substance-vortex-vacuum",
+  "kind": "existence",
+  "owed_object": "A single Maxwell photon sector (one cone, two polarizations, no birefringence, no detectable frame, γ=1), or a recast to one substance with a two-component order parameter. SUB-OBJECT (ORB-11219, algebra delivered): continuum linearized principal symbol and mode/constraint count of the existing packet Hamiltonian (two conserved densities, gradient-driven fluxes). That apparatus does not deliver the Maxwell sector — equal c₊=c₋ degenerates two longitudinal cones and leaves transverse flux frozen.",
+  "inherited_postulates": [
+    "postulate-lambda-coupling"
+  ],
+  "new_postulates": [],
+  "control": "Coupling-off λ=0 on a uniform rest background: the cubic term is absent from the linearized principal symbol. Unequal speeds c₊=0.65, c₋=1.0 (the existing packet fixture) are two distinct longitudinal cones. Equal-speed c₊=c₋ is the degeneracy the photon-sector conjecture proposed, not a Maxwell control.",
+  "kill": "The linearized packet symbol has two propagating transverse polarizations (Maxwell count) rather than four longitudinal acoustic branches plus frozen transverse currents. If a later sector exists, binding walls remain birefringence, two speeds, resonator anisotropy, or γ≠1.",
+  "forbidden_reopens": [
+    "two-substance-void-volume-ep",
+    "two-substance-conserving-far-field",
+    "two-substance-s2-fifth-force-charge",
+    "two-substance-fixed-length-universality"
+  ],
+  "blocked_phenomenology": [
+    "gravitating-radiation",
+    "s2-clocks"
+  ],
+  "comparator": "Maxwell plane-wave content versus two-fluid acoustics (studies/maxwell-mode-content-and-two-fluid-acoustics). Binding walls: studies/lorentz-violation-bounds and scalar-gravity-ppn-constraints.",
+  "claims": [
+    "two-substance-kill-condition-b",
+    "two-substance-packet-linear-modes",
+    "two-substance-packet-linear-local-only"
+  ],
+  "follow_on_fixture": "two-substance-packet-linear-symbol (Orrery ORB-11220, merged remote commit 73c9bd53e963e44bb365992c1df87a1077cc996f; frozen U0/U1/U2/B0/T0 gates all validated). It supports the stated linear mode properties and refutes the Maxwell reading of this apparatus only: four longitudinal roots, frozen transverse currents, no Gauss constraint. The live gate remains owed by a recast or different interaction; no nature claim or gravity wall moved.",
+  "analytic_attempt": {
+    "date": "2026-09-04",
+    "chapter": "theory/two-substance-vortex-vacuum/photon-mode-obstruction.md",
+    "outcome": "Conditional phase-only obstruction; gate stays open. Equal speeds do not supply transverse modes; Josephson locking gaps relative sound but attaches walls to relative-winding charge.",
+    "next_object": "Explicit gauge-sector action and constraints with defect-charge mapping, beyond a regular isotropic two-phase action.",
+    "control": "Josephson J=0 restores two gapless scalar modes and removes the locking wall tension."
+  }
+}

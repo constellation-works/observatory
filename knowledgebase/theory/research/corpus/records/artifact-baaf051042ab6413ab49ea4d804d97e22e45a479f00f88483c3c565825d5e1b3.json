@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:principia:artifact:source%3Aorrery%3Aa1c430db54d585048ec85c4e7c47141db634f398%3Alab%2Fsims%2Flevel-core-wind-tunnel%2Fsim.json",
+  "aliases": [
+    "source:orrery:a1c430db54d585048ec85c4e7c47141db634f398:lab/sims/level-core-wind-tunnel/sim.json"
+  ],
+  "activity": "active",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": null,
+    "blob_oid": null,
+    "sha256": "sha256:5a49aad21e16e1dbd47a7632710f3044fbb8d4c8b1f5f7b3e94b02a37fdb68f8",
+    "path": "upstream-snapshot/orrery/a1c430db54d585048ec85c4e7c47141db634f398/lab/sims/level-core-wind-tunnel/sim.json",
+    "selector": "$",
+    "historical": true,
+    "working_tree": true
+  },
+  "limitations": [
+    "Immutable archival source copy; upstream scientific ownership is unchanged."
+  ],
+  "missingness": [
+    "git-revision",
+    "owner-ingestion-git-pin",
+    "scope",
+    "upstream-canonical-record"
+  ],
+  "legacy": {
+    "source_pin": {
+      "repository": "orrery",
+      "git_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "path": "lab/sims/level-core-wind-tunnel/sim.json",
+      "blob_oid": "269ad9a6d69aee18e478c5f12aedf6fec215b11d",
+      "sha256": "sha256:5a49aad21e16e1dbd47a7632710f3044fbb8d4c8b1f5f7b3e94b02a37fdb68f8",
+      "bytes": 818,
+      "commit_metadata": "a1c430db54d585048ec85c4e7c47141db634f398\n2026-09-06T02:28:14+00:00\n2026-09-06T02:28:14+00:00\nfeat: Preserve the original electron animation's continuous fold in a c… [ORB-11374]\n"
+    },
+    "text": "{\n  \"slug\": \"level-core-wind-tunnel\",\n  \"title\": \"Level-core wind tunnel\",\n  \"kind\": \"py\",\n  \"entry\": \"main.py\",\n  \"status\": \"active\",\n  \"created\": \"2026-08-21\",\n  \"topics\": [\n    \"gravity\",\n    \"gravity-as-scarcity\",\n    \"counting-lattice\",\n    \"level-matching\",\n    \"moving-source\",\n    \"preferred-frame\",\n    \"strain\",\n    \"resolution-convergence\"\n  ],\n  \"family\": \"gravity-as-scarcity\",\n  \"summary\": \"A comoving draw-sourced 3-D level core in uniform substrate wind measures Bernoulli speed isotropy, the non-boosted direction wake, momentum transport, and the no-core Galilean null.\",\n  \"provenance\": {\n    \"almanac\": \"15-discussions/26-08/from-galactic-motion-to-the-moving-gravity-medium-problem.md\",\n    \"orbit_task\": \"ORB-10935\",\n    \"predecessors\": [\"ORB-10934\", \"ORB-10932\", \"ORB-10755\", \"ORB-10751\"]\n  }\n}\n",
+    "commit_object": "tree 8d851030602405b11b7166108b09cf9cd5664329\nparent 148b668391f575466282eaa81aab0dc943846a87\nauthor orbit[gpt-6-astra] <agent@orbit.invalid> 1788661694 +0000\ncommitter orbit <orbit@orbit.local> 1788661694 +0000\n\nfeat: Preserve the original electron animation's continuous fold in a c… [ORB-11374]\n\nPreserve the original electron animation's continuous fold in a computed-field view\n\nPlanned-By: codex\n"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "source",
+    "availability": "available",
+    "snapshot_digest": "sha256:5a49aad21e16e1dbd47a7632710f3044fbb8d4c8b1f5f7b3e94b02a37fdb68f8",
+    "locator": null,
+    "media_type": "application/json"
+  },
+  "revision_id": "sha256:baaf051042ab6413ab49ea4d804d97e22e45a479f00f88483c3c565825d5e1b3"
+}

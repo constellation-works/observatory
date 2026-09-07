@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "kind": "claim",
+  "id": "urn:research:principia:claim:two-substance-s2-fifth-force-charge",
+  "aliases": [
+    "two-substance-s2-fifth-force-charge"
+  ],
+  "activity": "active",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "94e76368a84e00ed742153d77b3d25dd5962c664",
+    "sha256": "sha256:c95d48cf673efa43d6d77005c73cadea42fac1ff00da556a7b7fd260df14f9a6",
+    "path": "theory/two-substance-vortex-vacuum/claims.json",
+    "selector": "/claims/14",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Exact historical verdict and stated assumptions only; migration makes no new scientific inference."
+  ],
+  "missingness": [
+    "scope"
+  ],
+  "legacy": {
+    "id": "two-substance-s2-fifth-force-charge",
+    "family": "two-substance-vortex-vacuum",
+    "kind": "nature",
+    "status": "refuted",
+    "claim": "**S2 disjunction, Branch A (charge-sourced):** a kpc-range S2 Yukawa sourced on S2 displacement or void volume, at galactic strength",
+    "evidence": "**Computed (§A1):** any countable sourcing carries Δ(q/m) ≈ 8.6 × 10⁻⁴ between MICROSCOPE's materials, so \\|α\\| ≈ 0.68 predicts η ~ 6 × 10⁻⁴ vs the measured 3 × 10⁻¹⁵ — dead by ~11 orders, the same blade as kill condition A ([studies/equivalence-principle-tests](../../studies/equivalence-principle-tests.md), [studies/fifth-force-searches](../../studies/fifth-force-searches.md))",
+    "links": [
+      "../../studies/equivalence-principle-tests.md",
+      "../../studies/fifth-force-searches.md"
+    ],
+    "in_doc_ledger": true
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "claim",
+    "statement": "**S2 disjunction, Branch A (charge-sourced):** a kpc-range S2 Yukawa sourced on S2 displacement or void volume, at galactic strength",
+    "domain": "nature"
+  },
+  "revision_id": "sha256:ba9ed789a4f97cf7b2380977d653221cf4046b46cde859b9026244aafe53c052"
+}

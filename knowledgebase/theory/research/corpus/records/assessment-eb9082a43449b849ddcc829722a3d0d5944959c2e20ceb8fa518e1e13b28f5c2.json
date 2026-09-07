@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "kind": "assessment",
+  "id": "urn:research:principia:assessment:branch-c-minimal-sector%3Alegacy-verdict",
+  "aliases": [
+    "branch-c-minimal-sector:legacy-verdict"
+  ],
+  "activity": "unknown",
+  "scope": "derivation",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "f55e1dace027658053ccc8f5b740363237c0eda4",
+    "sha256": "sha256:34d8fd1300c47a5df5ea2300abe6ba3ac4e6c29d546f03686710d88e1297d681",
+    "path": "theory/moving-source-field-consistency/claims.json",
+    "selector": "/claims/13",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Exact historical verdict and stated assumptions only; migration makes no new scientific inference."
+  ],
+  "missingness": [
+    "exact-evidence-owner-references",
+    "independently-verified-controls",
+    "activity"
+  ],
+  "legacy": {
+    "id": "branch-c-minimal-sector",
+    "family": "retarded-scarcity-wake",
+    "kind": "derived",
+    "status": "untested",
+    "claim": "At linear, local, two-derivative order with one preferred unit vector \\(U^\\mu\\), the boost-violating scalar substrate sector has exactly three breaking parameters — speed \\(c_g\\ne c\\), aether-frame dissipation \\(\\Gamma\\), and source delay \\(\\tau_s\\) — only the two time-odd ones can produce an \\(O(\\beta_g)\\) dipole, and with them off the equation gives the Heaviside form, even in \\(\\xi_\\parallel\\) at every order in \\(\\beta_g\\) for every \\(c_g\\)",
+    "evidence": "[Branch C](branch-c.md) § The minimal equation and § The control (eqs. 1–2); the Heaviside residual is symbolically zero but the check is uncataloged. The cancellation it reproduces is the sourced control of [moving-source-gravity-bounds](../../studies/moving-source-gravity-bounds.md)",
+    "links": [
+      "branch-c.md",
+      "../../studies/moving-source-gravity-bounds.md"
+    ],
+    "in_doc_ledger": true,
+    "kill": "Catalog the branch-c-first-order-solution fixture (gate i). A fourth linear local two-derivative structure built from U, or an O(β_g) dipole from the time-even sector, refutes the count."
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "claim": {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:branch-c-minimal-sector",
+      "revision_id": "sha256:1c72851b355bab870c1a6534687c54ddae8a8d7b5708568d19656a2ee3f4f4a9",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    "verdict": "untested",
+    "legacy_verdict": "untested",
+    "inference": "historical",
+    "basis": "legacy-report",
+    "controls": "unknown",
+    "rationale": "[Branch C](branch-c.md) § The minimal equation and § The control (eqs. 1–2); the Heaviside residual is symbolically zero but the check is uncataloged. The cancellation it reproduces is the sourced control of [moving-source-gravity-bounds](../../studies/moving-source-gravity-bounds.md)",
+    "evidence": []
+  },
+  "revision_id": "sha256:eb9082a43449b849ddcc829722a3d0d5944959c2e20ceb8fa518e1e13b28f5c2"
+}

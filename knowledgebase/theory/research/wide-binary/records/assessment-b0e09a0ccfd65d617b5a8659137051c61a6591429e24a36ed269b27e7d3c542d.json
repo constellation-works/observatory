@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "kind": "assessment",
+  "id": "urn:research:principia:assessment:wbsel-injected-effect-power%3Aoriginal-outcome",
+  "aliases": [
+    "wbsel-injected-effect-power:original-outcome"
+  ],
+  "activity": "active",
+  "scope": "synthetic-calibration",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "13866b2848fbcce9a1f1ef2d4b97051a65f7e626",
+    "blob_oid": "d349179f3b08155105b5dda896541c56bf94878a",
+    "sha256": "sha256:2c01eac561be3f15e21fae5168f617c0552f6306bd33efc40283ad494b8e8d59",
+    "path": "theory/wide-binary-selection-methodology/claims.json",
+    "selector": "/claims/3",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Historical synthetic/model calibration only; no new scientific adjudication or nature-level inference."
+  ],
+  "missingness": [],
+  "legacy": {
+    "id": "wbsel-injected-effect-power",
+    "family": "wide-binary-selection-methodology",
+    "kind": "model-property",
+    "status": "mixed",
+    "claim": "At the R1 baseline sample size and cap, the predeclared primary bias statistic B_i detects an injected acceleration-dependent v-tilde offset of amplitude 0.05 or 0.10 (restricted to the two lowest g_N bins) with power >= 80% across the seed ladder, establishing the protocol's minimum-detectable-effect floor at or below the literature-contested anomaly scale.",
+    "kill": "Power below 80% at injected amplitude 0.10 (the larger arm) — the protocol's decision rule cannot reliably detect an effect at the scale of the literature disagreement, so a clean R1 null would not be informative.",
+    "evidence": "ORB-11222's cataloged frozen run at Orrery 28dd5c72 detects both 0.05 and 0.10 injections in 33.3% of seeds, below the 80% rule. The result makes a null uninformative; ORB-11241 owns diagnosis.",
+    "links": [
+      "../../studies/wide-binary-selection-bias-preregistration.md"
+    ],
+    "in_doc_ledger": true
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "claim": {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:wbsel-injected-effect-power",
+      "revision_id": "sha256:87e4b474f9d60eac7266545e12b50a3c7bb7af1be48467df1b3f89ef0f5ae61f",
+      "source_revision": "13866b2848fbcce9a1f1ef2d4b97051a65f7e626",
+      "status": "pending"
+    },
+    "verdict": "inconclusive",
+    "legacy_verdict": "mixed",
+    "inference": "historical",
+    "basis": "legacy-report",
+    "controls": "failed",
+    "rationale": "ORB-11222's cataloged frozen run at Orrery 28dd5c72 detects both 0.05 and 0.10 injections in 33.3% of seeds, below the 80% rule. The result makes a null uninformative; ORB-11241 owns diagnosis.",
+    "evidence": [
+      {
+        "repository": "principia",
+        "id": "urn:research:principia:artifact:source%3Aorrery%3A28dd5c72bb670517b93b556f1d2483402c8e8655%3Alab%2Fsims%2Fwide-binary-selection-bias%2Fassets%2Fresults.json",
+        "revision_id": "sha256:74de3e9ab0362b42450d529ff31e5a9f95020e5cf98e7bf6b0715fe2480105fe",
+        "source_revision": null,
+        "status": "pending"
+      }
+    ]
+  },
+  "revision_id": "sha256:b0e09a0ccfd65d617b5a8659137051c61a6591429e24a36ed269b27e7d3c542d"
+}

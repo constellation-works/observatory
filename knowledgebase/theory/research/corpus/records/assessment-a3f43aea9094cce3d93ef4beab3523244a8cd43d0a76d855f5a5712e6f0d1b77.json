@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "kind": "assessment",
+  "id": "urn:research:principia:assessment:two-substance-monopole-polarity-blind%3Alegacy-verdict",
+  "aliases": [
+    "two-substance-monopole-polarity-blind:legacy-verdict"
+  ],
+  "activity": "unknown",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "94e76368a84e00ed742153d77b3d25dd5962c664",
+    "sha256": "sha256:c95d48cf673efa43d6d77005c73cadea42fac1ff00da556a7b7fd260df14f9a6",
+    "path": "theory/two-substance-vortex-vacuum/claims.json",
+    "selector": "/claims/3",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Exact historical verdict and stated assumptions only; migration makes no new scientific inference."
+  ],
+  "missingness": [
+    "exact-evidence-owner-references",
+    "independently-verified-controls",
+    "activity",
+    "scope"
+  ],
+  "legacy": {
+    "id": "two-substance-monopole-polarity-blind",
+    "family": "two-substance-vortex-vacuum",
+    "kind": "nature",
+    "status": "mixed",
+    "claim": "The gravitational monopole is one-signed and polarity-blind (void fraction ≥ 0; H/D 2:1, antihydrogen falls down, no shielding)",
+    "evidence": "Sign structure is by construction (∅ ≥ 0, both polarities produce void); polarity-blindness is forced by measurement — ALPHA-g (0.75 ± 0.13 ± 0.16)g downward, and composition/shielding walls ([studies/equivalence-principle-tests](../../studies/equivalence-principle-tests.md)). The *coupling* is adjudicated by kill condition A (next row)",
+    "links": [
+      "../../studies/equivalence-principle-tests.md"
+    ],
+    "in_doc_ledger": true
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "claim": {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:two-substance-monopole-polarity-blind",
+      "revision_id": "sha256:1645fa64680d1783f6945d2db2d59141e0d0a6b5ed9d5b13e24d88f28c389920",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    "verdict": "inconclusive",
+    "legacy_verdict": "mixed",
+    "inference": "historical",
+    "basis": "legacy-report",
+    "controls": "unknown",
+    "rationale": "Sign structure is by construction (∅ ≥ 0, both polarities produce void); polarity-blindness is forced by measurement — ALPHA-g (0.75 ± 0.13 ± 0.16)g downward, and composition/shielding walls ([studies/equivalence-principle-tests](../../studies/equivalence-principle-tests.md)). The *coupling* is adjudicated by kill condition A (next row)",
+    "evidence": []
+  },
+  "revision_id": "sha256:a3f43aea9094cce3d93ef4beab3523244a8cd43d0a76d855f5a5712e6f0d1b77"
+}

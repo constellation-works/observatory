@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "kind": "program",
+  "id": "urn:research:principia:program:vortex-electron",
+  "aliases": [
+    "vortex-electron"
+  ],
+  "activity": "paused",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "2e8feac21c854c16c2864f0eb2b2a7eb5203e3e5",
+    "sha256": "sha256:9f8fda587770546752fa01279d86679cfc24f87e7eb6a93cb893da243664f5a1",
+    "path": "theory/vortex-electron/claims.json",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Exact historical verdict and stated assumptions only; migration makes no new scientific inference."
+  ],
+  "missingness": [
+    "scope"
+  ],
+  "legacy": {
+    "doc": "vortex-electron",
+    "title": "The vortex electron vs Bell: local hidden variables to the ceiling",
+    "status": "refuted",
+    "families": [
+      "bell-tests"
+    ],
+    "updated": "2026-07-09",
+    "headline": "Every local hidden-variable variant saturates |S|=2; nature measures ~2.4–2.7. Two-particle locality is dead.",
+    "live_fronts": []
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "theory",
+    "title": "The vortex electron vs Bell: local hidden variables to the ceiling"
+  },
+  "revision_id": "sha256:810c1ccc3203aeefe5f1b77282d737a7417765c7a4e29520d56d0626c7c4366e"
+}

@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:principia:artifact:source%3Aorrery%3Aa1c430db54d585048ec85c4e7c47141db634f398%3Alab%2Fsims%2Fsparc-scarcity-universality%2Fsim.json",
+  "aliases": [
+    "source:orrery:a1c430db54d585048ec85c4e7c47141db634f398:lab/sims/sparc-scarcity-universality/sim.json"
+  ],
+  "activity": "active",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": null,
+    "blob_oid": null,
+    "sha256": "sha256:f84866a81080e9de9384d02e34a79a698eb17f4c6862602e95bf03520c6d7f1d",
+    "path": "upstream-snapshot/orrery/a1c430db54d585048ec85c4e7c47141db634f398/lab/sims/sparc-scarcity-universality/sim.json",
+    "selector": "$",
+    "historical": true,
+    "working_tree": true
+  },
+  "limitations": [
+    "Immutable archival source copy; upstream scientific ownership is unchanged."
+  ],
+  "missingness": [
+    "git-revision",
+    "owner-ingestion-git-pin",
+    "scope",
+    "upstream-canonical-record"
+  ],
+  "legacy": {
+    "source_pin": {
+      "repository": "orrery",
+      "git_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "path": "lab/sims/sparc-scarcity-universality/sim.json",
+      "blob_oid": "9f0879430f7b229b5cedb922e5479c33ccdc3cf6",
+      "sha256": "sha256:f84866a81080e9de9384d02e34a79a698eb17f4c6862602e95bf03520c6d7f1d",
+      "bytes": 812,
+      "commit_metadata": "a1c430db54d585048ec85c4e7c47141db634f398\n2026-09-06T02:28:14+00:00\n2026-09-06T02:28:14+00:00\nfeat: Preserve the original electron animation's continuous fold in a c… [ORB-11374]\n"
+    },
+    "text": "{\n  \"slug\": \"sparc-scarcity-universality\",\n  \"title\": \"SPARC scarcity universality test\",\n  \"kind\": \"py\",\n  \"entry\": \"main.py\",\n  \"status\": \"active\",\n  \"created\": \"2026-07-12\",\n  \"topics\": [\n    \"gravity\",\n    \"galaxy-rotation\",\n    \"model-fitting\",\n    \"sparc\",\n    \"radial-acceleration-relation\"\n  ],\n  \"family\": \"gravity-as-scarcity\",\n  \"summary\": \"Across 149 SPARC galaxies beta_i tracks disk scale (rho=0.343, p=1.86e-5), the per-galaxy model wins by 51,723 AIC, and the predeclared fixed-length kill condition is met.\",\n  \"provenance\": {\n    \"almanac\": \"15-discussions/26-07/gravity-as-scarcity-of-space.md\",\n    \"orbit_tasks\": [\"ORB-10169\", \"ORB-10168\", \"ORB-10077\"],\n    \"dataset\": \"astrolabe/data/processed/catalog/sparc_{galaxies,rotcurves}.parquet\",\n    \"extends\": \"scarcity-rotation-curve-fit\"\n  }\n}\n",
+    "commit_object": "tree 8d851030602405b11b7166108b09cf9cd5664329\nparent 148b668391f575466282eaa81aab0dc943846a87\nauthor orbit[gpt-6-astra] <agent@orbit.invalid> 1788661694 +0000\ncommitter orbit <orbit@orbit.local> 1788661694 +0000\n\nfeat: Preserve the original electron animation's continuous fold in a c… [ORB-11374]\n\nPreserve the original electron animation's continuous fold in a computed-field view\n\nPlanned-By: codex\n"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "source",
+    "availability": "available",
+    "snapshot_digest": "sha256:f84866a81080e9de9384d02e34a79a698eb17f4c6862602e95bf03520c6d7f1d",
+    "locator": null,
+    "media_type": "application/json"
+  },
+  "revision_id": "sha256:816837f2d463678c2c4cbe843a4e07626252a7e749d48e1f201e910fa8d8cf67"
+}

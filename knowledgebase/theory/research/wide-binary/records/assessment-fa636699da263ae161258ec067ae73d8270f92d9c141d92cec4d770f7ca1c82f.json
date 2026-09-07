@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "kind": "assessment",
+  "id": "urn:research:principia:assessment:wbsel-cap-truncation-isolation%3Adiagnostic-ORB-11241",
+  "aliases": [
+    "wbsel-cap-truncation-isolation:diagnostic-ORB-11241"
+  ],
+  "activity": "active",
+  "scope": "synthetic-calibration",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "13866b2848fbcce9a1f1ef2d4b97051a65f7e626",
+    "blob_oid": "d349179f3b08155105b5dda896541c56bf94878a",
+    "sha256": "sha256:2c01eac561be3f15e21fae5168f617c0552f6306bd33efc40283ad494b8e8d59",
+    "path": "theory/wide-binary-selection-methodology/claims.json",
+    "selector": "/claims/1",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Historical synthetic/model calibration only; no new scientific adjudication or nature-level inference."
+  ],
+  "missingness": [
+    "upstream-canonical-assessment"
+  ],
+  "legacy": {
+    "status": "mixed",
+    "original_claim": {
+      "id": "wbsel-cap-truncation-isolation",
+      "family": "wide-binary-selection-methodology",
+      "kind": "model-property",
+      "status": "mixed",
+      "claim": "The operational max_stars=8000 brightness cap is not itself the source of any geometry-coupled v-tilde(g_N) bias: the uncapped (R1-uncapped) and heavily-capped (R1-heavycap, max_stars=2000) arms of the same nonuniform-footprint population agree with the baseline-cap arm (R1-baseline) within the seed-to-seed bootstrap uncertainty in every populated bin.",
+      "kill": "R1-uncapped or R1-heavycap median B_i differs from R1-baseline by more than the combined seed-to-seed uncertainty in any populated bin.",
+      "evidence": "ORB-11222's cataloged frozen run at Orrery 28dd5c72 finds a heavy-cap deviation beyond combined uncertainty, but failed R0 prevents isolation of an apparatus effect. The unresolved result is retained without retuning; ORB-11241 owns diagnosis.",
+      "links": [
+        "../../studies/wide-binary-selection-bias-preregistration.md"
+      ],
+      "in_doc_ledger": true
+    },
+    "diagnostic_control": {
+      "classification": "undetermined",
+      "control": "R1 geometry/truncation and cap isolation",
+      "evidence": "The zero-injection null itself spans B_i in [-0.0945, +0.1655] with sd 0.0418; 34.2% of null seed-bins already sit at or above the frozen 0.04 threshold, so the threshold lies inside the null floor. The reproducibility clause (|median| > 1.4826*MAD) fires on a true null 44.1% of the time at n=3 and 24.3% at n=5, and the cap comparison disagrees spuriously 16.7% of the time.",
+      "frozen_outcome": "FAIL",
+      "locus": "decision layer cannot support a verdict either way",
+      "protocol_note": "not reclassified as a pass: the frozen arms genuinely cleared the frozen threshold, and the reproducibility clause is the protocol's own, faithfully implemented. The claim is only that this decision layer cannot distinguish that result from its own null, so the arms neither support nor refute the geometry hypothesis as scored"
+    }
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "claim": {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:wbsel-cap-truncation-isolation",
+      "revision_id": "sha256:3d205cb5bf4882084a7b7b7ecb8a2781ef468ccb1b16ae6a8070a2f50b6c15d9",
+      "source_revision": "13866b2848fbcce9a1f1ef2d4b97051a65f7e626",
+      "status": "pending"
+    },
+    "verdict": "inconclusive",
+    "legacy_verdict": "mixed",
+    "inference": "historical",
+    "basis": "legacy-report",
+    "controls": "failed",
+    "rationale": "ORB-11241 diagnostic annotation; original verdict unchanged.\n{\n  \"classification\": \"undetermined\",\n  \"control\": \"R1 geometry/truncation and cap isolation\",\n  \"evidence\": \"The zero-injection null itself spans B_i in [-0.0945, +0.1655] with sd 0.0418; 34.2% of null seed-bins already sit at or above the frozen 0.04 threshold, so the threshold lies inside the null floor. The reproducibility clause (|median| > 1.4826*MAD) fires on a true null 44.1% of the time at n=3 and 24.3% at n=5, and the cap comparison disagrees spuriously 16.7% of the time.\",\n  \"frozen_outcome\": \"FAIL\",\n  \"locus\": \"decision layer cannot support a verdict either way\",\n  \"protocol_note\": \"not reclassified as a pass: the frozen arms genuinely cleared the frozen threshold, and the reproducibility clause is the protocol's own, faithfully implemented. The claim is only that this decision layer cannot distinguish that result from its own null, so the arms neither support nor refute the geometry hypothesis as scored\"\n}",
+    "evidence": [
+      {
+        "repository": "principia",
+        "id": "urn:research:principia:artifact:source%3Aorrery%3A2e097e606bc751ba1a8b29ebdc5aab6bbd961c43%3Alab%2Fsims%2Fwide-binary-control-diagnosis%2Fassets%2Fresults.json",
+        "revision_id": "sha256:fd085edebbe99083ca8343a69c43125c71517c0f8df38566eaca5eb3350be5d2",
+        "source_revision": null,
+        "status": "pending"
+      }
+    ]
+  },
+  "revision_id": "sha256:fa636699da263ae161258ec067ae73d8270f92d9c141d92cec4d770f7ca1c82f"
+}

@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:principia:artifact:source%3Aorrery%3Aa1c430db54d585048ec85c4e7c47141db634f398%3Alab%2Fsims%2Fsolar-system-nbody%2Fbaseline%2Fsummary.json",
+  "aliases": [
+    "source:orrery:a1c430db54d585048ec85c4e7c47141db634f398:lab/sims/solar-system-nbody/baseline/summary.json"
+  ],
+  "activity": "active",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": null,
+    "blob_oid": null,
+    "sha256": "sha256:d74c5b105cc6b7eb1d7361032ddd4d6844c5eb3ba72e4e8a3201909f3d1f21a8",
+    "path": "upstream-snapshot/orrery/a1c430db54d585048ec85c4e7c47141db634f398/lab/sims/solar-system-nbody/baseline/summary.json",
+    "selector": "$",
+    "historical": true,
+    "working_tree": true
+  },
+  "limitations": [
+    "Immutable archival source copy; upstream scientific ownership is unchanged."
+  ],
+  "missingness": [
+    "git-revision",
+    "owner-ingestion-git-pin",
+    "scope",
+    "upstream-canonical-record"
+  ],
+  "legacy": {
+    "source_pin": {
+      "repository": "orrery",
+      "git_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "path": "lab/sims/solar-system-nbody/baseline/summary.json",
+      "blob_oid": "d013e3ea9caec6dab71cfebad01bfe2b8fe4925e",
+      "sha256": "sha256:d74c5b105cc6b7eb1d7361032ddd4d6844c5eb3ba72e4e8a3201909f3d1f21a8",
+      "bytes": 2961,
+      "commit_metadata": "a1c430db54d585048ec85c4e7c47141db634f398\n2026-09-06T02:28:14+00:00\n2026-09-06T02:28:14+00:00\nfeat: Preserve the original electron animation's continuous fold in a c… [ORB-11374]\n"
+    },
+    "text": "{\n  \"task\": \"ORB-10093\",\n  \"question\": \"How far does the untuned Newtonian nine-body baseline drift from matched Horizons ephemerides?\",\n  \"frame\": \"heliocentric ICRF (inertial integration; instantaneous Sun state subtracted at output)\",\n  \"epochs\": {\n    \"timescale\": \"TDB\",\n    \"start_jd\": 2457388.5,\n    \"step_days\": 10.0,\n    \"count\": 366\n  },\n  \"integrator\": {\n    \"method\": \"DOP853\",\n    \"rtol\": 1e-12,\n    \"atol\": 1e-14,\n    \"max_step_days\": 2.0,\n    \"function_evaluations\": 25652,\n    \"max_relative_energy_drift\": 7.27938557305255e-14,\n    \"convergence\": {\n      \"refined_max_step_days\": 1.0,\n      \"max_position_shift_au\": 2.23256360620816e-09,\n      \"refined_function_evaluations\": 44924\n    }\n  },\n  \"gm_source\": \"JPL DE440 astrodynamic parameters (https://ssd.jpl.nasa.gov/astro_par.html)\",\n  \"gm_km3_s2\": {\n    \"sun\": 132712440041.27942,\n    \"mercury\": 22031.868551,\n    \"venus\": 324858.592,\n    \"earth\": 403503.23562500003,\n    \"mars\": 42828.375816,\n    \"jupiter\": 126712764.1,\n    \"saturn\": 37940584.8418,\n    \"uranus\": 5794556.4,\n    \"neptune\": 6836527.10058\n  },\n  \"initial_conditions\": \"first epoch of Astrolabe ephemeris/<target>_2016_2026, heliocentric ICRF\",\n  \"omissions\": [\n    \"relativistic corrections\",\n    \"asteroids\",\n    \"solar oblateness and mass loss\",\n    \"individually resolved moons\"\n  ],\n  \"residuals_baseline_minus_horizons\": {\n    \"mercury\": {\n      \"n_epochs\": 366,\n      \"rms_dr_au\": 1.5623024805267282e-05,\n      \"max_dr_au\": 3.524516928342056e-05,\n      \"max_dr_epoch_jd_tdb\": 2460998.5\n    },\n    \"venus\": {\n      \"n_epochs\": 366,\n      \"rms_dr_au\": 3.544886440308734e-06,\n      \"max_dr_au\": 6.117570744576066e-06,\n      \"max_dr_epoch_jd_tdb\": 2460958.5\n    },\n    \"earth\": {\n      \"n_epochs\": 366,\n      \"rms_dr_au\": 2.489045611360098e-06,\n      \"max_dr_au\": 4.277495587441361e-06,\n      \"max_dr_epoch_jd_tdb\": 2460938.5\n    },\n    \"mars\": {\n      \"n_epochs\": 366,\n      \"rms_dr_au\": 8.398708263070521e-07,\n      \"max_dr_au\": 1.645438039946203e-06,\n      \"max_dr_epoch_jd_tdb\": 2461038.5\n    },\n    \"jupiter\": {\n      \"n_epochs\": 366,\n      \"rms_dr_au\": 1.8381541149827567e-07,\n      \"max_dr_au\": 3.136751384737447e-07,\n      \"max_dr_epoch_jd_tdb\": 2461018.5\n    },\n    \"saturn\": {\n      \"n_epochs\": 366,\n      \"rms_dr_au\": 4.252971125037071e-08,\n      \"max_dr_au\": 9.386743036193509e-08,\n      \"max_dr_epoch_jd_tdb\": 2461038.5\n    },\n    \"uranus\": {\n      \"n_epochs\": 366,\n      \"rms_dr_au\": 4.075524247792095e-09,\n      \"max_dr_au\": 6.483656771955529e-09,\n      \"max_dr_epoch_jd_tdb\": 2461038.5\n    },\n    \"neptune\": {\n      \"n_epochs\": 366,\n      \"rms_dr_au\": 1.7485420194885634e-08,\n      \"max_dr_au\": 3.642356311546413e-08,\n      \"max_dr_epoch_jd_tdb\": 2461038.5\n    }\n  },\n  \"output\": {\n    \"path\": \"baseline/newtonian_2016_2026.parquet\",\n    \"rows\": 2928,\n    \"targets\": [\n      \"mercury\",\n      \"venus\",\n      \"earth\",\n      \"mars\",\n      \"jupiter\",\n      \"saturn\",\n      \"uranus\",\n      \"neptune\"\n    ]\n  }\n}\n",
+    "commit_object": "tree 8d851030602405b11b7166108b09cf9cd5664329\nparent 148b668391f575466282eaa81aab0dc943846a87\nauthor orbit[gpt-6-astra] <agent@orbit.invalid> 1788661694 +0000\ncommitter orbit <orbit@orbit.local> 1788661694 +0000\n\nfeat: Preserve the original electron animation's continuous fold in a c… [ORB-11374]\n\nPreserve the original electron animation's continuous fold in a computed-field view\n\nPlanned-By: codex\n"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "source",
+    "availability": "available",
+    "snapshot_digest": "sha256:d74c5b105cc6b7eb1d7361032ddd4d6844c5eb3ba72e4e8a3201909f3d1f21a8",
+    "locator": null,
+    "media_type": "application/json"
+  },
+  "revision_id": "sha256:23f74f68ac3d12dea440742ae0b9191dcbca55685e315ff42284a1ed0ef2c2b9"
+}

@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Agates%2Fclosed-system-moving-existence.json",
+  "aliases": [
+    "source:principia:4e3b02c59b694d85016915177ef1ae157895ed7b:gates/closed-system-moving-existence.json"
+  ],
+  "activity": "active",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "169c6d0c57fd25e44fd3dca8739bfb2b1046f519",
+    "sha256": "sha256:d06122414e0f46f70e0567c277866212e2ee3790a50bd4e9595140e3b3eac788",
+    "path": "gates/closed-system-moving-existence.json",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Immutable archival source copy; upstream scientific ownership is unchanged."
+  ],
+  "missingness": [
+    "scope"
+  ],
+  "legacy": {
+    "source_pin": {
+      "repository": "principia",
+      "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "path": "gates/closed-system-moving-existence.json",
+      "blob_oid": "169c6d0c57fd25e44fd3dca8739bfb2b1046f519",
+      "sha256": "sha256:d06122414e0f46f70e0567c277866212e2ee3790a50bd4e9595140e3b3eac788",
+      "bytes": 2203,
+      "commit_metadata": "4e3b02c59b694d85016915177ef1ae157895ed7b\n2026-09-06T02:49:35+00:00\n2026-09-06T02:49:35+00:00\nfeat: Migrate the wide-binary control pilot into versioned scientific r… [ORB-11378]\n"
+    },
+    "text": "{\n  \"id\": \"closed-system-moving-existence\",\n  \"doc\": \"moving-sources-in-the-closed-system\",\n  \"family\": \"gravity-as-scarcity\",\n  \"kind\": \"existence\",\n  \"owed_object\": \"Does a non-cavitating moving solution exist at solar-system winds, with a floor that still lets matter be an excitation?\",\n  \"inherited_postulates\": [\n    \"postulate-rolling-rule\",\n    \"postulate-elliptic-sigma\",\n    \"postulate-shear-law\"\n  ],\n  \"new_postulates\": [],\n  \"control\": \"Pure-wind state (already passed: zero consumption). No PPN numbers, observational ray-tracing fits, or galaxy fits until this card passes; the coefficient reduction as algebra (ppn-reduction-of-the-settled-flow, ORB-11039) and scale estimates (ORB-10939) are allowed — its structural rows move on cataloged evidence (ORB-11040 symbolic, ORB-11041 far-field) while phenomenology numbers stay blocked — amended 2026-08-28 to match the 2026-08-21 arbitration's named obligation.\",\n  \"kill\": \"Cavitation in physical units at Earth/Sun orbital winds, or no regular settled flow that is an excitation medium.\",\n  \"forbidden_reopens\": [\n    \"scarcity-fixed-beta-universality\",\n    \"scarcity-static-photon-gamma\",\n    \"scarcity-static-clocks\",\n    \"scarcity-counting-produces-gp\"\n  ],\n  \"blocked_phenomenology\": [\n    \"ppn\",\n    \"photon-modulation\",\n    \"sparc\",\n    \"drag-ephemerides\"\n  ],\n  \"comparator\": \"GR mass-frame Schwarzschild (uniform U is gauge). Not Galilean U+v_GP.\",\n  \"claims\": [\n    \"moving-cavitation-floor\",\n    \"moving-theorem-1-bernoulli-realized\",\n    \"moving-theorem-2-wake-not-gauge\",\n    \"ppn-slots-far-field\",\n    \"ppn-half-order-hazard\",\n    \"ppn-alpha-contact\"\n  ],\n  \"status\": \"closed\",\n  \"closed_on\": \"2026-09-04\",\n  \"closed_by\": \"Daniel: explicit family retirement\",\n  \"closure\": \"Retired by Daniel on 2026-09-04: discontinue the gravity-as-scarcity research family, including the shear-flow completion, moving-source repair, and PPN continuation. Preserve all evidence and individual claim verdicts; no follow-up or reopening without Daniel's explicit authorization.\",\n  \"reopen_requires\": \"Explicit authorization from Daniel; this closure does not assert the existence claim was proven false in every possible completion.\"\n}\n",
+    "commit_object": "tree 682cccb1cf19c89c2c5f4371c14ed2b384d2ae8c\nparent 13866b2848fbcce9a1f1ef2d4b97051a65f7e626\nauthor orbit[gpt-6-astra] <agent@orbit.invalid> 1788662975 +0000\ncommitter orbit <orbit@orbit.local> 1788662975 +0000\n\nfeat: Migrate the wide-binary control pilot into versioned scientific r… [ORB-11378]\n\nMigrate the wide-binary control pilot into versioned scientific records\n\nPlanned-By: codex\n"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "source",
+    "availability": "available",
+    "snapshot_digest": "sha256:d06122414e0f46f70e0567c277866212e2ee3790a50bd4e9595140e3b3eac788",
+    "locator": null,
+    "media_type": "application/json"
+  },
+  "revision_id": "sha256:8d319049aa6039272368db3af801fda3587bd2250f6e1b64cc3a0d1c5820ea54"
+}

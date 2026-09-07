@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "kind": "claim",
+  "id": "urn:research:principia:claim:moving-source-2beta-not-4beta",
+  "aliases": [
+    "moving-source-2beta-not-4beta"
+  ],
+  "activity": "resolved",
+  "scope": "derivation",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "f55e1dace027658053ccc8f5b740363237c0eda4",
+    "sha256": "sha256:34d8fd1300c47a5df5ea2300abe6ba3ac4e6c29d546f03686710d88e1297d681",
+    "path": "theory/moving-source-field-consistency/claims.json",
+    "selector": "/claims/3",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Exact historical verdict and stated assumptions only; migration makes no new scientific inference."
+  ],
+  "missingness": [],
+  "legacy": {
+    "id": "moving-source-2beta-not-4beta",
+    "family": "retarded-scarcity-wake",
+    "kind": "derived",
+    "status": "untested",
+    "claim": "The parent's first-order acceleration contrast is \\(2\\beta_g\\), not \\(4\\beta_g\\), when its declared rule \\(\\mathbf{a}=-\\nabla\\Phi\\) is used",
+    "evidence": "§ The corrected first-order contrast; the derivation is analytic but not yet represented by an admissible Orrery fixture",
+    "links": [],
+    "in_doc_ledger": true,
+    "kill": "Catalog the declared a=−∇Φ contrast."
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "claim",
+    "statement": "The parent's first-order acceleration contrast is \\(2\\beta_g\\), not \\(4\\beta_g\\), when its declared rule \\(\\mathbf{a}=-\\nabla\\Phi\\) is used",
+    "domain": "model"
+  },
+  "revision_id": "sha256:00514885d5cfa70022236af387d14891e8930b6670e96622a07bbb0b257eabfc"
+}

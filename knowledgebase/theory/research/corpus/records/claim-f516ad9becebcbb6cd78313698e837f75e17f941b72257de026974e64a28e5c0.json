@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "kind": "claim",
+  "id": "urn:research:principia:claim:two-substance-packet-linear-modes",
+  "aliases": [
+    "two-substance-packet-linear-modes"
+  ],
+  "activity": "active",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "94e76368a84e00ed742153d77b3d25dd5962c664",
+    "sha256": "sha256:c95d48cf673efa43d6d77005c73cadea42fac1ff00da556a7b7fd260df14f9a6",
+    "path": "theory/two-substance-vortex-vacuum/claims.json",
+    "selector": "/claims/9",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Exact historical verdict and stated assumptions only; migration makes no new scientific inference."
+  ],
+  "missingness": [
+    "scope"
+  ],
+  "legacy": {
+    "id": "two-substance-packet-linear-modes",
+    "family": "two-substance-vortex-vacuum",
+    "kind": "model-property",
+    "status": "supported",
+    "claim": "Linearized about a uniform rest background, the existing packet Hamiltonian and continuity/flux system has 2+2d first-order fields, four propagating longitudinal acoustic branches, and 2(d−1) transverse zero-frequency current modes; there is no Gauss constraint and no propagating transverse polarization. Equal c₊=c₋ degenerates the two longitudinal cones without converting either into a Maxwell polarization.",
+    "evidence": "**Validated apparatus result (ORB-11220, Orrery `73c9bd53e963e44bb365992c1df87a1077cc996f`, [two-substance-packet-linear-symbol](../../../orrery/lab/sims/two-substance-packet-linear-symbol/)):** the independent Fourier operator and actual discretized time evolution agree (maximum frequency relative error 6.58×10⁻⁵; minimum longitudinal projector 0.9999999999999997). Across the frozen U0/U1/U2/B0/T0 controls and refinements, it finds four longitudinal propagating roots, frozen transverse currents, and no Gauss constraint; equal-speed degeneracy is scalar, not Maxwell. This supports the stated property of this frozen apparatus only, not a no-go for a two-component order-parameter recast, and reopens no gravity wall.",
+    "links": [
+      "packet-hamiltonian-linearization.md",
+      "../../studies/maxwell-mode-content-and-two-fluid-acoustics.md",
+      "../../../orrery/lab/sims/two-substance-dynamical-packet/",
+      "../../../orrery/lab/sims/two-substance-packet-linear-symbol/"
+    ],
+    "in_doc_ledger": true,
+    "tags": [
+      "existence"
+    ],
+    "kill": "Cataloged orrery fixture two-substance-packet-linear-symbol finds two propagating transverse polarizations with ω=±c|k|, or a Gauss-type constraint that removes the longitudinal branches."
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "claim",
+    "statement": "Linearized about a uniform rest background, the existing packet Hamiltonian and continuity/flux system has 2+2d first-order fields, four propagating longitudinal acoustic branches, and 2(d−1) transverse zero-frequency current modes; there is no Gauss constraint and no propagating transverse polarization. Equal c₊=c₋ degenerates the two longitudinal cones without converting either into a Maxwell polarization.",
+    "domain": "model"
+  },
+  "revision_id": "sha256:f516ad9becebcbb6cd78313698e837f75e17f941b72257de026974e64a28e5c0"
+}

@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:principia:artifact:source%3Aorrery%3Aa1c430db54d585048ec85c4e7c47141db634f398%3Alab%2Fsims%2Fswirl-ball%2Fsim.json",
+  "aliases": [
+    "source:orrery:a1c430db54d585048ec85c4e7c47141db634f398:lab/sims/swirl-ball/sim.json"
+  ],
+  "activity": "active",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": null,
+    "blob_oid": null,
+    "sha256": "sha256:35be247b7cf626f05988d5ff254e5efed9fa9b7cd0914adba9876b901ae7a972",
+    "path": "upstream-snapshot/orrery/a1c430db54d585048ec85c4e7c47141db634f398/lab/sims/swirl-ball/sim.json",
+    "selector": "$",
+    "historical": true,
+    "working_tree": true
+  },
+  "limitations": [
+    "Immutable archival source copy; upstream scientific ownership is unchanged."
+  ],
+  "missingness": [
+    "git-revision",
+    "owner-ingestion-git-pin",
+    "scope",
+    "upstream-canonical-record"
+  ],
+  "legacy": {
+    "source_pin": {
+      "repository": "orrery",
+      "git_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "path": "lab/sims/swirl-ball/sim.json",
+      "blob_oid": "b667d42ca826902685b6108b37c17b9ed91da2e2",
+      "sha256": "sha256:35be247b7cf626f05988d5ff254e5efed9fa9b7cd0914adba9876b901ae7a972",
+      "bytes": 549,
+      "commit_metadata": "a1c430db54d585048ec85c4e7c47141db634f398\n2026-09-06T02:28:14+00:00\n2026-09-06T02:28:14+00:00\nfeat: Preserve the original electron animation's continuous fold in a c… [ORB-11374]\n"
+    },
+    "text": "{\n  \"slug\": \"swirl-ball\",\n  \"title\": \"Swirl-ball electron model\",\n  \"kind\": \"web\",\n  \"entry\": \"index.html\",\n  \"status\": \"imported\",\n  \"created\": \"2026-06-27\",\n  \"topics\": [\n    \"electromagnetism\",\n    \"electron-models\"\n  ],\n  \"family\": \"swirl-photon\",\n  \"summary\": \"The swirl-ball picture of the electron (v6, latest iteration; v3/v5 kept under variants/). Companion field capture in assets/.\",\n  \"provenance\": {\n    \"almanac\": \"15-discussions/26-06/swirl-photon-correspondence.md\",\n    \"imported_from\": \"almanac/_attachments/swirl-ball-sim/\"\n  }\n}\n",
+    "commit_object": "tree 8d851030602405b11b7166108b09cf9cd5664329\nparent 148b668391f575466282eaa81aab0dc943846a87\nauthor orbit[gpt-6-astra] <agent@orbit.invalid> 1788661694 +0000\ncommitter orbit <orbit@orbit.local> 1788661694 +0000\n\nfeat: Preserve the original electron animation's continuous fold in a c… [ORB-11374]\n\nPreserve the original electron animation's continuous fold in a computed-field view\n\nPlanned-By: codex\n"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "source",
+    "availability": "available",
+    "snapshot_digest": "sha256:35be247b7cf626f05988d5ff254e5efed9fa9b7cd0914adba9876b901ae7a972",
+    "locator": null,
+    "media_type": "application/json"
+  },
+  "revision_id": "sha256:c43cde83b9124e2e7c50e1d51f1186dc8f1b1f0ac98ee8b2ec4a91e853fada0e"
+}

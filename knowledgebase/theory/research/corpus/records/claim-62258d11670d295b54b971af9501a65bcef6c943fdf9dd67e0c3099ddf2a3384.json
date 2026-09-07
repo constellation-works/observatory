@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "kind": "claim",
+  "id": "urn:research:principia:claim:moving-source-cherenkov-bound",
+  "aliases": [
+    "moving-source-cherenkov-bound"
+  ],
+  "activity": "resolved",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "f55e1dace027658053ccc8f5b740363237c0eda4",
+    "sha256": "sha256:34d8fd1300c47a5df5ea2300abe6ba3ac4e6c29d546f03686710d88e1297d681",
+    "path": "theory/moving-source-field-consistency/claims.json",
+    "selector": "/claims/10",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Exact historical verdict and stated assumptions only; migration makes no new scientific inference."
+  ],
+  "missingness": [
+    "scope"
+  ],
+  "legacy": {
+    "id": "moving-source-cherenkov-bound",
+    "family": "retarded-scarcity-wake",
+    "kind": "nature",
+    "status": "supported",
+    "claim": "A conventionally coupled subluminal gravitational mode is tightly constrained by gravitational Cherenkov losses",
+    "evidence": "Previously conjecture pending a local study note; supported 2026-08-28 by [moving-source-gravity-bounds](../../studies/moving-source-gravity-bounds.md) § gravitational Cherenkov: Moore & Nelson 2001 give \\(c-c_g<2\\times10^{-15}c\\) for Galactic cosmic-ray origins and ~\\(2\\times10^{-19}c\\) for extragalactic; scope is a conventionally coupled mode. The Branch C potential is exactly such a mode, so the bound pins its speed parameter ([Branch C](branch-c.md) § Walls; the scalar-mode extension of the graviton scaling is flagged there as conjecture)",
+    "links": [
+      "../../studies/moving-source-gravity-bounds.md",
+      "branch-c.md"
+    ],
+    "in_doc_ledger": true
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "claim",
+    "statement": "A conventionally coupled subluminal gravitational mode is tightly constrained by gravitational Cherenkov losses",
+    "domain": "nature"
+  },
+  "revision_id": "sha256:62258d11670d295b54b971af9501a65bcef6c943fdf9dd67e0c3099ddf2a3384"
+}

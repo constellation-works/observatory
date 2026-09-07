@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:principia:artifact:source%3Aorrery%3Aa1c430db54d585048ec85c4e7c47141db634f398%3Alab%2Fsims%2Fsolar-system-nbody%2FREADME.md",
+  "aliases": [
+    "source:orrery:a1c430db54d585048ec85c4e7c47141db634f398:lab/sims/solar-system-nbody/README.md"
+  ],
+  "activity": "active",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": null,
+    "blob_oid": null,
+    "sha256": "sha256:1efd6a9943ffb7ee86679082053c87a1b61a4c6e81215041dd3506f64bc9727c",
+    "path": "upstream-snapshot/orrery/a1c430db54d585048ec85c4e7c47141db634f398/lab/sims/solar-system-nbody/README.md",
+    "selector": "$",
+    "historical": true,
+    "working_tree": true
+  },
+  "limitations": [
+    "Immutable archival source copy; upstream scientific ownership is unchanged."
+  ],
+  "missingness": [
+    "git-revision",
+    "owner-ingestion-git-pin",
+    "scope",
+    "upstream-canonical-record"
+  ],
+  "legacy": {
+    "source_pin": {
+      "repository": "orrery",
+      "git_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "path": "lab/sims/solar-system-nbody/README.md",
+      "blob_oid": "c1313f749d65e95da05cd2082ac4b4e8d703a35f",
+      "sha256": "sha256:1efd6a9943ffb7ee86679082053c87a1b61a4c6e81215041dd3506f64bc9727c",
+      "bytes": 4172,
+      "commit_metadata": "a1c430db54d585048ec85c4e7c47141db634f398\n2026-09-06T02:28:14+00:00\n2026-09-06T02:28:14+00:00\nfeat: Preserve the original electron animation's continuous fold in a c… [ORB-11374]\n"
+    },
+    "text": "# Solar-system n-body simulator\n\nThe browser entry remains the imported interactive nine-body canvas simulator. ORB-10093 adds\nan independent precision-export lane that follows Astrolabe's load-bearing baseline exchange\ncontract.\n\n## Fitted scarcity-gradient falsifier (ORB-10097)\n\nFrom the Orrery root, with the same local ephemerides, baseline export, and Astrolabe\n`derived/<planet>_newtonian_residuals` datasets present:\n\n```bash\nuv run lab/sims/solar-system-nbody/integrate_scarcity.py\n```\n\nThe experiment concurrently integrates pure Newtonian and multiplicative-scarcity systems on\nORB-10093's exact initial conditions, frame, 366 epochs, and DOP853 tolerances. For each planet,\nthe multiplicative reading scales the full heliocentric Newtonian acceleration by\n\n```text\nq(r_gal)/q(R0) = exp[(beta F(R0)/R0²) (r_gal-R0)]\n```\n\nat AU scale. It imports `beta=5.25 kpc`, `R0=8.25 kpc`, and the ORB-10077/10082 profile\n(`disk scale=2.6 kpc`, `bulge fraction=0.2`, `bulge scale=0.7 kpc`) unchanged. No parameter is\nfitted. The primary fixed ICRF axis is galactocentric outward, opposite the conventional Galactic\ncenter direction at RA `266.4051°`, Dec `−28.936175°`. Six cardinal ICRF axes and `R0=8.122 kpc`\nprovide sensitivity checks. The local exponential drops terms below `1e-15` in `ln(q)` across\nNeptune's orbit.\n\n| Planet | Multiplicative RMS (AU) | Measured omission floor (AU) | Ratio | Primary result |\n|---|---:|---:|---:|---|\n| Mercury | 3.45e-8 | 1.56e-5 | 0.0022 | below |\n| Venus | 8.14e-9 | 3.54e-6 | 0.0023 | below |\n| Earth | 9.18e-9 | 2.49e-6 | 0.0037 | below |\n| Mars | 2.67e-8 | 8.40e-7 | 0.0318 | below |\n| Jupiter | 3.06e-8 | 1.84e-7 | 0.167 | below |\n| Saturn | 3.17e-8 | 4.25e-8 | 0.744 | below |\n| Uranus | 7.72e-9 | 4.08e-9 | 1.895 | **above** |\n| Neptune | 1.92e-9 | 1.75e-8 | 0.110 | below |\n\nUranus is also above its maximum-residual floor (`2.84×`) in the primary orientation. Its RMS\nsignature spans `2.71e-9–1.23e-8 AU` across orientations, so the above-floor outcome is\norientation-dependent; every other planet remains below its RMS floor throughout the cardinal\naxis sweep. Changing `R0` to `8.122 kpc` raises signatures by about 2.5% without changing the\nprimary classifications.\n\nThe screened reading is the explicit zero control: `q=1` leaves the Newtonian equations\nunchanged and produces exactly zero scarcity-minus-Newtonian displacement. Halving the maximum\nstep from two to one day changes any signature coordinate by at most `1.60e-12 AU`. The\nconcurrent Newtonian trajectory agrees with the frozen ORB-10093 export within `4.47e-10 AU` per\ncoordinate. The result tests the multiplicative interpretation only; choosing between that and\nlocal screening belongs to Kepler's theory reconciliation.\n\n## Reproduce the baseline\n\nFrom the Orrery root, with Astrolabe's eight local `ephemeris/*_2016_2026` datasets present:\n\n```bash\nuv run lab/sims/solar-system-nbody/export_baseline.py\n```\n\nThis rewrites `baseline/newtonian_2016_2026.parquet` and `baseline/summary.json`. The combined\nparquet contains all eight planetary-system targets on the exact 366-epoch JD TDB grid, in AU\nand AU/day. The integration is inertial; positions and velocities become heliocentric ICRF only\nwhen the Sun's instantaneous state is subtracted at output.\n\nThe script uses JPL DE440 planetary-system GMs and the first Horizons epoch as its matched\ninitial state. SciPy DOP853 runs with `rtol=1e-12`, `atol=1e-14`, and a predeclared two-day\nmaximum step. Relativistic corrections, asteroids, solar oblateness/mass loss, and individually\nresolved moons are omitted deliberately. `summary.json` reports the resulting residuals without\ntuning them away.\n\n## Untuned result\n\nThe exact Astrolabe residual validator reports Mercury RMS `1.5623e-5 AU` and maximum\n`3.5245e-5 AU`; the other planets are smaller, down to Uranus RMS `4.08e-9 AU`. Relative energy\ndrift is `7.28e-14`, and halving the maximum integrator step from two days to one changes any\nexported coordinate by at most `2.23e-9 AU`. The residuals are therefore dominated by the\nbaseline's omitted physics rather than the chosen numerical step. No parameter was tuned after\nseeing them.\n",
+    "commit_object": "tree 8d851030602405b11b7166108b09cf9cd5664329\nparent 148b668391f575466282eaa81aab0dc943846a87\nauthor orbit[gpt-6-astra] <agent@orbit.invalid> 1788661694 +0000\ncommitter orbit <orbit@orbit.local> 1788661694 +0000\n\nfeat: Preserve the original electron animation's continuous fold in a c… [ORB-11374]\n\nPreserve the original electron animation's continuous fold in a computed-field view\n\nPlanned-By: codex\n"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "source",
+    "availability": "available",
+    "snapshot_digest": "sha256:1efd6a9943ffb7ee86679082053c87a1b61a4c6e81215041dd3506f64bc9727c",
+    "locator": null,
+    "media_type": "text/plain"
+  },
+  "revision_id": "sha256:b0ba103f67744763f5fe382f720b831e559d5268dd7108ee4cfa16a8721d90dd"
+}

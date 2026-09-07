@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "kind": "assessment",
+  "id": "urn:research:principia:assessment:branch-c-first-order-solution%3Alegacy-verdict",
+  "aliases": [
+    "branch-c-first-order-solution:legacy-verdict"
+  ],
+  "activity": "unknown",
+  "scope": "derivation",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "f55e1dace027658053ccc8f5b740363237c0eda4",
+    "sha256": "sha256:34d8fd1300c47a5df5ea2300abe6ba3ac4e6c29d546f03686710d88e1297d681",
+    "path": "theory/moving-source-field-consistency/claims.json",
+    "selector": "/claims/14",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Exact historical verdict and stated assumptions only; migration makes no new scientific inference."
+  ],
+  "missingness": [
+    "exact-evidence-owner-references",
+    "independently-verified-controls",
+    "activity"
+  ],
+  "legacy": {
+    "id": "branch-c-first-order-solution",
+    "family": "retarded-scarcity-wake",
+    "kind": "derived",
+    "status": "untested",
+    "claim": "For the dissipative parameter the uniformly moving point-source solution is \\(\\Phi=-(GM/r)\\exp[-A_1(r)(1+\\cos\\theta)]\\) with \\(A_1(r)=\\beta_g r/2\\ell_\\Gamma\\): a first-order potential dipole growing linearly with radius and independent of central concentration, a first-order tangential force \\(g_0A_1\\sin\\theta\\) toward the trailing side, and no first-order leading/trailing radial contrast; the source-delay parameter gives a rigid offset \\(\\tau_s\\mathbf{w}\\) with \\(A_1=\\lvert\\tau_s\\rvert w/r\\)",
+    "evidence": "[Branch C](branch-c.md) § The first-order moving-source solution (eqs. 3–5); PDE residual and both expansions symbolically checked, uncataloged. This is the \\(A_1=F(\\epsilon_{\\rm boost},\\beta_g,\\rho,\\text{tracer coupling})\\) map this document owed",
+    "links": [
+      "branch-c.md"
+    ],
+    "in_doc_ledger": true,
+    "kill": "Catalog the branch-c-first-order-solution fixture (gates ii–iii): A_1/(kr/2) → 1, radial contrast ∝ k², tangential force → g_0 A_1 sin θ, uniform and Plummer exteriors agree to O(a/r)."
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "claim": {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:branch-c-first-order-solution",
+      "revision_id": "sha256:b6f9a7388d99c44d050bc5efd40745da64d97874c1c39df684db5bbf22951c5f",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    "verdict": "untested",
+    "legacy_verdict": "untested",
+    "inference": "historical",
+    "basis": "legacy-report",
+    "controls": "unknown",
+    "rationale": "[Branch C](branch-c.md) § The first-order moving-source solution (eqs. 3–5); PDE residual and both expansions symbolically checked, uncataloged. This is the \\(A_1=F(\\epsilon_{\\rm boost},\\beta_g,\\rho,\\text{tracer coupling})\\) map this document owed",
+    "evidence": []
+  },
+  "revision_id": "sha256:5ed6d9a96cf2918ea11d34669f1c99f8ead89870c6609378260dc53a7240f58d"
+}

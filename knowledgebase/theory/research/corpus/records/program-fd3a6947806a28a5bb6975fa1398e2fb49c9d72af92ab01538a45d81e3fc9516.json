@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "kind": "program",
+  "id": "urn:research:principia:program:two-substance-vortex-vacuum",
+  "aliases": [
+    "two-substance-vortex-vacuum"
+  ],
+  "activity": "active",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "94e76368a84e00ed742153d77b3d25dd5962c664",
+    "sha256": "sha256:c95d48cf673efa43d6d77005c73cadea42fac1ff00da556a7b7fd260df14f9a6",
+    "path": "theory/two-substance-vortex-vacuum/claims.json",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Exact historical verdict and stated assumptions only; migration makes no new scientific inference."
+  ],
+  "missingness": [
+    "scope"
+  ],
+  "legacy": {
+    "doc": "two-substance-vortex-vacuum",
+    "title": "The two-substance vortex vacuum: particles as substrate defects, charge as winding, gravity as void scarcity",
+    "status": "exploratory",
+    "families": [
+      "two-substance-vortex-vacuum"
+    ],
+    "updated": "2026-09-05",
+    "headline": "No gravitational sector pending a source law derived from S2. EM sign won in 2-D. Packet Hamiltonian linearized: two longitudinal sounds, not Maxwell; equal speeds degenerate cones without polarizations. Live front: one photon sector (recast or a different interaction).",
+    "live_fronts": [
+      "two-substance-photon-sector"
+    ]
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "theory",
+    "title": "The two-substance vortex vacuum: particles as substrate defects, charge as winding, gravity as void scarcity"
+  },
+  "revision_id": "sha256:fd3a6947806a28a5bb6975fa1398e2fb49c9d72af92ab01538a45d81e3fc9516"
+}

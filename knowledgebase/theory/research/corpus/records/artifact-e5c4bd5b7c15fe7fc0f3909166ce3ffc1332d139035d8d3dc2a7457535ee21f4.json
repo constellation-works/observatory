@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Atheory%2Fvortex-electron%2FREADME.md",
+  "aliases": [
+    "source:principia:4e3b02c59b694d85016915177ef1ae157895ed7b:theory/vortex-electron/README.md"
+  ],
+  "activity": "active",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "bf26656911418ee47966f9b98f8c003b369094a8",
+    "sha256": "sha256:43ba6b372c358a9e10c0ee5b28b92dfaa5ec720bacdc98b06ca96ed3a2a84c43",
+    "path": "theory/vortex-electron/README.md",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Immutable archival source copy; upstream scientific ownership is unchanged."
+  ],
+  "missingness": [
+    "scope"
+  ],
+  "legacy": {
+    "source_pin": {
+      "repository": "principia",
+      "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "path": "theory/vortex-electron/README.md",
+      "blob_oid": "bf26656911418ee47966f9b98f8c003b369094a8",
+      "sha256": "sha256:43ba6b372c358a9e10c0ee5b28b92dfaa5ec720bacdc98b06ca96ed3a2a84c43",
+      "bytes": 1871,
+      "commit_metadata": "4e3b02c59b694d85016915177ef1ae157895ed7b\n2026-09-06T02:49:35+00:00\n2026-09-06T02:49:35+00:00\nfeat: Migrate the wide-binary control pilot into versioned scientific r… [ORB-11378]\n"
+    },
+    "text": "---\ntitle: \"The vortex electron vs Bell: local hidden variables to the ceiling\"\nstatus: refuted\nfamilies: [bell-tests]\nalmanac: 15-discussions/26-07/vortex-electron-vs-bell.md\ncreated: 2026-07-09\nupdated: 2026-07-09\n---\n\n# The vortex electron vs Bell\n\n**The idea.** The electron rides its own ripples (a pilot-wave picture); spin outcomes come\nfrom a locally carried axis meeting a detector \"current\" via tilt/friction dynamics. The\nthread rebuilt — largely by independent reinvention — the historical sequence of local\nhidden-variable models (de Broglie, EPR, Belinfante, Bell's own contextual single-spin model,\nHestenes, angle-targeted bias schemes), each repair fixing the objection that killed the last.\n\n**Why it's refuted.** Every variant converged on the same wall: the two-particle CHSH bound\n|S| ≤ 2, which is agnostic to shape, mechanism, and response rule. QM predicts and experiment\nconfirms |S| up to 2√2 ≈ 2.83 (measured ~2.4–2.7 in the 2015 loophole-free tests — see\n[studies/chsh-bounds](../../studies/chsh-bounds.md)). The controlling variable is the *relative*\ndetector angle, chosen at spacelike separation — a quantity that exists at no single location,\nwhich no locally carried answer sheet can respond to. Single-particle contextuality survives;\ntwo-particle locality does not.\n\nThis doc stays per the house rule: **a refuted branch is a result.** It is the most\ninstructive artifact in the repo — it shows *why* locality can't be rescued this way.\n\n## Contents\n\n- [Evidence ledger](evidence-ledger.md)\n- [Related](related.md)\n- [Open questions](open-questions.md)\n\n\n## What survives\n\n- The pilot-wave *interference* story for a single particle is not what Bell kills; Bohmian\n  mechanics survives by paying with explicit nonlocality.\n- The [swirl-photon](../swirl-photon/) correspondence stands independently of this refutation.\n",
+    "commit_object": "tree 682cccb1cf19c89c2c5f4371c14ed2b384d2ae8c\nparent 13866b2848fbcce9a1f1ef2d4b97051a65f7e626\nauthor orbit[gpt-6-astra] <agent@orbit.invalid> 1788662975 +0000\ncommitter orbit <orbit@orbit.local> 1788662975 +0000\n\nfeat: Migrate the wide-binary control pilot into versioned scientific r… [ORB-11378]\n\nMigrate the wide-binary control pilot into versioned scientific records\n\nPlanned-By: codex\n"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "source",
+    "availability": "available",
+    "snapshot_digest": "sha256:43ba6b372c358a9e10c0ee5b28b92dfaa5ec720bacdc98b06ca96ed3a2a84c43",
+    "locator": null,
+    "media_type": "text/plain"
+  },
+  "revision_id": "sha256:e5c4bd5b7c15fe7fc0f3909166ce3ffc1332d139035d8d3dc2a7457535ee21f4"
+}

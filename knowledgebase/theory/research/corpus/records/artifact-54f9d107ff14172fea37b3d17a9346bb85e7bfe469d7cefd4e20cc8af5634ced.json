@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:principia:artifact:source%3Aorrery%3Aa1c430db54d585048ec85c4e7c47141db634f398%3Alab%2Fsims%2Fppn-reduction-symbolic-checks%2Fassets%2Fresults.json",
+  "aliases": [
+    "source:orrery:a1c430db54d585048ec85c4e7c47141db634f398:lab/sims/ppn-reduction-symbolic-checks/assets/results.json"
+  ],
+  "activity": "active",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": null,
+    "blob_oid": null,
+    "sha256": "sha256:3ec580fa4799b83db49df2193b82687d526be9ad5a9890e06eefd6e6cf8e6634",
+    "path": "upstream-snapshot/orrery/a1c430db54d585048ec85c4e7c47141db634f398/lab/sims/ppn-reduction-symbolic-checks/assets/results.json",
+    "selector": "$",
+    "historical": true,
+    "working_tree": true
+  },
+  "limitations": [
+    "Immutable archival source copy; upstream scientific ownership is unchanged."
+  ],
+  "missingness": [
+    "git-revision",
+    "owner-ingestion-git-pin",
+    "scope",
+    "upstream-canonical-record"
+  ],
+  "legacy": {
+    "source_pin": {
+      "repository": "orrery",
+      "git_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "path": "lab/sims/ppn-reduction-symbolic-checks/assets/results.json",
+      "blob_oid": "43fc6e57162e14d2d60a08858ea2554b52d55dc4",
+      "sha256": "sha256:3ec580fa4799b83db49df2193b82687d526be9ad5a9890e06eefd6e6cf8e6634",
+      "bytes": 6403,
+      "commit_metadata": "a1c430db54d585048ec85c4e7c47141db634f398\n2026-09-06T02:28:14+00:00\n2026-09-06T02:28:14+00:00\nfeat: Preserve the original electron animation's continuous fold in a c… [ORB-11374]\n"
+    },
+    "text": "{\n  \"all_passed\": true,\n  \"engine\": \"sympy-1.14.0\",\n  \"gates\": [\n    {\n      \"details\": {\n        \"explicit_wind_derivative_at_fixed_u_is_zero\": true,\n        \"metric_after_v_equals_u_minus_U\": \"Matrix([\\n[-c**2 + u_x**2 + u_y**2 + u_z**2, -u_x, -u_y, -u_z],\\n[                            -u_x,    1,    0,    0],\\n[                            -u_y,    0,    1,    0],\\n[                            -u_z,    0,    0,    1]])\",\n        \"transformed_metric_equals_pg_of_u\": true\n      },\n      \"name\": \"statement_0_reservoir_pg_form\",\n      \"passed\": true\n    },\n    {\n      \"details\": {\n        \"exact_minkowski_pullback\": true,\n        \"nonzero_components\": 0,\n        \"orders_in_U\": \"all\",\n        \"riemann_components_checked\": 256\n      },\n      \"name\": \"pure_wind_full_riemann_flatness\",\n      \"passed\": true\n    },\n    {\n      \"details\": {\n        \"cross_terms_vanish\": true,\n        \"exact_schwarzschild\": true,\n        \"exact_spatial_stretch\": true,\n        \"gp_g_rr\": \"-1/(epsilon - 1)\",\n        \"gp_lapse_squared\": \"1 - epsilon\"\n      },\n      \"name\": \"steady_diagonalization_and_static_schwarzschild\",\n      \"passed\": true\n    },\n    {\n      \"details\": {\n        \"anisotropic_piece_nonzero\": true,\n        \"anisotropic_piece_numerator\": [\n          \"-12*y*z\",\n          \"12*x*z\",\n          \"-4*x*y\"\n        ],\n        \"anisotropic_test_field\": [\n          \"x\",\n          \"2*y\",\n          \"3*z\"\n        ],\n        \"static_gp_anisotropy_piece_numerator\": [\n          \"0\",\n          \"0\",\n          \"0\"\n        ],\n        \"static_gp_vorticity_piece\": [\n          \"0\",\n          \"0\",\n          \"0\"\n        ],\n        \"vector_identity_residual\": [\n          \"0\",\n          \"0\",\n          \"0\"\n        ]\n      },\n      \"name\": \"two_piece_g0i_obstruction\",\n      \"passed\": true\n    },\n    {\n      \"details\": {\n        \"classifications_through_epsilon_epsilon_w\": [\n          {\n            \"classification\": \"slot-surviving\",\n            \"order\": \"epsilon\",\n            \"reason\": \"static Schwarzschild lapse\",\n            \"slot\": \"h_00\",\n            \"term\": \"a.a\"\n          },\n          {\n            \"classification\": \"slot-surviving\",\n            \"order\": \"sqrt(epsilon)*epsilon_w\",\n            \"reason\": \"stationary temporal shift leaves g_00 unchanged; generic wake contraction is nonzero\",\n            \"slot\": \"h_00\",\n            \"term\": \"2*a.b\"\n          },\n          {\n            \"classification\": \"gauge-removable\",\n            \"order\": \"sqrt(epsilon)\",\n            \"reason\": \"static radial GP part is removed by the temporal lambda shift\",\n            \"slot\": \"h_0i\",\n            \"term\": \"-a_i\"\n          },\n          {\n            \"classification\": \"gauge-removable\",\n            \"order\": \"epsilon_w\",\n            \"reason\": \"the integrable part is absorbed by lambda\",\n            \"slot\": \"h_0i\",\n            \"term\": \"-b_i longitudinal part\"\n          },\n          {\n            \"classification\": \"slot-surviving\",\n            \"order\": \"epsilon_w\",\n            \"reason\": \"curl obstruction prevents a scalar lambda\",\n            \"slot\": \"h_0i\",\n            \"term\": \"-b_i transverse part\"\n          },\n          {\n            \"classification\": \"gauge-removable\",\n            \"order\": \"epsilon*epsilon_w\",\n            \"reason\": \"nonlinear term in grad(lambda)=-u/(1-u^2)\",\n            \"slot\": \"h_0i\",\n            \"term\": \"-[a^2*b_i + 2*(a.b)*a_i] longitudinal part\"\n          },\n          {\n            \"classification\": \"slot-surviving\",\n            \"order\": \"epsilon*epsilon_w\",\n            \"reason\": \"the two-piece obstruction is the integrability condition\",\n            \"slot\": \"h_0i\",\n            \"term\": \"-[a^2*b_i + 2*(a.b)*a_i] transverse part\"\n          },\n          {\n            \"classification\": \"slot-surviving\",\n            \"order\": \"epsilon\",\n            \"reason\": \"static Schwarzschild spatial curvature\",\n            \"slot\": \"h_ij\",\n            \"term\": \"a_i*a_j\"\n          },\n          {\n            \"classification\": \"slot-surviving\",\n            \"order\": \"sqrt(epsilon)*epsilon_w\",\n            \"reason\": \"generic part has nonzero linearized curvature and is not a spatial pure gauge\",\n            \"slot\": \"h_ij\",\n            \"term\": \"a_i*b_j + b_i*a_j\"\n          }\n        ],\n        \"curvature_witness\": {\n          \"R_0i0j_at_sqrt_epsilon_epsilon_w\": [\n            [\n              \"-2\",\n              \"0\",\n              \"0\"\n            ],\n            [\n              \"0\",\n              \"-4\",\n              \"0\"\n            ],\n            [\n              \"0\",\n              \"0\",\n              \"-6\"\n            ]\n          ],\n          \"a\": [\n            \"x\",\n            \"y\",\n            \"z\"\n          ],\n          \"b\": [\n            \"x\",\n            \"2*y\",\n            \"3*z\"\n          ],\n          \"both_leading_flows_are_potential\": true,\n          \"nonzero\": true\n        },\n        \"direct_metric_coefficients_at_epsilon_epsilon_w\": {\n          \"h_00\": \"0\",\n          \"h_0i\": [\n            \"0\",\n            \"0\",\n            \"0\"\n          ],\n          \"h_ij\": [\n            [\n              \"0\",\n              \"0\",\n              \"0\"\n            ],\n            [\n              \"0\",\n              \"0\",\n              \"0\"\n            ],\n            [\n              \"0\",\n              \"0\",\n              \"0\"\n            ]\n          ],\n          \"note\": \"epsilon*epsilon_w enters the nonlinear temporal generator and its obstruction, not a new monomial of the PG metric for delta-v=O(epsilon_w)\"\n        },\n        \"hazard_verdict\": \"KILL: a generic wake has observable sqrt(epsilon)*epsilon_w curvature; survival requires extra cancellations in the realized wake\",\n        \"small_parameters\": {\n          \"epsilon_w\": \"U/c\",\n          \"p\": \"sqrt(epsilon)\",\n          \"u_over_c\": \"p*a + epsilon_w*b\"\n        },\n        \"super_ppn_kill\": true,\n        \"temporal_generator_epsilon_epsilon_w\": [\n          \"-3*a_x**2*b_x - 2*a_x*a_y*b_y - 2*a_x*a_z*b_z - a_y**2*b_x - a_z**2*b_x\",\n          \"-a_x**2*b_y - 2*a_x*a_y*b_x - 3*a_y**2*b_y - 2*a_y*a_z*b_z - a_z**2*b_y\",\n          \"-a_x**2*b_z - 2*a_x*a_z*b_x - a_y**2*b_z - 2*a_y*a_z*b_y - 3*a_z**2*b_z\"\n        ]\n      },\n      \"name\": \"half_order_bookkeeping\",\n      \"passed\": true\n    }\n  ],\n  \"hazard_verdict\": \"KILL: a generic wake has observable sqrt(epsilon)*epsilon_w curvature; survival requires extra cancellations in the realized wake\",\n  \"schema_version\": 1,\n  \"sim\": \"ppn-reduction-symbolic-checks\",\n  \"task\": \"ORB-11040\"\n}\n",
+    "commit_object": "tree 8d851030602405b11b7166108b09cf9cd5664329\nparent 148b668391f575466282eaa81aab0dc943846a87\nauthor orbit[gpt-6-astra] <agent@orbit.invalid> 1788661694 +0000\ncommitter orbit <orbit@orbit.local> 1788661694 +0000\n\nfeat: Preserve the original electron animation's continuous fold in a c… [ORB-11374]\n\nPreserve the original electron animation's continuous fold in a computed-field view\n\nPlanned-By: codex\n"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "source",
+    "availability": "available",
+    "snapshot_digest": "sha256:3ec580fa4799b83db49df2193b82687d526be9ad5a9890e06eefd6e6cf8e6634",
+    "locator": null,
+    "media_type": "application/json"
+  },
+  "revision_id": "sha256:54f9d107ff14172fea37b3d17a9346bb85e7bfe469d7cefd4e20cc8af5634ced"
+}

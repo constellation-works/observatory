@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:principia:artifact:source%3Aorrery%3Aa1c430db54d585048ec85c4e7c47141db634f398%3Alab%2Fsims%2Ftwo-substance-vortex-lattice%2FREADME.md",
+  "aliases": [
+    "source:orrery:a1c430db54d585048ec85c4e7c47141db634f398:lab/sims/two-substance-vortex-lattice/README.md"
+  ],
+  "activity": "active",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": null,
+    "blob_oid": null,
+    "sha256": "sha256:730e3478e4ceef798f44bcef8fcbb971e26637d295e467b3ed51adb533870e8b",
+    "path": "upstream-snapshot/orrery/a1c430db54d585048ec85c4e7c47141db634f398/lab/sims/two-substance-vortex-lattice/README.md",
+    "selector": "$",
+    "historical": true,
+    "working_tree": true
+  },
+  "limitations": [
+    "Immutable archival source copy; upstream scientific ownership is unchanged."
+  ],
+  "missingness": [
+    "git-revision",
+    "owner-ingestion-git-pin",
+    "scope",
+    "upstream-canonical-record"
+  ],
+  "legacy": {
+    "source_pin": {
+      "repository": "orrery",
+      "git_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "path": "lab/sims/two-substance-vortex-lattice/README.md",
+      "blob_oid": "04dacf79a21aec4093f649ea3c77d648b61ff667",
+      "sha256": "sha256:730e3478e4ceef798f44bcef8fcbb971e26637d295e467b3ed51adb533870e8b",
+      "bytes": 3256,
+      "commit_metadata": "a1c430db54d585048ec85c4e7c47141db634f398\n2026-09-06T02:28:14+00:00\n2026-09-06T02:28:14+00:00\nfeat: Preserve the original electron animation's continuous fold in a c… [ORB-11374]\n"
+    },
+    "text": "# Two-substance vortex lattice\n\nThis 2-D static lattice is a minimal sign test for the two-substance vortex\nvacuum proposal. Each cell holds separately conserved A and B densities under\na shared unit-capacity pressure. Integer windings enter only through the\nrelative phase `theta_A - theta_B`; positive and negative polarity therefore\nmean `(w_A, w_B) = (1, 0)` and `(0, 1)`. A balanced defect is `(1, 1)`.\n\nRun the reproducible sweep with:\n\n```sh\nuv run lab/sims/two-substance-vortex-lattice/main.py\n```\n\nThe generated `assets/results.json` is the numerical record and\n`assets/interaction-sweep.png` plots the pair potential, signed force, and\nshort-range decomposition.\n\n## Result (257 x 257 lattice, seed 42)\n\n- Like polarity repels (mean far force `+0.13747`); opposite polarity attracts\n  (`-0.13744`). This gives the electrostatic sign, not the reversed Bjerknes\n  sign.\n- The fitted far-force exponent is `-1.051`. A logarithmic potential fit has\n  RMSE `0.0070`, versus `0.1383` for a `1/r` potential. The apparatus therefore\n  resolves the expected 2-D log potential / `1/r` force.\n- Across 8--16 cells, the density/capacity term adds `+0.01360` to the mean\n  like-polarity phase force `+0.54240`, a `2.51%` strengthening from overlapping\n  same-substance halos. It is not monotonic contact strengthening, however: the\n  density term switches sign below 12 cells and contributes `-0.0738` at the\n  closest 8-cell probe. The ontology's halo mechanism appears as a small\n  intermediate-range correction, while core overlap softens rather than\n  strengthens repulsion in this parameterization.\n- A balanced defect has zero relative-phase charge and a `0.584` central void\n  fraction. Its far force with either polarity is `2.58e-5`, only `1.88e-4` of\n  the charged-pair force scale; this is the finite density-tail residual and is\n  consistent with far-field neutrality.\n\n## What the apparatus can decide\n\n- **Sign:** pair energy is measured after subtracting both isolated-defect\n  energies. Positive force means increasing separation lowers energy\n  (repulsion); negative force means attraction.\n- **Law:** a 2-D vortex has a logarithmic pair potential and a `1/r` force.\n  The sweep compares a log-potential fit with an inverse-distance potential\n  and fits the force exponent. This apparatus cannot establish the 3-D\n  `1/r^2` force: a follow-up must simulate vortex lines or rings in 3-D.\n- **Short range:** the force is split into relative-phase and density/capacity\n  terms, exposing whether overlapping conserved halos strengthen or weaken\n  the like-polarity interaction.\n- **Balanced state:** equal co-winding cancels the relative phase exactly. The\n  shared density core remains depleted, so neutrality and a void core are\n  independently measurable.\n\n## Model boundary\n\nThe relative-phase coupling is a declared model choice, not an emergent result:\nit makes the topological charge `q = w_A - w_B`. The sweep genuinely measures\nthe consequences (interaction sign, lattice corrections, and force law), but\ndoes not demonstrate that a microscopic two-fluid vacuum must select this\ncoupling. Defects are pinned analytic winding fields with relaxed-form core and\nhalo profiles; the script does not test dynamical defect stability or motion.\n",
+    "commit_object": "tree 8d851030602405b11b7166108b09cf9cd5664329\nparent 148b668391f575466282eaa81aab0dc943846a87\nauthor orbit[gpt-6-astra] <agent@orbit.invalid> 1788661694 +0000\ncommitter orbit <orbit@orbit.local> 1788661694 +0000\n\nfeat: Preserve the original electron animation's continuous fold in a c… [ORB-11374]\n\nPreserve the original electron animation's continuous fold in a computed-field view\n\nPlanned-By: codex\n"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "source",
+    "availability": "available",
+    "snapshot_digest": "sha256:730e3478e4ceef798f44bcef8fcbb971e26637d295e467b3ed51adb533870e8b",
+    "locator": null,
+    "media_type": "text/plain"
+  },
+  "revision_id": "sha256:ed18b72b92c8f26047fe243e169893cbe4e8788bd9419aa687bf533fde40c9f4"
+}

@@ -1,0 +1,81 @@
+{
+  "doc": "wide-binary-selection-methodology",
+  "title": "Wide-binary selection methodology: does geometry/truncation manufacture an acceleration-dependent artifact?",
+  "status": "exploratory",
+  "families": [
+    "wide-binary-selection-methodology"
+  ],
+  "updated": "2026-09-05",
+  "headline": "Preregistered control protocol (not yet run) testing whether Astrolabe's wide-binary selection pipeline manufactures a spurious acceleration-dependent bias, or a miscalibrated chance-alignment rate, on a purely Newtonian synthetic catalog with a realistic nonuniform footprint.",
+  "live_fronts": [
+    "wide-binary-selection-bias-control"
+  ],
+  "claims": [
+    {
+      "id": "wbsel-geometry-truncation-null",
+      "family": "wide-binary-selection-methodology",
+      "kind": "model-property",
+      "status": "mixed",
+      "claim": "On a synthetic, purely Newtonian wide-binary population with a realistic nonuniform sky footprint (declination-dependent quality/completeness gradient, anisotropic density) and zero injected acceleration-dependent kinematics, Astrolabe's baseline selection pipeline (quality cuts, theta/s window, escape-speed PM gate) recovers a v-tilde(g_N) profile whose deviation from its own Newtonian-mock comparator stays below the predeclared threshold (abs(B_i) < 0.04 in median v-tilde) in every populated g_N bin.",
+      "kill": "Any populated bin (n >= 5 pairs) shows abs(B_i) >= 0.04 in median v-tilde, reproducibly across the seed ladder (median seed-to-seed abs(B_i) at or above threshold), under the baseline nonuniform-footprint arm (R1) at the operational max_stars=8000 cap.",
+      "evidence": "ORB-11222's cataloged frozen run at Orrery 28dd5c72: R1-baseline has no reproducible primary excursion, but R0 sanity fails and R2 wrap/polar do reproduce excursions. The frozen decision rule therefore leaves this unresolved; ORB-11241 owns diagnosis.",
+      "links": [
+        "../../studies/wide-binary-selection-bias-preregistration.md",
+        "../../studies/gaia-wide-binaries-low-acceleration.md"
+      ],
+      "in_doc_ledger": true
+    },
+    {
+      "id": "wbsel-cap-truncation-isolation",
+      "family": "wide-binary-selection-methodology",
+      "kind": "model-property",
+      "status": "mixed",
+      "claim": "The operational max_stars=8000 brightness cap is not itself the source of any geometry-coupled v-tilde(g_N) bias: the uncapped (R1-uncapped) and heavily-capped (R1-heavycap, max_stars=2000) arms of the same nonuniform-footprint population agree with the baseline-cap arm (R1-baseline) within the seed-to-seed bootstrap uncertainty in every populated bin.",
+      "kill": "R1-uncapped or R1-heavycap median B_i differs from R1-baseline by more than the combined seed-to-seed uncertainty in any populated bin.",
+      "evidence": "ORB-11222's cataloged frozen run at Orrery 28dd5c72 finds a heavy-cap deviation beyond combined uncertainty, but failed R0 prevents isolation of an apparatus effect. The unresolved result is retained without retuning; ORB-11241 owns diagnosis.",
+      "links": [
+        "../../studies/wide-binary-selection-bias-preregistration.md"
+      ],
+      "in_doc_ledger": true
+    },
+    {
+      "id": "wbsel-shifted-field-calibration",
+      "family": "wide-binary-selection-methodology",
+      "kind": "model-property",
+      "status": "mixed",
+      "claim": "The shifted-field chance-alignment estimator R = N_shift/N_real, evaluated on the nonuniform-footprint synthetic population with known injected field-star contamination fractions (5%, 10%, 20%) and RA-wrap/polar field placements, recovers each injected fraction within the predeclared tolerance (+/-0.05 absolute at 5%, +/-25% relative at 10% and 20%).",
+      "kill": "R_chance falls outside the predeclared tolerance band for any injected-contamination arm or any field placement (equatorial baseline, RA-wrap, polar).",
+      "evidence": "ORB-11222's cataloged frozen run at Orrery 28dd5c72 passes the 5% arms but under-recovers every planted 10%/20% rate; this failed control is unresolved calibration evidence, not a gravity claim. ORB-11241 owns diagnosis.",
+      "links": [
+        "../../studies/wide-binary-selection-bias-preregistration.md"
+      ],
+      "in_doc_ledger": true
+    },
+    {
+      "id": "wbsel-injected-effect-power",
+      "family": "wide-binary-selection-methodology",
+      "kind": "model-property",
+      "status": "mixed",
+      "claim": "At the R1 baseline sample size and cap, the predeclared primary bias statistic B_i detects an injected acceleration-dependent v-tilde offset of amplitude 0.05 or 0.10 (restricted to the two lowest g_N bins) with power >= 80% across the seed ladder, establishing the protocol's minimum-detectable-effect floor at or below the literature-contested anomaly scale.",
+      "kill": "Power below 80% at injected amplitude 0.10 (the larger arm) — the protocol's decision rule cannot reliably detect an effect at the scale of the literature disagreement, so a clean R1 null would not be informative.",
+      "evidence": "ORB-11222's cataloged frozen run at Orrery 28dd5c72 detects both 0.05 and 0.10 injections in 33.3% of seeds, below the 80% rule. The result makes a null uninformative; ORB-11241 owns diagnosis.",
+      "links": [
+        "../../studies/wide-binary-selection-bias-preregistration.md"
+      ],
+      "in_doc_ledger": true
+    },
+    {
+      "id": "wbsel-candidate-oracle-regression",
+      "family": "wide-binary-selection-methodology",
+      "kind": "model-property",
+      "status": "supported",
+      "claim": "An independent exhaustive great-circle candidate oracle (astropy SkyCoord.search_around_sky), run on every synthetic realization in this protocol, reproduces Astrolabe's cKDTree-based candidate/pair set exactly, confirming the ORB-11217 completeness fix continues to hold on the nonuniform, RA-wrap, and polar footprints used here.",
+      "kill": "Any realization where the independent oracle's candidate or final pair set disagrees with Astrolabe's, on any footprint (equatorial, wrap, or polar) — this reopens a candidate-completeness question against Astrolabe directly and is not folded into this protocol's own bias-statistic verdict.",
+      "evidence": "ORB-11222's cataloged frozen run at Orrery 28dd5c72 finds exact independent-oracle agreement in all 44 enumerated realizations across equatorial, RA-wrap, and polar footprints. It supports this regression control only.",
+      "links": [
+        "../../studies/wide-binary-selection-bias-preregistration.md"
+      ],
+      "in_doc_ledger": true
+    }
+  ]
+}

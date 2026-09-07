@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:principia:artifact:source%3Aorrery%3Aa1c430db54d585048ec85c4e7c47141db634f398%3Alab%2Fsims%2Flevel-core-dynamical-relaxation%2Fsim.json",
+  "aliases": [
+    "source:orrery:a1c430db54d585048ec85c4e7c47141db634f398:lab/sims/level-core-dynamical-relaxation/sim.json"
+  ],
+  "activity": "active",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": null,
+    "blob_oid": null,
+    "sha256": "sha256:bcf4225c5eb3856db0b962555398f0370550c7b77eb634aa05e8c73d951c61eb",
+    "path": "upstream-snapshot/orrery/a1c430db54d585048ec85c4e7c47141db634f398/lab/sims/level-core-dynamical-relaxation/sim.json",
+    "selector": "$",
+    "historical": true,
+    "working_tree": true
+  },
+  "limitations": [
+    "Immutable archival source copy; upstream scientific ownership is unchanged."
+  ],
+  "missingness": [
+    "git-revision",
+    "owner-ingestion-git-pin",
+    "scope",
+    "upstream-canonical-record"
+  ],
+  "legacy": {
+    "source_pin": {
+      "repository": "orrery",
+      "git_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "path": "lab/sims/level-core-dynamical-relaxation/sim.json",
+      "blob_oid": "15e1027846a57fcc9c0d8d00d4f01ae9bfa0832a",
+      "sha256": "sha256:bcf4225c5eb3856db0b962555398f0370550c7b77eb634aa05e8c73d951c61eb",
+      "bytes": 862,
+      "commit_metadata": "a1c430db54d585048ec85c4e7c47141db634f398\n2026-09-06T02:28:14+00:00\n2026-09-06T02:28:14+00:00\nfeat: Preserve the original electron animation's continuous fold in a c… [ORB-11374]\n"
+    },
+    "text": "{\n  \"slug\": \"level-core-dynamical-relaxation\",\n  \"title\": \"Level-core extended dynamical relaxation\",\n  \"kind\": \"py\",\n  \"entry\": \"main.py\",\n  \"status\": \"active\",\n  \"created\": \"2026-08-21\",\n  \"topics\": [\n    \"gravity\",\n    \"gravity-as-scarcity\",\n    \"level-matching\",\n    \"moving-source\",\n    \"dynamical-relaxation\",\n    \"extended-horizon\",\n    \"strain\",\n    \"resolution-convergence\"\n  ],\n  \"family\": \"gravity-as-scarcity\",\n  \"summary\": \"A deterministic T=600 wind tunnel finds joint residual settlement but ladder-confirmed core cavitation at intermediate wind and a converged violation of the Bernoulli speed closure.\",\n  \"provenance\": {\n    \"almanac\": \"15-discussions/26-08/from-galactic-motion-to-the-moving-gravity-medium-problem.md\",\n    \"orbit_task\": \"ORB-10938\",\n    \"predecessors\": [\"ORB-10937\", \"ORB-10935\", \"ORB-10934\", \"ORB-10932\", \"ORB-10751\"]\n  }\n}\n",
+    "commit_object": "tree 8d851030602405b11b7166108b09cf9cd5664329\nparent 148b668391f575466282eaa81aab0dc943846a87\nauthor orbit[gpt-6-astra] <agent@orbit.invalid> 1788661694 +0000\ncommitter orbit <orbit@orbit.local> 1788661694 +0000\n\nfeat: Preserve the original electron animation's continuous fold in a c… [ORB-11374]\n\nPreserve the original electron animation's continuous fold in a computed-field view\n\nPlanned-By: codex\n"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "source",
+    "availability": "available",
+    "snapshot_digest": "sha256:bcf4225c5eb3856db0b962555398f0370550c7b77eb634aa05e8c73d951c61eb",
+    "locator": null,
+    "media_type": "application/json"
+  },
+  "revision_id": "sha256:6cf7c846af09b5a641819700b3db1143302062b70636ba507ee48d992aefffba"
+}

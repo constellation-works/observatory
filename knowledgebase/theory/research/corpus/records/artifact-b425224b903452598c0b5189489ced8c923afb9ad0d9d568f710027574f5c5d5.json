@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Astudies%2Fsolar-system-ephemeris-precision-floor.md",
+  "aliases": [
+    "source:principia:4e3b02c59b694d85016915177ef1ae157895ed7b:studies/solar-system-ephemeris-precision-floor.md"
+  ],
+  "activity": "active",
+  "scope": "literature",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "bfc5be5d7832f6c3a829d3fd19ef96f112d6eaf8",
+    "sha256": "sha256:7235b4729e82eb5bfaee23e789f50f9ea8d2ad98af7dc5cdc820c82193db95b9",
+    "path": "studies/solar-system-ephemeris-precision-floor.md",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Immutable archival source copy; upstream scientific ownership is unchanged."
+  ],
+  "missingness": [],
+  "legacy": {
+    "source_pin": {
+      "repository": "principia",
+      "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "path": "studies/solar-system-ephemeris-precision-floor.md",
+      "blob_oid": "bfc5be5d7832f6c3a829d3fd19ef96f112d6eaf8",
+      "sha256": "sha256:7235b4729e82eb5bfaee23e789f50f9ea8d2ad98af7dc5cdc820c82193db95b9",
+      "bytes": 4631,
+      "commit_metadata": "4e3b02c59b694d85016915177ef1ae157895ed7b\n2026-09-06T02:49:35+00:00\n2026-09-06T02:49:35+00:00\nfeat: Migrate the wide-binary control pilot into versioned scientific r… [ORB-11378]\n"
+    },
+    "text": "---\ntitle: \"Solar-system ephemeris precision floor — the Newtonian-omission residuals\"\nstatus: active\ncreated: 2026-07-10\nupdated: 2026-07-10\n---\n\n# Solar-system ephemeris precision floor\n\nThe AU-scale bound any modified-gravity claim in this corpus must respect: how far a\npure-Newtonian solar system drifts from the real one over a decade, planet by planet. This is\nthe second observable of the gravity-as-scarcity upgrade-or-kill pair (the first is the\nrotation curve, [milky-way-rotation-curve](milky-way-rotation-curve.md)).\n\n## What the floor is\n\nFaraday integrated an *untuned* Newtonian 9-body system — Sun + 8 planetary-**system**\nbarycenters carrying planetary-system GMs, initial conditions taken directly from the\nfirst-epoch JPL Horizons states, inertial integration, heliocentric ICRF output — across\n2016-01-01 → 2025-12-29 TDB (366 epochs, 10 d cadence), and tycho differenced it against the\nmatched Horizons ephemerides. The residual `dr_au` per epoch is therefore the accumulated\neffect of **everything real that pure Newtonian point-mass gravity omits** (plus integrator/IC\nnoise): relativistic corrections, asteroids, solar oblateness.\n\n| Planet | rms |Δr| (AU) | max |Δr| (AU) |\n|---|---:|---:|\n| Mercury | 1.56e-5 | 3.53e-5 |\n| Venus | 3.55e-6 | 6.12e-6 |\n| Earth | 2.49e-6 | 4.28e-6 |\n| Mars | 8.40e-7 | 1.65e-6 |\n| Jupiter | 1.84e-7 | 3.14e-7 |\n| Saturn | 4.25e-8 | 9.39e-8 |\n| Uranus | 4.08e-9 | 6.48e-9 |\n| Neptune | 1.75e-8 | 3.64e-8 |\n\nValues recomputed 2026-07-10 from the local parquets (below); they reproduce faraday's\n`summary.json` — tycho's ingest verified the two independent comparison implementations agree\nat rtol 1e-9.\n\n## Interpreting Mercury's excess\n\nMercury's floor is dominated by the omitted general-relativistic perihelion advance,\n**42.98 ″/century** (Will 2014, *Living Reviews in Relativity* 17:4, \"The Confrontation\nbetween General Relativity and Experiment\", §3.5). Order-of-magnitude consistency: the GR\nfractional acceleration correction for Mercury is ~3(v/c)² ≈ 7×10⁻⁸; over the ~1.5×10¹⁰ km\nMercury travels in the 10-year window this accumulates to ~10³ km ≈ 10⁻⁵ AU along-track —\nmatching the measured 1.56×10⁻⁵ AU rms. The floor declines outward roughly as GR does\n((v/c)² falls with r); by Uranus/Neptune the residual is at the level of integrator/IC noise\nplus Neptune's slight excess, so the outer floors are **upper bounds on allowed unmodeled\ndynamics**, not clean GR measurements.\n\n## What \"observationally allowed\" means here\n\nHorizons ephemerides are fit to real observations. Any real dynamics missing from the\nNewtonian baseline is therefore *contained in* these residuals. A proposed modification that,\nunder the same protocol (fixed first-epoch ICs, same grid, same frame), predicts a deviation\nfrom the Newtonian baseline **larger than a planet's floor** would have shown up here — it is\nexcluded at that amplitude. The gravity-as-scarcity constraint row in\n[theory/gravity-as-scarcity](../theory/gravity-as-scarcity/) applies this bound. Its\nnumerical adjudication (ORB-10097, orrery `23fe253`) split the model's two local-field\nreadings against exactly this floor: the **multiplicative** reading exceeds Uranus's floor in\nthe primary galactocentric orientation (1.89× rms, 2.84× max; the six-axis orientation\nenvelope crosses the floor, so the tension is orientation-dependent), while the **screened**\nreading is identically Newtonian — the explicit zero control — and is not constrained by this\nbound at all. Verdict and qualifications live in the theory doc's ledger.\n\n## Lineage\n\n- **Datasets:** astrolabe `data/processed/derived/<planet>_newtonian_residuals.parquet`\n  (+ `.json` sidecars), 366 epochs each — ingested by tycho, ORB-10094 (`ws_astrolabe`).\n- **Baseline producer:** faraday, ORB-10093 (`ws_orrery`) — orrery commit `f5e02e3`,\n  `lab/sims/solar-system-nbody/baseline/newtonian_2016_2026.parquet` + `summary.json`.\n- **Ephemeris side:** JPL Horizons state vectors, planetary-system barycenters (ids 1–8),\n  Sun body center `500@10`, ICRF — astrolabe `ephemeris/<planet>_2016_2026` (ORB-10076).\n- **Exchange contract:** astrolabe `docs/baseline-interface.md`.\n- **First consumer:** the ORB-10097 scarcity falsifier — faraday, orrery commit `23fe253`,\n  `lab/sims/solar-system-nbody/scarcity/summary.json` (multiplicative signature vs these\n  floors; screened zero control). Reconciled into the theory ledger by kepler, ORB-10098.\n- Run records: faraday `runs/26-07/run-20260711T011635.md` (baseline export), tycho\n  `runs/26-07/run-20260710-orb-10094-baseline-ingest.md` (ingest).\n",
+    "commit_object": "tree 682cccb1cf19c89c2c5f4371c14ed2b384d2ae8c\nparent 13866b2848fbcce9a1f1ef2d4b97051a65f7e626\nauthor orbit[gpt-6-astra] <agent@orbit.invalid> 1788662975 +0000\ncommitter orbit <orbit@orbit.local> 1788662975 +0000\n\nfeat: Migrate the wide-binary control pilot into versioned scientific r… [ORB-11378]\n\nMigrate the wide-binary control pilot into versioned scientific records\n\nPlanned-By: codex\n"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "source",
+    "availability": "available",
+    "snapshot_digest": "sha256:7235b4729e82eb5bfaee23e789f50f9ea8d2ad98af7dc5cdc820c82193db95b9",
+    "locator": null,
+    "media_type": "text/plain"
+  },
+  "revision_id": "sha256:b425224b903452598c0b5189489ced8c923afb9ad0d9d568f710027574f5c5d5"
+}

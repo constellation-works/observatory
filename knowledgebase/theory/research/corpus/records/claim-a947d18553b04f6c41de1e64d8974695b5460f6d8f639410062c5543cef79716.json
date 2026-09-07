@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "kind": "claim",
+  "id": "urn:research:principia:claim:two-substance-s2-yukawa-light",
+  "aliases": [
+    "two-substance-s2-yukawa-light"
+  ],
+  "activity": "active",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "94e76368a84e00ed742153d77b3d25dd5962c664",
+    "sha256": "sha256:c95d48cf673efa43d6d77005c73cadea42fac1ff00da556a7b7fd260df14f9a6",
+    "path": "theory/two-substance-vortex-vacuum/claims.json",
+    "selector": "/claims/15",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Exact historical verdict and stated assumptions only; migration makes no new scientific inference."
+  ],
+  "missingness": [
+    "scope"
+  ],
+  "legacy": {
+    "id": "two-substance-s2-yukawa-light",
+    "family": "two-substance-vortex-vacuum",
+    "kind": "nature",
+    "status": "refuted",
+    "claim": "**Branch A (any sourcing):** a kpc-range Yukawa at galactic strength survives the solar-system light sector",
+    "evidence": "**Computed (§A3):** at ξ₂ ≫ AU ephemerides calibrate G(1+α)M while light propagates on GM (scalar mediator: conformal invariance; vector: uncharged photon) → γ_eff − 1 = −2α/(1+α); Cassini forces \\|α\\| ≤ 1.2 × 10⁻⁵ vs the required 0.68 — 4.8 orders. Massive-tensor escape: vDVZ γ = ½, equally dead ([studies/fifth-force-searches](../../studies/fifth-force-searches.md)). The parent's boost is exempt whatever carries it (the measured ORB-10157 headroom screening included) — it lives in σ, which light also reads on the river completion",
+    "links": [
+      "../../studies/fifth-force-searches.md"
+    ],
+    "in_doc_ledger": true
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "claim",
+    "statement": "**Branch A (any sourcing):** a kpc-range Yukawa at galactic strength survives the solar-system light sector",
+    "domain": "nature"
+  },
+  "revision_id": "sha256:a947d18553b04f6c41de1e64d8974695b5460f6d8f639410062c5543cef79716"
+}

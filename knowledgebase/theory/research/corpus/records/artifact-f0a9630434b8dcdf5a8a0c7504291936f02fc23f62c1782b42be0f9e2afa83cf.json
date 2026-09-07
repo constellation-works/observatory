@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Agates%2Fretarded-wake-branch-c.json",
+  "aliases": [
+    "source:principia:4e3b02c59b694d85016915177ef1ae157895ed7b:gates/retarded-wake-branch-c.json"
+  ],
+  "activity": "active",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "cfcd188d76bd220c5da0581e8387108487f04113",
+    "sha256": "sha256:f18e39bccdfb6a834e785dcaabb822d87dbc7396e650f1225178ce331eda81ba",
+    "path": "gates/retarded-wake-branch-c.json",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Immutable archival source copy; upstream scientific ownership is unchanged."
+  ],
+  "missingness": [
+    "scope"
+  ],
+  "legacy": {
+    "source_pin": {
+      "repository": "principia",
+      "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "path": "gates/retarded-wake-branch-c.json",
+      "blob_oid": "cfcd188d76bd220c5da0581e8387108487f04113",
+      "sha256": "sha256:f18e39bccdfb6a834e785dcaabb822d87dbc7396e650f1225178ce331eda81ba",
+      "bytes": 3229,
+      "commit_metadata": "4e3b02c59b694d85016915177ef1ae157895ed7b\n2026-09-06T02:49:35+00:00\n2026-09-06T02:49:35+00:00\nfeat: Migrate the wide-binary control pilot into versioned scientific r… [ORB-11378]\n"
+    },
+    "text": "{\n  \"id\": \"retarded-wake-branch-c\",\n  \"doc\": \"moving-source-field-consistency\",\n  \"family\": \"retarded-scarcity-wake\",\n  \"kind\": \"derivation\",\n  \"status\": \"closed\",\n  \"closed_on\": \"2026-09-04\",\n  \"closed_by\": \"ORB-11175\",\n  \"chapter\": \"theory/moving-source-field-consistency/branch-c.md\",\n  \"owed_object\": \"An explicit boost-violating substrate equation with a map from breaking parameters to observables — or close Branch C. DELIVERED 2026-09-04: the equation was written (three breaking parameters at linear, local, two-derivative order: speed c_g, aether-frame dissipation Γ, source delay τ_s), the first-order moving-source solution derived against the Heaviside/Carlip control, the map A_1 = β_g r/2ℓ_Γ + |τ_s| w/r written, and the branch closed.\",\n  \"inherited_postulates\": [],\n  \"new_postulates\": [],\n  \"control\": \"Boost-invariant causal field (Heaviside / Carlip): uniform motion cancels the first-order dipole. Reproduced inside the model with the odd sector off (chapter eq. 2, even in ξ∥ at every order in β_g for every c_g).\",\n  \"kill\": \"FIRED 2026-09-04 — No equation, or the equation is already bounded by Cherenkov / resonator / Cassini walls once couplings are specified. Outcome: the equation exists, and it is already bounded — but not by the three named walls, which bind the completion rather than the dissipative parameter. The binding wall is the equation's own conservation structure: the dissipative parameter that makes the dipole makes a first-order self-acceleration of every bound body along its substrate-relative velocity (chapter eq. 7), and the solar-system ephemeris floor caps the Sun's at 3×10⁻¹³ to 3×10⁻¹⁴ m/s², hence ℓ_Γ > 10–100 kpc and A_1(10 kpc) ≲ 10⁻³ to 3×10⁻⁵ — two to three orders below observed lopsidedness on every reading. The source-delay parameter is a rigid offset excluded at A_1 < 4×10⁻¹²; the speed parameter makes no dipole.\",\n  \"closure\": \"No parameter value of the minimal local class produces an observable galactic m=1 dipole while surviving the sourced walls. Central claim branch-c-observable-dipole is refuted and on the wall; moving-source-branch-c-not-adjudicated is refuted (adjudicated); dependent rows are refuted or annotated moot. Reopening requires daniel_reopen and one of: a non-local or scale-dependent Γ (surrenders the locality premise of this card), a non-linear odd sector that exempts the Sun's deeper field, or a U tuned to comove with the Sun.\",\n  \"forbidden_reopens\": [\n    \"retarded-wake-rescues-parent\",\n    \"scarcity-fixed-beta-universality\"\n  ],\n  \"blocked_phenomenology\": [\n    \"lopsidedness-fit\",\n    \"axis-alignment\"\n  ],\n  \"comparator\": \"Specified boost-invariant control, not the delayed-center Poisson-vacuum shortcut. Solar-system confrontation against the Newtonian-omission ephemeris floor, not a Galilean U+v picture.\",\n  \"claims\": [\n    \"moving-source-branch-c-not-adjudicated\",\n    \"branch-c-minimal-sector\",\n    \"branch-c-first-order-solution\",\n    \"branch-c-drag-lock\",\n    \"branch-c-observable-dipole\"\n  ],\n  \"follow_on_fixture\": \"branch-c-first-order-solution (orrery; named with predeclared gates in the chapter; not filed, not built — the closure does not wait on it)\"\n}\n",
+    "commit_object": "tree 682cccb1cf19c89c2c5f4371c14ed2b384d2ae8c\nparent 13866b2848fbcce9a1f1ef2d4b97051a65f7e626\nauthor orbit[gpt-6-astra] <agent@orbit.invalid> 1788662975 +0000\ncommitter orbit <orbit@orbit.local> 1788662975 +0000\n\nfeat: Migrate the wide-binary control pilot into versioned scientific r… [ORB-11378]\n\nMigrate the wide-binary control pilot into versioned scientific records\n\nPlanned-By: codex\n"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "source",
+    "availability": "available",
+    "snapshot_digest": "sha256:f18e39bccdfb6a834e785dcaabb822d87dbc7396e650f1225178ce331eda81ba",
+    "locator": null,
+    "media_type": "application/json"
+  },
+  "revision_id": "sha256:f0a9630434b8dcdf5a8a0c7504291936f02fc23f62c1782b42be0f9e2afa83cf"
+}

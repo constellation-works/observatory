@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "kind": "claim",
+  "id": "urn:research:principia:claim:moving-density-rate-limit",
+  "aliases": [
+    "moving-density-rate-limit"
+  ],
+  "activity": "retired",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "d9f73691ac539f5935cd6dbedcabdb6f722777a3",
+    "sha256": "sha256:0ec4339ac8934344ada2473abd7941e08d9c413b12e2636c275ab4f9a35a70a5",
+    "path": "theory/moving-sources-in-the-closed-system/claims.json",
+    "selector": "/claims/7",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Exact historical verdict and stated assumptions only; migration makes no new scientific inference."
+  ],
+  "missingness": [
+    "scope"
+  ],
+  "legacy": {
+    "id": "moving-density-rate-limit",
+    "family": "gravity-as-scarcity",
+    "kind": "model-property",
+    "status": "supported",
+    "claim": "The approach to steadiness is rate-limited by the density sector, not the velocity sector: the velocity field settles while the consumption trough relaxes at a U-independent rate",
+    "evidence": "ORB-10937 G1 finest rung, all four winds: the velocity residual meets its half of the predeclared criterion over the window (max dv_rms 5.2–5.3×10⁻⁴ < 2×10⁻³) while the density residual fails it everywhere (dn_rms 4.5–6.1×10⁻³), with minimum density still declining monotonically (0.27–0.32 at T = 60) and late log-residual slope −0.0148…−0.0173 per time unit across the whole sweep — an e-folding time ~65, U-independent, comparable to the horizon ([level-core-dynamical-relaxation](../../../orrery/lab/sims/level-core-dynamical-relaxation/)). Consistent with relaxation toward a consumption–resupply balance rather than turbulence: no growing modes, no saturated shedding frequency dominates. ORB-10938 confirms the mechanism at T = 600: all nine cases meet the joint RMS criterion, the late influx/consumption ratio climbs with wind (0.40 at U/v_GP = 0.03, 0.93–0.95 at 0.3, 0.999 at 1.0), and both ORB-10937 initial conditions converge to the same state (final relative L² 0.75% velocity, 0.25% density — same-attractor verdict). **Caveat the RMS verdict hides:** at sub-critical winds the trough's *minimum* keeps draining even after the volume-RMS residuals pass — trough saturation holds only at 41³, U/v_GP = 1 (see cavitation row)",
+    "links": [
+      "../../../orrery/lab/sims/level-core-dynamical-relaxation/"
+    ],
+    "in_doc_ledger": true
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "claim",
+    "statement": "The approach to steadiness is rate-limited by the density sector, not the velocity sector: the velocity field settles while the consumption trough relaxes at a U-independent rate",
+    "domain": "model"
+  },
+  "revision_id": "sha256:301dcc8638a091a6c6565f85fe9c50690097d031c31f7f44132f6451f50cccc8"
+}

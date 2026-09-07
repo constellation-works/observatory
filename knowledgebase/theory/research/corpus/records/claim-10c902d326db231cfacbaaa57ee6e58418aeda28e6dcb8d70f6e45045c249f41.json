@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "kind": "claim",
+  "id": "urn:research:principia:claim:moving-cavitation-floor",
+  "aliases": [
+    "moving-cavitation-floor"
+  ],
+  "activity": "retired",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "d9f73691ac539f5935cd6dbedcabdb6f722777a3",
+    "sha256": "sha256:0ec4339ac8934344ada2473abd7941e08d9c413b12e2636c275ab4f9a35a70a5",
+    "path": "theory/moving-sources-in-the-closed-system/claims.json",
+    "selector": "/claims/8",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Exact historical verdict and stated assumptions only; migration makes no new scientific inference."
+  ],
+  "missingness": [
+    "scope"
+  ],
+  "legacy": {
+    "id": "moving-cavitation-floor",
+    "family": "gravity-as-scarcity",
+    "kind": "nature",
+    "status": "mixed",
+    "claim": "The relaxing trough ends in a finite density floor n_∞(U) > 0 rather than cavitation (n → 0 around a moving core); cavitation would void the excitation reading in a hole around every moving mass — a branch kill",
+    "evidence": "**The kill fired at U/v_GP = 0.3.** ORB-10938 G1, the predeclared cavitation verdict ([level-core-dynamical-relaxation](../../../orrery/lab/sims/level-core-dynamical-relaxation/)): at U/v_GP = 0.3 the cutoff-ward candidate (final n_min < 0.01 with final-window log slope < −0.002/time) agrees on both adjacent-rung pairs 33³→41³ and 41³→61³ — n_min 3.4×10⁻³/2.2×10⁻³/1.3×10⁻³ and still draining, extrapolated cutoff contact at T ~ 9300/6700/5100, *accelerating with refinement* — the predeclared branch-kill criterion, met. At U/v_GP = 1 the trough saturates at a genuine finite floor (n_min ≈ 0.17–0.20, the only trough-saturated case). At U/v_GP = 0.03 and 0.1 the 41³ rung is a cutoff-ward candidate but 33³ is not — not ladder-confirmed, trending the same way. Honest caveat (recorded by faraday): the kill rests on ladder-agreed extrapolation, not actual cutoff contact (n_min ~ 10⁻³ ≫ 10⁻¹⁰ at horizon). Reading: **slowly moving cores drain a hole in the medium; only trans-critical wind resupplies a floor** — the excitation reading is voided around sub-critical moving masses unless physics not in the closed system stops the drain",
+    "links": [
+      "../../../orrery/lab/sims/level-core-dynamical-relaxation/"
+    ],
+    "in_doc_ledger": true,
+    "tags": [
+      "existence"
+    ]
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "claim",
+    "statement": "The relaxing trough ends in a finite density floor n_∞(U) > 0 rather than cavitation (n → 0 around a moving core); cavitation would void the excitation reading in a hole around every moving mass — a branch kill",
+    "domain": "nature"
+  },
+  "revision_id": "sha256:10c902d326db231cfacbaaa57ee6e58418aeda28e6dcb8d70f6e45045c249f41"
+}

@@ -1,0 +1,20 @@
+{
+  "id": "wide-binary-selection-bias-control",
+  "doc": "wide-binary-selection-methodology",
+  "family": "wide-binary-selection-methodology",
+  "kind": "control",
+  "owed_object": "Whether Astrolabe's predeclared wide-binary selection pipeline (sky geometry, brightness truncation, escape-speed PM gate, shifted-field chance-alignment estimator) is calibrated: run on a purely Newtonian synthetic catalog with a realistic nonuniform sky footprint and zero injected acceleration-dependent physics, does it return a bias statistic consistent with zero in every g_N bin, does its brightness cap contribute independently, does its shifted-field estimator recover a known injected contamination fraction without an assumed sign, and can the same protocol detect a known injected effect at the literature-contested scale (power)? ORB-11222 ran the frozen matrix at merged Orrery `28dd5c72bb670517b93b556f1d2483402c8e8655`: the candidate oracle passed all 44 enumerated realizations, but R0, cap isolation, R3, and R4 failed, so this remains unresolved pending repair task ORB-11241; no protocol term was retuned.",
+  "inherited_postulates": [],
+  "new_postulates": [],
+  "control": "The coupling-off analog here is the zero-injected-effect arms: R0 (isotropic sky, uniform quality, no cap, no contamination) is the fully-null negative control; R1-baseline (nonuniform footprint, operational max_stars=8000 cap, still zero injected effect) is the primary test arm the geometry/truncation hypothesis lives or dies on. Both must be evaluated before any injected-contamination (R3) or injected-effect (R4) arm is interpretable, exactly as a coupling-off run must pass before a coupling-on run is read.",
+  "kill": "FIRES if: (a) R1-baseline's per-bin bias statistic |B_i| >= 0.04 in median v-tilde reproducibly across the seed ladder in any populated bin (wbsel-geometry-truncation-null); (b) the cap arms (R1-uncapped, R1-heavycap) disagree with R1-baseline beyond seed-to-seed uncertainty, implicating the max_stars truncation itself (wbsel-cap-truncation-isolation); (c) the shifted-field estimator R_chance falls outside its predeclared tolerance band on any injected-contamination or field-placement arm (wbsel-shifted-field-calibration); or (d) the independent great-circle oracle disagrees with Astrolabe's candidate/pair set on any footprint, which reopens a completeness question against Astrolabe directly rather than this family (wbsel-candidate-oracle-regression). Passing all four together is a null result for this family, not evidence against the literature's contested low-acceleration anomaly at galactic scale, which this protocol does not address.",
+  "forbidden_reopens": [],
+  "comparator": "Astrolabe's own forward-modeled Newtonian Monte Carlo mock (newtonian_mock_pairs + binned_vtilde) — the operational comparator ORB-10753's real analysis already uses — plus each synthetic realization's own no-selection truth catalog, which isolates selection-induced distortion from comparator mismatch. No principia theory (gravity-as-scarcity, two-substance-vortex-vacuum, or any other family) is invoked as a comparator; this gate tests apparatus calibration against established Newtonian two-body dynamics only, and is not a phenomenology card.",
+  "claims": [
+    "wbsel-geometry-truncation-null",
+    "wbsel-cap-truncation-isolation",
+    "wbsel-shifted-field-calibration",
+    "wbsel-injected-effect-power",
+    "wbsel-candidate-oracle-regression"
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Atheory%2Fmoving-sources-in-the-closed-system%2Frelated.md",
+  "aliases": [
+    "source:principia:4e3b02c59b694d85016915177ef1ae157895ed7b:theory/moving-sources-in-the-closed-system/related.md"
+  ],
+  "activity": "active",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "3452b110390368ae22358e7bb89391db1fd3b50b",
+    "sha256": "sha256:428e72fd06b810277299d9db362fd2e18a189885f3642ef424dff0a02d0e1312",
+    "path": "theory/moving-sources-in-the-closed-system/related.md",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Immutable archival source copy; upstream scientific ownership is unchanged."
+  ],
+  "missingness": [
+    "scope"
+  ],
+  "legacy": {
+    "source_pin": {
+      "repository": "principia",
+      "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "path": "theory/moving-sources-in-the-closed-system/related.md",
+      "blob_oid": "3452b110390368ae22358e7bb89391db1fd3b50b",
+      "sha256": "sha256:428e72fd06b810277299d9db362fd2e18a189885f3642ef424dff0a02d0e1312",
+      "bytes": 1656,
+      "commit_metadata": "4e3b02c59b694d85016915177ef1ae157895ed7b\n2026-09-06T02:49:35+00:00\n2026-09-06T02:49:35+00:00\nfeat: Migrate the wide-binary control pilot into versioned scientific r… [ORB-11378]\n"
+    },
+    "text": "## Related\n\n- [shear-sourced-consumption](../shear-sourced-consumption/) — the closed system whose\n  moving-source problem this doc opens; its debt 5 (non-radial flows) is exactly this\n  territory, now with two exact results and a fixture program.\n- [gravity-as-scarcity](../gravity-as-scarcity/) — the parent; the wind question couples to\n  its open galactic-carrier question through § what sets U.\n- [retarded-scarcity-wake](../retarded-scarcity-wake/) /\n  [moving-source-field-consistency](../moving-source-field-consistency/) — the postulated\n  moving-medium family; this doc supplies what its surviving branch demanded (an explicit\n  substrate equation with derived moving-source behavior) for the elliptic-level closed\n  system specifically.\n- [ppn-reduction-of-the-settled-flow](../ppn-reduction-of-the-settled-flow/) — the named\n  PPN obligation of this front, executed: Statement 0 (the moving metric is the PG metric\n  of the disturbance field), exact uniform-wind flatness, the gauge split of the wake,\n  and the far-field slot definitions of effective α₁/α₂.\n- [studies/moving-source-gravity-bounds](../../studies/moving-source-gravity-bounds.md) —\n  the sourced external walls (Carlip cancellation, α₁/α₂ tables, moving-lens reading,\n  frame-dragging ladder, Cherenkov) Theorem 2's confrontation runs through.\n- [studies/river-model-and-analog-gravity](../../studies/river-model-and-analog-gravity.md) —\n  GP dilation identity and the excitation reading.\n- [studies/lorentz-violation-bounds](../../studies/lorentz-violation-bounds.md) — the\n  resonator wall and the sourced velocity scales the wind arithmetic uses.\n",
+    "commit_object": "tree 682cccb1cf19c89c2c5f4371c14ed2b384d2ae8c\nparent 13866b2848fbcce9a1f1ef2d4b97051a65f7e626\nauthor orbit[gpt-6-astra] <agent@orbit.invalid> 1788662975 +0000\ncommitter orbit <orbit@orbit.local> 1788662975 +0000\n\nfeat: Migrate the wide-binary control pilot into versioned scientific r… [ORB-11378]\n\nMigrate the wide-binary control pilot into versioned scientific records\n\nPlanned-By: codex\n"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "source",
+    "availability": "available",
+    "snapshot_digest": "sha256:428e72fd06b810277299d9db362fd2e18a189885f3642ef424dff0a02d0e1312",
+    "locator": null,
+    "media_type": "text/plain"
+  },
+  "revision_id": "sha256:eaec6b0c4623689dc028e30b692d7aeee38aa9a8dbd68282a45a391a6a3e68fc"
+}

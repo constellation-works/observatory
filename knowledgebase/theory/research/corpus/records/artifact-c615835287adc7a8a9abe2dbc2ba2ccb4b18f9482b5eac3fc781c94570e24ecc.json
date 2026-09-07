@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Atheory%2Fswirl-photon%2FREADME.md",
+  "aliases": [
+    "source:principia:4e3b02c59b694d85016915177ef1ae157895ed7b:theory/swirl-photon/README.md"
+  ],
+  "activity": "active",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "3cb2a936df374435320c35a1c7762c13ebc215b1",
+    "sha256": "sha256:3389820972cab54b0a059383a8367d8a2f4a77816dbf3dc514045e6a7b9a5956",
+    "path": "theory/swirl-photon/README.md",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Immutable archival source copy; upstream scientific ownership is unchanged."
+  ],
+  "missingness": [
+    "scope"
+  ],
+  "legacy": {
+    "source_pin": {
+      "repository": "principia",
+      "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "path": "theory/swirl-photon/README.md",
+      "blob_oid": "3cb2a936df374435320c35a1c7762c13ebc215b1",
+      "sha256": "sha256:3389820972cab54b0a059383a8367d8a2f4a77816dbf3dc514045e6a7b9a5956",
+      "bytes": 972,
+      "commit_metadata": "4e3b02c59b694d85016915177ef1ae157895ed7b\n2026-09-06T02:49:35+00:00\n2026-09-06T02:49:35+00:00\nfeat: Migrate the wide-binary control pilot into versioned scientific r… [ORB-11378]\n"
+    },
+    "text": "---\ntitle: \"The swirl-ball electron and the photon correspondence\"\nstatus: resolved\nfamilies: [swirl-photon]\nalmanac: 15-discussions/26-06/swirl-photon-correspondence.md\ncreated: 2026-07-09\nupdated: 2026-08-20\n---\n\n# The swirl-ball electron and the photon correspondence\n\n**The idea.** An accelerating electron sheds a detaching vortex (\"the swirl\") — is that swirl\na photon? Opened with *\"the swirl is the photon, no?\"* and landed, after walking the\nMaxwell→QED chain, on the precise answer: **the swirl is the classical state of the field\nmode whose quanta are photons.** The correspondence is real and the sims render it; the fully\nclassical reading is blocked by single-photon phenomenology.\n\nDoc status is `resolved`: this line converged with established physics rather than dying —\nkept as the correspondence record the other threads build on.\n\n## Contents\n\n- [Evidence ledger](evidence-ledger.md)\n- [Related](related.md)\n- [Open questions](open-questions.md)\n",
+    "commit_object": "tree 682cccb1cf19c89c2c5f4371c14ed2b384d2ae8c\nparent 13866b2848fbcce9a1f1ef2d4b97051a65f7e626\nauthor orbit[gpt-6-astra] <agent@orbit.invalid> 1788662975 +0000\ncommitter orbit <orbit@orbit.local> 1788662975 +0000\n\nfeat: Migrate the wide-binary control pilot into versioned scientific r… [ORB-11378]\n\nMigrate the wide-binary control pilot into versioned scientific records\n\nPlanned-By: codex\n"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "source",
+    "availability": "available",
+    "snapshot_digest": "sha256:3389820972cab54b0a059383a8367d8a2f4a77816dbf3dc514045e6a7b9a5956",
+    "locator": null,
+    "media_type": "text/plain"
+  },
+  "revision_id": "sha256:c615835287adc7a8a9abe2dbc2ba2ccb4b18f9482b5eac3fc781c94570e24ecc"
+}

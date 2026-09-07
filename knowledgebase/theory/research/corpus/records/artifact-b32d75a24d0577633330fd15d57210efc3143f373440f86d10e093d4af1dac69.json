@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:principia:artifact:source%3Aorrery%3Aa1c430db54d585048ec85c4e7c47141db634f398%3Alab%2Fsims%2Fppn-reduction-symbolic-checks%2Fsim.json",
+  "aliases": [
+    "source:orrery:a1c430db54d585048ec85c4e7c47141db634f398:lab/sims/ppn-reduction-symbolic-checks/sim.json"
+  ],
+  "activity": "active",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": null,
+    "blob_oid": null,
+    "sha256": "sha256:8017d91e1fd0778685e2da5981bf1832a1236d3920d34762323a3fc9c2c8301f",
+    "path": "upstream-snapshot/orrery/a1c430db54d585048ec85c4e7c47141db634f398/lab/sims/ppn-reduction-symbolic-checks/sim.json",
+    "selector": "$",
+    "historical": true,
+    "working_tree": true
+  },
+  "limitations": [
+    "Immutable archival source copy; upstream scientific ownership is unchanged."
+  ],
+  "missingness": [
+    "git-revision",
+    "owner-ingestion-git-pin",
+    "scope",
+    "upstream-canonical-record"
+  ],
+  "legacy": {
+    "source_pin": {
+      "repository": "orrery",
+      "git_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "path": "lab/sims/ppn-reduction-symbolic-checks/sim.json",
+      "blob_oid": "d8e1991b50dfd873b80cc48f0effa303016f6606",
+      "sha256": "sha256:8017d91e1fd0778685e2da5981bf1832a1236d3920d34762323a3fc9c2c8301f",
+      "bytes": 857,
+      "commit_metadata": "a1c430db54d585048ec85c4e7c47141db634f398\n2026-09-06T02:28:14+00:00\n2026-09-06T02:28:14+00:00\nfeat: Preserve the original electron animation's continuous fold in a c… [ORB-11374]\n"
+    },
+    "text": "{\n  \"slug\": \"ppn-reduction-symbolic-checks\",\n  \"title\": \"PPN reduction symbolic checks\",\n  \"kind\": \"py\",\n  \"entry\": \"main.py\",\n  \"status\": \"active\",\n  \"created\": \"2026-08-28\",\n  \"topics\": [\n    \"gravity\",\n    \"gravity-as-scarcity\",\n    \"preferred-frame\",\n    \"ppn\",\n    \"acoustic-metric\",\n    \"symbolic-verification\"\n  ],\n  \"family\": \"gravity-as-scarcity\",\n  \"summary\": \"Exact SymPy gates verify the reservoir-frame PG reduction, pure-wind flatness, Schwarzschild diagonalization, and two-piece shift obstruction; a generic wake fires the predeclared super-PPN half-order kill.\",\n  \"provenance\": {\n    \"almanac\": \"15-discussions/26-08/from-galactic-motion-to-the-moving-gravity-medium-problem.md\",\n    \"principia\": \"theory/ppn-reduction-of-the-settled-flow/\",\n    \"orbit_task\": \"ORB-11040\",\n    \"predecessors\": [\"ORB-11039\", \"ORB-10938\", \"ORB-10935\"]\n  }\n}\n",
+    "commit_object": "tree 8d851030602405b11b7166108b09cf9cd5664329\nparent 148b668391f575466282eaa81aab0dc943846a87\nauthor orbit[gpt-6-astra] <agent@orbit.invalid> 1788661694 +0000\ncommitter orbit <orbit@orbit.local> 1788661694 +0000\n\nfeat: Preserve the original electron animation's continuous fold in a c… [ORB-11374]\n\nPreserve the original electron animation's continuous fold in a computed-field view\n\nPlanned-By: codex\n"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "source",
+    "availability": "available",
+    "snapshot_digest": "sha256:8017d91e1fd0778685e2da5981bf1832a1236d3920d34762323a3fc9c2c8301f",
+    "locator": null,
+    "media_type": "application/json"
+  },
+  "revision_id": "sha256:b32d75a24d0577633330fd15d57210efc3143f373440f86d10e093d4af1dac69"
+}

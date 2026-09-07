@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "kind": "claim",
+  "id": "urn:research:principia:claim:two-substance-energy-sourced-fork",
+  "aliases": [
+    "two-substance-energy-sourced-fork"
+  ],
+  "activity": "active",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "94e76368a84e00ed742153d77b3d25dd5962c664",
+    "sha256": "sha256:c95d48cf673efa43d6d77005c73cadea42fac1ff00da556a7b7fd260df14f9a6",
+    "path": "theory/two-substance-vortex-vacuum/claims.json",
+    "selector": "/claims/5",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Exact historical verdict and stated assumptions only; migration makes no new scientific inference."
+  ],
+  "missingness": [
+    "scope"
+  ],
+  "legacy": {
+    "id": "two-substance-energy-sourced-fork",
+    "family": "two-substance-vortex-vacuum",
+    "kind": "nature",
+    "status": "mixed",
+    "claim": "The energy-sourced fork: gravitating charge = substrate energy, deriving the parent's scarcity flow as moving energy",
+    "evidence": "Passes the equivalence principle by construction (inertia = excitation energy on this ontology) and lands on exactly the parent's surviving river branch (ORB-10159: σ = flow kinetic energy) — two independent adjudications converging. Price: deflationary (the two-substance layer does no *gravitational* work beyond being the medium). **ORB-10164 update ([two-substance-defect-gravity](../../../orrery/lab/sims/two-substance-defect-gravity/), orrery `712a814`, § lattice adjudications): the lattice adjudication returned *underdetermined by nullity* — the fork is mooted pending the source law.** Every conserved configuration has a zero far monopole, so neither candidate is selected: void volume controls only the *compact* response (R² = 0.9925), the winding/flow-energy diagnostic is uncoupled from it (R² = 0.00032, zero spread at fixed core), and the far-field predictor fit is undefined. The analytic verdict stands unchanged — MICROSCOPE kills void-volume, energy survives by construction — but the lattice cannot adjudicate *which quantity gravitates* while nothing on it gravitates",
+    "links": [
+      "../../../orrery/lab/sims/two-substance-defect-gravity/"
+    ],
+    "in_doc_ledger": true
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "claim",
+    "statement": "The energy-sourced fork: gravitating charge = substrate energy, deriving the parent's scarcity flow as moving energy",
+    "domain": "nature"
+  },
+  "revision_id": "sha256:2be1da3ce7d03f7ad896f3ccf3724cce60373b3ec2ef785f0f2d688823a53fb9"
+}

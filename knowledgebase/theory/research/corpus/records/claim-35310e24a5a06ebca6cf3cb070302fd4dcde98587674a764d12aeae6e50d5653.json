@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "kind": "claim",
+  "id": "urn:research:principia:claim:moving-clock-common-mode",
+  "aliases": [
+    "moving-clock-common-mode"
+  ],
+  "activity": "retired",
+  "scope": "derivation",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "d9f73691ac539f5935cd6dbedcabdb6f722777a3",
+    "sha256": "sha256:0ec4339ac8934344ada2473abd7941e08d9c413b12e2636c275ab4f9a35a70a5",
+    "path": "theory/moving-sources-in-the-closed-system/claims.json",
+    "selector": "/claims/1",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Exact historical verdict and stated assumptions only; migration makes no new scientific inference."
+  ],
+  "missingness": [],
+  "legacy": {
+    "id": "moving-clock-common-mode",
+    "family": "gravity-as-scarcity",
+    "kind": "derived",
+    "status": "refuted",
+    "claim": "A clock comoving with the moving mass reads 1 − U²/2c² − GM/c²r against reservoir time; the uniform-wind term is SR-exact and common-mode, and whether it is observable at all is an open *relational* question — GR in the same frame has no U term, but a uniform flow can be coordinate-like for excitations",
+    "evidence": "Inherits Theorem 1's refutation (ORB-10938 G3): the realized settled speed field violates \\|v\\|² = U² + 2c²σ beyond error and carries dipoles 0.04–0.24, so no exact common-mode U² clock statement survives — any clock sector must be computed from the *realized* flow, which folds into the PPN-reduction obligation (executed: [ppn-reduction-of-the-settled-flow](../ppn-reduction-of-the-settled-flow/), whose exact pure-wind flatness settles the *uniform* part in the coordinate-like direction — the U²/2c² term is SR kinematics of the emergent metric; what remains observable is wake-dependent). Independently undercut by the cavitation kill (row below): in a cavitated trough there is no medium for the excitation reading's clocks to be excitations *of*. The retraction history (2026-08-21 critique) stands as recorded",
+    "links": [],
+    "in_doc_ledger": true
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "claim",
+    "statement": "A clock comoving with the moving mass reads 1 − U²/2c² − GM/c²r against reservoir time; the uniform-wind term is SR-exact and common-mode, and whether it is observable at all is an open *relational* question — GR in the same frame has no U term, but a uniform flow can be coordinate-like for excitations",
+    "domain": "model"
+  },
+  "revision_id": "sha256:35310e24a5a06ebca6cf3cb070302fd4dcde98587674a764d12aeae6e50d5653"
+}

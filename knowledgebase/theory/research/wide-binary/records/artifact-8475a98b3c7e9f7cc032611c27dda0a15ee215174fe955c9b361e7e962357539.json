@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:principia:artifact:source%3Aprincipia%3A13866b2848fbcce9a1f1ef2d4b97051a65f7e626%3Atheory%2Fwide-binary-selection-methodology%2Frelated.md",
+  "aliases": [
+    "source:principia:13866b2848fbcce9a1f1ef2d4b97051a65f7e626:theory/wide-binary-selection-methodology/related.md"
+  ],
+  "activity": "active",
+  "scope": "synthetic-calibration",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "13866b2848fbcce9a1f1ef2d4b97051a65f7e626",
+    "blob_oid": "61fe967209b6acd3fc11becad7aa52964827176d",
+    "sha256": "sha256:adc409a4535c0dc48c9d357865e47c356e5f16b988fc1e2291bbff0e29d03d5d",
+    "path": "theory/wide-binary-selection-methodology/related.md",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Immutable archival source copy; upstream scientific ownership is unchanged."
+  ],
+  "missingness": [],
+  "legacy": {
+    "source_pin": {
+      "repository": "principia",
+      "git_revision": "13866b2848fbcce9a1f1ef2d4b97051a65f7e626",
+      "path": "theory/wide-binary-selection-methodology/related.md",
+      "blob_oid": "61fe967209b6acd3fc11becad7aa52964827176d",
+      "sha256": "sha256:adc409a4535c0dc48c9d357865e47c356e5f16b988fc1e2291bbff0e29d03d5d",
+      "bytes": 1889,
+      "commit_metadata": "13866b2848fbcce9a1f1ef2d4b97051a65f7e626\n2026-09-06T01:07:41+00:00\n2026-09-06T01:07:41+00:00\nfix: Restore valid photon claim and gate registries without changing sc… [ORB-11352]\n"
+    },
+    "text": "## Related\n\n- [studies/gaia-wide-binaries-low-acceleration](../../studies/gaia-wide-binaries-low-acceleration.md)\n  — the parent footprint (ORB-10753) this protocol audits. That note's own \"what this does and\n  does not constrain\" section already flags the sample as pipeline-validated but not decisive;\n  this family is the calibration check that section calls for.\n- **Astrolabe ORB-11217** (landed at astrolabe commit `90f5b58`) — made candidate-pair\n  generation complete on the sphere and fixed the shifted-field secondary-catalog semantics.\n  That was a completeness *bug fix*; this family's hypothesis is about the surviving\n  *intentional* selection design (the cuts as specified) plus forward-model assumptions, not a\n  reopening of the bug. The independent-oracle claim here (`wbsel-candidate-oracle-regression`)\n  re-verifies that fix as a control, deliberately kept separate from the bias-statistic verdict.\n- [wide-binary-selection-bias](../../../orrery/lab/sims/wide-binary-selection-bias/) — ORB-11222's\n  frozen synthetic run at Orrery `28dd5c72bb670517b93b556f1d2483402c8e8655`: candidate oracle\n  passes, but sanity/calibration/power controls fail, so the methodological verdict remains\n  unresolved and ORB-11241 owns repair.\n- Boufourou 2026 (arXiv:2608.24556) — the literature precedent that estimator/selection\n  artifacts, not new physics, can manufacture a pseudo-signal in exactly this class of test (the\n  eccentricity-triple coupling mechanism there is different from the geometry/truncation\n  mechanism tested here; see the study note's references section for the distinction).\n- No `theory/gravity-as-scarcity` or `theory/two-substance-vortex-vacuum` claim depends on this\n  family. This is deliberate: the family exists so a methodology question about an external\n  apparatus (Astrolabe) does not need to borrow or perturb either theory's live front.\n"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "source",
+    "availability": "available",
+    "snapshot_digest": "sha256:adc409a4535c0dc48c9d357865e47c356e5f16b988fc1e2291bbff0e29d03d5d",
+    "locator": null,
+    "media_type": "text/plain"
+  },
+  "revision_id": "sha256:8475a98b3c7e9f7cc032611c27dda0a15ee215174fe955c9b361e7e962357539"
+}

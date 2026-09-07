@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:principia:artifact:source%3Aorrery%3Aa1c430db54d585048ec85c4e7c47141db634f398%3Alab%2Fsims%2Fppn-reduction-symbolic-checks%2FREADME.md",
+  "aliases": [
+    "source:orrery:a1c430db54d585048ec85c4e7c47141db634f398:lab/sims/ppn-reduction-symbolic-checks/README.md"
+  ],
+  "activity": "active",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": null,
+    "blob_oid": null,
+    "sha256": "sha256:91cd0288509b434f5df0a284de41bbc95e8e057a011c3d068bcc110e0b5a8f28",
+    "path": "upstream-snapshot/orrery/a1c430db54d585048ec85c4e7c47141db634f398/lab/sims/ppn-reduction-symbolic-checks/README.md",
+    "selector": "$",
+    "historical": true,
+    "working_tree": true
+  },
+  "limitations": [
+    "Immutable archival source copy; upstream scientific ownership is unchanged."
+  ],
+  "missingness": [
+    "git-revision",
+    "owner-ingestion-git-pin",
+    "scope",
+    "upstream-canonical-record"
+  ],
+  "legacy": {
+    "source_pin": {
+      "repository": "orrery",
+      "git_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "path": "lab/sims/ppn-reduction-symbolic-checks/README.md",
+      "blob_oid": "8c79d352349a2bdaedddae8aa21ee77e237a0dd8",
+      "sha256": "sha256:91cd0288509b434f5df0a284de41bbc95e8e057a011c3d068bcc110e0b5a8f28",
+      "bytes": 3068,
+      "commit_metadata": "a1c430db54d585048ec85c4e7c47141db634f398\n2026-09-06T02:28:14+00:00\n2026-09-06T02:28:14+00:00\nfeat: Preserve the original electron animation's continuous fold in a c… [ORB-11374]\n"
+    },
+    "text": "# PPN reduction symbolic checks\n\nThis deterministic SymPy fixture turns the four exact algebra rows in\nprincipia's `theory/ppn-reduction-of-the-settled-flow/` into cataloged\npass/fail gates and executes its predeclared half-order hazard.\n\nRun it with:\n\n```sh\nPYTHONDONTWRITEBYTECODE=1 UV_CACHE_DIR=/tmp/orbit-uv-cache-11040 uv run lab/sims/ppn-reduction-symbolic-checks/main.py --check-determinism\n```\n\nThe command executes every gate twice, requires byte-identical sorted JSON,\nand writes `assets/results.json`.\n\n## Exact gates\n\n1. **Statement 0:** pulls the mass-frame acoustic metric through\n   `x_reservoir = x_mass + U t`, verifies the result is exactly the PG metric\n   of `u = v + U`, substitutes `v = u - U`, and verifies there is no remaining\n   dependence on `U` at fixed `u`.\n2. **Pure-wind flatness:** evaluates all 256 components of the four-dimensional\n   Riemann tensor for the mass-frame pure-wind metric and proves they vanish\n   identically, at all orders in the three symbolic wind components. The\n   metric is independently checked as a pullback of Minkowski space.\n3. **Diagonalization:** applies the exact temporal shift\n   `grad(lambda) = -u/(c^2-|u|^2)`, verifies the shift vanishes and the spatial\n   stretch is `delta_ij + u_i u_j/(c^2-|u|^2)`, then obtains the exact\n   Schwarzschild lapse and `g_rr` for radial static GP flow.\n4. **Two-piece obstruction:** verifies the curl product identity for three\n   arbitrary symbolic functions. Both pieces vanish for a generic radial GP\n   profile. The irrotational anisotropic field `(x, 2y, 3z)` has a nonzero\n   speed-gradient piece, so vorticity and speed anisotropy are independently\n   capable of obstructing the shift.\n5. **Half-order bookkeeping:** expands `u/c = sqrt(epsilon) a + epsilon_w b`\n   through linear wind order and `epsilon*epsilon_w`, classifies the temporal\n   longitudinal/transverse split and the diagonal metric terms, and uses a\n   nonzero symbolic `R_0i0j` witness to test whether a spatial coordinate\n   choice can remove the mixed half-order term.\n\n## Predeclared hazard result\n\n**KILL on the generic wake branch:** the temporal shift moves the\n`sqrt(epsilon)*epsilon_w` cross term into `h_00` and `h_ij`; it does not remove\nit. Even when both leading flow pieces are potential, the fixture's\nanisotropic wake witness has nonzero mixed-order curvature. A realized wake\ncan avoid this super-PPN effect only by satisfying additional cancellations\n(including the relevant contraction/curvature conditions); the exact algebra\ndoes not supply them. Reconciliation of that verdict and the measured wake is\nKepler's theory-lane work. This fixture does not edit principia.\n\nThe machine-readable artifact is authoritative and records every expression,\nclassification, exact zero, gate verdict, and the prominent hazard verdict.\n\n## Provenance\n\nThe fixture implements Orbit task `ORB-11040`, requested by principia\n`theory/ppn-reduction-of-the-settled-flow/`, and belongs to the almanac thread\n`15-discussions/26-08/from-galactic-motion-to-the-moving-gravity-medium-problem.md`.\n",
+    "commit_object": "tree 8d851030602405b11b7166108b09cf9cd5664329\nparent 148b668391f575466282eaa81aab0dc943846a87\nauthor orbit[gpt-6-astra] <agent@orbit.invalid> 1788661694 +0000\ncommitter orbit <orbit@orbit.local> 1788661694 +0000\n\nfeat: Preserve the original electron animation's continuous fold in a c… [ORB-11374]\n\nPreserve the original electron animation's continuous fold in a computed-field view\n\nPlanned-By: codex\n"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "source",
+    "availability": "available",
+    "snapshot_digest": "sha256:91cd0288509b434f5df0a284de41bbc95e8e057a011c3d068bcc110e0b5a8f28",
+    "locator": null,
+    "media_type": "text/plain"
+  },
+  "revision_id": "sha256:c6a05ceb4d56a086d3ee4f83e928259ce0f18f78ddcb4bb80e25bcdf9c62185b"
+}

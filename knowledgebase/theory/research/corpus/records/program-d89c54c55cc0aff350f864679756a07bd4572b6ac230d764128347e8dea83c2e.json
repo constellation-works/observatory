@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "kind": "program",
+  "id": "urn:research:principia:program:shear-sourced-consumption",
+  "aliases": [
+    "shear-sourced-consumption"
+  ],
+  "activity": "retired",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "c9b26b67f260c4002319c1d9268872f2339ab69b",
+    "sha256": "sha256:e1bd24b05676d65097d91c786c4fb02d28dba5293720deb7bc96898a88e268d0",
+    "path": "theory/shear-sourced-consumption/claims.json",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Exact historical verdict and stated assumptions only; migration makes no new scientific inference."
+  ],
+  "missingness": [
+    "scope"
+  ],
+  "legacy": {
+    "doc": "shear-sourced-consumption",
+    "title": "Shear-sourced consumption: a local candidate for the source law",
+    "status": "retired",
+    "families": [
+      "gravity-as-scarcity"
+    ],
+    "updated": "2026-09-04",
+    "headline": "RETIRED by Daniel (2026-09-04). No active research or follow-up; historical results and claim verdicts preserved.",
+    "live_fronts": [],
+    "retirement": {
+      "date": "2026-09-04",
+      "authorized_by": "Daniel",
+      "reason": "Retired by Daniel on 2026-09-04: discontinue the gravity-as-scarcity research family, including the shear-flow completion, moving-source repair, and PPN continuation. Preserve all evidence and individual claim verdicts; no follow-up or reopening without Daniel's explicit authorization.",
+      "previous_status": "growing",
+      "previous_headline": "Named shear law survived static falsifiers; amplitude core paid by level matching. Still a postulate, not a derivation from counting. Family live front is the moving closed system."
+    }
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "theory",
+    "title": "Shear-sourced consumption: a local candidate for the source law"
+  },
+  "revision_id": "sha256:d89c54c55cc0aff350f864679756a07bd4572b6ac230d764128347e8dea83c2e"
+}

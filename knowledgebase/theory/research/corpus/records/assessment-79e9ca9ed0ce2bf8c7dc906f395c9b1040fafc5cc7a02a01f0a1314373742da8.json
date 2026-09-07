@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "kind": "assessment",
+  "id": "urn:research:principia:assessment:ppn-reservoir-pg-form%3Alegacy-verdict",
+  "aliases": [
+    "ppn-reservoir-pg-form:legacy-verdict"
+  ],
+  "activity": "unknown",
+  "scope": "derivation",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "cf1add5f518795b48696ace5aae1ea01f6b094fe",
+    "sha256": "sha256:b258d05cb8d485f7930cd4898e3b3f45abd7485187030cf02e2752174d451291",
+    "path": "theory/ppn-reduction-of-the-settled-flow/claims.json",
+    "selector": "/claims/0",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Exact historical verdict and stated assumptions only; migration makes no new scientific inference."
+  ],
+  "missingness": [
+    "exact-evidence-owner-references",
+    "independently-verified-controls",
+    "activity"
+  ],
+  "legacy": {
+    "id": "ppn-reservoir-pg-form",
+    "family": "gravity-as-scarcity",
+    "kind": "derived",
+    "status": "supported",
+    "claim": "In the reservoir frame the analog metric of the moving closed system is exactly the PG-form metric of the disturbance field u = v + U, translating rigidly with the source; every metric-sector observable is a functional of u alone (Statement 0)",
+    "evidence": "Two-line coordinate substitution (§ Statement 0), now cataloged: the symbolic fixture (ORB-11040 G1, [ppn-reduction-symbolic-checks](../../../orrery/lab/sims/ppn-reduction-symbolic-checks/)) verifies the tensor transform lands exactly on the PG form of u = v + U and that the transformed metric depends on v and U only through u (explicit wind derivatives at fixed u vanish identically). Downstream of the acoustic-metric family ([river-model-and-analog-gravity](../../studies/river-model-and-analog-gravity.md))",
+    "links": [
+      "../../studies/river-model-and-analog-gravity.md",
+      "../../../orrery/lab/sims/ppn-reduction-symbolic-checks/"
+    ],
+    "in_doc_ledger": true,
+    "kill": "The symbolic fixture finds the tensor transform of the mass-frame acoustic metric under x → x + Ut does not give the PG form in u, or exhibits a metric-sector observable that is not a functional of u"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "claim": {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:ppn-reservoir-pg-form",
+      "revision_id": "sha256:79e1feaf459fbb527fca90415407660f9284b2e9713000389c1a746f3955fb00",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    "verdict": "supported",
+    "legacy_verdict": "supported",
+    "inference": "historical",
+    "basis": "legacy-report",
+    "controls": "unknown",
+    "rationale": "Two-line coordinate substitution (§ Statement 0), now cataloged: the symbolic fixture (ORB-11040 G1, [ppn-reduction-symbolic-checks](../../../orrery/lab/sims/ppn-reduction-symbolic-checks/)) verifies the tensor transform lands exactly on the PG form of u = v + U and that the transformed metric depends on v and U only through u (explicit wind derivatives at fixed u vanish identically). Downstream of the acoustic-metric family ([river-model-and-analog-gravity](../../studies/river-model-and-analog-gravity.md))",
+    "evidence": []
+  },
+  "revision_id": "sha256:79e9ca9ed0ce2bf8c7dc906f395c9b1040fafc5cc7a02a01f0a1314373742da8"
+}

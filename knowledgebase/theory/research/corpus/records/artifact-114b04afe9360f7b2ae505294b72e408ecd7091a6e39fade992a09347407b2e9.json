@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Atheory%2Fgravity-as-scarcity%2Funiversality.md",
+  "aliases": [
+    "source:principia:4e3b02c59b694d85016915177ef1ae157895ed7b:theory/gravity-as-scarcity/universality.md"
+  ],
+  "activity": "active",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "727d685b172e0f9676d1a12bd642318656e1718f",
+    "sha256": "sha256:39d0c9924e603a69be02f42cc8ecacfa3bcb6082437d5c0b5a0a1935a5593d4f",
+    "path": "theory/gravity-as-scarcity/universality.md",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Immutable archival source copy; upstream scientific ownership is unchanged."
+  ],
+  "missingness": [
+    "scope"
+  ],
+  "legacy": {
+    "source_pin": {
+      "repository": "principia",
+      "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "path": "theory/gravity-as-scarcity/universality.md",
+      "blob_oid": "727d685b172e0f9676d1a12bd642318656e1718f",
+      "sha256": "sha256:39d0c9924e603a69be02f42cc8ecacfa3bcb6082437d5c0b5a0a1935a5593d4f",
+      "bytes": 7437,
+      "commit_metadata": "4e3b02c59b694d85016915177ef1ae157895ed7b\n2026-09-06T02:49:35+00:00\n2026-09-06T02:49:35+00:00\nfeat: Migrate the wide-binary control pilot into versioned scientific r… [ORB-11378]\n"
+    },
+    "text": "## The form and universality adjudication — the ORB-10167 and ORB-10169 measurements\n\nThe two final shape measurements on the boost have run (faraday; the apparatus records are\nthe numbers of record:\n[scarcity-rotation-curve-fit](../../../orrery/lab/sims/scarcity-rotation-curve-fit/)\n`assets/results.json`, orrery `8990fd3`;\n[sparc-scarcity-universality](../../../orrery/lab/sims/sparc-scarcity-universality/)\n`assets/results.json`, orrery `1ab8085`). The first asks whether the MW band ever identified\nthe boost's functional form; the second asks whether the fitted β is one number across\ngalaxies. The answers: no, and no — and the second *no* is the family's predeclared kill\ncondition firing.\n\n### ORB-10167 — form degeneracy on the MW band\n\nThe Sanders-form Yukawa (ORB-10161 §A2's shape control,\n[two-substance-vortex-vacuum](../two-substance-vortex-vacuum/)) joined the exact\nORB-10077/10082 protocol as a fourth model: same predeclared 5–15 kpc fit and 15–18.75 kpc\nheld-out bands, same bounded drift nuisance, 27 profile variants, 200 bootstrap resamples,\nseed 42 — with the parameter count kept honest at k = 4 (mass normalization, α, ξ, drift;\nfaraday's own correction, its L-0006). Measured:\n\n- **The best fit lands on the analytic matching point.** α = −0.679, ξ = 4.642 kpc — the\n  free fit found ORB-10161 §A2's matched parameters (α ≈ −0.68) on its own. RMSE 2.91 km/s\n  vs scarcity's 2.70.\n- **The point estimate prefers scarcity; the bootstrap cannot.** ΔAIC(scarcity − Yukawa) =\n  −369.6, same sign across all 27 profile variants (−479.7 to −138.9) — but the\n  200-resample bootstrap 95% interval spans **[−503.9, +1051.9]**. Per the predeclared\n  decision rule (decisive only if the interval excludes zero) the verdict is\n  **shape-degenerate**: the band does not distinguish exponential saturation from the\n  scarcity form's 1/r tail.\n- **Held-out: both models underpredict coherently.** Scarcity 5.26 km/s (+4.86 under),\n  Yukawa 5.52 km/s (+5.11 under) — the 13–16 kpc flattening eludes both forms alike.\n\nCaveats, both faraday's: the Yukawa multiplier is the point-source kernel over the spherical\nenclosed-mass surrogate (the disk convolution flagged in ORB-10161 §A2 remains undone), and\nthe shared drift nuisance pins its lower bound as in every run on this band. Neither rescues\nform identification: they grade how far the degeneracy verdict extrapolates, not the measured\ninability to separate the shapes here.\n\n**What this does to ORB-10077.** The fit's ΔAIC ≈ −10⁵ over baryons stands untouched, and\nthe point-estimate preference for scarcity over the Yukawa (all 27 variants) enters the\nledger as a recorded fact. But the band never tested the *functional form*: a canonical\nYukawa — the shape belonging to an independently refuted fifth-force family (ORB-10161\nBranch A) — sits inside the sample's resolving power. The evidential content of the family's\none decisive empirical result is hereby restated at its measured size: **a ~5 kpc\nrise-and-saturate boost beats baryons on the MW band — carrier unidentified\n(ORB-10157/ORB-10170), functional form unidentified (ORB-10167).**\n\n### ORB-10169 — the universality measurement: the kill condition fired\n\nThe \"one constant, two observables\" question — open since founding, sharpened by ORB-10161\n§A5 into a predeclared kill condition — has its answer. Faraday fit three models to 149\ngalaxies / 3,150 points from the SPARC-derived catalog (tycho ORB-10168 lineage; standard\nQ ≤ 2 and inclination ≥ 30° cuts), under one uniform nuisance policy (one positive baryonic\nnormalization per galaxy, no drift term) and honest parameter counting (global-β scarcity\nk = 150; per-galaxy-β scarcity k = 298; global-a₀ MOND control k = 150). Measured:\n\n- **Global β = 5.526 kpc** — 5% from the MW's fitted 5.25. The proximity is real and is\n  recorded; it does not save what follows.\n- **Per-galaxy β wins by 51,723 AIC** (106,619 global → 54,896 per-galaxy) — the sample\n  overwhelmingly rejects one shared length.\n- **β_i tracks galaxy size:** Spearman ρ = 0.343, p = 1.86×10⁻⁵ against disk scale length\n  (and ρ = 0.401, p = 4.1×10⁻⁷ against characteristic acceleration; per-galaxy β_i spans\n  ~0–21.3 kpc, median 3.07). Constant-β heterogeneity: χ² = 48,362 on 121 dof, p\n  underflowing to zero.\n- **The same-policy MOND control organizes the data better by five figures:** global-a₀\n  AIC 29,198 vs global scarcity's 106,619 (gap 77,421; fitted a₀ = 1.41×10⁻¹⁰ m/s²). The\n  discrepancy organizes by *acceleration*, not by any fixed length — the measured\n  radial-acceleration-relation verdict (McGaugh, Lelli & Schombert 2016;\n  [studies/fifth-force-searches](../../studies/fifth-force-searches.md)).\n\nThe predeclared kill condition — a positive β_i–size correlation at p < 0.01 plus rejection\nof constant β_i at p < 0.01; in the task's words, *\"if β_i systematically tracks galaxy\nsize … the fixed-β scarcity form is refuted as a universal law — the same verdict Sanders'\nr₀ received\"* — **is met on both prongs, by orders of magnitude. The fixed-β scarcity form\nis refuted as a universal law at this apparatus.** The proposer's knife cuts deepest when it\nis their own predeclared condition that fired; it fired.\n\n**Caveat grading — what limits decisiveness vs what cannot be explained away.** All declared\nby faraday, who limits the verdict explicitly to this apparatus and likelihood:\n\n- *Spherical enclosed-mass surrogate over thin-disk component curves* — a shape systematic\n  applied uniformly to every galaxy and every model. It inflates absolute misfit and can\n  bias any individual β_i; it grades the exact AIC magnitudes.\n- *Statistical-only errors* — absolute χ² is unacceptable for **all** fits, the MOND control\n  included, so no model earns an absolute-goodness claim here; the designed instrument is\n  relative comparison under a shared likelihood.\n- *Uniform no-drift nuisance policy* — differs from the MW apparatus (which carries a\n  bounded drift term), so the 5.53-vs-5.25 β comparison is same-family, not same-protocol.\n- *Input provenance* — ORB-10168's delivery landed producer code but not the processed\n  parquets; the validation parquets were reconstructed from the published HTTPS tables for\n  this run (SHA-256 hashes recorded in the apparatus results; repair task per faraday\n  L-0001/F2026-07-008).\n\nGraded: these gate **decisiveness** — the exact AIC numbers, any absolute-fit statement, the\ncross-apparatus identity of β. None of them gates the verdict, because none can manufacture\nwhat was measured: a p ~ 10⁻⁵ correlation between β_i and galaxy size across 149 galaxies,\nand a five-figure AIC gap between acceleration organization and fixed-length organization\ncomputed under an *identical* likelihood and nuisance policy. A uniform systematic does not\nknow each galaxy's disk scale length.\n\n**What refuses laundering.** Three facts stand in the ledger beside the refutation, per the\nstanding rules: scarcity's point-estimate preference over the Yukawa on the MW band (all 27\nvariants); the global-β proximity to the MW fit (5.53 vs 5.25 kpc); and the per-galaxy\nscarcity form remaining a serviceable per-galaxy fitter (AIC 54,896). They are recorded\nfacts about a form now refuted as a universal law — they do not soften the verdict, and the\nverdict does not erase them.\n",
+    "commit_object": "tree 682cccb1cf19c89c2c5f4371c14ed2b384d2ae8c\nparent 13866b2848fbcce9a1f1ef2d4b97051a65f7e626\nauthor orbit[gpt-6-astra] <agent@orbit.invalid> 1788662975 +0000\ncommitter orbit <orbit@orbit.local> 1788662975 +0000\n\nfeat: Migrate the wide-binary control pilot into versioned scientific r… [ORB-11378]\n\nMigrate the wide-binary control pilot into versioned scientific records\n\nPlanned-By: codex\n"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "source",
+    "availability": "available",
+    "snapshot_digest": "sha256:39d0c9924e603a69be02f42cc8ecacfa3bcb6082437d5c0b5a0a1935a5593d4f",
+    "locator": null,
+    "media_type": "text/plain"
+  },
+  "revision_id": "sha256:114b04afe9360f7b2ae505294b72e408ecd7091a6e39fade992a09347407b2e9"
+}

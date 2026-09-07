@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "kind": "claim",
+  "id": "urn:research:principia:claim:ppn-uniform-wind-flat",
+  "aliases": [
+    "ppn-uniform-wind-flat"
+  ],
+  "activity": "retired",
+  "scope": "derivation",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "cf1add5f518795b48696ace5aae1ea01f6b094fe",
+    "sha256": "sha256:b258d05cb8d485f7930cd4898e3b3f45abd7485187030cf02e2752174d451291",
+    "path": "theory/ppn-reduction-of-the-settled-flow/claims.json",
+    "selector": "/claims/1",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Exact historical verdict and stated assumptions only; migration makes no new scientific inference."
+  ],
+  "missingness": [],
+  "legacy": {
+    "id": "ppn-uniform-wind-flat",
+    "family": "gravity-as-scarcity",
+    "kind": "derived",
+    "status": "supported",
+    "claim": "The pure-wind analog metric is exactly flat (Riemann = 0): a uniform wind is coordinate for metric-coupled excitations — the U²/2c² clock term is SR kinematics of the emergent metric, not an observable anomaly — and preferred-frame physics can enter the metric sector only through the disturbance field",
+    "evidence": "Immediate corollary of Statement 0 (u = 0 gives Minkowski exactly), now cataloged: the symbolic fixture (ORB-11040 G2, [ppn-reduction-symbolic-checks](../../../orrery/lab/sims/ppn-reduction-symbolic-checks/)) checks all 256 Riemann components of the pure-wind metric symbolically — identically zero at every order in U — and confirms the metric is the exact Minkowski pullback under x → x + Ut; answers the clock-sector relational question at metric level in the coordinate-like direction the 2026-08-21 arbitration held open. Lattice shadow separately cataloged (pure-wind nulls: ORB-10935 G4, ORB-10937 G5, ORB-10938 G6, [level-core-dynamical-relaxation](../../../orrery/lab/sims/level-core-dynamical-relaxation/)). Scope: metric sector only — the medium sectors (consumption, cavitation, drag) keep their anchored frame",
+    "links": [
+      "../../../orrery/lab/sims/level-core-dynamical-relaxation/",
+      "../../../orrery/lab/sims/ppn-reduction-symbolic-checks/"
+    ],
+    "in_doc_ledger": true,
+    "kill": "A nonzero curvature invariant of the pure-wind acoustic metric at any order in U, or a derived metric-sector observable of uniform U"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "claim",
+    "statement": "The pure-wind analog metric is exactly flat (Riemann = 0): a uniform wind is coordinate for metric-coupled excitations — the U²/2c² clock term is SR kinematics of the emergent metric, not an observable anomaly — and preferred-frame physics can enter the metric sector only through the disturbance field",
+    "domain": "model"
+  },
+  "revision_id": "sha256:7b448c6a9466a16166d82d9334a1a2868deb3190893c4a96cb14d14079bb8742"
+}

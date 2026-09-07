@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "kind": "assessment",
+  "id": "urn:research:principia:assessment:scarcity-solar-system-ephemerides%3Alegacy-verdict",
+  "aliases": [
+    "scarcity-solar-system-ephemerides:legacy-verdict"
+  ],
+  "activity": "unknown",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "b5f58c64f4c6bf9d7d7f67c826f5d2dd7c9cb64f",
+    "sha256": "sha256:996b059ca4b45cee6dd42a503594508ebb8d6d13211ad1104df3754b116d5976",
+    "path": "theory/gravity-as-scarcity/claims.json",
+    "selector": "/claims/7",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Exact historical verdict and stated assumptions only; migration makes no new scientific inference."
+  ],
+  "missingness": [
+    "exact-evidence-owner-references",
+    "independently-verified-controls",
+    "activity",
+    "scope"
+  ],
+  "legacy": {
+    "id": "scarcity-solar-system-ephemerides",
+    "family": "gravity-as-scarcity",
+    "kind": "nature",
+    "status": "mixed",
+    "claim": "The fitted scarcity form leaves solar-system ephemerides (AU scale) inside observational precision",
+    "evidence": "Constraint from the measured Newtonian-omission floor ([studies/solar-system-ephemeris-precision-floor](../../studies/solar-system-ephemeris-precision-floor.md); Uranus rms 4.1e-9 AU is the tightest). **ORB-10097 ran** (Faraday; [solar-system-nbody](../../../orrery/lab/sims/solar-system-nbody/) `scarcity/`, orrery `23fe253`, § below): the **multiplicative reading**, integrated on the exact ORB-10093 protocol with β and F(u) imported unchanged, puts **Uranus above its floor in the primary galactocentric orientation — 1.89× rms, 2.84× max** (7.7e-9 vs 4.1e-9 AU rms); the other seven planets stay below (Saturn next at 0.74×). Qualification: the six-axis orientation envelope **crosses** the Uranus floor (rms 0.66×–3.0×), so this is tension under the physically-motivated orientation, *not* an orientation-independent refutation. The **screened reading is identically Newtonian** — the explicit zero control — and is **unconstrained by this test**. **ORB-10156 update, reversed by measurement (ORB-10157):** the multiplicative reading was briefly the *derived* local behavior; the lattice measurement (superposition rows below, § superposition adjudication) has since refuted the derivation — the mechanic's own modulation is survivor-fraction headroom screening A(D) = (1−D)^1.07079, unit gain, keyed to *local occupancy*, not the β-amplified q-ratio this run integrated. The tension is now **conditioned, not derived**: it stands iff the fitted galactic boost is identified with the measured screening law (which demands O(1) ambient occupancy depletion across the disk — a normalization nothing has fixed); on that identification the boost's fitted local log-gradient (3.2×10⁻¹⁰/AU) transfers to the Sun's field unchanged and every integrated number here stands; without it, this run tested a transplanted rule the mechanic doesn't supply. The anticipated \"honest out\" (a lattice computation moving the log-gradient at O(1)) was used, and overshot: the lattice moved not the gradient but the rule's derivational status — though, as anticipated, neither the sign nor the *existence* of the modulation moved (the exemption reading — the Sun generating as if alone, ephemerides exactly Newtonian — is measured dead at log-RMSE 1.074, so the tension cannot be dissolved by exemption, only relocated by normalization). Result: [summary.json](../../../orrery/lab/sims/solar-system-nbody/scarcity/summary.json)",
+    "links": [
+      "../../studies/solar-system-ephemeris-precision-floor.md",
+      "../../../orrery/lab/sims/solar-system-nbody/",
+      "../../../orrery/lab/sims/solar-system-nbody/scarcity/summary.json"
+    ],
+    "in_doc_ledger": true
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "claim": {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:scarcity-solar-system-ephemerides",
+      "revision_id": "sha256:9bb1b1002445c2ed040a04ede1fa0fc78da94d866fab2deaa0456c0a55c12bf0",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    "verdict": "inconclusive",
+    "legacy_verdict": "mixed",
+    "inference": "historical",
+    "basis": "legacy-report",
+    "controls": "unknown",
+    "rationale": "Constraint from the measured Newtonian-omission floor ([studies/solar-system-ephemeris-precision-floor](../../studies/solar-system-ephemeris-precision-floor.md); Uranus rms 4.1e-9 AU is the tightest). **ORB-10097 ran** (Faraday; [solar-system-nbody](../../../orrery/lab/sims/solar-system-nbody/) `scarcity/`, orrery `23fe253`, § below): the **multiplicative reading**, integrated on the exact ORB-10093 protocol with β and F(u) imported unchanged, puts **Uranus above its floor in the primary galactocentric orientation — 1.89× rms, 2.84× max** (7.7e-9 vs 4.1e-9 AU rms); the other seven planets stay below (Saturn next at 0.74×). Qualification: the six-axis orientation envelope **crosses** the Uranus floor (rms 0.66×–3.0×), so this is tension under the physically-motivated orientation, *not* an orientation-independent refutation. The **screened reading is identically Newtonian** — the explicit zero control — and is **unconstrained by this test**. **ORB-10156 update, reversed by measurement (ORB-10157):** the multiplicative reading was briefly the *derived* local behavior; the lattice measurement (superposition rows below, § superposition adjudication) has since refuted the derivation — the mechanic's own modulation is survivor-fraction headroom screening A(D) = (1−D)^1.07079, unit gain, keyed to *local occupancy*, not the β-amplified q-ratio this run integrated. The tension is now **conditioned, not derived**: it stands iff the fitted galactic boost is identified with the measured screening law (which demands O(1) ambient occupancy depletion across the disk — a normalization nothing has fixed); on that identification the boost's fitted local log-gradient (3.2×10⁻¹⁰/AU) transfers to the Sun's field unchanged and every integrated number here stands; without it, this run tested a transplanted rule the mechanic doesn't supply. The anticipated \"honest out\" (a lattice computation moving the log-gradient at O(1)) was used, and overshot: the lattice moved not the gradient but the rule's derivational status — though, as anticipated, neither the sign nor the *existence* of the modulation moved (the exemption reading — the Sun generating as if alone, ephemerides exactly Newtonian — is measured dead at log-RMSE 1.074, so the tension cannot be dissolved by exemption, only relocated by normalization). Result: [summary.json](../../../orrery/lab/sims/solar-system-nbody/scarcity/summary.json)",
+    "evidence": []
+  },
+  "revision_id": "sha256:72bdb6bb3969981ae86310a6950e0932ceebdf0571d0730a37f177bb9234c920"
+}

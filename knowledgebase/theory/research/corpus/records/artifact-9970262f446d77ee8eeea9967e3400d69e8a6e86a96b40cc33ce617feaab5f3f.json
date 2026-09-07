@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Atheory%2Fshear-sourced-consumption%2FREADME.md",
+  "aliases": [
+    "source:principia:4e3b02c59b694d85016915177ef1ae157895ed7b:theory/shear-sourced-consumption/README.md"
+  ],
+  "activity": "active",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "a8762baf1c31446699ea052401d8505de12867d2",
+    "sha256": "sha256:f67dd4f34843e67644e38406e5da62221e46e7a4ec63fca1d0a88d685d5b2c6a",
+    "path": "theory/shear-sourced-consumption/README.md",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Immutable archival source copy; upstream scientific ownership is unchanged."
+  ],
+  "missingness": [
+    "scope"
+  ],
+  "legacy": {
+    "source_pin": {
+      "repository": "principia",
+      "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "path": "theory/shear-sourced-consumption/README.md",
+      "blob_oid": "a8762baf1c31446699ea052401d8505de12867d2",
+      "sha256": "sha256:f67dd4f34843e67644e38406e5da62221e46e7a4ec63fca1d0a88d685d5b2c6a",
+      "bytes": 7107,
+      "commit_metadata": "4e3b02c59b694d85016915177ef1ae157895ed7b\n2026-09-06T02:49:35+00:00\n2026-09-06T02:49:35+00:00\nfeat: Migrate the wide-binary control pilot into versioned scientific r… [ORB-11378]\n"
+    },
+    "text": "---\ntitle: \"Shear-sourced consumption: a local candidate for the source law\"\nstatus: retired\nfamilies: [gravity-as-scarcity]\nalmanac: 15-discussions/26-08/from-big-bang-questions-to-the-shear-consumption-law.md\ncreated: 2026-08-11\nupdated: 2026-09-04\n---\n\n# Shear-sourced consumption\n\n**Retired by Daniel — 2026-09-04.** This document is an archival part of the\n`gravity-as-scarcity` family. No live front or further repair is authorized.\nSee the [family retirement decision](../gravity-as-scarcity/retirement.md).\nIndividual evidence statuses remain unchanged: retirement is a research decision,\nnot a claim that every conditional derivation is false. All verdicts and proposed\nnext steps below are historical and do not authorize continuation.\n\n\n**The idea (kepler, 2026-08-11 — provoked by Daniel: \"give it a crack\").** The source-law\ndebt — the one consolidated gravitational debt of the family\n([gravity-as-scarcity](../gravity-as-scarcity/) § open questions; three strikes: ORB-10162,\nORB-10164, [two-substance-vortex-vacuum](../two-substance-vortex-vacuum/) §B2) — asks for a\nlaw of non-conservation: *where does substance go*, such that the free-fall\n(Gullstrand–Painlevé) inflow the clock sector demands is sustained. This doc proposes and\nanalytically characterizes one candidate: **space is consumed at a rate equal to its density\ntimes the local anisotropic (tidal) strain rate of its own flow.** The law is local,\nuniversal, scale-free, source-blind, has coefficient exactly one, uniquely selects the GP\nprofile among steady radial flows with the mass-scaling freedom every previous local attempt\nlacked, consumes nothing in a homogeneous expanding universe, and closes its global budget\nagainst Hubble generation at exactly the turnaround radius. It is a **named postulate with\nmeasured-shape obligations**, not a derivation from the counting mechanic — the ORB-10162\nverdict on the mechanic's natural rules stands untouched.\n\n**Current verdict (rewritten 2026-08-12, after ORB-10751; amplitude paragraph added\n2026-08-20):** *all three predeclared kill gates passed on-lattice.* Faraday's cataloged\ndynamical lattice\n([shear-consumption-lattice](../../../orrery/lab/sims/shear-consumption-lattice/), orrery\n`a8da4ec`) — frozen coefficient-one von Mises destruction, no imposed profile — converges\nfrom rest and from perturbed states to a measured steady exponent **−0.5000150 ± 1.6×10⁻⁵**\n(combined seed/resolution/timestep error; −1/2 inside one error), selects the exterior\namplitude strictly monotonically from the core flux, and consumes nothing (3.7×10⁻¹⁶ of\nn|H|) on a uniformly expanding lattice. The law survived its falsifiers. Two things kept it\nfrom being more than a strong candidate: the amplitude–mass coupling A = √(2GM) remained\nunderived (the gate showed A is *controllable* from the core, not that masses set it), and\nthe exploratory two-core probe measured a **different superposition family than the\ncounting mechanic's** (§ falsifier postscript) — the two lattice models disagreeing on a\nmeasurable, with at most one of them the mechanic behind the MW boost.\n\n**The amplitude development (2026-08-20, § the level-matching closure below):** both\nresidues now have an analytic answer awaiting its lattice gate. The doc's recorded natural\nguess for the coupling — the matter region sets the surface inflow via its own internal\nconsumption, a *flux-type* coupling — is **excluded in closed form**: a universal\nper-energy consumption rate matched at the body surface forces G_eff = κ²ρ_body/(24πn²) —\nexterior gravity tracking the source's *bulk density*, independent of its mass — breaking\nmass additivity and contradicting the counting mechanic's own verified σ ∝ M\nnormalization. What closes the amplitude instead is **level matching**: the counting\nmechanic's draw-sourced standing level σ = GM/c²r, the parent's rolling rule applied to\nspace (ORB-10159 branch 3), and this doc's shear law form a closed, consistent,\nparameter-free steady system whose unique solution is GP with **A = √(2GM)** — and whose\nconsistency *forces* the shear coefficient to be exactly one. On the closure, the two-core\nsuperposition divergence is predicted to be a **flux-boundary artifact** (levels superpose\nby the counting family, not the flux family). Every claim is gated: **ORB-10932** (level,\ndensity, and composition gates), the level-core note on **ORB-10755**, and the sourcing\ntask **ORB-10933**. If ORB-10932's gates pass, the source-law debt's amplitude core\ndissolves into postulates the family had already named — no new debt is created.\n\n**Adjudication (2026-08-21):** ORB-10932's three gates **all passed** on faraday's\ncataloged level-coupled lattice\n([level-coupled-shear-lattice](../../../orrery/lab/sims/level-coupled-shear-lattice/), orrery\n`82b885c`): the level closure A² = 2c²σ_s·r_s is measured (A-vs-level exponent\n0.5000000000000002 ± 7.5×10⁻¹⁶ regression SE across 3 decades of mass), the amplitude is\nindependent of core radius at fixed draw (exponent −2×10⁻¹⁷ ± 9×10⁻¹⁵ over a 4× span —\nthe flux signature A ∝ r_s^(−3/2) did **not** revive), and composition is quadrature\n(A-vs-N exponent 0.4999999999999982 ± 2.0×10⁻¹⁵ across 1.5 decades). **The amplitude core\nof the source-law debt is paid** — dissolved into the named postulates. In the same\nwindow, **ORB-10755** resolution-converged the flux-core superposition family\n(c = 4.63 ± 0.18, β = 0.606 ± 0.027 at 65³), sharply distinct from ORB-10157's headroom\nfamily, with level cores explicitly out of scope there. The closure's one remaining live\nmeasurable is therefore its superposition prediction — the level-core two-core\ndiscriminator, filed as **ORB-10934**, predeclared both ways.\n\n**Adjudication (2026-08-21, second wave):** ORB-10934 ran the same day and **confirmed the\nclosure's prediction** ([level-core-two-core-superposition](../../../orrery/lab/sims/level-core-two-core-superposition/),\norrery `9e273e2`): with draw-sourced level cores in full 3-D — same frozen stencil,\nbyte-identical — the two-core modulation family **reverts to the counting mechanic's\nheadroom screening**, continuum p = 1.0717 ± 0.0036 against ORB-10157's 1.071, while the\nflux family loses by ~14× in log-RMSE with its β pinned at the analytic bound (no\nnon-analytic revival). Far-field quadrature holds at 5×10⁻¹⁶. The \"two lattice models\ndisagree on superposition\" wrinkle is dissolved: **one mechanic, two boundary conditions,\nonly one of them physical.** With that, every measurable the closure exposed has been\nmeasured and passed; what remains gated is external sourcing (**ORB-10933**, backlog) and\nthe sectors outside this doc's scope.\n\n## Contents\n\n- [Evidence ledger](evidence-ledger.md)\n- [Related](related.md)\n- [Open questions](open-questions.md)\n- [The law](the-law.md)\n- [The derivation](derivation.md)\n- [Three unforced checks](three-checks.md)\n- [Debts of the payment](debts-of-the-payment.md)\n- [Falsifier](falsifier.md)\n- [Level-matching closure](level-matching-closure.md)\n",
+    "commit_object": "tree 682cccb1cf19c89c2c5f4371c14ed2b384d2ae8c\nparent 13866b2848fbcce9a1f1ef2d4b97051a65f7e626\nauthor orbit[gpt-6-astra] <agent@orbit.invalid> 1788662975 +0000\ncommitter orbit <orbit@orbit.local> 1788662975 +0000\n\nfeat: Migrate the wide-binary control pilot into versioned scientific r… [ORB-11378]\n\nMigrate the wide-binary control pilot into versioned scientific records\n\nPlanned-By: codex\n"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "source",
+    "availability": "available",
+    "snapshot_digest": "sha256:f67dd4f34843e67644e38406e5da62221e46e7a4ec63fca1d0a88d685d5b2c6a",
+    "locator": null,
+    "media_type": "text/plain"
+  },
+  "revision_id": "sha256:9970262f446d77ee8eeea9967e3400d69e8a6e86a96b40cc33ce617feaab5f3f"
+}

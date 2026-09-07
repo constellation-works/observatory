@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "kind": "claim",
+  "id": "urn:research:principia:claim:scarcity-counting-produces-gp",
+  "aliases": [
+    "scarcity-counting-produces-gp"
+  ],
+  "activity": "retired",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "b5f58c64f4c6bf9d7d7f67c826f5d2dd7c9cb64f",
+    "sha256": "sha256:996b059ca4b45cee6dd42a503594508ebb8d6d13211ad1104df3754b116d5976",
+    "path": "theory/gravity-as-scarcity/claims.json",
+    "selector": "/claims/14",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Exact historical verdict and stated assumptions only; migration makes no new scientific inference."
+  ],
+  "missingness": [
+    "scope"
+  ],
+  "legacy": {
+    "id": "scarcity-counting-produces-gp",
+    "family": "gravity-as-scarcity",
+    "kind": "nature",
+    "status": "refuted",
+    "claim": "The dynamical-consumption flow law is the free-fall (Gullstrand–Painlevé) river ½v² = c²σ = GM/r — i.e. the mechanic's own dynamics produce it; flux-conserving and budget-per-shell flows are refuted",
+    "evidence": "**Derived (ORB-10159, §(b)), then measured (ORB-10162, [dynamical-consumption-lattice](../../../orrery/lab/sims/dynamical-consumption-lattice/), orrery `98396a8`, § lattice adjudication below):** faraday's dynamical-consumption lattice, at steady state (1e-9 stationarity; byte-identical reruns), locks in exactly the two refuted flows over 1.7 decades of radius — central-only v ∝ r^(−2.00062 ± 0.00002) (flux-conserving, the predeclared kill condition), equal-per-shell v ∝ r^(−0.99454 ± 0.00036) (budget flow) — with per-shell sink scaling r^(0.00029 ± 0.00026), cleanly discriminating the implemented r⁰ draw from the r^(1/2) the free-fall branch demands. Neither natural rule self-organizes toward GP; σ = v²/2c² fails on both branches (7–8 dex, apparatus hop-speed c — expected, since neither branch *is* GP). **Per the predeclared gate the river completion is refuted at the mechanic level: the existing counting rules do not produce the free-fall flow.** What survives, exactly: the analytic branch-3 result — space obeying the rolling rule yields GP, Schwarzschild clocks exact, σ = ½v²/c² = 1 − √(−g₀₀) — as a *postulate* whose sustaining r^(−3/2) volumetric destruction law is now a measured debt, not just an analytic one. Cutting both ways: central-only's standing deficit reproduces the finite-reservoir 1/r field (R² 0.99999992) while its comoving dilution is zero pre-sink — the verified static shape returns as a diffusion profile, *not* a flow record (snapshot reconciliation in § below). Remaining routes: impose the rule by hand, derive it from S2 substrate dynamics (**ORB-10161 Branch B's obligation**, [two-substance-vortex-vacuum](../two-substance-vortex-vacuum/) §B2), or concede the clock sector. Apparatus caveats (radial shell reduction; apparatus-specific c normalization) recorded in § below — neither gates this verdict ([studies/river-model-and-analog-gravity](../../studies/river-model-and-analog-gravity.md))",
+    "links": [
+      "../../../orrery/lab/sims/dynamical-consumption-lattice/",
+      "../two-substance-vortex-vacuum/",
+      "../../studies/river-model-and-analog-gravity.md"
+    ],
+    "in_doc_ledger": true
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "claim",
+    "statement": "The dynamical-consumption flow law is the free-fall (Gullstrand–Painlevé) river ½v² = c²σ = GM/r — i.e. the mechanic's own dynamics produce it; flux-conserving and budget-per-shell flows are refuted",
+    "domain": "nature"
+  },
+  "revision_id": "sha256:be7a7eb88326f5f2ef0d471fdb2beaa037c3768d18918cc95d44468243b8ecda"
+}

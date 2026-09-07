@@ -1,0 +1,33 @@
+{
+  "id": "retarded-wake-branch-c",
+  "doc": "moving-source-field-consistency",
+  "family": "retarded-scarcity-wake",
+  "kind": "derivation",
+  "status": "closed",
+  "closed_on": "2026-09-04",
+  "closed_by": "ORB-11175",
+  "chapter": "theory/moving-source-field-consistency/branch-c.md",
+  "owed_object": "An explicit boost-violating substrate equation with a map from breaking parameters to observables — or close Branch C. DELIVERED 2026-09-04: the equation was written (three breaking parameters at linear, local, two-derivative order: speed c_g, aether-frame dissipation Γ, source delay τ_s), the first-order moving-source solution derived against the Heaviside/Carlip control, the map A_1 = β_g r/2ℓ_Γ + |τ_s| w/r written, and the branch closed.",
+  "inherited_postulates": [],
+  "new_postulates": [],
+  "control": "Boost-invariant causal field (Heaviside / Carlip): uniform motion cancels the first-order dipole. Reproduced inside the model with the odd sector off (chapter eq. 2, even in ξ∥ at every order in β_g for every c_g).",
+  "kill": "FIRED 2026-09-04 — No equation, or the equation is already bounded by Cherenkov / resonator / Cassini walls once couplings are specified. Outcome: the equation exists, and it is already bounded — but not by the three named walls, which bind the completion rather than the dissipative parameter. The binding wall is the equation's own conservation structure: the dissipative parameter that makes the dipole makes a first-order self-acceleration of every bound body along its substrate-relative velocity (chapter eq. 7), and the solar-system ephemeris floor caps the Sun's at 3×10⁻¹³ to 3×10⁻¹⁴ m/s², hence ℓ_Γ > 10–100 kpc and A_1(10 kpc) ≲ 10⁻³ to 3×10⁻⁵ — two to three orders below observed lopsidedness on every reading. The source-delay parameter is a rigid offset excluded at A_1 < 4×10⁻¹²; the speed parameter makes no dipole.",
+  "closure": "No parameter value of the minimal local class produces an observable galactic m=1 dipole while surviving the sourced walls. Central claim branch-c-observable-dipole is refuted and on the wall; moving-source-branch-c-not-adjudicated is refuted (adjudicated); dependent rows are refuted or annotated moot. Reopening requires daniel_reopen and one of: a non-local or scale-dependent Γ (surrenders the locality premise of this card), a non-linear odd sector that exempts the Sun's deeper field, or a U tuned to comove with the Sun.",
+  "forbidden_reopens": [
+    "retarded-wake-rescues-parent",
+    "scarcity-fixed-beta-universality"
+  ],
+  "blocked_phenomenology": [
+    "lopsidedness-fit",
+    "axis-alignment"
+  ],
+  "comparator": "Specified boost-invariant control, not the delayed-center Poisson-vacuum shortcut. Solar-system confrontation against the Newtonian-omission ephemeris floor, not a Galilean U+v picture.",
+  "claims": [
+    "moving-source-branch-c-not-adjudicated",
+    "branch-c-minimal-sector",
+    "branch-c-first-order-solution",
+    "branch-c-drag-lock",
+    "branch-c-observable-dipole"
+  ],
+  "follow_on_fixture": "branch-c-first-order-solution (orrery; named with predeclared gates in the chapter; not filed, not built — the closure does not wait on it)"
+}

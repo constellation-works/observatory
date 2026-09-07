@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "kind": "claim",
+  "id": "urn:research:principia:claim:ppn-far-field-trans-critical",
+  "aliases": [
+    "ppn-far-field-trans-critical"
+  ],
+  "activity": "retired",
+  "scope": "derivation",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "cf1add5f518795b48696ace5aae1ea01f6b094fe",
+    "sha256": "sha256:b258d05cb8d485f7930cd4898e3b3f45abd7485187030cf02e2752174d451291",
+    "path": "theory/ppn-reduction-of-the-settled-flow/claims.json",
+    "selector": "/claims/6",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Exact historical verdict and stated assumptions only; migration makes no new scientific inference."
+  ],
+  "missingness": [],
+  "legacy": {
+    "id": "ppn-far-field-trans-critical",
+    "family": "gravity-as-scarcity",
+    "kind": "derived",
+    "status": "supported",
+    "claim": "The PPN-defining far field of any moving source is locally trans-critical (U over v_GP grows like √r), the regime where the lattice trough floors rather than cavitates; under the galactic-carried wind reading planetary orbits sit deep in that zone (solar r_m of a few solar radii), while under the local-orbital reading Earth sits near matching at the cavitation-prone ratio — the cavitation kill and the PPN far zone are radially separated strata of one flow",
+    "evidence": "Scaling arithmetic exact from the GP profile; trough behavior per stratum is ORB-10938 G1 (floor at U/v_GP = 1, cavitation kill at 0.3); real-body ratios from sourced velocity scales ([lorentz-violation-bounds](../../studies/lorentz-violation-bounds.md) § velocity scales). The extrapolating part is now tested: the far-field fixture's control passed (ORB-11041 G1, [level-core-far-field-slot-coefficients](../../../orrery/lab/sims/level-core-far-field-slot-coefficients/)) — all six runs settle jointly and the trough floors (final n_min 0.186–0.25, no cavitation candidate on adjacent rungs) in a wind-dominated box whose outer shells sit at local ratios 2.2–3.5. Real-body readings remain arithmetic on sourced scales, not lattice results",
+    "links": [
+      "../../studies/lorentz-violation-bounds.md",
+      "../../../orrery/lab/sims/level-core-dynamical-relaxation/",
+      "../../../orrery/lab/sims/level-core-far-field-slot-coefficients/"
+    ],
+    "in_doc_ledger": true,
+    "kill": "Cavitation (cutoff-ward n_min ladder agreement) in the wind-dominated far-field box, or a trough that fails to floor at trans-critical local ratio with a small core"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "claim",
+    "statement": "The PPN-defining far field of any moving source is locally trans-critical (U over v_GP grows like √r), the regime where the lattice trough floors rather than cavitates; under the galactic-carried wind reading planetary orbits sit deep in that zone (solar r_m of a few solar radii), while under the local-orbital reading Earth sits near matching at the cavitation-prone ratio — the cavitation kill and the PPN far zone are radially separated strata of one flow",
+    "domain": "model"
+  },
+  "revision_id": "sha256:194e32f889a2e514c52e5c8640559aa1894ac57d2ef6c6e726d22731ac2b0706"
+}

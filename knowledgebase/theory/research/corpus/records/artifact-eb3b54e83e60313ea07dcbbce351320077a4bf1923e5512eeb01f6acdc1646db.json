@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:principia:artifact:source%3Aprincipia%3A4e3b02c59b694d85016915177ef1ae157895ed7b%3Atheory%2Ftwo-substance-vortex-vacuum%2Fmechanics.md",
+  "aliases": [
+    "source:principia:4e3b02c59b694d85016915177ef1ae157895ed7b:theory/two-substance-vortex-vacuum/mechanics.md"
+  ],
+  "activity": "active",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "bd90a5904679e34abeb26de0b5055c9b23b3277b",
+    "sha256": "sha256:af22dd0e9357db9a89fce3a2a119f08f81ba77dc43c5bb11e5e79db1c9982824",
+    "path": "theory/two-substance-vortex-vacuum/mechanics.md",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Immutable archival source copy; upstream scientific ownership is unchanged."
+  ],
+  "missingness": [
+    "scope"
+  ],
+  "legacy": {
+    "source_pin": {
+      "repository": "principia",
+      "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "path": "theory/two-substance-vortex-vacuum/mechanics.md",
+      "blob_oid": "bd90a5904679e34abeb26de0b5055c9b23b3277b",
+      "sha256": "sha256:af22dd0e9357db9a89fce3a2a119f08f81ba77dc43c5bb11e5e79db1c9982824",
+      "bytes": 3829,
+      "commit_metadata": "4e3b02c59b694d85016915177ef1ae157895ed7b\n2026-09-06T02:49:35+00:00\n2026-09-06T02:49:35+00:00\nfeat: Migrate the wide-binary control pilot into versioned scientific r… [ORB-11378]\n"
+    },
+    "text": "## The mechanics, formalized\n\n1. **Substrate.** Two conserved substances S1 and S2 pervade the same space, with local\n   densities n₁, n₂ sharing a capacity: the **void fraction** ∅ ≡ 1 − (n₁ + n₂)/n_max ≥ 0\n   is the space pervaded by neither. Potential differences in the substances exert forces\n   through pressure/density gradients (Daniel's interaction rule). The discussion thread's\n   friction objection (\"won't a proton's multiple vortices grind on each other?\") inverts\n   into a requirement: *any* substrate viscosity decays every atom, so the substances must\n   be **superfluids** — with the consequence that defects feel Magnus-type forces, not\n   drag, and vortices are permanent (Helmholtz–Kelvin permanence; studies note).\n2. **Particles as vortex defects.** A particle is a quantized circulation defect,\n   labeled by its winding pair (w₁, w₂) ∈ ℤ² — the circulation quanta it carries in each\n   substance. **Polarity** is which substance the defect expels; the expelled substance's\n   absence is partially backfilled by the other, and the remainder — pervaded by neither —\n   is the **void core**. **Multiplicity** is real substructure: vortex energy grows ~w²\n   per substance, so multiply-wound cores split into unit vortices (observed in BECs;\n   studies note), and the proton's \"multiple vortices\" are a *bound set* — the thread's\n   co-rotating triple — whose windings sum to an exact integer. The two-component\n   precedent for why the constituents cannot escape exists: fractional (one-component)\n   vortices are confined by linear-tension strings, only integer-summing composites are\n   free (Babaev 2002; studies note) — the confinement story arriving uninvited.\n3. **Assignments and bookkeeping.** Charge is the *net* winding asymmetry,\n   q = e·(w₂ − w₁); the void core is polarity-blind. Electron (1, 0); positron (−1, 0);\n   proton: composite with net (0, 1); neutron: **balanced expulsion**, net (1, 1) — zero\n   charge, nonzero cores, nonzero void. Each winding component is separately conserved\n   (topology), so the bookkeeping carries selection rules for free — worked below.\n4. **Interactions.** Two-signed EM lives in the *polarity/winding* sector: like-polarity\n   defects each sit in the other's expelled-substance halo, and pushing out into a denser\n   region of the same type costs energy — short-range repulsion; opposite polarities\n   relieve each other's displacement — attraction. The far-field sign and law are **not**\n   assumed here: the canonical hydrodynamic precedent (Bjerknes) famously *reverses* the\n   electrostatic sign rule (like attracts), and the model's bet — that circulation is\n   vector-shaped where pressure is scalar-shaped, flipping the sign back — is exactly what\n   the lattice sim measured (**ORB-10163**, § lattice adjudications): the bet paid in\n   2-D — like repels, opposite attracts — under the declared relative-phase coupling.\n5. **Gravity.** The void core is the one strictly one-signed object in the ontology\n   (∅ ≥ 0 always, both polarities produce it), so the gravitational monopole is\n   structurally polarity-blind — as the thread's own corrections force: gravity tracks\n   nucleons not electron orbits (H vs D gravitate 2:1 on one shared electron cloud),\n   antihydrogen falls *down* (ALPHA-g), and nothing shields it (Le Sage/Majorana bounds).\n   A moving defect carries its void with it — the \"moving clump of void\" that would source\n   the parent's scarcity flow. (Measured against, **ORB-10164**: in a conserving substrate\n   the carried void carries its compensating halo, and the pair has no far field —\n   § lattice adjudications.) *Which* scalar of the core actually gravitates — void\n   volume or substrate energy — is kill condition A, computed below.\n",
+    "commit_object": "tree 682cccb1cf19c89c2c5f4371c14ed2b384d2ae8c\nparent 13866b2848fbcce9a1f1ef2d4b97051a65f7e626\nauthor orbit[gpt-6-astra] <agent@orbit.invalid> 1788662975 +0000\ncommitter orbit <orbit@orbit.local> 1788662975 +0000\n\nfeat: Migrate the wide-binary control pilot into versioned scientific r… [ORB-11378]\n\nMigrate the wide-binary control pilot into versioned scientific records\n\nPlanned-By: codex\n"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "source",
+    "availability": "available",
+    "snapshot_digest": "sha256:af22dd0e9357db9a89fce3a2a119f08f81ba77dc43c5bb11e5e79db1c9982824",
+    "locator": null,
+    "media_type": "text/plain"
+  },
+  "revision_id": "sha256:eb3b54e83e60313ea07dcbbce351320077a4bf1923e5512eeb01f6acdc1646db"
+}

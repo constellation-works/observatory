@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:principia:artifact:source%3Aorrery%3Aa1c430db54d585048ec85c4e7c47141db634f398%3Alab%2Fsims%2Flevel-core-two-core-superposition%2Fsim.json",
+  "aliases": [
+    "source:orrery:a1c430db54d585048ec85c4e7c47141db634f398:lab/sims/level-core-two-core-superposition/sim.json"
+  ],
+  "activity": "active",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": null,
+    "blob_oid": null,
+    "sha256": "sha256:325a725cea00d08ccdc74bf6583473a578307544ed684ddf80399d79e00377f6",
+    "path": "upstream-snapshot/orrery/a1c430db54d585048ec85c4e7c47141db634f398/lab/sims/level-core-two-core-superposition/sim.json",
+    "selector": "$",
+    "historical": true,
+    "working_tree": true
+  },
+  "limitations": [
+    "Immutable archival source copy; upstream scientific ownership is unchanged."
+  ],
+  "missingness": [
+    "git-revision",
+    "owner-ingestion-git-pin",
+    "scope",
+    "upstream-canonical-record"
+  ],
+  "legacy": {
+    "source_pin": {
+      "repository": "orrery",
+      "git_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "path": "lab/sims/level-core-two-core-superposition/sim.json",
+      "blob_oid": "4bbf47ca41fd1b6c236dad486e654d9aa570aad2",
+      "sha256": "sha256:325a725cea00d08ccdc74bf6583473a578307544ed684ddf80399d79e00377f6",
+      "bytes": 805,
+      "commit_metadata": "a1c430db54d585048ec85c4e7c47141db634f398\n2026-09-06T02:28:14+00:00\n2026-09-06T02:28:14+00:00\nfeat: Preserve the original electron animation's continuous fold in a c… [ORB-11374]\n"
+    },
+    "text": "{\n  \"slug\": \"level-core-two-core-superposition\",\n  \"title\": \"Level-core two-core superposition\",\n  \"kind\": \"py\",\n  \"entry\": \"main.py\",\n  \"status\": \"active\",\n  \"created\": \"2026-08-21\",\n  \"topics\": [\n    \"gravity\",\n    \"gravity-as-scarcity\",\n    \"counting-lattice\",\n    \"level-matching\",\n    \"superposition\",\n    \"strain\",\n    \"resolution-convergence\"\n  ],\n  \"family\": \"gravity-as-scarcity\",\n  \"summary\": \"A full 3-D draw-sourced two-core lattice discriminates headroom and fixed-flux modulation families on a matched depletion grid while checking small-D analyticity and far-field quadrature composition.\",\n  \"provenance\": {\n    \"almanac\": \"15-discussions/26-07/gravity-as-scarcity-of-space.md\",\n    \"orbit_task\": \"ORB-10934\",\n    \"predecessors\": [\"ORB-10932\", \"ORB-10755\", \"ORB-10751\", \"ORB-10157\"]\n  }\n}\n",
+    "commit_object": "tree 8d851030602405b11b7166108b09cf9cd5664329\nparent 148b668391f575466282eaa81aab0dc943846a87\nauthor orbit[gpt-6-astra] <agent@orbit.invalid> 1788661694 +0000\ncommitter orbit <orbit@orbit.local> 1788661694 +0000\n\nfeat: Preserve the original electron animation's continuous fold in a c… [ORB-11374]\n\nPreserve the original electron animation's continuous fold in a computed-field view\n\nPlanned-By: codex\n"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "source",
+    "availability": "available",
+    "snapshot_digest": "sha256:325a725cea00d08ccdc74bf6583473a578307544ed684ddf80399d79e00377f6",
+    "locator": null,
+    "media_type": "application/json"
+  },
+  "revision_id": "sha256:a2f72fda40d7b1e58d20f250597baf0eef9cb1235a3a33f87e4b6fc1f453da9d"
+}

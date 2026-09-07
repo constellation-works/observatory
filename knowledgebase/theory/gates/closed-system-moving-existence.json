@@ -1,0 +1,41 @@
+{
+  "id": "closed-system-moving-existence",
+  "doc": "moving-sources-in-the-closed-system",
+  "family": "gravity-as-scarcity",
+  "kind": "existence",
+  "owed_object": "Does a non-cavitating moving solution exist at solar-system winds, with a floor that still lets matter be an excitation?",
+  "inherited_postulates": [
+    "postulate-rolling-rule",
+    "postulate-elliptic-sigma",
+    "postulate-shear-law"
+  ],
+  "new_postulates": [],
+  "control": "Pure-wind state (already passed: zero consumption). No PPN numbers, observational ray-tracing fits, or galaxy fits until this card passes; the coefficient reduction as algebra (ppn-reduction-of-the-settled-flow, ORB-11039) and scale estimates (ORB-10939) are allowed — its structural rows move on cataloged evidence (ORB-11040 symbolic, ORB-11041 far-field) while phenomenology numbers stay blocked — amended 2026-08-28 to match the 2026-08-21 arbitration's named obligation.",
+  "kill": "Cavitation in physical units at Earth/Sun orbital winds, or no regular settled flow that is an excitation medium.",
+  "forbidden_reopens": [
+    "scarcity-fixed-beta-universality",
+    "scarcity-static-photon-gamma",
+    "scarcity-static-clocks",
+    "scarcity-counting-produces-gp"
+  ],
+  "blocked_phenomenology": [
+    "ppn",
+    "photon-modulation",
+    "sparc",
+    "drag-ephemerides"
+  ],
+  "comparator": "GR mass-frame Schwarzschild (uniform U is gauge). Not Galilean U+v_GP.",
+  "claims": [
+    "moving-cavitation-floor",
+    "moving-theorem-1-bernoulli-realized",
+    "moving-theorem-2-wake-not-gauge",
+    "ppn-slots-far-field",
+    "ppn-half-order-hazard",
+    "ppn-alpha-contact"
+  ],
+  "status": "closed",
+  "closed_on": "2026-09-04",
+  "closed_by": "Daniel: explicit family retirement",
+  "closure": "Retired by Daniel on 2026-09-04: discontinue the gravity-as-scarcity research family, including the shear-flow completion, moving-source repair, and PPN continuation. Preserve all evidence and individual claim verdicts; no follow-up or reopening without Daniel's explicit authorization.",
+  "reopen_requires": "Explicit authorization from Daniel; this closure does not assert the existence claim was proven false in every possible completion."
+}

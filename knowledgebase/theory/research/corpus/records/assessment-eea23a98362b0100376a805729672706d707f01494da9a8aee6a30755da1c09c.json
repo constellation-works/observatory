@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "kind": "assessment",
+  "id": "urn:research:principia:assessment:scarcity-multiplicative-superposition%3Alegacy-verdict",
+  "aliases": [
+    "scarcity-multiplicative-superposition:legacy-verdict"
+  ],
+  "activity": "unknown",
+  "scope": "derivation",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "b5f58c64f4c6bf9d7d7f67c826f5d2dd7c9cb64f",
+    "sha256": "sha256:996b059ca4b45cee6dd42a503594508ebb8d6d13211ad1104df3754b116d5976",
+    "path": "theory/gravity-as-scarcity/claims.json",
+    "selector": "/claims/11",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Exact historical verdict and stated assumptions only; migration makes no new scientific inference."
+  ],
+  "missingness": [
+    "exact-evidence-owner-references",
+    "independently-verified-controls",
+    "activity"
+  ],
+  "legacy": {
+    "id": "scarcity-multiplicative-superposition",
+    "family": "gravity-as-scarcity",
+    "kind": "derived",
+    "status": "refuted",
+    "claim": "The local superposition rule is multiplicative — accumulated background depletion modulates an embedded source's field generation with the fitted q-ratio coupling; screening does not arise",
+    "evidence": "**Derived (ORB-10156, §(d) below), then measured against (ORB-10157, [lattice-two-source-superposition](../../../orrery/lab/sims/lattice-two-source-superposition/), § superposition adjudication below):** the derivation ran — the fitted boost is literally a position-dependent coupling G_eff(r) = G·q(r)/q(R₀); depletion on a shared budget is anonymous; *therefore* an embedded source generates with the background's coupling. Set `supported` 2026-07-12; superseded the same day. The lattice measured the mechanic's actual modulation as **A(D) = (1−D)^1.07079** (log-RMSE 0.0031 vs 2.077 for the inverse-headroom enhancement operationalization and 1.074 for independence) — survivor-fraction screening at unit gain in *local occupancy*, carrying no imprint of a β-amplified response to *accumulated* dilution. The failing step is the transplant: anonymity licenses only \"embedded sources are not exempt\" — it does not make the fitted macroscopic factor the mechanic's transfer function; a coupling that responds to ambient occupancy with the fitted gain is a rule the counting mechanic does not contain (faraday's declared caveat: an occupancy-dependent attempt rate is a *different microscopic model*). What survives of the derivation: the anonymity argument itself (independence refuted — the exemption ORB-10097 called \"screened\" does not arise, so the old σ_sun < σ_gal level-vs-gradient point stands with its variable transposed), and the sign (the integrated factor was suppression-signed, like the measured law; the gap is gain and variable, not direction). Superposition question reopened with sharper alternatives (open questions below)",
+    "links": [
+      "../../../orrery/lab/sims/lattice-two-source-superposition/"
+    ],
+    "in_doc_ledger": true
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "claim": {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:scarcity-multiplicative-superposition",
+      "revision_id": "sha256:75d2d9942f30ebb8558a5bb848bf3ebd04c55c003d7552ed2c555a4ae8ca61c1",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "pending"
+    },
+    "verdict": "refuted",
+    "legacy_verdict": "refuted",
+    "inference": "historical",
+    "basis": "legacy-report",
+    "controls": "unknown",
+    "rationale": "**Derived (ORB-10156, §(d) below), then measured against (ORB-10157, [lattice-two-source-superposition](../../../orrery/lab/sims/lattice-two-source-superposition/), § superposition adjudication below):** the derivation ran — the fitted boost is literally a position-dependent coupling G_eff(r) = G·q(r)/q(R₀); depletion on a shared budget is anonymous; *therefore* an embedded source generates with the background's coupling. Set `supported` 2026-07-12; superseded the same day. The lattice measured the mechanic's actual modulation as **A(D) = (1−D)^1.07079** (log-RMSE 0.0031 vs 2.077 for the inverse-headroom enhancement operationalization and 1.074 for independence) — survivor-fraction screening at unit gain in *local occupancy*, carrying no imprint of a β-amplified response to *accumulated* dilution. The failing step is the transplant: anonymity licenses only \"embedded sources are not exempt\" — it does not make the fitted macroscopic factor the mechanic's transfer function; a coupling that responds to ambient occupancy with the fitted gain is a rule the counting mechanic does not contain (faraday's declared caveat: an occupancy-dependent attempt rate is a *different microscopic model*). What survives of the derivation: the anonymity argument itself (independence refuted — the exemption ORB-10097 called \"screened\" does not arise, so the old σ_sun < σ_gal level-vs-gradient point stands with its variable transposed), and the sign (the integrated factor was suppression-signed, like the measured law; the gap is gain and variable, not direction). Superposition question reopened with sharper alternatives (open questions below)",
+    "evidence": []
+  },
+  "revision_id": "sha256:eea23a98362b0100376a805729672706d707f01494da9a8aee6a30755da1c09c"
+}

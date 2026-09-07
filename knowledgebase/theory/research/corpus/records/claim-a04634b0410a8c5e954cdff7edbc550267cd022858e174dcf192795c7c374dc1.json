@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "kind": "claim",
+  "id": "urn:research:principia:claim:postulate-shear-law",
+  "aliases": [
+    "postulate-shear-law"
+  ],
+  "activity": "retired",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "c9b26b67f260c4002319c1d9268872f2339ab69b",
+    "sha256": "sha256:e1bd24b05676d65097d91c786c4fb02d28dba5293720deb7bc96898a88e268d0",
+    "path": "theory/shear-sourced-consumption/claims.json",
+    "selector": "/claims/13",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Exact historical verdict and stated assumptions only; migration makes no new scientific inference."
+  ],
+  "missingness": [
+    "scope"
+  ],
+  "legacy": {
+    "kind": "postulate",
+    "status": "mixed",
+    "in_doc_ledger": false,
+    "evidence": "Named postulate; lattice consistency is not a derivation.",
+    "links": [],
+    "named": "2026-08-11",
+    "expires": "2026-09-21",
+    "id": "postulate-shear-law",
+    "family": "gravity-as-scarcity",
+    "claim": "Substrate is consumed at s = n · √((3/2) e^dev:e^dev) (coefficient-one von Mises shear).",
+    "kill": "A regular non-cavitating moving solution fails, extra binary dissipation exceeds Hulse–Taylor, or the law is derived from counting (ORB-10162 already forbids the last as a natural rule)."
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "postulate",
+    "statement": "Substrate is consumed at s = n · √((3/2) e^dev:e^dev) (coefficient-one von Mises shear).",
+    "domain": "model"
+  },
+  "revision_id": "sha256:a04634b0410a8c5e954cdff7edbc550267cd022858e174dcf192795c7c374dc1"
+}

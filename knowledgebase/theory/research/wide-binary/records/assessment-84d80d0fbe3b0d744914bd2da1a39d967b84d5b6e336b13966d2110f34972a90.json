@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "kind": "assessment",
+  "id": "urn:research:principia:assessment:wbsel-shifted-field-calibration%3Aoriginal-outcome",
+  "aliases": [
+    "wbsel-shifted-field-calibration:original-outcome"
+  ],
+  "activity": "active",
+  "scope": "synthetic-calibration",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "13866b2848fbcce9a1f1ef2d4b97051a65f7e626",
+    "blob_oid": "d349179f3b08155105b5dda896541c56bf94878a",
+    "sha256": "sha256:2c01eac561be3f15e21fae5168f617c0552f6306bd33efc40283ad494b8e8d59",
+    "path": "theory/wide-binary-selection-methodology/claims.json",
+    "selector": "/claims/2",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Historical synthetic/model calibration only; no new scientific adjudication or nature-level inference."
+  ],
+  "missingness": [],
+  "legacy": {
+    "id": "wbsel-shifted-field-calibration",
+    "family": "wide-binary-selection-methodology",
+    "kind": "model-property",
+    "status": "mixed",
+    "claim": "The shifted-field chance-alignment estimator R = N_shift/N_real, evaluated on the nonuniform-footprint synthetic population with known injected field-star contamination fractions (5%, 10%, 20%) and RA-wrap/polar field placements, recovers each injected fraction within the predeclared tolerance (+/-0.05 absolute at 5%, +/-25% relative at 10% and 20%).",
+    "kill": "R_chance falls outside the predeclared tolerance band for any injected-contamination arm or any field placement (equatorial baseline, RA-wrap, polar).",
+    "evidence": "ORB-11222's cataloged frozen run at Orrery 28dd5c72 passes the 5% arms but under-recovers every planted 10%/20% rate; this failed control is unresolved calibration evidence, not a gravity claim. ORB-11241 owns diagnosis.",
+    "links": [
+      "../../studies/wide-binary-selection-bias-preregistration.md"
+    ],
+    "in_doc_ledger": true
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "claim": {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:wbsel-shifted-field-calibration",
+      "revision_id": "sha256:99942cc7fdcc7ade9c4c365e5923f6ec5dd3aac0cd600c538d9a84bdc9782e4b",
+      "source_revision": "13866b2848fbcce9a1f1ef2d4b97051a65f7e626",
+      "status": "pending"
+    },
+    "verdict": "inconclusive",
+    "legacy_verdict": "mixed",
+    "inference": "historical",
+    "basis": "legacy-report",
+    "controls": "failed",
+    "rationale": "ORB-11222's cataloged frozen run at Orrery 28dd5c72 passes the 5% arms but under-recovers every planted 10%/20% rate; this failed control is unresolved calibration evidence, not a gravity claim. ORB-11241 owns diagnosis.",
+    "evidence": [
+      {
+        "repository": "principia",
+        "id": "urn:research:principia:artifact:source%3Aorrery%3A28dd5c72bb670517b93b556f1d2483402c8e8655%3Alab%2Fsims%2Fwide-binary-selection-bias%2Fassets%2Fresults.json",
+        "revision_id": "sha256:74de3e9ab0362b42450d529ff31e5a9f95020e5cf98e7bf6b0715fe2480105fe",
+        "source_revision": null,
+        "status": "pending"
+      }
+    ]
+  },
+  "revision_id": "sha256:84d80d0fbe3b0d744914bd2da1a39d967b84d5b6e336b13966d2110f34972a90"
+}

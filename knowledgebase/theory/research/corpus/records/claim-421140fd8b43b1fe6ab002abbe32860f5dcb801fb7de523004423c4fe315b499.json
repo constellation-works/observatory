@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "kind": "claim",
+  "id": "urn:research:principia:claim:retarded-wake-4beta-contrast",
+  "aliases": [
+    "retarded-wake-4beta-contrast"
+  ],
+  "activity": "paused",
+  "scope": "derivation",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "5a0334520045b6866e96fd14cbe0f87a1feee659",
+    "sha256": "sha256:4c18601b8818d5bb0724f512c671a9a618cf27a59fdf02401c19ab1b07413d59",
+    "path": "theory/retarded-scarcity-wake/claims.json",
+    "selector": "/claims/3",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Exact historical verdict and stated assumptions only; migration makes no new scientific inference."
+  ],
+  "missingness": [],
+  "legacy": {
+    "id": "retarded-wake-4beta-contrast",
+    "family": "retarded-scarcity-wake",
+    "kind": "derived",
+    "status": "untested",
+    "claim": "The first-order acceleration contrast is \\((g_{\\rm trail}-g_{\\rm lead})/g_0\\simeq4\\beta_g\\)",
+    "evidence": "Analytically corrected to \\(2\\beta_g\\) in § Leading/trailing sign. \\(4\\beta_g\\) follows from a *different*, non-potential force rule than the declared \\(\\mathbf{a}=-\\nabla\\Phi\\); the fixture remains to be cataloged — [moving-source-field-consistency](../moving-source-field-consistency/)",
+    "links": [
+      "../moving-source-field-consistency/"
+    ],
+    "in_doc_ledger": true,
+    "kill": "Cataloged fixture: declared a=−∇Φ gives 2β_g, not 4β_g."
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "claim",
+    "statement": "The first-order acceleration contrast is \\((g_{\\rm trail}-g_{\\rm lead})/g_0\\simeq4\\beta_g\\)",
+    "domain": "model"
+  },
+  "revision_id": "sha256:421140fd8b43b1fe6ab002abbe32860f5dcb801fb7de523004423c4fe315b499"
+}
