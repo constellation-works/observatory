@@ -11,6 +11,7 @@ dependencies = [
     "scipy>=1.13",
     "pyarrow>=16",
     "orrery",
+    "astrolabe",
 ]
 
 [project.optional-dependencies]
@@ -26,10 +27,11 @@ research = [
 ]
 
 [tool.uv.workspace]
-members = ["experiments/physics/_orrery"]
+members = ["experiments/physics/_orrery", "lib/astrolabe"]
 
 [tool.uv.sources]
 orrery = { workspace = true }
+astrolabe = { workspace = true }
 
 [dependency-groups]
 dev = ["pytest>=8", "ruff>=0.6", "pre-commit>=3"]
@@ -48,5 +50,5 @@ select = ["E", "F", "I", "B", "UP"]
 "experiments/kaggle/**" = ["E501", "B905"]
 
 [tool.pytest.ini_options]
-testpaths = ["_scripts", "experiments", "knowledgebase/theory/scripts"]
+testpaths = ["_scripts", "experiments", "knowledgebase/theory/scripts", "lib/astrolabe/tests"]
 python_files = ["test_*.py"]

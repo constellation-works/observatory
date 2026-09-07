@@ -49,7 +49,8 @@ from astropy.table import Table
 if TYPE_CHECKING:
     from .provenance import Snapshot
 
-DEFAULT_DATA_DIR = Path("data")
+# ASTROLABE_DATA_DIR points at the catalog root; observatory sets it to _data/physics/astrolabe.
+DEFAULT_DATA_DIR = Path(os.environ.get("ASTROLABE_DATA_DIR", "data"))
 
 # Dataset kinds — the first level under data/processed/.
 KINDS: tuple[str, ...] = ("catalog", "ephemeris", "derived")

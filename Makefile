@@ -7,6 +7,7 @@ UV ?= uv
 NEB ?= neb
 export NEBULA_ROOT := $(CURDIR)/knowledgebase/lineage
 THEORY := knowledgebase/theory
+export ASTROLABE_DATA_DIR := $(CURDIR)/_data/physics/astrolabe
 # macOS: /tmp is a symlink; the record checkers refuse temp paths that resolve outside
 # the owner root, so hand them the real temp directory.
 export TMPDIR := $(shell python3 -c 'import os,tempfile;print(os.path.realpath(tempfile.gettempdir()))')

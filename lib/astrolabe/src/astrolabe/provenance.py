@@ -114,8 +114,8 @@ def _git_revision() -> str | None:
     An installed wheel can sit below an unrelated Git repository.  Git's
     upward discovery would then produce that repository's revision, which is
     not evidence for the installed Astrolabe code.  A source checkout has a
-    stable ``src/astrolabe/provenance.py`` layout and must itself be the Git
-    top-level directory before its revision is recorded.
+    stable ``src/astrolabe/provenance.py`` layout and must be the Git top-level
+    directory, or a tracked subtree of one, before its revision is recorded.
     """
     root = Path(__file__).resolve().parents[2]
     expected_module = root / "src" / "astrolabe" / "provenance.py"
@@ -130,7 +130,14 @@ def _git_revision() -> str | None:
             ).strip()
         ).resolve()
         if checkout != root:
-            return None
+            # A subtree of a larger repository (observatory's lib/astrolabe) still
+            # owns this code when the checkout tracks this module; an installed
+            # wheel under some repository's ignored .venv does not.
+            subprocess.check_output(
+                ["git", "-C", str(root), "ls-files", "--error-unmatch", str(expected_module)],
+                text=True,
+                stderr=subprocess.DEVNULL,
+            )
         return subprocess.check_output(
             ["git", "-C", str(root), "rev-parse", "HEAD"],
             text=True,

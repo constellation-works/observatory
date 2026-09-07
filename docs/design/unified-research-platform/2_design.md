@@ -59,6 +59,12 @@ Principia's `studies/` stays inside the lock: those are sourced notes on
 established physics that claims cite, not experiment results. Observatory's
 `knowledgebase/studies/` is the latter, keyed by node id.
 
+## Shared instruments live in lib/
+
+Code that experiments import rather than own (astrolabe's catalog, cross-match
+and provenance) sits in `lib/<name>/` as a uv workspace member. It is not keyed
+by a node because it serves many; its data root is `_data/physics/<name>/`.
+
 ## One environment
 
 A root `pyproject.toml` managed by uv, with extras for notebooks, spark and ML.

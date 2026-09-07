@@ -1,6 +1,6 @@
 # astrolabe — SPEC
 
-Celestial data collection & analysis. Python. Lives at `codebases/astrolabe`; independent repo
+Celestial data collection & analysis. Python. Lives at `lib/astrolabe` in observatory (formerly `codebases/astrolabe`); was an independent repo
 on `agent-main` (direct commits, not PR-gated). This spec is the source of truth for build-out;
 implementing agents should update the checklist below as milestones land.
 

@@ -107,8 +107,9 @@ class ResearchRecordMigrationTests(unittest.TestCase):
             checkout = clone_source(parent)
             shutil.copyfile(SCRIPT, checkout / "scripts/research_records.py")
             git(checkout, "add", "scripts/research_records.py")
+            # --allow-empty: once the repair script is committed the copy is a no-op.
             git(checkout, "-c", "user.name=Research test", "-c", "user.email=test@example.invalid",
-                "commit", "-m", "test: land research migration repair")
+                "commit", "--allow-empty", "-m", "test: land research migration repair")
             marker = checkout / "post-migration-marker.txt"
             marker.write_text("unrelated commit proving HEAD may advance\n")
             git(checkout, "add", marker.name)

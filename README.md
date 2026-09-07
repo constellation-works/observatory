@@ -15,6 +15,7 @@ the same way [nebula](../nebula) partitions one corpus into domains.
 _data/          datasets. Never in git; a manifest per experiment says how to fetch.
 _outputs/       run products. Never in git; what matters is promoted to a study.
 _scripts/       shared tooling: checks, scaffolding, fetchers.
+lib/            reusable instruments installed into the one environment (astrolabe).
 knowledgebase/
   lineage/      the nebula corpus: config.yaml, nodes/, inbox/
   studies/      one note per experiment result, <domain>/<node-id>.md

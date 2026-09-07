@@ -14,6 +14,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import sys
 from pathlib import Path
 from typing import Any
@@ -166,7 +167,9 @@ def cmd_snapshot_manifest(args: argparse.Namespace) -> int:
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(prog="astrolabe", description=__doc__)
     parser.add_argument(
-        "--data-dir", default="data", help="catalog root (default: data)"
+        "--data-dir",
+        default=os.environ.get("ASTROLABE_DATA_DIR", "data"),
+        help="catalog root (default: $ASTROLABE_DATA_DIR or data)",
     )
     sub = parser.add_subparsers(dest="command", required=True)
 

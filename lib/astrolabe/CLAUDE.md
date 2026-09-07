@@ -1,7 +1,8 @@
 # astrolabe
 
 Celestial data collection & analysis (Python). Local library + CLI — **no web service,
-no APIs** (SPEC §2). Independent repo under `codebases/astrolabe`, branch `agent-main`,
+no APIs** (SPEC §2). Lives at `lib/astrolabe` inside observatory (subtree of the former
+`codebases/astrolabe` repository, history preserved); the environment is the observatory root's,
 direct commits (not PR-gated).
 
 [SPEC.md](SPEC.md) is the source of truth for design + milestones; keep its checklist
