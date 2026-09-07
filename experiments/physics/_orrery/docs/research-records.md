@@ -1,5 +1,10 @@
 # Orrery research records
 
+> **Frozen 2026-09-07.** The catalog below is the provenance of the 2026-08
+> migration and is kept as-is. `scripts/research_records.py check` last held at
+> observatory commit 707d27e, before the sims moved to `experiments/physics/<node>/`;
+> it is no longer run by `make check`. Run it from that commit to re-verify.
+
 `lab/sims/**/sim.json` and the captured JSON files beside simulations remain
 the sole authority for their legacy fields. The v1 records under
 `research/catalog/records/` are deterministic mappings, not independently

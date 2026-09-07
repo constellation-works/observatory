@@ -21,8 +21,9 @@ never comes here.
    capture the idea first, promote it, then scaffold. Kaggle competitions are
    projects under the `kaggle` domain and are the one exception: their id is
    the competition slug, and the node that tracks the competition names it.
-   Underscore-prefixed directories (`experiments/physics/_orrery`) are migration
-   staging areas, exempt until each family is tied to a node.
+   Underscore-prefixed directories are never experiments: `_lib` is shared
+   apparatus, `_orrery` and `_parallax` are migration staging areas, exempt until
+   their material is tied to nodes.
 3. **Studies are filed under the same id.** `knowledgebase/studies/<domain>/<id>.md`.
    A study without an experiment directory, or an experiment without a study
    once it has run, is a `make check` finding.

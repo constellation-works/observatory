@@ -20,6 +20,10 @@ neb sharpen ranking-decay-half-life --kill "decay rate does not fall with age at
 
 ## Scaffold
 
+For a physics sim use `experiments/physics/_lib/tools/new-sim.sh <node-id> <slug> --kind web|py`
+instead; it scaffolds from the sim template and rebuilds the gallery. Everything
+below applies to notebook and script experiments.
+
 ```sh
 make experiment DOMAIN=economics ID=ranking-decay-half-life
 ```

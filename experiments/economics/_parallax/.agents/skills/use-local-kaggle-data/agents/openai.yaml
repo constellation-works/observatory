@@ -1,4 +1,0 @@
-interface:
-  display_name: "Use Local Kaggle Data"
-  short_description: "Inspect and use versioned local Kaggle datasets"
-  default_prompt: "Use $use-local-kaggle-data to find a suitable local dataset and inspect its provenance and schema before analysis."

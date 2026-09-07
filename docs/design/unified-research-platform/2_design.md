@@ -59,6 +59,15 @@ Principia's `studies/` stays inside the lock: those are sourced notes on
 established physics that claims cite, not experiment results. Observatory's
 `knowledgebase/studies/` is the latter, keyed by node id.
 
+## Sims sit under their node; the apparatus under _lib
+
+An interactive or numeric sim is evidence, so it lives at
+`experiments/physics/<node-id>/<slug>/` with a `sim.json`, and is attached to
+the node with `neb evidence`. What every sim shares (web harness, vendored
+three.js, templates, scaffolding, the generated gallery) lives in
+`experiments/physics/_lib/`; sims import it as `../../_lib/web/…`, so a sim's
+depth is part of the contract. Underscore directories are never experiments.
+
 ## Shared instruments live in lib/
 
 Code that experiments import rather than own (astrolabe's catalog, cross-match

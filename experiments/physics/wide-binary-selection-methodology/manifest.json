@@ -1,0 +1,15 @@
+{
+  "node": "wide-binary-selection-methodology",
+  "domain": "physics",
+  "created": "2026-09-07",
+  "data": [],
+  "outputs": "_outputs/physics/wide-binary-selection-methodology",
+  "study": "knowledgebase/studies/physics/wide-binary-selection-methodology.md",
+  "status": "hypothesis",
+  "sims": [
+    "wide-binary-control-diagnosis",
+    "wide-binary-selection-bias"
+  ],
+  "theory": "knowledgebase/theory/theory/wide-binary-selection-methodology/",
+  "migrated_from": "orrery lab/sims (family)"
+}

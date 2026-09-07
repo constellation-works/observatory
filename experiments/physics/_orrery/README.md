@@ -1,5 +1,11 @@
 # orrery
 
+> **2026-09-07:** the sims moved to `experiments/physics/<node-id>/<slug>/` and the
+> apparatus to `experiments/physics/_lib/`; `lab/sims/<slug>` here are symlinks kept
+> for principia's frozen ledger links. What remains in this directory is the frozen
+> research catalog, its scripts, and the `orrery` python package (`lab/lib/py`).
+> The sim contract below still applies at the new paths (`../../_lib/web/…`).
+
 A cabinet of accumulated physics simulations — interactive canvas/three.js sims
 and Python Monte Carlo experiments, mostly born from discussions (gravity models,
 Bell tests, field visualizations). Named for the clockwork solar-system models.

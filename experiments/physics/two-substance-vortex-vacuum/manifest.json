@@ -1,0 +1,17 @@
+{
+  "node": "two-substance-vortex-vacuum",
+  "domain": "physics",
+  "created": "2026-09-07",
+  "data": [],
+  "outputs": "_outputs/physics/two-substance-vortex-vacuum",
+  "study": "knowledgebase/studies/physics/two-substance-vortex-vacuum.md",
+  "status": "testing",
+  "sims": [
+    "two-substance-defect-gravity",
+    "two-substance-dynamical-packet",
+    "two-substance-packet-linear-symbol",
+    "two-substance-vortex-lattice"
+  ],
+  "theory": "knowledgebase/theory/theory/two-substance-vortex-vacuum/",
+  "migrated_from": "orrery lab/sims (family)"
+}

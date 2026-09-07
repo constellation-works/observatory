@@ -19,8 +19,10 @@ original repository stays authoritative until its row below says landed.
 |---|---|---|
 | principia, whole | `knowledgebase/theory/` | the lock, checker and records included; `_scripts/check-theory.sh` wraps `scripts/check-theory.py` |
 | principia `studies/` | stays at `knowledgebase/theory/studies/` | literature notes claims cite, not results; see decisions |
-| orrery, whole | `experiments/physics/_orrery/` (staging), then per-node directories as each sim family is tied to a node | `research/catalog` stays the authoritative record; `scripts/research_records.py` learned to run as a subtree (clone the enclosing repo, select its own files, pin repository identity explicitly). orrery is a uv workspace member so `uv run` py sims resolve |
-| parallax `src/`, `notebooks/`, `docs/` | `experiments/economics/_parallax/` then per-node | `data/` (2.1 GB) is **not** migrated; write manifests |
+| orrery sims | `experiments/physics/<node-id>/<slug>/`, one node per orrery family (8 nodes, 39 sims) | each sim is `neb evidence` on its node with a verdict derived from the principia claims that cite it |
+| orrery apparatus (`lab/lib/web`, `vendor`, `templates`, `tools`, `gallery`) | `experiments/physics/_lib/` | sims import `../../_lib/web/…`; `make serve`, `make gallery`, `_lib/tools/new-sim.sh <node> <slug>` |
+| orrery `research/catalog`, `scripts/`, `docs/`, `lab/lib/py/orrery` | stay in `experiments/physics/_orrery/` | frozen historical record; `lab/sims/<slug>` are symlinks into the node directories so principia's frozen ledger links still resolve through `--external-root`. The live-drift `research_records.py check` and its tests are retired as of observatory commit 707d27e (last commit where the catalog matched the live tree); orrery stays a uv workspace member for the `orrery` package |
+| parallax, whole minus `.orbit/` and `.agents/` | `experiments/economics/_parallax/` (staging) then per-node | uv workspace member; `data/<program>/README.md` dictionaries stay (parallax's conventions tests check them); the 2.1 GB of untracked data moved to `_data/economics/_parallax/`, with `data/<program>/{raw,processed}` symlinks so `Path("data")` keeps working from the staging dir; `deploy/` kept as the record of the dk-server-1 capture services, which keep running from the box checkout. Four tests import a `parallax.consumer_goods` package absent from the Mac checkout's history (it had no remote configured), ignored in pytest until reconciled with the box |
 | kaggle `<competition>/` | `experiments/kaggle/<competition>/` | competition slug is the id; tracked `results/` and `submissions/` moved out of git to `_outputs/kaggle/<slug>/` (history keeps them); `data/README.md` → `data-dictionary.md` |
 | astrolabe, whole | `lib/astrolabe/` | reusable library + CLI, uv workspace member; `ASTROLABE_DATA_DIR` → `_data/physics/astrolabe/` (69 MB copied from the untracked `data/`); provenance accepts a tracked subtree as its owning checkout |
 | nebula personal corpus | `knowledgebase/lineage/` | `neb init` here; `~/.nebula` retired after |
@@ -42,7 +44,7 @@ repository gets an archive note in its README pointing here.
 
 1. principia — smallest, and the lock is needed by `make check-theory`.
 2. kaggle — cleanest mapping.
-3. orrery — sims need node ids; file a node per sim family first.
+3. orrery — sims need node ids; one node per sim family (done).
 4. parallax — largest; data manifests before anything else.
 
 ## Status
@@ -51,6 +53,6 @@ repository gets an archive note in its README pointing here.
 |---|---|---|
 | principia | landed | 2026-09-07 |
 | kaggle | landed | 2026-09-07 |
-| orrery | landed (staging) | 2026-09-07 |
+| orrery | landed, sims per node | 2026-09-07 |
 | astrolabe | landed | 2026-09-07 |
-| parallax | pending | |
+| parallax | landed (staging; consumer-goods tests orphaned) | 2026-09-07 |

@@ -55,6 +55,23 @@ theory document links to them relatively, and the checker resolves them under
 the lock root. Two kinds of "study" with two homes is clearer than one directory
 with two contracts.
 
+## Frozen ledgers get a link farm, not rewritten links
+
+Principia's theory files are byte-pinned to their historical baseline by its own
+record checker, so the `../../../orrery/lab/sims/<slug>/` links in the ledgers
+cannot be rewritten when sims move. Considered leaving the sims in staging
+forever. Rejected (2026-09-07): sims are evidence and belong under the node they
+bear on. `experiments/physics/_orrery/lab/sims/<slug>` stays as a symlink into
+the node directory and the checker resolves it through `--external-root`.
+
+## Orrery's live-drift check is retired, its catalog kept
+
+The orrery research catalog asserted that the live tree still matched the
+2026-08 layout. Once sims live under nodes that assertion is false by design.
+The catalog and record scripts stay as the frozen provenance of the migration;
+the drift check and its tests are no longer part of `make check`, and the last
+commit where they held is recorded in the migration runbook.
+
 ## Migration with history
 
 Considered copying files. Rejected: a platform for tracing where ideas came

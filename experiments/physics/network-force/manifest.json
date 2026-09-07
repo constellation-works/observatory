@@ -1,0 +1,14 @@
+{
+  "node": "network-force",
+  "domain": "physics",
+  "created": "2026-09-07",
+  "data": [],
+  "outputs": "_outputs/physics/network-force",
+  "study": "knowledgebase/studies/physics/network-force.md",
+  "status": "testing",
+  "sims": [
+    "rar-network-fluctuation-limit"
+  ],
+  "theory": null,
+  "migrated_from": "orrery lab/sims (family)"
+}

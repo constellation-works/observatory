@@ -1,0 +1,7 @@
+{
+  "experiment": "experiments/economics/_parallax",
+  "layout": "R<NN>-<program>/{raw,processed}/ as parallax's data contract; dictionaries in experiments/economics/_parallax/data/<program>/README.md; raw/ and processed/ there are symlinks here",
+  "source": "public exchange candles/books (Binance, Coinbase) via `parallax data fetch`; R02 language-model corpora; see dictionaries",
+  "migrated_from": "codebases/parallax/data (untracked there), moved 2026-09-07",
+  "tracked": false
+}

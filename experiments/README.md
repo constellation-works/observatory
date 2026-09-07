@@ -21,6 +21,18 @@ Domains match the corpus config: `physics`, `economics`, `social`, `kaggle`,
 uses the competition slug as the id and the node that tracks the competition
 names it in its references.
 
-Orrery's simulations arrive under `experiments/physics/`, parallax's studies
-under `experiments/economics/`, and the kaggle workspace under
-`experiments/kaggle/`, each keeping its git history.
+## Sims
+
+Physics sims are experiments too: `experiments/physics/<node-id>/<slug>/` with a
+`sim.json` (title, kind `web`|`py`, entry, family, summary, provenance). The
+shared apparatus is `experiments/physics/_lib/` (web harness, vendored three.js,
+templates, tools, gallery). Web sims import it relatively (`../../_lib/web/loop.js`),
+run from a static server (`make serve`, then
+`http://localhost:8000/experiments/physics/<node>/<slug>/`); py sims run with
+`uv run experiments/physics/<node>/<slug>/<entry>` and seed their RNG. Scaffold
+with `experiments/physics/_lib/tools/new-sim.sh <node-id> <slug> --kind web|py`,
+then `make gallery`. Attach the result to the node with `neb evidence`.
+
+Staging areas (`experiments/physics/_orrery/`, `experiments/economics/_parallax/`)
+hold migrated material not yet tied to nodes; `_orrery/lab/sims/` is a symlink
+farm that keeps principia's frozen ledger links resolving.

@@ -1,0 +1,14 @@
+{
+  "node": "pendulum-driven",
+  "domain": "physics",
+  "created": "2026-09-07",
+  "data": [],
+  "outputs": "_outputs/physics/pendulum-driven",
+  "study": "knowledgebase/studies/physics/pendulum-driven.md",
+  "status": "seed",
+  "sims": [
+    "pendulum-driven"
+  ],
+  "theory": null,
+  "migrated_from": "orrery lab/sims (family)"
+}

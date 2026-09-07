@@ -1,5 +1,11 @@
 # orrery
 
+> **2026-09-07:** the sims moved to `experiments/physics/<node-id>/<slug>/` and the
+> apparatus to `experiments/physics/_lib/`; `lab/sims/<slug>` here are symlinks kept
+> for principia's frozen ledger links. What remains in this directory is the frozen
+> research catalog, its scripts, and the `orrery` python package (`lab/lib/py`).
+> The sim contract below still applies at the new paths (`../../_lib/web/…`).
+
 The constellation's cabinet of physics sims. Simulations born in discussions with
 Daniel accumulate **here** — as first-class, cataloged sims — instead of being
 scattered as one-shot files in almanac's `_attachments/` and `40-outputs/`.

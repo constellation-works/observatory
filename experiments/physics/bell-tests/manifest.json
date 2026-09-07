@@ -1,0 +1,15 @@
+{
+  "node": "bell-tests",
+  "domain": "physics",
+  "created": "2026-09-07",
+  "data": [],
+  "outputs": "_outputs/physics/bell-tests",
+  "study": "knowledgebase/studies/physics/bell-tests.md",
+  "status": "refuted",
+  "sims": [
+    "pingpong-bell",
+    "vortex-bell"
+  ],
+  "theory": null,
+  "migrated_from": "orrery lab/sims (family)"
+}

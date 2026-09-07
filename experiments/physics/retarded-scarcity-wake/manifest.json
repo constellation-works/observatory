@@ -1,0 +1,15 @@
+{
+  "node": "retarded-scarcity-wake",
+  "domain": "physics",
+  "created": "2026-09-07",
+  "data": [],
+  "outputs": "_outputs/physics/retarded-scarcity-wake",
+  "study": "knowledgebase/studies/physics/retarded-scarcity-wake.md",
+  "status": "refuted",
+  "sims": [
+    "delayed-center-analytic-checks",
+    "retarded-scarcity-wake"
+  ],
+  "theory": "knowledgebase/theory/theory/retarded-scarcity-wake/",
+  "migrated_from": "orrery lab/sims (family)"
+}

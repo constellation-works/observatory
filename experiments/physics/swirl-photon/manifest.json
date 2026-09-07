@@ -1,0 +1,16 @@
+{
+  "node": "swirl-photon",
+  "domain": "physics",
+  "created": "2026-09-07",
+  "data": [],
+  "outputs": "_outputs/physics/swirl-photon",
+  "study": "knowledgebase/studies/physics/swirl-photon.md",
+  "status": "supported",
+  "sims": [
+    "oscillating-electron-retarded-fields",
+    "swirl-ball",
+    "swirl-ball-far-field"
+  ],
+  "theory": "knowledgebase/theory/theory/swirl-photon/",
+  "migrated_from": "orrery lab/sims (family)"
+}

@@ -1,4 +1,0 @@
-interface:
-  display_name: "Hypothesis → Notebook → Experiment"
-  short_description: "Freeze HNN, implement the notebook, then write ENN from its output"
-  default_prompt: "Use $hypothesis-notebook-experiment to freeze the hypothesis, implement notebooks/RNN-title/ENN-title methodology, then write the experiment record from that run."
