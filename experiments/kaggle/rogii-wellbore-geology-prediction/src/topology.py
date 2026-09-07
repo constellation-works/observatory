@@ -276,7 +276,7 @@ class SpatialTopology:
             # Enforce per-well diversity among the k nearest kept neighbors.
             keep: list[int] = []
             counts: dict[str, int] = {}
-            for d, j in zip(d_row, i_row):
+            for _d, j in zip(d_row, i_row):
                 w = self._wells[j]
                 if w == self.exclude_well:
                     continue
