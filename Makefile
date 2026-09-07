@@ -1,0 +1,71 @@
+.PHONY: help setup check check-lineage check-theory check-layout lint test experiment fmt clean
+
+# ------------------------------------------------------------
+# Config
+# ------------------------------------------------------------
+UV ?= uv
+NEB ?= neb
+export NEBULA_ROOT := $(CURDIR)/knowledgebase/lineage
+THEORY := knowledgebase/theory
+
+# ------------------------------------------------------------
+# Help
+# ------------------------------------------------------------
+help:
+	@echo "Observatory Make Targets"
+	@echo ""
+	@echo "  make setup          uv sync, pre-commit hook, verify neb finds the corpus"
+	@echo "  make check          Full gate: lineage + theory + layout + lint + tests"
+	@echo "  make check-lineage  neb check over knowledgebase/lineage"
+	@echo "  make check-theory   principia's lock over knowledgebase/theory (no-op until migrated)"
+	@echo "  make check-layout   experiments and studies keyed by node id; no data in git"
+	@echo "  make lint           ruff"
+	@echo "  make test           pytest"
+	@echo "  make experiment DOMAIN=<d> ID=<node-id>   Scaffold experiments/<d>/<id>/ from the template"
+	@echo "  make fmt            ruff format"
+	@echo "  make clean          Remove caches (never touches _data or _outputs)"
+
+# ------------------------------------------------------------
+# Setup
+# ------------------------------------------------------------
+setup:
+	$(UV) sync
+	$(UV) run pre-commit install
+	@$(NEB) check >/dev/null && echo "neb sees the corpus at $(NEBULA_ROOT)"
+
+# ------------------------------------------------------------
+# Quality
+# ------------------------------------------------------------
+check: check-lineage check-theory check-layout lint test
+
+check-lineage:
+	$(NEB) check
+
+# principia's checker arrives with the migration; until then this passes.
+check-theory:
+	@if [ -f _scripts/check-theory.py ]; then $(UV) run python _scripts/check-theory.py $(THEORY); else echo "check-theory: not migrated yet"; fi
+
+check-layout:
+	./_scripts/check-layout.sh
+
+lint:
+	$(UV) run ruff check .
+
+fmt:
+	$(UV) run ruff format .
+
+test:
+	$(UV) run pytest -q
+
+# ------------------------------------------------------------
+# Scaffold
+# ------------------------------------------------------------
+experiment:
+	./_scripts/new-experiment.sh "$(DOMAIN)" "$(ID)"
+
+# ------------------------------------------------------------
+# Clean
+# ------------------------------------------------------------
+clean:
+	rm -rf .pytest_cache .ruff_cache
+	find . -name __pycache__ -type d -prune -exec rm -rf {} +

@@ -1,0 +1,30 @@
+[project]
+name = "observatory"
+version = "0.1.0"
+description = "Unified research platform: idea lineage, experiments, studies, theory."
+requires-python = ">=3.11"
+dependencies = [
+    "numpy>=1.26",
+    "pandas>=2.2",
+    "matplotlib>=3.8",
+    "pyyaml>=6",
+]
+
+[project.optional-dependencies]
+notebook = ["jupyterlab>=4", "nbstripout>=0.7"]
+spark = ["pyspark>=3.5"]
+ml = ["scikit-learn>=1.4", "lightgbm>=4"]
+
+[dependency-groups]
+dev = ["pytest>=8", "ruff>=0.6", "pre-commit>=3"]
+
+[tool.ruff]
+line-length = 100
+extend-exclude = ["_data", "_outputs", "knowledgebase"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
+
+[tool.pytest.ini_options]
+testpaths = ["_scripts", "experiments"]
+python_files = ["test_*.py"]

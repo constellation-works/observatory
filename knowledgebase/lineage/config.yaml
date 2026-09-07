@@ -1,0 +1,10 @@
+# nebula corpus configuration. `neb domain` edits this.
+schema_version: 1
+corpus_id: neb-a4ff0f
+domains:
+- general
+- physics
+- economics
+- social
+- kaggle
+default_domain: general

@@ -1,0 +1,9 @@
+{
+  "node": "{{id}}",
+  "domain": "{{domain}}",
+  "created": "{{date}}",
+  "data": [],
+  "outputs": "_outputs/{{domain}}/{{id}}",
+  "study": "knowledgebase/studies/{{domain}}/{{id}}.md",
+  "status": "planned"
+}

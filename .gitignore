@@ -1,0 +1,27 @@
+# Data and outputs live on disk, never in git. Manifests and READMEs do.
+_data/*
+!_data/README.md
+!_data/**/manifest.json
+_outputs/*
+!_outputs/README.md
+
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+.mypy_cache/
+
+# Secrets and local env
+.env
+.env.*
+!.env.example
+
+# Orbit runtime state
+.orbit/state/
+.orbit/tasks/
+
+# OS
+.DS_Store
