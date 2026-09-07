@@ -1,0 +1,28 @@
+[execution.env]
+# Agent subprocesses always run with a cleared environment plus the allowlist
+# below — the orbit process's full environment is never inherited (not
+# configurable, by design).
+# Baseline env vars passed to agent subprocesses.
+# User-specific vars (GITHUB_TOKEN, ANTHROPIC_API_KEY, etc.) are opt-in — add them as needed.
+pass = [
+    "HOME",
+    "PATH",
+    "CODEX_HOME",
+    "TMPDIR",
+    "USER",
+    "__CF_USER_TEXT_ENCODING",  # macOS: required by CoreFoundation
+]
+
+[execution.codex]
+sandbox = "danger-full-access"
+# Optional: enable escalation requests for workflows that legitimately need approval.
+# approval_policy = "on-request"
+
+[scoring]
+enabled = true
+
+[workflow]
+auto_ship = true
+base_branch = "agent-main"
+default_crew = "terra"
+system_crew = "luna"
