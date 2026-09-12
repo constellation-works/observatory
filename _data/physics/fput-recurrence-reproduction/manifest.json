@@ -1,0 +1,18 @@
+{
+  "source_url": "https://www.osti.gov/servlets/purl/4376203",
+  "doi": "10.2172/4376203",
+  "title": "Studies of Nonlinear Problems, I",
+  "authors": [
+    "E. Fermi",
+    "J. Pasta",
+    "S. Ulam",
+    "M. Tsingou"
+  ],
+  "published": "1955-05",
+  "sha256": "3155813b1851da4fa6fba5818986718b197d68873d38965f3cd7489c14f396f1",
+  "size_bytes": 1570076,
+  "licence": "US Government work; public domain",
+  "payload": "The PDF is intentionally not tracked. Fetch it into a temporary path when needed.",
+  "fetch_command": "curl -L --fail -o /tmp/la-1940.pdf https://www.osti.gov/servlets/purl/4376203",
+  "verify_command": "test \"$(stat -c %s /tmp/la-1940.pdf)\" = 1570076 && echo '3155813b1851da4fa6fba5818986718b197d68873d38965f3cd7489c14f396f1  /tmp/la-1940.pdf' | sha256sum -c -"
+}

@@ -1,0 +1,9 @@
+{
+  "node": "fput-recurrence-reproduction",
+  "domain": "physics",
+  "created": "2026-09-12",
+  "data": ["_data/physics/fput-recurrence-reproduction/manifest.json"],
+  "outputs": "_outputs/physics/fput-recurrence-reproduction",
+  "study": "knowledgebase/studies/physics/fput-recurrence-reproduction.md",
+  "status": "planned"
+}

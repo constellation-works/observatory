@@ -1,0 +1,158 @@
+{
+  "protocol_version": "v1",
+  "status": "frozen",
+  "frozen_on": "2026-09-12",
+  "experiment": "fput-recurrence-reproduction",
+  "reproduction_type": "independent reconstruction",
+  "target": {
+    "work": "E. Fermi, J. Pasta, S. Ulam (with M. Tsingou), Studies of Nonlinear Problems, I",
+    "report": "LA-1940",
+    "doi": "10.2172/4376203",
+    "source_url": "https://www.osti.gov/servlets/purl/4376203",
+    "figure": "Fig. 1",
+    "report_page": 12,
+    "pdf_page": 14,
+    "caption_parameters": "N=32; alpha=1/4; delta t squared=1/8"
+  },
+  "expected_output": {
+    "observable": "energy of modes 1 through 5 versus cycle",
+    "cycles": 30000,
+    "sample_every_cycles": 50,
+    "minimum_sample_count": 601,
+    "series_count": 5,
+    "cycle_axis": "computational cycles; one cycle is one integration time step"
+  },
+  "model": {
+    "name": "quadratic Fermi-Pasta-Ulam chain",
+    "equation": "ddot{x}_i = x_{i+1}+x_{i-1}-2*x_i + alpha*((x_{i+1}-x_i)^2-(x_i-x_{i-1})^2)",
+    "index": "i=1,...,N-1",
+    "boundary_conditions": "fixed ends x_0=x_N=0",
+    "units": {
+      "mass": "unit mass at every interior site",
+      "length": "maximum initial displacement normalized to 1",
+      "time": "dimensionless model time; reported abscissa is cycle count",
+      "energy": "arbitrary report units"
+    },
+    "parameters": {
+      "N": 32,
+      "alpha": 0.25,
+      "beta": 0.0,
+      "mass": 1.0,
+      "dt": 0.3535533905932738,
+      "dt_expression": "1/sqrt(8)",
+      "dt_squared": 0.125
+    },
+    "initial_state": {
+      "displacement": "x_i(0)=sin(i*pi/N), i=1,...,N-1; x_0=x_N=0",
+      "velocity": "zero velocity (string starts from rest)",
+      "phase": "single sine wave, mode 1"
+    }
+  },
+  "mode_analysis": {
+    "amplitude": "a_k=sum_i x_i*sin(i*pi*k/N)",
+    "angular_frequency": "omega_k=2*sin(pi*k/(2*N))",
+    "energy": "E_k=0.5*(adot_k^2 + omega_k^2*a_k^2)",
+    "velocity_amplitude": "adot_k=sum_i v_i*sin(i*pi*k/N)",
+    "nonlinear_energy_note": "The plotted modal energy omits the nonlinear potential contribution, as in the report; the omission is expected to be at most a few percent.",
+    "comparison_normalization": "plot_value_k(t)=E_k(t)/E_1(0)*300"
+  },
+  "integrator": {
+    "name": "explicit central-difference (Stormer-Verlet)",
+    "implementation_assumption": "The report's statement that derivatives were replaced by difference expressions is reconstructed as a position-space Störmer–Verlet / velocity-Verlet update; no author code is available.",
+    "startup_step": [
+      "Compute a(x^0) from the stated initial displacement and fixed boundaries.",
+      "First half-kick: v^(1/2)=v^0 + (dt/2)*a(x^0), with v^0=0.",
+      "Drift: x^1=x^0 + dt*v^(1/2), then recompute a(x^1).",
+      "Complete the first step with v^1=v^(1/2)+(dt/2)*a(x^1)."
+    ],
+    "subsequent_step": [
+      "Half-kick v^(n+1/2)=v^n+(dt/2)*a(x^n).",
+      "Drift x^(n+1)=x^n+dt*v^(n+1/2).",
+      "Recompute acceleration and complete the kick v^(n+1)=v^(n+1/2)+(dt/2)*a(x^(n+1))."
+    ],
+    "equivalent_position_form": "x^(n+1)=2*x^n-x^(n-1)+dt^2*a(x^n) after the explicit first step",
+    "adaptivity": "none",
+    "boundary_update": "x_0 and x_N remain zero at every force evaluation"
+  },
+  "numerics": {
+    "floating_point": "IEEE-754 float64",
+    "seeds": "none; deterministic initial state and arithmetic",
+    "solver_settings": {
+      "steps": 30000,
+      "sample_every": 50,
+      "force_evaluations": "one at each position update plus the startup evaluation",
+      "tolerance": "not an iterative solver; no residual tolerance",
+      "overflow_policy": "non-finite state is a failed run"
+    }
+  },
+  "compute_envelope": {
+    "host": "dk-server-1 / ws_observatory",
+    "measurement": "A throwaway float64 throughput probe on 2026-09-12 took 0.34 s for 30,000 iterations of the 32-site force/update shape; the later runner must measure and record its own runtime.",
+    "expected_runtime_seconds": 1.0,
+    "bounded_timeout_seconds": 120,
+    "memory_expectation": "less than 256 MiB; streamed samples plus bounded state",
+    "reproducibility": "record host, Python version, package lock hash, git revision, input hashes, wall-clock start/end, and exit status"
+  },
+  "input_selection": {
+    "comparison_input": "experiments/physics/fput-recurrence-reproduction/reference/fig1-digitized.csv",
+    "input_sha256_recording": "The runner records the CSV SHA-256 in run.json.",
+    "preprocessing": "Read the header and the named feature rows; use the digitized values only as references and do not infer or tune model parameters from the plotted curves.",
+    "source_payload_policy": "The LA-1940 PDF is fetched from the public URL into a temporary path; no PDF payload is tracked."
+  },
+  "metrics": {
+    "M1": {
+      "name": "first mode-1 recurrence time",
+      "definition": "argmax of E_1 over cycles 20000 through 30000",
+      "reference": "mode-1 first recurrence maximum t_cycles in fig1-digitized.csv",
+      "tolerance": "absolute difference <= 1000 cycles",
+      "primary": true
+    },
+    "M2": {
+      "name": "recurrence energy fraction",
+      "definition": "E_1(t_rec)/E_1(0)",
+      "reference": "digitized mode-1 recurrence energy / 300",
+      "tolerance": "absolute difference <= 0.03",
+      "primary": false
+    },
+    "M3": {
+      "name": "first maxima of modes 2, 3, and 4",
+      "definition": "time and height of the first local maximum of each listed mode",
+      "reference": "mode-2/3/4 first maximum rows in fig1-digitized.csv",
+      "tolerance": {
+        "time": "within 5 percent of the digitized time",
+        "height": "within 10 percent of E_1(0), using the report-axis normalization"
+      },
+      "primary": false
+    },
+    "M4": {
+      "name": "higher-mode ceiling",
+      "definition": "max over cycles of sum of the plotted modal energies for modes 6 through 31",
+      "reference": "caption ceiling 20/300 of E_1(0)",
+      "tolerance": "pass if <= 20/300 = 0.0666666667 of E_1(0)",
+      "primary": false
+    }
+  },
+  "controls": {
+    "C1": {
+      "name": "linear-chain control",
+      "definition": "Set alpha=0 and verify E_1 remains within 1 percent of its initial value over 10000 cycles.",
+      "pass": "max relative deviation <= 0.01"
+    },
+    "C2": {
+      "name": "full-energy conservation",
+      "definition": "Include the quadratic and cubic spring potential terms and measure maximum relative total-energy drift over the 30000-cycle baseline.",
+      "pass": "max relative drift <= 0.01"
+    },
+    "C3": {
+      "name": "time-step convergence",
+      "definition": "Repeat with dt/2 while holding physical elapsed time fixed, and compare the recurrence time after converting both runs to physical time.",
+      "pass": "relative movement in t_rec < 0.01"
+    }
+  },
+  "decision_rules": {
+    "failed_control": "Any failed control makes the execution status 'failed control'; retain metrics and diagnostics.",
+    "discrepancy": "M1 outside its tolerance is a 'discrepancy'; retain it and do not tune the baseline to the figure.",
+    "inconclusive": "Use 'inconclusive' when required metrics or controls cannot be evaluated, when the reference feature is ambiguous beyond its stated uncertainty, or when the result does not decide the kill condition.",
+    "amendment": "A changed method requires a new protocol/v2.json and protocol/v2.md with a dated reason. protocol/v1.json and protocol/v1.md are frozen and must never be edited after this task lands."
+  }
+}
