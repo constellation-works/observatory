@@ -1,0 +1,29 @@
+{
+  "slug": "resonance-damping",
+  "title": "Resonance and damping",
+  "kind": "web",
+  "entry": "index.html",
+  "status": "active",
+  "created": "2026-09-12",
+  "family": "field-guide",
+  "topics": [
+    "classical-mechanics",
+    "driven-oscillator",
+    "resonance",
+    "numerical-integration"
+  ],
+  "summary": "Field-guide chapter 3: the driven damped linear oscillator, RK4-integrated over the augmented state [x, v, t]. Steady-state amplitude and phase, the closed-form underdamped transient, the resonance peak and quality factor, validated case by case against an independent Python reference. A pendulum toggle (extending experiments/physics/pendulum-driven/) shows where the linear model folds over.",
+  "provenance": {
+    "chapter": "chapter.json",
+    "reference": "reference.py",
+    "validation": "validation.json",
+    "task": "ORB-12364",
+    "design": "docs/design/paper-reproduction-workbench.md",
+    "extends": "experiments/physics/pendulum-driven/pendulum-driven/",
+    "sources": [
+      "French, Vibrations and Waves, MIT Introductory Physics Series, 1971, ch. 4",
+      "Feynman, Leighton & Sands, The Feynman Lectures on Physics, Vol. I, ch. 23-24",
+      "Marion & Thornton, Classical Dynamics of Particles and Systems, 5th ed., ch. 3"
+    ]
+  }
+}

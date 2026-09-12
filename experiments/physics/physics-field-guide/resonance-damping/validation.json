@@ -1,0 +1,220 @@
+{
+  "schema_version": 1,
+  "chapter": "resonance-damping",
+  "generator": "reference.py (numpy, float64)",
+  "source_revision": "c9f799e",
+  "units": "dimensionless: omega_0 = 1 sets the time scale, so omega, the damping ratio zeta = gamma/omega_0, and the drive amplitude F are all given in these units. RK4 integrates the autonomous state [x, v, t] at the stated step dt; the stability/accuracy bound for this stiffness is dt << 1/omega_0.",
+  "steady_state_tolerance": {
+    "amplitude_relative": 0.005,
+    "phase_absolute": 0.005
+  },
+  "transient_tolerance_absolute": 1e-06,
+  "tolerance": {
+    "relative": 1e-09,
+    "absolute": 1e-12,
+    "rationale": "resonance.js and reference.py run the same RK4 algorithm (the shared _lib/web/integrators.js stepper, over the autonomous state [x, v, t]) in the same operation order in float64, so the two implementations agree to floating-point roundoff. This is distinct from the physics tolerances below: the RK4 steady-state measurement always carries a discretisation error against the analytic amplitude/phase (declared separately as steady_state_tolerance), and the RK4 trajectory always carries a discretisation error against the closed-form transient (declared separately as transient_tolerance_absolute)."
+  },
+  "cases": [
+    {
+      "omega": 0.8,
+      "zeta": 0.05,
+      "F": 0.5,
+      "dt": 0.01,
+      "settle_time": 300.0,
+      "window_periods": 5.0,
+      "period": 7.853981633974483,
+      "total_time": 339.2699081698724,
+      "steps": 33927,
+      "analytic": {
+        "amplitude": 1.3558153613666015,
+        "phase": 0.2186689458739421,
+        "omega_r": 0.9974968671630001,
+        "Q": 10.0,
+        "omega_d": 0.998749217771909
+      },
+      "rk4_amplitude": 1.355815378788622,
+      "rk4_phase": 0.21866891062264707,
+      "amplitude_relative_error": 1.2849847397634752e-08,
+      "phase_absolute_error": 3.525129502190971e-08,
+      "steady_state_within_tolerance": true,
+      "transient_max_abs_error": 1.2112757463711432e-09,
+      "transient_within_tolerance": true,
+      "final_state": {
+        "x": 0.7091683085988694,
+        "v": -0.9244468662709683,
+        "t": 339.26999999983644
+      }
+    },
+    {
+      "omega": 0.8,
+      "zeta": 0.3,
+      "F": 0.5,
+      "dt": 0.01,
+      "settle_time": 50.0,
+      "window_periods": 5.0,
+      "period": 7.853981633974483,
+      "total_time": 89.26990816987242,
+      "steps": 8927,
+      "analytic": {
+        "amplitude": 0.8333333333333335,
+        "phase": 0.9272952180016124,
+        "omega_r": 0.9055385138137417,
+        "Q": 1.6666666666666667,
+        "omega_d": 0.9539392014169457
+      },
+      "rk4_amplitude": 0.8333333362974732,
+      "rk4_phase": 0.9272952443703909,
+      "amplitude_relative_error": 3.556967653750575e-09,
+      "phase_absolute_error": 2.636877849404584e-08,
+      "steady_state_within_tolerance": true,
+      "transient_max_abs_error": 1.4509249357530507e-10,
+      "transient_within_tolerance": true,
+      "final_state": {
+        "x": 0.16321304223856922,
+        "v": -0.6537551578604377,
+        "t": 89.27000000000876
+      }
+    },
+    {
+      "omega": 1.0,
+      "zeta": 0.05,
+      "F": 0.5,
+      "dt": 0.01,
+      "settle_time": 300.0,
+      "window_periods": 5.0,
+      "period": 6.283185307179586,
+      "total_time": 331.41592653589794,
+      "steps": 33142,
+      "analytic": {
+        "amplitude": 5.0,
+        "phase": 1.5707963267948966,
+        "omega_r": 0.9974968671630001,
+        "Q": 10.0,
+        "omega_d": 0.998749217771909
+      },
+      "rk4_amplitude": 4.999999278909869,
+      "rk4_phase": 1.5707962662186614,
+      "amplitude_relative_error": 1.4421802614350553e-07,
+      "phase_absolute_error": 6.057623513910926e-08,
+      "steady_state_within_tolerance": true,
+      "transient_max_abs_error": 8.27415941317966e-09,
+      "transient_within_tolerance": true,
+      "final_state": {
+        "x": -4.9991874862865515,
+        "v": -0.09011977861638834,
+        "t": 331.4199999998436
+      }
+    },
+    {
+      "omega": 1.0,
+      "zeta": 0.3,
+      "F": 0.5,
+      "dt": 0.01,
+      "settle_time": 50.0,
+      "window_periods": 5.0,
+      "period": 6.283185307179586,
+      "total_time": 81.41592653589794,
+      "steps": 8142,
+      "analytic": {
+        "amplitude": 0.8333333333333334,
+        "phase": 1.5707963267948966,
+        "omega_r": 0.9055385138137417,
+        "Q": 1.6666666666666667,
+        "omega_d": 0.9539392014169457
+      },
+      "rk4_amplitude": 0.8333333558385383,
+      "rk4_phase": 1.5707963006589543,
+      "amplitude_relative_error": 2.7006245906235904e-08,
+      "phase_absolute_error": 2.613594229927685e-08,
+      "steady_state_within_tolerance": true,
+      "transient_max_abs_error": 2.334104021173289e-10,
+      "transient_within_tolerance": true,
+      "final_state": {
+        "x": -0.21536827797084357,
+        "v": 0.8050223286610683,
+        "t": 81.42000000000475
+      }
+    },
+    {
+      "omega": 1.6,
+      "zeta": 0.05,
+      "F": 0.5,
+      "dt": 0.01,
+      "settle_time": 300.0,
+      "window_periods": 5.0,
+      "period": 3.9269908169872414,
+      "total_time": 319.6349540849362,
+      "steps": 31963,
+      "analytic": {
+        "amplitude": 0.3188402046830295,
+        "phase": 3.0393859354825397,
+        "omega_r": 0.9974968671630001,
+        "Q": 10.0,
+        "omega_d": 0.998749217771909
+      },
+      "rk4_amplitude": 0.31884019869508284,
+      "rk4_phase": 3.0393859316123426,
+      "amplitude_relative_error": 1.878040018348141e-08,
+      "phase_absolute_error": 3.870197051725199e-09,
+      "steady_state_within_tolerance": true,
+      "transient_max_abs_error": 3.5526559472032204e-10,
+      "transient_within_tolerance": true,
+      "final_state": {
+        "x": 0.2685358002509974,
+        "v": 0.27503071900235637,
+        "t": 319.6299999998543
+      }
+    },
+    {
+      "omega": 1.6,
+      "zeta": 0.3,
+      "F": 0.5,
+      "dt": 0.01,
+      "settle_time": 50.0,
+      "window_periods": 5.0,
+      "period": 3.9269908169872414,
+      "total_time": 69.63495408493621,
+      "steps": 6963,
+      "analytic": {
+        "amplitude": 0.27296740920017426,
+        "phase": 2.5899376710612465,
+        "omega_r": 0.9055385138137417,
+        "Q": 1.6666666666666667,
+        "omega_d": 0.9539392014169457
+      },
+      "rk4_amplitude": 0.27296741155958115,
+      "rk4_phase": 2.589937656509301,
+      "amplitude_relative_error": 8.643547956865063e-09,
+      "phase_absolute_error": 1.4551945426433122e-08,
+      "steady_state_within_tolerance": true,
+      "transient_max_abs_error": 1.1171016889299779e-10,
+      "transient_within_tolerance": true,
+      "final_state": {
+        "x": -0.1145646705349852,
+        "v": -0.39641963285288717,
+        "t": 69.62999999999872
+      }
+    }
+  ],
+  "dt_convergence": {
+    "omega": 1.0,
+    "zeta": 0.3,
+    "F": 0.5,
+    "t_probe": 4.0,
+    "dts": [
+      0.04,
+      0.02,
+      0.01,
+      0.005
+    ],
+    "position_errors": [
+      1.1388647913612715e-08,
+      6.825234821761228e-10,
+      4.1739500744597535e-11,
+      2.5846547124785957e-12
+    ],
+    "observed_order": 4.034740531800701,
+    "expected_order": 4,
+    "note": "RK4 is fourth order: the position error against the closed-form transient at a fixed probe time should shrink as dt^4 as the step shrinks."
+  }
+}

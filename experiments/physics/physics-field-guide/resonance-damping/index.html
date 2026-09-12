@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Resonance and damping — physics field guide</title>
+<link rel="stylesheet" href="../../_lib/web/style.css">
+<link rel="stylesheet" href="../../_lib/web/chapter.css">
+</head>
+<body>
+<main id="chapter"></main>
+
+<script type="module">
+import { createLoop } from '../../_lib/web/loop.js';
+import { createCanvas2D } from '../../_lib/web/canvas2d.js';
+import { createPlot, plotsToSVG, SERIES_COLORS } from '../../_lib/web/plot.js';
+import { downloadSVG, formatNumber, h, loadChapter, renderChapter, table, validateChapter }
+  from '../../_lib/web/chapter.js';
+import {
+  OMEGA0, WINDOW_PERIODS, analyticAmplitudePhase, closedFormTransient, createRun,
+  dampedNaturalFrequency, qualityFactor, resonanceFrequency, runCase,
+} from './resonance.js';
+
+const { chapter, validation } = await loadChapter();
+
+// --- page skeleton ----------------------------------------------------------
+const ui = renderChapter({
+  mount: document.getElementById('chapter'),
+  chapter,
+  validation,
+  hooks: {
+    onPrediction: () => { restart(); if (animating) { loop.start(); ui.setPlaying(true); } },
+    onControlChange: () => restart(),
+    onPreset: () => restart(),
+    onReset: () => restart(),
+    onStep: () => {
+      if (!run.done) { run.advance(1); if (run.steps >= run.totalSteps) run.done = true; }
+      paint();
+    },
+    onTogglePlay: () => {
+      if (loop.running) { loop.pause(); return false; }
+      if (run.done) restart();
+      loop.start();
+      return true;
+    },
+    onMotionChange: (animate) => { animating = animate; restart(); },
+    onDownload: () => downloadSVG(
+      plotsToSVG([timePlot, amplitudePlot, phasePlot]),
+      `resonance-omega${formatNumber(ui.values.omega, 3)}-zeta${formatNumber(ui.values.zeta, 3)}-${ui.values.model}.svg`),
+  },
+});
+
+// --- the oscillator, drawn on canvas (extends experiments/physics/pendulum-driven/) ---
+const surface = createCanvas2D({ mount: ui.regions.sim, height: 260 });
+// Unlike a plot's <canvas> (made responsive by the .fg-plot canvas rule in
+// chapter.css), this canvas sits directly in .fg-sim, so it needs the same
+// width:100% / max-width:100% itself to stay inside the grid column instead
+// of forcing horizontal scroll on a narrow screen.
+surface.canvas.style.display = 'block';
+surface.canvas.style.width = '100%';
+surface.canvas.style.maxWidth = '100%';
+surface.canvas.setAttribute('role', 'img');
+surface.canvas.setAttribute('aria-label',
+  'Animated oscillator: a mass on a spring in the linear model, or a pendulum bob when the '
+  + 'pendulum toggle is on. Current numbers are reported in the status line below.');
+// The canvas's backing-store size is only correct after its own queued resize
+// (createCanvas2D's initial queueMicrotask(resize)), which runs after this
+// script's first, synchronous paint() call. Without this, the reduced-motion
+// path -- which never starts the animation loop to redraw on a later frame --
+// would draw once into the pre-resize buffer and then have that draw wiped
+// when the resize actually lands, leaving the oscillator blank.
+surface.onResize(() => { if (run) drawOscillator(); });
+
+function drawOscillator() {
+  const { ctx } = surface;
+  surface.clear('#050510');
+  const { w, h: hh } = surface.size();
+  const cx = w / 2, cy = hh / 2;
+  // Scaled so the steady-state amplitude (which ranges from well under 1 to
+  // several units, e.g. F/(2*zeta) at light damping) stays on screen with
+  // headroom for a transient overshoot, rather than a fixed px/unit that only
+  // suits a narrow amplitude range.
+  const halfWidth = Math.min(w, hh * 1.6) / 2 - 90;
+  const scale = halfWidth / (Math.max(1, run.displayAmplitude) * 1.5);
+  ctx.save();
+  ctx.translate(cx, cy);
+  if (run.model === 'pendulum') {
+    const L = Math.min(hh * 0.72, w * 0.3);
+    const pivotY = -L * 0.55;
+    const px = L * Math.sin(run.x), py = L * Math.cos(run.x);
+    ctx.strokeStyle = '#6a7090';
+    ctx.lineWidth = 1;
+    ctx.beginPath(); ctx.moveTo(-w / 2 + 10, pivotY); ctx.lineTo(w / 2 - 10, pivotY); ctx.stroke();
+    ctx.fillStyle = '#8b93b8';
+    ctx.beginPath(); ctx.arc(0, pivotY, 4, 0, Math.PI * 2); ctx.fill();
+    ctx.strokeStyle = '#8b93b8';
+    ctx.lineWidth = 2;
+    ctx.beginPath(); ctx.moveTo(0, pivotY); ctx.lineTo(px, pivotY + py); ctx.stroke();
+    ctx.fillStyle = SERIES_COLORS[0];
+    ctx.beginPath(); ctx.arc(px, pivotY + py, 12, 0, Math.PI * 2); ctx.fill();
+  } else {
+    const wallX = -w / 2 + 24;
+    const massX = Math.max(wallX + 40, Math.min(w / 2 - 20, wallX + 60 + run.x * scale));
+    ctx.strokeStyle = '#6a7090';
+    ctx.lineWidth = 6;
+    ctx.beginPath(); ctx.moveTo(wallX, -40); ctx.lineTo(wallX, 40); ctx.stroke();
+    ctx.strokeStyle = '#8b93b8';
+    ctx.lineWidth = 2;
+    const coils = 10;
+    ctx.beginPath();
+    ctx.moveTo(wallX, 0);
+    for (let i = 1; i < coils; i++) {
+      const t = i / coils;
+      ctx.lineTo(wallX + t * (massX - wallX), (i % 2 ? 1 : -1) * 10);
+    }
+    ctx.lineTo(massX, 0);
+    ctx.stroke();
+    ctx.fillStyle = SERIES_COLORS[0];
+    ctx.beginPath(); ctx.arc(massX, 0, 16, 0, Math.PI * 2); ctx.fill();
+    // Drive-force arrow: direction and rough magnitude of F cos(omega t) right now.
+    const drive = run.F * Math.cos(run.omega * run.t);
+    if (Math.abs(drive) > 1e-6) {
+      const len = Math.max(-30, Math.min(30, drive * scale * 0.5));
+      ctx.strokeStyle = SERIES_COLORS[3];
+      ctx.lineWidth = 2;
+      ctx.beginPath(); ctx.moveTo(massX, -30); ctx.lineTo(massX + len, -30); ctx.stroke();
+    }
+  }
+  ctx.restore();
+}
+
+// --- plots --------------------------------------------------------------
+const timePlot = createPlot({
+  mount: ui.regions.plots,
+  title: 'x(t): numerical solution with the steady-state and transient envelopes',
+  xLabel: 'time t (units of 1/ω₀)',
+  yLabel: 'displacement x (dimensionless)',
+  height: 260,
+});
+
+const amplitudePlot = createPlot({
+  mount: ui.regions.plots,
+  title: 'Frequency response A(ω) — live marker at the current ω, point at the measured steady state',
+  xLabel: 'drive frequency ω/ω₀ (dimensionless)',
+  yLabel: 'steady-state amplitude A (dimensionless)',
+  height: 260,
+});
+
+const phasePlot = createPlot({
+  mount: ui.regions.plots,
+  title: 'Phase lag φ(ω) — crosses π/2 exactly at ω = ω₀',
+  xLabel: 'drive frequency ω/ω₀ (dimensionless)',
+  yLabel: 'phase lag φ (radians)',
+  height: 220,
+});
+
+const OMEGA_MIN = chapter.controls.find((c) => c.key === 'omega').min;
+const OMEGA_MAX = chapter.controls.find((c) => c.key === 'omega').max;
+const RESPONSE_SAMPLES = 400;
+
+function responseCurves(zeta, F) {
+  const amp = [];
+  const phase = [];
+  for (let i = 0; i <= RESPONSE_SAMPLES; i++) {
+    const omega = OMEGA_MIN + ((OMEGA_MAX - OMEGA_MIN) * i) / RESPONSE_SAMPLES;
+    const r = analyticAmplitudePhase(omega, zeta, F);
+    amp.push([omega, r.amplitude]);
+    phase.push([omega, r.phase]);
+  }
+  return { amp, phase };
+}
+
+// --- the run --------------------------------------------------------------
+let run = null;
+let animating = ui.animating;
+const SAMPLE_TARGET = 900;
+
+function stepsPerFrame() {
+  return Math.max(1, Math.round(run.totalSteps / 720));
+}
+
+function restart() {
+  const { omega, zeta, F, model } = ui.values;
+  const dt = 0.01;
+  const settleTime = 15.0 / zeta;
+  const period = (2 * Math.PI) / omega;
+  const totalTime = settleTime + WINDOW_PERIODS * period;
+  const totalSteps = Math.round(totalTime / dt);
+  const sampleEvery = Math.max(1, Math.round(totalSteps / SAMPLE_TARGET));
+  run = createRun({ omega, zeta, F, model, dt, sampleEvery });
+  run.totalSteps = totalSteps;
+  run.done = false;
+
+  const envelopePoints = 240;
+  const envelopeTime = Math.min(totalTime, 8 / zeta + 4 * period);
+  const gamma = zeta * OMEGA0;
+  const { amplitude: A, phase: phi } = analyticAmplitudePhase(omega, zeta, F);
+  // The closed-form transient (and therefore its envelope) is only defined for
+  // the underdamped case; at zeta >= 1 the page still runs and shows the
+  // steady-state envelope, but draws no transient curve rather than a wrong one.
+  const wd = zeta < 1 ? dampedNaturalFrequency(zeta) : null;
+  const R = wd
+    ? Math.hypot(A * Math.cos(phi), (A * (gamma * Math.cos(phi) + omega * Math.sin(phi))) / wd)
+    : null;
+  const steadyUpper = [], steadyLower = [], transientUpper = [], transientLower = [];
+  for (let i = 0; i <= envelopePoints; i++) {
+    const t = (envelopeTime * i) / envelopePoints;
+    steadyUpper.push([t, A]);
+    steadyLower.push([t, -A]);
+    if (R !== null) {
+      transientUpper.push([t, R * Math.exp(-gamma * t)]);
+      transientLower.push([t, -R * Math.exp(-gamma * t)]);
+    }
+  }
+  run.envelopes = {
+    steady: [...steadyUpper, [NaN, NaN], ...steadyLower],
+    transient: R !== null ? [...transientUpper, [NaN, NaN], ...transientLower] : null,
+  };
+  run.response = responseCurves(zeta, F);
+  // How far the drawn mass can swing: the larger of the steady-state amplitude
+  // and the transient's own coefficient (the transient can momentarily exceed
+  // the steady state before settling), so the oscillator stays on screen.
+  run.displayAmplitude = Math.max(A, R ?? 0);
+
+  if (animating) {
+    loop.reset();
+    if (loop.running) loop.start();
+  } else {
+    run.advance(run.totalSteps);
+    run.done = true;
+    loop.pause();
+    ui.setPlaying(false);
+  }
+  paint();
+}
+
+function paint() {
+  if (run.steps >= run.totalSteps) run.done = true;
+
+  // 1. the oscillator itself.
+  drawOscillator();
+
+  // 2. x(t): numerical trace plus the two analytic envelopes.
+  const numerical = run.samples.trajectory.concat([[run.t, run.x]]);
+  const timeSeries = [
+    { id: 'steady-envelope', label: 'steady-state envelope ±A(ω)', points: run.envelopes.steady,
+      style: 'dotted', color: SERIES_COLORS[3], width: 1.5 },
+    { id: 'numerical', label: `x(t), RK4 (${run.model})`, points: numerical,
+      style: 'solid', color: SERIES_COLORS[0], width: 1.5, marker: true },
+  ];
+  if (run.envelopes.transient) {
+    timeSeries.splice(1, 0, { id: 'transient-envelope', label: 'transient decay envelope ±R e^{−γt}',
+      points: run.envelopes.transient, style: 'dashed', color: SERIES_COLORS[1], width: 1.5 });
+  }
+  timePlot.setSeries(timeSeries);
+  timePlot.setDescription(
+    `Numerical x(t) after ${run.steps} of ${run.totalSteps} steps, ω=${formatNumber(run.omega, 3)}, `
+    + `ζ=${formatNumber(run.zeta, 3)}, F=${formatNumber(run.F, 3)}, ${run.model} model.`);
+  timePlot.draw();
+
+  // 3./4. response curves, with a live marker at the current omega and, once the
+  // run has settled, the demodulated measured point.
+  const live = analyticAmplitudePhase(run.omega, run.zeta, run.F);
+  const measured = run.measureSteadyState();
+  const ampSeries = [
+    { id: 'A-curve', label: 'A(ω), analytic (linear model)', points: run.response.amp,
+      style: 'solid', color: SERIES_COLORS[0], width: 2 },
+    { id: 'A-live', label: 'current ω (linear prediction)', points: [[run.omega, live.amplitude]],
+      style: 'solid', color: SERIES_COLORS[3], width: 0, marker: true },
+  ];
+  if (measured) {
+    ampSeries.push({ id: 'A-measured', label: `measured steady state (${run.model})`,
+      points: [[run.omega, measured.amplitude]], style: 'solid', color: SERIES_COLORS[2],
+      width: 0, marker: true });
+  }
+  amplitudePlot.setSeries(ampSeries);
+  amplitudePlot.setDescription(
+    `Analytic amplitude response for ζ=${formatNumber(run.zeta, 3)}, F=${formatNumber(run.F, 3)}; `
+    + `live marker at ω=${formatNumber(run.omega, 3)}` + (measured ? '; measured point plotted.' : '.'));
+  amplitudePlot.draw();
+
+  const phaseSeries = [
+    { id: 'phi-curve', label: 'φ(ω), analytic (linear model)', points: run.response.phase,
+      style: 'solid', color: SERIES_COLORS[0], width: 2 },
+    { id: 'phi-live', label: 'current ω (linear prediction)', points: [[run.omega, live.phase]],
+      style: 'solid', color: SERIES_COLORS[3], width: 0, marker: true },
+  ];
+  if (measured) {
+    phaseSeries.push({ id: 'phi-measured', label: `measured steady state (${run.model})`,
+      points: [[run.omega, measured.phase]], style: 'solid', color: SERIES_COLORS[2],
+      width: 0, marker: true });
+  }
+  phasePlot.setSeries(phaseSeries);
+  phasePlot.setDescription(
+    `Analytic phase response for ζ=${formatNumber(run.zeta, 3)}; φ = π/2 at ω = ω₀ always.`);
+  phasePlot.draw();
+
+  const omegaR = resonanceFrequency(run.zeta);
+  const Q = qualityFactor(run.zeta);
+  ui.setStatus(
+    `${run.model} model · ω = ${formatNumber(run.omega, 4)} ω₀ · ζ = ${formatNumber(run.zeta, 4)} · `
+    + `F = ${formatNumber(run.F, 3)} · step ${run.steps} / ${run.totalSteps} · t = ${formatNumber(run.t, 4)} · `
+    + `A_analytic = ${formatNumber(live.amplitude, 4)}, φ_analytic = ${formatNumber(live.phase, 4)} rad · `
+    + `Q = ${formatNumber(Q, 3)}` + (omegaR !== null ? `, ω_r = ${formatNumber(omegaR, 4)}` : ', no interior peak (ζ ≥ 1/√2)')
+    + (measured ? ` · measured A = ${formatNumber(measured.amplitude, 4)}, φ = ${formatNumber(measured.phase, 4)} rad` : '')
+    + (run.done ? ' · run complete' : ''));
+}
+
+const loop = createLoop({
+  step: () => {
+    if (run.done) return;
+    const remaining = run.totalSteps - run.steps;
+    run.advance(Math.min(stepsPerFrame(), remaining));
+    if (run.steps >= run.totalSteps) run.done = true;
+  },
+  render: () => {
+    paint();
+    if (run.done && loop.running) { loop.pause(); ui.setPlaying(false); }
+  },
+  dt: 1 / 60,
+});
+
+// --- validation evidence, recomputed in this browser ------------------------
+function resonanceCaseLabel(c) {
+  return `ω = ${c.omega} ω₀, ζ = ${c.zeta}, F = ${c.F}`;
+}
+function resonanceMeasuredCell(c) {
+  return `A = ${formatNumber(c.rk4_amplitude, 4)}, φ = ${formatNumber(c.rk4_phase, 4)} rad `
+    + `(max |Δx| vs transient ${formatNumber(c.transient_max_abs_error, 3)})`;
+}
+function resonanceReferenceCell(c) {
+  return `A = ${formatNumber(c.analytic.amplitude, 4)} (Δrel ${formatNumber(c.amplitude_relative_error, 3)}), `
+    + `φ = ${formatNumber(c.analytic.phase, 4)} rad (Δabs ${formatNumber(c.phase_absolute_error, 3)})`;
+}
+
+const result = validateChapter(validation, (c) => runCase({ omega: c.omega, zeta: c.zeta, F: c.F, dt: c.dt }), {
+  fields: ['rk4_amplitude', 'rk4_phase', 'amplitude_relative_error', 'phase_absolute_error',
+    'transient_max_abs_error'],
+});
+ui.showValidation(result, {
+  columns: [
+    { header: 'validation case', cell: (r) => resonanceCaseLabel(r.case) },
+    { header: 'RK4 (measured)', cell: (r) => resonanceMeasuredCell(r.case) },
+    { header: 'independent check (analytic)', cell: (r) => resonanceReferenceCell(r.case) },
+  ],
+  caption: `Reference values from validation.json (${result.rows.length} cases); `
+    + `browser-vs-reference agreement tolerance ${result.tolerance} relative.`,
+});
+
+// The dt^4 convergence entry: reference.py-only data (RK4 discretisation error
+// against the closed-form transient at shrinking dt), rendered here as
+// showValidation()'s default columns don't cover this shape.
+const conv = validation.dt_convergence;
+const convRows = conv.dts.map((dt, idx) => [formatNumber(dt, 4), formatNumber(conv.position_errors[idx], 3)]);
+const convWrap = h('div', { class: 'fg-table-wrap' },
+  h('h3', { text: 'Convergence: RK4 position error vs the closed-form transient' }),
+  h('p', { class: 'fg-note', text: conv.note }),
+  table(['Δt', '|Δx(t_probe)| vs closed form'], convRows, {
+    caption: `ω = ${conv.omega} ω₀, ζ = ${conv.zeta}, F = ${conv.F}, t_probe = ${conv.t_probe}; `
+      + `observed order ${conv.observed_order.toFixed(3)} (expected ${conv.expected_order}) from reference.py.`,
+  }));
+ui.regions.validation.append(convWrap);
+
+restart();
+ui.setPlaying(false); // the run waits for a prediction
+
+// Handles for the Playwright checks under tests/.
+window.__chapter = {
+  state: () => ({
+    steps: run.steps, totalSteps: run.totalSteps, done: run.done,
+    omega: run.omega, zeta: run.zeta, F: run.F, model: run.model,
+    status: document.querySelector('.fg-status').textContent,
+    animating, playing: loop.running,
+    amplitudeAnalytic: analyticAmplitudePhase(run.omega, run.zeta, run.F).amplitude,
+  }),
+  runCase,
+  svg: () => plotsToSVG([timePlot, amplitudePlot, phasePlot]),
+};
+</script>
+</body>
+</html>
