@@ -1,0 +1,53 @@
+{
+  "schema": "fput-exploration-bounds/1",
+  "experiment": "fput-recurrence-reproduction",
+  "added": "2026-09-12",
+  "status": "presentation-only sidecar",
+  "applies_to": ["v1", "v2"],
+  "normative_effect": "none",
+  "why_a_sidecar": "protocol/v1.json and protocol/v2.json both declare themselves frozen and byte-immutable after their landing task, so the bounds that the exploratory runner enforces are declared here instead of being edited into a frozen file. Nothing in this file changes a metric, tolerance, parameter, control, integrator or decision rule: the baseline still loads its parameters from the protocol version it names, and this file only bounds which explicitly labelled exploratory deviations the runner will accept.",
+  "exploration": {
+    "baseline_source": "the named protocol version's model.parameters and numerics.solver_settings",
+    "parameters": {
+      "alpha": {
+        "path": "model.parameters.alpha",
+        "type": "number",
+        "minimum": 0.0,
+        "maximum": 2.0,
+        "units": "dimensionless cubic-spring coefficient",
+        "note": "alpha=0 is control C1's linear chain; alpha=1.0 is the report's Fig. 2 condition. No digitization exists for Fig. 2, so an alpha!=0.25 run is a qualitative comparison only."
+      },
+      "dt": {
+        "path": "model.parameters.dt",
+        "type": "number",
+        "minimum": 0.03125,
+        "maximum": 0.5,
+        "units": "dimensionless model time per cycle",
+        "note": "The baseline is dt=1/sqrt(8)=0.3535533905932738 because the caption states delta t^2=1/8. dt=0.125 is the naive reading of the caption and is allowed only as an exploratory run; it moves the recurrence far outside the 30,000-cycle window."
+      },
+      "cycles": {
+        "path": "numerics.solver_settings.steps",
+        "type": "integer",
+        "minimum": 100,
+        "maximum": 120000,
+        "units": "integration steps",
+        "note": "A shortened or lengthened budget is diagnostic only. Metrics whose windows are not covered report pass: null rather than a tuned value."
+      }
+    },
+    "rules": [
+      "Only the keys listed above may be set; any other key is a usage error (exit code 2).",
+      "A value outside its declared range is refused with a message naming the key, the value and the allowed range (exit code 2).",
+      "Every exploratory run is written to its own explore-<delta-hash>-<timestamp> directory with kind: exploratory, baseline_eligible: false and the parameter delta against the named protocol recorded in run.json.",
+      "An exploratory run never writes to, relabels or deletes a baseline run directory, and never becomes the registered baseline."
+    ]
+  },
+  "changelog": [
+    {
+      "date": "2026-09-12",
+      "presentation_only": true,
+      "post_hoc": true,
+      "change": "Added the exploration bounds block for alpha, dt and cycles as a separate sidecar file rather than editing protocol/v1.json (which the task suggested) or protocol/v2.json, because both declare themselves frozen and immutable after landing.",
+      "reason": "The runner must validate exploratory parameter ranges against a declared protocol artifact rather than hard-coded constants, without touching any normative term or the digests that existing runs and scientific records pin."
+    }
+  ]
+}

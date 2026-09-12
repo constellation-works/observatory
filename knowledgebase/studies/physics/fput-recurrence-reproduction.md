@@ -137,6 +137,134 @@ supports**. The measured metrics are:
 
 ![Protocol-v2 reconstruction with corrected digitized-feature overlays](fput-recurrence-reproduction.png)
 
+## The workbench (Milestone 3)
+
+`run.py` now carries the whole workbench: `baseline`, `explore`, `report`, `evidence`
+and `export`. `run.py report` renders one self-contained static page at
+`_outputs/physics/fput-recurrence-reproduction/site/index.html` — the original Fig. 1
+crop beside the reconstruction drawn on the *same* axes geometry (the reconstruction's
+plot rectangle occupies the identical 96–901 px of 950 / 33–919 px of 1000 fraction that
+`reference/README.md` calibrated, with the original's own units: t in thousands of
+cycles, energy in the 300-unit report normalization), a residual panel, the metrics
+table, separate execution/controls/assessment sections, the provenance panel and the
+exploratory runs. Styles are inline and images are base64; nothing is fetched.
+
+Drawn on matching axes, the reconstruction's curves land on the printed ones: the
+residual panel shows every digitized feature inside the ±250-cycle / ±5-unit stated
+digitization uncertainty (largest residuals: −200 cycles for the mode-1 recurrence,
++3.7 units for mode 3's first maximum).
+
+Headless Chromium (`tools/browser_check.py`, Playwright `chromium_headless_shell`) at
+1280 px and 375 px reports `horizontal_scroll: false`, eleven rendered sections, zero
+remotely-loaded resources and no page errors on the study page, and the same at four
+sections for the evidence browser. Wide tables scroll inside their own container rather
+than pushing the document sideways.
+
+## Exploration findings
+
+Two bounded exploratory runs were kept. Each lives in its own
+`explore-<delta-hash>-<timestamp>/` directory with `kind: exploratory`, the parameter
+delta recorded in `run.json`, and no write of any kind to the baseline directory. The
+allowed ranges are declared in `protocol/exploration.json` — a presentation-only sidecar,
+because `protocol/v1.json` and `protocol/v2.json` declare themselves frozen and
+byte-immutable after their landing tasks (their digests are pinned by existing runs).
+Out-of-range values (`alpha=5`), unknown keys (`beta=1.0`) and a no-op delta
+(`alpha=0.25`) are refused with exit code 2 and no directory is created.
+
+**δt = 0.125 — the δt² trap made visible.** Reading the caption's `delta t^2 = 1/8` as
+`delta t = 1/8` shrinks the model time per cycle by a factor 2.83, so 30,000 cycles span
+only 3,750 model-time units instead of the baseline's 10,606.6. The first mode-1
+recurrence sits near model time 10,041, i.e. near cycle 80,300 at this step: it is simply
+not inside the figure's abscissa. M1's argmax over the 20,000–30,000 cycle window
+therefore lands on the window's lower edge (20,000 cycles) with `E_1/E_1(0) = 0.159` —
+mode 1 is still draining, not recurring — and M2 misses by a wide margin. The instructive
+part is C3: it *passes* with movement exactly 0.0, because the dt and dt/2 runs both pick
+the same window-edge argmax (physical time 2,500 in both). A control that passes
+vacuously is still a control that passed; the number only means something read together
+with its definition, which is why C3 is quoted with its physical recurrence times rather
+than as a bare verdict.
+
+**α = 1.0 — stronger nonlinearity, qualitative only.** The recurrence structure survives:
+the mode-1 maximum in the 20k–30k window is at 28,400 cycles, the same cycle as the
+baseline, but it returns only 77.0% of `E_1(0)` instead of 97.8%. Energy spreads much
+further and much earlier — modes 2, 3 and 4 peak at 7,100 / 4,750 / 3,550 cycles with
+0.92 / 0.88 / 0.81 of `E_1(0)` (baseline: 14,100 / 9,250 / 6,550 cycles at 0.88 / 0.71 /
+0.45), and the per-mode higher-mode ceiling M4 rises from 0.063 to 0.611 of `E_1(0)`,
+far above the caption's 20-unit statement. Full-energy drift C2 grows to 0.60% (still
+inside 1%) and the δt/2 sensitivity C3 to 4.31%. The task identifies α=1 with the
+report's Fig. 2 conditions; this experiment holds no digitization of Fig. 2, so the
+comparison above is qualitative and the run's "failed" execution status only records
+that the Fig. 1 reference does not describe these parameters. Nothing here amends the
+baseline or the protocol.
+
+## Evidence package and independent reproduction
+
+`run.py export` writes
+`_outputs/physics/fput-recurrence-reproduction/export/fput-reproduction-v2-<run>.tar.gz`
+from an explicit allowlist — 23 members: `REPRODUCE.md`, the study page and evidence
+browser, the four run artifacts, all four protocol documents, the reference CSV/method/
+crop, the canonical records, `reproduction/commands.txt`, `environment/uv.lock`,
+a generated `environment/README.md` and `MANIFEST.json` with every member's SHA-256.
+`log.txt`, `_data` payloads and the PDF are deliberately outside the allowlist; the PDF
+is identified by digest and fetch command only.
+
+`run.py export --check` extracted the archive, verified all 23 digests and found no
+home-directory absolute path (`members_verified: 23, absolute_paths: 0`). The same two
+checks run by hand on the extracted tree agree (`mismatched: []`,
+`grep -rE '/(home|Users|root)/' .` finds nothing).
+
+Following `REPRODUCE.md` in a fresh environment:
+
+```sh
+uv venv /tmp/fput-repro-env
+uv pip install --python /tmp/fput-repro-env/bin/python numpy==2.5.3 matplotlib==3.11.1
+/tmp/fput-repro-env/bin/python experiments/physics/fput-recurrence-reproduction/run.py \
+  baseline --output-root /tmp/fput-repro-out
+```
+
+reproduced the registered baseline **byte-for-byte**: `metrics.json`
+(`1570191fa93e1bf2dfe2b9449a53b85e5ab8146fa7569691b8b43772e2e86721`), `energies.csv`
+(`c145ec40…f270c4ee`) and even `figure.png` (`4614da6d…e256f2d768`) are identical to the
+archived ones. The first attempt at this check installed Matplotlib 3.11.2 (only NumPy
+was pinned) and the numerical artifacts still matched exactly while `figure.png` did
+not — so the runner now records the Matplotlib version in `run.json` and `REPRODUCE.md`
+pins both.
+
+## Scientific records
+
+The orbit-research record chain for this experiment is authored by
+`tools/record_chain.py` and lives in `research/physics/fput-recurrence-reproduction/records/`
+(the pinned package refuses any records path outside `research/`; see the pointer in
+`experiments/physics/fput-recurrence-reproduction/research/README.md`). Four canonical
+records are authored and delivered with this milestone: the program, the claim (the
+node's kill condition), and the two frozen input artifacts (the digitized CSV, which is
+also the holdout digest, and `protocol/v2.json`).
+
+The remaining records — the registered protocol, the run-start receipt, the three result
+artifacts, the completed run and the assessment — could not be authored here:
+orbit-research resolves every reference from an exact Git snapshot, so each append must be
+committed before the next refers to it, and the Orbit executor worktree mounts its `.git`
+read-only. Rather than fake a reference, the driver stops and says so.
+
+The completion was rehearsed twice in disposable clones under `/tmp` (both discarded).
+The second rehearsal started from this milestone's exact delivery tree, with the four
+authored records committed as the pipeline will commit them: the driver **reused** all
+four, appended the remaining seven, and produced a bundle that
+`uv run orbit-research validate` accepts — `{"valid": true, "errors": []}` over 21 records
+and 8 manifests, the only unresolved pointer being the claim's pending reference to the
+program (authored before the program could be committed, and recorded as `pending`
+exactly for that reason). The evidence browser then rendered from that validated bundle.
+After this milestone's delivery commit lands, one command does the same in place:
+
+```sh
+uv run experiments/physics/fput-recurrence-reproduction/tools/record_chain.py \
+  --run <job-run-id> --stop-after export
+```
+
+Until then `run.py evidence` renders the browser directly from the canonical record
+files under `site/evidence/`, with a banner saying exactly that: working-tree records,
+not a validated export, listing the pending reference.
+
 ## What is shaky
 
 The C3 sensitivity (5.1% recurrence-time shift under δt/2) is real and
@@ -152,8 +280,20 @@ which is a reassuring but non-circular cross-check (the label was fixed
 before this run, from the figure and text alone). The original integration
 ordering remains inferred rather than recovered from author code.
 
+The scientific record chain is deliberately incomplete in this checkout (above): the
+delivered records are honest but partial, and the registered-protocol/run/assessment
+appends carry a further caveat when they land — the protocol-v2 baseline was first
+executed under ORB-12375, *before* the native registration, so the chain proves local
+registration order and frozen input identity, never independently attested prospective
+execution. That is why the assessment is authored with `inference: exploratory` rather
+than `confirmatory-primary`, and why its aggregate control field reads `failed` (C3
+misses its own threshold) even though the execution status is `completed`.
+
 ## Next
 
-Milestone 3 may present this result and its limitations. Any further
-changed method or feature-extraction rule requires a dated protocol v3
-amendment; v1 and v2 stay frozen.
+Milestone 3 presents this result and its limitations: the study page, the two
+exploratory runs, the evidence package and the partial record chain above. The open
+follow-up is completing that chain with `tools/record_chain.py --stop-after export` from
+a checkout whose `.git` is writable, after this milestone lands. Any further changed
+method or feature-extraction rule requires a dated protocol v3 amendment; v1 and v2 stay
+frozen, and `protocol/exploration.json` stays presentation-only.

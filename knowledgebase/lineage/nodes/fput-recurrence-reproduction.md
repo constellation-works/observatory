@@ -41,6 +41,14 @@ evidence:
   note: 'Protocol v2 (corrected mode labels + amended M3/M4/C3 definitions, post_hoc-flagged): M1=28400 and M2=0.977753 pass as before. M3 now passes on all three gated modes using global maxima against the corrected reference (mode2 14100/0.882 vs 14000/0.883, mode3 9250/0.712 vs 9400/0.700, mode4 6550/0.454 vs 6500/0.450). M4 passes per-mode (0.063170 <= 0.066667); summed value 0.084518 still reported. C3 still fails its own 1% threshold (0.0510563 dt/2 shift) but is now a reported sensitivity check, not gating. Execution status flips from v1''s ''failed control'' to v2''s ''completed''; scientific assessment flips from inconclusive to supports. Shaky: C3''s sensitivity is real and unresolved; mode 3''s second maximum (~19k) rests on the softest digitized reading.'
   origin:
     task: ORB-12375
+- id: ev5
+  verdict: supports
+  strength: suggestive
+  source: knowledgebase/studies/physics/fput-recurrence-reproduction.md
+  date: 2026-09-12
+  note: 'Milestone 3 workbench: the protocol-v2 baseline reproduces byte-for-byte (metrics.json 1570191f…, energies.csv c145ec40…, figure.png 4614da6d…) from a fresh /tmp environment pinned to NumPy 2.5.3 / Matplotlib 3.11.1 following the exported REPRODUCE.md, and every digitized feature residual sits inside the stated +/-250 cycle / +/-5 unit digitization uncertainty (largest: -200 cycles for the mode-1 recurrence, +3.68 units for mode 3''s first maximum) when the reconstruction is drawn on the original figure''s own axes geometry. Bounded exploration: dt=0.125 (the naive caption reading) spans only 3750 model-time units in 30,000 cycles versus 10,606.6 at dt=1/sqrt(8), so the recurrence near model time 10,041 falls outside the figure''s abscissa entirely and C3 passes vacuously with movement 0.0 at the window edge; alpha=1.0 keeps a recurrence at 28,400 cycles but returns only 77.0% of E1(0) with the per-mode higher-mode ceiling rising from 0.063 to 0.611 of E1(0) (qualitative only, no Fig. 2 digitization exists). Shaky: the orbit-research record chain is partial (program, claim, two input artifacts) because the executor worktree mounts .git read-only, so the registered protocol, run receipts and assessment land with tools/record_chain.py after delivery; the C3 5.1% dt/2 sensitivity at the baseline is unchanged and unresolved.'
+  origin:
+    task: ORB-12361
 tasks:
 - id: ORB-12360
   state: done
@@ -48,6 +56,9 @@ tasks:
 - id: ORB-12375
   state: done
   why: correct digitized mode labels and amend protocol to v2, re-run baseline
+- id: ORB-12361
+  state: open
+  why: 'workbench slice: study page, bounded exploratory runs, scientific records and the verified evidence package'
 origin:
   task: ORB-12359
   run: jrun-20260912-2042-c3

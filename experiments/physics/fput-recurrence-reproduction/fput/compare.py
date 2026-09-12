@@ -21,6 +21,11 @@ matplotlib.use("Agg")
 from matplotlib import pyplot as plt  # noqa: E402
 
 
+def matplotlib_version() -> str:
+    """The plotting library version, recorded so a figure comparison is meaningful."""
+    return str(matplotlib.__version__)
+
+
 def load_reference(path: Path) -> dict[str, Any]:
     rows: list[dict[str, Any]] = []
     feature_names = {
