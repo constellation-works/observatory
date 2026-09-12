@@ -1,0 +1,210 @@
+{
+  "schema_version": 1,
+  "slug": "waves-boundaries",
+  "node": "physics-field-guide",
+  "title": "Waves, interference and boundaries",
+  "summary": "The linear chain of 32 unit masses on unit springs -- the alpha = 0 case of the FPUT model. Standing waves, two pulses crossing, and reflection off a fixed versus a free end, each checked against an independent Python reference.",
+  "question": "Two identical pulses travel toward each other along the chain. When they overlap, is the displacement at the crossing point doubled, cancelled, or something else -- and what comes back from a fixed end versus a free end?",
+  "prediction_prompt": "Predict before you touch a control:",
+  "prediction_options": [
+    {
+      "id": "always-doubles",
+      "label": "Two pulses meeting always doubles the displacement, whatever their relative phase.",
+      "feedback": "Set the phase control to pi (antiphase) and watch the crossing: the displacement at the midpoint drops to zero instead. Superposition adds signed displacements, not magnitudes."
+    },
+    {
+      "id": "phase-decides",
+      "label": "The relative phase decides the outcome: in phase adds to twice the amplitude, antiphase cancels to zero, and values in between interpolate.",
+      "feedback": "This is what the validation table shows: phase = 0 gives a measured maximum of 2x the single-pulse amplitude and phase = pi gives 0, because this chain is exactly linear and the two pulses simply add pointwise at every instant."
+    },
+    {
+      "id": "reflection-same-both-ends",
+      "label": "A reflected pulse always comes back the same way round, regardless of what is at the end of the chain.",
+      "feedback": "Switch the boundary control between fixed and free and single-step a pulse into the wall: a fixed end sends the pulse back inverted (negative of its incoming sign) while a free end sends it back upright."
+    }
+  ],
+  "model": {
+    "summary": "A chain of N unit masses connected by N unit springs, with x_0 always held at 0 (a fixed left wall) and the right end either fixed (x_N = 0) or free (x_N = x_{N-1}, zero slope). This is exactly the alpha = 0 (linear) case of the FPUT chain reproduced in experiments/physics/fput-recurrence-reproduction/, so the same normal-mode formulas apply unchanged.",
+    "state_variables": ["x_1 .. x_{N-1}", "v_1 .. v_{N-1}"],
+    "units": "Dimensionless: unit mass, unit spring constant, so time is in units of sqrt(m/k). Integrated with Stormer-Verlet at a fixed step dt = 0.1; the stability bound is dt < 2/omega_max = 1, so this step is a factor of 10 inside it.",
+    "equations": [
+      { "name": "Equation of motion", "text": "ẍ_i = x_{i+1} + x_{i−1} − 2x_i,  i = 1..N−1", "note": "the alpha = 0 (linear) FPUT chain" },
+      { "name": "Left wall", "text": "x_0 = 0", "note": "always fixed" },
+      { "name": "Right wall, fixed", "text": "x_N = 0", "note": "boundary = fixed" },
+      { "name": "Right wall, free", "text": "x_N = x_{N−1}", "note": "boundary = free (zero slope, the last spring carries no extension)" },
+      { "name": "Normal-mode frequency", "text": "ω_k = 2 sin(πk / 2N)", "note": "fixed-fixed chain, k = 1..N−1; this is the reproduction's dispersion relation" },
+      { "name": "Mode amplitude", "text": "a_k = Σ_i x_i sin(iπk/N)", "note": "unnormalised sine-transform sum, the reproduction's mode_amplitudes formula" },
+      { "name": "Mode energy", "text": "E_k = ½(ȧ_k² + ω_k² a_k²)", "note": "kinetic plus potential energy stored in mode k" },
+      { "name": "Standing-wave period", "text": "T_k = 2π / ω_k", "note": "exact for the continuous-time ODE with fixed ends" }
+    ],
+    "assumptions": [
+      "Linear springs only (alpha = 0): the restoring force is exactly proportional to extension, so the system is linear and superposition is exact.",
+      "Unit masses and unit spring constants throughout; N = 32 masses fixed for this chapter.",
+      "A discrete chain, not a continuum string: ω_k = 2 sin(πk/2N) is not proportional to k, so short-wavelength (large k) waves are dispersive even though this model has no damping.",
+      "No damping and no driving: once launched, a wave keeps its total energy exactly (to Stormer-Verlet's roundoff).",
+      "The left end is always fixed; only the right end's boundary condition is a control."
+    ]
+  },
+  "controls": [
+    {
+      "key": "mode",
+      "type": "range",
+      "label": "standing-wave mode number k",
+      "min": 1,
+      "max": 8,
+      "step": 1,
+      "default": 1,
+      "unit": "dimensionless",
+      "description": "Selects the standing-wave initial condition x_i(0) = sin(iπk/N). Only meaningful with the standing-wave presets; moving this control switches the chain into the standing-wave scenario."
+    },
+    {
+      "key": "phase",
+      "type": "range",
+      "label": "relative phase of the two pulses",
+      "min": 0,
+      "max": 6.283185307179586,
+      "step": 0.0261799387799,
+      "default": 0,
+      "unit": "radians",
+      "description": "Sets the second pulse's amplitude to cos(phase) times the first: 0 is in phase (the crossing doubles), π is antiphase (the crossing cancels). Moving this control switches the chain into the two-pulse scenario."
+    },
+    {
+      "key": "boundary",
+      "type": "select",
+      "label": "right boundary condition",
+      "default": "fixed",
+      "unit": "dimensionless",
+      "options": [
+        { "value": "fixed", "label": "fixed (x_N = 0)" },
+        { "value": "free", "label": "free (x_N = x_{N-1})" }
+      ],
+      "description": "The left end (x_0) is always fixed; this sets the right end. A reflection off a fixed end inverts sign, off a free end it does not."
+    },
+    {
+      "key": "pulseWidth",
+      "type": "range",
+      "label": "pulse width σ",
+      "min": 0.5,
+      "max": 3,
+      "step": 0.1,
+      "default": 1.5,
+      "unit": "lattice spacings",
+      "description": "Gaussian width of a launched pulse. A narrower pulse carries more short-wavelength content and disperses (spreads and slows) more visibly as it travels."
+    }
+  ],
+  "presets": [
+    {
+      "id": "standing-wave-k1",
+      "label": "Standing wave k = 1",
+      "note": "The fundamental: the whole chain oscillates as one arch, period T_1 = 2π/ω_1 ≈ 64.0.",
+      "values": { "mode": 1, "boundary": "fixed" }
+    },
+    {
+      "id": "standing-wave-k2",
+      "label": "Standing wave k = 2",
+      "note": "One node at the midpoint; period T_2 ≈ 32.1.",
+      "values": { "mode": 2, "boundary": "fixed" }
+    },
+    {
+      "id": "standing-wave-k3",
+      "label": "Standing wave k = 3",
+      "note": "Two interior nodes; period T_3 ≈ 21.4.",
+      "values": { "mode": 3, "boundary": "fixed" }
+    },
+    {
+      "id": "two-pulses-in-phase",
+      "label": "Two pulses in phase",
+      "note": "phase = 0: the crossing displacement doubles the single-pulse amplitude.",
+      "values": { "phase": 0, "boundary": "fixed", "pulseWidth": 2 }
+    },
+    {
+      "id": "two-pulses-antiphase",
+      "label": "Two pulses in antiphase",
+      "note": "phase = π: the crossing displacement cancels to zero, then the pulses re-emerge unchanged.",
+      "values": { "phase": 3.141592653589793, "boundary": "fixed", "pulseWidth": 2 }
+    },
+    {
+      "id": "single-pulse-fixed-end",
+      "label": "Single pulse, reflecting at a fixed end",
+      "note": "Watch the sign flip on the way back from the right wall.",
+      "values": { "boundary": "fixed", "pulseWidth": 1.5 }
+    },
+    {
+      "id": "single-pulse-free-end",
+      "label": "Single pulse, reflecting at a free end",
+      "note": "Same pulse, free right end: it returns upright.",
+      "values": { "boundary": "free", "pulseWidth": 1.5 }
+    }
+  ],
+  "explanation_title": "What changes, and where this stops applying",
+  "explanation": [
+    {
+      "heading": "Superposition is exact because the chain is linear",
+      "body": [
+        "Every acceleration here is a linear function of the positions (ẍ_i = x_{i+1} + x_{i−1} − 2x_i has no x² or higher term), so if x(t) and y(t) are both solutions, x(t) + y(t) is too. That is the whole reason two pulses can be predicted by simply adding their individual profiles, and the validation table checks exactly that: the two-pulse run's crossing maximum agrees with the sum of the two single-pulse runs to floating-point roundoff, not just approximately.",
+        "The FPUT reproduction (knowledgebase/studies/physics/fput-recurrence-reproduction.md) runs the same chain with a small cubic term added (alpha = 1/4). That term makes the acceleration a nonlinear function of position, superposition stops being exact, and the modes exchange energy instead of evolving independently -- which is the recurrence that study investigates. Nothing in that mixing is visible here, by construction: alpha = 0 is exactly the regime where it cannot happen."
+      ]
+    },
+    {
+      "heading": "Discreteness: the chain is not a continuous string",
+      "body": [
+        "A continuous string has ω = ck: every wavelength travels at the same speed. This chain's dispersion relation ω_k = 2 sin(πk/2N) only looks like that for small k (long wavelengths, where sin(πk/2N) ≈ πk/2N); for k approaching N it flattens out, and a narrow pulse -- built from many k's -- spreads out and slows down as it travels, because its component wavelengths no longer move together. Widen the pulse-width control to reduce this effect, or narrow it to see it more clearly."
+      ]
+    },
+    {
+      "heading": "No damping, one boundary condition at a time",
+      "body": [
+        "Energy is conserved exactly (to Stormer-Verlet roundoff): nothing here loses amplitude on reflection or over time other than the dispersive spreading above. The left end is always fixed; only the right end's condition is a control, so a chain with two free ends is outside what this page can show."
+      ]
+    }
+  ],
+  "validation_cases": {
+    "description": "The predefined validation points. reference.py computes the analytic dispersion relation and standing-wave periods for k = 1..8 (fixed ends), the two-pulse superposition maximum at phase 0 and pi, and the reflection sign at a fixed versus a free end, then re-runs the identical Stormer-Verlet numerics and writes validation.json. The browser re-runs the same cases in this page through waves.js and the table reports the difference.",
+    "N": 32,
+    "dt": 0.1,
+    "dispersion_modes": [1, 2, 3, 4, 5, 6, 7, 8],
+    "superposition_phases": [0, 3.141592653589793],
+    "reflection_boundaries": ["fixed", "free"],
+    "tolerance": {
+      "relative": 1e-9,
+      "absolute": 1e-9,
+      "rationale": "waves.js and reference.py run the same Stormer-Verlet algorithm in the same operation order in float64, so the two implementations agree to floating-point roundoff (observed worst relative difference on this revision: about 1e-15). This 1e-9 tolerance is the chapter's kill condition for the browser-vs-reference check. It is separate from the physics tolerance: each dispersion case also declares its own period_tolerance_relative = 0.01 for the measured period against the closed-form dispersion relation, because Stormer-Verlet carries an O(dt^2) discretisation error that the analytic formula does not."
+    },
+    "generated_file": "validation.json",
+    "generator": "reference.py"
+  },
+  "limits": [
+    "Linearity is exact only at alpha = 0. The FPUT reproduction (knowledgebase/studies/physics/fput-recurrence-reproduction.md) shows that a small cubic term (alpha = 1/4) is enough to break superposition and drive energy between modes; nothing here generalises to that case.",
+    "Discreteness: ω_k = 2 sin(πk/2N) is not proportional to k, so short-wavelength packets disperse. The continuum-string approximation used to launch a pulse (v(i,0) ∝ ∓f'(i−i0), assuming every wavelength travels at speed 1) is only accurate for pulses much wider than one lattice spacing; a narrow pulseWidth visibly disperses even before it reaches a wall.",
+    "No damping: every run conserves energy exactly except for Stormer-Verlet's O(dt^2) truncation error, so nothing here shows how a real, lossy string settles.",
+    "One boundary at a time: the left end is always fixed. Two free ends, or a boundary that itself moves or absorbs, are outside this model.",
+    "N = 32 and dt = 0.1 are fixed for this chapter (not controls); the validation grid and the convergence entry hold N fixed and only vary dt to show the O(dt^2) scaling."
+  ],
+  "references": [
+    {
+      "citation": "A. P. French, Vibrations and Waves, MIT Introductory Physics Series, W. W. Norton, 1971, ch. 6-7.",
+      "url": null,
+      "note": "Superposition, standing waves, and reflection at fixed and free boundaries for a discrete mass-spring chain."
+    },
+    {
+      "citation": "F. S. Crawford, Waves, Berkeley Physics Course vol. 3, McGraw-Hill, 1968, ch. 2-4.",
+      "url": null,
+      "note": "The coupled-oscillator normal-mode treatment this chapter's dispersion relation and mode formulas come from."
+    },
+    {
+      "citation": "E. Fermi, J. Pasta, S. Ulam, M. Tsingou, Studies of Nonlinear Problems I, Los Alamos report LA-1940, 1955.",
+      "url": "https://doi.org/10.2172/4376203",
+      "note": "The chain model this chapter's alpha = 0 case is drawn from; the alpha != 0 recurrence is reproduced in experiments/physics/fput-recurrence-reproduction/."
+    },
+    {
+      "citation": "E. Hairer, C. Lubich, G. Wanner, Geometric Numerical Integration, 2nd ed., Springer, 2006, ch. I.",
+      "url": "https://doi.org/10.1007/3-540-30666-8",
+      "note": "Stormer-Verlet and its O(dt^2) local truncation error, the source of this chapter's convergence entry."
+    }
+  ],
+  "source_revision": {
+    "kind": "git",
+    "revision": "0d05e34",
+    "note": "observatory revision at which the chapter's reference values were frozen; validation.json records the revision of the run that produced it"
+  }
+}

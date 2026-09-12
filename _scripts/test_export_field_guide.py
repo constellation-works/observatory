@@ -173,7 +173,7 @@ def test_runnable_from_any_cwd(tmp_path: Path) -> None:
     cwd.mkdir()
     out = tmp_path / "export"
     proc = run_export(out, cwd=cwd)
-    assert "1 chapter" in proc.stdout
+    assert "2 chapter" in proc.stdout
     assert "orbits-numerical-error" in proc.stdout
     assert (out / CHAPTER_REL / "index.html").is_file()
 

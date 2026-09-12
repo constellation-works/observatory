@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Waves, interference and boundaries — physics field guide</title>
+<link rel="stylesheet" href="../../_lib/web/style.css">
+<link rel="stylesheet" href="../../_lib/web/chapter.css">
+</head>
+<body>
+<main id="chapter"></main>
+
+<script type="module">
+import { createLoop } from '../../_lib/web/loop.js';
+import { createPlot, plotsToSVG, SERIES_COLORS } from '../../_lib/web/plot.js';
+import { downloadSVG, formatNumber, h, loadChapter, renderChapter, table, validateChapter }
+  from '../../_lib/web/chapter.js';
+import {
+  DT, N, PULSE_AMPLITUDE, REFLECTION_I0, SUPERPOSITION_I1, SUPERPOSITION_I2,
+  accelerations, dispersionCase, modeEnergies, modeFrequency, runCase,
+  singlePulseInit, standingWaveInit, twoPulseInit, verletStep,
+} from './waves.js';
+
+const { chapter, validation } = await loadChapter();
+
+// --- page skeleton ----------------------------------------------------------
+const ui = renderChapter({
+  mount: document.getElementById('chapter'),
+  chapter,
+  validation,
+  hooks: {
+    onPrediction: () => { restart(); if (animating) { loop.start(); ui.setPlaying(true); } },
+    onControlChange: (key) => { updateScenario(key); restart(); },
+    onPreset: (preset) => { scenario = scenarioForPreset(preset.id); restart(); },
+    onReset: () => restart(),
+    onStep: () => { run.advance(1); paint(); },
+    onTogglePlay: () => {
+      if (loop.running) { loop.pause(); return false; }
+      if (run.done) restart();
+      loop.start();
+      return true;
+    },
+    onMotionChange: (a) => { animating = a; restart(); },
+    onDownload: () => downloadSVG(
+      plotsToSVG([chainPlot, midpointPlot, spectrumPlot]),
+      `waves-${run.scenario}-${ui.values.boundary}.svg`),
+  },
+});
+
+// --- plots --------------------------------------------------------------
+const chainPlot = createPlot({
+  mount: ui.regions.sim,
+  title: 'Chain displacement (snapshot)',
+  xLabel: 'lattice site i (dimensionless)',
+  yLabel: 'displacement x_i (units of equilibrium spacing)',
+  height: 300,
+});
+
+const midpointPlot = createPlot({
+  mount: ui.regions.plots,
+  title: 'Displacement at the midpoint, x_{N/2}(t)',
+  xLabel: 'time t (units of √(m/k))',
+  yLabel: 'displacement x_{N/2} (units of equilibrium spacing)',
+  height: 260,
+});
+
+const spectrumPlot = createPlot({
+  mount: ui.regions.plots,
+  title: 'Mode-energy spectrum E_k (current instant)',
+  xLabel: 'mode number k (dimensionless)',
+  yLabel: 'E_k (energy units)',
+  height: 260,
+});
+
+// --- scenario: which control last touched the initial condition -----------
+// Presets set the scenario explicitly (from their id); dragging the mode
+// control implies "standing wave", dragging phase implies "two pulses", and
+// pulseWidth stays in whatever non-standing scenario is already active
+// (it has no meaning for a standing wave). boundary never changes the
+// scenario: it is meaningful in every one of them.
+let scenario = 'standing';
+function scenarioForPreset(id) {
+  if (id.startsWith('standing-wave')) return 'standing';
+  if (id.startsWith('single-pulse')) return 'single-pulse';
+  return 'pulses';
+}
+function updateScenario(key) {
+  if (key === 'mode') scenario = 'standing';
+  else if (key === 'phase') scenario = 'pulses';
+  else if (key === 'pulseWidth' && scenario === 'standing') scenario = 'pulses';
+}
+
+const DISPERSION_PERIODS = 6;
+const PULSE_RUN_STEPS = 500; // t = 50: crossing (~t=8), both reflections, and back
+
+function initialCondition(values) {
+  const { mode, phase, boundary, pulseWidth } = values;
+  if (scenario === 'standing') {
+    const { x, v } = standingWaveInit(mode, N);
+    const totalSteps = Math.round((DISPERSION_PERIODS * 2 * Math.PI) / (modeFrequency(mode, N) * DT));
+    return { x, v, boundary, totalSteps };
+  }
+  if (scenario === 'single-pulse') {
+    const { x, v } = singlePulseInit(REFLECTION_I0, PULSE_AMPLITUDE, pulseWidth, +1, N);
+    return { x, v, boundary, totalSteps: PULSE_RUN_STEPS };
+  }
+  const { x, v } = twoPulseInit(SUPERPOSITION_I1, SUPERPOSITION_I2, PULSE_AMPLITUDE, pulseWidth, phase, N);
+  return { x, v, boundary, totalSteps: PULSE_RUN_STEPS };
+}
+
+// --- the run ----------------------------------------------------------------
+let run = null;
+let animating = ui.animating;
+const SAMPLE_TARGET = 900; // plotted midpoint samples, independent of the run length
+
+function createRun(values) {
+  const { x, v, boundary, totalSteps } = initialCondition(values);
+  const acc = accelerations(x, boundary);
+  const midIndex = Math.floor(N / 2) - 1;
+  const sampleEvery = Math.max(1, Math.round(totalSteps / SAMPLE_TARGET));
+  const state = {
+    scenario, boundary, values, x, v, acc, dt: DT, totalSteps, sampleEvery,
+    steps: 0, done: false,
+    midpoint: [[0, x[midIndex]]],
+  };
+  state.advance = (n = 1) => {
+    for (let k = 0; k < n && !state.done; k++) {
+      verletStep(state.x, state.v, state.acc, DT, boundary);
+      state.steps += 1;
+      if (state.steps % sampleEvery === 0 || state.steps === totalSteps) {
+        state.midpoint.push([state.steps * DT, state.x[midIndex]]);
+      }
+      if (state.steps >= totalSteps) state.done = true;
+    }
+    return state;
+  };
+  return state;
+}
+
+function stepsPerFrame() {
+  return Math.max(1, Math.round(run.totalSteps / 720));
+}
+
+function restart() {
+  run = createRun(ui.values);
+  if (animating) {
+    loop.reset();
+    if (loop.running) loop.start();
+  } else {
+    run.advance(run.totalSteps); // reduced motion: the finished run, at once
+    loop.pause();
+    ui.setPlaying(false);
+  }
+  paint();
+}
+
+function paint() {
+  // 1. the chain, as a snapshot line from wall to wall.
+  const rightEnd = run.boundary === 'fixed' ? 0 : run.x[run.x.length - 1];
+  const chainPoints = [[0, 0]];
+  for (let j = 0; j < run.x.length; j++) chainPoints.push([j + 1, run.x[j]]);
+  chainPoints.push([N, rightEnd]);
+  chainPlot.setSeries([
+    { id: 'chain', label: `x_i(t = ${formatNumber(run.steps * run.dt, 4)})`, points: chainPoints,
+      style: 'solid', color: SERIES_COLORS[0], width: 2, marker: true },
+    { id: 'walls', label: 'walls (x_0, x_N)', points: [[0, 0], [N, rightEnd]],
+      style: 'dotted', color: SERIES_COLORS[3], width: 1 },
+  ]);
+  chainPlot.setDescription(
+    `Chain displacement after ${run.steps} of ${run.totalSteps} steps, ${run.scenario} scenario, `
+    + `${run.boundary} right end.`);
+  chainPlot.draw();
+
+  // 2. midpoint displacement vs time.
+  midpointPlot.setSeries([
+    { id: 'mid', label: 'x_{N/2}(t)', points: run.midpoint, style: 'solid', color: SERIES_COLORS[0], width: 2 },
+  ]);
+  midpointPlot.setDescription(`Midpoint displacement sampled every ${run.sampleEvery} step(s).`);
+  midpointPlot.draw();
+
+  // 3. mode-energy spectrum, this instant.
+  const energies = modeEnergies(run.x, run.v, N);
+  const spectrumPoints = Array.from(energies, (e, idx) => [idx + 1, e]);
+  spectrumPlot.setSeries([
+    { id: 'spectrum', label: 'E_k', points: spectrumPoints, style: 'solid', color: SERIES_COLORS[2], width: 2 },
+  ]);
+  spectrumPlot.setDescription(`Mode-energy spectrum over k = 1..${N - 1} at the current instant.`);
+  spectrumPlot.draw();
+
+  ui.setStatus(
+    `${run.scenario} · boundary = ${run.boundary} · step ${run.steps} / ${run.totalSteps} · `
+    + `t = ${formatNumber(run.steps * run.dt, 4)} · x_{N/2} = ${formatNumber(run.x[Math.floor(N / 2) - 1], 4)}`
+    + (run.done ? ' · run complete' : ''));
+}
+
+const loop = createLoop({
+  step: () => { if (!run.done) run.advance(stepsPerFrame()); },
+  render: () => {
+    paint();
+    if (run.done && loop.running) { loop.pause(); ui.setPlaying(false); }
+  },
+  dt: 1 / 60,
+});
+
+// --- validation evidence, recomputed in this browser ------------------------
+function waveCaseLabel(c) {
+  if (c.kind === 'dispersion') return `standing wave, mode k = ${c.mode} (fixed ends)`;
+  if (c.kind === 'superposition') return `two pulses, phase = ${formatNumber(c.phase, 3)} rad`;
+  return `single pulse reflecting off a ${c.boundary} end`;
+}
+function waveMeasuredCell(c) {
+  if (c.kind === 'dispersion') return `T_measured = ${formatNumber(c.period_measured, 6)}`;
+  if (c.kind === 'superposition') return `crossing max = ${formatNumber(c.measured_max, 4)}`;
+  return `reflected sign = ${c.measured_sign > 0 ? '+1 (upright)' : '−1 (inverted)'}`;
+}
+function waveReferenceCell(c) {
+  if (c.kind === 'dispersion') {
+    return `T_analytic = ${formatNumber(c.period_analytic, 6)} `
+      + `(Δ ${formatNumber(c.period_relative_error * 100, 3)}%, tol ${c.period_tolerance_relative * 100}%)`;
+  }
+  if (c.kind === 'superposition') return `predicted (linear sum) = ${formatNumber(c.predicted_max, 4)}`;
+  return `expected sign = ${c.expected_sign > 0 ? '+1' : '−1'}`;
+}
+
+const result = validateChapter(validation, runCase, {
+  fields: ['period_measured', 'measured_max', 'measured_sign', 'extremum'],
+});
+ui.showValidation(result, {
+  columns: [
+    { header: 'validation case', cell: (r) => waveCaseLabel(r.case) },
+    { header: 'measured (Störmer–Verlet)', cell: (r) => waveMeasuredCell(r.case) },
+    { header: 'independent check', cell: (r) => waveReferenceCell(r.case) },
+  ],
+  caption: `Reference values from validation.json (${result.rows.length} cases); `
+    + `browser-vs-reference agreement tolerance ${result.tolerance} relative.`,
+});
+
+// The dt^2 convergence entry: showValidation() doesn't render this shape, so
+// it is appended manually into the same validation region.
+const conv = validation.dt_convergence;
+const convRows = conv.dts.map((dt, idx) => [formatNumber(dt, 4), formatNumber(conv.period_errors[idx], 6)]);
+const convWrap = h('div', { class: 'fg-table-wrap' },
+  h('h3', { text: 'Convergence: standing-wave period error vs Δt' }),
+  h('p', { class: 'fg-note', text: conv.note }),
+  table(['Δt', 'period relative error vs analytic'], convRows, {
+    caption: `Mode k = ${conv.mode}, N = ${conv.N}, ${conv.periods} periods; observed order `
+      + `${conv.observed_order.toFixed(3)} (expected ${conv.expected_order}) from reference.py.`,
+  }));
+ui.regions.validation.append(convWrap);
+
+restart();
+ui.setPlaying(false); // the run waits for a prediction
+
+// Handles for the Playwright checks under tests/.
+window.__chapter = {
+  state: () => ({
+    steps: run.steps, totalSteps: run.totalSteps, done: run.done,
+    scenario: run.scenario, boundary: run.boundary,
+    mode: ui.values.mode, phase: ui.values.phase, pulseWidth: ui.values.pulseWidth,
+    status: document.querySelector('.fg-status').textContent,
+    midpoint: run.x[Math.floor(N / 2) - 1],
+    animating, playing: loop.running,
+  }),
+  runCase,
+  svg: () => plotsToSVG([chainPlot, midpointPlot, spectrumPlot]),
+};
+</script>
+</body>
+</html>

@@ -105,6 +105,11 @@ function section(id, title) {
   return el;
 }
 
+// Exported so a chapter can render its own extra evidence (e.g. a convergence
+// entry with a shape `showValidation`'s default columns don't cover) into
+// `ui.regions.validation` without a second table implementation.
+export { h, table };
+
 function table(headers, rows, { caption } = {}) {
   const t = h('table', { class: 'fg-table' });
   if (caption) t.append(h('caption', { text: caption }));
@@ -406,23 +411,29 @@ export function renderChapter({ mount, chapter, validation, hooks = {} }) {
     },
     setStatus(text) { status.textContent = text; },
     applyPreset,
-    // Renders the comparison table and the one-line verdict.
-    showValidation(result) {
-      const headers = ['case', 'max |ΔE|/|E₀|', 'max |ΔL|/|L₀|', '|Δx| after 10 periods',
-        'browser vs reference', 'status'];
+    // Renders the comparison table and the one-line verdict. `columns` is an
+    // optional array of `{ header, cell(row) }` for the value columns before
+    // the always-present "browser vs reference" / "status" pair; it defaults
+    // to the original orbits-numerical-error column set so a chapter that
+    // does not pass it renders exactly as before.
+    showValidation(result, { columns, caption } = {}) {
+      const cols = columns ?? [
+        { header: 'case', cell: (r) => `v₀ = ${r.case.v0}, Δt = ${r.case.dt}, ${r.case.integrator}` },
+        { header: 'max |ΔE|/|E₀|', cell: (r) => formatNumber(r.case.max_rel_energy_error, 4) },
+        { header: 'max |ΔL|/|L₀|', cell: (r) => formatNumber(r.case.max_rel_angular_momentum_error, 4) },
+        { header: '|Δx| after 10 periods', cell: (r) => formatNumber(r.case.final_position_error, 4) },
+      ];
+      const headers = [...cols.map((c) => c.header), 'browser vs reference', 'status'];
       const rows = result.rows.map((r) => ({
         cls: r.pass ? 'ok' : 'bad',
         cells: [
-          `v₀ = ${r.case.v0}, Δt = ${r.case.dt}, ${r.case.integrator}`,
-          formatNumber(r.case.max_rel_energy_error, 4),
-          formatNumber(r.case.max_rel_angular_momentum_error, 4),
-          formatNumber(r.case.final_position_error, 4),
+          ...cols.map((c) => c.cell(r)),
           formatNumber(r.worst_relative_difference, 3),
           r.pass ? 'agrees' : 'DIFFERS',
         ],
       }));
       vTableMount.replaceChildren(table(headers, rows, {
-        caption: `Reference values from validation.json (${result.rows.length} cases, 10 periods each); `
+        caption: caption ?? `Reference values from validation.json (${result.rows.length} cases, 10 periods each); `
           + `agreement tolerance ${result.tolerance} relative.`,
       }));
       vStatus.textContent = result.pass

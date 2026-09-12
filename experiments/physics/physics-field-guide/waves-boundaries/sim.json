@@ -1,0 +1,30 @@
+{
+  "slug": "waves-boundaries",
+  "title": "Waves, interference and boundaries",
+  "kind": "web",
+  "entry": "index.html",
+  "status": "active",
+  "created": "2026-09-12",
+  "family": "field-guide",
+  "topics": [
+    "classical-mechanics",
+    "waves",
+    "normal-modes",
+    "fput",
+    "boundary-conditions"
+  ],
+  "summary": "Field-guide chapter 2: the linear N-mass chain (the alpha = 0 FPUT case). Standing waves, two counter-propagating pulses, and reflection off a fixed versus a free end, validated case by case against an independent Python reference.",
+  "provenance": {
+    "chapter": "chapter.json",
+    "reference": "reference.py",
+    "validation": "validation.json",
+    "task": "ORB-12363",
+    "design": "docs/design/paper-reproduction-workbench.md",
+    "sources": [
+      "French, Vibrations and Waves, MIT Introductory Physics Series, 1971, ch. 6-7",
+      "Crawford, Waves, Berkeley Physics Course vol. 3, 1968, ch. 2-4",
+      "Fermi, Pasta, Ulam & Tsingou, LA-1940, 1955",
+      "Hairer, Lubich & Wanner, Geometric Numerical Integration, 2nd ed., Springer 2006, ch. I"
+    ]
+  }
+}

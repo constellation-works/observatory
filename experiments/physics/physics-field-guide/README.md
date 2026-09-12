@@ -70,7 +70,7 @@ make serve   # then open /experiments/physics/physics-field-guide/<chapter>/inde
 | # | chapter | state |
 |---|---|---|
 | 1 | [`orbits-numerical-error/`](orbits-numerical-error/) | built — the exemplar for the shared chapter apparatus |
-| 2 | waves, interference and boundaries | planned |
+| 2 | [`waves-boundaries/`](waves-boundaries/) | built |
 | 3 | resonance and damping | planned |
 
 The shared apparatus the chapters reuse (`_lib/web/plot.js`, `chapter.js`,
@@ -83,5 +83,14 @@ contract) is documented in
 Chapter 1 is built and validated: its browser numerics agree with the
 independent Python reference at all sixteen predefined validation points
 (worst relative difference 0, declared tolerance 1e-9 relative), and the
-convergence table recovers the order of every integrator. Chapters 2 and 3
-are scheduled for a later milestone and reuse the apparatus unchanged.
+convergence table recovers the order of every integrator.
+
+Chapter 2 is built and validated: its browser numerics agree with the
+independent Python reference at all twelve predefined validation points
+(worst relative difference on the order of 1e-15, declared tolerance 1e-9
+relative), the measured standing-wave periods agree with the analytic
+dispersion relation to well under the declared 1%, the two-pulse
+superposition maximum matches the linear sum of the two pulses run
+separately, the reflection sign matches the fixed/free prediction, and the
+convergence entry recovers Stormer-Verlet's second order. Chapter 3 is
+scheduled for a later milestone and reuses the apparatus unchanged.
