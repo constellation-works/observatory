@@ -2,83 +2,54 @@
   "schemaVersion": 2,
   "assetKind": "routine",
   "assets": {
-    "auto_task_scheduler": "42e33bd79fb5e9e4a1dc16f2477c3eded4c81c8047f44b449ea58e5d05097346",
-    "ci_failure_sweep": "133054a316be4ceea9644441f9511203dbbdfe8c5c3fd988826c5d2ce31e36bd",
-    "dependabot_alert_sweep": "3be4117b4ec42408d8add63df9be2abca27579bf45a6cb52d940bc3b7c33f7b8",
-    "ship_sweep": "5207cab24b631c105b720910b9351ff9abc21edd15b883d039450a04182966a8",
-    "task_pilot": "5b220e267cdacdbce8726a97d653c4c996fa4d9611edf4985672705bc4496100",
-    "task_triage": "160bd2ae5728836b766890dbe51aed37727939d6d2e290b78a3b04e28cd45313",
+    "ci_failure_sweep": "dc4f87e583ee9ff2bba5b2ac88fb48b6c7d6c5c06a863c4f4846608e2bc683e6",
+    "dependabot_alert_sweep": "8fd9278709eb6e04f8d0ff43943b983127fea09ef4117ad04972545568bd2dca",
+    "ship_sweep": "f837d885bc0df84267fdeccf23fdbbd67b58d43c3599ad556c14d60850511cd8",
+    "task_pilot": "0f4534a92b66b6a6580819df07b05f46741e1a06491fb9b855b7cb987297f9b4",
+    "task_triage": "7cfcb5fac19609b72923e73ecb2f6dd62db6d9e3a3538844b127d033e7423e52",
     "worktree_gc": "f8677078e93f620948d6c901207577c8a05621f2aa12ccd4edfcaa1ad24c2806"
   },
   "routineProvenance": {
-    "auto_task_scheduler": {
-      "templateDigest": "7f3b1a41dfe43b5445b47450f21d8e424fcdeeaa977a6f09d4ded03fc7ed16be",
-      "renderedDigest": "42e33bd79fb5e9e4a1dc16f2477c3eded4c81c8047f44b449ea58e5d05097346",
-      "binding": {
-        "name": "auto-task-scheduler-observatory",
-        "hosts": [
-          "Daniels-Mac-mini.local"
-        ]
-      }
-    },
     "ci_failure_sweep": {
-      "templateDigest": "a1b01d81293cbddb16f636aaf1d097a1ef7c1a90f88046a0b9223bc1a6158825",
-      "renderedDigest": "133054a316be4ceea9644441f9511203dbbdfe8c5c3fd988826c5d2ce31e36bd",
+      "templateDigest": "dd6dca0e91d15f802682ece4b28ca2c00cc7da743e8360cc9e13843424094cdf",
+      "renderedDigest": "dc4f87e583ee9ff2bba5b2ac88fb48b6c7d6c5c06a863c4f4846608e2bc683e6",
       "binding": {
-        "name": "ci-failure-sweep-observatory",
-        "hosts": [
-          "Daniels-Mac-mini.local"
-        ]
+        "name": "ci-failure-sweep-observatory"
       }
     },
     "dependabot_alert_sweep": {
-      "templateDigest": "e66de2d11cf610f8bb9100845aafe8a85a33bc5678a10e30bd062d6894ad0d0f",
-      "renderedDigest": "3be4117b4ec42408d8add63df9be2abca27579bf45a6cb52d940bc3b7c33f7b8",
+      "templateDigest": "da691ec375f100347b657c0221c2b55c35eafbe498a247676743e9e30650a716",
+      "renderedDigest": "8fd9278709eb6e04f8d0ff43943b983127fea09ef4117ad04972545568bd2dca",
       "binding": {
-        "name": "dependabot-alert-sweep-observatory",
-        "hosts": [
-          "Daniels-Mac-mini.local"
-        ]
+        "name": "dependabot-alert-sweep-observatory"
       }
     },
     "ship_sweep": {
-      "templateDigest": "416134b342e33f1b2565b88bc2e41b885a39b21c02324f0c8ed79bec74c562d1",
-      "renderedDigest": "5207cab24b631c105b720910b9351ff9abc21edd15b883d039450a04182966a8",
+      "templateDigest": "2791a05add6dc2ecfe5149ee0afb6ff5fcd80ce57fc5b7937944d24a67697e88",
+      "renderedDigest": "f837d885bc0df84267fdeccf23fdbbd67b58d43c3599ad556c14d60850511cd8",
       "binding": {
-        "name": "ship-sweep-observatory",
-        "hosts": [
-          "Daniels-Mac-mini.local"
-        ]
+        "name": "ship-sweep-observatory"
       }
     },
     "task_pilot": {
-      "templateDigest": "f8b9699a0dc505ea5cbe44998b88995b8720d6e0bdde3fa6ab3f40bec863f280",
-      "renderedDigest": "5b220e267cdacdbce8726a97d653c4c996fa4d9611edf4985672705bc4496100",
+      "templateDigest": "0abd33a5901e5b71d01f54dd545b256631b4b59396cd0ee788817ea5b6189701",
+      "renderedDigest": "0f4534a92b66b6a6580819df07b05f46741e1a06491fb9b855b7cb987297f9b4",
       "binding": {
-        "name": "task-pilot-observatory",
-        "hosts": [
-          "Daniels-Mac-mini.local"
-        ]
+        "name": "task-pilot-observatory"
       }
     },
     "task_triage": {
-      "templateDigest": "21feb397078d47165a0e2a618e8f0dfc97cdbd02c60d0595d71b43b20abd7c5e",
-      "renderedDigest": "160bd2ae5728836b766890dbe51aed37727939d6d2e290b78a3b04e28cd45313",
+      "templateDigest": "eeecdfa493fdcddd62a0b923fdfca64b1c27bfd996a96761776d8657fa18e2c7",
+      "renderedDigest": "7cfcb5fac19609b72923e73ecb2f6dd62db6d9e3a3538844b127d033e7423e52",
       "binding": {
-        "name": "task-triage-observatory",
-        "hosts": [
-          "Daniels-Mac-mini.local"
-        ]
+        "name": "task-triage-observatory"
       }
     },
     "worktree_gc": {
       "templateDigest": "b03d4f900f0746dd317d82fc11b6cd81a398edee18519e3f650d37ed9195a70d",
       "renderedDigest": "f8677078e93f620948d6c901207577c8a05621f2aa12ccd4edfcaa1ad24c2806",
       "binding": {
-        "name": "worktree-gc-observatory",
-        "hosts": [
-          "Daniels-Mac-mini.local"
-        ]
+        "name": "worktree-gc-observatory"
       }
     }
   }
