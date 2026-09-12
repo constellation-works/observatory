@@ -1,0 +1,29 @@
+{
+  "slug": "orbits-numerical-error",
+  "title": "Orbits and numerical error",
+  "kind": "web",
+  "entry": "index.html",
+  "status": "active",
+  "created": "2026-09-12",
+  "family": "field-guide",
+  "topics": [
+    "classical-mechanics",
+    "kepler",
+    "numerical-integration",
+    "symplectic"
+  ],
+  "summary": "Field-guide chapter 1: the Kepler two-body problem integrated with explicit Euler, semi-implicit Euler, leapfrog KDK and RK4. Energy and angular-momentum error against the analytic ellipse, validated case by case against an independent Python reference.",
+  "provenance": {
+    "chapter": "chapter.json",
+    "reference": "reference.py",
+    "validation": "validation.json",
+    "task": "ORB-12362",
+    "design": "docs/design/paper-reproduction-workbench.md",
+    "sources": [
+      "Hairer, Lubich & Wanner, Geometric Numerical Integration, 2nd ed., Springer 2006",
+      "Goldstein, Poole & Safko, Classical Mechanics, 3rd ed., ch. 3",
+      "Battin, An Introduction to the Mathematics and Methods of Astrodynamics, rev. ed., ch. 4",
+      "Wisdom & Holman, Symplectic maps for the n-body problem, AJ 102 (1991) 1528"
+    ]
+  }
+}

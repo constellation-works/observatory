@@ -1,0 +1,187 @@
+{
+  "schema_version": 1,
+  "slug": "orbits-numerical-error",
+  "node": "physics-field-guide",
+  "title": "Orbits and numerical error",
+  "summary": "The same Kepler orbit, integrated four ways. Which integrator you choose decides whether the computed orbit closes, spirals in, or spirals out — and the step size decides how fast it happens.",
+  "question": "A satellite starts at r₀ = 1 with a purely tangential speed v₀ (an apsis of its orbit: periapsis when v₀ > 1, apoapsis when v₀ < 1). Will its computed orbit close, spiral in, or spiral out — and does the answer depend on the integrator, or only on the step size?",
+  "prediction_prompt": "Predict before you touch a control:",
+  "prediction_options": [
+    {
+      "id": "step-size-only",
+      "label": "Only the step size matters: any integrator closes the orbit once Δt is small enough.",
+      "feedback": "Watch explicit Euler at Δt = 0.001: the energy still climbs without bound, only more slowly. Shrinking Δt buys time, it does not change the behaviour."
+    },
+    {
+      "id": "integrator-decides",
+      "label": "The integrator decides the behaviour; the step size only decides how large the error is.",
+      "feedback": "This is what the runs show: explicit Euler gains energy secularly, the symplectic schemes keep a bounded, oscillating energy error, and RK4 drifts slowly downwards."
+    },
+    {
+      "id": "all-close",
+      "label": "Every scheme closes the orbit; the differences are only in how smooth the drawn curve looks.",
+      "feedback": "Compare the trajectory with the analytic ellipse drawn underneath it: explicit Euler leaves the ellipse within a few orbits at any step size you can watch."
+    }
+  ],
+  "model": {
+    "summary": "Two-body Kepler problem in the reduced frame: one body of negligible mass moving in the fixed 1/r potential of a central mass. Motion is planar, so the state is two positions and two velocities.",
+    "state_variables": ["x", "y", "vx", "vy"],
+    "units": "Dimensionless: GM = 1 and r₀ = 1 set the scales, so time is in units of √(r₀³/GM), speed in units of √(GM/r₀), and the circular speed at r₀ is exactly 1. Δt is given in those absolute time units (not in periods).",
+    "equations": [
+      { "name": "Equation of motion", "text": "r̈ = −GM r / |r|³,  GM = 1", "note": "" },
+      { "name": "Specific energy", "text": "E = v²/2 − 1/r", "note": "conserved exactly by the true orbit" },
+      { "name": "Angular momentum", "text": "L = x·vy − y·vx", "note": "conserved; the z-component of r × v" },
+      { "name": "Initial state", "text": "r(0) = (1, 0),  v(0) = (0, v₀)", "note": "" },
+      { "name": "Semi-major axis", "text": "a = −1/(2E)", "note": "bound orbits only, E < 0" },
+      { "name": "Eccentricity", "text": "e = √(1 + 2E L²)", "note": "e = 0 circular, 0 < e < 1 ellipse, e ≥ 1 unbound" },
+      { "name": "Period", "text": "T = 2π a^{3/2}", "note": "Kepler's third law with GM = 1" },
+      { "name": "Analytic orbit", "text": "r(ν) = L² / (1 + e·cos(ν − ω))", "note": "the conic drawn underneath the trajectory" }
+    ],
+    "assumptions": [
+      "Point masses: no radius, no tides, no oblateness.",
+      "Newtonian gravity only: no relativistic precession, no radiation reaction.",
+      "The central mass is fixed and infinitely more massive; this is the reduced one-body problem.",
+      "Planar motion: the orbit stays in the plane of the initial position and velocity.",
+      "No softening of the 1/r² force, so the acceleration is unbounded as r → 0."
+    ]
+  },
+  "controls": [
+    {
+      "key": "v0",
+      "type": "range",
+      "label": "initial speed v₀",
+      "min": 0.4,
+      "max": 1.5,
+      "step": 0.005,
+      "default": 1.0,
+      "unit": "dimensionless",
+      "description": "Tangential speed at r₀ = 1. The circular value is 1; √2 ≈ 1.4142 is the escape speed."
+    },
+    {
+      "key": "dt",
+      "type": "log-range",
+      "label": "step size Δt",
+      "min": 0.001,
+      "max": 0.2,
+      "step": 0.01,
+      "default": 0.01,
+      "unit": "time units",
+      "description": "Absolute integration step in units of √(r₀³/GM); the circular period at v₀ = 1 is 2π ≈ 6.28 of these."
+    },
+    {
+      "key": "integrator",
+      "type": "select",
+      "label": "integrator",
+      "default": "leapfrog-kdk",
+      "unit": "dimensionless",
+      "options": [
+        { "value": "euler", "label": "explicit Euler (1st order)" },
+        { "value": "semi-implicit-euler", "label": "semi-implicit Euler (symplectic)" },
+        { "value": "leapfrog-kdk", "label": "leapfrog KDK (symplectic, 2nd order)" },
+        { "value": "rk4", "label": "RK4 (4th order)" }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "id": "circular",
+      "label": "Circular orbit",
+      "note": "v₀ = 1: the circular orbit the other presets are measured against.",
+      "values": { "v0": 1.0, "dt": 0.01, "integrator": "leapfrog-kdk" }
+    },
+    {
+      "id": "eccentric",
+      "label": "Eccentric orbit",
+      "note": "v₀ = 0.6: e = 0.64, periapsis at r = 0.2195 where the step size bites hardest.",
+      "values": { "v0": 0.6, "dt": 0.01, "integrator": "leapfrog-kdk" }
+    },
+    {
+      "id": "escape",
+      "label": "Escape",
+      "note": "v₀ = 1.43 ≈ 1.011 × √2: unbound, E > 0, no period and no closed ellipse.",
+      "values": { "v0": 1.43, "dt": 0.01, "integrator": "rk4" }
+    },
+    {
+      "id": "euler-coarse",
+      "label": "Euler with a coarse step",
+      "note": "The failure the chapter is about: explicit Euler at Δt = 0.1 gains energy every step.",
+      "values": { "v0": 1.0, "dt": 0.1, "integrator": "euler" }
+    }
+  ],
+  "explanation_title": "What you should see",
+  "explanation": [
+    {
+      "heading": "Symplectic versus non-symplectic",
+      "body": [
+        "Explicit Euler evaluates both updates at the start of the step, and for a circular orbit that adds a fixed fraction of the kinetic energy every step: the relative energy error grows without bound and the orbit spirals outwards. The growth is proportional to Δt, so halving the step halves the rate — but never changes the direction.",
+        "Semi-implicit Euler and leapfrog KDK are symplectic: they exactly conserve angular momentum here (to roundoff, ~1e-15) and their energy error oscillates within a band of fixed width instead of growing. The orbit precesses but stays closed. That bounded band is the practical reason orbital integrations run leapfrog rather than a higher-order non-symplectic scheme."
+      ]
+    },
+    {
+      "heading": "RK4's slow drift",
+      "body": [
+        "RK4 is fourth order, so at a moderate step its error is orders of magnitude below the others — but it is not symplectic, and its energy error drifts secularly downwards rather than oscillating. Over ten periods that is invisible; over 10⁶ periods it is the error that dominates. RK4 also does not conserve angular momentum exactly: its |ΔL|/|L₀| is comparable to its energy error, while both symplectic schemes hold L at roundoff."
+      ]
+    },
+    {
+      "heading": "Step size versus periapsis speed",
+      "body": [
+        "What matters is not Δt itself but Δt compared with the local orbital timescale r/v. At v₀ = 0.6 the periapsis sits at r = 0.2195 where the speed is 2.73, so the timescale is ≈ 0.08 and a step of 0.05 resolves the fastest part of the orbit with barely one step. That is why the eccentric cases in the validation table are so much worse than the circular ones at the same Δt."
+      ]
+    }
+  ],
+  "validation_cases": {
+    "description": "The full grid of predefined validation points. reference.py integrates every point in float64 with numpy available and writes validation.json; the browser re-runs the same points in this page through orbits.js and the table reports the difference.",
+    "v0": [1.0, 0.6],
+    "dt": [0.05, 0.005],
+    "integrators": ["euler", "semi-implicit-euler", "leapfrog-kdk", "rk4"],
+    "periods": 10,
+    "observables": [
+      "max_rel_energy_error",
+      "final_rel_energy_error",
+      "max_rel_angular_momentum_error",
+      "final_position_error"
+    ],
+    "tolerance": {
+      "relative": 1e-9,
+      "absolute": 1e-14,
+      "rationale": "orbits.js and reference.py run the same algorithms in the same operation order in float64, so the two implementations agree bit for bit in practice (observed worst relative difference 0). The declared tolerance is 1e-9 to leave room for a legitimate difference in summation order or in a future JIT's use of fused multiply-add; anything larger is a real disagreement and fails the chapter's kill condition."
+    },
+    "generated_file": "validation.json",
+    "generator": "reference.py"
+  },
+  "limits": [
+    "Close encounters: the 1/r² force is not softened, so as r → 0 the acceleration is unbounded and no fixed step resolves it. Below roughly Δt < 0.05 × r_peri^{3/2} the results here stop meaning anything; a real integration uses an adaptive step or a regularisation (KS, Burdet–Heggie) instead.",
+    "Escape (v₀ ≥ √2): the orbit is a hyperbola, there is no period, and the time axis switches to absolute time units. The energy and angular-momentum errors are still meaningful; the position error against the analytic orbit is not computed, because the chapter's Kepler solver handles the elliptic case only.",
+    "One body, one plane, Newtonian gravity: no third body, no oblateness, no drag, no relativity. Mercury's perihelion advance and any resonance problem are outside this model.",
+    "Ten periods is a short integration. The distinction that matters between leapfrog and RK4 — bounded oscillation versus secular drift — is a statement about 10⁴–10⁶ periods; over the window shown here RK4 is simply the more accurate scheme.",
+    "Float64 throughout. The error floor near 1e-16 relative in the plots is roundoff, not method error."
+  ],
+  "references": [
+    {
+      "citation": "E. Hairer, C. Lubich, G. Wanner, Geometric Numerical Integration: Structure-Preserving Algorithms for Ordinary Differential Equations, 2nd ed., Springer, 2006.",
+      "url": "https://doi.org/10.1007/3-540-30666-8",
+      "note": "Chapters I and IX: why symplectic methods keep a bounded energy error (backward error analysis) while RK4 drifts."
+    },
+    {
+      "citation": "H. Goldstein, C. Poole, J. Safko, Classical Mechanics, 3rd ed., Addison-Wesley, 2002, ch. 3.",
+      "url": null,
+      "note": "The Kepler problem: the conic solution, the eccentricity vector, and Kepler's third law used for a, e and T here."
+    },
+    {
+      "citation": "R. H. Battin, An Introduction to the Mathematics and Methods of Astrodynamics, revised ed., AIAA, 1999, ch. 4.",
+      "url": null,
+      "note": "Kepler's equation and the Newton iteration used by the analytic position solver."
+    },
+    {
+      "citation": "J. Wisdom, M. Holman, Symplectic maps for the n-body problem, Astronomical Journal 102 (1991) 1528.",
+      "url": "https://doi.org/10.1086/115978",
+      "note": "The kick-drift-kick splitting this chapter's leapfrog uses, in its planetary setting."
+    }
+  ],
+  "source_revision": {
+    "kind": "git",
+    "revision": "2826c00",
+    "note": "observatory revision at which the chapter's reference values were frozen; validation.json records the revision of the run that produced it"
+  }
+}

@@ -20,6 +20,17 @@ export function primeAcc(pos, acc, computeAcc) {
   computeAcc(pos, acc);
 }
 
+// Explicit (forward) Euler: first order and *not* symplectic — both updates read
+// the state at the start of the step, so the energy of an orbit grows without
+// bound. Kept because seeing that failure is the point of the orbits chapter.
+export function explicitEuler(pos, vel, acc, dt, computeAcc) {
+  computeAcc(pos, acc);
+  for (let i = 0; i < pos.length; i++) {
+    pos[i] += vel[i] * dt;   // old velocity
+    vel[i] += acc[i] * dt;   // acceleration at the old position
+  }
+}
+
 // Semi-implicit (symplectic) Euler: cheapest stable choice for casual dynamics.
 export function semiImplicitEuler(pos, vel, acc, dt, computeAcc) {
   computeAcc(pos, acc);

@@ -1,0 +1,177 @@
+/* Field-guide chapter skeleton. Loaded after style.css, whose custom properties
+   and .orrery-controls rules it extends rather than replaces.
+
+   Layout: a two-column sim/plot grid that collapses to one column at 720px and
+   stays inside a 375px viewport without horizontal scrolling. Every interactive
+   element keeps a visible focus ring. */
+
+:root {
+  --fg-series-1: #3987e5; /* validated categorical order, dark surface #050510 */
+  --fg-series-2: #d95926;
+  --fg-series-3: #199e70;
+  --fg-series-4: #c98500;
+  --fg-ok: #199e70;
+  --fg-bad: #d95926;
+  --fg-max: 1100px;
+}
+
+html { overflow-x: hidden; }
+body { padding: 24px 16px 64px; }
+
+*, *::before, *::after { box-sizing: border-box; }
+
+.fg-chapter {
+  max-width: var(--fg-max);
+  margin: 0 auto;
+  line-height: 1.55;
+}
+.fg-chapter h1 { font-size: 24px; margin: 0 0 6px; line-height: 1.25; }
+.fg-chapter h2 { font-size: 17px; margin: 0 0 10px; }
+.fg-chapter h3 { font-size: 14px; margin: 22px 0 6px; color: var(--muted); }
+.fg-chapter p { margin: 0 0 10px; font-size: 14px; }
+.fg-lede { color: var(--muted); max-width: 70ch; }
+.fg-note { color: var(--faint); font-size: 13px; max-width: 80ch; }
+.fg-list { margin: 0 0 10px; padding-left: 20px; font-size: 13px; color: var(--muted); }
+.fg-list li { margin-bottom: 4px; }
+.fg-chapter a { color: var(--accent); }
+
+.fg-section {
+  border-top: 1px solid var(--border);
+  padding-top: 18px;
+  margin-top: 22px;
+}
+.fg-question { font-size: 16px; max-width: 70ch; }
+
+/* Prediction -------------------------------------------------------------- */
+.fg-prediction {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 14px 16px;
+  margin: 0;
+  background: var(--panel-bg);
+  max-width: 70ch;
+}
+.fg-prediction legend { font-size: 13px; color: var(--muted); padding: 0 6px; }
+.fg-radio { display: flex; align-items: flex-start; gap: 8px; margin-bottom: 6px; }
+.fg-radio label { font-size: 14px; }
+.fg-radio input { margin-top: 4px; accent-color: var(--fg-series-1); }
+
+button.fg-primary {
+  background: transparent;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+  border-radius: 8px;
+  padding: 7px 14px;
+  font-size: 13px;
+  cursor: pointer;
+  margin-top: 8px;
+}
+button.fg-primary:hover { background: var(--hover); }
+
+/* Model ------------------------------------------------------------------- */
+.fg-equations { display: grid; grid-template-columns: max-content 1fr; gap: 4px 16px; margin: 8px 0 12px; }
+.fg-equations dt { font-size: 13px; color: var(--muted); }
+.fg-equations dd { margin: 0; }
+.fg-eq {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 13px;
+  color: var(--text);
+  background: var(--panel-bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 1px 7px;
+  display: inline-block;
+  overflow-wrap: anywhere;
+}
+
+/* Controls ---------------------------------------------------------------- */
+.fg-controls-region { display: flex; flex-direction: column; gap: 8px; margin-bottom: 10px; }
+.orrery-controls.fg-controls { max-width: none; margin: 0; }
+.fg-controls label { min-width: 12ch; }
+.fg-controls input[type="range"] { max-width: 240px; }
+.fg-group-label { font-size: 13px; color: var(--muted); min-width: 12ch; }
+.fg-controls .readout { min-width: 10ch; }
+
+.fg-chapter :is(button, input, select, a):focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+.fg-chapter button[disabled] { opacity: 0.45; cursor: not-allowed; }
+
+.fg-status { font-family: ui-monospace, Menlo, monospace; font-size: 12.5px; color: var(--muted); }
+.fg-status.bad { color: var(--fg-bad); }
+
+/* Sim + plots ------------------------------------------------------------- */
+.fg-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 14px;
+  align-items: start;
+}
+.fg-panel {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--panel-bg);
+  padding: 10px;
+  min-width: 0;
+}
+.fg-plots { display: flex; flex-direction: column; gap: 10px; }
+
+.fg-plot { margin: 0; min-width: 0; }
+.fg-plot canvas { display: block; width: 100%; max-width: 100%; }
+.fg-plot-title { font-size: 13px; color: var(--text); margin-bottom: 2px; }
+.fg-legend {
+  display: flex; flex-wrap: wrap; gap: 12px;
+  list-style: none; margin: 4px 0 0; padding: 0;
+  font-size: 12px; color: var(--muted);
+}
+.fg-legend li { display: flex; align-items: center; gap: 6px; }
+.fg-swatch { width: 22px; height: 0; border-top: 2px solid var(--swatch); display: inline-block; }
+.fg-swatch.dashed { border-top-style: dashed; }
+.fg-swatch.dotted { border-top-style: dotted; }
+
+.fg-sr-only {
+  position: absolute; width: 1px; height: 1px;
+  padding: 0; margin: -1px; overflow: hidden;
+  clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+}
+
+/* Tables ------------------------------------------------------------------ */
+.fg-table-wrap { overflow-x: auto; max-width: 100%; }
+.fg-table { border-collapse: collapse; font-size: 12.5px; min-width: 100%; }
+.fg-table caption { text-align: left; color: var(--faint); font-size: 12px; padding-bottom: 6px; }
+.fg-table th, .fg-table td {
+  border-bottom: 1px solid var(--border);
+  padding: 5px 10px 5px 0;
+  text-align: left;
+  white-space: nowrap;
+  font-family: ui-monospace, Menlo, monospace;
+  font-weight: 400;
+}
+.fg-table thead th { color: var(--muted); border-bottom-color: var(--border-strong); }
+.fg-table tbody th { color: var(--text); }
+.fg-table tr.ok td:last-child { color: var(--fg-ok); }
+.fg-table tr.bad td:last-child { color: var(--fg-bad); font-weight: 600; }
+
+/* Narrow screens ---------------------------------------------------------- */
+@media (max-width: 720px) {
+  .fg-grid { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 480px) {
+  body { padding: 16px 12px 48px; }
+  .fg-chapter h1 { font-size: 20px; }
+  .orrery-controls.fg-controls { flex-direction: column; align-items: stretch; gap: 6px; }
+  /* Flex items default to min-width: auto, so a <select> with long option text
+     pushes the page wider than the viewport. */
+  .orrery-controls.fg-controls > * { min-width: 0; max-width: 100%; }
+  .fg-controls select { width: 100%; }
+  .fg-controls input[type="range"] { max-width: none; width: 100%; }
+  .fg-controls label, .fg-group-label { min-width: 0; }
+  .fg-presets, .fg-transport { flex-direction: row; flex-wrap: wrap; }
+  .fg-equations { grid-template-columns: minmax(0, 1fr); gap: 2px; }
+  .fg-equations dt { margin-top: 6px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fg-chapter * { animation: none !important; transition: none !important; }
+}

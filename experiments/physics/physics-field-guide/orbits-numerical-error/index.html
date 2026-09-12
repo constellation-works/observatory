@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Orbits and numerical error — physics field guide</title>
+<link rel="stylesheet" href="../../_lib/web/style.css">
+<link rel="stylesheet" href="../../_lib/web/chapter.css">
+</head>
+<body>
+<main id="chapter"></main>
+
+<script type="module">
+import { createLoop } from '../../_lib/web/loop.js';
+import { createPlot, plotsToSVG, SERIES_COLORS } from '../../_lib/web/plot.js';
+import { downloadSVG, formatNumber, loadChapter, renderChapter, validateChapter }
+  from '../../_lib/web/chapter.js';
+import { INTEGRATOR_LABELS, conicPoints, createRun, elements, runCase } from './orbits.js';
+
+const { chapter, validation } = await loadChapter();
+
+// --- page skeleton --------------------------------------------------------
+const ui = renderChapter({
+  mount: document.getElementById('chapter'),
+  chapter,
+  validation,
+  hooks: {
+    onPrediction: () => { restart(); if (animating) { loop.start(); ui.setPlaying(true); } },
+    onControlChange: () => restart(),
+    onPreset: () => restart(),
+    onReset: () => restart(),
+    onStep: () => { run.advance(1); paint(); },
+    onTogglePlay: () => {
+      if (loop.running) { loop.pause(); return false; }
+      if (run.done) restart();
+      loop.start();
+      return true;
+    },
+    onMotionChange: (animate) => { animating = animate; restart(); },
+    onDownload: () => downloadSVG(
+      plotsToSVG([trajectory, errorPlot]),
+      `orbits-${ui.values.integrator}-v${ui.values.v0}-dt${formatNumber(ui.values.dt, 3)}.svg`),
+  },
+});
+
+// --- plots ----------------------------------------------------------------
+const trajectory = createPlot({
+  mount: ui.regions.sim,
+  title: 'Trajectory (x, y) with the analytic orbit underneath',
+  xLabel: 'x (units of r₀)',
+  yLabel: 'y (units of r₀)',
+  equalAspect: true,
+  height: 330,
+});
+
+// A view control: it changes which observable is plotted, never the model.
+const plotModes = [
+  { value: 'invariants', label: 'conserved quantities' },
+  { value: 'position', label: 'position error' },
+];
+const modeWrap = document.createElement('div');
+modeWrap.className = 'orrery-controls fg-controls';
+const modeLabel = document.createElement('label');
+modeLabel.textContent = 'Plot';
+modeLabel.htmlFor = 'plot-mode';
+const modeSel = document.createElement('select');
+modeSel.id = 'plot-mode';
+for (const m of plotModes) {
+  const o = document.createElement('option');
+  o.value = m.value; o.textContent = m.label;
+  modeSel.appendChild(o);
+}
+modeWrap.append(modeLabel, modeSel);
+ui.regions.plots.append(modeWrap);
+modeSel.addEventListener('change', () => { applyPlotMode(); paint(); });
+
+const errorPlot = createPlot({
+  mount: ui.regions.plots,
+  title: 'Relative error in the conserved quantities',
+  xLabel: 'time t / T₀ (orbital periods)',
+  yLabel: 'relative error (dimensionless)',
+  logY: true,
+  height: 300,
+});
+
+function applyPlotMode() {
+  const periods = run ? run.el.bound : true;
+  const x = periods ? 'time t / T₀ (orbital periods)' : 'time t (units of √(r₀³/GM))';
+  if (modeSel.value === 'invariants') {
+    errorPlot.setTitle('Relative error in the conserved quantities');
+    errorPlot.setAxisLabels({ x, y: 'relative error (dimensionless)' });
+  } else {
+    errorPlot.setTitle('Numerical minus analytic position');
+    errorPlot.setAxisLabels({ x, y: '|x_num − x_exact| (units of r₀)' });
+  }
+}
+
+// --- the run --------------------------------------------------------------
+let run = null;
+let animating = ui.animating;
+let analytic = [];
+
+const SAMPLE_TARGET = 900; // plotted samples per full run, independent of Δt
+
+function stepsPerFrame() {
+  // A full ten-period run takes about twelve seconds at 60 fps, whatever Δt is.
+  return Math.max(1, Math.round(run.totalSteps / 720));
+}
+
+function restart() {
+  const { v0, dt, integrator } = ui.values;
+  const el = elements(v0);
+  const horizon = el.bound ? 10 * el.period : 10 * (2 * Math.PI);
+  const sampleEvery = Math.max(1, Math.round(Math.floor(horizon / dt + 0.5) / SAMPLE_TARGET));
+  run = createRun({ v0, dt, integrator, periods: 10, sampleEvery });
+  analytic = conicPoints(run.el);
+  applyPlotMode();
+  if (animating) {
+    loop.reset();
+    if (loop.running) loop.start();
+  } else {
+    run.advance(run.totalSteps); // reduced motion: the finished run, at once
+    loop.pause();
+    ui.setPlaying(false);
+  }
+  paint();
+}
+
+function paint() {
+  // The sampled path plus the live position, so a single step visibly moves the dot.
+  const numerical = run.samples.trajectory.concat([[run.pos[0], run.pos[1]]]);
+  trajectory.setSeries([
+    // The analytic orbit is the thicker dashed line underneath, so it stays
+    // visible where the computed orbit lies on top of it.
+    { id: 'analytic', label: 'analytic orbit (Kepler)', points: analytic,
+      style: 'dashed', color: SERIES_COLORS[1], width: 3.5 },
+    { id: 'numerical', label: `computed orbit (${INTEGRATOR_LABELS[run.integrator]})`,
+      points: numerical, style: 'solid', color: SERIES_COLORS[0], width: 1.5, marker: true },
+    { id: 'centre', label: 'central mass', points: [[0, 0]], style: 'solid',
+      color: SERIES_COLORS[3], width: 2 },
+  ]);
+  trajectory.setDescription(
+    `Computed trajectory after ${run.steps} steps, drawn over the analytic Kepler orbit.`);
+  trajectory.draw();
+
+  if (modeSel.value === 'invariants') {
+    errorPlot.setSeries([
+      { id: 'energy', label: '|E(t) − E₀| / |E₀|', points: run.samples.energy,
+        style: 'solid', color: SERIES_COLORS[0], width: 2 },
+      { id: 'angmom', label: '|L(t) − L₀| / |L₀|', points: run.samples.angularMomentum,
+        style: 'dotted', color: SERIES_COLORS[2], width: 2 },
+    ]);
+  } else {
+    errorPlot.setSeries([
+      { id: 'position', label: '|x_num(t) − x_exact(t)| (units of r₀)',
+        points: run.samples.position, style: 'solid', color: SERIES_COLORS[1], width: 2 },
+    ]);
+  }
+  errorPlot.setDescription(`Errors sampled over ${run.steps} steps of the current run.`);
+  errorPlot.draw();
+
+  const el2 = run.el;
+  const t = run.steps * run.dt;
+  ui.setStatus(
+    `${INTEGRATOR_LABELS[run.integrator]} · v₀ = ${formatNumber(run.v0, 4)} · `
+    + `Δt = ${formatNumber(run.dt, 3)} · step ${run.steps} / ${run.totalSteps} · `
+    + `t = ${formatNumber(t, 4)}${el2.bound ? ` (${formatNumber(t / el2.period, 3)} T₀)` : ''} · `
+    + `E₀ = ${formatNumber(el2.energy, 4)}, L₀ = ${formatNumber(el2.angular_momentum, 4)}, `
+    + `${el2.bound ? `a = ${formatNumber(el2.semi_major_axis, 4)}, e = ${formatNumber(el2.eccentricity, 3)}, `
+      + `T₀ = ${formatNumber(el2.period, 4)}` : 'unbound (E ≥ 0): no period, no closed orbit'} · `
+    + `|ΔE|/|E₀| = ${formatNumber(run.relEnergyError, 3)} (max ${formatNumber(run.maxRelEnergyError, 3)}) · `
+    + `|ΔL|/|L₀| = ${formatNumber(run.relAngularMomentumError, 3)}`
+    + (el2.bound ? ` · |Δx| = ${formatNumber(run.positionError, 3)}` : '')
+    + (run.done ? ' · run complete' : ''));
+}
+
+const loop = createLoop({
+  step: () => { if (!run.done) run.advance(stepsPerFrame()); },
+  render: () => {
+    paint();
+    if (run.done && loop.running) { loop.pause(); ui.setPlaying(false); }
+  },
+  dt: 1 / 60,
+});
+
+// --- validation evidence, recomputed in this browser ----------------------
+ui.showValidation(validateChapter(validation, (c) => runCase({
+  v0: c.v0, dt: c.dt, integrator: c.integrator, periods: c.periods,
+})));
+
+restart();
+ui.setPlaying(false); // the run waits for a prediction
+
+// Handles for the Playwright checks under tests/.
+window.__chapter = {
+  state: () => ({
+    steps: run.steps, totalSteps: run.totalSteps, done: run.done,
+    v0: run.v0, dt: run.dt, integrator: run.integrator,
+    status: document.querySelector('.fg-status').textContent,
+    relEnergyError: run.relEnergyError, maxRelEnergyError: run.maxRelEnergyError,
+    relAngularMomentumError: run.relAngularMomentumError,
+    positionError: run.positionError, animating, playing: loop.running,
+    bound: run.el.bound, period: run.el.period, eccentricity: run.el.eccentricity,
+  }),
+  runCase,
+  svg: () => plotsToSVG([trajectory, errorPlot]),
+};
+</script>
+</body>
+</html>

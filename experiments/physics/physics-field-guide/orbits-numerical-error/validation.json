@@ -1,0 +1,465 @@
+{
+  "schema_version": 1,
+  "chapter": "orbits-numerical-error",
+  "generator": "reference.py (numpy, float64)",
+  "source_revision": "2826c00",
+  "units": "dimensionless: GM = 1, r0 = 1, time in units of sqrt(r0^3/GM)",
+  "tolerance": {
+    "relative": 1e-09,
+    "absolute": 1e-14
+  },
+  "analytic_elements": {
+    "v0=1": {
+      "v0": 1.0,
+      "energy": -0.5,
+      "angular_momentum": 1.0,
+      "eccentricity": 0.0,
+      "semi_major_axis": 1.0,
+      "semi_latus_rectum": 1.0,
+      "periapsis": 1.0,
+      "apoapsis": 1.0,
+      "period": 6.283185307179586,
+      "argument_of_periapsis": 0.0,
+      "bound": true,
+      "start_apsis": "circular"
+    },
+    "v0=0.6": {
+      "v0": 0.6,
+      "energy": -0.8200000000000001,
+      "angular_momentum": 0.6,
+      "eccentricity": 0.64,
+      "semi_major_axis": 0.6097560975609756,
+      "semi_latus_rectum": 0.36,
+      "periapsis": 0.21951219512195122,
+      "apoapsis": 1.0,
+      "period": 2.991672823370283,
+      "argument_of_periapsis": 3.141592653589793,
+      "bound": true,
+      "start_apsis": "apoapsis"
+    },
+    "v0=0.8": {
+      "v0": 0.8,
+      "energy": -0.6799999999999999,
+      "angular_momentum": 0.8,
+      "eccentricity": 0.36000000000000004,
+      "semi_major_axis": 0.7352941176470589,
+      "semi_latus_rectum": 0.6400000000000001,
+      "periapsis": 0.4705882352941176,
+      "apoapsis": 1.0000000000000002,
+      "period": 3.9616080528290403,
+      "argument_of_periapsis": 3.141592653589793,
+      "bound": true,
+      "start_apsis": "apoapsis"
+    }
+  },
+  "cases": [
+    {
+      "v0": 1.0,
+      "dt": 0.05,
+      "integrator": "euler",
+      "periods": 10.0,
+      "steps": 1257,
+      "t_final": 62.85,
+      "final_rel_energy_error": 0.6398398999136308,
+      "max_rel_energy_error": 0.6398398999136308,
+      "final_rel_angular_momentum_error": 0.6441919656432828,
+      "max_rel_angular_momentum_error": 0.6441919656432828,
+      "final_position_error": 3.8512597186198896,
+      "final_state": {
+        "x": -2.104274900165135,
+        "y": -2.261481445482752,
+        "vx": 0.34667916596508036,
+        "vy": -0.4087790355767274
+      }
+    },
+    {
+      "v0": 1.0,
+      "dt": 0.05,
+      "integrator": "semi-implicit-euler",
+      "periods": 10.0,
+      "steps": 1257,
+      "t_final": 62.85,
+      "final_rel_energy_error": 1.8142107487406633e-06,
+      "max_rel_energy_error": 0.0025015416845359795,
+      "final_rel_angular_momentum_error": 1.9984014443252818e-15,
+      "max_rel_angular_momentum_error": 2.4424906541753444e-15,
+      "final_position_error": 0.1112188771309146,
+      "final_state": {
+        "x": 0.9970156860448516,
+        "y": -0.09303719658217327,
+        "vx": 0.09272276116961406,
+        "vy": 0.9943407592454117
+      }
+    },
+    {
+      "v0": 1.0,
+      "dt": 0.05,
+      "integrator": "leapfrog-kdk",
+      "periods": 10.0,
+      "steps": 1257,
+      "t_final": 62.85,
+      "final_rel_energy_error": 9.829803637728673e-12,
+      "max_rel_energy_error": 1.5566637127095717e-06,
+      "final_rel_angular_momentum_error": 2.220446049250313e-15,
+      "max_rel_angular_momentum_error": 2.886579864025407e-15,
+      "final_position_error": 0.05229670964267997,
+      "final_state": {
+        "x": 0.9994167571708534,
+        "y": -0.034149102151982594,
+        "vx": 0.034152234378821714,
+        "vy": 0.9994166344448511
+      }
+    },
+    {
+      "v0": 1.0,
+      "dt": 0.05,
+      "integrator": "rk4",
+      "periods": 10.0,
+      "steps": 1257,
+      "t_final": 62.85,
+      "final_rel_energy_error": 5.458518115286637e-07,
+      "max_rel_energy_error": 5.458518115286637e-07,
+      "final_rel_angular_momentum_error": 2.7292579407589557e-07,
+      "max_rel_angular_momentum_error": 2.7292579407589557e-07,
+      "final_position_error": 3.4715233237486286e-05,
+      "final_state": {
+        "x": 0.9998341728923005,
+        "y": 0.018180627527782274,
+        "vx": -0.01818064418220485,
+        "vy": 0.9998349912988981
+      }
+    },
+    {
+      "v0": 1.0,
+      "dt": 0.005,
+      "integrator": "euler",
+      "periods": 10.0,
+      "steps": 12566,
+      "t_final": 62.83,
+      "final_rel_energy_error": 0.2977940733438831,
+      "max_rel_energy_error": 0.2977940733438831,
+      "final_rel_angular_momentum_error": 0.19323659831015627,
+      "max_rel_angular_momentum_error": 0.19323659831015627,
+      "final_position_error": 2.331674677791451,
+      "final_state": {
+        "x": -1.2132414663785505,
+        "y": 0.7318202997409257,
+        "vx": -0.4442184854665999,
+        "vy": -0.7155611782021414
+      }
+    },
+    {
+      "v0": 1.0,
+      "dt": 0.005,
+      "integrator": "semi-implicit-euler",
+      "periods": 10.0,
+      "steps": 12566,
+      "t_final": 62.83,
+      "final_rel_energy_error": 4.1372794079563846e-11,
+      "max_rel_energy_error": 2.5000156153032194e-05,
+      "final_rel_angular_momentum_error": 2.886579864025407e-15,
+      "max_rel_angular_momentum_error": 3.6637359812630166e-15,
+      "final_position_error": 0.00111266152197882,
+      "final_state": {
+        "x": 1.0000020347823542,
+        "y": -0.002965725932185659,
+        "vx": 0.0029656478105418455,
+        "vy": 0.9999891699410624
+      }
+    },
+    {
+      "v0": 1.0,
+      "dt": 0.005,
+      "integrator": "leapfrog-kdk",
+      "periods": 10.0,
+      "steps": 12566,
+      "t_final": 62.83,
+      "final_rel_energy_error": 2.708944180085382e-14,
+      "max_rel_energy_error": 1.5626511196131787e-10,
+      "final_rel_angular_momentum_error": 1.354472090042691e-14,
+      "max_rel_angular_momentum_error": 1.354472090042691e-14,
+      "final_position_error": 0.0005236015011567836,
+      "final_state": {
+        "x": 0.9999971757256648,
+        "y": -0.0023766710655590455,
+        "vx": 0.002376658665564828,
+        "vy": 0.9999971757304891
+      }
+    },
+    {
+      "v0": 1.0,
+      "dt": 0.005,
+      "integrator": "rk4",
+      "periods": 10.0,
+      "steps": 12566,
+      "t_final": 62.83,
+      "final_rel_energy_error": 5.447420292625793e-12,
+      "max_rel_energy_error": 5.447420292625793e-12,
+      "final_rel_angular_momentum_error": 2.7237101463128965e-12,
+      "max_rel_angular_momentum_error": 2.7237101463128965e-12,
+      "final_position_error": 1.15685415648268e-09,
+      "final_state": {
+        "x": 0.999998283059648,
+        "y": -0.001853069578478834,
+        "vx": 0.0018530695785120479,
+        "vy": 0.9999982830678177
+      }
+    },
+    {
+      "v0": 0.6,
+      "dt": 0.05,
+      "integrator": "euler",
+      "periods": 10.0,
+      "steps": 598,
+      "t_final": 29.900000000000002,
+      "final_rel_energy_error": 1.4490296966752358,
+      "max_rel_energy_error": 1.4779785355186768,
+      "final_rel_angular_momentum_error": 0.7669605784798689,
+      "max_rel_angular_momentum_error": 0.7669605784798689,
+      "final_position_error": 27.182985324285948,
+      "final_state": {
+        "x": 14.624989452361199,
+        "y": -23.531740082348236,
+        "vx": 0.5067313521237053,
+        "vy": -0.7428445783193361
+      }
+    },
+    {
+      "v0": 0.6,
+      "dt": 0.05,
+      "integrator": "semi-implicit-euler",
+      "periods": 10.0,
+      "steps": 598,
+      "t_final": 29.900000000000002,
+      "final_rel_energy_error": 6.518548262956787e-05,
+      "max_rel_energy_error": 0.42546228972616934,
+      "final_rel_angular_momentum_error": 9.251858538542972e-16,
+      "max_rel_angular_momentum_error": 1.6653345369377348e-15,
+      "final_position_error": 0.8323819904451788,
+      "final_state": {
+        "x": 0.6459873772299388,
+        "y": -0.7634512902115659,
+        "vx": 0.4595904038772501,
+        "vy": 0.3856501256407421
+      }
+    },
+    {
+      "v0": 0.6,
+      "dt": 0.05,
+      "integrator": "leapfrog-kdk",
+      "periods": 10.0,
+      "steps": 598,
+      "t_final": 29.900000000000002,
+      "final_rel_energy_error": 2.0898127271367787e-05,
+      "max_rel_energy_error": 0.1114693374649444,
+      "final_rel_angular_momentum_error": 3.3306690738754696e-15,
+      "max_rel_angular_momentum_error": 3.3306690738754696e-15,
+      "final_position_error": 0.8226079320938121,
+      "final_state": {
+        "x": 0.6539806520334461,
+        "y": -0.756395119905087,
+        "vx": 0.4481329112058226,
+        "vy": 0.39914705746020773
+      }
+    },
+    {
+      "v0": 0.6,
+      "dt": 0.05,
+      "integrator": "rk4",
+      "periods": 10.0,
+      "steps": 598,
+      "t_final": 29.900000000000002,
+      "final_rel_energy_error": 0.06373368075718824,
+      "max_rel_energy_error": 0.06373368075718824,
+      "final_rel_angular_momentum_error": 0.006530484607654893,
+      "max_rel_angular_momentum_error": 0.006530484607654893,
+      "final_position_error": 1.2171742165838937,
+      "final_state": {
+        "x": -0.2152629116715977,
+        "y": 0.06059771506021093,
+        "vx": -0.42712457823518124,
+        "vy": -2.64884894160582
+      }
+    },
+    {
+      "v0": 0.6,
+      "dt": 0.005,
+      "integrator": "euler",
+      "periods": 10.0,
+      "steps": 5983,
+      "t_final": 29.915,
+      "final_rel_energy_error": 0.7365997802218867,
+      "max_rel_energy_error": 0.7378562381208587,
+      "final_rel_angular_momentum_error": 0.23528368720854898,
+      "max_rel_angular_momentum_error": 0.23528368720854898,
+      "final_position_error": 0.971182474771354,
+      "final_state": {
+        "x": 0.9341399739695666,
+        "y": 0.9679099386022137,
+        "vx": -0.9983657729632555,
+        "vy": -0.24103233772289276
+      }
+    },
+    {
+      "v0": 0.6,
+      "dt": 0.005,
+      "integrator": "semi-implicit-euler",
+      "periods": 10.0,
+      "steps": 5983,
+      "t_final": 29.915,
+      "final_rel_energy_error": 3.083900744527676e-06,
+      "max_rel_energy_error": 0.03899357826331464,
+      "final_rel_angular_momentum_error": 2.220446049250313e-15,
+      "max_rel_angular_momentum_error": 5.921189464667502e-15,
+      "final_position_error": 0.009183273234862056,
+      "final_state": {
+        "x": 0.9999509255898856,
+        "y": -0.010220089674513384,
+        "vx": 0.00714347963031934,
+        "vy": 0.5999564355057554
+      }
+    },
+    {
+      "v0": 0.6,
+      "dt": 0.005,
+      "integrator": "leapfrog-kdk",
+      "periods": 10.0,
+      "steps": 5983,
+      "t_final": 29.915,
+      "final_rel_energy_error": 4.438319630516738e-12,
+      "max_rel_energy_error": 0.0012461811871893756,
+      "final_rel_angular_momentum_error": 4.255854927729767e-15,
+      "max_rel_angular_momentum_error": 4.810966440042345e-15,
+      "final_position_error": 0.009080644258592703,
+      "final_state": {
+        "x": 0.9999481815742292,
+        "y": -0.010117444512098122,
+        "vx": 0.006972513054296316,
+        "vy": 0.5999605449970322
+      }
+    },
+    {
+      "v0": 0.6,
+      "dt": 0.005,
+      "integrator": "rk4",
+      "periods": 10.0,
+      "steps": 5983,
+      "t_final": 29.915,
+      "final_rel_energy_error": 7.015706192144516e-07,
+      "max_rel_energy_error": 7.015706192144516e-07,
+      "final_rel_angular_momentum_error": 6.725514552681963e-08,
+      "max_rel_angular_momentum_error": 6.725514552681963e-08,
+      "final_position_error": 1.313213655824651e-05,
+      "final_state": {
+        "x": 0.9999976760171313,
+        "y": -0.001023833861910913,
+        "vx": 0.0017105121267768832,
+        "vy": 0.599999602755474
+      }
+    }
+  ],
+  "convergence": {
+    "v0": 0.8,
+    "periods": 0.25,
+    "period": 3.9616080528290403,
+    "note": "Fitted over the first quarter period, where every scheme is still in its asymptotic regime. Over a full period the first-order schemes already carry an O(1) phase error and the fitted slope no longer measures the method order.",
+    "rows": [
+      {
+        "integrator": "euler",
+        "dts": [
+          0.01,
+          0.005,
+          0.0025,
+          0.00125
+        ],
+        "position_errors": [
+          0.008931138465571068,
+          0.004501159817866222,
+          0.002259655543055918,
+          0.001132119538512912
+        ],
+        "energy_errors": [
+          0.015164349844448047,
+          0.007631984692808276,
+          0.0038287008942403606,
+          0.0019175604039976895
+        ],
+        "observed_order_position": 0.9933647296880174,
+        "observed_order_energy": 0.994522246792077,
+        "expected_order": 1
+      },
+      {
+        "integrator": "semi-implicit-euler",
+        "dts": [
+          0.01,
+          0.005,
+          0.0025,
+          0.00125
+        ],
+        "position_errors": [
+          0.00655190956175541,
+          0.003275962926307912,
+          0.0016379723493963386,
+          0.0008189825054068705
+        ],
+        "energy_errors": [
+          0.0038672779309764814,
+          0.0019245415313457897,
+          0.0009599774436571087,
+          0.0004794130983399739
+        ],
+        "observed_order_position": 1.000004073844423,
+        "observed_order_energy": 1.003937405015222,
+        "expected_order": 1
+      },
+      {
+        "integrator": "leapfrog-kdk",
+        "dts": [
+          0.01,
+          0.005,
+          0.0025,
+          0.00125
+        ],
+        "position_errors": [
+          1.561779144690919e-05,
+          3.904514397007162e-06,
+          9.761327575703157e-07,
+          2.440334503001327e-07
+        ],
+        "energy_errors": [
+          1.9657320607870043e-07,
+          4.9192215986922987e-08,
+          1.2300740654816294e-08,
+          3.075406596053654e-09
+        ],
+        "observed_order_position": 1.9999897035296474,
+        "observed_order_energy": 1.9994122014534985,
+        "expected_order": 2
+      },
+      {
+        "integrator": "rk4",
+        "dts": [
+          0.01,
+          0.005,
+          0.0025,
+          0.00125
+        ],
+        "position_errors": [
+          5.078922964637513e-11,
+          3.240672356130376e-12,
+          2.0363233622461942e-13,
+          1.4460202062562764e-14
+        ],
+        "energy_errors": [
+          9.832020818416087e-11,
+          6.316515937749714e-12,
+          4.000068250487697e-13,
+          2.857191607491212e-14
+        ],
+        "observed_order_position": 3.932691207853004,
+        "observed_order_energy": 3.9227055894476885,
+        "expected_order": 4
+      }
+    ]
+  }
+}

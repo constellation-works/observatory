@@ -61,10 +61,26 @@ and export boundary are defined in
 ## Run
 
 ```sh
-uv run python experiments/physics/physics-field-guide/run.py
+make serve   # then open /experiments/physics/physics-field-guide/<chapter>/index.html
 ```
+
+## Chapters
+
+| # | chapter | state |
+|---|---|---|
+| 1 | [`orbits-numerical-error/`](orbits-numerical-error/) | built — the exemplar for the shared chapter apparatus |
+| 2 | waves, interference and boundaries | planned |
+| 3 | resonance and damping | planned |
+
+The shared apparatus the chapters reuse (`_lib/web/plot.js`, `chapter.js`,
+`chapter.css`, and the `chapter.json` / `reference.py` / `validation.json`
+contract) is documented in
+[`experiments/physics/_lib/README.md`](../_lib/README.md).
 
 ## Result
 
-The chapter implementations and `reference.py` validation harness are
-scheduled for later milestones; this milestone records the choices only.
+Chapter 1 is built and validated: its browser numerics agree with the
+independent Python reference at all sixteen predefined validation points
+(worst relative difference 0, declared tolerance 1e-9 relative), and the
+convergence table recovers the order of every integrator. Chapters 2 and 3
+are scheduled for a later milestone and reuse the apparatus unchanged.
