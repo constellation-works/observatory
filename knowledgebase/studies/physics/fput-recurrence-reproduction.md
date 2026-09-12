@@ -11,12 +11,11 @@ strength: suggestive
 
 ## What was run
 
-Nothing numerical yet. The reproduction protocol is frozen for a future
-independent reconstruction of Fig. 1 in E. Fermi, J. Pasta, S. Ulam (with M.
-Tsingou), *Studies of Nonlinear Problems, I*, Los Alamos report LA-1940 (May
-1955), report page 12 / PDF page 14. The target is the first five modal-energy
-curves over approximately 30,000 computational cycles for `N=32`,
-`alpha=1/4`, and caption value `delta t^2=1/8`.
+The frozen protocol-v1 baseline ran 30,000 velocity-Verlet cycles for `N=32`,
+`alpha=1/4`, `delta t=1/sqrt(8)`, fixed endpoints, and a from-rest mode-1 sine
+wave. It sampled all modal energies every 50 cycles, ran the 10,000-cycle
+linear control and the equal-duration 60,000-cycle `delta t/2` control, and
+finished in 1.759 seconds. The plotted values use `E_k(t)/E_1(0)*300`.
 
 ## Provenance and reference
 
@@ -60,20 +59,41 @@ directly motivates the waves and numerical-error chapters.
 
 ## What came out
 
-Reproduction status: **protocol frozen, not yet run**. There is no numerical
-verdict to promote. The future run must report M1–M4, controls C1–C3, the
-declared discrepancy rule, and its runtime and input hashes.
+Reproduction status: **failed control; scientific verdict inconclusive**.
+The measured protocol metrics are:
+
+- **M1 pass:** recurrence at 28,400 cycles versus 28,600, within the
+  ±1,000-cycle tolerance (digitization uncertainty ±250 cycles).
+- **M2 pass:** recurrence fraction 0.977753 versus 0.966667, an absolute
+  residual of 0.011087 within the ±0.03 tolerance.
+- **M3 fail:** the literal first sampled local maxima were mode 2 at cycle 200
+  with fraction 0.002458 (reference 6,200 and 0.416667), mode 3 at cycle 3,000
+  with 0.064594 (reference 9,300 and 0.700000), and mode 4 at cycle 6,450 with
+  0.450343 (reference 13,500 and 0.883333). Each misses the ±5% time and ±0.10
+  energy-fraction tolerances; reference uncertainty is ±250 cycles and ±5
+  report units.
+- **M4 fail:** modes 6–31 reached a summed fraction of 0.084518 (25.355 report
+  units), above the caption ceiling and tolerance 0.066667 (20 units).
+- **C1 pass:** maximum linear mode-1 drift was 0.000300832 (0.0301%), below
+  0.01.
+- **C2 pass:** maximum full-energy drift was 0.00201560 (0.2016%), below 0.01.
+- **C3 fail:** halving `delta t` moved the physical recurrence from
+  10,040.9163 to 9,528.26388, a relative movement of 0.0510563 (5.106%), above
+  the strict 0.01 tolerance.
+
+![Protocol-v1 reconstruction with digitized feature overlays](fput-recurrence-reproduction.png)
 
 ## What is shaky
 
-The historical figure is a dense raster with overlapping curves and finite
-grid resolution. The exact original integration ordering is inferred from the
-report rather than recovered from source code. These uncertainties are
-explicit in `protocol/v1.md` and the reference README; they must not be tuned
-away after seeing a result.
+The primary recurrence agrees with the digitized figure, but the failed C3
+control means that agreement is not stable under the preregistered time-step
+test. M3 interprets “first local maximum” literally on the 50-cycle sampled
+series; early small oscillations therefore count, because no smoothing or
+prominence rule was preregistered. The original integration ordering remains
+inferred rather than recovered from author code. These discrepancies are
+retained without changing protocol v1 or its tolerances.
 
 ## Next
 
-Implement the runner and independent reference only in the next milestone,
-then promote the measured run and figure into this study without editing the
-frozen v1 protocol.
+Milestone 3 may present this result and its limitations, but any changed
+method or feature-extraction rule requires a dated protocol v2 amendment.

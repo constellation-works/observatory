@@ -5,5 +5,5 @@
   "data": ["_data/physics/fput-recurrence-reproduction/manifest.json"],
   "outputs": "_outputs/physics/fput-recurrence-reproduction",
   "study": "knowledgebase/studies/physics/fput-recurrence-reproduction.md",
-  "status": "planned"
+  "status": "inconclusive"
 }

@@ -1,0 +1,85 @@
+{
+  "C1": {
+    "notes": "Set alpha=0 and verify E_1 remains within 1 percent of its initial value over 10000 cycles.",
+    "pass": true,
+    "reference": 0.0,
+    "tolerance": 0.01,
+    "value": 0.00030083236612377107
+  },
+  "C2": {
+    "notes": "Include the quadratic and cubic spring potential terms and measure maximum relative total-energy drift over the 30000-cycle baseline.",
+    "pass": true,
+    "reference": 0.0,
+    "tolerance": 0.01,
+    "value": 0.002015601922728094
+  },
+  "C3": {
+    "notes": "Physical recurrence times: baseline=10040.9163, dt/2=9528.26388.",
+    "pass": false,
+    "reference": 0.0,
+    "tolerance": 0.01,
+    "value": 0.05105633802816894
+  },
+  "M1": {
+    "notes": "Reference digitization uncertainty is +/-250 cycles.",
+    "pass": true,
+    "reference": 28600.0,
+    "tolerance": 1000.0,
+    "value": 28400
+  },
+  "M2": {
+    "notes": "Reference digitization uncertainty is +/-5/300 of E1(0).",
+    "pass": true,
+    "reference": 0.9666666666666667,
+    "tolerance": 0.03,
+    "value": 0.9777532985498025
+  },
+  "M3": {
+    "component_pass": {
+      "mode_2": false,
+      "mode_3": false,
+      "mode_4": false
+    },
+    "notes": "Each digitized point carries +/-250 cycles and +/-5 energy units.",
+    "pass": false,
+    "reference": {
+      "mode_2": {
+        "fraction_e1": 0.4166666666666667,
+        "t_cycles": 6200.0
+      },
+      "mode_3": {
+        "fraction_e1": 0.7,
+        "t_cycles": 9300.0
+      },
+      "mode_4": {
+        "fraction_e1": 0.8833333333333333,
+        "t_cycles": 13500.0
+      }
+    },
+    "tolerance": {
+      "height_fraction_e1": 0.1,
+      "time_relative": 0.05
+    },
+    "value": {
+      "mode_2": {
+        "fraction_e1": 0.0024581938743178213,
+        "t_cycles": 200
+      },
+      "mode_3": {
+        "fraction_e1": 0.06459362691367283,
+        "t_cycles": 3000
+      },
+      "mode_4": {
+        "fraction_e1": 0.45034283227936167,
+        "t_cycles": 6450
+      }
+    }
+  },
+  "M4": {
+    "notes": "Compared with the caption ceiling of 20/300 of E1(0).",
+    "pass": false,
+    "reference": 0.0666666667,
+    "tolerance": 0.0666666667,
+    "value": 0.08451804718413697
+  }
+}

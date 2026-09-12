@@ -17,8 +17,8 @@ at that recurrence.
 
 ## Method
 
-Milestone 1 freezes the independent reconstruction specification only. The
-baseline will use the quadratic FPUT chain, N=32, α=0.25, β=0, fixed ends,
+Protocol v1 freezes the independent reconstruction specification. The
+baseline uses the quadratic FPUT chain, N=32, α=0.25, β=0, fixed ends,
 from-rest single-sine initial displacement, float64 arithmetic, and an
 explicit central-difference/Störmer–Verlet integrator. The five mode-energy
 series will be compared with the digitized LA-1940 Fig. 1 features. Controls
@@ -31,11 +31,19 @@ scan. They are calibration evidence, not the original numerical dataset.
 ## Run
 
 ```sh
-uv run python experiments/physics/fput-recurrence-reproduction/run.py
+uv run experiments/physics/fput-recurrence-reproduction/run.py baseline
 ```
+
+The runner interprets “first local maximum” literally on the sampled modal
+energy series, without smoothing or a reference-derived prominence threshold.
+Consequently, M3 retains early small local maxima caused by nonlinear exchange
+rather than selecting later peaks to resemble the digitized figure. A
+`--cycles` override is available only as a non-baseline diagnostic, and
+`--force-control-failure C1|C2|C3` exercises the auditable failure path.
 
 ## Result
 
-Protocol status: frozen, not yet run. A later milestone will add the runner
-and promote measured results to
-`knowledgebase/studies/physics/fput-recurrence-reproduction.md`.
+Protocol v1 was run without tuning. M1 and M2 pass, but convergence control C3
+fails: halving the time step moves the physical recurrence time by 5.106%
+against a strict 1% tolerance. The scientific assessment is therefore
+inconclusive and the failed baseline summary is retained under `attempts/`.
