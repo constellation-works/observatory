@@ -12,7 +12,9 @@ from fput.model import accelerations, initial_state, linear_energy, total_energy
 from fput.modes import mode_energies, normal_mode_frequencies, physical_energy_from_modes
 
 EXPERIMENT_ROOT = Path(__file__).resolve().parents[1]
-PROTOCOL = json.loads((EXPERIMENT_ROOT / "protocol" / "v1.json").read_text())
+PROTOCOL_V1 = json.loads((EXPERIMENT_ROOT / "protocol" / "v1.json").read_text())
+PROTOCOL_V2 = json.loads((EXPERIMENT_ROOT / "protocol" / "v2.json").read_text())
+PROTOCOL = PROTOCOL_V1
 
 
 @pytest.mark.parametrize("mode", [1, 2, 7, 31])
@@ -78,15 +80,20 @@ def test_mode_energy_sum_equals_total_linear_energy_after_normalization() -> Non
 
 
 def test_metric_functions_find_known_synthetic_features() -> None:
+    """Exercise protocol v2's default M3 (global max) and M4 (per-mode) definitions."""
     cycles = np.arange(0, 30_001, 50)
     modal = np.full((cycles.size, 31), 1e-12)
     modal[:, 0] = 1.0 - 0.98 * np.sin(np.pi * cycles / (2 * 7_200)) ** 2
     for mode, peak_cycle, height in (
-        (2, 6_200, 125 / 300),
-        (3, 9_300, 210 / 300),
-        (4, 13_500, 265 / 300),
+        (2, 14_000, 265 / 300),
+        (3, 9_400, 210 / 300),
+        (4, 6_500, 135 / 300),
     ):
         modal[:, mode - 1] = height * np.exp(-(((cycles - peak_cycle) / 1_000) ** 2))
+    # mode 3 also carries its digitized second maximum near 19k cycles
+    modal[:, 2] += (193 / 300) * np.exp(-(((cycles - 19_000) / 1_000) ** 2))
+    # mode 5's own first major peak near 5k cycles
+    modal[:, 4] = (60 / 300) * np.exp(-(((cycles - 5_000) / 1_000) ** 2))
     modal[:, 5:] = 0.001
     total = 1.0 + 1e-4 * np.sin(cycles / 100)
     linear = 1.0 + 1e-4 * np.cos(cycles / 100)
@@ -101,17 +108,64 @@ def test_metric_functions_find_known_synthetic_features() -> None:
         linear_control_energies=linear,
         half_cycles=half_cycles,
         half_modal_energies=half_modal,
-        dt=PROTOCOL["model"]["parameters"]["dt"],
+        dt=PROTOCOL_V2["model"]["parameters"]["dt"],
         reference=load_reference(EXPERIMENT_ROOT / "reference" / "fig1-digitized.csv"),
-        protocol=PROTOCOL,
+        protocol=PROTOCOL_V2,
     )
     assert metrics["M1"]["value"] == 28_800
     assert metrics["M1"]["pass"] is True
     assert metrics["M3"]["pass"] is True
+    assert metrics["M3"]["component_pass"] == {
+        "mode_2": True,
+        "mode_3": True,
+        "mode_4": True,
+    }
+    reporting = metrics["M3"]["additional_reporting"]
+    assert reporting["mode5_first_major_peak"]["value"]["t_cycles"] == 5_000
+    assert reporting["mode5_first_major_peak"]["value"]["fraction_e1"] == pytest.approx(
+        60 / 300, abs=1e-6
+    )
+    assert reporting["mode3_second_maximum"]["value"]["t_cycles"] == 19_000
+    assert reporting["mode3_second_maximum"]["value"]["fraction_e1"] == pytest.approx(
+        193 / 300, abs=1e-6
+    )
     assert metrics["M4"]["pass"] is True
+    assert metrics["M4"]["value"] == pytest.approx(0.001, abs=1e-9)
+    assert metrics["M4"]["additional_reporting"]["summed_modes_6_31_max"] == pytest.approx(
+        0.001 * 26, abs=1e-9
+    )
     assert all(metrics[key]["pass"] for key in ("C1", "C2", "C3"))
     assert first_local_maximum(np.arange(5), np.array([0.0, 1.0, 3.0, 2.0, 1.0])) == (
         2,
         3.0,
     )
-    assert protocol_tolerances(PROTOCOL)["M1"] == 1_000
+    assert protocol_tolerances(PROTOCOL_V2)["M1"] == 1_000
+
+
+def test_v1_protocol_keeps_first_local_maximum_and_summed_m4() -> None:
+    """protocol v1 is frozen: it must keep its original M3/M4 definitions and no reporting extras."""
+    cycles = np.arange(0, 5_001, 50)
+    modal = np.full((cycles.size, 31), 1e-12)
+    modal[:, 0] = 1.0
+    modal[:, 1] = 0.02 * np.exp(-(((cycles - 200) / 100) ** 2))
+    modal[:, 5:] = 0.01
+    total = np.ones_like(cycles, dtype=float)
+    linear = np.ones_like(cycles, dtype=float)
+    half_cycles = np.arange(0, 10_001, 50)
+    half_modal = np.full((half_cycles.size, 31), 1e-12)
+    half_modal[:, 0] = 1.0
+
+    metrics = evaluate_metrics(
+        cycles=cycles,
+        modal_energies=modal,
+        total_energies=total,
+        linear_control_energies=linear,
+        half_cycles=half_cycles,
+        half_modal_energies=half_modal,
+        dt=PROTOCOL_V1["model"]["parameters"]["dt"],
+        reference=load_reference(EXPERIMENT_ROOT / "reference" / "fig1-digitized.csv"),
+        protocol=PROTOCOL_V1,
+    )
+    assert metrics["M3"]["value"]["mode_2"] == {"t_cycles": 200, "fraction_e1": pytest.approx(0.02)}
+    assert "additional_reporting" not in metrics["M3"]
+    assert "additional_reporting" not in metrics["M4"]

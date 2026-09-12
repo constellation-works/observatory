@@ -63,6 +63,49 @@ def relative_max_drift(values: np.ndarray) -> float:
     return float(np.max(np.abs(values / initial - 1.0)))
 
 
+def _reported_feature(
+    peak: tuple[int, float] | None, target: dict[str, Any] | None
+) -> dict[str, Any]:
+    value = None if peak is None else {"t_cycles": peak[0], "fraction_e1": peak[1]}
+    reference = (
+        None
+        if target is None
+        else {"t_cycles": target["t_cycles"], "fraction_e1": target["energy_units"] / 300.0}
+    )
+    residual = None
+    if value is not None and reference is not None:
+        residual = {
+            "t_cycles": value["t_cycles"] - reference["t_cycles"],
+            "fraction_e1": value["fraction_e1"] - reference["fraction_e1"],
+        }
+    return {"value": value, "reference": reference, "residual": residual}
+
+
+def _m3_additional_reporting(
+    cycles: np.ndarray,
+    normalised: np.ndarray,
+    ref_features: dict[str, Any],
+    mode3_first: dict[str, Any] | None,
+) -> dict[str, Any]:
+    """Report (never gate) mode 5's first major peak and mode 3's second maximum."""
+    mode5_peak = recurrence_peak(cycles, normalised[:, 4], 0, 20_000)
+    mode3_second_peak = None
+    if mode3_first is not None:
+        # Skip well past the first peak's own shoulder so its decaying tail
+        # cannot be mistaken for the (much later, ~19k cycle) second maximum.
+        mode3_second_peak = recurrence_peak(
+            cycles, normalised[:, 2], mode3_first["t_cycles"] + 2_000, 20_000
+        )
+    return {
+        "mode5_first_major_peak": _reported_feature(
+            mode5_peak, ref_features.get("mode5_first_maximum")
+        ),
+        "mode3_second_maximum": _reported_feature(
+            mode3_second_peak, ref_features.get("mode3_second_maximum")
+        ),
+    }
+
+
 def evaluate_metrics(
     *,
     cycles: np.ndarray,
@@ -78,6 +121,7 @@ def evaluate_metrics(
 ) -> dict[str, dict[str, Any]]:
     """Evaluate M1-M4 and C1-C3, retaining uncertainty and protocol wording."""
     tolerance = protocol_tolerances(protocol)
+    version = protocol.get("protocol_version", "v1")
     initial_e1 = float(modal_energies[0, 0])
     normalised = modal_energies / initial_e1
     ref_features = reference["features"]
@@ -120,7 +164,10 @@ def evaluate_metrics(
     m3_references: dict[str, Any] = {}
     m3_passes: dict[str, bool | None] = {}
     for mode in (2, 3, 4):
-        peak = first_local_maximum(cycles, normalised[:, mode - 1])
+        if version == "v1":
+            peak = first_local_maximum(cycles, normalised[:, mode - 1])
+        else:
+            peak = recurrence_peak(cycles, normalised[:, mode - 1], 0, 20_000)
         target = ref_features[f"mode{mode}_first_maximum"]
         key = f"mode_{mode}"
         m3_references[key] = {
@@ -148,17 +195,38 @@ def evaluate_metrics(
         "tolerance": tolerance["M3"],
         "pass": bool(all(m3_passes.values())) if evaluable_m3 else None,
         "component_pass": m3_passes,
-        "notes": "Each digitized point carries +/-250 cycles and +/-5 energy units.",
+        "notes": (
+            "Global maximum over cycles 0-20,000, per protocol v2."
+            if version != "v1"
+            else "First local maximum after cycle zero, per protocol v1."
+        )
+        + " Each digitized point carries +/-250 cycles and +/-5 energy units.",
     }
+    if version != "v1":
+        m3["additional_reporting"] = _m3_additional_reporting(
+            cycles, normalised, ref_features, m3_values.get("mode_3")
+        )
 
-    higher_mode_fraction = float(np.max(np.sum(normalised[:, 5:], axis=1)))
-    m4 = {
-        "value": higher_mode_fraction,
-        "reference": tolerance["M4"],
-        "tolerance": tolerance["M4"],
-        "pass": higher_mode_fraction <= tolerance["M4"],
-        "notes": "Compared with the caption ceiling of 20/300 of E1(0).",
-    }
+    if version == "v1":
+        higher_mode_fraction = float(np.max(np.sum(normalised[:, 5:], axis=1)))
+        m4 = {
+            "value": higher_mode_fraction,
+            "reference": tolerance["M4"],
+            "tolerance": tolerance["M4"],
+            "pass": higher_mode_fraction <= tolerance["M4"],
+            "notes": "Compared with the caption ceiling of 20/300 of E1(0), summed over modes 6-31.",
+        }
+    else:
+        per_mode_max = float(np.max(normalised[:, 5:]))
+        summed_max = float(np.max(np.sum(normalised[:, 5:], axis=1)))
+        m4 = {
+            "value": per_mode_max,
+            "reference": tolerance["M4"],
+            "tolerance": tolerance["M4"],
+            "pass": per_mode_max <= tolerance["M4"],
+            "notes": "Compared with the caption ceiling of 20/300 of E1(0), per individual mode 6-31.",
+            "additional_reporting": {"summed_modes_6_31_max": summed_max},
+        }
 
     c1_value = relative_max_drift(linear_control_energies)
     c2_value = relative_max_drift(total_energies)

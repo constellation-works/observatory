@@ -32,6 +32,8 @@ experiments/physics/fput-recurrence-reproduction/
   manifest.json
   protocol/v1.json
   protocol/v1.md
+  protocol/v2.json
+  protocol/v2.md
   reference/fig1-digitized.csv
   reference/README.md
   reference/la-1940-fig1.png
@@ -52,7 +54,7 @@ It has a small, scriptable CLI:
 
 | invocation | contract |
 |---|---|
-| `run.py baseline` | Load the registered protocol v1, execute the deterministic baseline, write a new completed/failed/inconclusive run directory, and register no exploratory parameters. |
+| `run.py baseline` | Load the registered protocol (v2 by default; `--protocol v1` reruns the original for the record), execute the deterministic baseline, write a new completed/failed/inconclusive run directory, and register no exploratory parameters. |
 | `run.py explore --set key=value [--set key=value ...]` | Execute a run labelled `kind: exploratory`; validate keys against the protocol; never overwrite or relabel the registered baseline. The alternative `dt=1/8` interpretation is allowed only here and must be named in the run metadata. |
 | `run.py report <run-directory>` | Render the run's study-report HTML from `metrics.json`, `run.json`, logs and the declared reference material. It does not recompute or mutate the run. |
 | `run.py export <run-directory>` | Create the allowlisted evidence tarball described below, with relative archive names only and no `_data` payload. |
@@ -98,6 +100,8 @@ run/energies.csv
 run/figure.png
 protocol/v1.json
 protocol/v1.md
+protocol/v2.json
+protocol/v2.md
 reference/fig1-digitized.csv
 reference/README.md
 reproduction/commands.txt

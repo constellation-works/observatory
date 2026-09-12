@@ -28,6 +28,8 @@ def load_reference(path: Path) -> dict[str, Any]:
         "mode-2 first maximum (digitized)": "mode2_first_maximum",
         "mode-3 first maximum (digitized)": "mode3_first_maximum",
         "mode-4 first maximum (digitized)": "mode4_first_maximum",
+        "mode-5 first maximum (digitized)": "mode5_first_maximum",
+        "mode-3 second maximum near 19k cycles (digitized)": "mode3_second_maximum",
     }
     features: dict[str, dict[str, float]] = {}
     with path.open(newline="", encoding="utf-8") as handle:
@@ -56,6 +58,7 @@ def plot_overlay(
     cycles: np.ndarray,
     energy_units: np.ndarray,
     reference: dict[str, Any],
+    protocol_version: str = "v2",
 ) -> None:
     fig, axis = plt.subplots(figsize=(10, 6), constrained_layout=True)
     colours = plt.get_cmap("tab10").colors
@@ -87,7 +90,7 @@ def plot_overlay(
         xlabel="cycles (thousands)",
         ylabel="modal energy (report units)",
     )
-    axis.set_title("LA-1940 Fig. 1 independent reconstruction (protocol v1)")
+    axis.set_title(f"LA-1940 Fig. 1 independent reconstruction (protocol {protocol_version})")
     axis.grid(alpha=0.2)
     axis.legend(ncol=2, fontsize=8, loc="upper center")
     fig.savefig(output, dpi=160)

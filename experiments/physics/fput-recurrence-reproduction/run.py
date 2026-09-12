@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
-"""Execute the frozen protocol-v1 FPUT recurrence reconstruction."""
+"""Execute the frozen FPUT recurrence reconstruction protocol.
+
+v2 is the default; pass --protocol v1 to rerun the original for the record.
+"""
 
 from __future__ import annotations
 
@@ -71,7 +74,7 @@ def verify_inputs(protocol_path: Path, reference_path: Path) -> dict[str, str]:
         if required not in data_manifest:
             raise ValueError(f"data manifest is missing {required}")
     return {
-        "protocol_v1_json": sha256(protocol_path),
+        "protocol_json": sha256(protocol_path),
         "reference_fig1_digitized_csv": sha256(reference_path),
         "experiment_manifest": sha256(EXPERIMENT_ROOT / "manifest.json"),
         "source_data_manifest": sha256(data_manifest_path),
@@ -115,8 +118,10 @@ def result_table(metrics: dict[str, dict[str, Any]]) -> list[str]:
     return lines
 
 
-def assessment(metrics: dict[str, dict[str, Any]]) -> tuple[str, str]:
-    controls = [metrics[key]["pass"] for key in ("C1", "C2", "C3")]
+def assessment(
+    metrics: dict[str, dict[str, Any]], gating_controls: tuple[str, ...] = ("C1", "C2", "C3")
+) -> tuple[str, str]:
+    controls = [metrics[key]["pass"] for key in gating_controls]
     primary = [metrics[key]["pass"] for key in ("M1", "M2")]
     if any(value is False for value in controls):
         return "failed", "inconclusive"
@@ -130,13 +135,19 @@ def assessment(metrics: dict[str, dict[str, Any]]) -> tuple[str, str]:
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
     subparsers = parser.add_subparsers(dest="command", required=True)
-    baseline = subparsers.add_parser("baseline", help="run frozen protocol v1")
+    baseline = subparsers.add_parser("baseline", help="run the frozen protocol (v2 default)")
     baseline.add_argument(
         "--cycles",
         type=int,
         help="short diagnostic budget; labels the output non-baseline",
     )
     baseline.add_argument("--output-root", type=Path, default=DEFAULT_OUTPUT_ROOT)
+    baseline.add_argument(
+        "--protocol",
+        choices=("v1", "v2"),
+        default="v2",
+        help="protocol version to load; v2 is the corrected-reference default",
+    )
     baseline.add_argument(
         "--force-control-failure",
         choices=("C1", "C2", "C3"),
@@ -151,16 +162,17 @@ def main() -> int:
         print("--cycles must be positive", file=sys.stderr)
         return 2
 
+    protocol_version = args.protocol
     timestamp = datetime.now(UTC).strftime("%Y%m%dT%H%M%S-%fZ")
-    output_dir = args.output_root.resolve() / f"baseline-v1-{timestamp}"
+    output_dir = args.output_root.resolve() / f"baseline-{protocol_version}-{timestamp}"
     output_dir.mkdir(parents=True, exist_ok=False)
     logger = RunLogger(output_dir / "log.txt")
     started_wall = datetime.now(UTC)
     started_monotonic = time.monotonic()
-    protocol_path = EXPERIMENT_ROOT / "protocol" / "v1.json"
+    protocol_path = EXPERIMENT_ROOT / "protocol" / f"{protocol_version}.json"
     reference_path = EXPERIMENT_ROOT / "reference" / "fig1-digitized.csv"
     run_record: dict[str, Any] = {
-        "protocol_version": "v1",
+        "protocol_version": protocol_version,
         "kind": "baseline" if args.cycles is None else "exploratory",
         "baseline_eligible": args.cycles is None,
         "command": [sys.executable, str(Path(__file__).resolve()), *sys.argv[1:]],
@@ -174,6 +186,9 @@ def main() -> int:
     exit_code = 3
     try:
         protocol = read_json(protocol_path)
+        gating_controls = tuple(
+            protocol.get("decision_rules", {}).get("gating_controls", ["C1", "C2", "C3"])
+        )
         model = protocol["model"]
         n = int(model["parameters"]["N"])
         alpha = float(model["parameters"]["alpha"])
@@ -187,7 +202,7 @@ def main() -> int:
         reference = load_reference(reference_path)
         logger.write(f"command: {' '.join(run_record['command'])}")
         logger.write(
-            f"protocol=v1 N={n} alpha={alpha} dt={dt:.16g} steps={steps} "
+            f"protocol={protocol_version} N={n} alpha={alpha} dt={dt:.16g} steps={steps} "
             f"sample_every={sample_every} timeout={timeout:g}s"
         )
         if args.cycles is not None:
@@ -248,11 +263,11 @@ def main() -> int:
             force_control_failure=args.force_control_failure,
         )
         energy_units = modal / modal[0, 0] * 300.0
-        write_energies(output_dir / "energies.csv", cycles, energy_units, "v1")
+        write_energies(output_dir / "energies.csv", cycles, energy_units, protocol_version)
         write_json(output_dir / "metrics.json", metrics)
-        plot_overlay(output_dir / "figure.png", cycles, energy_units, reference)
+        plot_overlay(output_dir / "figure.png", cycles, energy_units, reference, protocol_version)
 
-        status, scientific_assessment = assessment(metrics)
+        status, scientific_assessment = assessment(metrics, gating_controls)
         control_results = {key: metrics[key]["pass"] for key in ("C1", "C2", "C3")}
         ended = datetime.now(UTC)
         runtime = time.monotonic() - started_monotonic
