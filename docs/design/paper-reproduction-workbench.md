@@ -174,18 +174,39 @@ driven damped oscillator's resonance and damping.
 
 ## Field-guide export contract
 
-The future `_scripts/export-field-guide.sh` writes
-`_outputs/field-guide-export/` using an allowlist. It may include only:
+`_scripts/export-field-guide.sh` rebuilds `_outputs/field-guide-export/` from
+an explicit allowlist (not an exclude list). It is runnable from any cwd; pass
+`--output DIR` to write somewhere else. The export root mirrors
+`experiments/physics/` so chapter imports of `../../_lib/web/…` resolve
+unchanged.
 
-```text
-experiments/physics/physics-field-guide/**
-_lib/web/**
-knowledgebase/studies/physics/fput-recurrence-reproduction.md
+```sh
+./_scripts/export-field-guide.sh
+./_scripts/export-field-guide.sh --output /tmp/field-guide-export
 ```
 
-Here `_lib/web/**` is the export shorthand for the canonical repository path
-`experiments/physics/_lib/web/**`.
+Allowlisted members:
 
-It explicitly excludes `knowledgebase/lineage/**`, every other experiment,
-`_data`, `.orbit`, `.env*`, and generated caches. The script must fail closed
-when a requested member is outside this list and must preserve relative paths.
+```text
+physics-field-guide/<chapter>/     # every dir with chapter.json
+  index.html, *.js, chapter.json, sim.json, validation.json,
+  README.md, static figures
+_lib/web/**                        # experiments/physics/_lib/web/**
+physics-field-guide/README.md
+index.html                         # generated; relative links only
+LICENSES.md
+reference/la-1940-fig1.png
+reference/README.md                # public-domain credit line
+study/fput-recurrence-reproduction/**   # if _outputs/physics/fput-recurrence-reproduction/site/ exists
+```
+
+`tests/`, `reference.py`, `__pycache__`, `_lib/vendor`, `knowledgebase/**`
+(including lineage and studies), every other experiment, `_data`, `.orbit`,
+`.env*`, and `.git` are not copied. `_lib/vendor/three` is added only when an
+exported chapter actually imports it.
+
+The script ends with a self-check that fails non-zero if the output tree
+contains a forbidden path, an absolute `/home/` string, a secret-looking
+token, or an HTML `href`/`src` / JS `import` that resolves outside the export
+root. It prints the chapter count. `_scripts/test_export_field_guide.py`
+rebuilds into a temp dir and asserts these invariants.

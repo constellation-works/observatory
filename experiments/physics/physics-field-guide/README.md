@@ -62,6 +62,7 @@ and export boundary are defined in
 
 ```sh
 make serve   # then open /experiments/physics/physics-field-guide/<chapter>/index.html
+./_scripts/export-field-guide.sh   # shareable tree at _outputs/field-guide-export/
 ```
 
 ## Chapters
