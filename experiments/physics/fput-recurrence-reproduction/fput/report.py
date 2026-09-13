@@ -694,7 +694,7 @@ rather than tuned away.</p>
   '<code>run.py evidence --bundle &lt;orbit-research export.json&gt;</code> '
   '(over a validated export).'
 }</p>
-<p class="note">Study note:
+<p class="note">Study note, in the observatory checkout rather than in this package:
 <code>knowledgebase/studies/physics/{_text(experiment_root.name)}.md</code>. Protocol
 documents: <code>protocol/{_text(protocol_version)}.md</code> and
 <code>protocol/{_text(protocol_version)}.json</code>. Evidence package:

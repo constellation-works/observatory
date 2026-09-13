@@ -13,7 +13,7 @@
 <script type="module">
 import { createLoop } from '../../_lib/web/loop.js';
 import { createPlot, plotsToSVG, SERIES_COLORS } from '../../_lib/web/plot.js';
-import { downloadSVG, formatNumber, loadChapter, renderChapter, validateChapter }
+import { checkParameters, downloadSVG, formatNumber, loadChapter, renderChapter, validateChapter }
   from '../../_lib/web/chapter.js';
 import { INTEGRATOR_LABELS, conicPoints, createRun, elements, runCase } from './orbits.js';
 
@@ -191,6 +191,12 @@ ui.showValidation(validateChapter(validation, (c) => runCase({
 restart();
 ui.setPlaying(false); // the run waits for a prediction
 
+// Bounds for the runCase arguments that are not controls; the control ranges
+// themselves come from chapter.json.
+const CASE_BOUNDS = {
+  periods: { label: 'orbits integrated', min: 0.01, max: 1000 },
+};
+
 // Handles for the Playwright checks under tests/.
 window.__chapter = {
   state: () => ({
@@ -202,7 +208,7 @@ window.__chapter = {
     positionError: run.positionError, animating, playing: loop.running,
     bound: run.el.bound, period: run.el.period, eccentricity: run.el.eccentricity,
   }),
-  runCase,
+  runCase: (c) => runCase(checkParameters(chapter, c, CASE_BOUNDS)),
   svg: () => plotsToSVG([trajectory, errorPlot]),
 };
 </script>

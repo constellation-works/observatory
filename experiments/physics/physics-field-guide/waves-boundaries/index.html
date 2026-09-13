@@ -13,7 +13,7 @@
 <script type="module">
 import { createLoop } from '../../_lib/web/loop.js';
 import { createPlot, plotsToSVG, SERIES_COLORS } from '../../_lib/web/plot.js';
-import { downloadSVG, formatNumber, h, loadChapter, renderChapter, table, validateChapter }
+import { checkParameters, downloadSVG, formatNumber, h, loadChapter, renderChapter, table, validateChapter }
   from '../../_lib/web/chapter.js';
 import {
   DT, N, PULSE_AMPLITUDE, REFLECTION_I0, SUPERPOSITION_I1, SUPERPOSITION_I2,
@@ -251,6 +251,15 @@ ui.regions.validation.append(convWrap);
 restart();
 ui.setPlaying(false); // the run waits for a prediction
 
+// Bounds for the runCase arguments that are not controls; the control ranges
+// themselves come from chapter.json.
+const CASE_BOUNDS = {
+  dt: { label: 'step size Δt', min: 1e-4, max: 0.5 },
+  N: { label: 'masses in the chain', min: 4, max: 512 },
+  periods: { label: 'periods integrated', min: 0.01, max: 1000 },
+  steps: { label: 'steps integrated', min: 1, max: 1e7 },
+};
+
 // Handles for the Playwright checks under tests/.
 window.__chapter = {
   state: () => ({
@@ -261,7 +270,7 @@ window.__chapter = {
     midpoint: run.x[Math.floor(N / 2) - 1],
     animating, playing: loop.running,
   }),
-  runCase,
+  runCase: (c) => runCase(checkParameters(chapter, c, CASE_BOUNDS)),
   svg: () => plotsToSVG([chainPlot, midpointPlot, spectrumPlot]),
 };
 </script>

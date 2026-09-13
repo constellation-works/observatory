@@ -218,3 +218,31 @@ def test_sim_manifest_is_a_gallery_entry():
     assert sim["entry"] == "index.html"
     assert sim["slug"] == CHAPTER.name
     assert sim["provenance"]["sources"], "the gallery entry records its reference sources"
+
+
+def test_out_of_range_parameters_are_refused_with_a_message():
+    """The page's JS handle guards runCase, so a bad value is a message, not NaNs."""
+    if NODE is None:
+        pytest.skip("node is not on PATH; the browser guard cannot be exercised")
+    script = f"""
+import {{ readFileSync }} from 'node:fs';
+import {{ checkParameters }} from '{(LIB / "chapter.js").as_uri()}';
+
+const chapter = JSON.parse(readFileSync({json.dumps(str(CHAPTER / "chapter.json"))}, 'utf8'));
+let message = null;
+try {{ checkParameters(chapter, {{ omega: 0.0, zeta: 0.05, F: 0.3, dt: 0.01 }}); }}
+catch (e) {{ message = e.message; }}
+console.log(JSON.stringify({{ message }}));
+"""
+    out = run_node(script)
+    assert out["message"], "an out-of-range value must be refused"
+    assert "omega" in out["message"]
+    assert "outside the allowed range" in out["message"] or "is not one of" in out["message"]
+
+
+def test_the_js_handle_guards_run_case():
+    page = (CHAPTER / "index.html").read_text()
+    assert "checkParameters" in page, "index.html imports the parameter guard"
+    assert "runCase: (c) => runCase(checkParameters(" in page, (
+        "window.__chapter.runCase must validate its arguments before integrating"
+    )

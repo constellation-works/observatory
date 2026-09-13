@@ -230,6 +230,63 @@ was pinned) and the numerical artifacts still matched exactly while `figure.png`
 not — so the runner now records the Matplotlib version in `run.json` and `REPRODUCE.md`
 pins both.
 
+## Clean-environment reproduction (Milestone 6 acceptance)
+
+Reverified on 2026-09-12 (23:34-23:59 UTC, ORB-12365) from scratch, in `/tmp`,
+outside the checkout, using only the evidence package and the declared public source.
+The package used for the reproduction was the one this checkout can build from its own
+committed records (28 members, 9 records, 1,828,095 bytes): `export --check` verified
+every SHA-256 and reported `members_verified: 28, absolute_paths: 0`, and the by-hand
+`MANIFEST.json` check from `REPRODUCE.md` agreed (`members: 28, mismatched: []`) with
+`grep -rE '/(home|Users|root)/'` finding nothing in the extracted tree. Rebuilding the
+package against the complete 11-record chain on `main` gives 30 members
+(`members_verified: 30, absolute_paths: 0`, 1,915,691 bytes); the run artifacts are the
+same bytes in both.
+
+1. The LA-1940 PDF was fetched from <https://www.osti.gov/servlets/purl/4376203> and
+   verified against the data manifest: 1,570,076 bytes, SHA-256
+   `3155813b…c14f396f1` -- `sha256sum -c` reports `OK`.
+2. A fresh `uv venv` pinned from `run/run.json` (`numpy==2.5.3`,
+   `matplotlib==3.11.1`) ran the one baseline command against a clean clone at the
+   `git_revision` the run records (`d604ff5`).
+3. The result is **identical to the registered baseline**: `metrics.json ==` the
+   archived object field for field, and all three artifacts match by digest --
+   `metrics.json 1570191f…e86721`, `energies.csv c145ec40…f270c4ee`,
+   `figure.png 4614da6d…56f2d768`. These are the same digests the
+   `…-baseline-metrics-json`, `…-baseline-energies-csv` and `…-baseline-figure-png`
+   artifact records register, so the clean environment reproduces what the chain claims.
+
+The metric values from that clean environment, quoted as measured:
+
+| id | measured | reference | tolerance | result |
+|---|---|---|---|---|
+| M1 | 28,400 cycles | 28,600 | 1,000 | pass |
+| M2 | 0.9777532985498025 | 0.9666666666666667 | 0.03 | pass |
+| M3 mode 2 | 14,100 / 0.8817707004889854 | 14,000 / 0.8833333333333333 | 5% time, 0.10 height | pass |
+| M3 mode 3 | 9,250 / 0.7122695735332155 | 9,400 / 0.7 | as above | pass |
+| M3 mode 4 | 6,550 / 0.45443492092262405 | 6,500 / 0.45 | as above | pass |
+| M4 | 0.06316980197954705 | 0.0666666667 | 0.0666666667 | pass |
+| C1 | 0.00030083236612377107 | 0 | 0.01 | pass |
+| C2 | 0.002015601922728094 | 0 | 0.01 | pass |
+| C3 | 0.05105633802816894 | 0 | 0.01 | fail (reported, not gating) |
+
+The two exploratory runs from the package's own instructions
+(`explore --set alpha=1.0` and `explore --set dt=0.125`) then ran in the same
+environment. Both exit 20 with `kind: exploratory`, `baseline_eligible: false` and the
+parameter delta recorded, and both are `undermines` against the digitized reference, as
+expected for a deviation from the frozen protocol. The baseline directory is byte-identical
+before and after: recursive digest `43acc0c3d96c9c1a2e25041b9fa816aac52c6eb40d7caaa02c1aad2b3f2b94ac`
+unchanged. An out-of-range deviation is refused rather than run:
+`explore --set alpha=5.0` exits 2 with *"refused: alpha=5.0 is outside the declared
+exploration range [0.0, 2.0]; the run is refused"*.
+
+The study page was inspected in headless Chromium at 1280 px and 375 px: no console or
+page errors, no horizontal scrolling, no remotely-loaded resource; the original Fig. 1
+crop and the reconstruction are rendered at the same 950x1000 pixel geometry with the
+same 0-30,000 cycle abscissa and 0-300 report-unit ordinate; every metrics-table row and
+every residual-table row equals `metrics.json`; `site/data/metrics.json` and
+`site/data/run.json` are the run's own files byte-for-byte (40/40 checks).
+
 ## Scientific records
 
 The orbit-research record chain for this experiment is authored by
@@ -297,3 +354,19 @@ follow-up is completing that chain with `tools/record_chain.py --stop-after expo
 a checkout whose `.git` is writable, after this milestone lands. Any further changed
 method or feature-extraction rule requires a dated protocol v3 amendment; v1 and v2 stay
 frozen, and `protocol/exploration.json` stays presentation-only.
+
+### Milestone 6 close-out
+
+The record chain is now complete on `main` (11 canonical records, commits
+`cf11b29..721f693`): protocol, run-start receipt, three result artifacts, the completed
+run and the assessment joined the four records delivered with Milestone 3.
+`uv run orbit-research validate` accepts the exported bundle
+(`{"valid": true, "errors": []}`, 21 record entries collapsing to 11 distinct records
+across 8 export manifests). Two references remain `pending`: the claim's pointer to the
+program, authored before the program record could be committed. That is documented, not
+a defect -- orbit-research resolves references only from committed snapshots.
+
+`run.py evidence` previously rendered one row per *occurrence*, so a record pinned by
+three manifests appeared three times; it now shows each `(id, sequence)` once and reports
+how many commits pin it. The packaged study report also labels the study-note path as an
+observatory-checkout path rather than implying the file is inside the package.

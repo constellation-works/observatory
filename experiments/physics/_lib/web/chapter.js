@@ -74,6 +74,42 @@ export function validateChapter(validation, compute, { fields, tolerance } = {})
   };
 }
 
+// --- parameter constraints -------------------------------------------------
+// The sliders clamp themselves, but a chapter's runCase() is also reachable from
+// the page's JS handle (window.__chapter) and from anything embedding the module.
+// A value outside the range chapter.json declares is refused with a message that
+// names the control, the value and the range, so a caller gets a constraint message
+// instead of a result full of NaNs. `extra` declares bounds for arguments that are
+// not controls (a case's step size, say), in the same {min, max, label} shape.
+export function checkParameters(chapter, values, extra = {}) {
+  const bounds = {};
+  for (const c of chapter.controls ?? []) {
+    bounds[c.key] = c.type === 'select'
+      ? { label: c.label, options: c.options.map((o) => (typeof o === 'string' ? o : o.value)) }
+      : { label: c.label, min: c.min, max: c.max, unit: c.unit };
+  }
+  for (const [key, def] of Object.entries(extra)) bounds[key] = { ...(bounds[key] ?? {}), ...def };
+  for (const [key, value] of Object.entries(values ?? {})) {
+    const b = bounds[key];
+    if (!b) continue;
+    const name = b.label ? `${key} (${b.label})` : key;
+    if (b.options) {
+      if (!b.options.includes(value)) {
+        throw new Error(`${name} = ${JSON.stringify(value)} is not one of: ${b.options.join(', ')}`);
+      }
+      continue;
+    }
+    if (typeof value !== 'number' || !Number.isFinite(value)) {
+      throw new Error(`${name} = ${value} is not a finite number`);
+    }
+    if (value < b.min || value > b.max) {
+      const unit = b.unit && b.unit !== 'dimensionless' ? ` ${b.unit}` : '';
+      throw new Error(`${name} = ${value}${unit} is outside the allowed range [${b.min}, ${b.max}]${unit}`);
+    }
+  }
+  return values;
+}
+
 export async function loadChapter({ chapterUrl = 'chapter.json', validationUrl = 'validation.json' } = {}) {
   const [chapter, validation] = await Promise.all([
     fetch(chapterUrl).then((r) => r.json()),
@@ -285,9 +321,19 @@ export function renderChapter({ mount, chapter, validation, hooks = {} }) {
       for (const [k, v] of Object.entries(p.values)) {
         const def = chapter.controls.find((c) => c.key === k);
         if (!def) continue;
+        const raw = def.type === 'log-range' ? Math.log10(v) : v;
+        const input = panel.element(k);
+        // A range input snaps to its own step grid, so a preset value that falls
+        // between two steps would silently land somewhere else — a preset labelled
+        // ζ = 0.02 must apply ζ = 0.02, not the nearest slider notch. The step is
+        // lifted for the assignment and restored, so the arrow keys keep their
+        // declared granularity.
+        const step = input && input.tagName === 'INPUT' ? input.step : null;
+        if (step && step !== 'any') input.step = 'any';
         // panel.set dispatches the control's own event, so the slider, its
-        // readout and `values` stay in step with whatever the control snaps to.
-        panel.set(k, def.type === 'log-range' ? Math.log10(v) : v);
+        // readout and `values` stay in step with the value that was applied.
+        panel.set(k, raw);
+        if (step && step !== 'any') input.step = step;
       }
     } finally {
       applyingPreset = false;

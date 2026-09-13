@@ -1,8 +1,8 @@
 ---
 title: Paper reproduction and interactive physics field guide
 owner: observatory
-last_updated: 2026-09-12
-last_validated: 2026-09-12
+last_updated: 2026-09-13
+last_validated: 2026-09-13
 status: Accepted
 feature: paper-reproduction-workbench
 doc_role: design
@@ -210,3 +210,125 @@ contains a forbidden path, an absolute `/home/` string, a secret-looking
 token, or an HTML `href`/`src` / JS `import` that resolves outside the export
 root. It prints the chapter count. `_scripts/test_export_field_guide.py`
 rebuilds into a temp dir and asserts these invariants.
+
+## Delivered
+
+Integrated acceptance ran on 2026-09-12 (ORB-12365) against the checkout at
+`d604ff5`, whose tree is `main` minus the last two record commits. Every
+command below was rerun for that acceptance; the numbers are its own output.
+
+### Runnable commands
+
+```sh
+uv sync --extra research
+R=experiments/physics/fput-recurrence-reproduction
+uv run $R/run.py baseline                 # the registered protocol-v2 baseline
+uv run $R/run.py explore --set alpha=1.0  # bounded exploration, never the baseline
+uv run $R/run.py explore --set dt=0.125
+uv run $R/run.py report                   # study page from the newest baseline
+uv run $R/run.py evidence --bundle <orbit-research export.json>
+uv run $R/run.py export && uv run $R/run.py export --check
+uv run $R/tools/record_chain.py --run <job-run-id> --stop-after export
+./_scripts/export-field-guide.sh          # shareable chapter tree
+make check                                # neb, theory, records, layout, gallery, ruff, pytest
+```
+
+Browser passes (headless Chromium at 1280 px and 375 px):
+
+```sh
+LD_LIBRARY_PATH=$HOME/.local/chromium-deps/root/usr/lib/x86_64-linux-gnu \
+  uv run --with playwright python $R/tools/browser_check.py \
+  _outputs/physics/fput-recurrence-reproduction/site/index.html
+LD_LIBRARY_PATH=... uv run --with playwright python \
+  experiments/physics/physics-field-guide/<chapter>/tests/browser_check.py
+```
+
+### Artifact locations
+
+| artifact | path |
+|---|---|
+| run directory (regenerable, untracked) | `_outputs/physics/fput-recurrence-reproduction/<run-id>/` |
+| study page and evidence browser | `_outputs/physics/fput-recurrence-reproduction/site/` |
+| evidence package | `_outputs/physics/fput-recurrence-reproduction/export/fput-reproduction-v2-<run-id>.tar.gz` |
+| canonical scientific records | `research/physics/fput-recurrence-reproduction/records/` |
+| chapters | `experiments/physics/physics-field-guide/{orbits-numerical-error,waves-boundaries,resonance-damping}/` |
+| shareable export | `_outputs/field-guide-export/` |
+| study notes | `knowledgebase/studies/physics/{fput-recurrence-reproduction,physics-field-guide}.md` |
+
+### Frozen protocol and measured values
+
+The registered baseline runs **protocol v2** (`protocol/v2.json`, frozen;
+`protocol/v1.*` stays frozen as the pre-repair reading, and
+`protocol/exploration.json` is a presentation-only sidecar that bounds
+exploratory deviations). Measured on 2026-09-12, `status: completed`,
+`scientific_assessment: supports`:
+
+| id | measured | reference | tolerance | result |
+|---|---|---|---|---|
+| M1 first mode-1 recurrence | 28,400 cycles | 28,600 | ±1,000 | pass |
+| M2 mode-1 energy returned | 0.9777532985498025 | 0.9666666666666667 | 0.03 | pass |
+| M3 mode-2 major peak | 14,100 cycles / 0.8817707004889854 | 14,000 / 0.8833333333333333 | 5% time, 0.10 height | pass |
+| M3 mode-3 major peak | 9,250 / 0.7122695735332155 | 9,400 / 0.7 | as above | pass |
+| M3 mode-4 major peak | 6,550 / 0.45443492092262405 | 6,500 / 0.45 | as above | pass |
+| M4 higher-mode ceiling (per mode) | 0.06316980197954705 | 0.0666666667 | 0.0666666667 | pass |
+| C1 linear-chain conservation | 0.00030083236612377107 | 0 | 0.01 | pass (gating) |
+| C2 total-energy drift | 0.002015601922728094 | 0 | 0.01 | pass (gating) |
+| C3 δt/2 recurrence movement | 0.05105633802816894 | 0 | 0.01 | **fail** (reported, not gating) |
+
+Artifact digests, identical in the repository run and in a clean `/tmp`
+environment built only from the evidence package: `metrics.json`
+`1570191f…e86721`, `energies.csv` `c145ec40…f270c4ee`, `figure.png`
+`4614da6d…56f2d768`. They match the digests registered in the
+`…-baseline-metrics-json`, `…-baseline-energies-csv` and
+`…-baseline-figure-png` artifact records.
+
+The evidence package holds 30 members and 11 canonical records, verifies every
+SHA-256 and reports 0 absolute paths. `uv run orbit-research validate` accepts
+the exported bundle (21 record entries collapsing to 11 distinct records, 8
+manifests, 2 unresolved references).
+
+### The three chapters
+
+| chapter | question it answers | validation cases |
+|---|---|---|
+| `orbits-numerical-error` | how integrator choice and step size show up as drift in conserved quantities | 16 |
+| `waves-boundaries` | how modes, interference and a fixed/free end behave on the linear chain | 12 |
+| `resonance-damping` | how a driven damped oscillator's amplitude and phase depend on drive and damping | 6 |
+
+Each chapter's browser numerics agree with its `validation.json` (written by
+`reference.py`) to a worst relative difference of 0 at the declared 1e-9
+tolerance. `window.__chapter.runCase` validates its arguments against the
+ranges declared in `chapter.json` (plus the per-chapter bounds for arguments
+that are not controls) and refuses an out-of-range value with a message naming
+the control, the value and the range, rather than returning NaNs.
+
+### Limitations
+
+- **Digitization uncertainty.** The comparison reference is a digitization of
+  the printed Fig. 1 (±250 cycles, ±5 report units on each read point, with a
+  wider ±1,000 cycle / ±10 unit calibration bound), never the original MANIAC
+  output. Mode 3's second maximum is the softest read point.
+- **Linear-energy approximation in E_k.** The mode energies use the linear
+  normal-mode form `E_k = ½(ȧ_k² + ω_k² a_k²)`, the same quantity the report
+  plots; the cubic term's contribution to the energy is not partitioned into
+  modes.
+- **The δt² interpretation.** The caption's `δt² = 1/8` is read as
+  `δt = 1/√8 = 0.35355…`. The naive reading `δt = 1/8` is available only as a
+  labelled exploratory run, where the recurrence falls outside the figure's
+  own abscissa.
+- **Independent reconstruction, not a rerun.** No author code exists; the
+  integrator ordering is inferred from the report's description. Agreement is
+  evidence about the physics, not about the original program.
+- **C3 remains unresolved.** Halving δt moves the physical recurrence time by
+  5.106%, over its own 1% threshold. Protocol v2 reports it rather than gating
+  on it; no tolerance was relaxed to obtain a pass, and it stays listed here.
+- **Chain provenance.** The protocol-v2 baseline was first executed under
+  ORB-12375, before the native record chain was registered, so the chain
+  proves local registration order and frozen input identity, not
+  independently attested prospective execution; the assessment is authored
+  `inference: exploratory`. The bundle also carries 2 `pending` claim→program
+  references, authored before the program record could be committed.
+- **Presets on a log-range slider.** A preset applies its declared value
+  exactly to the model and to the readout; the slider element itself re-snaps
+  to its nearest step notch, so the thumb can sit a fraction of a step away
+  from the value the page reports until the control is next moved.

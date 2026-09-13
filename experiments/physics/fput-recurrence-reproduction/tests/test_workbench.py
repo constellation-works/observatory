@@ -347,3 +347,56 @@ def test_evidence_refuses_a_bundle_that_is_not_an_export(tmp_path: Path) -> None
         "evidence", "--bundle", str(bundle), "--site", str(tmp_path / "site"), expect=2
     )
     assert "not an orbit-research v2 export bundle" in completed.stderr
+
+
+def test_evidence_browser_shows_each_record_once_with_its_pinned_commits(
+    tmp_path: Path,
+) -> None:
+    """A bundle repeats a record per export manifest; the browser is a view of the chain."""
+    import sys
+
+    sys.path.insert(0, str(EXPERIMENT_ROOT))
+    from fput.evidence import dedupe_records, render
+
+    def record(sequence: int, revision: str) -> dict:
+        return {
+            "id": "urn:research:observatory:claim:example",
+            "kind": "claim",
+            "activity": "active",
+            "scope": "owner",
+            "aliases": ["example-claim"],
+            "revision_id": "sha256:" + "a" * 64,
+            "authorship": {
+                "sequence": sequence,
+                "registered_at": "2026-09-12T00:00:00+00:00",
+                "reason": "example",
+            },
+            "orbit_links": [{"task": "ORB-1", "run": "jrun-1"}],
+            "payload": {"statement": "an example claim"},
+            "provenance": {"git_revision": revision, "path": "research/records"},
+        }
+
+    duplicated = [record(2, "a" * 40), record(2, "b" * 40), record(2, "a" * 40)]
+    entries = dedupe_records(duplicated)
+    assert len(entries) == 1
+    assert entries[0]["pinned_commits"] == ["a" * 40, "b" * 40]
+
+    bundle = tmp_path / "export.json"
+    bundle.write_text(
+        json.dumps(
+            {
+                "schema_version": 2,
+                "kind": "export",
+                "records": duplicated,
+                "manifests": [],
+                "unresolved": [],
+            }
+        ),
+        encoding="utf-8",
+    )
+    index = render(evidence_dir=tmp_path / "evidence", bundle_path=bundle)
+    page = index.read_text(encoding="utf-8")
+    assert page.count("<details>") == 1, "one record, one entry"
+    assert page.count("<tr>") == 2, "the chain table has one header row and one record row"
+    assert "1 distinct records" in page
+    assert "2 commit(s)" in page

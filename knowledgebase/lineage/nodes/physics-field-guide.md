@@ -2,9 +2,9 @@
 id: physics-field-guide
 title: Physics field guide
 domain: physics
-status: testing
+status: supported
 created: 2026-09-12
-updated: 2026-09-12
+updated: 2026-09-13
 kill: Any chapter's in-browser numerics differ from the independent Python reference by more than the chapter's declared tolerance at its predefined validation points.
 tags:
 - field-guide
@@ -33,6 +33,14 @@ evidence:
   note: 'Chapter 3 (resonance-damping) built and validated: all 6 predefined (omega, zeta) validation cases agree between resonance.js and reference.py (worst relative difference 0, declared tolerance 1e-9); RK4 steady-state amplitude/phase agree with the analytic response to <=1.5e-7 relative / <=6.1e-8 rad absolute (declared tolerance 0.5%% / 0.005 rad); the RK4 trajectory agrees with the closed-form underdamped transient to <=8.3e-9 absolute (declared tolerance 1e-6); the dt^4 convergence entry recovers RK4 order 4.035 (expected 4); omega_r = omega_0 sqrt(1-2 zeta^2) and Q = 1/(2 zeta) both match their analytic formulas exactly; phase crosses pi/2 exactly at omega = omega_0 for every zeta in the grid. make check passes (342 tests) and the Playwright browser_check.py passes all 28 checks (desktop + 375px layout, full keyboard operation including the pendulum toggle, no console errors, reduced-motion static path, SVG download). Kill condition not triggered.'
   origin:
     task: ORB-12364
+- id: ev4
+  verdict: supports
+  strength: strong
+  source: ../../studies/physics/physics-field-guide.md
+  date: 2026-09-13
+  note: 'Milestone 6 integrated acceptance across all three chapters, rerun rather than inherited. Kill condition (browser numerics differing from the independent Python reference beyond the declared tolerance) not triggered: orbits-numerical-error 16 cases, waves-boundaries 12, resonance-damping 6, worst relative difference 0 at the declared 1e-9 tolerance in each, recomputed independently through each chapter''s own runCase and compared in Python as well as by the page. Each chapter''s tests/browser_check.py passes at 1280 and 375 px (28/28, 28/28, 29/29) and a separate acceptance pass written for this milestone passes 150/150: no console or page errors, every labelled control reachable by Tab with arrow keys changing the value and the plotted numbers, every preset applying its declared values, pause/single-step/reset, prefers-reduced-motion completing the static path with Play and Single step disabled and the same observable reported, and the on-page validation table equal to validation.json. Two defects found and fixed here: window.__chapter.runCase accepted out-of-range parameters and returned NaNs (now refused by checkParameters with a message naming the control, value and declared range), and two log-range presets landed on the nearest slider notch (zeta 0.0199526 and 1.20226 instead of the declared 0.02 and 1.2; applyPreset now applies the declared value exactly). make check green: 344 passed, 5 skipped, neb check 0 errors. Shaky: the 1e-9 agreement bounds transcription error between two implementations of the same algorithm, not modelling error; the physics tolerances (dispersion, steady-state, transient, convergence order) are the looser separate checks, and the pendulum toggle has no analytic reference.'
+  origin:
+    task: ORB-12365
 origin:
   task: ORB-12359
   run: jrun-20260912-2042-c3

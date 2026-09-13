@@ -14,7 +14,7 @@
 import { createLoop } from '../../_lib/web/loop.js';
 import { createCanvas2D } from '../../_lib/web/canvas2d.js';
 import { createPlot, plotsToSVG, SERIES_COLORS } from '../../_lib/web/plot.js';
-import { downloadSVG, formatNumber, h, loadChapter, renderChapter, table, validateChapter }
+import { checkParameters, downloadSVG, formatNumber, h, loadChapter, renderChapter, table, validateChapter }
   from '../../_lib/web/chapter.js';
 import {
   OMEGA0, WINDOW_PERIODS, analyticAmplitudePhase, closedFormTransient, createRun,
@@ -364,6 +364,12 @@ ui.regions.validation.append(convWrap);
 restart();
 ui.setPlaying(false); // the run waits for a prediction
 
+// Bounds for the runCase arguments that are not controls; the control ranges
+// themselves come from chapter.json.
+const CASE_BOUNDS = {
+  dt: { label: 'step size Δt', min: 1e-4, max: 0.1 },
+};
+
 // Handles for the Playwright checks under tests/.
 window.__chapter = {
   state: () => ({
@@ -373,7 +379,7 @@ window.__chapter = {
     animating, playing: loop.running,
     amplitudeAnalytic: analyticAmplitudePhase(run.omega, run.zeta, run.F).amplitude,
   }),
-  runCase,
+  runCase: (c) => runCase(checkParameters(chapter, c, CASE_BOUNDS)),
   svg: () => plotsToSVG([timePlot, amplitudePlot, phasePlot]),
 };
 </script>

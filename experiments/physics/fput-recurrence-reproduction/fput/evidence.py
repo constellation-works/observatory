@@ -111,6 +111,26 @@ def load_records(records_dir: Path) -> dict[str, Any]:
     }
 
 
+def dedupe_records(records: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    """One entry per canonical record, with the commits that pin it.
+
+    An export bundle repeats a record once per export manifest that resolves it, so a
+    record appended early arrives two or three times, identical apart from the commit
+    its provenance was resolved at. The browser is a view of the chain, not of the
+    manifests: it shows each `(id, sequence)` once and reports how many commits pin it.
+    """
+    grouped: dict[tuple[str, int], dict[str, Any]] = {}
+    for record in records:
+        key = (record["id"], record["authorship"]["sequence"])
+        entry = grouped.get(key)
+        if entry is None:
+            entry = grouped[key] = {"record": record, "pinned_commits": []}
+        commit = (record.get("provenance") or {}).get("git_revision")
+        if commit and commit not in entry["pinned_commits"]:
+            entry["pinned_commits"].append(commit)
+    return list(grouped.values())
+
+
 def render(*, evidence_dir: Path, bundle_path: Path | None = None,
            records_dir: Path | None = None) -> Path:
     """Write the evidence browser into `evidence_dir` and return its index.html."""
@@ -123,44 +143,53 @@ def render(*, evidence_dir: Path, bundle_path: Path | None = None,
     copied = evidence_dir / "export.json"
     copied.write_text(json.dumps(bundle, indent=2, sort_keys=True) + "\n", encoding="utf-8")
 
-    records: list[dict[str, Any]] = sorted(
-        bundle["records"],
-        key=lambda record: (
-            KIND_ORDER.index(record["kind"]) if record["kind"] in KIND_ORDER else len(KIND_ORDER),
-            record["authorship"]["sequence"],
+    entries: list[dict[str, Any]] = sorted(
+        dedupe_records(bundle["records"]),
+        key=lambda entry: (
+            KIND_ORDER.index(entry["record"]["kind"])
+            if entry["record"]["kind"] in KIND_ORDER else len(KIND_ORDER),
+            entry["record"]["authorship"]["sequence"],
         ),
     )
+    records: list[dict[str, Any]] = [entry["record"] for entry in entries]
+
     def _links(record: dict[str, Any]) -> str:
         return ", ".join(
             "{} / {}".format(link["task"], link.get("run", "?")) for link in record["orbit_links"]
         )
 
+    def _pins(entry: dict[str, Any]) -> str:
+        commits = entry["pinned_commits"]
+        return ", ".join(commit[:10] for commit in commits) if commits else "—"
+
     rows = "\n".join(
         "<tr>"
-        f'<td><span class="tag">{_text(record["kind"])}</span></td>'
-        f"<td><code>{_text(_alias(record))}</code></td>"
-        f"<td>{_text(_summary(record))}</td>"
-        f"<td><code>{_text(record['revision_id'][:19])}…</code></td>"
-        f"<td>{_text(record['authorship']['registered_at'])}</td>"
-        f"<td>{_text(record['activity'])} / {_text(record['scope'])}</td>"
+        f'<td><span class="tag">{_text(entry["record"]["kind"])}</span></td>'
+        f"<td><code>{_text(_alias(entry['record']))}</code></td>"
+        f"<td>{_text(_summary(entry['record']))}</td>"
+        f"<td><code>{_text(entry['record']['revision_id'][:19])}…</code></td>"
+        f"<td>{_text(entry['record']['authorship']['registered_at'])}</td>"
+        f"<td>{_text(len(entry['pinned_commits']))}</td>"
+        f"<td>{_text(entry['record']['activity'])} / {_text(entry['record']['scope'])}</td>"
         "</tr>"
-        for record in records
+        for entry in entries
     )
     details = "\n".join(
         "<details>"
-        f"<summary>{_text(record['kind'])} · {_text(_alias(record))} · seq "
-        f"{_text(record['authorship']['sequence'])}</summary>"
+        f"<summary>{_text(entry['record']['kind'])} · {_text(_alias(entry['record']))} · seq "
+        f"{_text(entry['record']['authorship']['sequence'])}</summary>"
         f'<dl class="pairs">'
-        f'<div class="pair"><dt>canonical id</dt><dd><code>{_text(record["id"])}</code></dd></div>'
-        f'<div class="pair"><dt>revision</dt><dd><code>{_text(record["revision_id"])}</code></dd></div>'
-        f'<div class="pair"><dt>source revision</dt><dd><code>{_text(record["provenance"]["git_revision"])}</code></dd></div>'
-        f'<div class="pair"><dt>record path</dt><dd><code>{_text(record["provenance"]["path"])}</code></dd></div>'
-        f'<div class="pair"><dt>orbit links</dt><dd>{_text(_links(record))}</dd></div>'
-        f'<div class="pair"><dt>reason</dt><dd>{_text(record["authorship"]["reason"])}</dd></div>'
+        f'<div class="pair"><dt>canonical id</dt><dd><code>{_text(entry["record"]["id"])}</code></dd></div>'
+        f'<div class="pair"><dt>revision</dt><dd><code>{_text(entry["record"]["revision_id"])}</code></dd></div>'
+        f'<div class="pair"><dt>pinned at</dt><dd>{_text(len(entry["pinned_commits"]))} commit(s): '
+        f"<code>{_text(_pins(entry))}</code></dd></div>"
+        f'<div class="pair"><dt>record path</dt><dd><code>{_text(entry["record"]["provenance"]["path"])}</code></dd></div>'
+        f'<div class="pair"><dt>orbit links</dt><dd>{_text(_links(entry["record"]))}</dd></div>'
+        f'<div class="pair"><dt>reason</dt><dd>{_text(entry["record"]["authorship"]["reason"])}</dd></div>'
         "</dl>"
-        f"<pre>{_text(json.dumps(record, indent=2, sort_keys=True))}</pre>"
+        f"<pre>{_text(json.dumps(entry['record'], indent=2, sort_keys=True))}</pre>"
         "</details>"
-        for record in records
+        for entry in entries
     )
     manifests = "\n".join(
         "<tr>"
@@ -207,7 +236,7 @@ def render(*, evidence_dir: Path, bundle_path: Path | None = None,
 <main>
 <h1>Scientific record evidence</h1>
 <p class="subtitle">{"working-tree records" if working_tree else "orbit-research v2 export bundle"}
-· {_text(len(records))} records · {_text(len(bundle["manifests"]))} manifest(s) ·
+· {_text(len(records))} distinct records · {_text(len(bundle["manifests"]))} manifest(s) ·
 {_text(len(unresolved))} unresolved reference(s) · page generated {_text(generated)}</p>
 {banner}
 <div class="panel">
@@ -223,7 +252,7 @@ append-only JSON in the owner checkout. The pinned orbit-research 0.2.0 has no
 <h2>Record chain</h2>
 <div class="scroll">
 <table>
-<thead><tr><th>kind</th><th>id</th><th>summary</th><th>revision</th><th>registered</th><th>activity / scope</th></tr></thead>
+<thead><tr><th>kind</th><th>id</th><th>summary</th><th>revision</th><th>registered</th><th>pinned commits</th><th>activity / scope</th></tr></thead>
 <tbody>
 {rows}
 </tbody>

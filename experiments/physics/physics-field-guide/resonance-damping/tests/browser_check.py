@@ -221,6 +221,18 @@ def keyboard_walk(page, report: Report):
                       abs(s["zeta"] - 1.0) < 1e-6 and abs(s["omega"] - 1.0) < 1e-6,
                       f"omega={s['omega']}, zeta={s['zeta']}")
 
+    # zeta is a log-range slider whose step grid does not contain log10(0.02), so this
+    # preset is the one that catches a preset silently landing on the nearest notch.
+    d = focus_by(lambda x: x.get("text", "") == "Light damping at resonance",
+                 "the light-damping preset")
+    if d:
+        page.keyboard.press("Enter")
+        page.wait_for_timeout(400)
+        s = state(page)
+        report.record("a preset applies its declared value exactly, not the nearest slider step",
+                      abs(s["zeta"] - 0.02) < 1e-9 and abs(s["omega"] - 1.0) < 1e-9,
+                      f"omega={s['omega']}, zeta={s['zeta']} (declared omega=1.0, zeta=0.02)")
+
     d = focus_by(lambda x: x.get("text", "") in ("Pause", "Play"), "the play/pause button")
     if d:
         was = state(page)["playing"]
