@@ -36,34 +36,11 @@ model = "claude-sonnet-5"
 provider = "claude"
 effort = "high"
 
-[crews.sol]
-backend = "cli"
-model = "gpt-5.6-sol"
-provider = "codex"
-effort = "high"
-
-[crews.terra]
-backend = "cli"
-model = "gpt-5.6-terra"
-provider = "codex"
-effort = "high"
-
 [crews.luna]
 backend = "cli"
 model = "gpt-5.6-luna"
 provider = "codex"
 effort = "xhigh"
-
-[crews.grok]
-backend = "cli"
-model = "grok-4.6"
-provider = "grok"
-effort = "high"
-
-[crews.gemini-flash]
-backend = "cli"
-model = "gemini-3.8-flash-high"
-provider = "antigravity"
 
 [docs]
 roots = ["docs/", "knowledgebase/studies/"]
