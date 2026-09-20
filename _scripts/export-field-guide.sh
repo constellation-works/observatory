@@ -1,14 +1,14 @@
 #!/usr/bin/env bash
 # Allowlisted rebuild of the shareable physics field-guide export.
 # Usage (any cwd):  _scripts/export-field-guide.sh [--output DIR]
-# Default output:   <repo>/_outputs/field-guide-export/
+# Default output:   <repo>/output/field-guide-export/
 set -euo pipefail
 
 die() { echo "export-field-guide: $*" >&2; exit 1; }
 
 ORIG_PWD=$(pwd -P)
 REPO=$(cd "$(dirname "$0")/.." && pwd -P)
-OUT_DEFAULT="$REPO/_outputs/field-guide-export"
+OUT_DEFAULT="$REPO/output/field-guide-export"
 OUT=""
 
 abspath() {
@@ -52,18 +52,18 @@ fi
 [[ -n "$OUT" && "$OUT" != "/" ]] || die "refusing to rebuild '$OUT'"
 [[ "$OUT" != "$REPO" ]] || die "refusing to rebuild the repository root"
 case "$OUT" in
-  "$REPO/_outputs"|"$REPO/_outputs"/*) ;;
+  "$REPO/output"|"$REPO/output"/*) ;;
   "$REPO"|"$REPO"/*)
-    die "refusing to rebuild a path inside the repository outside _outputs/"
+    die "refusing to rebuild a path inside the repository outside output/"
     ;;
 esac
 [[ -e "$OUT/.git" ]] && die "refusing to rebuild a git checkout at $OUT"
 
-GUIDE="$REPO/experiments/physics/physics-field-guide"
-WEB="$REPO/experiments/physics/_lib/web"
-FPUT_SITE="$REPO/_outputs/physics/fput-recurrence-reproduction/site"
-FPUT_FIG="$REPO/experiments/physics/fput-recurrence-reproduction/reference/la-1940-fig1.png"
-VENDOR_THREE="$REPO/experiments/physics/_lib/vendor/three"
+GUIDE="$REPO/docs/field-guide"
+WEB="$REPO/_lib/web"
+FPUT_SITE="$REPO/research/R005-fput-recurrence-reproduction/output/site"
+FPUT_FIG="$REPO/research/R005-fput-recurrence-reproduction/code/reference/la-1940-fig1.png"
+VENDOR_THREE="$REPO/_lib/vendor/three"
 
 rm -rf "$OUT"
 mkdir -p "$OUT"
@@ -81,7 +81,7 @@ shopt -s nullglob
 for dir in "$GUIDE"/*/; do
   [[ -f "$dir/chapter.json" ]] || continue
   slug=$(basename "$dir")
-  dest="$OUT/physics-field-guide/$slug"
+  dest="$OUT/docs/field-guide/$slug"
   mkdir -p "$dest"
   copy_file "$dir/index.html" "$dest/index.html"
   copy_file "$dir/chapter.json" "$dest/chapter.json"
@@ -101,7 +101,7 @@ shopt -u nullglob
 
 [[ ${#CHAPTERS[@]} -gt 0 ]] || die "no chapter.json directories under $GUIDE"
 
-# --- shared harness (layout mirrors experiments/physics/) -------------------
+# --- shared harness (layout mirrors the repository root) --------------------
 [[ -d "$WEB" ]] || die "missing $WEB"
 mkdir -p "$OUT/_lib/web"
 while IFS= read -r -d '' f; do
@@ -109,7 +109,7 @@ while IFS= read -r -d '' f; do
   copy_file "$f" "$OUT/_lib/web/$rel"
 done < <(find "$WEB" -type f ! -path '*/__pycache__/*' -print0)
 
-copy_file "$GUIDE/README.md" "$OUT/physics-field-guide/README.md"
+copy_file "$GUIDE/README.md" "$OUT/docs/field-guide/README.md"
 
 # --- FPUT study site (optional) + public-domain figure ----------------------
 FPUT_INCLUDED=0
@@ -143,7 +143,7 @@ EOF
 # --- vendor/three only if an exported chapter actually imports it -----------
 USES_THREE=0
 if grep -RIlE 'three\.min\.js|_lib/vendor/three|vendor/three|window\.THREE' \
-    "$OUT/physics-field-guide" >/dev/null 2>&1; then
+    "$OUT/docs/field-guide" >/dev/null 2>&1; then
   USES_THREE=1
   [[ -d "$VENDOR_THREE" ]] || die "a chapter imports three.js but $VENDOR_THREE is missing"
   mkdir -p "$OUT/_lib/vendor/three"
@@ -216,9 +216,9 @@ slugs = [s for s in sys.argv[2].split(",") if s]
 fput_included = sys.argv[3] == "1"
 items = []
 for slug in slugs:
-    chapter = json.loads((out / "physics-field-guide" / slug / "chapter.json").read_text())
+    chapter = json.loads((out / "docs" / "field-guide" / slug / "chapter.json").read_text())
     title = html.escape(chapter.get("title") or slug)
-    href = html.escape(f"physics-field-guide/{slug}/index.html")
+    href = html.escape(f"docs/field-guide/{slug}/index.html")
     items.append(f'      <li><a href="{href}">{title}</a></li>')
 study = ""
 if fput_included:
@@ -243,7 +243,7 @@ page = f"""<!DOCTYPE html>
   <ul>
 {chr(10).join(items)}
   </ul>
-  <p><a href="physics-field-guide/README.md">Field-guide README</a>
+  <p><a href="docs/field-guide/README.md">Field-guide README</a>
   · <a href="LICENSES.md">Licences and credits</a>
   · <a href="reference/la-1940-fig1.png">LA-1940 Fig. 1</a></p>
 {study}</main>
@@ -258,7 +258,7 @@ self_check() {
   local rel hits
   while IFS= read -r rel; do
     case "$rel" in
-      *knowledgebase/*|*lineage*|*_data/*|*.orbit*|*/*.orbit*|*/.orbit*|*.env*|*/*.env*|*/.env*|*.git*|*/*.git*|*/.git*|*tests/*|*reference.py*)
+      *_archive/*|*lineage*|*_data/*|*.orbit*|*/*.orbit*|*/.orbit*|*.env*|*/*.env*|*/.env*|*.git*|*/*.git*|*/.git*|*tests/*|*reference.py*)
         die "forbidden path in export: $rel"
         ;;
     esac

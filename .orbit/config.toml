@@ -43,7 +43,7 @@ provider = "codex"
 effort = "xhigh"
 
 [docs]
-roots = ["docs/", "knowledgebase/studies/"]
+roots = ["docs/", "questions/", "hypotheses/", "theories/"]
 
 [scoring]
 enabled = true

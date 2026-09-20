@@ -1,7 +1,0 @@
-{
-  "experiment": "experiments/kaggle/rogii-wellbore-geology-prediction",
-  "source": "https://www.kaggle.com/competitions/rogii-wellbore-geology-prediction/data",
-  "fetch": "kaggle competitions download -c rogii-wellbore-geology-prediction -p _data/kaggle/rogii-wellbore-geology-prediction && unzip -o '_data/kaggle/rogii-wellbore-geology-prediction/*.zip' -d _data/kaggle/rogii-wellbore-geology-prediction",
-  "dictionary": "experiments/kaggle/rogii-wellbore-geology-prediction/data-dictionary.md",
-  "tracked": false
-}

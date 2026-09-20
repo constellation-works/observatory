@@ -3,10 +3,20 @@
 Read [AGENTS.md](AGENTS.md) first; the boundaries there are the whole point of
 this repository and are easy to violate by accident.
 
-Two that bite most often: never commit anything under `_data/` or `_outputs/`
-except a manifest or README, and never create an experiment directory without a
-nebula node id to name it. `make check` catches both.
+Three that bite most often:
 
-The nebula CLI is `neb`, pointed at `knowledgebase/lineage/` by `make setup`
-(`NEBULA_ROOT`). If a command says "no corpus", the variable is unset in this
-shell, not the corpus missing.
+- **Never rename or renumber a record.** The id and slug are frozen at creation.
+  A title change edits frontmatter only, and `make new` is the only thing that
+  allocates an id.
+- **Never commit bytes under `data/` or `output/`.** Only `manifest.json` and
+  `README.md` may be tracked there, anywhere in the tree.
+- **Never edit `_archive/`.** It is frozen history, including principia's
+  byte-pinned lock. If a claim it owns needs restating, restate it as a new
+  hypothesis in the live corpus.
+
+`make check` catches all three.
+
+Work in one research item at a time: everything about `R001` lives in
+`research/R001-slug/`, so a run's write footprint is that directory plus
+assessment entries appended to the hypotheses it tests. That is what keeps
+parallel work mergeable.

@@ -1,0 +1,21 @@
+{
+  "inputs": [
+    {
+      "name": "astrolabe-wide-binary-apparatus",
+      "source": "_lib/astrolabe",
+      "sha256": null,
+      "size": null,
+      "fetch": "in-repository: _lib/astrolabe (pinned by apparatus sha256 inside code/wide-binary-selection-bias/main.py)",
+      "note": "Code, not data: the frozen protocol runs against astrolabe's repaired spherical selector, pinned by digest."
+    },
+    {
+      "name": "principia-orb-11221-protocol",
+      "source": "_archive/principia/theory/wide-binary-selection-methodology",
+      "sha256": null,
+      "size": null,
+      "fetch": "in-repository: _archive/principia (protocol and gate hashes pinned inside code/wide-binary-selection-bias/main.py)",
+      "note": "The frozen ORB-11221 protocol the fixture executes."
+    }
+  ],
+  "note": "The population is Newtonian by construction; no observational bytes are consumed."
+}

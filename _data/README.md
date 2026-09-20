@@ -1,18 +1,16 @@
 # _data
 
-Datasets live here on disk and never in git. Each experiment that needs data
-keeps a `manifest.json` next to its files:
+Datasets shared across research items. Bytes live here on disk and never in git:
+`_data/**` is ignored except for `README.md` and any `manifest.json`.
+
+An input used by one research item belongs in that item's own `data/`, with its
+manifest, so that everything about R001 lives in R001. This directory is only for
+a dataset several items read, and a research item references it from its own
+manifest:
 
 ```json
-{
-  "node": "ranking-decay-half-life",
-  "source": "https://www.kaggle.com/competitions/stellar/data",
-  "fetch": "kaggle competitions download -c stellar -p _data/kaggle/stellar",
-  "files": [{ "path": "train.csv", "sha256": "…", "bytes": 123456 }],
-  "license": "competition rules",
-  "fetched_on": "2026-09-07"
-}
+{ "inputs": [{ "name": "astrolabe-processed", "shared": "_data/physics/astrolabe" }] }
 ```
 
-Manifests are committed; the files they describe are not. `make check-layout`
-fails on any tracked file under `_data/` that is not a manifest or README.
+`physics/astrolabe/` is the one such dataset: astrolabe's processed catalogue,
+ephemeris and derived stores, which `ASTROLABE_DATA_DIR` points at.

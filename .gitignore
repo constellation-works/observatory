@@ -1,11 +1,18 @@
-# Data and outputs live on disk, never in git. Manifests and READMEs do.
+# Bytes are never committed, manifests always are.
 _data/**
 !_data/**/
 !_data/README.md
 !_data/**/manifest.json
-_outputs/**
-!_outputs/**/
-!_outputs/README.md
+**/data/**
+!**/data/**/
+!**/data/manifest.json
+!**/data/README.md
+**/output/**
+!**/output/**/
+!**/output/README.md
+
+# _archive is frozen history: it keeps whatever it was committed with.
+!_archive/**
 
 # Python
 .venv/

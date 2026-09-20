@@ -1,0 +1,10 @@
+{
+  "inputs": [
+    {
+      "name": "astrolabe-processed",
+      "shared": "_data/physics/astrolabe",
+      "note": "SPARC rotation curves, the Milky Way rotation curve and JPL ephemerides, read from astrolabe's processed store. The legacy sims take the path with --data; their built-in default still looks for the retired sibling orrery/astrolabe checkout layout."
+    }
+  ],
+  "note": "Legacy multi-sim record: 24 sims, most of them seeded lattice or symbolic checks with no input bytes."
+}

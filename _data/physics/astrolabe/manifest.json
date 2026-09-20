@@ -1,5 +1,5 @@
 {
-  "library": "lib/astrolabe",
+  "library": "_lib/astrolabe",
   "layout": "processed/{catalog,ephemeris,derived}/<name>.parquet + <name>.json sidecar; snapshots/ content-addressed",
   "source": "public surveys via astroquery (Gaia, SDSS, JPL Horizons) and SPARC; fetched with `uv run astrolabe fetch ...`",
   "migrated_from": "codebases/astrolabe/data (untracked there too), copied 2026-09-07",

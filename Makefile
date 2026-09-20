@@ -1,15 +1,17 @@
-.PHONY: help setup check check-lineage check-theory check-records check-layout check-gallery serve gallery lint test experiment fmt clean
+.PHONY: help setup check check-archive lint test fmt new gallery check-gallery serve clean
 
 # ------------------------------------------------------------
 # Config
 # ------------------------------------------------------------
 UV ?= uv
-NEB ?= neb
-export NEBULA_ROOT := $(CURDIR)/knowledgebase/lineage
-THEORY := knowledgebase/theory
+# Every check runs through $(RUN). Override it to use an already-synced
+# interpreter instead of uv, e.g. `make check RUN="env PATH=.venv/bin:$$PATH"`.
+RUN ?= $(UV) run
+# check-archive needs the pinned orbit-research; see pyproject.toml.
+RUN_ARCHIVE ?= $(UV) run --extra research
 export ASTROLABE_DATA_DIR := $(CURDIR)/_data/physics/astrolabe
-# macOS: /tmp is a symlink; the record checkers refuse temp paths that resolve outside
-# the owner root, so hand them the real temp directory.
+# macOS: /tmp is a symlink; principia's record checkers refuse temp paths that
+# resolve outside the owner root, so hand them the real temp directory.
 export TMPDIR := $(shell python3 -c 'import os,tempfile;print(os.path.realpath(tempfile.gettempdir()))')
 
 # ------------------------------------------------------------
@@ -18,19 +20,17 @@ export TMPDIR := $(shell python3 -c 'import os,tempfile;print(os.path.realpath(t
 help:
 	@echo "Observatory Make Targets"
 	@echo ""
-	@echo "  make setup          uv sync, pre-commit hook, verify neb finds the corpus"
-	@echo "  make check          Full gate: lineage + theory + layout + lint + tests"
-	@echo "  make check-lineage  neb check over knowledgebase/lineage"
-	@echo "  make check-theory   principia's lock over knowledgebase/theory"
-	@echo "  make check-records  immutable research records under knowledgebase/theory/research"
-	@echo "  make check-layout   experiments and studies keyed by node id; no data in git"
-	@echo "  make check-gallery  sim catalog (experiments/physics/_lib/gallery) is current; make gallery regenerates it"
-	@echo "  make serve [PORT=8000]   static server for the interactive sims"
+	@echo "  make setup          uv sync and the pre-commit hook"
+	@echo "  make check          The gate: _scripts/check.py, ruff, pytest over _lib/"
+	@echo "  make check-archive  principia's own checker over the frozen _archive/principia (not part of check)"
+	@echo "  make new KIND=R TITLE=\"...\"   Allocate the next id and scaffold a record (KIND=Q|H|T|R)"
 	@echo "  make lint           ruff"
-	@echo "  make test           pytest"
-	@echo "  make experiment DOMAIN=<d> ID=<node-id>   Scaffold experiments/<d>/<id>/ from the template"
+	@echo "  make test           pytest over _lib/"
 	@echo "  make fmt            ruff format"
-	@echo "  make clean          Remove caches (never touches _data or _outputs)"
+	@echo "  make gallery        Regenerate _lib/gallery/index.html from every research/<R>/code/<sim>/sim.json"
+	@echo "  make check-gallery  Fail if that catalogue is stale"
+	@echo "  make serve [PORT=8000]   Static server at the repository root for the sims and chapters"
+	@echo "  make clean          Remove caches (never touches data/ or output/)"
 
 # ------------------------------------------------------------
 # Setup
@@ -38,53 +38,46 @@ help:
 setup:
 	$(UV) sync
 	$(UV) run pre-commit install
-	@$(NEB) check >/dev/null && echo "neb sees the corpus at $(NEBULA_ROOT)"
 
 # ------------------------------------------------------------
-# Quality
+# The gate
 # ------------------------------------------------------------
-check: check-lineage check-theory check-records check-layout check-gallery lint test
+check:
+	$(RUN) python _scripts/check.py
+	$(RUN) ruff check .
+	$(RUN) pytest -q
 
-check-lineage:
-	$(NEB) check
-
-# principia's lock: claim registry, ledger, links to studies and orrery sims.
-check-theory:
-	$(UV) run --extra research ./_scripts/check-theory.sh
-
-# The immutable research records under $(THEORY)/research; needs the pinned orbit-research.
-check-records:
-	cd $(THEORY) && $(UV) run --extra research python scripts/corpus_records.py check
-	cd $(THEORY) && $(UV) run --extra research python scripts/wide_binary_records.py check
-
-check-layout:
-	./_scripts/check-layout.sh
-
-# The generated sim catalog must match every experiments/physics/<node>/<slug>/sim.json.
-check-gallery:
-	$(UV) run python experiments/physics/_lib/tools/build-gallery.py --check
-
-# Static server at the observatory root so web sims resolve ../../_lib/web.
-serve:
-	./experiments/physics/_lib/tools/serve.sh $(PORT)
-
-gallery:
-	$(UV) run python experiments/physics/_lib/tools/build-gallery.py
+# principia's lock, unchanged, over the frozen archive. Read-only and optional.
+check-archive:
+	$(RUN_ARCHIVE) ./_scripts/check-theory.sh
 
 lint:
-	$(UV) run ruff check .
+	$(RUN) ruff check .
 
 fmt:
-	$(UV) run ruff format .
+	$(RUN) ruff format .
 
 test:
-	$(UV) run --extra research pytest -q
+	$(RUN) pytest -q
 
 # ------------------------------------------------------------
-# Scaffold
+# Records
 # ------------------------------------------------------------
-experiment:
-	./_scripts/new-experiment.sh "$(DOMAIN)" "$(ID)"
+new:
+	./_scripts/new.sh --kind "$(KIND)" --title "$(TITLE)"
+
+# ------------------------------------------------------------
+# Sims
+# ------------------------------------------------------------
+gallery:
+	$(RUN) python _lib/tools/build-gallery.py
+
+check-gallery:
+	$(RUN) python _lib/tools/build-gallery.py --check
+
+# Serves the repository root so sims resolve ../../../../_lib/web.
+serve:
+	./_lib/tools/serve.sh $(PORT)
 
 # ------------------------------------------------------------
 # Clean

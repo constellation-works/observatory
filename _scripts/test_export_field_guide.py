@@ -11,10 +11,10 @@ import pytest
 
 REPO = Path(__file__).resolve().parent.parent
 SCRIPT = REPO / "_scripts" / "export-field-guide.sh"
-FPUT_SITE = REPO / "_outputs" / "physics" / "fput-recurrence-reproduction" / "site"
-CHAPTER_REL = Path("physics-field-guide") / "orbits-numerical-error"
+FPUT_SITE = REPO / "research" / "R005-fput-recurrence-reproduction" / "output" / "site"
+CHAPTER_REL = Path("docs") / "field-guide" / "orbits-numerical-error"
 FORBIDDEN_PATH = re.compile(
-    r"knowledgebase/|lineage|_data/|\.orbit|\.env|\.git|tests/|reference\.py"
+    r"_archive/|lineage|_data/|\.orbit|\.env|\.git|tests/|reference\.py"
 )
 ATTR_RE = re.compile(r"""\b(?:href|src)\s*=\s*(['"])(.*?)\1""", re.I)
 IMPORT_RE = re.compile(
@@ -98,7 +98,7 @@ def test_script_rebuilds_allowlist_and_prints_chapter_count(export_dir: Path) ->
         assert (export_dir / "_lib" / "web" / name).is_file()
     assert not (export_dir / "_lib" / "vendor").exists()
 
-    assert (export_dir / "physics-field-guide" / "README.md").is_file()
+    assert (export_dir / "docs" / "field-guide" / "README.md").is_file()
     assert (export_dir / "index.html").is_file()
     assert (export_dir / "LICENSES.md").is_file()
     assert (export_dir / "reference" / "la-1940-fig1.png").is_file()
@@ -120,8 +120,9 @@ def test_orbits_index_imports_resolve_inside_export(export_dir: Path) -> None:
     assert any(url.endswith("./orbits.js") or url.endswith("orbits.js") for url in urls)
     for url in urls:
         assert_inside(export_dir, html_path, url)
-    # The shared harness is the ../../_lib/web layout, not a rewritten prefix.
-    assert "../../_lib/web/" in html
+    # The shared harness is copied verbatim: the chapter keeps its in-repository
+    # ../../../_lib/web prefix, which the mirrored export layout resolves.
+    assert "../../../_lib/web/" in html
 
     js_path = export_dir / CHAPTER_REL / "orbits.js"
     for url in local_targets(js_path.read_text()):
