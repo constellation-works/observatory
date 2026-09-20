@@ -1,53 +1,74 @@
 ---
 type: runbook
-summary: Turn a run's output into a study note and evidence on the node.
+summary: Turn a run into a written result and an assessment on the hypothesis it tested.
 tags: [operations, research]
-paths: ["experiments/**", "knowledgebase/**"]
-related_features: [unified-research-platform]
+paths: ["research/**", "hypotheses/**", "theories/**"]
+related_features: [research-layout-v2]
 related_artifacts: []
-last_validated: 2026-09-07
+last_validated: 2026-09-20
 ---
 
-# Promote a Result
+# Promote a result
 
-Outputs are regenerable and never committed. A result only exists once it is
-written down where the lineage can point at it.
+Outputs are regenerable and never committed. A result exists once it is written
+in the item's README and recorded as an assessment on the hypothesis it tested.
 
-## Write the study
+## Write the result
 
-Create `knowledgebase/studies/<domain>/<id>.md` from the template in
-`knowledgebase/studies/README.md`. Include the figure (small PNG or SVG
-committed beside it, under 500 KB), the numbers, and the paragraph on what is
-shaky. Set `verdict` and `strength` honestly; `inconclusive` is a normal
-outcome.
+Fill in the research item's own README — `## Result`, then `## Limitations`, then
+`## Next`. Give the numbers, not an impression. If a figure carries the argument,
+promote that one figure into `artifacts/` (small, and cited from the README);
+everything else stays in `output/` and regenerates.
 
-## Attach it to the node
+Set `status: done` when the run is finished, or `abandoned` if it was stopped.
+`done` means the run completed, not that it came out the way you hoped.
 
-```sh
-neb evidence <id> --verdict undermines --strength strong \
-  --source knowledgebase/studies/<domain>/<id>.md \
-  --note "decay flattens after day 30; the half-life model over-predicts late decay" \
-  --task DANI-10301
+## Assess the hypothesis
+
+Append one entry to the hypothesis's `assessments` — never edit an existing one:
+
+```yaml
+assessments:
+  - date: 2026-09-21
+    research: R013
+    revision: 1
+    verdict: inconclusive    # supports | refutes | inconclusive
+    strength: suggestive     # anecdote | suggestive | strong
+    note: control run failed; see R013 README §Limitations
 ```
 
-`neb check` verifies the source path exists. If the verdict is `undermines`,
-the command echoes the kill condition so you can decide whether it fired.
+`revision` is the statement revision the verdict is about. If the statement
+itself changed, bump the hypothesis's `revision` first: an assessment against an
+older revision stays in the log and does not carry to the current statement.
 
-## Move the node
+**Execution success is not support.** A `done` item with a `refutes` or
+`inconclusive` verdict is a complete, valid result, and `inconclusive` is a normal
+outcome. The checker warns if a `done` item leaves no assessment on any hypothesis
+it tests — that warning is the one to act on.
 
-```sh
-neb status <id> refuted        # the kill condition fired
-neb status <id> supported      # evidence with a supports verdict exists
-```
+## Move the status
 
-Or refine instead: `neb new "<sharper claim>" --parent <id> --kill "..."`.
+`status` on the hypothesis is yours to set — `open`, `supported`, `refuted`,
+`inconclusive` or `dropped`. The checker warns when it disagrees with the latest
+assessment and never overwrites it. If the statement needs sharpening instead,
+bump `revision` and say what changed in the body, or write a new hypothesis with
+`derived_from` pointing at this one.
 
 ## Graduate
 
-A supported node with a kill condition can move into the theory layer:
+A supported hypothesis can become a theory. That is a person's decision and is
+not automated:
 
 ```sh
-neb graduate <id> --to knowledgebase/theory/<doc>
+make new KIND=T TITLE="What the surviving account says"
 ```
 
-Then file the claim in that document's registry under principia's policy.
+Set `claims` to the hypothesis ids it rests on and `supersedes` to the theories it
+replaces. Theories that cite into principia's archived lock
+(`_archive/principia/`) point at it and never restate or overrule a claim it owns.
+
+## Check it
+
+```sh
+make check
+```

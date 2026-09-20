@@ -1,52 +1,65 @@
 ---
 type: runbook
-summary: Start an experiment from a nebula node: scaffold, manifest, data, run.
+summary: Start a research item: allocate the id, write the question, scaffold, fetch, run.
 tags: [operations, research]
-paths: ["experiments/**", "knowledgebase/**"]
-related_features: [unified-research-platform]
+paths: ["research/**", "questions/**", "hypotheses/**"]
+related_features: [research-layout-v2]
 related_artifacts: []
-last_validated: 2026-09-07
+last_validated: 2026-09-20
 ---
 
-# New Experiment
+# New research item
 
-An experiment tests one node. If there is no node yet, that comes first:
+A research item tests one hypothesis. If there is no hypothesis yet, that comes
+first — and if the idea is not sharp enough to be a claim, capture it as a
+question and stop there.
 
 ```sh
-neb capture "decay looks like a half-life, not a cliff"
-neb promote <entry> --title "Ranking decay half-life" --domain economics
-neb sharpen ranking-decay-half-life --kill "decay rate does not fall with age at any horizon"
+make new KIND=Q TITLE="Does ranking decay look like a half-life"
+make new KIND=H TITLE="Ranking decay rate falls with age at every horizon"
 ```
+
+Each prints the file it created. Fill in the body, set `tags`, and point
+`derived_from` at the question. The hypothesis is worth writing only if you can
+say in it what would move it to `refuted`.
 
 ## Scaffold
 
-For a physics sim use `experiments/physics/_lib/tools/new-sim.sh <node-id> <slug> --kind web|py`
-instead; it scaffolds from the sim template and rebuilds the gallery. Everything
-below applies to notebook and script experiments.
-
 ```sh
-make experiment DOMAIN=economics ID=ranking-decay-half-life
+make new KIND=R TITLE="Ranking decay against a control period"
 ```
 
-This creates `experiments/economics/ranking-decay-half-life/` with a README and
-`manifest.json`, plus matching directories under `_data/` and `_outputs/`. It
-refuses an id that is not a node.
+This creates `research/R###-slug/` with the README (frontmatter plus the five
+sections), `data/manifest.json`, and empty `code/` and `artifacts/`. Set `tests`
+to the hypothesis ids and `derived_from` to whatever it descends from. For a
+physics sim, scaffold inside the item:
+
+```sh
+_lib/tools/new-sim.sh R013 my-sim --kind web   # or --kind py
+```
 
 ## Data
 
-Fetch into `_data/<domain>/<id>/` and write `manifest.json` beside it: source,
-fetch command, file hashes. Commit the manifest, never the files. Reference the
-manifest path from the experiment's `manifest.json` under `data`.
+Fetch into the item's own `data/` and describe every input in
+`data/manifest.json`: `{name, source, sha256, size, fetch}`. Commit the manifest,
+never the bytes. A dataset several items share lives in `_data/<name>/` with its
+own manifest, referenced as `{"name": "...", "shared": "_data/<name>"}`. An item
+that consumes nothing declares `{"inputs": []}` and says so in `note`.
 
 ## Run
 
-Keep the entry point at `run.py` or a notebook named in the README. Outputs go
-to `_outputs/<domain>/<id>/`. Record the Orbit task if one drives the work:
+Keep the entry point under `code/`. Run products go to the item's `output/`,
+which is ignored. Record the driving Orbit task in the frontmatter if there is
+one:
 
-```sh
-neb task ranking-decay-half-life DANI-10301 --why "run decay against a control period"
+```yaml
+orbit: {task: ORB-12636, run: jrun-20260920-0346-c2}
 ```
+
+Set `status: running` while it runs — the checker warns if a `running` item goes
+30 days without an update.
 
 ## When it has run
 
-Promote the result: [promote-a-result.md](promote-a-result.md).
+Write the result up and assess the hypothesis:
+[promote-a-result.md](promote-a-result.md).

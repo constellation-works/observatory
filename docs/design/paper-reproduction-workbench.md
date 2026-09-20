@@ -9,7 +9,7 @@ doc_role: design
 type: design
 summary: Contracts for a reproducible LA-1940 figure workbench and three browser-based physics chapters.
 tags: [physics, research, paper-reproduction, field-guide]
-paths: ["experiments/physics/fput-recurrence-reproduction/**", "experiments/physics/physics-field-guide/**", "_lib/web/**", "_scripts/export-field-guide.sh"]
+paths: ["research/R005-fput-recurrence-reproduction/**", "docs/field-guide/**", "_lib/web/**", "_scripts/export-field-guide.sh"]
 related_features: [unified-research-platform]
 related_artifacts: []
 ---
@@ -27,7 +27,7 @@ The experiment and study join on the Nebula node id. The PDF and generated
 outputs remain outside Git according to the observatory data boundary.
 
 ```text
-experiments/physics/fput-recurrence-reproduction/
+research/R005-fput-recurrence-reproduction/code/
   README.md
   manifest.json
   protocol/v1.json
@@ -37,11 +37,11 @@ experiments/physics/fput-recurrence-reproduction/
   reference/fig1-digitized.csv
   reference/README.md
   reference/la-1940-fig1.png
-experiments/physics/physics-field-guide/
+docs/field-guide/
   README.md
 _data/physics/fput-recurrence-reproduction/manifest.json
-_outputs/physics/fput-recurrence-reproduction/<run-id>/
-knowledgebase/studies/physics/fput-recurrence-reproduction.md
+research/R005-fput-recurrence-reproduction/output/<run-id>/
+research/R005-fput-recurrence-reproduction/README.md
 ```
 
 The reference image is a credited crop of the public-domain OSTI/LANL scan.
@@ -49,7 +49,7 @@ The CSV is digitization evidence with uncertainty, not an original data dump.
 
 ## Reproduction runner contract
 
-The future runner is `experiments/physics/fput-recurrence-reproduction/run.py`.
+The future runner is `research/R005-fput-recurrence-reproduction/code/run.py`.
 It has a small, scriptable CLI:
 
 | invocation | contract |
@@ -71,7 +71,7 @@ sample.
 ## Run-directory contract
 
 Each run is under
-`_outputs/physics/fput-recurrence-reproduction/<run-id>/`. The directory is
+`research/R005-fput-recurrence-reproduction/output/<run-id>/`. The directory is
 regenerable and ignored by Git. It contains:
 
 | file | required content |
@@ -122,13 +122,13 @@ and records use:
 
 ```text
 --owner-root <observatory checkout>
---records experiments/physics/fput-recurrence-reproduction/research/records
+--records _archive/records/fput
 ```
 
 The planned record sequence is `program → claim → preregister → begin-run →
 record-run → assess`. The index configuration lives outside this checkout;
 the record directory contains only native records and task-local provenance.
-The browser consumes a browse-export written under `_outputs/`, never a second
+The browser consumes a browse-export written under the item's ignored `output/`, never a second
 hand-maintained record database. A record points to the run directory and
 protocol version, so baseline/exploratory identity and amendments remain
 recoverable.
@@ -136,7 +136,7 @@ recoverable.
 ## Chapter presentation contract
 
 Every field-guide chapter is a node-keyed directory beneath
-`experiments/physics/physics-field-guide/` and has these files:
+`docs/field-guide/` and has these files:
 
 ```text
 <chapter>/chapter.json
@@ -168,16 +168,16 @@ associated, and the layout works on a narrow screen. Under
 and validation semantics rather than removing the result.
 
 The three selected chapters are documented in
-`experiments/physics/physics-field-guide/README.md`: Kepler orbits and
+`docs/field-guide/README.md`: Kepler orbits and
 integrator error; the linear chain's waves, interference and boundaries; and a
 driven damped oscillator's resonance and damping.
 
 ## Field-guide export contract
 
-`_scripts/export-field-guide.sh` rebuilds `_outputs/field-guide-export/` from
+`_scripts/export-field-guide.sh` rebuilds `output/field-guide-export/` from
 an explicit allowlist (not an exclude list). It is runnable from any cwd; pass
 `--output DIR` to write somewhere else. The export root mirrors
-`experiments/physics/` so chapter imports of `../../_lib/web/…` resolve
+the repository root so chapter imports of `../../../_lib/web/…` resolve
 unchanged.
 
 ```sh
@@ -191,16 +191,16 @@ Allowlisted members:
 physics-field-guide/<chapter>/     # every dir with chapter.json
   index.html, *.js, chapter.json, sim.json, validation.json,
   README.md, static figures
-_lib/web/**                        # experiments/physics/_lib/web/**
+_lib/web/**                        # _lib/web/**
 physics-field-guide/README.md
 index.html                         # generated; relative links only
 LICENSES.md
 reference/la-1940-fig1.png
 reference/README.md                # public-domain credit line
-study/fput-recurrence-reproduction/**   # if _outputs/physics/fput-recurrence-reproduction/site/ exists
+study/fput-recurrence-reproduction/**   # if research/R005-fput-recurrence-reproduction/output/site/ exists
 ```
 
-`tests/`, `reference.py`, `__pycache__`, `_lib/vendor`, `knowledgebase/**`
+`tests/`, `reference.py`, `__pycache__`, `_lib/vendor`, `_archive/**`
 (including lineage and studies), every other experiment, `_data`, `.orbit`,
 `.env*`, and `.git` are not copied. `_lib/vendor/three` is added only when an
 exported chapter actually imports it.
@@ -221,7 +221,7 @@ command below was rerun for that acceptance; the numbers are its own output.
 
 ```sh
 uv sync --extra research
-R=experiments/physics/fput-recurrence-reproduction
+R=research/R005-fput-recurrence-reproduction/code
 uv run $R/run.py baseline                 # the registered protocol-v2 baseline
 uv run $R/run.py explore --set alpha=1.0  # bounded exploration, never the baseline
 uv run $R/run.py explore --set dt=0.125
@@ -230,7 +230,7 @@ uv run $R/run.py evidence --bundle <orbit-research export.json>
 uv run $R/run.py export && uv run $R/run.py export --check
 uv run $R/tools/record_chain.py --run <job-run-id> --stop-after export
 ./_scripts/export-field-guide.sh          # shareable chapter tree
-make check                                # neb, theory, records, layout, gallery, ruff, pytest
+make check                                # records, ruff, pytest (make check-archive for the lock)
 ```
 
 Browser passes (headless Chromium at 1280 px and 375 px):
@@ -238,22 +238,22 @@ Browser passes (headless Chromium at 1280 px and 375 px):
 ```sh
 LD_LIBRARY_PATH=$HOME/.local/chromium-deps/root/usr/lib/x86_64-linux-gnu \
   uv run --with playwright python $R/tools/browser_check.py \
-  _outputs/physics/fput-recurrence-reproduction/site/index.html
+  research/R005-fput-recurrence-reproduction/output/site/index.html
 LD_LIBRARY_PATH=... uv run --with playwright python \
-  experiments/physics/physics-field-guide/<chapter>/tests/browser_check.py
+  docs/field-guide/<chapter>/tests/browser_check.py
 ```
 
 ### Artifact locations
 
 | artifact | path |
 |---|---|
-| run directory (regenerable, untracked) | `_outputs/physics/fput-recurrence-reproduction/<run-id>/` |
-| study page and evidence browser | `_outputs/physics/fput-recurrence-reproduction/site/` |
-| evidence package | `_outputs/physics/fput-recurrence-reproduction/export/fput-reproduction-v2-<run-id>.tar.gz` |
+| run directory (regenerable, untracked) | `research/R005-fput-recurrence-reproduction/output/<run-id>/` |
+| study page and evidence browser | `research/R005-fput-recurrence-reproduction/output/site/` |
+| evidence package | `research/R005-fput-recurrence-reproduction/output/export/fput-reproduction-v2-<run-id>.tar.gz` |
 | canonical scientific records | `research/physics/fput-recurrence-reproduction/records/` |
-| chapters | `experiments/physics/physics-field-guide/{orbits-numerical-error,waves-boundaries,resonance-damping}/` |
-| shareable export | `_outputs/field-guide-export/` |
-| study notes | `knowledgebase/studies/physics/{fput-recurrence-reproduction,physics-field-guide}.md` |
+| chapters | `docs/field-guide/{orbits-numerical-error,waves-boundaries,resonance-damping}/` |
+| shareable export | `output/field-guide-export/` |
+| study notes | `research/R005-fput-recurrence-reproduction/README.md and docs/field-guide/VALIDATION.md` |
 
 ### Frozen protocol and measured values
 

@@ -3,7 +3,7 @@ title: Unified Research Platform — Vision
 owner: claude
 last_updated: 2026-09-07
 last_validated: 2026-09-07
-status: Accepted
+status: Superseded
 feature: unified-research-platform
 doc_role: vision
 type: design
@@ -12,6 +12,7 @@ tags: [unified-research-platform]
 paths: ["experiments/**", "knowledgebase/**", "_scripts/**"]
 related_features: [unified-research-platform]
 related_artifacts: []
+superseded_by: docs/design/research-layout-v2/1_spec.md
 ---
 
 # Unified Research Platform — Vision

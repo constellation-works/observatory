@@ -1,0 +1,4 @@
+{
+  "inputs": [],
+  "note": "No external input. The Monte Carlo is seeded in code; code/pingpong-bell/sample-tally.csv is a committed worked example, not a dataset."
+}

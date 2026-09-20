@@ -1,0 +1,12 @@
+{
+  "inputs": [
+    {
+      "name": "stellar-competition-data",
+      "source": "https://www.kaggle.com/competitions/playground-series-s6e6/data",
+      "sha256": null,
+      "size": null,
+      "fetch": "kaggle competitions download -c playground-series-s6e6 -p research/R012-stellar/data && unzip -o 'research/R012-stellar/data/*.zip' -d research/R012-stellar/data",
+      "note": "Competition data is redistributed under the competition rules only; bytes are never committed and no digest was recorded at fetch time."
+    }
+  ]
+}

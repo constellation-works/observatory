@@ -1,7 +1,0 @@
-{
-  "experiment": "experiments/kaggle/stellar",
-  "source": "https://www.kaggle.com/competitions/playground-series-s6e6/data",
-  "fetch": "kaggle competitions download -c playground-series-s6e6 -p _data/kaggle/stellar && unzip -o '_data/kaggle/stellar/*.zip' -d _data/kaggle/stellar",
-  "dictionary": null,
-  "tracked": false
-}

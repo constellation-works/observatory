@@ -111,7 +111,7 @@ wheels = [
 [[package]]
 name = "astrolabe"
 version = "0.1.0"
-source = { editable = "lib/astrolabe" }
+source = { editable = "_lib/astrolabe" }
 dependencies = [
     { name = "astropy" },
     { name = "astroquery" },
@@ -2138,7 +2138,7 @@ dev = [
 
 [package.metadata]
 requires-dist = [
-    { name = "astrolabe", editable = "lib/astrolabe" },
+    { name = "astrolabe", editable = "_lib/astrolabe" },
     { name = "jsonschema", marker = "extra == 'research'", specifier = ">=4.26" },
     { name = "jupyterlab", marker = "extra == 'notebook'", specifier = ">=4" },
     { name = "kaggle", marker = "extra == 'ml'", specifier = ">=1.6" },
@@ -2147,9 +2147,9 @@ requires-dist = [
     { name = "nbstripout", marker = "extra == 'notebook'", specifier = ">=0.7" },
     { name = "numpy", specifier = ">=1.26" },
     { name = "orbit-research", marker = "extra == 'research'", git = "https://github.com/constellation-works/orbit-research.git?rev=0a9cf756e1c2522b9d5ee71c1cf462b8676f4281" },
-    { name = "orrery", editable = "experiments/physics/_orrery" },
+    { name = "orrery", editable = "_archive/orrery" },
     { name = "pandas", specifier = ">=2.2" },
-    { name = "parallax", editable = "experiments/economics/_parallax" },
+    { name = "parallax", editable = "_archive/parallax" },
     { name = "pyarrow", specifier = ">=16" },
     { name = "pyspark", marker = "extra == 'spark'", specifier = ">=3.5" },
     { name = "pyyaml", specifier = ">=6" },
@@ -2179,7 +2179,7 @@ dependencies = [
 [[package]]
 name = "orrery"
 version = "0.1.0"
-source = { editable = "experiments/physics/_orrery" }
+source = { editable = "_archive/orrery" }
 dependencies = [
     { name = "matplotlib" },
     { name = "numpy" },
@@ -2264,7 +2264,7 @@ wheels = [
 [[package]]
 name = "parallax"
 version = "0.1.0"
-source = { editable = "experiments/economics/_parallax" }
+source = { editable = "_archive/parallax" }
 dependencies = [
     { name = "numpy" },
     { name = "pyarrow" },

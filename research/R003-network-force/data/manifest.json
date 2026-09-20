@@ -1,0 +1,4 @@
+{
+  "inputs": [],
+  "note": "No external input. The 153-galaxy, 2693-point RAR mock is generated from a seeded forward model in code/rar-network-fluctuation-limit/main.py; it matches SPARC's quality-cut scale but uses no SPARC bytes."
+}

@@ -1,7 +1,7 @@
 [project]
 name = "observatory"
 version = "0.1.0"
-description = "Unified research platform: idea lineage, experiments, studies, theory."
+description = "The research knowledgebase: questions, hypotheses, research items and theories."
 requires-python = ">=3.11"
 dependencies = [
     "numpy>=1.26",
@@ -20,15 +20,20 @@ notebook = ["jupyterlab>=4", "nbstripout>=0.7"]
 spark = ["pyspark>=3.5"]
 ml = ["scikit-learn>=1.5", "lightgbm>=4.6", "kaggle>=1.6"]
 arc = ["torch>=2.6", "tqdm>=4.66"]
-# The scientific record checkers (knowledgebase/theory/scripts) require this exact
-# orbit-research revision; see knowledgebase/theory/research/README.md.
+# Kept for `make check-archive` only: principia's record checkers
+# (_archive/principia/scripts/corpus_records.py) import orbit_research at this exact
+# revision, and the lock is archived byte-for-byte rather than ported. Nothing in
+# `make check` needs it.
 research = [
     "orbit-research @ git+https://github.com/constellation-works/orbit-research.git@0a9cf756e1c2522b9d5ee71c1cf462b8676f4281",
     "jsonschema>=4.26",
 ]
 
+# orrery and parallax are archived, not live, but sim code migrated into research
+# items still imports the `orrery` package, so both stay installable from where the
+# archive keeps them.
 [tool.uv.workspace]
-members = ["experiments/physics/_orrery", "lib/astrolabe", "experiments/economics/_parallax"]
+members = ["_archive/orrery", "_lib/astrolabe", "_archive/parallax"]
 
 [tool.uv.sources]
 orrery = { workspace = true }
@@ -40,29 +45,28 @@ dev = ["pytest>=8", "ruff>=0.6", "pre-commit>=3"]
 
 [tool.ruff]
 line-length = 100
-# Migration staging areas are migrated as written; lint applies once a sim moves
-# to its node directory under experiments/<domain>/<node-id>/.
-extend-exclude = ["_data", "_outputs", "knowledgebase", "experiments/physics/_orrery", "experiments/economics/_parallax"]
+# The archive is frozen history and is never linted; notebooks are free-form
+# exploration and carry no contract; data and outputs are not code.
+extend-exclude = ["_archive", "_data", "notebooks"]
 
 [tool.ruff.lint]
 select = ["E", "F", "I", "B", "UP"]
 
 [tool.ruff.lint.per-file-ignores]
 # Competition code migrated as written; long lines and lenient zip() stay.
-"experiments/kaggle/**" = ["E501", "B905"]
-# Sims migrated from orrery keep their style; new sims under a node are held to the full set.
-"experiments/physics/*/*/*.py" = ["B007", "B023", "B905", "E501", "E701", "E702", "E731", "F841"]
+"research/R01*/**" = ["E501", "B905"]
+# Field-guide chapters migrated as written, as the sims they came in beside were.
+"docs/field-guide/**" = ["E501"]
+# The gallery generator is one long HTML/CSS literal.
+"_lib/tools/build-gallery.py" = ["E501"]
+# Sims migrated from orrery keep their style; a new sim under a research item is
+# held to the full set.
+"research/*/code/*/*.py" = ["B007", "B023", "B905", "E501", "E701", "E702", "E731", "F841"]
 
 [tool.pytest.ini_options]
-testpaths = ["_scripts", "experiments", "knowledgebase/theory/scripts", "lib/astrolabe/tests"]
+# The gate runs the tests of the shared apparatus and of the shared tooling. A
+# research item's own tests are run from its directory, not by the gate.
+testpaths = ["_lib", "_scripts"]
 python_files = ["test_*.py"]
-# parallax's consumer-goods tests import a package, and its repository-conventions
-# tests describe a tree (R00-scratch, R03-consumer-goods), that do not exist in the
-# migrated history; they fail identically in the source checkout, which had no
-# remote configured (the box may be ahead). Ignored until reconciled.
-# importlib mode: several subtrees have a tests/test_cli.py. The theory record
-# tests import their sibling scripts by bare name.
-pythonpath = ["knowledgebase/theory/scripts"]
-# _orrery/tests exercise the frozen live-drift record check, retired when the sims
-# moved to node directories (docs/runbooks/migration.md).
-addopts = "--import-mode=importlib --ignore=experiments/physics/_orrery/tests --ignore-glob=experiments/economics/_parallax/tests/test_consumer_goods_*.py --ignore=experiments/economics/_parallax/tests/test_state_panel.py --ignore=experiments/economics/_parallax/tests/test_repository_conventions.py"
+# importlib mode: several subtrees have a tests/test_cli.py of their own.
+addopts = "--import-mode=importlib"

@@ -1,0 +1,12 @@
+{
+  "inputs": [
+    {
+      "name": "arc-competition-data",
+      "source": "https://www.kaggle.com/competitions/arc-prize-2024/data",
+      "sha256": null,
+      "size": null,
+      "fetch": "kaggle competitions download -c arc-prize-2024 -p research/R010-arc/data",
+      "note": "Competition data is redistributed under the competition rules only; bytes are never committed and no digest was recorded at fetch time."
+    }
+  ]
+}
