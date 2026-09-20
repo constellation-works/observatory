@@ -1,7 +1,7 @@
 ---
 id: R006
 title: Gravity as scarcity
-status: abandoned
+status: done
 tags: [physics, gravity, scarcity, legacy]
 derived_from: []
 created: 2026-09-07

@@ -1,9 +1,9 @@
 ---
 title: Research Layout v2 — Specification
 owner: fable
-last_updated: 2026-09-19
-last_validated: 2026-09-19
-status: Proposed
+last_updated: 2026-09-20
+last_validated: 2026-09-20
+status: Accepted
 feature: research-layout-v2
 doc_role: design
 type: design

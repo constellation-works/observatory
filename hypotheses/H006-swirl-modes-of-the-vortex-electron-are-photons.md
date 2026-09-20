@@ -1,7 +1,7 @@
 ---
 id: H006
 title: Swirl modes of the vortex electron are photons
-status: supported
+status: inconclusive
 tags: [physics, electromagnetism, vortex]
 derived_from: []
 created: 2026-09-07
@@ -58,5 +58,9 @@ below is `strong` rather than decisive.
 This record was split out of the lineage node above when the corpus moved to
 research layout v2. `derived_from` is empty because the node graph had no
 ancestry to carry; the evidence below is the node's recorded evidence, dated as
-it was recorded. The status is the one implied by the latest assessment — a
-person owns it and may change it without changing the log.
+it was recorded. The migration set the status to the one implied by the latest
+assessment (`supported`); on 2026-09-20 the owner set it to `inconclusive`, because
+the entries below rest on visualisations and a far-field match, and the
+quantisation half of the kill condition has not been tested. The checker reports
+the disagreement with the latest assessment as a warning, which is the intended
+record of a person's call; a run that tests quantisation is what changes it.
