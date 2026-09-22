@@ -10,6 +10,11 @@ _data/**
 **/output/**
 !**/output/**/
 !**/output/README.md
+_outputs/**
+!_outputs/**/
+!_outputs/**/README.md
+!_outputs/**/LICENSES.md
+!_outputs/**/manifest.json
 
 # _archive is frozen history: it keeps whatever it was committed with.
 !_archive/**
@@ -34,9 +39,5 @@ __pycache__/
 
 # OS
 .DS_Store
-.orbit/*
-!.orbit/auto_tasks/
-!.orbit/resources/
-!.orbit/routines/
-!.orbit/config.toml
-.orbit/**/*.lock
+# Orbit per-user state — not a repository artifact.
+.orbit/
