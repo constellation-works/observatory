@@ -1,0 +1,12 @@
+{
+  "note": "The only input is the isolated Orbit store the three orchestrator sessions filed into. It is a local SQLite/TOML tree, not a fetched dataset; code/setup.sh recreates the empty store and code/score.py reads it. The filled store from the 2026-09-20 run is summarised in artifacts/results.md.",
+  "inputs": [
+    {
+      "name": "orbit-crew-pref-exp",
+      "source": "$HOME/.orbit-crew-pref-exp (CREW_PREF_ORBIT_ROOT); three workspaces ws_crew-pref-{opus,astra,gemini}",
+      "sha256": null,
+      "size": null,
+      "fetch": "code/setup.sh, then one planning-only orchestrator session per workspace with the bound PROMPT.md"
+    }
+  ]
+}
