@@ -2,17 +2,16 @@
   "schemaVersion": 2,
   "assetKind": "routine",
   "assets": {
-    "ci_failure_sweep": "dc4f87e583ee9ff2bba5b2ac88fb48b6c7d6c5c06a863c4f4846608e2bc683e6",
+    "ci_failure_sweep": "95311864beb782aa0fce4b5e6d1568b550efda4a49b28a3af82e59cfa17438ef",
     "dependabot_alert_sweep": "8fd9278709eb6e04f8d0ff43943b983127fea09ef4117ad04972545568bd2dca",
     "ship_sweep": "f837d885bc0df84267fdeccf23fdbbd67b58d43c3599ad556c14d60850511cd8",
-    "task_pilot": "0f4534a92b66b6a6580819df07b05f46741e1a06491fb9b855b7cb987297f9b4",
-    "task_triage": "7cfcb5fac19609b72923e73ecb2f6dd62db6d9e3a3538844b127d033e7423e52",
-    "worktree_gc": "f8677078e93f620948d6c901207577c8a05621f2aa12ccd4edfcaa1ad24c2806"
+    "task_pilot": "ecab4157e25e7baa5ecc4302fbff33f970c88e0566bd3225976d998fe4c0ff5b",
+    "worktree_gc": "63fb8f3c68483ad3d3af78b955e787a1c3c3411140bf90b7d775b570721e95e9"
   },
   "routineProvenance": {
     "ci_failure_sweep": {
-      "templateDigest": "dd6dca0e91d15f802682ece4b28ca2c00cc7da743e8360cc9e13843424094cdf",
-      "renderedDigest": "dc4f87e583ee9ff2bba5b2ac88fb48b6c7d6c5c06a863c4f4846608e2bc683e6",
+      "templateDigest": "6df59a489a126748609f96594ddf9d9c0a2ce57862c7ee4b70a715137155a421",
+      "renderedDigest": "95311864beb782aa0fce4b5e6d1568b550efda4a49b28a3af82e59cfa17438ef",
       "binding": {
         "name": "ci-failure-sweep-observatory"
       }
@@ -32,22 +31,17 @@
       }
     },
     "task_pilot": {
-      "templateDigest": "0abd33a5901e5b71d01f54dd545b256631b4b59396cd0ee788817ea5b6189701",
-      "renderedDigest": "0f4534a92b66b6a6580819df07b05f46741e1a06491fb9b855b7cb987297f9b4",
+      "templateDigest": "d62349c4e7719f861a5695f1f5e6c466289ebc5ff606bf6c2db88b6dcd00baac",
+      "renderedDigest": "ecab4157e25e7baa5ecc4302fbff33f970c88e0566bd3225976d998fe4c0ff5b",
       "binding": {
-        "name": "task-pilot-observatory"
-      }
-    },
-    "task_triage": {
-      "templateDigest": "eeecdfa493fdcddd62a0b923fdfca64b1c27bfd996a96761776d8657fa18e2c7",
-      "renderedDigest": "7cfcb5fac19609b72923e73ecb2f6dd62db6d9e3a3538844b127d033e7423e52",
-      "binding": {
-        "name": "task-triage-observatory"
+        "name": "task-pilot-observatory",
+        "ownerMachine": "hm_9ca6004473492f06",
+        "branch": "main"
       }
     },
     "worktree_gc": {
-      "templateDigest": "b03d4f900f0746dd317d82fc11b6cd81a398edee18519e3f650d37ed9195a70d",
-      "renderedDigest": "f8677078e93f620948d6c901207577c8a05621f2aa12ccd4edfcaa1ad24c2806",
+      "templateDigest": "17a1fe2182a607f6391c5d73b958c3a1cfb83288811a199702da110b5b32fb0c",
+      "renderedDigest": "63fb8f3c68483ad3d3af78b955e787a1c3c3411140bf90b7d775b570721e95e9",
       "binding": {
         "name": "worktree-gc-observatory"
       }
