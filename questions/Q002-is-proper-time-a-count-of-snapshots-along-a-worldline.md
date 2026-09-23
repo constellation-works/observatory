@@ -1,12 +1,12 @@
 ---
 id: Q002
 title: Is proper time a count of snapshots along a worldline
-status: open
+status: answered
 tags: [physics, relativity, discrete-spacetime, causal-sets]
 derived_from: []
 created: 2026-09-20
-updated: 2026-09-20
-answered_by: []
+updated: 2026-09-22
+answered_by: [R014]
 ---
 
 # Q002 — Is proper time a count of snapshots along a worldline
