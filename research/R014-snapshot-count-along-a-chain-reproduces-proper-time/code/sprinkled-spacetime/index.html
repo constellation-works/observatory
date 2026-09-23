@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b1419"><title>Sprinkled spacetime · R014</title>
+<link rel="stylesheet" href="../../../../_lib/web/style.css"><link rel="stylesheet" href="style.css">
+</head>
+<body><main>
+<header>
+<a class="eyebrow" href="../../../../_lib/gallery/index.html">OBSERVATORY <span>/ R014 · EXPERIMENT 01</span></a>
+<div class="title-row"><h1>One fabric. Many clocks.</h1><span class="dimension">1 + 1 DIMENSIONS &nbsp; / &nbsp; c = 1</span></div>
+<p class="intro">Change the path. Tilt the present. Count the same spacetime.</p>
+</header>
+<div class="experiment">
+<section class="stage" aria-label="Interactive spacetime diagram">
+<div class="stage-head"><span><i class="status-dot"></i><strong id="fabric-name">POISSON SPRINKLING</strong></span><span id="seed-label">SEED 2026</span></div>
+<div id="wrap" class="orrery-wrap"></div>
+<div class="legend"><span class="cyan">● longest chain</span><span class="amber">╱ worldline</span><span class="purple">▰ observer’s slab</span><span class="light">╱ light cone</span></div>
+<p id="scene-caption" class="scene-caption">Drag velocity. The endpoint moves; the fabric stays.</p>
+<div id="layers" aria-label="Diagram layers"></div>
+</section>
+<aside aria-label="Experiment controls and measurements">
+<section class="control-section"><div class="section-title"><span>01</span> Follow a worldline</div>
+<div id="velocity"></div><div class="range-ends"><span>← −0.99c</span><span>at rest</span><span>+0.99c →</span></div>
+<div id="modes"></div>
+<div class="metrics" aria-live="polite" aria-atomic="true">
+<div><span id="count-label">Events in diamond</span><strong id="count">—</strong></div>
+<div><span id="chain-label">Longest chain</span><strong id="chain">—</strong></div>
+<div id="twin-metric" hidden><span>Through turnaround</span><strong id="twin-count">—</strong></div>
+<div><span>√(1 − v²)</span><strong id="rate">1.000</strong></div>
+<div><span id="proper-label">Path proper time / T = 6</span><strong id="proper">6.000</strong></div>
+</div><p class="micro" id="chain-note">Counts are sampled events; endpoint markers are not counted.</p>
+</section>
+<section class="control-section"><div class="section-title"><span>02</span> Tilt the present</div>
+<div id="rod-controls"></div><div id="slab-velocity"></div><div id="slab-link"></div>
+<div id="rod-inset" class="rod-inset" aria-label="Rod lengths measured by each observer">
+<div class="bar-label"><span>Rod at rest</span><strong>ℓ = 3.50</strong></div><div class="bar-track"><div class="rod-bar rest"></div></div>
+<div class="bar-label"><span>Moving observer · from count</span><strong id="rod-length">—</strong></div><div class="bar-track"><div class="rod-bar moving" id="moving-bar"></div><span id="expected-tick" title="Expected length ℓ√(1 − w²)"></span></div>
+<p id="slab-note">—</p><p class="micro">Tick = ℓ√(1 − w²). Bar = N / (ρΔt′), with count noise. Δt′ = 0.55.</p>
+</div></section>
+<section class="control-section"><div class="section-title"><span>03</span> Change the frame</div>
+<div id="view-controls"></div><div id="fabric-controls"></div>
+<p class="micro" id="view-note">Rest-frame view. Boost follows the worldline velocity v.</p>
+</section>
+</aside></div>
+<footer><span>TRY THIS</span> Turn on <b>Moving-observer view</b>, then drag v. Switch to a lattice and repeat.
+<details><summary>What is being counted?</summary>
+<p>Each dot is one event in a seeded Poisson process, at density ρ = 64 per unit spacetime area. A causal chain can step only inside or on the future light cone. The highlighted polyline is an actual longest chain, found by sorting in null coordinates. In a dense 1+1 sprinkling its length approaches τ√(2ρ); one finite count fluctuates. Events exactly at the endpoint markers are excluded.</p>
+<p>Twin mode fixes both endpoints and forces the orange chain through a virtual turnaround, adding the two segment chains. It cannot exceed the unconstrained cyan chain, but ties can occur. Even at v = 0, forcing a waypoint can reduce a finite sample’s count. This is a discrete path proxy, not events lying exactly on a smooth worldline.</p>
+<p>The rod never changes in its rest frame. The slab has fixed thickness Δt′ in its own observer’s time, so its rest-frame thickness is Δt′√(1 − w²). The lower edge meets the ends at different times. Counting its intersection with the worldtube estimates ℓ√(1 − w²); this is a volume-based estimator, not a spatial-distance reconstruction or a camera photograph.</p>
+<p>A boost transforms every event and geometric layer with x′ = γ(x − vt), t′ = γ(t − vx). The viewport stays fixed; offscreen events come from the same deterministic, extended sprinkling. Counts of the selected regions do not change just because you change view. Statistical Lorentz invariance concerns the Poisson distribution, not an identical dot pattern. The lattice exposes a preferred frame, although its causal order also survives a coordinate transformation.</p>
+<p>Minkowski geometry and its light cones are inputs to this model. The animation illustrates their consequences; it does not derive relativity from discreteness. See the <a href="../../README.md">R014 derivation and numerical experiment</a> and <a href="https://arxiv.org/abs/gr-qc/0605006">Discreteness without symmetry breaking</a>.</p>
+</details></footer>
+</main><script type="module" src="app.mjs"></script></body></html>

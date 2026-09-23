@@ -18,6 +18,7 @@ Units c = 1, 1+1 dimensions unless stated.
 | File | What |
 |---|---|
 | [code/sprinkle.py](code/sprinkle.py) | Poisson sprinkling, longest chain by the Ulam reduction, the three checks below |
+| [code/sprinkled-spacetime/index.html](code/sprinkled-spacetime/index.html) | One-canvas interactive companion: worldline, twin turnaround, tilted rod slab, whole-scene boost and lattice control |
 
 ## Question
 
@@ -29,6 +30,54 @@ causal set theory seen from inside one worldline; whatever fails is the
 picture's own content. No hypothesis is tested; this item answers a question.
 
 ## Method
+
+### Interactive companion
+
+From the repository root, run `make serve` and open
+[the web sim](http://localhost:8000/research/R014-snapshot-count-along-a-chain-reproduces-proper-time/code/sprinkled-spacetime/).
+It was scaffolded with `_lib/tools/new-sim.sh R014 sprinkled-spacetime --kind web`
+and uses the shared `canvas2d.js`, `panel.js` and `loop.js`.
+
+Drag **Velocity v** to change the path on one fixed realization. **Twin
+turnaround** holds the departure and reunion fixed and draws the unconstrained
+longest chain alongside the sum of two chains forced through a virtual kink.
+**Rod + tilted slab** shows a stationary worldtube and the slab intersection;
+changing **Slab observer w** unlinks that observer from v. **Moving-observer
+view** applies the boost at v to every dot and geometric layer. **Regrid**
+switches to a square lattice of the same density. **Resprinkle** advances the
+seed; **Animate v** sweeps velocity without regenerating the fabric. Layer
+toggles, sliders and buttons also work with the keyboard.
+
+The model uses c = 1, T = 6, density ρ = 64, rod length ℓ = 3.5 and observer
+slab thickness Δt′ = 0.55. Independent, seeded unit tiles each draw a Poisson
+number of events, then uniform locations. Tiles are generated as needed in
+the inverse-transformed viewport so boosting exposes no artificial empty
+boundary. Changing view preserves the original events and measured regions;
+the fixed camera can clip their display without changing their counts.
+The lattice has spacing a = 1/8 and includes null links.
+
+The sim reconstructs actual longest chains in O(n log n), with null-coordinate
+ties handled for the lattice. Counts exclude the artificial endpoint and
+turnaround markers (the older Python helper adds two endpoint markers).
+The two segment chains cannot exceed the unconstrained chain, but finite
+samples can tie; forcing a virtual waypoint can reduce the count even at v = 0.
+The rod inset shows the noisy estimate N/(ρΔt′) with an analytic ℓ/γ tick,
+not a noiseless count presented as a measurement. The slab's lower edge is
+t = 3 + wx and its rest-frame thickness is Δt′/γ(w).
+
+Run the standalone scientific checks with:
+
+```sh
+node --test research/R014-snapshot-count-along-a-chain-reproduces-proper-time/code/sprinkled-spacetime/model.test.mjs
+```
+
+These check Poisson mean and variance, reproducible tile regeneration, boosted
+viewport coverage against brute enumeration, chain reconstruction against an
+independent quadratic causal-order solver, boost invariance, twin constraints,
+slab geometry, ensemble count scaling and the lattice's coordinate-time count.
+They validate the implemented model, not an independent physical hypothesis.
+
+### Derivation and original numerical experiment
 
 **Setup.** Sprinkle points into Minkowski space by a Poisson process of density
 ρ. x ≺ y iff y lies in x's causal future. The snapshot count between events
@@ -157,7 +206,9 @@ scan (light travel time) gives Terrell–Penrose rotation, not contraction.
 - Numerics are 1+1 only, where V = τ²/2 and the Ulam reduction apply. In 3+1
   the argument is the same (V ∝ τ⁴, L ∝ ρ^{1/4}τ) but m₄ is only known
   numerically and the fluctuation exponent differs.
-- The lattice control is analytic, not sprinkled.
+- The original Python lattice control is analytic. The interactive companion
+  now constructs and counts the lattice explicitly; its chain has 47 sampled
+  events for T = 6 across the displayed velocity range, excluding endpoints.
 - (b) is a derivation on top of (a); the numerics do not construct the two
   observers' antichains explicitly. A maximal antichain in a sprinkling is a
   jagged object and its correspondence to a smooth "now" needs thickening

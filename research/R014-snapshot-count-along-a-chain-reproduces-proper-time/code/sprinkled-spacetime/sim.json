@@ -1,0 +1,16 @@
+{
+  "slug": "sprinkled-spacetime",
+  "title": "Sprinkled spacetime: one fabric, many clocks",
+  "kind": "web",
+  "entry": "index.html",
+  "status": "active",
+  "created": "2026-09-22",
+  "topics": ["relativity", "causal-sets", "proper-time", "Lorentz-invariance"],
+  "summary": "Count causal chains in one Poisson sprinkling. Tilt a worldline, compare twins, slice a rod, and boost the whole picture against a square-lattice control.",
+  "provenance": {
+    "question": "Q002",
+    "research": "R014",
+    "method": "Seeded Poisson process in 1+1 Minkowski spacetime; longest nondecreasing subsequence in null coordinates; fixed observer-time slab thickness.",
+    "source": "https://arxiv.org/abs/gr-qc/0605006"
+  }
+}
