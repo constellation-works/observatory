@@ -1,6 +1,6 @@
 # Physics field guide
 
-Domain: `physics` · Node: `neb show physics-field-guide` · Started: 2026-09-12
+Domain: `physics` · Node: `physics-field-guide` in the pre-v2 corpus, frozen at `_archive/lineage/nodes/physics-field-guide.md` · Started: 2026-09-12
 
 ## Question
 

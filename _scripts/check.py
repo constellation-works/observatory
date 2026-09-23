@@ -37,10 +37,12 @@ SCHEMA_PATH = Path(__file__).resolve().parent / "schema.json"
 
 FRONTMATTER_RE = re.compile(r"\A---\n(.*?)\n---\n?(.*)\Z", re.S)
 SECTION_RE = re.compile(r"^##\s+(.+?)\s*$", re.M)
-# The retired Nebula tooling must not reappear in anything operative. Design
-# records under docs/design/ and the frozen archive describe history and are exempt.
-RETIRED_TOOLING = re.compile(r"(?<![\w-])neb(?![\w-])|NEBULA_ROOT|knowledgebase/lineage")
-RETIRED_TOOLING_SKIP = ("_archive/", "docs/design/", "notebooks/", "_scripts/check.py")
+# Nebula lives upstream of this repository: its corpus is in the almanac and it
+# cites Observatory records, never the reverse. Nothing operative here may depend
+# on its tooling. Design records under docs/design/ and the frozen archive (which
+# holds the pre-v2 corpus) describe history and are exempt.
+NEBULA_TOOLING = re.compile(r"(?<![\w-])neb(?![\w-])|NEBULA_ROOT|knowledgebase/lineage")
+NEBULA_TOOLING_SKIP = ("_archive/", "docs/design/", "notebooks/", "_scripts/check.py")
 
 
 # --------------------------------------------------------------------------
@@ -515,15 +517,15 @@ def check_ignored_bytes(root: Path, report: Report, use_git: bool) -> None:
         )
 
 
-def check_retired_tooling(root: Path, report: Report, use_git: bool) -> None:
-    """The Nebula tooling is gone: nothing operative may still name it."""
+def check_nebula_tooling(root: Path, report: Report, use_git: bool) -> None:
+    """Nebula is upstream: nothing operative here may depend on its tooling."""
     if not use_git:
         return
     names = committable(root, report)
     if names is None:
         return
     for name in names:
-        if name.startswith(RETIRED_TOOLING_SKIP) or name.endswith(".ipynb"):
+        if name.startswith(NEBULA_TOOLING_SKIP) or name.endswith(".ipynb"):
             continue
         path = root / name
         if not path.is_file() or path.is_symlink():
@@ -533,8 +535,10 @@ def check_retired_tooling(root: Path, report: Report, use_git: bool) -> None:
         except (UnicodeDecodeError, OSError):
             continue
         for number, line in enumerate(text.splitlines(), start=1):
-            if RETIRED_TOOLING.search(line):
-                report.error(f"{name}:{number}", "still refers to the retired Nebula tooling")
+            if NEBULA_TOOLING.search(line):
+                report.error(
+                    f"{name}:{number}", "depends on the Nebula tooling, which lives upstream"
+                )
 
 
 # --------------------------------------------------------------------------
@@ -558,7 +562,7 @@ def main() -> int:
     check_assessment_revisions(records, report)
     check_research_items(records, schema, report)
     check_ignored_bytes(root, report, use_git)
-    check_retired_tooling(root, report, use_git)
+    check_nebula_tooling(root, report, use_git)
     check_warnings(records, schema, report, arguments.today)
 
     for message in report.warnings:

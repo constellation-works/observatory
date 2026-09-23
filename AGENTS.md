@@ -57,10 +57,10 @@ Underscore directories hold apparatus (`_lib/`, `_data/`, `_scripts/`,
    overwrites it. **Execution success is not support**: a `done` research item
    with a `refutes` or `inconclusive` assessment is a complete, valid result, and
    recording one is the job.
-6. **`_archive/` is frozen.** principia's byte-pinned lock, the retired Nebula
-   corpus, orrery, parallax and the retired JSON record chain. Do not edit
-   anything under it, do not rewrite principia's ledgers, and do not convert the
-   archived records. If a claim the lock owns needs restating, restate it as a new
+6. **`_archive/` is frozen.** principia's byte-pinned lock, the pre-v2 Nebula
+   corpus (Nebula itself lives on upstream, in the almanac), orrery, parallax
+   and the retired JSON record chain. Do not edit anything under it, do not
+   rewrite principia's ledgers, and do not convert the archived records. If a claim the lock owns needs restating, restate it as a new
    hypothesis in the live corpus. `make check-archive` runs the lock's own checker
    over it and is not part of `make check`.
 7. **Work material never enters this repository** — not in records, manifests or
