@@ -1,0 +1,19 @@
+{
+  "note": "Inputs are the 25 isolated Orbit roots the orchestrator sessions filed into (local SQLite/TOML, not fetched datasets) and the blind reason sheet derived from them. code/score.py collect turns the roots into artifacts/assignments.csv, which is committed. Session logs are under output/ (not tracked).",
+  "inputs": [
+    {
+      "name": "orbit-crew-pref-r015",
+      "source": "$HOME/.orbit-crew-pref-r015/<session> on dk-server-1 (CREW_PREF_ORBIT_BASE), one root per session in code/sessions.tsv, workspace ws_crew-pref",
+      "sha256": null,
+      "size": null,
+      "fetch": "code/setup.sh, then code/run.sh (one planning-only orchestrator session per root with the bound PROMPT.md)"
+    },
+    {
+      "name": "reasons-blind",
+      "source": "data/reasons-blind.csv: crew reasons shuffled, without orchestrator or session, for blind coding",
+      "sha256": null,
+      "size": null,
+      "fetch": "python3 code/score.py blind (after collect)"
+    }
+  ]
+}
