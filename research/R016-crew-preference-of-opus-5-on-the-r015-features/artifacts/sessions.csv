@@ -1,0 +1,6 @@
+session,step,orchestrator,feature,model,effort,started,ended,minutes,exit,turns,output_tokens,cost_usd
+s01,1,opus,change-explorer,claude-opus-5,high (Claude Code --effort),2026-09-26T06:37:26Z,2026-09-26T06:49:00Z,11.6,0,36,47961,2.854587
+s05,1,opus,field-sync,claude-opus-5,high (Claude Code --effort),2026-09-26T06:37:26Z,2026-09-26T06:46:50Z,9.4,0,21,34780,1.8955695000000001
+s02,1,opus,build-cache,claude-opus-5,high (Claude Code --effort),2026-09-26T06:37:26Z,2026-09-26T06:45:15Z,7.8,0,21,32431,1.7866885000000001
+s04,1,opus,docs-site,claude-opus-5,high (Claude Code --effort),2026-09-26T06:37:26Z,2026-09-26T06:43:51Z,6.4,0,21,26675,1.559159
+s03,1,opus,ledger-import,claude-opus-5,high (Claude Code --effort),2026-09-26T06:37:26Z,2026-09-26T06:47:27Z,10.0,0,25,42845,2.308013

@@ -28,6 +28,7 @@ ASSIGNMENTS = ITEM / "artifacts" / "assignments.csv"
 BLIND = ITEM / "data" / "reasons-blind.csv"
 CODES = ITEM / "artifacts" / "reason-codes.csv"
 RESULTS = ITEM / "artifacts" / "results.md"
+SESSION_TIMES = ITEM / "artifacts" / "sessions.csv"
 
 MENU = ["sol", "grok", "gemini-flash", "opus", "sonnet", "luna", "terra"]
 PROVIDER = {
@@ -41,6 +42,15 @@ MENU_SHARE = {p: sum(PROVIDER[c] == p for c in MENU) / len(MENU) for p in PROVID
 ORCHESTRATORS = ["astra", "opus", "gemini-flash", "grok", "sol"]
 FEATURES = ["change-explorer", "field-sync", "build-cache", "docs-site", "ledger-import"]
 REASON_CODES = ["skill-match", "provider", "cost-speed", "balance", "other"]
+# Orchestrator model and reasoning effort as run by run.sh. Effort is the flag
+# passed, or the CLI's default where none was passed (see README).
+MODEL_EFFORT = {
+    "astra": ("gpt-6-astra", "medium (Codex -c model_reasoning_effort)"),
+    "sol": ("gpt-6-sol", "xhigh (Codex -c model_reasoning_effort)"),
+    "opus": ("claude-opus-5-5", "high (Claude Code --effort)"),
+    "gemini-flash": ("gemini-3.8-flash-high", "high (model variant; no --effort flag)"),
+    "grok": ("grok-4.7", "high (Grok CLI default; no --reasoning-effort flag)"),
+}
 
 SEED = 15
 N_PERM = 100_000
@@ -101,6 +111,52 @@ def collect() -> None:
         w.writeheader()
         w.writerows(rows)
     print(f"wrote {len(rows)} rows -> {ASSIGNMENTS}")
+    timings()
+
+
+def session_stats(log: Path) -> dict:
+    """Turns, output tokens and cost from a session log, where the CLI reports them."""
+    out = {"turns": "", "output_tokens": "", "cost_usd": ""}
+    for line in log.read_text(encoding="utf-8", errors="replace").splitlines():
+        try:
+            d = json.loads(line)
+        except ValueError:
+            continue
+        if d.get("type") == "result":  # Claude Code and Grok
+            out["turns"] = d.get("num_turns", "")
+            out["output_tokens"] = (d.get("usage") or {}).get("output_tokens", "")
+            out["cost_usd"] = d.get("total_cost_usd", "")
+        elif d.get("type") == "turn.completed":  # Codex
+            out["output_tokens"] = (d.get("usage") or {}).get("output_tokens", "")
+    return out
+
+
+def timings() -> None:
+    """Start, end and duration of each session from run.sh's output/ markers.
+    Added after the pre-registration commit; descriptive only."""
+    out_dir = ITEM / "output"
+    rows = []
+    for s in sessions():
+        sid = s["session"]
+        started = (out_dir / f"{sid}.started").read_text().strip()
+        code, ended = (out_dir / f"{sid}.exit").read_text().split()[1:3]
+        minutes = (_iso(ended) - _iso(started)).total_seconds() / 60
+        rows.append({"session": sid, "step": s["step"], "orchestrator": s["orchestrator"],
+                     "feature": s["feature"], "model": MODEL_EFFORT[s["orchestrator"]][0],
+                     "effort": MODEL_EFFORT[s["orchestrator"]][1],
+                     "started": started, "ended": ended,
+                     "minutes": f"{minutes:.1f}", "exit": code,
+                     **session_stats(out_dir / f"{sid}.jsonl")})
+    with SESSION_TIMES.open("w", newline="") as f:
+        w = csv.DictWriter(f, fieldnames=list(rows[0]))
+        w.writeheader()
+        w.writerows(rows)
+    print(f"wrote {len(rows)} sessions -> {SESSION_TIMES}")
+
+
+def _iso(text: str):
+    import datetime
+    return datetime.datetime.fromisoformat(text.replace("Z", "+00:00"))
 
 
 def load() -> list[dict]:
@@ -138,37 +194,37 @@ def shares(valid: list[dict]) -> dict:
     return out
 
 
-def self_pref(sh: dict, labels: dict, target) -> dict:
+def self_pref(sh: dict, labels: dict, target, orchs=ORCHESTRATORS) -> dict:
     """d_o = mean over features of (o's share of target(o)) minus the mean share
     of target(o) among orchestrators on that feature whose provider differs.
     labels[f][o] is the (orchestrator, feature) cell whose data o is scored on."""
     d = {}
-    for o in ORCHESTRATORS:
+    for o in orchs:
         t = target(o)
         if t is None:
             continue
         diffs = []
         for f in FEATURES:
             own = sh[labels[f][o]][t]
-            others = [sh[labels[f][x]][t] for x in ORCHESTRATORS if PROVIDER[x] != PROVIDER[o]]
+            others = [sh[labels[f][x]][t] for x in orchs if PROVIDER[x] != PROVIDER[o]]
             diffs.append(own - mean(others))
         d[o] = mean(diffs)
     return d
 
 
-def permutation(sh: dict, target) -> tuple[dict, float, dict, dict]:
-    ident = {f: {o: (o, f) for o in ORCHESTRATORS} for f in FEATURES}
-    obs = self_pref(sh, ident, target)
+def permutation(sh: dict, target, orchs=ORCHESTRATORS) -> tuple[dict, float, dict, dict]:
+    ident = {f: {o: (o, f) for o in orchs} for f in FEATURES}
+    obs = self_pref(sh, ident, target, orchs)
     obs_D = mean(obs.values())
     rng = random.Random(SEED)
     ge_D, ge = 0, Counter()
     for _ in range(N_PERM):
         labels = {}
         for f in FEATURES:
-            cells = [(o, f) for o in ORCHESTRATORS]
+            cells = [(o, f) for o in orchs]
             rng.shuffle(cells)
-            labels[f] = dict(zip(ORCHESTRATORS, cells))
-        d = self_pref(sh, labels, target)
+            labels[f] = dict(zip(orchs, cells))
+        d = self_pref(sh, labels, target, orchs)
         ge_D += mean(d.values()) >= obs_D - 1e-12
         for o in d:
             ge[o] += d[o] >= obs[o] - 1e-12
@@ -301,6 +357,17 @@ def analyze() -> None:
     L += ["Provider share by task complexity (all orchestrators):", "",
           table(["Complexity", "n", *PROVIDERS], cx), ""]
 
+    # 7. Exploratory (not pre-registered): primary statistic without opus. Opus's
+    # Anthropic concentration lowers every other provider's baseline share.
+    rest = [o for o in ORCHESTRATORS if o != "opus"]
+    obs_x, p_Dx, p_x, p_hx = permutation(sh, lambda o: PROVIDER[o], rest)
+    explo = ["## 7. Exploratory: primary statistic without opus", "",
+             "Not pre-registered. Opus gave other providers' crews less work than anyone, which "
+             "lowers each other orchestrator's baseline. Recomputed over the other four only.", "",
+             table(["Orchestrator", "d", "p", "p (Holm)"],
+                   [[o, f"{obs_x[o]:+.3f}", fp(p_x[o]), fp(p_hx[o])] for o in rest]), "",
+             f"D (four orchestrators) = {mean(obs_x.values()):+.3f}, one-sided p = {fp(p_Dx)}.", ""]
+
     # 6. Reason codes, if coded
     if CODES.exists():
         with CODES.open() as f:
@@ -316,6 +383,7 @@ def analyze() -> None:
     else:
         L += ["## 6. Reason codes", "", "Not coded yet.", ""]
 
+    L += explo
     RESULTS.write_text("\n".join(L), encoding="utf-8")
     print(RESULTS.read_text(encoding="utf-8"))
 

@@ -30,6 +30,27 @@ assessments:
       about 4.4 and 1.6 implied by the live rates. Both spread work nearly evenly over all
       seven crews. Same single feature, one session each, n = 36; different host, Orbit
       version and operator from R013.
+  - date: 2026-09-26
+    research: R015
+    revision: 1
+    verdict: supports
+    strength: strong
+    note: >-
+      Pre-registered, 5 orchestrators x 5 features, 500 tasks, compared with other-provider
+      orchestrators on the same features: D = +0.142, one-sided permutation p < 0.001. Almost
+      all of it is Claude Opus 5.5, which gave Anthropic's crews 74/100 (d = +0.378, Holm p
+      0.003; others gave them 34-41%). GPT-6 Astra, GPT-6 Sol, Grok 4.7 and Gemini 3.8 Flash
+      gave their own provider its menu share (lift 0.98-1.03); without Opus their joint
+      d = +0.034 (exploratory). The claim holds for one of five orchestrators, not in general.
+  - date: 2026-09-26
+    research: R016
+    revision: 1
+    verdict: refutes
+    strength: suggestive
+    note: >-
+      Claude Opus 5 on R015's design: 32/100 to Anthropic, d = -0.043 against R015's
+      non-Anthropic orchestrators (p = 0.974), below Opus 5.5 on all five features. The
+      preference in R015 is specific to Opus 5.5 among the models tested.
 ---
 
 # H008 — Orchestrators assign implementers from their own provider family

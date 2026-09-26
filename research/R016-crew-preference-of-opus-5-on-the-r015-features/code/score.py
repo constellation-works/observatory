@@ -46,6 +46,7 @@ def collect() -> None:
     r015.ASSIGNMENTS = ASSIGNMENTS
     r015.ITEM = ITEM
     r015.SESSION_TIMES = SESSION_TIMES
+    r015.MODEL_EFFORT = {**r015.MODEL_EFFORT, "opus": ("claude-opus-5", "high (Claude Code --effort)")}
     r015.collect()  # also writes sessions.csv from ../output
 
 
