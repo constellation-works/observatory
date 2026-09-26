@@ -5,7 +5,7 @@ status: refuted
 tags: [social, orbit, agents, crew-selection]
 derived_from: []
 created: 2026-09-20
-updated: 2026-09-21
+updated: 2026-09-26
 revision: 1
 assessments:
   - date: 2026-09-20
@@ -19,6 +19,17 @@ assessments:
       No one-crew dump; every orchestrator used every menu crew; no crew_reason mentions
       provider. The live 50–68% own-family rates are not reproduced. One feature, three
       sessions, n = 47.
+  - date: 2026-09-26
+    research: R014
+    revision: 1
+    verdict: refutes
+    strength: suggestive
+    note: >-
+      R013's design with the two live-table orchestrators it did not run: own-provider lift
+      0.78 (grok, 2 of 18; 2.6 expected) and 1.17 (sol, 9 of 18; 7.7 expected), against
+      about 4.4 and 1.6 implied by the live rates. Both spread work nearly evenly over all
+      seven crews. Same single feature, one session each, n = 36; different host, Orbit
+      version and operator from R013.
 ---
 
 # H008 — Orchestrators assign implementers from their own provider family
