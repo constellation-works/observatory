@@ -1,0 +1,12 @@
+{
+  "note": "Inputs are the five isolated Orbit roots the Opus 5 sessions filed into, plus R015's committed artifacts/assignments.csv as the comparison. code/score.py collect writes artifacts/assignments.csv and artifacts/sessions.csv, which are committed. Session logs are under output/ (not tracked).",
+  "inputs": [
+    {
+      "name": "orbit-crew-pref-r016",
+      "source": "$HOME/.orbit-crew-pref-r016/<session> on dk-server-1 (CREW_PREF_ORBIT_BASE), one root per session in code/sessions.tsv, workspace ws_crew-pref",
+      "sha256": null,
+      "size": null,
+      "fetch": "code/setup.sh, then code/run.sh"
+    }
+  ]
+}
