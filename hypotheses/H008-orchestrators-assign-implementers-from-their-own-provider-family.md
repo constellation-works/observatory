@@ -5,7 +5,7 @@ status: refuted
 tags: [social, orbit, agents, crew-selection]
 derived_from: []
 created: 2026-09-20
-updated: 2026-09-26
+updated: 2026-09-27
 revision: 1
 assessments:
   - date: 2026-09-20
@@ -51,6 +51,20 @@ assessments:
       Claude Opus 5 on R015's design: 32/100 to Anthropic, d = -0.043 against R015's
       non-Anthropic orchestrators (p = 0.974), below Opus 5.5 on all five features. The
       preference in R015 is specific to Opus 5.5 among the models tested.
+  - date: 2026-09-27
+    research: R017
+    revision: 1
+    verdict: refutes
+    strength: strong
+    note: >-
+      Pre-registered, R015's design with six orchestrators (adding Opus 5), crews shown as
+      neutral labels with only the provider named and the crew behind each label shuffled per
+      session, 600 tasks. Opus 5.5 gave Anthropic's crews 28/100 (menu 28.6), d = -0.020,
+      p = 0.883, down from R015 on all five features (sign-flip p = 0.031). No orchestrator
+      favoured its own provider (d -0.020 to +0.034, D = +0.012, p = 0.108); all spread work
+      evenly and none cited a shared provider. R015's Opus 5.5 skew needed the crew names
+      (`sonnet`, `opus`); it is not a provider preference. Exploratory: every orchestrator gave
+      Anthropic's crews 37-50% of hard tasks and 8-22% of medium ones.
 ---
 
 # H008 — Orchestrators assign implementers from their own provider family
