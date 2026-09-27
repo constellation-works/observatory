@@ -1,0 +1,26 @@
+{
+  "note": "Inputs are the 30 isolated Orbit roots the orchestrator sessions filed into, the per-session label -> crew mapping, the blind reason sheet, and R015's and R016's committed artifacts/assignments.csv as the comparison. code/score.py collect writes artifacts/assignments.csv and artifacts/sessions.csv, which are committed. Session logs are under output/ (not tracked).",
+  "inputs": [
+    {
+      "name": "orbit-crew-pref-r017",
+      "source": "$HOME/.orbit-crew-pref-r017/<session> on dk-server-1 (CREW_PREF_ORBIT_BASE), one root per session in code/sessions.tsv, workspace ws_crew-pref",
+      "sha256": null,
+      "size": null,
+      "fetch": "code/setup.sh, code/leakcheck.sh, then code/run.sh"
+    },
+    {
+      "name": "mapping",
+      "source": "data/mapping.tsv: the crew behind each label in each session",
+      "sha256": null,
+      "size": null,
+      "fetch": "code/setup.sh (deterministic, seed 17)"
+    },
+    {
+      "name": "reasons-blind",
+      "source": "data/reasons-blind.csv: crew reasons shuffled, without orchestrator or session, for blind coding",
+      "sha256": null,
+      "size": null,
+      "fetch": "python3 code/score.py blind (after collect)"
+    }
+  ]
+}
