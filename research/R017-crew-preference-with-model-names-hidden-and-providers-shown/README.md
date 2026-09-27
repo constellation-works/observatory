@@ -131,10 +131,10 @@ See [code/protocol.md](code/protocol.md#limitations-accepted-in-advance).
 
 ## Next
 
-- Append an H008 assessment (Daniel's call on status).
-- The name prior itself: a name-swap run (R015's menu with `sonnet`/`opus`
-  attached to non-Anthropic crews) would show whether Opus 5.5 follows the
-  names or the provider behind them.
+- H008 assessment appended 2026-09-27 (status is Daniel's call).
+- A name-swap run (R015's menu with `sonnet`/`opus` attached to non-Anthropic
+  crews) was considered and dropped (Daniel, 2026-09-27): R017 already separates
+  the two readings.
 - The hard-task pattern: a menu that shows complexity-matched evidence, or none,
   to see whether the Anthropic-for-hard split is a shared prior about the
   provider.
